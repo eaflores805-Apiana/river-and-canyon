@@ -30,7 +30,7 @@ Most explanations of large language models are either too loose (a "digital brai
 
 ## Introduction: The Explanatory Gap
 
-Most explanations of Large Language Models (LLMs) fall into one of two traps: mystifyingly abstract ("it's a digital brain that thinks like a human") or brutally mathematical ($\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^T}{\sqrt{d_k}}\right)V$). The first is lazy anthropomorphism; the second is a wall of linear algebra that hides the structural elegance underneath.
+Most explanations of Large Language Models (LLMs) fall into one of two traps: mystifyingly abstract ("it's a digital brain that thinks like a human") or brutally mathematical ($\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$). The first is lazy anthropomorphism; the second is a wall of linear algebra that hides the structural elegance underneath.
 
 This paper offers a third register: it maps the real operations of a transformer onto a single physical framework — the **mountain-and-water analogy**.
 
@@ -125,7 +125,7 @@ Once the drops are positioned in space and time, they enter the stack. This is w
 
   A token's Query vector is multiplied against every other token's Key vector ($QK^T$). The resulting scores are run through a softmax function to turn them into percentages that sum to $1.0$. The model then creates a weighted blend of all the Value vectors based on those percentages:
 
-  $$\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+  $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
 
   After this step, a vector is no longer isolated; its position in space has been shifted by the tokens around it. The word "bank" next to "river" is pulled toward a completely different geometric neighborhood than "bank" next to "robbery".
 - **In the Analogy:** This is the foundational illusion of the model. The rock of the mountain is dead and completely unmoving, yet the water appears to interact intelligently. At an attention ledge, the rock briefly exposes each Central Run to its neighbors. Each drop looks around at the runs nearby and draws according to its own Query — pulling one-directionally, while each neighbor pulls by its own. The ledge creates the opportunity; the draw does the rest. They dynamically discover and follow a temporary channel across the stone, routing themselves in real-time — but they carve nothing. The route is pure flow, not erosion; it leaves no lasting mark on the rock. If you change a single drop upstream, the entire network of ripples instantly recalculates and finds a different channel. The mountain didn't move; the water simply found a path over it, computed entirely from itself, and that path vanishes the instant the next input arrives.
