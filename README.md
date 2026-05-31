@@ -5,6 +5,8 @@
 E. A. Flores · Apiana AI, Inc. · May 2026
 
 > Prefer a typeset version? **[Read the paper as a PDF](the-river-and-the-canyon.pdf)**.
+>
+> One-page summary? **[Download the field card](assets/river-canyon-blueprint.png)**.
 
 ---
 
