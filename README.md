@@ -7,7 +7,7 @@ E. A. Flores · Apiana AI, Inc. · May 2026
 > **This page is the short version** — it teaches the whole picture (tokenization through generation) in one fast pass, then states where the analogy breaks.
 >
 > - **Want the full treatment?** [Read the full paper (PDF, 19 pp)](the-river-and-the-canyon.pdf) — every step in depth, with diagrams, and every claim stress-tested against real mechanism.
-> - **Prefer this short version as a PDF?** [Lean edition (PDF, 5 pp)](the-river-and-the-canyon-lean.pdf).
+> - **Prefer this short version as a PDF?** [Lean edition (PDF)](the-river-and-the-canyon-lean.pdf).
 > - **On method:** [*No Mountain in the Sentence*](no-mountain-in-the-sentence.pdf) — the companion essay on the one rule this whole project runs on.
 
 ---
@@ -17,6 +17,12 @@ Most explanations of large language models are either too loose ("a digital brai
 The core mapping, in one breath: **the weights are a frozen mountain; the activations are water flowing over it.** Training is the slow carving of the rock. Inference is water finding paths across stone that no longer moves. The governing distinction is **permanence** — grooves carved by training are permanent; the channels water traces on a single pass are not. That one axis is the difference between weights and activations, and the whole analogy hangs on it.
 
 One warning to carry, collected in full at the end: the water *appears* to fall, but there is no force in the picture. "Down" means later in the computation, not lower in energy. Hold "flow" as *computation advancing*, not motion under a pull.
+
+<p align="center">
+  <img src="assets/pipeline.png" alt="The forward pass, with each real step aligned above its analogy; the output token is appended and the whole pass runs again." width="100%">
+</p>
+
+**Figure 1.** The forward pass, with each real step aligned above its analogy — the real process over the picture, stage by stage. Dashed lines mean "is the analogy for," not "is the same as." The diagram shows one pass, producing one token; generation repeats it — each output token is appended and the whole pass runs again for the next word.
 
 ## Part I — How the Mountain Works
 
