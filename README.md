@@ -60,9 +60,9 @@ The whole of machine learning hinges on a distinction that looks like two states
 
 ## A Few Production Techniques
 
-- **KV caching.** Generating each new token would mean recomputing attention over all prior tokens; instead, their Keys and Values are cached. *In the analogy:* a stream leaves damp trails on the rock it passed; a new drop meets those wet trails rather than reinventing the riverbed, so only its own fresh splash is computed.
+- **KV caching.** Generating each new token would mean recomputing attention over all prior tokens; instead, their Keys and Values are cached. *In the analogy:* each earlier drop leaves a temporary wet trace of its Keys and Values at the ledges it already crossed; a new drop reads those traces instead of making every old drop descend again, so only its own fresh splash is computed. The traces are left *by* the water — the rock itself is unchanged.
 - **FlashAttention.** A way to compute *exact* attention without ever writing the giant attention matrix to slow memory — it works block-by-block in fast on-chip memory, carrying running totals. *In the analogy:* instead of photographing the whole cliff at once, you study one square foot at a time with blinders on, keeping a running tally in the margin so the final map is exactly as accurate. The speed is all in avoiding slow memory traffic.
-- **LoRA.** Instead of re-training billions of weights, freeze them and inject two small trainable matrices alongside. *In the analogy:* LoRA changes the route without recarving the rock — a light, removable guide at a critical choke point diverts the river without moving an ounce of stone.
+- **LoRA.** Instead of re-training billions of weights, freeze them and inject two small trainable matrices alongside. *In the analogy:* LoRA changes the route without recarving the main rock — a light, removable guide at a critical choke point diverts the river without moving an ounce of stone.
 
 ## Part II — Where the Picture Breaks
 
@@ -91,6 +91,8 @@ So the transferable rule, good for any intuition about these systems:
 If the deciding variable lies outside the picture's reach, let it point you to the neighborhood, then set it down. That's the whole result: **not a mountain, but a method for not being fooled by mountains** — including the most seductive one, the one you build yourself.
 
 And the wonder survives all of this. When a model produces brilliant prose, it's tempting to imagine a ghost in the machine. The picture forces the plainer truth: no hidden hand, just a structure shaped by data until it captured the geometry of language. That there is no agent behind the rock is a real result. Whether the structure *understands* what it learned — that, the mountain cannot settle, and doesn't pretend to. The river never truly fell, and the canyon never truly pulled. There was only a fixed shape and water taking it.
+
+One question this leaves open: text is only one kind of water. Code, video, simulation, and action carry different structure — and whether each carves a different geometry is a question this picture raises but does not answer. A companion piece takes it up.
 
 ---
 
