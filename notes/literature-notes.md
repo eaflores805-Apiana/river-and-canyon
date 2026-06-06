@@ -1,0 +1,56 @@
+# Literature Notes
+
+*Relevant work, located after the two papers were drafted. Recorded here so the papers' positioning stays honest: the fragility phenomenon they discuss is established and actively studied, not original to this work.*
+
+These notes are not a survey. They are the specific findings that bear on where *What Kind of Water Carves the Mountain?* sits — what the field has already shown, and what it leaves open.
+
+## The fragility axis is established
+
+The central claim of Paper 2's fragility axis — that precision-demanding capabilities degrade disproportionately under quantization while broad, tolerant capabilities are largely preserved — is reported, with data, across several recent studies.
+
+- **Li et al., "Quantization Meets Reasoning" (arXiv 2505.11574).** States the finding nearly verbatim: post-training quantization disproportionately affects mathematical reasoning while having only mild impact on general language capabilities. Also demonstrates targeted recovery — fine-tuning a quantized model on a few hundred task-specific examples restores reasoning to near full-precision — and an error-localization pipeline for reasoning failures.
+- **"Quantization Hurts Reasoning?" (arXiv 2504.04823).** A systematic study across DeepSeek-R1-Distilled Qwen and Llama families (1.5B–70B). Finds different reasoning tasks show varied quantization sensitivity, arithmetic degrading most. Goes *further* than Paper 2 mechanistically: disentangles capability into **memorization** (markedly more fragile) versus **utilization** (more robust), tied quantitatively to effective bit-width, calibration-set size, and model size.
+- **"Quantized Reasoning Models Think They Need to Think Longer" (arXiv 2606.00206).** States the generalized form directly: the effect of quantization is metric- and task-dependent, and compression can preserve aggregate performance while disproportionately degrading harder capabilities. Names this an *emerging thread* with several contributing studies. Shows quantization most affects high-entropy "thinking" tokens.
+- **Mathematical-reasoning degradation figures (arXiv 2501.03035).** Up to 32.39% accuracy degradation (≈11.31% average) on Llama-3 under AWQ/GPTQ, concentrated in numerical computation and reasoning planning — with recovery from ~545 task-specific examples.
+
+Corroborating, across settings: RAG studies find quantization mainly hurts when the model was already weak at the task; vision-language studies find component importance under quantization is task-driven; edge-AI studies find degradation varies sharply by task type, worst on mathematical reasoning.
+
+A separate cluster bears on *provenance* and *training history* rather than task-type, and is discussed below: controlled-composition pretraining studies (arXiv 2409.04556, holding data volume constant) and parallel natural-language-vs-code instruction studies (arXiv 2509.21499, 3,331 fine-tuning experiments) establishing that composition causally shapes capability and perturbation-robustness; a VLM study finding pre-training *source* modulates post-quantization behavior (arXiv 2509.21173); a study finding quantization robustness is driven by *training dynamics* largely independent of data scale (arXiv 2510.06213); and code-model robustness studies (arXiv 2506.22776, 2503.07103).
+
+A further cluster bears on *format and calibration* rather than task-type, and matters for the probe design: the most comprehensive format study to date (Kurtic et al., "Give Me BF16 or Give Me Death," arXiv 2411.02355, ~500,000 evaluations on Llama-3.1) finds FP8 effectively lossless, well-tuned INT8 only 1–3% degradation, and INT4 weight-only more competitive than expected — establishing that *compression format is a variable, not a constant*, and that "quantization" cannot be treated as a single stress. Related work shows calibration distribution affects PTQ reliability, and that compression can decouple accuracy from *uncertainty/calibration* (accuracy-only evaluation insufficient for deployment readiness) — both reflected in the probe's stress-specification and deferred-dimensions sections.
+
+**Implication for the papers.** Paper 2 should not, and now does not, present the fragility axis as a novel discovery. It is established. Paper 2's contribution on this axis is *framing and synthesis* — organizing the finding under a physical analogy — plus a cleaner measurement proposal (the matched-pair, same-context design in the fragility-probe protocol, which controls the task-difficulty confound that cross-benchmark comparisons carry).
+
+## The provenance question — substantial controlled prior art
+
+The distinct claim this framework makes is about **provenance** — what kind of structure carved a capability. A focused search shows this is not an open frontier either; it has substantial, well-controlled prior art.
+
+- **"How Does Code Pretraining Affect Language Model Task Performance?" (arXiv 2409.04556).** Pretrains models on interleaved natural-language-and-code in a *competitive* setting that **holds total data volume constant** — i.e. varies composition while controlling the obvious confound — and establishes a *causal* connection: higher code proportion improves compositional/structured-output tasks and mathematics, while harming syntax-sensitive and real-world-knowledge tasks. This is the controlled provenance comparison, run.
+- **"On Code-Induced Reasoning in LLMs" (arXiv 2509.21499).** Builds **parallel instruction datasets in natural language vs. code** (the matched, same-task, different-origin design), fine-tunes five model families, applies controlled structural-vs-semantic perturbations, and measures degradation across 3,331 experiments — finding models more vulnerable to *structural* than *semantic* perturbation, especially on math and code. This is provenance crossed with fragility-under-perturbation, with strong controls.
+- Code-model robustness studies (arXiv 2506.22776, 2503.07103) separately find code models unusually robust under compression.
+
+**Implication.** The provenance idea — that training origin shapes capability and its robustness, demonstrable under controls — is **substantially established**, not open. This framework's contribution to it is *synthesis and anticipation*: it converged on the question independently and places it in a larger picture, but it did not originate the finding and cannot claim the controlled comparison as novel.
+
+**The one corner that may remain.** The controlled studies measure *perturbation* robustness; the framework's specific framing is *quantization* fragility. Whether provenance predicts *quantization-retention* specifically — as opposed to perturbation-robustness — appears not to have been directly run in what we found. But this is a narrow methodological variant of an answered question, almost certainly an obvious next step given that both the quantization-fragility and provenance-robustness literatures now exist, and not a frontier this framework should rest weight on.
+
+## What actually remains open — and it is not explanatory
+
+Across searches, the explanatory questions (does fragility exist; does provenance matter) are answered or substantially so. The one direction that remains genuinely open is *practical* and sits beside the explanatory program: **does a stress-retention metric predict deployment reliability better than peak benchmark accuracy?** A focused search finds the *neighborhood* active — benchmark-robustness-under-paraphrase work, production reliability benchmarks, accelerated prompt stress-testing explicitly framed in reliability-engineering terms, and compression work arguing accuracy-only evaluation is insufficient for deployment readiness — so the *concept* of qualification-style evaluation is not novel. What we did **not** clearly find is the specific competing-predictors test: *retention-under-compression vs. peak accuracy, as rival predictors of reliability, across a panel of models.* That narrow, clean comparison may still be open. It is also the one question here whose value does **not** depend on originality or on any mechanism being correct — a stress test that predicts field failure is useful whether or not anyone was first to propose it, and whether or not the river-and-canyon account is right.
+
+**The precise open claim:** *does retention under compression add predictive value, beyond benchmark accuracy, for deployment reliability?* This is an engineering question, not a discovery claim, and it is where the framework's forward edge now most honestly lies.
+
+## How this changed the project's posture — the audit trail
+
+This is worth recording, because the *process* is part of the work. The project's claims shrank, repeatedly, under searches it chose to run on itself:
+
+1. **Start:** a speculative framework. Implicit story — "fragility might exist, provenance might matter, and this analogy predicts them."
+2. **First search (fragility):** fragility is real and actively studied. The framework stops *predicting* the axis and starts *using* it.
+3. **Second search (provenance, broad):** the idea that training origin shapes robustness is itself emerging; a second rival (training dynamics) appears.
+4. **Third search (provenance, controlled):** the *controlled* provenance comparison — composition held against volume, parallel code/language datasets — already exists, causally established. Provenance moves from "open frontier" to "substantially answered; our role is synthesis."
+5. **Fourth search (qualification):** the *concept* of stress-testing / reliability evaluation is active too; only the narrow competing-predictors test (retention vs. accuracy) appears possibly open.
+
+What survived every search: the framework's *core structure* (the two-axis model, the fragility and capability-under-load discussions, the geometric interpretation) — unchanged, because what changed was never the framework's internal logic but its *position relative to the literature*. The claims narrowed; the framework held. Had the literature forced a rewrite of the core model, that would be cause for worry; instead it forced only a rewrite of *what is known, what is open, and what the paper claims* — a framing update, not a conceptual demolition.
+
+The honest summary: this framework **independently converged on several phenomena the field is actively measuring**, and on at least one question the field has already answered with controls. That is a legitimate thing to have done — frameworks are often syntheses, and a synthesis that *anticipated* its findings is a real contribution — but it is **not** a discovery claim, and nowhere here is the framework's geometric *account* of these phenomena validated by their *existence* being confirmed. Phenomena confirmed is not mechanism confirmed. The single most original direction left is the qualification question, precisely because its value does not depend on originality at all.
+
+*Compiled by E. A. Flores, Apiana AI, Inc., June 2026. Reflects several literature searches (fragility; provenance, broad and controlled; qualification) that are indicative, not exhaustive. Findings may post-date the papers; included for positioning, not as endorsement of any single result.*

@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>What each Tier 0 outcome means</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+:root{--ink:#1a1a17;--ink-2:#55534c;--ink-3:#8a877e;--paper:#faf9f5;--line:#dcd9cf;
+--good:#1f7a5c;--ok:#9a6a12;--null:#8a877e;--serif:'Newsreader',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',monospace;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;padding:48px 40px 56px}
+.fig{max-width:640px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+h1{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1.1;margin-bottom:8px}
+.sub{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--ink-2);margin-bottom:14px;line-height:1.4}
+.run-slot{font-family:var(--mono);font-size:11px;color:var(--reach,#a8362b);background:#f6e9e6;border-radius:6px;padding:7px 12px;margin-bottom:26px;letter-spacing:.02em}
+.axis{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cell{border:1px solid var(--line);border-radius:11px;padding:15px 17px;background:#fff;border-top-width:2px}
+.cell.good{border-top-color:var(--good)} .cell.ok{border-top-color:var(--ok)} .cell.null{border-top-color:var(--null)} .cell.best{border-top-color:var(--good);background:#f3faf6}
+.cell .coord{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+.cell h3{font-family:var(--serif);font-size:16.5px;font-weight:500;line-height:1.15;margin-bottom:6px}
+.cell .means{font-size:12.5px;color:var(--ink-2);line-height:1.5;margin-bottom:9px}
+.cell .next{font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;padding-top:8px;border-top:1px solid var(--line)}
+.cell.good .next,.cell.best .next{color:var(--good)} .cell.ok .next{color:var(--ok)} .cell.null .next{color:var(--ink-2)}
+.foot{margin-top:24px;padding-top:16px;border-top:1px solid var(--line)}
+.foot .big{font-family:var(--serif);font-size:16px;font-weight:500;color:var(--ink);margin-bottom:4px}
+.foot .small{font-size:12.5px;color:var(--ink-2);font-style:italic}
+@media (prefers-color-scheme:dark){:root{--ink:#ece9e0;--ink-2:#a8a59a;--ink-3:#76736a;--paper:#16150f;--line:#33312a;--good:#5dbf9a;--ok:#d4a64a}
+.cell{background:#1d1c15}.cell.best{background:#10271e}.run-slot{background:#2a1714}}
+</style></head><body><div class="fig">
+<div class="eyebrow">River &amp; Canyon · v1.0 · pre–Tier 0</div>
+<h1>What each Tier 0 outcome means</h1>
+<p class="sub">The two pre-registered predictions, crossed. Every cell is a result — decided before the run, so none can be rationalized after.</p>
+<div class="run-slot">Run: n = ____ items · model ____________ · ____-bit vs ____-bit — blank because no run exists yet</div>
+
+<div class="axis">↓ robust-wrong appears? &nbsp;·&nbsp; → ΔR retention gap appears?</div>
+<div class="grid">
+<div class="cell good"><div class="coord">robust-wrong + &nbsp;·&nbsp; ΔR absent</div><h3>Blind-spot real, gap absent</h3><div class="means">The analytic contribution is observed; the fragility gap did not appear. The claim narrows to exactly the retention blind-spot.</div><div class="next">Next: narrow the claim; do not run diagnostics</div></div>
+<div class="cell best"><div class="coord">robust-wrong + &nbsp;·&nbsp; ΔR present</div><h3>Both hold</h3><div class="means">Both framework claims survived first contact. A pilot, not proof — one model, one configuration.</div><div class="next">Next: replicate on a 2nd model, then Tier 1</div></div>
+<div class="cell null"><div class="coord">robust-wrong − &nbsp;·&nbsp; ΔR absent</div><h3>Neither appears</h3><div class="means">Under matched, symmetric, calibration-invariant conditions, neither claim showed up here. A real result — the analogy's questions answered "no."</div><div class="next">Next: publish the local null; stop</div></div>
+<div class="cell ok"><div class="coord">robust-wrong − &nbsp;·&nbsp; ΔR present</div><h3>Gap only</h3><div class="means">The fragility gap is real here; robust-wrong was not exhibited. The analytic point stands regardless.</div><div class="next">Next: replicate fragility, then diagnostics</div></div>
+</div>
+
+<div class="foot"><div class="big">Every cell is a result. The only non-result is not running.</div><div class="small">Outcomes pre-registered before the run — the interpretation key, not a scoreboard.</div></div>
+</div></body></html>
