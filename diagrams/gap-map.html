@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Unexplored areas, by field</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+:root{--ink:#1a1a17;--ink-2:#55534c;--ink-3:#8a877e;--paper:#faf9f5;--line:#dcd9cf;
+--run:#2563a8;--signal:#9a6a12;--rec:#8a877e;--reach:#a8362b;
+--run-bg:#e7f0fa;--signal-bg:#f7efdd;--rec-bg:#f1efe8;--reach-bg:#f6e9e6;
+--serif:'Newsreader',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',monospace;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;padding:48px 40px 56px}
+.fig{max-width:620px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+h1{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1.1;margin-bottom:8px}
+.sub{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--ink-2);margin-bottom:30px;line-height:1.4}
+.field{margin-bottom:20px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.field-head{padding:13px 18px;border-bottom:1px solid var(--line)}
+.field-head .name{font-family:var(--serif);font-size:18px;font-weight:500;line-height:1.1}
+.field-head .role{font-size:12px;color:var(--ink-2);margin-top:2px}
+.field.home .field-head{background:var(--run-bg)} .field.home .name{color:#0f6e56}
+.rows{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.gap{padding:13px 18px;border-bottom:1px solid var(--line)}
+.gap:nth-child(odd){border-right:1px solid var(--line)}
+.gap:nth-last-child(-n+2){border-bottom:none}
+.gap .pill{font-family:var(--mono);font-size:9px;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:20px;display:inline-block;margin-bottom:7px}
+.gap .q{font-family:var(--serif);font-size:14.5px;font-weight:500;line-height:1.2;margin-bottom:3px}
+.gap .note{font-size:11.5px;color:var(--ink-2);line-height:1.45}
+.run .pill{background:var(--run-bg);color:var(--run)} .signal .pill{background:var(--signal-bg);color:var(--signal)}
+.rec .pill{background:var(--rec-bg);color:var(--rec)} .reach .pill{background:var(--reach-bg);color:var(--reach)}
+.legend{display:flex;justify-content:center;gap:18px;margin:22px 0 0;flex-wrap:wrap;font-size:11.5px;color:var(--ink-2)}
+.legend span{display:flex;align-items:center;gap:6px}.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.li-run{background:var(--run)}.li-signal{background:var(--signal)}.li-rec{background:var(--rec)}.li-reach{background:var(--reach)}
+.caption{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--serif);font-size:14px;font-style:italic;color:var(--ink-2);line-height:1.5}
+@media (prefers-color-scheme:dark){:root{--ink:#ece9e0;--ink-2:#a8a59a;--ink-3:#76736a;--paper:#16150f;--line:#33312a;
+--run-bg:#0f2236;--signal-bg:#2a2008;--rec-bg:#1d1c15;--reach-bg:#2a1714;--run:#6aa6e0;--signal:#d4a64a;--reach:#e08478}
+.field,.rows{background:#1d1c15}}
+</style></head><body><div class="fig">
+<div class="eyebrow">River &amp; Canyon · v1.0 · pre–Tier 0</div>
+<h1>Unexplored areas, by field</h1>
+<p class="sub">What remains untested, grouped by discipline — and tagged by what blocks each one.</p>
+
+<div class="field home"><div class="field-head"><div class="name">Metrology</div><div class="role">measurement instrument &amp; its limits — the project's home</div></div>
+<div class="rows">
+<div class="gap run"><span class="pill">blocked on the run</span><div class="q">Does ΔR exist and add value?</div><div class="note">retention as a metric beyond peak accuracy — untested</div></div>
+<div class="gap run"><span class="pill">blocked on the run</span><div class="q">Retention blind-spot, in practice</div><div class="note">analytic point proven; its appearance is not</div></div>
+</div></div>
+
+<div class="field"><div class="field-head"><div class="name">ML evaluation</div><div class="role">capability behavior under stress — field-owned, borrowed targets</div></div>
+<div class="rows">
+<div class="gap signal"><span class="pill">needs a signal</span><div class="q">Compositional seam</div><div class="note">forced-intermediate rescue; needs flagged items first</div></div>
+<div class="gap run"><span class="pill">blocked on the run</span><div class="q">Cross-stress generality</div><div class="note">real fragility vs quantization-specific weirdness</div></div>
+</div></div>
+
+<div class="field"><div class="field-head"><div class="name">Mechanistic interpretability</div><div class="role">internal cause — recorded as a bridge, partly out of reach</div></div>
+<div class="rows">
+<div class="gap signal"><span class="pill">needs a signal</span><div class="q">Depth vs redundancy</div><div class="note">salient-weight rescue (B13); one-directional, gated</div></div>
+<div class="gap reach"><span class="pill">out of reach</span><div class="q">Which circuit / literal defects</div><div class="note">needs patching/ablation; not this method, ever</div></div>
+</div></div>
+
+<div class="field"><div class="field-head"><div class="name">Infrastructure</div><div class="role">recorded, not built — shaped by data later</div></div>
+<div class="rows">
+<div class="gap rec"><span class="pill">recorded, not built</span><div class="q">MI handoff schema · twin-matching</div><div class="note">post-run artifacts; the data designs them</div></div>
+<div class="gap rec"><span class="pill">recorded, not built</span><div class="q">Factorial 2×2×2 · dataset manifest</div><div class="note">justified only if diagnostics return signal</div></div>
+</div></div>
+
+<div class="legend"><span><i class="li-run"></i>run Tier 0</span><span><i class="li-signal"></i>needs a signal</span><span><i class="li-rec"></i>recorded, not built</span><span><i class="li-reach"></i>out of reach</span></div>
+<p class="caption">The project lives in metrology, reaches into evaluation, and only gestures at mechanism. The further a gap sits from the home field, the more its blocker shifts from "run it" to "not our method." Today, only the metrology gaps are actionable — and both need the same key.</p>
+</div></body></html>

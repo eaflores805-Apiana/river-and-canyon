@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>The analogy's lineage</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+  :root{
+    --ink:#1a1a17; --ink-2:#55534c; --ink-3:#8a877e;
+    --paper:#faf9f5; --line:#dcd9cf; --line-2:#c4c0b4;
+    --kill:#a8362b; --keep:#1f7a5c; --field:#9a6a12; --next:#2563a8;
+    --kill-bg:#f6e9e6; --keep-bg:#e6f2ec; --field-bg:#f7efdd; --next-bg:#e7f0fa;
+    --serif:'Newsreader',Georgia,serif; --sans:'IBM Plex Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;padding:48px 40px 56px}
+  .fig{max-width:600px;margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+  h1{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1.1;margin-bottom:8px}
+  .sub{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--ink-2);margin-bottom:36px;line-height:1.4}
+  .stage{position:relative;padding-left:28px;padding-bottom:30px;border-left:1px solid var(--line)}
+  .stage:last-child{border-left:1px solid transparent;padding-bottom:0}
+  .dot{position:absolute;left:-5px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--ink);border:2px solid var(--paper)}
+  .stage-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px}
+  .stage-title{font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.2;margin-bottom:3px}
+  .stage-note{font-size:13.5px;color:var(--ink-2);line-height:1.5}
+  .fork{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:6px}
+  .card{border:1px solid var(--line);border-radius:10px;padding:14px 14px 15px;background:#fff}
+  .card .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:20px;display:inline-block;margin-bottom:9px}
+  .card h3{font-family:var(--serif);font-size:16px;font-weight:500;margin-bottom:8px;line-height:1.15}
+  .card ul{list-style:none;font-size:12px;line-height:1.55;color:var(--ink-2)}
+  .card li{padding-left:11px;position:relative;margin-bottom:2px}
+  .card li:before{content:'';position:absolute;left:0;top:8px;width:3px;height:3px;border-radius:50%;background:var(--line-2)}
+  .kill .tag{background:var(--kill-bg);color:var(--kill)} .kill{border-top:2px solid var(--kill)}
+  .keep .tag{background:var(--keep-bg);color:var(--keep)} .keep{border-top:2px solid var(--keep)}
+  .field .tag{background:var(--field-bg);color:var(--field)} .field{border-top:2px solid var(--field)}
+  .badge{font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--ink-3);margin-top:7px;display:block}
+  .converge{margin-top:18px;border:1px solid var(--next);border-radius:10px;background:var(--next-bg);padding:15px 16px;text-align:center}
+  .converge .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--next);margin-bottom:5px;display:block}
+  .converge h3{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--ink);margin-bottom:3px}
+  .converge p{font-size:13px;color:var(--ink-2)}
+  .generative{font-family:var(--mono);font-size:10px;color:var(--ink-3);text-align:center;margin-top:12px;letter-spacing:.04em}
+  .rule{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink-2);line-height:1.45}
+  @media (prefers-color-scheme:dark){
+    :root{--ink:#ece9e0;--ink-2:#a8a59a;--ink-3:#76736a;--paper:#16150f;--line:#33312a;--line-2:#454239;
+      --kill-bg:#2a1714;--keep-bg:#10271e;--field-bg:#2a2008;--next-bg:#0f2236;
+      --kill:#e08478;--keep:#5dbf9a;--field:#d4a64a;--next:#6aa6e0}
+    .card,.dot{background:#1d1c15}
+  }
+</style>
+</head>
+<body>
+<div class="fig">
+  <div class="eyebrow">River &amp; Canyon · v1.0 · post pressure-test, pre–Tier 0</div>
+  <h1>The analogy's lineage</h1>
+  <p class="sub">It generated questions, then was prosecuted to failure. Only measurement claims survived — and unequally.</p>
+
+  <div class="stage">
+    <span class="dot"></span>
+    <div class="stage-label">Source</div>
+    <div class="stage-title">The analogy</div>
+    <div class="stage-note">Water carves structure. A picture, not a claim.</div>
+  </div>
+
+  <div class="stage">
+    <span class="dot"></span>
+    <div class="stage-label">Generated</div>
+    <div class="stage-title">Candidate questions</div>
+    <div class="stage-note">Seams, shortcuts, cliffs, fluent-but-wrong — where to look, not what is true.</div>
+  </div>
+
+  <div class="stage">
+    <span class="dot"></span>
+    <div class="stage-label">Tested · 6 rounds, 3 external</div>
+    <div class="stage-title">Pressure tests</div>
+    <div class="stage-note">Each question prosecuted to failure. The taxonomy did not survive.</div>
+    <div class="fork">
+      <div class="card kill">
+        <span class="tag">Falsified</span>
+        <h3>Died</h3>
+        <ul>
+          <li>7-type taxonomy — overfit to analogy</li>
+          <li>grain structure — untestable</li>
+          <li>"defects likely" prior — unjustified</li>
+        </ul>
+      </div>
+      <div class="card keep">
+        <span class="tag">Survived · ours</span>
+        <h3>Retention ≠ correctness</h3>
+        <ul>
+          <li>a stable answer can be stably wrong</li>
+          <li>invisible to retention alone</li>
+        </ul>
+        <span class="badge">TRUE BY DEFINITION · the one contribution</span>
+      </div>
+      <div class="card field">
+        <span class="tag">Survived · field's</span>
+        <h3>Compositional seam</h3>
+        <ul>
+          <li>failures cluster at composition</li>
+          <li>falsifiable, worth testing</li>
+        </ul>
+        <span class="badge">BORROWED TEST TARGET · not ours to claim</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="stage">
+    <span class="dot"></span>
+    <div class="stage-label">Converges on</div>
+    <div class="converge">
+      <span class="tag">★ the unrun experiment</span>
+      <h3>Tier 0 — matched-pair retention probe</h3>
+      <p>Both survivors feed one experiment. No data yet.</p>
+    </div>
+    <div class="generative">the analogy reaches Tier 0 by a dashed line — generative only, not evidentiary</div>
+  </div>
+
+  <p class="rule">The scaffold came down once the building stood. The analogy was necessary to <em>find</em> these claims, and is unnecessary to <em>defend</em> them. The claim map is complete; the data must now decide.</p>
+</div>
+</body>
+</html>

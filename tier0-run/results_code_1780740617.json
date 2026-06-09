@@ -1,0 +1,2248 @@
+{
+  "summary": {
+    "calib": "code",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "baseline_bits": 16,
+    "rungs": {
+      "8": {
+        "mean_R_broad": 0.9814814814814815,
+        "mean_R_narrow": 1.0,
+        "delta_R": -0.019607843137255054,
+        "ci95": [
+          -0.05882352941176472,
+          0.0
+        ],
+        "n_pairs_used": 17,
+        "outcome_hint": "flat"
+      },
+      "4": {
+        "mean_R_broad": 1.0,
+        "mean_R_narrow": 1.0,
+        "delta_R": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n_pairs_used": 17,
+        "outcome_hint": "flat"
+      }
+    },
+    "robust_wrong_flags": [],
+    "component_competence": {
+      "P01R": {
+        "comp_0": {
+          "hop": "delivery_time",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "restocking_time",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "P02R": {
+        "comp_0": {
+          "hop": "total_parts",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "screws_per_part",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "multiply_20x3",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "P03": {
+        "comp_0": {
+          "hop": "nalo_key",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "key_vault",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "vault_token",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "P04": {
+        "comp_0": {
+          "hop": "person_team",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "team_station",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "station_file",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LB1": {
+        "comp_0": {
+          "hop": "nalo_key",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "key_vault",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "vault_token",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "token_gate",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LB2": {
+        "comp_0": {
+          "hop": "soren_badge",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "badge_sector",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "sector_file",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "file_code",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LB3": {
+        "comp_0": {
+          "hop": "taya_card",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "card_locker",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "locker_disk",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "disk_sequence",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LB4": {
+        "comp_0": {
+          "hop": "kael_permit",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "permit_chamber",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "chamber_crystal",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "crystal_signal",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LC1": {
+        "comp_0": {
+          "hop": "nalo_key",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "key_vault",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "vault_token",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "token_gate",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LC2": {
+        "comp_0": {
+          "hop": "soren_badge",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "badge_sector",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "sector_file",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "file_code",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 0.0
+          }
+        }
+      },
+      "LC3": {
+        "comp_0": {
+          "hop": "taya_card",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "card_locker",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "locker_disk",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "disk_sequence",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LC4": {
+        "comp_0": {
+          "hop": "kael_permit",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "permit_chamber",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "chamber_crystal",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "crystal_signal",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LD1": {
+        "comp_0": {
+          "hop": "ziri_key",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "key_vault",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "vault_token",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "token_terminal",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_4": {
+          "hop": "terminal_passcode",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LD2": {
+        "comp_0": {
+          "hop": "bren_chip",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "chip_zone",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "zone_shard",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "shard_station",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_4": {
+          "hop": "station_frequency",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LD3": {
+        "comp_0": {
+          "hop": "finn_pass",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "pass_wing",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "wing_cube",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "cube_panel",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_4": {
+          "hop": "panel_cipher",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      },
+      "LD4": {
+        "comp_0": {
+          "hop": "hira_tag",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 0.0,
+            "4": 1.0
+          }
+        },
+        "comp_1": {
+          "hop": "tag_block",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_2": {
+          "hop": "block_capsule",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_3": {
+          "hop": "capsule_bay",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        },
+        "comp_4": {
+          "hop": "bay_code",
+          "baseline": 1.0,
+          "stressed": {
+            "8": 1.0,
+            "4": 1.0
+          }
+        }
+      }
+    }
+  },
+  "raw": {
+    "P01R": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: BEFORE, delivery"
+        },
+        "8": {
+          "score": 0.0,
+          "output": "ANSWER: BEFORE, delivery"
+        },
+        "4": {
+          "score": 0.0,
+          "output": "ANSWER: BEFORE, delivery"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: delivery = 10:00 AM; restocking = 11:00 AM"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: delivery = 10:00 AM; restocking = 11:00 AM"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: delivery = 10:00 AM; restocking = 11:00 AM"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 10:00 AM",
+            "hop": "delivery_time"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 10:00 AM",
+            "hop": "delivery_time"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 10:00 AM",
+            "hop": "delivery_time"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 11:00 AM",
+            "hop": "restocking_time"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 11:00 AM",
+            "hop": "restocking_time"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 11:00 AM",
+            "hop": "restocking_time"
+          }
+        }
+      }
+    },
+    "P02R": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 60"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 60"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 60"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: red parts = 12; blue parts = 8"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: red parts = 12; blue parts = 8"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: red parts = 12; blue parts = 8"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 20",
+            "hop": "total_parts"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 20",
+            "hop": "total_parts"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 20",
+            "hop": "total_parts"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 3",
+            "hop": "screws_per_part"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 3",
+            "hop": "screws_per_part"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 3",
+            "hop": "screws_per_part"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 60",
+            "hop": "multiply_20x3"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 60",
+            "hop": "multiply_20x3"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 60",
+            "hop": "multiply_20x3"
+          }
+        }
+      }
+    },
+    "P03": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: silver token"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: silver token"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: silver token"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) The red key opens Vault 3"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) The red key opens Vault 3"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) The red key opens Vault 3."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          }
+        }
+      }
+    },
+    "P04": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: amber file"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: amber file"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: amber file"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Riven is assigned to Team Delta; 2) Station 8 stores the amber file."
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Riven is assigned to Team Delta; 2) Station 8 stores the amber file."
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Riven is assigned to Team Delta; 2) Station 8 stores the amber file."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Team Delta",
+            "hop": "person_team"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Team Delta",
+            "hop": "person_team"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Team Delta",
+            "hop": "person_team"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Station 8",
+            "hop": "team_station"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Station 8",
+            "hop": "team_station"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Station 8",
+            "hop": "team_station"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: amber file",
+            "hop": "station_file"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: amber file",
+            "hop": "station_file"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: amber file",
+            "hop": "station_file"
+          }
+        }
+      }
+    },
+    "P05": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: green"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: green"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: green"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: blue"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: blue"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: blue"
+        }
+      },
+      "counterexample": {},
+      "components": {}
+    },
+    "P06": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: SAFE"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: SAFE"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: SAFE"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: BLUE"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: BLUE"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: BLUE"
+        }
+      },
+      "counterexample": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: SAFE"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: SAFE"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: SAFE"
+        }
+      },
+      "components": {}
+    },
+    "LB1": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Gate B"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: Gate B"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: Gate B"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 0.6666666666666666,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) The red key opens Vault 3"
+        },
+        "8": {
+          "score": 0.6666666666666666,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) The red key opens Vault 3"
+        },
+        "4": {
+          "score": 0.6666666666666666,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) The red key opens Vault 3."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Gate B",
+            "hop": "token_gate"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Gate B",
+            "hop": "token_gate"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Gate B",
+            "hop": "token_gate"
+          }
+        }
+      }
+    },
+    "LB2": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 7"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 7"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 7"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Soren holds the green badge; 2) The green badge grants entry to Sector 4"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Soren holds the green badge; 2) The green badge grants entry to Sector 4"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Soren holds the green badge; 2) The green badge grants entry to Sector 4."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: green",
+            "hop": "soren_badge"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: green",
+            "hop": "soren_badge"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: green badge",
+            "hop": "soren_badge"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 4",
+            "hop": "badge_sector"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 4",
+            "hop": "badge_sector"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 4",
+            "hop": "badge_sector"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: delta file",
+            "hop": "sector_file"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: delta file",
+            "hop": "sector_file"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: delta file",
+            "hop": "sector_file"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: code 7",
+            "hop": "file_code"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: code 7",
+            "hop": "file_code"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: code 7",
+            "hop": "file_code"
+          }
+        }
+      }
+    },
+    "LB3": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 44"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 44"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 44"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Taya carries the amber card; 2) The amber card unlocks Locker 12"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Taya carries the amber card; 2) The amber card unlocks Locker 12"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Taya carries the amber card; 2) The amber card unlocks Locker 12."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: amber card",
+            "hop": "taya_card"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: amber card",
+            "hop": "taya_card"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: amber card",
+            "hop": "taya_card"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Locker 12",
+            "hop": "card_locker"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Locker 12",
+            "hop": "card_locker"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Locker 12",
+            "hop": "card_locker"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: indigo disk",
+            "hop": "locker_disk"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: indigo disk",
+            "hop": "locker_disk"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: indigo disk",
+            "hop": "locker_disk"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 44",
+            "hop": "disk_sequence"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 44",
+            "hop": "disk_sequence"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 44",
+            "hop": "disk_sequence"
+          }
+        }
+      }
+    },
+    "LB4": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: X7"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: X7"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: X7"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Kael holds the bronze permit; 2) The bronze permit opens Chamber 9."
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Kael holds the bronze permit; 2) The bronze permit opens Chamber 9"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Kael holds the bronze permit; 2) The bronze permit opens Chamber 9."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: bronze permit",
+            "hop": "kael_permit"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: bronze permit",
+            "hop": "kael_permit"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: bronzepermit",
+            "hop": "kael_permit"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Chamber 9",
+            "hop": "permit_chamber"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Chamber 9",
+            "hop": "permit_chamber"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Chamber 9",
+            "hop": "permit_chamber"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: opal crystal",
+            "hop": "chamber_crystal"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: opal crystal",
+            "hop": "chamber_crystal"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: opal crystal",
+            "hop": "chamber_crystal"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: X7",
+            "hop": "crystal_signal"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: X7",
+            "hop": "crystal_signal"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: X7",
+            "hop": "crystal_signal"
+          }
+        }
+      }
+    },
+    "LC1": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Gate B"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: Gate B"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: Gate B"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 0.6666666666666666,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) Lyra owns the blue key"
+        },
+        "8": {
+          "score": 0.6666666666666666,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) Lyra owns the blue key"
+        },
+        "4": {
+          "score": 0.6666666666666666,
+          "output": "ANSWER: 1) Nalo owns the red key; 2) The red key opens Vault 3."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: red key",
+            "hop": "nalo_key"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "key_vault"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault_token"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Gate B",
+            "hop": "token_gate"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Gate B",
+            "hop": "token_gate"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Gate B",
+            "hop": "token_gate"
+          }
+        }
+      }
+    },
+    "LC2": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 7"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 7"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 7"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Soren holds the green badge; 2) The green badge grants entry to Sector 4"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Soren holds the green badge; 2) The green badge grants entry to Sector 4"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Soren holds the green badge; 2) The green badge grants entry to Sector 4."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: green",
+            "hop": "soren_badge"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: green",
+            "hop": "soren_badge"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: green",
+            "hop": "soren_badge"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 4",
+            "hop": "badge_sector"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 4",
+            "hop": "badge_sector"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 4",
+            "hop": "badge_sector"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: delta file",
+            "hop": "sector_file"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: delta file",
+            "hop": "sector_file"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: delta file",
+            "hop": "sector_file"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 7",
+            "hop": "file_code"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 7",
+            "hop": "file_code"
+          },
+          "4": {
+            "score": 0.0,
+            "output": "ANSWER: code 7",
+            "hop": "file_code"
+          }
+        }
+      }
+    },
+    "LC3": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 44"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 44"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 44"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Taya carries the amber card; 2) The amber card unlocks Locker 12."
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Taya carries the amber card; 2) The amber card unlocks Locker 12"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Taya carries the amber card; 2) The amber card unlocks Locker 12."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: amber card",
+            "hop": "taya_card"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: amber card",
+            "hop": "taya_card"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: amber card",
+            "hop": "taya_card"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Locker 12",
+            "hop": "card_locker"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Locker 12",
+            "hop": "card_locker"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Locker 12",
+            "hop": "card_locker"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: indigo disk",
+            "hop": "locker_disk"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: indigo disk",
+            "hop": "locker_disk"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: indigo disk",
+            "hop": "locker_disk"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 44",
+            "hop": "disk_sequence"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 44",
+            "hop": "disk_sequence"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 44",
+            "hop": "disk_sequence"
+          }
+        }
+      }
+    },
+    "LC4": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: X7"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: X7"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: X7"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Kael holds the bronze permit; 2) The bronze permit opens Chamber 9."
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Kael holds the bronze permit; 2) The bronze permit opens Chamber 9."
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Kael holds the bronze permit; 2) The bronze permit opens Chamber 9."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: bronzepermit",
+            "hop": "kael_permit"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: bronzepermit",
+            "hop": "kael_permit"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: bronzepermit",
+            "hop": "kael_permit"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Chamber 9",
+            "hop": "permit_chamber"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Chamber 9",
+            "hop": "permit_chamber"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Chamber 9",
+            "hop": "permit_chamber"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: opal",
+            "hop": "chamber_crystal"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: opal",
+            "hop": "chamber_crystal"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: opal crystal",
+            "hop": "chamber_crystal"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: X7",
+            "hop": "crystal_signal"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: X7",
+            "hop": "crystal_signal"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: X7",
+            "hop": "crystal_signal"
+          }
+        }
+      }
+    },
+    "LD1": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 91"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 91"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 91"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Ziri owns the gold key; 2) The gold key opens Vault 7."
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Ziri owns the gold key; 2) The gold key opens Vault 7."
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Ziri owns the gold key; 2) The gold key opens Vault 7."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: gold key",
+            "hop": "ziri_key"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: gold key",
+            "hop": "ziri_key"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: gold key",
+            "hop": "ziri_key"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 7",
+            "hop": "key_vault"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 7",
+            "hop": "key_vault"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 7",
+            "hop": "key_vault"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: emerald token",
+            "hop": "vault_token"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: emerald token",
+            "hop": "vault_token"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: emerald token",
+            "hop": "vault_token"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Terminal C",
+            "hop": "token_terminal"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Terminal C",
+            "hop": "token_terminal"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Terminal C",
+            "hop": "token_terminal"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 91",
+            "hop": "terminal_passcode"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 91",
+            "hop": "terminal_passcode"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 91",
+            "hop": "terminal_passcode"
+          }
+        }
+      }
+    },
+    "LD2": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 330"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 330"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 330"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Bren holds the blue chip; 2) The blue chip grants access to Zone 6."
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Bren holds the blue chip; 2) The blue chip grants access to Zone 6."
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Bren holds the blue chip; 2) The blue chip grants access to Zone 6."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: blue chip",
+            "hop": "bren_chip"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: blue chip",
+            "hop": "bren_chip"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: blue chip",
+            "hop": "bren_chip"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Zone 6",
+            "hop": "chip_zone"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Zone 6",
+            "hop": "chip_zone"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Zone 6",
+            "hop": "chip_zone"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: quartz shard",
+            "hop": "zone_shard"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: quartz shard",
+            "hop": "zone_shard"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: quartz shard",
+            "hop": "zone_shard"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Station R",
+            "hop": "shard_station"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Station R",
+            "hop": "shard_station"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Station R",
+            "hop": "shard_station"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 330",
+            "hop": "station_frequency"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 330",
+            "hop": "station_frequency"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 330",
+            "hop": "station_frequency"
+          }
+        }
+      }
+    },
+    "LD3": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 77"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 77"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 77"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Finn holds the platinum pass; 2) The platinum pass grants entry to Wing 3."
+        },
+        "8": {
+          "score": 0.6666666666666666,
+          "output": "ANSWER: 1) Finn holds the platinum pass; 2) Gale holds the iron pass."
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Finn holds the platinum pass; 2) The platinum pass grants entry to Wing 3."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: platinum",
+            "hop": "finn_pass"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: platinum",
+            "hop": "finn_pass"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: platinum pass",
+            "hop": "finn_pass"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Wing 3",
+            "hop": "pass_wing"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Wing 3",
+            "hop": "pass_wing"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Wing 3",
+            "hop": "pass_wing"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: topaz cube",
+            "hop": "wing_cube"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: topaz cube",
+            "hop": "wing_cube"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: topaz cube",
+            "hop": "wing_cube"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Panel 8",
+            "hop": "cube_panel"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Panel 8",
+            "hop": "cube_panel"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Panel 8",
+            "hop": "cube_panel"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: cipher 77",
+            "hop": "panel_cipher"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: cipher 77",
+            "hop": "panel_cipher"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: cipher 77",
+            "hop": "panel_cipher"
+          }
+        }
+      }
+    },
+    "LD4": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 248"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 248"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 248"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Hira carries the jade tag; 2) The jade tag unlocks Block 5"
+        },
+        "8": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Hira carries the jade tag; 2) The jade tag unlocks Block 5"
+        },
+        "4": {
+          "score": 1.0,
+          "output": "ANSWER: 1) Hira carries the jade tag; 2) The jade tag unlocks Block 5."
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: jade tag",
+            "hop": "hira_tag"
+          },
+          "8": {
+            "score": 0.0,
+            "output": "ANSWER: jade",
+            "hop": "hira_tag"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: jade tag",
+            "hop": "hira_tag"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Block 5",
+            "hop": "tag_block"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Block 5",
+            "hop": "tag_block"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Block 5",
+            "hop": "tag_block"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: copper capsule",
+            "hop": "block_capsule"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: copper capsule",
+            "hop": "block_capsule"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: copper capsule",
+            "hop": "block_capsule"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Bay 9",
+            "hop": "capsule_bay"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: Bay 9",
+            "hop": "capsule_bay"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: Bay 9",
+            "hop": "capsule_bay"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 248",
+            "hop": "bay_code"
+          },
+          "8": {
+            "score": 1.0,
+            "output": "ANSWER: 248",
+            "hop": "bay_code"
+          },
+          "4": {
+            "score": 1.0,
+            "output": "ANSWER: 248",
+            "hop": "bay_code"
+          }
+        }
+      }
+    }
+  }
+}

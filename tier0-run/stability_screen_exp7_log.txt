@@ -1,0 +1,138 @@
+=== loading Qwen/Qwen2.5-1.5B-Instruct at FP16 ===
+    tasks_manifest_hash: sha256:177c5f7f1fa39d902fafe4974e5d449f005e6200fe5101efb54b25186096f20e
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 26594.32it/s]
+
+--- SA1 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: FAVOX'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: FAVOX'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: GROXL'
+  comp[grixp_vunlb]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: VUNLB'
+  comp[vunlb_mexot]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: MEXOT'
+  comp[mexot_favox]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: FAVOX'
+  → STABLE
+
+--- SA2 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: PLONX'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: PLONX'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: FLIPN'
+  comp[dralx_klomf]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: FLIPN'
+  comp[klomf_zapvi]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: FLIPN'
+  comp[zapvi_plonx]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: PLONX'
+  → COMP_FAIL
+
+--- SA3 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WEXBI'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WEXBI'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: BUVAX'
+  comp[bluxn_wivot]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WIVOT'
+  comp[wivot_fropk]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: FROPK'
+  comp[fropk_wexbi]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WEXBI'
+  → STABLE
+
+--- SA4 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: ZULPA'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: ZULPA'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: KRAZM'
+  comp[skron_pamvl]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: PAMVL'
+  comp[pamvl_xotbi]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: XOTBI'
+  comp[xotbi_zulpa]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: ZULPA'
+  → STABLE
+
+--- SA5 ---
+  narrow/original:   0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: GLIVN'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: DRIXM'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WOVLU'
+  comp[vompl_jaxol]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: GLIVN'
+  comp[jaxol_glivn]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: GLIVN'
+  comp[glivn_drixm]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: DRIXM'
+  → FLOOR
+
+--- SA6 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: NORVA'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: NORVA'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: QUAFT'
+  comp[maxbi_grulp]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: BROXN'
+  comp[grulp_woxen]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: BROXN'
+  comp[woxen_norva]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: NORVA'
+  → COMP_FAIL
+
+--- SA7 ---
+  narrow/original:   0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: KARVO'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: KRAXI'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: NIXBL'
+  comp[drizp_zarvp]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: NIXBL'
+  comp[zarvp_karvo]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: KARVO'
+  comp[karvo_kraxi]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: KRAXI'
+  → FLOOR
+
+--- SA8 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: VEFLM'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: VEFLM'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: LORVX'
+  comp[troxb_flumb]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: FLUMB'
+  comp[flumb_nakvi]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: VEFLM'
+  comp[nakvi_veflm]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: VEFLM'
+  → COMP_FAIL
+
+--- DE1 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: ORBUX'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: ORBUX'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: VIMPL'
+  → STABLE
+
+--- DE2 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: GRUMV'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: GRUMV'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WIXPL'
+  → STABLE
+
+--- DE3 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WOXUR'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WOXUR'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: KLINP'
+  comp[ploxn_grivt]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: GRIVT'
+  comp[grivt_woxur]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WOXUR'
+  → STABLE
+
+--- DE4 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: BLIXT'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: BLIXT'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: TAXGR'
+  comp[zompl_vraxi]:  0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: BLIXT'
+  comp[vraxi_blixt]:  1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: BLIXT'
+  → COMP_FAIL
+
+--- NC1 ---
+  narrow/original:   0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: ZULNX'
+  narrow/paraphrase: 0.00  strict=0.00  content=0.00  [CONTENT_LOSS]  'ANSWER: ZULNX'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: ZULNX'
+  → FLOOR
+
+--- AC1 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: GRUVL'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: GRUVL'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WUMFT'
+  → STABLE
+
+--- AC2 ---
+  narrow/original:   1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: DRIXP'
+  narrow/paraphrase: 1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: DRIXP'
+  broad/original:    1.00  strict=1.00  content=1.00  [PASS]  'ANSWER: WUNFA'
+  → STABLE
+
+=== wrote stability_screen_1780776502.json ===
+
+STABLE     (8):    ['SA1', 'SA3', 'SA4', 'DE1', 'DE2', 'DE3', 'AC1', 'AC2']
+BOUNDARY   (0):  []
+COMP_FAIL  (4): ['SA2', 'SA6', 'SA8', 'DE4']
+BROAD_FAIL (0): []
+FLOOR      (3):    ['SA5', 'SA7', 'NC1']
+
+Stable SA (included_in_G) pairs: 3 / 8
+
+[THRESHOLD NOT MET] Fewer than 6 stable SA (included_in_G) pairs.
+Per PREREGISTRATION-EXP7.md §11: report Outcome E (task failure).
+Do not proceed to stress sweep.
+Wrote filtered task file: tasks_exp7_stable.py
+
+Next: python3 run_tier0.py --model Qwen/Qwen2.5-1.5B-Instruct --bits 16 8 4 --calib code --tasks tasks_exp7_stable --model-4bit <INT4_REPO>

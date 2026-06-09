@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>What this method can and cannot decide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+  :root{
+    --ink:#1a1a17;--ink-2:#55534c;--ink-3:#8a877e;--paper:#faf9f5;--line:#dcd9cf;
+    --can:#1f7a5c;--cant:#a8362b;--can-bg:#e6f2ec;--cant-bg:#f6e9e6;
+    --serif:'Newsreader',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;padding:48px 40px 56px}
+  .fig{max-width:620px;margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
+  h1{font-family:var(--serif);font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1.1;margin-bottom:8px}
+  .sub{font-family:var(--serif);font-size:16px;font-style:italic;color:var(--ink-2);margin-bottom:34px;line-height:1.4}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .col-head{padding:16px 20px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+  .can .col-head{background:var(--can-bg);color:var(--can);border-bottom:2px solid var(--can)}
+  .cant .col-head{background:var(--cant-bg);color:var(--cant);border-bottom:2px solid var(--cant)}
+  .cant{border-left:1px solid var(--line)}
+  .row{padding:14px 20px;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:none}
+  .row .what{font-family:var(--serif);font-size:15.5px;font-weight:500;line-height:1.2;margin-bottom:4px}
+  .row .how{font-size:12px;color:var(--ink-2);line-height:1.45}
+  .cant .how{color:var(--ink-2)}
+  .cant .how em{font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--cant);letter-spacing:.02em}
+  .armor{margin-top:26px;border-left:2px solid var(--cant);padding:4px 0 4px 18px}
+  .armor .q{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink);line-height:1.3;margin-bottom:6px}
+  .armor .a{font-size:13.5px;color:var(--ink-2);line-height:1.5}
+  .rule{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--serif);font-size:15px;color:var(--ink);line-height:1.4}
+  .rule strong{font-weight:500}
+  @media (prefers-color-scheme:dark){
+    :root{--ink:#ece9e0;--ink-2:#a8a59a;--ink-3:#76736a;--paper:#16150f;--line:#33312a;
+      --can-bg:#10271e;--cant-bg:#2a1714;--can:#5dbf9a;--cant:#e08478}
+    .cols{background:#1d1c15}
+  }
+</style>
+</head>
+<body>
+<div class="fig">
+  <div class="eyebrow">River &amp; Canyon · v1.0 · the claim boundary</div>
+  <h1>What this method<br>can and cannot decide</h1>
+  <p class="sub">A behavioral stress-retention probe. Each limit names the method that would be required instead.</p>
+
+  <div class="cols">
+    <div class="can">
+      <div class="col-head">Can decide — behaviorally</div>
+      <div class="row"><div class="what">Whether retention differs</div><div class="how">narrow vs matched broad, as a measured ΔR with a confidence interval</div></div>
+      <div class="row"><div class="what">Whether a stable answer is wrong</div><div class="how">retention + counterexample + error-identity, read jointly</div></div>
+      <div class="row"><div class="what">Whether a failure is the handoff</div><div class="how">forced-intermediate rescue, causally — vs subskill weakness</div></div>
+      <div class="row"><div class="what">Whether a signal is an artifact</div><div class="how">cross-calibration invariance + state-load-matched controls</div></div>
+      <div class="row"><div class="what">That retention ≠ correctness</div><div class="how">analytic — true by the metric's own definition</div></div>
+    </div>
+    <div class="cant">
+      <div class="col-head">Cannot decide — needs other method</div>
+      <div class="row"><div class="what">Which circuit causes it</div><div class="how"><em>needs activation patching / attribution</em></div></div>
+      <div class="row"><div class="what">Whether "defects" literally exist</div><div class="how"><em>a claim about internal weights — no behavioral access</em></div></div>
+      <div class="row"><div class="what">Why a behavior fails internally</div><div class="how"><em>needs ablation / salience / probing</em></div></div>
+      <div class="row"><div class="what">Whether it generalizes</div><div class="how"><em>one model is a pilot — needs replication</em></div></div>
+      <div class="row"><div class="what">Whether it predicts deployment</div><div class="how"><em>the open question — needs the run, then field data</em></div></div>
+    </div>
+  </div>
+
+  <div class="armor">
+    <div class="q">"But how do you know it's not circuit X?"</div>
+    <div class="a">We don't, and we don't claim to — that lives in the right column. This is a metrology instrument, not a mechanism finder.</div>
+  </div>
+
+  <p class="rule"><strong>Rule:</strong> if it requires circuits, it is not this project.</p>
+</div>
+</body>
+</html>

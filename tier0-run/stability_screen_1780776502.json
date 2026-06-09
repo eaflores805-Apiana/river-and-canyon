@@ -1,0 +1,837 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tasks": "tasks_exp7",
+  "tasks_manifest_hash": "sha256:177c5f7f1fa39d902fafe4974e5d449f005e6200fe5101efb54b25186096f20e",
+  "fresh_generation": true,
+  "screen_timestamp": 1780776502,
+  "results": {
+    "SA1": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: FAVOX",
+        "output": "ANSWER: FAVOX",
+        "timestamp": 1780776504
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: FAVOX",
+        "output": "ANSWER: FAVOX",
+        "timestamp": 1780776504
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: GROXL",
+        "output": "ANSWER: GROXL",
+        "timestamp": 1780776505
+      },
+      "component_checks": [
+        {
+          "hop": "grixp_vunlb",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: VUNLB",
+          "output": "ANSWER: VUNLB",
+          "timestamp": 1780776505
+        },
+        {
+          "hop": "vunlb_mexot",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: MEXOT",
+          "output": "ANSWER: MEXOT",
+          "timestamp": 1780776505
+        },
+        {
+          "hop": "mexot_favox",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FAVOX",
+          "output": "ANSWER: FAVOX",
+          "timestamp": 1780776505
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "SA2": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: PLONX",
+        "output": "ANSWER: PLONX",
+        "timestamp": 1780776505
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: PLONX",
+        "output": "ANSWER: PLONX",
+        "timestamp": 1780776506
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: FLIPN",
+        "output": "ANSWER: FLIPN",
+        "timestamp": 1780776506
+      },
+      "component_checks": [
+        {
+          "hop": "dralx_klomf",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: KLOMF",
+          "output": "ANSWER: FLIPN",
+          "timestamp": 1780776506
+        },
+        {
+          "hop": "klomf_zapvi",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: ZAPVI",
+          "output": "ANSWER: FLIPN",
+          "timestamp": 1780776506
+        },
+        {
+          "hop": "zapvi_plonx",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PLONX",
+          "output": "ANSWER: PLONX",
+          "timestamp": 1780776506
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "SA3": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WEXBI",
+        "output": "ANSWER: WEXBI",
+        "timestamp": 1780776507
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WEXBI",
+        "output": "ANSWER: WEXBI",
+        "timestamp": 1780776507
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: BUVAX",
+        "output": "ANSWER: BUVAX",
+        "timestamp": 1780776507
+      },
+      "component_checks": [
+        {
+          "hop": "bluxn_wivot",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: WIVOT",
+          "output": "ANSWER: WIVOT",
+          "timestamp": 1780776507
+        },
+        {
+          "hop": "wivot_fropk",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FROPK",
+          "output": "ANSWER: FROPK",
+          "timestamp": 1780776507
+        },
+        {
+          "hop": "fropk_wexbi",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: WEXBI",
+          "output": "ANSWER: WEXBI",
+          "timestamp": 1780776508
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "SA4": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: ZULPA",
+        "output": "ANSWER: ZULPA",
+        "timestamp": 1780776508
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: ZULPA",
+        "output": "ANSWER: ZULPA",
+        "timestamp": 1780776508
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: KRAZM",
+        "output": "ANSWER: KRAZM",
+        "timestamp": 1780776508
+      },
+      "component_checks": [
+        {
+          "hop": "skron_pamvl",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PAMVL",
+          "output": "ANSWER: PAMVL",
+          "timestamp": 1780776509
+        },
+        {
+          "hop": "pamvl_xotbi",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: XOTBI",
+          "output": "ANSWER: XOTBI",
+          "timestamp": 1780776509
+        },
+        {
+          "hop": "xotbi_zulpa",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: ZULPA",
+          "output": "ANSWER: ZULPA",
+          "timestamp": 1780776509
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "SA5": {
+      "narrow_original": {
+        "score": 0.0,
+        "strict": 0.0,
+        "content": 0.0,
+        "partial": 0.0,
+        "failure_class": "CONTENT_LOSS",
+        "expected": "ANSWER: DRIXM",
+        "output": "ANSWER: GLIVN",
+        "timestamp": 1780776509
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: DRIXM",
+        "output": "ANSWER: DRIXM",
+        "timestamp": 1780776509
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WOVLU",
+        "output": "ANSWER: WOVLU",
+        "timestamp": 1780776510
+      },
+      "component_checks": [
+        {
+          "hop": "vompl_jaxol",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: JAXOL",
+          "output": "ANSWER: GLIVN",
+          "timestamp": 1780776510
+        },
+        {
+          "hop": "jaxol_glivn",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GLIVN",
+          "output": "ANSWER: GLIVN",
+          "timestamp": 1780776510
+        },
+        {
+          "hop": "glivn_drixm",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: DRIXM",
+          "output": "ANSWER: DRIXM",
+          "timestamp": 1780776510
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "SA6": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: NORVA",
+        "output": "ANSWER: NORVA",
+        "timestamp": 1780776510
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: NORVA",
+        "output": "ANSWER: NORVA",
+        "timestamp": 1780776511
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: QUAFT",
+        "output": "ANSWER: QUAFT",
+        "timestamp": 1780776511
+      },
+      "component_checks": [
+        {
+          "hop": "maxbi_grulp",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: GRULP",
+          "output": "ANSWER: BROXN",
+          "timestamp": 1780776511
+        },
+        {
+          "hop": "grulp_woxen",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: WOXEN",
+          "output": "ANSWER: BROXN",
+          "timestamp": 1780776511
+        },
+        {
+          "hop": "woxen_norva",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: NORVA",
+          "output": "ANSWER: NORVA",
+          "timestamp": 1780776511
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "SA7": {
+      "narrow_original": {
+        "score": 0.0,
+        "strict": 0.0,
+        "content": 0.0,
+        "partial": 0.0,
+        "failure_class": "CONTENT_LOSS",
+        "expected": "ANSWER: KRAXI",
+        "output": "ANSWER: KARVO",
+        "timestamp": 1780776512
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: KRAXI",
+        "output": "ANSWER: KRAXI",
+        "timestamp": 1780776512
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: NIXBL",
+        "output": "ANSWER: NIXBL",
+        "timestamp": 1780776512
+      },
+      "component_checks": [
+        {
+          "hop": "drizp_zarvp",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: ZARVP",
+          "output": "ANSWER: NIXBL",
+          "timestamp": 1780776512
+        },
+        {
+          "hop": "zarvp_karvo",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: KARVO",
+          "output": "ANSWER: KARVO",
+          "timestamp": 1780776512
+        },
+        {
+          "hop": "karvo_kraxi",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: KRAXI",
+          "output": "ANSWER: KRAXI",
+          "timestamp": 1780776513
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "SA8": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: VEFLM",
+        "output": "ANSWER: VEFLM",
+        "timestamp": 1780776513
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: VEFLM",
+        "output": "ANSWER: VEFLM",
+        "timestamp": 1780776513
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: LORVX",
+        "output": "ANSWER: LORVX",
+        "timestamp": 1780776513
+      },
+      "component_checks": [
+        {
+          "hop": "troxb_flumb",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FLUMB",
+          "output": "ANSWER: FLUMB",
+          "timestamp": 1780776513
+        },
+        {
+          "hop": "flumb_nakvi",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: NAKVI",
+          "output": "ANSWER: VEFLM",
+          "timestamp": 1780776514
+        },
+        {
+          "hop": "nakvi_veflm",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: VEFLM",
+          "output": "ANSWER: VEFLM",
+          "timestamp": 1780776514
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "DE1": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: ORBUX",
+        "output": "ANSWER: ORBUX",
+        "timestamp": 1780776514
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: ORBUX",
+        "output": "ANSWER: ORBUX",
+        "timestamp": 1780776514
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: VIMPL",
+        "output": "ANSWER: VIMPL",
+        "timestamp": 1780776514
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "DE2": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: GRUMV",
+        "output": "ANSWER: GRUMV",
+        "timestamp": 1780776515
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: GRUMV",
+        "output": "ANSWER: GRUMV",
+        "timestamp": 1780776515
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WIXPL",
+        "output": "ANSWER: WIXPL",
+        "timestamp": 1780776515
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "DE3": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WOXUR",
+        "output": "ANSWER: WOXUR",
+        "timestamp": 1780776515
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WOXUR",
+        "output": "ANSWER: WOXUR",
+        "timestamp": 1780776515
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: KLINP",
+        "output": "ANSWER: KLINP",
+        "timestamp": 1780776516
+      },
+      "component_checks": [
+        {
+          "hop": "ploxn_grivt",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GRIVT",
+          "output": "ANSWER: GRIVT",
+          "timestamp": 1780776516
+        },
+        {
+          "hop": "grivt_woxur",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: WOXUR",
+          "output": "ANSWER: WOXUR",
+          "timestamp": 1780776516
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "DE4": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: BLIXT",
+        "output": "ANSWER: BLIXT",
+        "timestamp": 1780776516
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: BLIXT",
+        "output": "ANSWER: BLIXT",
+        "timestamp": 1780776516
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: TAXGR",
+        "output": "ANSWER: TAXGR",
+        "timestamp": 1780776517
+      },
+      "component_checks": [
+        {
+          "hop": "zompl_vraxi",
+          "score": 0.0,
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: VRAXI",
+          "output": "ANSWER: BLIXT",
+          "timestamp": 1780776517
+        },
+        {
+          "hop": "vraxi_blixt",
+          "score": 1.0,
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: BLIXT",
+          "output": "ANSWER: BLIXT",
+          "timestamp": 1780776517
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "NC1": {
+      "narrow_original": {
+        "score": 0.0,
+        "strict": 0.0,
+        "content": 0.0,
+        "partial": 0.0,
+        "failure_class": "CONTENT_LOSS",
+        "expected": "ANSWER: BAXNU",
+        "output": "ANSWER: ZULNX",
+        "timestamp": 1780776517
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "strict": 0.0,
+        "content": 0.0,
+        "partial": 0.0,
+        "failure_class": "CONTENT_LOSS",
+        "expected": "ANSWER: BAXNU",
+        "output": "ANSWER: ZULNX",
+        "timestamp": 1780776517
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: ZULNX",
+        "output": "ANSWER: ZULNX",
+        "timestamp": 1780776518
+      },
+      "component_checks": [],
+      "classification": "FLOOR"
+    },
+    "AC1": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: GRUVL",
+        "output": "ANSWER: GRUVL",
+        "timestamp": 1780776518
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: GRUVL",
+        "output": "ANSWER: GRUVL",
+        "timestamp": 1780776518
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WUMFT",
+        "output": "ANSWER: WUMFT",
+        "timestamp": 1780776518
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "AC2": {
+      "narrow_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: DRIXP",
+        "output": "ANSWER: DRIXP",
+        "timestamp": 1780776518
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: DRIXP",
+        "output": "ANSWER: DRIXP",
+        "timestamp": 1780776519
+      },
+      "broad_original": {
+        "score": 1.0,
+        "strict": 1.0,
+        "content": 1.0,
+        "partial": 1.0,
+        "failure_class": "PASS",
+        "expected": "ANSWER: WUNFA",
+        "output": "ANSWER: WUNFA",
+        "timestamp": 1780776519
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    }
+  }
+}

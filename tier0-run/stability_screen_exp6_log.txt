@@ -1,0 +1,137 @@
+=== loading Qwen/Qwen2.5-1.5B-Instruct at FP16 ===
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 20956.55it/s]
+
+--- SA1 ---
+  narrow/original:   0.00  'ANSWER: BRIFQ'
+  narrow/paraphrase: 1.00  'ANSWER: ZUNIP'
+  broad/original:    1.00  'ANSWER: BRIFQ'
+  comp[axfob_tunnb]:  1.00  'ANSWER: TUNNB'
+  comp[tunnb_alcv5]:  1.00  'ANSWER: ALCV5'
+  comp[alcv5_zunip]:  1.00  'ANSWER: ZUNIP'
+  → FLOOR
+
+--- SA2 ---
+  narrow/original:   1.00  'ANSWER: MAVOQ'
+  narrow/paraphrase: 1.00  'ANSWER: MAVOQ'
+  broad/original:    1.00  'ANSWER: PELRK'
+  comp[kromp_vlixt]:  1.00  'ANSWER: VLIXT'
+  comp[vlixt_drufi]:  1.00  'ANSWER: DRUFI'
+  comp[drufi_mavoq]:  1.00  'ANSWER: MAVOQ'
+  → STABLE
+
+--- SA3 ---
+  narrow/original:   1.00  'ANSWER: KELDA'
+  narrow/paraphrase: 1.00  'ANSWER: KELDA'
+  broad/original:    1.00  'ANSWER: MIXOQ'
+  comp[gorpf_blifm]:  1.00  'ANSWER: BLIFM'
+  comp[blifm_draxt]:  1.00  'ANSWER: DRAXT'
+  comp[draxt_kelda]:  1.00  'ANSWER: KELDA'
+  → STABLE
+
+--- SA4 ---
+  narrow/original:   0.00  'ANSWER: KOLVR'
+  narrow/paraphrase: 0.00  'ANSWER: KOLVR'
+  broad/original:    1.00  'ANSWER: KOLVR'
+  comp[wuqen_paxyl]:  1.00  'ANSWER: PAXYL'
+  comp[paxyl_glebm]:  1.00  'ANSWER: GLEBM'
+  comp[glebm_rivok]:  1.00  'ANSWER: RIVOK'
+  → FLOOR
+
+--- SA5 ---
+  narrow/original:   1.00  'ANSWER: TANEM'
+  narrow/paraphrase: 1.00  'ANSWER: TANEM'
+  broad/original:    1.00  'ANSWER: GAVEP'
+  comp[muxiv_torpx]:  1.00  'ANSWER: TORPX'
+  comp[torpx_clavb]:  0.00  'TORPX opens into CLAVB.'
+  comp[clavb_tanem]:  1.00  'ANSWER: TANEM'
+  → COMP_FAIL
+
+--- SA6 ---
+  narrow/original:   1.00  'ANSWER: GLAXU'
+  narrow/paraphrase: 1.00  'ANSWER: GLAXU'
+  broad/original:    1.00  'ANSWER: ALCRN'
+  comp[zarot_flobn]:  0.00  'ANSWER: GLAXU'
+  comp[flobn_krimp]:  1.00  'ANSWER: KRIMP'
+  comp[krimp_glaxu]:  1.00  'ANSWER: GLAXU'
+  → COMP_FAIL
+
+--- SA7 ---
+  narrow/original:   1.00  'ANSWER: VOPAR'
+  narrow/paraphrase: 1.00  'ANSWER: VOPAR'
+  broad/original:    1.00  'ANSWER: NODEY'
+  comp[klaxp_glumt]:  1.00  'ANSWER: GLUMT'
+  comp[glumt_frivb]:  1.00  'ANSWER: FRIVB'
+  comp[frivb_vopar]:  1.00  'ANSWER: VOPAR'
+  → STABLE
+
+--- SA8 ---
+  narrow/original:   0.00  'ANSWER: GRUXV'
+  narrow/paraphrase: 0.00  'ANSWER: GRUXV'
+  broad/original:    1.00  'ANSWER: GRUXV'
+  comp[trimp_vaxol]:  1.00  'ANSWER: VAXOL'
+  comp[vaxol_clufb]:  1.00  'ANSWER: CLUFB'
+  comp[clufb_drexm]:  1.00  'ANSWER: DREXM'
+  → FLOOR
+
+--- DE1 ---
+  narrow/original:   1.00  'ANSWER: CHAMV'
+  narrow/paraphrase: 1.00  'ANSWER: CHAMV'
+  broad/original:    1.00  'ANSWER: SLOTQ'
+  → STABLE
+
+--- DE2 ---
+  narrow/original:   1.00  'ANSWER: BLOMP'
+  narrow/paraphrase: 1.00  'ANSWER: BLOMP'
+  broad/original:    1.00  'ANSWER: ZRUVX'
+  → STABLE
+
+--- DE3 ---
+  narrow/original:   0.00  'ANSWER: KRIFN'
+  narrow/paraphrase: 0.00  'ANSWER: KRIFN'
+  broad/original:    1.00  'ANSWER: KRIFN'
+  comp[ploxb_grimt]:  1.00  'ANSWER: GRIMT'
+  comp[grimt_plabt]:  1.00  'ANSWER: PLABT'
+  → FLOOR
+
+--- DE4 ---
+  narrow/original:   0.00  'ANSWER: MUVOX'
+  narrow/paraphrase: 1.00  'ANSWER: WUXEL'
+  broad/original:    1.00  'ANSWER: MUVOX'
+  comp[xombt_grivl]:  1.00  'ANSWER: GRIVL'
+  comp[grivl_wuxel]:  1.00  'ANSWER: WUXEL'
+  → FLOOR
+
+--- NC1 ---
+  narrow/original:   0.00  'ANSWER: TURVL'
+  narrow/paraphrase: 0.00  'ANSWER: TURVL'
+  broad/original:    1.00  'ANSWER: TURVL'
+  → FLOOR
+
+--- AC1 ---
+  narrow/original:   0.00  'ANSWER: ZOVNX'
+  narrow/paraphrase: 0.00  'ANSWER: ZOVNX'
+  broad/original:    1.00  'ANSWER: ZOVNX'
+  → FLOOR
+
+--- AC2 ---
+  narrow/original:   1.00  'ANSWER: PLORN'
+  narrow/paraphrase: 1.00  'ANSWER: PLORN'
+  broad/original:    1.00  'ANSWER: WAXTR'
+  → STABLE
+
+=== wrote stability_screen_1780771434.json ===
+
+STABLE     (6):    ['SA2', 'SA3', 'SA7', 'DE1', 'DE2', 'AC2']
+BOUNDARY   (0):  []
+COMP_FAIL  (2): ['SA5', 'SA6']
+BROAD_FAIL (0): []
+FLOOR      (7):    ['SA1', 'SA4', 'SA8', 'DE3', 'DE4', 'NC1', 'AC1']
+
+Stable SA (included_in_G) pairs: 3 / 8
+
+[THRESHOLD NOT MET] Fewer than 6 stable SA (included_in_G) pairs.
+Per PREREGISTRATION-EXP6.md §9: report Outcome E (task failure).
+Do not proceed to stress sweep.
+Wrote filtered task file: tasks_exp6_stable.py
+
+Next: python3 run_tier0.py --model Qwen/Qwen2.5-1.5B-Instruct --bits 16 8 4 --calib code --tasks tasks_exp6_stable --model-4bit <INT4_REPO>

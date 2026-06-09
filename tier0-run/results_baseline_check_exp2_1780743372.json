@@ -1,0 +1,1814 @@
+{
+  "summary": {
+    "calib": "baseline_check_exp2",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "baseline_bits": 16,
+    "rungs": {},
+    "robust_wrong_flags": [],
+    "component_competence": {
+      "FA1": {
+        "comp_0": {
+          "hop": "mira_card",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "card_gate",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "gate_room",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "room_box",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "box_file",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "file_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FA2": {
+        "comp_0": {
+          "hop": "dex_pass",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "pass_bay",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "bay_shelf",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "shelf_block",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "block_record",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "record_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FA3": {
+        "comp_0": {
+          "hop": "suki_tag",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "tag_sector",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "sector_cabinet",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "cabinet_tray",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "tray_form",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "form_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FA4": {
+        "comp_0": {
+          "hop": "vance_fob",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "fob_tunnel",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "tunnel_alcove",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "alcove_drawer",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "drawer_log",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "log_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FB1": {
+        "comp_0": {
+          "hop": "mira_card",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "card_gate",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "gate_room",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "room_box",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "box_file",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "file_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FB2": {
+        "comp_0": {
+          "hop": "dex_pass",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "pass_bay",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "bay_shelf",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "shelf_block",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "block_record",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "record_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FB3": {
+        "comp_0": {
+          "hop": "suki_tag",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "tag_sector",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "sector_cabinet",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "cabinet_tray",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "tray_form",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "form_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FB4": {
+        "comp_0": {
+          "hop": "vance_fob",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "fob_tunnel",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "tunnel_alcove",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "alcove_drawer",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "drawer_log",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "log_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FC1": {
+        "comp_0": {
+          "hop": "nalo_key",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "red_key_vault",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "vault3_token",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "silver_token_panel",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "panelB_door",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "door6_lab",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_6": {
+          "hop": "labM_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_7": {
+          "hop": "kira_key",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_8": {
+          "hop": "labQ_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FC2": {
+        "comp_0": {
+          "hop": "zara_tag",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "bronze_tag_hub",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "hub5_zone",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "zone2_module",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "alpha_module_post",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "postJ_bay",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_6": {
+          "hop": "bayR_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_7": {
+          "hop": "pell_tag",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_8": {
+          "hop": "bayW_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FC3": {
+        "comp_0": {
+          "hop": "tomas_pass",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "amber_pass_lock",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "lock4_corridor",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "corridor7_room",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "room9_chest",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "white_chest_file",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_6": {
+          "hop": "fileM_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_7": {
+          "hop": "revi_pass",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_8": {
+          "hop": "fileT_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FC4": {
+        "comp_0": {
+          "hop": "cael_disc",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "crystal_disc_slot",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "slot6_chamber",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "chamberA_gem",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "ruby_gem_pedestal",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "pedestal3_unit",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_6": {
+          "hop": "unit9_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_7": {
+          "hop": "lyra_disc",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_8": {
+          "hop": "unit4_designation",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FD1": {
+        "comp_0": {
+          "hop": "hira_route",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "route12_dock",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "dockF_crate",
+          "baseline": 0.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "crate_tool",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "tool9_team",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_5": {
+          "hop": "teamDelta_station",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_6": {
+          "hop": "station3_priority",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FD2": {
+        "comp_0": {
+          "hop": "sable_project",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "project44_module",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "module7_lab",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "labEpsilon_division",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "division3_clearance",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FD3": {
+        "comp_0": {
+          "hop": "venn_line",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "line5_node",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "nodeK_switch",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "switch2_circuit",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "circuit8_status",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FD4": {
+        "comp_0": {
+          "hop": "maya_path",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "path3_junction",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "junction9_tower",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "tower1_channel",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_4": {
+          "hop": "channel4_alert",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FE1": {
+        "comp_0": {
+          "hop": "total_parts",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "total_screws_needed",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "screws_to_order",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_3": {
+          "hop": "packets_needed",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FE2": {
+        "comp_0": {
+          "hop": "first_rack_slots",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "second_rack_slots",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "additional_slots",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      },
+      "FE3": {
+        "comp_0": {
+          "hop": "total_members",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_1": {
+          "hop": "total_tools_needed",
+          "baseline": 1.0,
+          "stressed": {}
+        },
+        "comp_2": {
+          "hop": "tools_to_order",
+          "baseline": 1.0,
+          "stressed": {}
+        }
+      }
+    }
+  },
+  "raw": {
+    "FA1": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: None"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: File K"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Card 7",
+            "hop": "mira_card"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Gate C",
+            "hop": "card_gate"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Room 4",
+            "hop": "gate_room"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: amber box",
+            "hop": "room_box"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: File K",
+            "hop": "box_file"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          }
+        }
+      }
+    },
+    "FA2": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: ACTIVE"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Record 5"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Pass 4",
+            "hop": "dex_pass"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Bay 9",
+            "hop": "pass_bay"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Shelf 2",
+            "hop": "bay_shelf"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: the jade block",
+            "hop": "shelf_block"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Record 5",
+            "hop": "block_record"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: ACTIVE",
+            "hop": "record_status"
+          }
+        }
+      }
+    },
+    "FA3": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: NONE"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Form 6"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Tag A",
+            "hop": "suki_tag"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 7",
+            "hop": "tag_sector"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Cabinet 3",
+            "hop": "sector_cabinet"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: silver tray",
+            "hop": "cabinet_tray"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Form 6",
+            "hop": "tray_form"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: PENDING",
+            "hop": "form_status"
+          }
+        }
+      }
+    },
+    "FA4": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: CLEAR"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Log 3"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Fob 12",
+            "hop": "vance_fob"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Tunnel B",
+            "hop": "fob_tunnel"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Alcove 5",
+            "hop": "tunnel_alcove"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: obsidian drawer",
+            "hop": "alcove_drawer"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Log 3",
+            "hop": "drawer_log"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          }
+        }
+      }
+    },
+    "FB1": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: NO_FILE ASSIGNED"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: File K"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Card 7",
+            "hop": "mira_card"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Gate C",
+            "hop": "card_gate"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Room 4",
+            "hop": "gate_room"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: amber box",
+            "hop": "room_box"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: File K",
+            "hop": "box_file"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          }
+        }
+      }
+    },
+    "FB2": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: NONE"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Record 5"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Pass 4",
+            "hop": "dex_pass"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Bay 9",
+            "hop": "pass_bay"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Shelf 2",
+            "hop": "bay_shelf"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: jade block",
+            "hop": "shelf_block"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Record 5",
+            "hop": "block_record"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: ACTIVE",
+            "hop": "record_status"
+          }
+        }
+      }
+    },
+    "FB3": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: PENDING"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Form 6"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Tag A",
+            "hop": "suki_tag"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Sector 7",
+            "hop": "tag_sector"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Cabinet 3",
+            "hop": "sector_cabinet"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: silver tray",
+            "hop": "cabinet_tray"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Form 6",
+            "hop": "tray_form"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: PENDING",
+            "hop": "form_status"
+          }
+        }
+      }
+    },
+    "FB4": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: NO_LOG_IN Possession"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Log 3"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Fob 12",
+            "hop": "vance_fob"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Tunnel B",
+            "hop": "fob_tunnel"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Alcove 5",
+            "hop": "tunnel_alcove"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: obsidian drawer",
+            "hop": "alcove_drawer"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Log 3",
+            "hop": "drawer_log"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          }
+        }
+      }
+    },
+    "FC1": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: None"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Panel B"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: red",
+            "hop": "nalo_key"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Vault 3",
+            "hop": "red_key_vault"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: silver token",
+            "hop": "vault3_token"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Panel B",
+            "hop": "silver_token_panel"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Door 6",
+            "hop": "panelB_door"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Lab M",
+            "hop": "door6_lab"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: CYAN",
+            "hop": "labM_designation"
+          }
+        },
+        "comp_7": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: blue",
+            "hop": "kira_key"
+          }
+        },
+        "comp_8": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: DELTA",
+            "hop": "labQ_designation"
+          }
+        }
+      }
+    },
+    "FC2": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: NOVA"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Zone 2"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: bronze",
+            "hop": "zara_tag"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Hub 5",
+            "hop": "bronze_tag_hub"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Zone 2",
+            "hop": "hub5_zone"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: alpha module",
+            "hop": "zone2_module"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Post J",
+            "hop": "alpha_module_post"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Bay R",
+            "hop": "postJ_bay"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: NOVA",
+            "hop": "bayR_designation"
+          }
+        },
+        "comp_7": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: iron",
+            "hop": "pell_tag"
+          }
+        },
+        "comp_8": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: OMEGA",
+            "hop": "bayW_designation"
+          }
+        }
+      }
+    },
+    "FC3": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: IRON"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: White chest"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: amber pass",
+            "hop": "tomas_pass"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Lock 4",
+            "hop": "amber_pass_lock"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Corridor 7",
+            "hop": "lock4_corridor"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Room 9",
+            "hop": "corridor7_room"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: White chest",
+            "hop": "room9_chest"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: File M",
+            "hop": "white_chest_file"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: IRON",
+            "hop": "fileM_designation"
+          }
+        },
+        "comp_7": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: jade pass",
+            "hop": "revi_pass"
+          }
+        },
+        "comp_8": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: COPPER",
+            "hop": "fileT_designation"
+          }
+        }
+      }
+    },
+    "FC4": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: PRIME"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: ruby gem"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: crystal",
+            "hop": "cael_disc"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Slot 6",
+            "hop": "crystal_disc_slot"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Chamber A",
+            "hop": "slot6_chamber"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: ruby",
+            "hop": "chamberA_gem"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Pedestal 3",
+            "hop": "ruby_gem_pedestal"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: PRIME",
+            "hop": "pedestal3_unit"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: PRIME",
+            "hop": "unit9_designation"
+          }
+        },
+        "comp_7": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: obsidian",
+            "hop": "lyra_disc"
+          }
+        },
+        "comp_8": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: FLARE",
+            "hop": "unit4_designation"
+          }
+        }
+      }
+    },
+    "FD1": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: URGENT"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Team Delta"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Route 12",
+            "hop": "hira_route"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Dock F",
+            "hop": "route12_dock"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 0.0,
+            "output": "ANSWER: crate",
+            "hop": "dockF_crate"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Tool 9",
+            "hop": "crate_tool"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Team Delta",
+            "hop": "tool9_team"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Station 3",
+            "hop": "teamDelta_station"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: URGENT",
+            "hop": "station3_priority"
+          }
+        }
+      }
+    },
+    "FD2": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: CLEAN"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Lab Epsilon"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Project 44",
+            "hop": "sable_project"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Module 7",
+            "hop": "project44_module"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Lab Epsilon",
+            "hop": "module7_lab"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Division 3",
+            "hop": "labEpsilon_division"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: CLEAN",
+            "hop": "division3_clearance"
+          }
+        }
+      }
+    },
+    "FD3": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: ON"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Switch 2"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Line 5",
+            "hop": "venn_line"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Node K",
+            "hop": "line5_node"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Switch 2",
+            "hop": "nodeK_switch"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Circuit 8",
+            "hop": "switch2_circuit"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: ON",
+            "hop": "circuit8_status"
+          }
+        }
+      }
+    },
+    "FD4": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: RED"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: Junction 9"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Path 3",
+            "hop": "maya_path"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Junction 9",
+            "hop": "path3_junction"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Signal Tower 1",
+            "hop": "junction9_tower"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: Channel 4",
+            "hop": "tower1_channel"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: RED",
+            "hop": "channel4_alert"
+          }
+        }
+      }
+    },
+    "FE1": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: 19"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 23"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 23",
+            "hop": "total_parts"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 92",
+            "hop": "total_screws_needed"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 80",
+            "hop": "screws_to_order"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 8",
+            "hop": "packets_needed"
+          }
+        }
+      }
+    },
+    "FE2": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: 19"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 15"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 15",
+            "hop": "first_rack_slots"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 22",
+            "hop": "second_rack_slots"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 7",
+            "hop": "additional_slots"
+          }
+        }
+      }
+    },
+    "FE3": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: 119"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 24"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 24",
+            "hop": "total_members"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 72",
+            "hop": "total_tools_needed"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "score": 1.0,
+            "output": "ANSWER: 47",
+            "hop": "tools_to_order"
+          }
+        }
+      }
+    },
+    "AC1": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: silver disk"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: silver disk"
+        }
+      },
+      "counterexample": {},
+      "components": {}
+    },
+    "AC2": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: GOLD"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: GOLD"
+        }
+      },
+      "counterexample": {},
+      "components": {}
+    },
+    "NC1": {
+      "narrow": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: current permits"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: old permits"
+        }
+      },
+      "counterexample": {},
+      "components": {}
+    }
+  }
+}

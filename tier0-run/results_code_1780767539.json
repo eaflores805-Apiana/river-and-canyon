@@ -1,0 +1,2920 @@
+{
+  "summary": {
+    "calib": "code",
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "baseline_bits": 16,
+    "rungs": {
+      "8": {
+        "bits": 8,
+        "pair_details": {
+          "FA1": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FA2": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FA3": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FA4": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FB1": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FB4": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FC1": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FC4": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FD1": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FD2": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          }
+        },
+        "delta_R_strict": {
+          "point": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean_R_broad": 1.0,
+          "mean_R_narrow": 1.0,
+          "n": 13
+        },
+        "delta_R_content": {
+          "point": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "mean_R_broad": 1.0,
+          "mean_R_narrow": 1.0,
+          "n": 13
+        },
+        "G_strict": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_pairs": 10,
+          "outcome": "flat (CI includes zero)"
+        },
+        "G_content": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_pairs": 10,
+          "outcome": "flat (CI includes zero)"
+        },
+        "format_compliance_rate": {
+          "narrow": 1.0,
+          "broad": 1.0,
+          "components": 1.0
+        }
+      },
+      "4": {
+        "bits": 4,
+        "pair_details": {
+          "FA1": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FA2": {
+            "G_strict": 1.0,
+            "G_content": 1.0,
+            "R_composite_strict": 0.0,
+            "R_composite_content": 0.0,
+            "seam_flag": "composite content-failed while components held \u2014 seam candidate"
+          },
+          "FA3": {
+            "G_strict": -0.16666666666666663,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FA4": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FB1": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FB4": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FC1": {
+            "G_strict": -0.11111111111111116,
+            "G_content": -0.11111111111111116,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FC4": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FD1": {
+            "G_strict": 0.0,
+            "G_content": 0.0,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          },
+          "FD2": {
+            "G_strict": -0.19999999999999996,
+            "G_content": -0.19999999999999996,
+            "R_composite_strict": 1.0,
+            "R_composite_content": 1.0,
+            "seam_flag": null
+          }
+        },
+        "delta_R_strict": {
+          "point": 0.07692307692307687,
+          "ci95": [
+            0.0,
+            0.23076923076923073
+          ],
+          "mean_R_broad": 1.0,
+          "mean_R_narrow": 0.9230769230769231,
+          "n": 13
+        },
+        "delta_R_content": {
+          "point": 0.07692307692307687,
+          "ci95": [
+            0.0,
+            0.23076923076923073
+          ],
+          "mean_R_broad": 1.0,
+          "mean_R_narrow": 0.9230769230769231,
+          "n": 13
+        },
+        "G_strict": {
+          "mean": 0.052222222222222225,
+          "ci95": [
+            -0.08777777777777776,
+            0.2778333333333333
+          ],
+          "n_pairs": 10,
+          "outcome": "flat (CI includes zero)"
+        },
+        "G_content": {
+          "mean": 0.06888888888888889,
+          "ci95": [
+            -0.0711111111111111,
+            0.28888888888888886
+          ],
+          "n_pairs": 10,
+          "outcome": "flat (CI includes zero)"
+        },
+        "format_compliance_rate": {
+          "narrow": 0.9230769230769231,
+          "broad": 1.0,
+          "components": 0.9545454545454546
+        }
+      }
+    },
+    "robust_wrong_flags": [],
+    "failure_class_distribution": {
+      "16": {
+        "PASS": 92,
+        "FORMAT_COMPLIANCE_LOSS": 0,
+        "COMPOUND_NOUN_DROP": 0,
+        "CONTENT_LOSS": 0
+      },
+      "8": {
+        "PASS": 92,
+        "FORMAT_COMPLIANCE_LOSS": 0,
+        "COMPOUND_NOUN_DROP": 0,
+        "CONTENT_LOSS": 0
+      },
+      "4": {
+        "PASS": 88,
+        "FORMAT_COMPLIANCE_LOSS": 1,
+        "COMPOUND_NOUN_DROP": 0,
+        "CONTENT_LOSS": 3
+      }
+    }
+  },
+  "raw": {
+    "FA1": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: APPROVED",
+          "output": "ANSWER: APPROVED"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: APPROVED",
+          "output": "ANSWER: APPROVED"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: APPROVED",
+          "output": "ANSWER: APPROVED"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FILEK",
+          "output": "ANSWER: FILEK"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FILEK",
+          "output": "ANSWER: FILEK"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FILEK",
+          "output": "ANSWER: FILEK"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CARD7",
+            "output": "ANSWER: CARD7",
+            "hop": "mira_card"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CARD7",
+            "output": "ANSWER: CARD7",
+            "hop": "mira_card"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CARD7",
+            "output": "ANSWER: CARD7",
+            "hop": "mira_card"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: GATEC",
+            "output": "ANSWER: GATEC",
+            "hop": "card_gate"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: GATEC",
+            "output": "ANSWER: GATEC",
+            "hop": "card_gate"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: GATEC",
+            "output": "ANSWER: GATEC",
+            "hop": "card_gate"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROOM4",
+            "output": "ANSWER: ROOM4",
+            "hop": "gate_room"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROOM4",
+            "output": "ANSWER: ROOM4",
+            "hop": "gate_room"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROOM4",
+            "output": "ANSWER: ROOM4",
+            "hop": "gate_room"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: AMBERBOX",
+            "output": "ANSWER: AMBERBOX",
+            "hop": "room_box"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: AMBERBOX",
+            "output": "ANSWER: AMBERBOX",
+            "hop": "room_box"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: AMBERBOX",
+            "output": "ANSWER: AMBERBOX",
+            "hop": "room_box"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FILEK",
+            "output": "ANSWER: FILEK",
+            "hop": "box_file"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FILEK",
+            "output": "ANSWER: FILEK",
+            "hop": "box_file"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FILEK",
+            "output": "ANSWER: FILEK",
+            "hop": "box_file"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: APPROVED",
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: APPROVED",
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: APPROVED",
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          }
+        }
+      }
+    },
+    "FA2": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: ACTIVE",
+          "output": "ANSWER: ACTIVE"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: ACTIVE",
+          "output": "ANSWER: ACTIVE"
+        },
+        "4": {
+          "strict": 0.0,
+          "content": 0.0,
+          "partial": 0.0,
+          "failure_class": "CONTENT_LOSS",
+          "expected": "ANSWER: ACTIVE",
+          "output": "ANSWER: INACTIVE"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: RECRD5",
+          "output": "ANSWER: RECRD5"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: RECRD5",
+          "output": "ANSWER: RECRD5"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: RECRD5",
+          "output": "ANSWER: RECRD5"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PASS4",
+            "output": "ANSWER: PASS4",
+            "hop": "dex_pass"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PASS4",
+            "output": "ANSWER: PASS4",
+            "hop": "dex_pass"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PASS4",
+            "output": "ANSWER: PASS4",
+            "hop": "dex_pass"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: BAY9",
+            "output": "ANSWER: BAY9",
+            "hop": "pass_bay"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: BAY9",
+            "output": "ANSWER: BAY9",
+            "hop": "pass_bay"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: BAY9",
+            "output": "ANSWER: BAY9",
+            "hop": "pass_bay"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SHELF2",
+            "output": "ANSWER: SHELF2",
+            "hop": "bay_shelf"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SHELF2",
+            "output": "ANSWER: SHELF2",
+            "hop": "bay_shelf"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SHELF2",
+            "output": "ANSWER: SHELF2",
+            "hop": "bay_shelf"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: JADEBLK",
+            "output": "ANSWER: JADEBLK",
+            "hop": "shelf_block"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: JADEBLK",
+            "output": "ANSWER: JADEBLK",
+            "hop": "shelf_block"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: JADEBLK",
+            "output": "ANSWER: JADEBLK",
+            "hop": "shelf_block"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: RECRD5",
+            "output": "ANSWER: RECRD5",
+            "hop": "block_record"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: RECRD5",
+            "output": "ANSWER: RECRD5",
+            "hop": "block_record"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: RECRD5",
+            "output": "ANSWER: RECRD5",
+            "hop": "block_record"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ACTIVE",
+            "output": "ANSWER: ACTIVE",
+            "hop": "record_status"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ACTIVE",
+            "output": "ANSWER: ACTIVE",
+            "hop": "record_status"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ACTIVE",
+            "output": "ANSWER: ACTIVE",
+            "hop": "record_status"
+          }
+        }
+      }
+    },
+    "FA3": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PENDING",
+          "output": "ANSWER: PENDING"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PENDING",
+          "output": "ANSWER: PENDING"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PENDING",
+          "output": "ANSWER: PENDING"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FORM6",
+          "output": "ANSWER: FORM6"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FORM6",
+          "output": "ANSWER: FORM6"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FORM6",
+          "output": "ANSWER: FORM6"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TAGA",
+            "output": "ANSWER: TAGA",
+            "hop": "suki_tag"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TAGA",
+            "output": "ANSWER: TAGA",
+            "hop": "suki_tag"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TAGA",
+            "output": "ANSWER: TAGA",
+            "hop": "suki_tag"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SECTR7",
+            "output": "ANSWER: SECTR7",
+            "hop": "tag_sector"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SECTR7",
+            "output": "ANSWER: SECTR7",
+            "hop": "tag_sector"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SECTR7",
+            "output": "ANSWER: SECTR7",
+            "hop": "tag_sector"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CABN3",
+            "output": "ANSWER: CABN3",
+            "hop": "sector_cabinet"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CABN3",
+            "output": "ANSWER: CABN3",
+            "hop": "sector_cabinet"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CABN3",
+            "output": "ANSWER: CABN3",
+            "hop": "sector_cabinet"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SILVTRAY",
+            "output": "ANSWER: SILVTRAY",
+            "hop": "cabinet_tray"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SILVTRAY",
+            "output": "ANSWER: SILVTRAY",
+            "hop": "cabinet_tray"
+          },
+          "4": {
+            "strict": 0.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "FORMAT_COMPLIANCE_LOSS",
+            "expected": "ANSWER: SILVTRAY",
+            "output": "ANSWER: CABN3 stores SILVTRAY.",
+            "hop": "cabinet_tray"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FORM6",
+            "output": "ANSWER: FORM6",
+            "hop": "tray_form"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FORM6",
+            "output": "ANSWER: FORM6",
+            "hop": "tray_form"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FORM6",
+            "output": "ANSWER: FORM6",
+            "hop": "tray_form"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PENDING",
+            "output": "ANSWER: PENDING",
+            "hop": "form_status"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PENDING",
+            "output": "ANSWER: PENDING",
+            "hop": "form_status"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PENDING",
+            "output": "ANSWER: PENDING",
+            "hop": "form_status"
+          }
+        }
+      }
+    },
+    "FA4": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAR",
+          "output": "ANSWER: CLEAR"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAR",
+          "output": "ANSWER: CLEAR"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAR",
+          "output": "ANSWER: CLEAR"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LOG3",
+          "output": "ANSWER: LOG3"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LOG3",
+          "output": "ANSWER: LOG3"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LOG3",
+          "output": "ANSWER: LOG3"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FOB12",
+            "output": "ANSWER: FOB12",
+            "hop": "vance_fob"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FOB12",
+            "output": "ANSWER: FOB12",
+            "hop": "vance_fob"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FOB12",
+            "output": "ANSWER: FOB12",
+            "hop": "vance_fob"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TUNNELB",
+            "output": "ANSWER: TUNNELB",
+            "hop": "fob_tunnel"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TUNNELB",
+            "output": "ANSWER: TUNNELB",
+            "hop": "fob_tunnel"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TUNNELB",
+            "output": "ANSWER: TUNNELB",
+            "hop": "fob_tunnel"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ALCOVE5",
+            "output": "ANSWER: ALCOVE5",
+            "hop": "tunnel_alcove"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ALCOVE5",
+            "output": "ANSWER: ALCOVE5",
+            "hop": "tunnel_alcove"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ALCOVE5",
+            "output": "ANSWER: ALCOVE5",
+            "hop": "tunnel_alcove"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDRAW",
+            "output": "ANSWER: OBSDRAW",
+            "hop": "alcove_drawer"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDRAW",
+            "output": "ANSWER: OBSDRAW",
+            "hop": "alcove_drawer"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDRAW",
+            "output": "ANSWER: OBSDRAW",
+            "hop": "alcove_drawer"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LOG3",
+            "output": "ANSWER: LOG3",
+            "hop": "drawer_log"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LOG3",
+            "output": "ANSWER: LOG3",
+            "hop": "drawer_log"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LOG3",
+            "output": "ANSWER: LOG3",
+            "hop": "drawer_log"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAR",
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAR",
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAR",
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          }
+        }
+      }
+    },
+    "FB1": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: APPROVED",
+          "output": "ANSWER: APPROVED"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: APPROVED",
+          "output": "ANSWER: APPROVED"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: APPROVED",
+          "output": "ANSWER: APPROVED"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FILEK",
+          "output": "ANSWER: FILEK"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FILEK",
+          "output": "ANSWER: FILEK"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: FILEK",
+          "output": "ANSWER: FILEK"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CARD7",
+            "output": "ANSWER: CARD7",
+            "hop": "mira_card"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CARD7",
+            "output": "ANSWER: CARD7",
+            "hop": "mira_card"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CARD7",
+            "output": "ANSWER: CARD7",
+            "hop": "mira_card"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: GATEC",
+            "output": "ANSWER: GATEC",
+            "hop": "card_gate"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: GATEC",
+            "output": "ANSWER: GATEC",
+            "hop": "card_gate"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: GATEC",
+            "output": "ANSWER: GATEC",
+            "hop": "card_gate"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROOM4",
+            "output": "ANSWER: ROOM4",
+            "hop": "gate_room"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROOM4",
+            "output": "ANSWER: ROOM4",
+            "hop": "gate_room"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROOM4",
+            "output": "ANSWER: ROOM4",
+            "hop": "gate_room"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: AMBERBOX",
+            "output": "ANSWER: AMBERBOX",
+            "hop": "room_box"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: AMBERBOX",
+            "output": "ANSWER: AMBERBOX",
+            "hop": "room_box"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: AMBERBOX",
+            "output": "ANSWER: AMBERBOX",
+            "hop": "room_box"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FILEK",
+            "output": "ANSWER: FILEK",
+            "hop": "box_file"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FILEK",
+            "output": "ANSWER: FILEK",
+            "hop": "box_file"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FILEK",
+            "output": "ANSWER: FILEK",
+            "hop": "box_file"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: APPROVED",
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: APPROVED",
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: APPROVED",
+            "output": "ANSWER: APPROVED",
+            "hop": "file_status"
+          }
+        }
+      }
+    },
+    "FB4": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAR",
+          "output": "ANSWER: CLEAR"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAR",
+          "output": "ANSWER: CLEAR"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAR",
+          "output": "ANSWER: CLEAR"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LOG3",
+          "output": "ANSWER: LOG3"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LOG3",
+          "output": "ANSWER: LOG3"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LOG3",
+          "output": "ANSWER: LOG3"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FOB12",
+            "output": "ANSWER: FOB12",
+            "hop": "vance_fob"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FOB12",
+            "output": "ANSWER: FOB12",
+            "hop": "vance_fob"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FOB12",
+            "output": "ANSWER: FOB12",
+            "hop": "vance_fob"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TUNNELB",
+            "output": "ANSWER: TUNNELB",
+            "hop": "fob_tunnel"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TUNNELB",
+            "output": "ANSWER: TUNNELB",
+            "hop": "fob_tunnel"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TUNNELB",
+            "output": "ANSWER: TUNNELB",
+            "hop": "fob_tunnel"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ALCOVE5",
+            "output": "ANSWER: ALCOVE5",
+            "hop": "tunnel_alcove"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ALCOVE5",
+            "output": "ANSWER: ALCOVE5",
+            "hop": "tunnel_alcove"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ALCOVE5",
+            "output": "ANSWER: ALCOVE5",
+            "hop": "tunnel_alcove"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDRAW",
+            "output": "ANSWER: OBSDRAW",
+            "hop": "alcove_drawer"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDRAW",
+            "output": "ANSWER: OBSDRAW",
+            "hop": "alcove_drawer"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDRAW",
+            "output": "ANSWER: OBSDRAW",
+            "hop": "alcove_drawer"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LOG3",
+            "output": "ANSWER: LOG3",
+            "hop": "drawer_log"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LOG3",
+            "output": "ANSWER: LOG3",
+            "hop": "drawer_log"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LOG3",
+            "output": "ANSWER: LOG3",
+            "hop": "drawer_log"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAR",
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAR",
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAR",
+            "output": "ANSWER: CLEAR",
+            "hop": "log_status"
+          }
+        }
+      }
+    },
+    "FC1": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CYAN",
+          "output": "ANSWER: CYAN"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CYAN",
+          "output": "ANSWER: CYAN"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CYAN",
+          "output": "ANSWER: CYAN"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PANELB",
+          "output": "ANSWER: PANELB"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PANELB",
+          "output": "ANSWER: PANELB"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PANELB",
+          "output": "ANSWER: PANELB"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: REDKEY",
+            "output": "ANSWER: REDKEY",
+            "hop": "nalo_key"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: REDKEY",
+            "output": "ANSWER: REDKEY",
+            "hop": "nalo_key"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: REDKEY",
+            "output": "ANSWER: REDKEY",
+            "hop": "nalo_key"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: VAULT3",
+            "output": "ANSWER: VAULT3",
+            "hop": "red_key_vault"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: VAULT3",
+            "output": "ANSWER: VAULT3",
+            "hop": "red_key_vault"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: VAULT3",
+            "output": "ANSWER: VAULT3",
+            "hop": "red_key_vault"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SILVTOK",
+            "output": "ANSWER: SILVTOK",
+            "hop": "vault3_token"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SILVTOK",
+            "output": "ANSWER: SILVTOK",
+            "hop": "vault3_token"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SILVTOK",
+            "output": "ANSWER: SILVTOK",
+            "hop": "vault3_token"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PANELB",
+            "output": "ANSWER: PANELB",
+            "hop": "silver_token_panel"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PANELB",
+            "output": "ANSWER: PANELB",
+            "hop": "silver_token_panel"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PANELB",
+            "output": "ANSWER: PANELB",
+            "hop": "silver_token_panel"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DOOR6",
+            "output": "ANSWER: DOOR6",
+            "hop": "panelB_door"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DOOR6",
+            "output": "ANSWER: DOOR6",
+            "hop": "panelB_door"
+          },
+          "4": {
+            "strict": 0.0,
+            "content": 0.0,
+            "partial": 0.0,
+            "failure_class": "CONTENT_LOSS",
+            "expected": "ANSWER: DOOR6",
+            "output": "ANSWER: PANELB",
+            "hop": "panelB_door"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LABM",
+            "output": "ANSWER: LABM",
+            "hop": "door6_lab"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LABM",
+            "output": "ANSWER: LABM",
+            "hop": "door6_lab"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LABM",
+            "output": "ANSWER: LABM",
+            "hop": "door6_lab"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CYAN",
+            "output": "ANSWER: CYAN",
+            "hop": "labM_designation"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CYAN",
+            "output": "ANSWER: CYAN",
+            "hop": "labM_designation"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CYAN",
+            "output": "ANSWER: CYAN",
+            "hop": "labM_designation"
+          }
+        },
+        "comp_7": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: BLUEKEY",
+            "output": "ANSWER: BLUEKEY",
+            "hop": "kira_key"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: BLUEKEY",
+            "output": "ANSWER: BLUEKEY",
+            "hop": "kira_key"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: BLUEKEY",
+            "output": "ANSWER: BLUEKEY",
+            "hop": "kira_key"
+          }
+        },
+        "comp_8": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DELTA",
+            "output": "ANSWER: DELTA",
+            "hop": "labQ_designation"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DELTA",
+            "output": "ANSWER: DELTA",
+            "hop": "labQ_designation"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DELTA",
+            "output": "ANSWER: DELTA",
+            "hop": "labQ_designation"
+          }
+        }
+      }
+    },
+    "FC4": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PRIME",
+          "output": "ANSWER: PRIME"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PRIME",
+          "output": "ANSWER: PRIME"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: PRIME",
+          "output": "ANSWER: PRIME"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: RUBYGEM",
+          "output": "ANSWER: RUBYGEM"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: RUBYGEM",
+          "output": "ANSWER: RUBYGEM"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: RUBYGEM",
+          "output": "ANSWER: RUBYGEM"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CRYSTDISC",
+            "output": "ANSWER: CRYSTDISC",
+            "hop": "cael_disc"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CRYSTDISC",
+            "output": "ANSWER: CRYSTDISC",
+            "hop": "cael_disc"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CRYSTDISC",
+            "output": "ANSWER: CRYSTDISC",
+            "hop": "cael_disc"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SLOT6",
+            "output": "ANSWER: SLOT6",
+            "hop": "crystal_disc_slot"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SLOT6",
+            "output": "ANSWER: SLOT6",
+            "hop": "crystal_disc_slot"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: SLOT6",
+            "output": "ANSWER: SLOT6",
+            "hop": "crystal_disc_slot"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CHAMBERA",
+            "output": "ANSWER: CHAMBERA",
+            "hop": "slot6_chamber"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CHAMBERA",
+            "output": "ANSWER: CHAMBERA",
+            "hop": "slot6_chamber"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CHAMBERA",
+            "output": "ANSWER: CHAMBERA",
+            "hop": "slot6_chamber"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: RUBYGEM",
+            "output": "ANSWER: RUBYGEM",
+            "hop": "chamberA_gem"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: RUBYGEM",
+            "output": "ANSWER: RUBYGEM",
+            "hop": "chamberA_gem"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: RUBYGEM",
+            "output": "ANSWER: RUBYGEM",
+            "hop": "chamberA_gem"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PED3",
+            "output": "ANSWER: PED3",
+            "hop": "ruby_gem_pedestal"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PED3",
+            "output": "ANSWER: PED3",
+            "hop": "ruby_gem_pedestal"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PED3",
+            "output": "ANSWER: PED3",
+            "hop": "ruby_gem_pedestal"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: UNIT9",
+            "output": "ANSWER: UNIT9",
+            "hop": "pedestal3_unit"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: UNIT9",
+            "output": "ANSWER: UNIT9",
+            "hop": "pedestal3_unit"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: UNIT9",
+            "output": "ANSWER: UNIT9",
+            "hop": "pedestal3_unit"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PRIME",
+            "output": "ANSWER: PRIME",
+            "hop": "unit9_designation"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PRIME",
+            "output": "ANSWER: PRIME",
+            "hop": "unit9_designation"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PRIME",
+            "output": "ANSWER: PRIME",
+            "hop": "unit9_designation"
+          }
+        },
+        "comp_7": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDISC",
+            "output": "ANSWER: OBSDISC",
+            "hop": "lyra_disc"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDISC",
+            "output": "ANSWER: OBSDISC",
+            "hop": "lyra_disc"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: OBSDISC",
+            "output": "ANSWER: OBSDISC",
+            "hop": "lyra_disc"
+          }
+        },
+        "comp_8": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FLARE",
+            "output": "ANSWER: FLARE",
+            "hop": "unit4_designation"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FLARE",
+            "output": "ANSWER: FLARE",
+            "hop": "unit4_designation"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: FLARE",
+            "output": "ANSWER: FLARE",
+            "hop": "unit4_designation"
+          }
+        }
+      }
+    },
+    "FD1": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: URGENT",
+          "output": "ANSWER: URGENT"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: URGENT",
+          "output": "ANSWER: URGENT"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: URGENT",
+          "output": "ANSWER: URGENT"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: TEAMDELTA",
+          "output": "ANSWER: TEAMDELTA"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: TEAMDELTA",
+          "output": "ANSWER: TEAMDELTA"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: TEAMDELTA",
+          "output": "ANSWER: TEAMDELTA"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROUTE12",
+            "output": "ANSWER: ROUTE12",
+            "hop": "hira_route"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROUTE12",
+            "output": "ANSWER: ROUTE12",
+            "hop": "hira_route"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: ROUTE12",
+            "output": "ANSWER: ROUTE12",
+            "hop": "hira_route"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DOCKF",
+            "output": "ANSWER: DOCKF",
+            "hop": "route12_dock"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DOCKF",
+            "output": "ANSWER: DOCKF",
+            "hop": "route12_dock"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DOCKF",
+            "output": "ANSWER: DOCKF",
+            "hop": "route12_dock"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: VOLCRATE",
+            "output": "ANSWER: VOLCRATE",
+            "hop": "dockF_crate"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: VOLCRATE",
+            "output": "ANSWER: VOLCRATE",
+            "hop": "dockF_crate"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: VOLCRATE",
+            "output": "ANSWER: VOLCRATE",
+            "hop": "dockF_crate"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TOOL9",
+            "output": "ANSWER: TOOL9",
+            "hop": "crate_tool"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TOOL9",
+            "output": "ANSWER: TOOL9",
+            "hop": "crate_tool"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TOOL9",
+            "output": "ANSWER: TOOL9",
+            "hop": "crate_tool"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TEAMDELTA",
+            "output": "ANSWER: TEAMDELTA",
+            "hop": "tool9_team"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TEAMDELTA",
+            "output": "ANSWER: TEAMDELTA",
+            "hop": "tool9_team"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: TEAMDELTA",
+            "output": "ANSWER: TEAMDELTA",
+            "hop": "tool9_team"
+          }
+        },
+        "comp_5": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: STATION3",
+            "output": "ANSWER: STATION3",
+            "hop": "teamDelta_station"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: STATION3",
+            "output": "ANSWER: STATION3",
+            "hop": "teamDelta_station"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: STATION3",
+            "output": "ANSWER: STATION3",
+            "hop": "teamDelta_station"
+          }
+        },
+        "comp_6": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: URGENT",
+            "output": "ANSWER: URGENT",
+            "hop": "station3_priority"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: URGENT",
+            "output": "ANSWER: URGENT",
+            "hop": "station3_priority"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: URGENT",
+            "output": "ANSWER: URGENT",
+            "hop": "station3_priority"
+          }
+        }
+      }
+    },
+    "FD2": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAN",
+          "output": "ANSWER: CLEAN"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAN",
+          "output": "ANSWER: CLEAN"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CLEAN",
+          "output": "ANSWER: CLEAN"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LABEPS",
+          "output": "ANSWER: LABEPS"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LABEPS",
+          "output": "ANSWER: LABEPS"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: LABEPS",
+          "output": "ANSWER: LABEPS"
+        }
+      },
+      "counterexample": {},
+      "components": {
+        "comp_0": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PROJ44",
+            "output": "ANSWER: PROJ44",
+            "hop": "sable_project"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PROJ44",
+            "output": "ANSWER: PROJ44",
+            "hop": "sable_project"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: PROJ44",
+            "output": "ANSWER: PROJ44",
+            "hop": "sable_project"
+          }
+        },
+        "comp_1": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: MOD7",
+            "output": "ANSWER: MOD7",
+            "hop": "project44_module"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: MOD7",
+            "output": "ANSWER: MOD7",
+            "hop": "project44_module"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: MOD7",
+            "output": "ANSWER: MOD7",
+            "hop": "project44_module"
+          }
+        },
+        "comp_2": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LABEPS",
+            "output": "ANSWER: LABEPS",
+            "hop": "module7_lab"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LABEPS",
+            "output": "ANSWER: LABEPS",
+            "hop": "module7_lab"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: LABEPS",
+            "output": "ANSWER: LABEPS",
+            "hop": "module7_lab"
+          }
+        },
+        "comp_3": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DIV3",
+            "output": "ANSWER: DIV3",
+            "hop": "labEpsilon_division"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: DIV3",
+            "output": "ANSWER: DIV3",
+            "hop": "labEpsilon_division"
+          },
+          "4": {
+            "strict": 0.0,
+            "content": 0.0,
+            "partial": 0.0,
+            "failure_class": "CONTENT_LOSS",
+            "expected": "ANSWER: DIV3",
+            "output": "ANSWER: LABEPS",
+            "hop": "labEpsilon_division"
+          }
+        },
+        "comp_4": {
+          "16": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAN",
+            "output": "ANSWER: CLEAN",
+            "hop": "division3_clearance"
+          },
+          "8": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAN",
+            "output": "ANSWER: CLEAN",
+            "hop": "division3_clearance"
+          },
+          "4": {
+            "strict": 1.0,
+            "content": 1.0,
+            "partial": 1.0,
+            "failure_class": "PASS",
+            "expected": "ANSWER: CLEAN",
+            "output": "ANSWER: CLEAN",
+            "hop": "division3_clearance"
+          }
+        }
+      }
+    },
+    "AC1": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: SILVDISK",
+          "output": "ANSWER: SILVDISK"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: SILVDISK",
+          "output": "ANSWER: SILVDISK"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: SILVDISK",
+          "output": "ANSWER: SILVDISK"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: SILVDISK",
+          "output": "ANSWER: SILVDISK"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: SILVDISK",
+          "output": "ANSWER: SILVDISK"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: SILVDISK",
+          "output": "ANSWER: SILVDISK"
+        }
+      },
+      "counterexample": {},
+      "components": {}
+    },
+    "AC2": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GOLD",
+          "output": "ANSWER: GOLD"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GOLD",
+          "output": "ANSWER: GOLD"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GOLD",
+          "output": "ANSWER: GOLD"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GOLD",
+          "output": "ANSWER: GOLD"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GOLD",
+          "output": "ANSWER: GOLD"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: GOLD",
+          "output": "ANSWER: GOLD"
+        }
+      },
+      "counterexample": {},
+      "components": {}
+    },
+    "NC1": {
+      "narrow": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CURPERM",
+          "output": "ANSWER: CURPERM"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CURPERM",
+          "output": "ANSWER: CURPERM"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: CURPERM",
+          "output": "ANSWER: CURPERM"
+        }
+      },
+      "broad": {
+        "16": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: OLDPERM",
+          "output": "ANSWER: OLDPERM"
+        },
+        "8": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: OLDPERM",
+          "output": "ANSWER: OLDPERM"
+        },
+        "4": {
+          "strict": 1.0,
+          "content": 1.0,
+          "partial": 1.0,
+          "failure_class": "PASS",
+          "expected": "ANSWER: OLDPERM",
+          "output": "ANSWER: OLDPERM"
+        }
+      },
+      "counterexample": {},
+      "components": {}
+    }
+  }
+}

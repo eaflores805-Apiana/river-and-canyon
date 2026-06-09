@@ -1,0 +1,3482 @@
+[
+  {
+    "item_id": "twohop_l1_c02_i01",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAJAU",
+        "B_object": "ZBYQY",
+        "C_object": "RRWRO"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDHCU",
+        "B_object": "ZEAQM",
+        "C_object": "LVQLN"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGLED",
+        "B_object": "ZHQSU",
+        "C_object": "VBLTH"
+      }
+    ],
+    "object_roles": {
+      "ZAJAU": "anchor_A",
+      "ZBYQY": "hop1_B",
+      "RRWRO": "answer_C",
+      "ZDHCU": "other_context",
+      "ZEAQM": "distractor_chain_intermediate",
+      "LVQLN": "distractor_chain_endpoint",
+      "ZGLED": "other_context",
+      "ZHQSU": "distractor_chain_intermediate",
+      "VBLTH": "distractor_chain_endpoint",
+      "RRWWT": "target_neighbor_decoy",
+      "ZFNEK": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAJAU",
+        "expected_answer": "ZBYQY"
+      },
+      "hop2": {
+        "query_anchor": "ZBYQY",
+        "expected_answer": "RRWRO"
+      },
+      "composite": {
+        "query_anchor": "ZAJAU",
+        "expected_answer": "RRWRO"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAJAU",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDHCU links to ZEAQM.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEAQM maps to LVQLN.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGLED links to ZHQSU.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFNEK holds RRWWT.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAJAU links to ZBYQY.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBYQY maps to RRWRO.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHQSU maps to VBLTH.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:6861b1cff9b33ad2fafb7eec635e8994eff79240f43518925f68de8ca9b9c0b8"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "LVQLN",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "VBLTH",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i02",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAEOB",
+        "B_object": "ZBUCM",
+        "C_object": "VHPZM"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDONY",
+        "B_object": "ZEPGO",
+        "C_object": "EQNPV"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGRBB",
+        "B_object": "ZHPVK",
+        "C_object": "EPXRX"
+      }
+    ],
+    "object_roles": {
+      "ZAEOB": "anchor_A",
+      "ZBUCM": "hop1_B",
+      "VHPZM": "answer_C",
+      "ZDONY": "other_context",
+      "ZEPGO": "distractor_chain_intermediate",
+      "EQNPV": "distractor_chain_endpoint",
+      "ZGRBB": "other_context",
+      "ZHPVK": "distractor_chain_intermediate",
+      "EPXRX": "distractor_chain_endpoint",
+      "VHPAS": "target_neighbor_decoy",
+      "ZFMVD": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAEOB",
+        "expected_answer": "ZBUCM"
+      },
+      "hop2": {
+        "query_anchor": "ZBUCM",
+        "expected_answer": "VHPZM"
+      },
+      "composite": {
+        "query_anchor": "ZAEOB",
+        "expected_answer": "VHPZM"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAEOB",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDONY links to ZEPGO.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEPGO maps to EQNPV.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGRBB links to ZHPVK.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFMVD holds VHPAS.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAEOB links to ZBUCM.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBUCM maps to VHPZM.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHPVK maps to EPXRX.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:43267a946e1b2f10512e0304389f05e12754ad9d7e65a8a66b5d79197eedea57"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "EQNPV",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "EPXRX",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i03",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZARNQ",
+        "B_object": "ZBOJB",
+        "C_object": "SKMNK"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDXGL",
+        "B_object": "ZEIEQ",
+        "C_object": "WJPGX"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGFMF",
+        "B_object": "ZHVPB",
+        "C_object": "PVMEO"
+      }
+    ],
+    "object_roles": {
+      "ZARNQ": "anchor_A",
+      "ZBOJB": "hop1_B",
+      "SKMNK": "answer_C",
+      "ZDXGL": "other_context",
+      "ZEIEQ": "distractor_chain_intermediate",
+      "WJPGX": "distractor_chain_endpoint",
+      "ZGFMF": "other_context",
+      "ZHVPB": "distractor_chain_intermediate",
+      "PVMEO": "distractor_chain_endpoint",
+      "MDMNK": "target_neighbor_decoy",
+      "ZFSDB": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZARNQ",
+        "expected_answer": "ZBOJB"
+      },
+      "hop2": {
+        "query_anchor": "ZBOJB",
+        "expected_answer": "SKMNK"
+      },
+      "composite": {
+        "query_anchor": "ZARNQ",
+        "expected_answer": "SKMNK"
+      },
+      "negative_graph": {
+        "query_anchor": "ZARNQ",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDXGL links to ZEIEQ.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEIEQ maps to WJPGX.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGFMF links to ZHVPB.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFSDB holds MDMNK.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZARNQ links to ZBOJB.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBOJB maps to SKMNK.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHVPB maps to PVMEO.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:f460a20199d6533b6b7ce49496707502de19f13cfd1d09e902b69e08aae7a09b"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "WJPGX",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "PVMEO",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i04",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZADQH",
+        "B_object": "ZBGPW",
+        "C_object": "UDNSZ"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDMFC",
+        "B_object": "ZEVUW",
+        "C_object": "PPQDD"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGNCA",
+        "B_object": "ZHYRW",
+        "C_object": "MLIMZ"
+      }
+    ],
+    "object_roles": {
+      "ZADQH": "anchor_A",
+      "ZBGPW": "hop1_B",
+      "UDNSZ": "answer_C",
+      "ZDMFC": "other_context",
+      "ZEVUW": "distractor_chain_intermediate",
+      "PPQDD": "distractor_chain_endpoint",
+      "ZGNCA": "other_context",
+      "ZHYRW": "distractor_chain_intermediate",
+      "MLIMZ": "distractor_chain_endpoint",
+      "HXNSZ": "target_neighbor_decoy",
+      "ZFFGT": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZADQH",
+        "expected_answer": "ZBGPW"
+      },
+      "hop2": {
+        "query_anchor": "ZBGPW",
+        "expected_answer": "UDNSZ"
+      },
+      "composite": {
+        "query_anchor": "ZADQH",
+        "expected_answer": "UDNSZ"
+      },
+      "negative_graph": {
+        "query_anchor": "ZADQH",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDMFC links to ZEVUW.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEVUW maps to PPQDD.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGNCA links to ZHYRW.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFFGT holds HXNSZ.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZADQH links to ZBGPW.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBGPW maps to UDNSZ.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHYRW maps to MLIMZ.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:c408b89375a342ac3e0ccb98be31584fcd6a4b43676214f7a5e0346c5761d00d"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "PPQDD",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "MLIMZ",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i05",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAGUC",
+        "B_object": "ZBXSJ",
+        "C_object": "AWILF"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDNXM",
+        "B_object": "ZEMMU",
+        "C_object": "FJUDM"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGBXG",
+        "B_object": "ZHFWC",
+        "C_object": "SYPKQ"
+      }
+    ],
+    "object_roles": {
+      "ZAGUC": "anchor_A",
+      "ZBXSJ": "hop1_B",
+      "AWILF": "answer_C",
+      "ZDNXM": "other_context",
+      "ZEMMU": "distractor_chain_intermediate",
+      "FJUDM": "distractor_chain_endpoint",
+      "ZGBXG": "other_context",
+      "ZHFWC": "distractor_chain_intermediate",
+      "SYPKQ": "distractor_chain_endpoint",
+      "SVILF": "target_neighbor_decoy",
+      "ZFYNA": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAGUC",
+        "expected_answer": "ZBXSJ"
+      },
+      "hop2": {
+        "query_anchor": "ZBXSJ",
+        "expected_answer": "AWILF"
+      },
+      "composite": {
+        "query_anchor": "ZAGUC",
+        "expected_answer": "AWILF"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAGUC",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDNXM links to ZEMMU.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEMMU maps to FJUDM.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGBXG links to ZHFWC.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFYNA holds SVILF.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAGUC links to ZBXSJ.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBXSJ maps to AWILF.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHFWC maps to SYPKQ.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:1bc02f68fa12ec3e27754cc5b1051848d1f02cf246888320debaedaab5e43166"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "FJUDM",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "SYPKQ",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i06",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAITD",
+        "B_object": "ZBWBV",
+        "C_object": "IXENM"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDQBT",
+        "B_object": "ZEQZK",
+        "C_object": "FLZAC"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGMZT",
+        "B_object": "ZHUGJ",
+        "C_object": "DAAXS"
+      }
+    ],
+    "object_roles": {
+      "ZAITD": "anchor_A",
+      "ZBWBV": "hop1_B",
+      "IXENM": "answer_C",
+      "ZDQBT": "other_context",
+      "ZEQZK": "distractor_chain_intermediate",
+      "FLZAC": "distractor_chain_endpoint",
+      "ZGMZT": "other_context",
+      "ZHUGJ": "distractor_chain_intermediate",
+      "DAAXS": "distractor_chain_endpoint",
+      "DHENM": "target_neighbor_decoy",
+      "ZFDOL": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAITD",
+        "expected_answer": "ZBWBV"
+      },
+      "hop2": {
+        "query_anchor": "ZBWBV",
+        "expected_answer": "IXENM"
+      },
+      "composite": {
+        "query_anchor": "ZAITD",
+        "expected_answer": "IXENM"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAITD",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDQBT links to ZEQZK.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEQZK maps to FLZAC.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGMZT links to ZHUGJ.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFDOL holds DHENM.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAITD links to ZBWBV.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBWBV maps to IXENM.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHUGJ maps to DAAXS.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:856f0118f4f4d7e12d42943b17606c5420546218ee5c2e9bb81bda88b7dff90d"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "FLZAC",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "DAAXS",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i07",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAQDS",
+        "B_object": "ZBBZO",
+        "C_object": "NTELO"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDGKS",
+        "B_object": "ZERSI",
+        "C_object": "SGEJJ"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGIYM",
+        "B_object": "ZHNFT",
+        "C_object": "OFWGM"
+      }
+    ],
+    "object_roles": {
+      "ZAQDS": "anchor_A",
+      "ZBBZO": "hop1_B",
+      "NTELO": "answer_C",
+      "ZDGKS": "other_context",
+      "ZERSI": "distractor_chain_intermediate",
+      "SGEJJ": "distractor_chain_endpoint",
+      "ZGIYM": "other_context",
+      "ZHNFT": "distractor_chain_intermediate",
+      "OFWGM": "distractor_chain_endpoint",
+      "NTEJE": "target_neighbor_decoy",
+      "ZFWSN": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAQDS",
+        "expected_answer": "ZBBZO"
+      },
+      "hop2": {
+        "query_anchor": "ZBBZO",
+        "expected_answer": "NTELO"
+      },
+      "composite": {
+        "query_anchor": "ZAQDS",
+        "expected_answer": "NTELO"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAQDS",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDGKS links to ZERSI.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZERSI maps to SGEJJ.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGIYM links to ZHNFT.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFWSN holds NTEJE.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAQDS links to ZBBZO.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBBZO maps to NTELO.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHNFT maps to OFWGM.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:1f3496241bd42c23b21d53d243fcca5fa7c88447232591160c2825a52453d16b"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "SGEJJ",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "OFWGM",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i08",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAYWZ",
+        "B_object": "ZBCDF",
+        "C_object": "AJLAC"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDJTJ",
+        "B_object": "ZEXKH",
+        "C_object": "DVRRO"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGYJK",
+        "B_object": "ZHSNR",
+        "C_object": "PBKNW"
+      }
+    ],
+    "object_roles": {
+      "ZAYWZ": "anchor_A",
+      "ZBCDF": "hop1_B",
+      "AJLAC": "answer_C",
+      "ZDJTJ": "other_context",
+      "ZEXKH": "distractor_chain_intermediate",
+      "DVRRO": "distractor_chain_endpoint",
+      "ZGYJK": "other_context",
+      "ZHSNR": "distractor_chain_intermediate",
+      "PBKNW": "distractor_chain_endpoint",
+      "AJLMA": "target_neighbor_decoy",
+      "ZFXHG": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAYWZ",
+        "expected_answer": "ZBCDF"
+      },
+      "hop2": {
+        "query_anchor": "ZBCDF",
+        "expected_answer": "AJLAC"
+      },
+      "composite": {
+        "query_anchor": "ZAYWZ",
+        "expected_answer": "AJLAC"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAYWZ",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDJTJ links to ZEXKH.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEXKH maps to DVRRO.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGYJK links to ZHSNR.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFXHG holds AJLMA.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAYWZ links to ZBCDF.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBCDF maps to AJLAC.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHSNR maps to PBKNW.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:c506a2c8e4b82de50531f707dcbe53b9c1c63abbf5b190851e5bd976fd8fad8b"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "DVRRO",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "PBKNW",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i09",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZABLX",
+        "B_object": "ZBVGQ",
+        "C_object": "LVQLN"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDUMB",
+        "B_object": "ZEWYX",
+        "C_object": "VBLTH"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGXDU",
+        "B_object": "ZHBDA",
+        "C_object": "RRWRO"
+      }
+    ],
+    "object_roles": {
+      "ZABLX": "anchor_A",
+      "ZBVGQ": "hop1_B",
+      "LVQLN": "answer_C",
+      "ZDUMB": "other_context",
+      "ZEWYX": "distractor_chain_intermediate",
+      "VBLTH": "distractor_chain_endpoint",
+      "ZGXDU": "other_context",
+      "ZHBDA": "distractor_chain_intermediate",
+      "RRWRO": "distractor_chain_endpoint",
+      "UDQLN": "target_neighbor_decoy",
+      "ZFUJX": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZABLX",
+        "expected_answer": "ZBVGQ"
+      },
+      "hop2": {
+        "query_anchor": "ZBVGQ",
+        "expected_answer": "LVQLN"
+      },
+      "composite": {
+        "query_anchor": "ZABLX",
+        "expected_answer": "LVQLN"
+      },
+      "negative_graph": {
+        "query_anchor": "ZABLX",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDUMB links to ZEWYX.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEWYX maps to VBLTH.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGXDU links to ZHBDA.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFUJX holds UDQLN.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZABLX links to ZBVGQ.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBVGQ maps to LVQLN.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHBDA maps to RRWRO.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:3a793292d1b08abe5193041c9eed395063f8747f3eaf5d09f3dfdde21746ad13"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "VBLTH",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "RRWRO",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i10",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAMBM",
+        "B_object": "ZBZIP",
+        "C_object": "EQNPV"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDZYD",
+        "B_object": "ZELBR",
+        "C_object": "EPXRX"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGUQV",
+        "B_object": "ZHOTZ",
+        "C_object": "VHPZM"
+      }
+    ],
+    "object_roles": {
+      "ZAMBM": "anchor_A",
+      "ZBZIP": "hop1_B",
+      "EQNPV": "answer_C",
+      "ZDZYD": "other_context",
+      "ZELBR": "distractor_chain_intermediate",
+      "EPXRX": "distractor_chain_endpoint",
+      "ZGUQV": "other_context",
+      "ZHOTZ": "distractor_chain_intermediate",
+      "VHPZM": "distractor_chain_endpoint",
+      "NYNPV": "target_neighbor_decoy",
+      "ZFRAE": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAMBM",
+        "expected_answer": "ZBZIP"
+      },
+      "hop2": {
+        "query_anchor": "ZBZIP",
+        "expected_answer": "EQNPV"
+      },
+      "composite": {
+        "query_anchor": "ZAMBM",
+        "expected_answer": "EQNPV"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAMBM",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDZYD links to ZELBR.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZELBR maps to EPXRX.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGUQV links to ZHOTZ.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFRAE holds NYNPV.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAMBM links to ZBZIP.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBZIP maps to EQNPV.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHOTZ maps to VHPZM.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:53e096ea1eaea1bb1d6c59f8433f7e3c572e475d3afbd867e4b0182ee883788b"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "EPXRX",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "VHPZM",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i11",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZANZR",
+        "B_object": "ZBLVN",
+        "C_object": "WJPGX"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDYPE",
+        "B_object": "ZEDNT",
+        "C_object": "PVMEO"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGDTY",
+        "B_object": "ZHJKV",
+        "C_object": "SKMNK"
+      }
+    ],
+    "object_roles": {
+      "ZANZR": "anchor_A",
+      "ZBLVN": "hop1_B",
+      "WJPGX": "answer_C",
+      "ZDYPE": "other_context",
+      "ZEDNT": "distractor_chain_intermediate",
+      "PVMEO": "distractor_chain_endpoint",
+      "ZGDTY": "other_context",
+      "ZHJKV": "distractor_chain_intermediate",
+      "SKMNK": "distractor_chain_endpoint",
+      "CDPGX": "target_neighbor_decoy",
+      "ZFLCO": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZANZR",
+        "expected_answer": "ZBLVN"
+      },
+      "hop2": {
+        "query_anchor": "ZBLVN",
+        "expected_answer": "WJPGX"
+      },
+      "composite": {
+        "query_anchor": "ZANZR",
+        "expected_answer": "WJPGX"
+      },
+      "negative_graph": {
+        "query_anchor": "ZANZR",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDYPE links to ZEDNT.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEDNT maps to PVMEO.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGDTY links to ZHJKV.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFLCO holds CDPGX.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZANZR links to ZBLVN.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBLVN maps to WJPGX.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHJKV maps to SKMNK.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:35f86e843ca6726d00c0e72c80267cb2ba006890f1b7a320621171453d5ede64"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "PVMEO",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "SKMNK",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i12",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAVMN",
+        "B_object": "ZBNNI",
+        "C_object": "PPQDD"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDADV",
+        "B_object": "ZEUAZ",
+        "C_object": "MLIMZ"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGTIX",
+        "B_object": "ZHWHM",
+        "C_object": "UDNSZ"
+      }
+    ],
+    "object_roles": {
+      "ZAVMN": "anchor_A",
+      "ZBNNI": "hop1_B",
+      "PPQDD": "answer_C",
+      "ZDADV": "other_context",
+      "ZEUAZ": "distractor_chain_intermediate",
+      "MLIMZ": "distractor_chain_endpoint",
+      "ZGTIX": "other_context",
+      "ZHWHM": "distractor_chain_intermediate",
+      "UDNSZ": "distractor_chain_endpoint",
+      "PPQFD": "target_neighbor_decoy",
+      "ZFTZI": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAVMN",
+        "expected_answer": "ZBNNI"
+      },
+      "hop2": {
+        "query_anchor": "ZBNNI",
+        "expected_answer": "PPQDD"
+      },
+      "composite": {
+        "query_anchor": "ZAVMN",
+        "expected_answer": "PPQDD"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAVMN",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDADV links to ZEUAZ.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEUAZ maps to MLIMZ.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGTIX links to ZHWHM.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFTZI holds PPQFD.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAVMN links to ZBNNI.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBNNI maps to PPQDD.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHWHM maps to UDNSZ.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:3ee92980aba9d31e17c1e1c44869071e763ec7e55b3b9971841dceb245dbd675"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "MLIMZ",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "UDNSZ",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i13",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAFJO",
+        "B_object": "ZBHXZ",
+        "C_object": "FJUDM"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDSJQ",
+        "B_object": "ZEBWN",
+        "C_object": "SYPKQ"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGHKQ",
+        "B_object": "ZHGAX",
+        "C_object": "AWILF"
+      }
+    ],
+    "object_roles": {
+      "ZAFJO": "anchor_A",
+      "ZBHXZ": "hop1_B",
+      "FJUDM": "answer_C",
+      "ZDSJQ": "other_context",
+      "ZEBWN": "distractor_chain_intermediate",
+      "SYPKQ": "distractor_chain_endpoint",
+      "ZGHKQ": "other_context",
+      "ZHGAX": "distractor_chain_intermediate",
+      "AWILF": "distractor_chain_endpoint",
+      "IOUDM": "target_neighbor_decoy",
+      "ZFEIW": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAFJO",
+        "expected_answer": "ZBHXZ"
+      },
+      "hop2": {
+        "query_anchor": "ZBHXZ",
+        "expected_answer": "FJUDM"
+      },
+      "composite": {
+        "query_anchor": "ZAFJO",
+        "expected_answer": "FJUDM"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAFJO",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDSJQ links to ZEBWN.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEBWN maps to SYPKQ.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGHKQ links to ZHGAX.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFEIW holds IOUDM.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAFJO links to ZBHXZ.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBHXZ maps to FJUDM.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHGAX maps to AWILF.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:12b34ec01b5f35f8309cdeb537dce1010e8522710d141e4b7610035431483e60"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "SYPKQ",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "AWILF",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i14",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAHRP",
+        "B_object": "ZBSMS",
+        "C_object": "FLZAC"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDTUP",
+        "B_object": "ZEYTG",
+        "C_object": "DAAXS"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGKHL",
+        "B_object": "ZHTOS",
+        "C_object": "IXENM"
+      }
+    ],
+    "object_roles": {
+      "ZAHRP": "anchor_A",
+      "ZBSMS": "hop1_B",
+      "FLZAC": "answer_C",
+      "ZDTUP": "other_context",
+      "ZEYTG": "distractor_chain_intermediate",
+      "DAAXS": "distractor_chain_endpoint",
+      "ZGKHL": "other_context",
+      "ZHTOS": "distractor_chain_intermediate",
+      "IXENM": "distractor_chain_endpoint",
+      "FBZAC": "target_neighbor_decoy",
+      "ZFOBQ": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAHRP",
+        "expected_answer": "ZBSMS"
+      },
+      "hop2": {
+        "query_anchor": "ZBSMS",
+        "expected_answer": "FLZAC"
+      },
+      "composite": {
+        "query_anchor": "ZAHRP",
+        "expected_answer": "FLZAC"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAHRP",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDTUP links to ZEYTG.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEYTG maps to DAAXS.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGKHL links to ZHTOS.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFOBQ holds FBZAC.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAHRP links to ZBSMS.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBSMS maps to FLZAC.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHTOS maps to IXENM.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:d9ea3382a32e6f439a84f6d7786bd2df1af124442403e77f24a6b4bf2391885f"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "DAAXS",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "IXENM",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i15",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZALSL",
+        "B_object": "ZBFUE",
+        "C_object": "SGEJJ"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDIRX",
+        "B_object": "ZEEJS",
+        "C_object": "OFWGM"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGWAR",
+        "B_object": "ZHHJL",
+        "C_object": "NTELO"
+      }
+    ],
+    "object_roles": {
+      "ZALSL": "anchor_A",
+      "ZBFUE": "hop1_B",
+      "SGEJJ": "answer_C",
+      "ZDIRX": "other_context",
+      "ZEEJS": "distractor_chain_intermediate",
+      "OFWGM": "distractor_chain_endpoint",
+      "ZGWAR": "other_context",
+      "ZHHJL": "distractor_chain_intermediate",
+      "NTELO": "distractor_chain_endpoint",
+      "SGEVC": "target_neighbor_decoy",
+      "ZFQMC": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZALSL",
+        "expected_answer": "ZBFUE"
+      },
+      "hop2": {
+        "query_anchor": "ZBFUE",
+        "expected_answer": "SGEJJ"
+      },
+      "composite": {
+        "query_anchor": "ZALSL",
+        "expected_answer": "SGEJJ"
+      },
+      "negative_graph": {
+        "query_anchor": "ZALSL",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDIRX links to ZEEJS.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEEJS maps to OFWGM.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGWAR links to ZHHJL.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFQMC holds SGEVC.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZALSL links to ZBFUE.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBFUE maps to SGEJJ.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHHJL maps to NTELO.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:3229a34ff114a55ff16e5a43676793ceb179d223da6b4437bf9abad6e2f5281f"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "OFWGM",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "NTELO",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i16",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZATEG",
+        "B_object": "ZBROK",
+        "C_object": "DVRRO"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDRHF",
+        "B_object": "ZEHIC",
+        "C_object": "PBKNW"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGGNZ",
+        "B_object": "ZHDUI",
+        "C_object": "AJLAC"
+      }
+    ],
+    "object_roles": {
+      "ZATEG": "anchor_A",
+      "ZBROK": "hop1_B",
+      "DVRRO": "answer_C",
+      "ZDRHF": "other_context",
+      "ZEHIC": "distractor_chain_intermediate",
+      "PBKNW": "distractor_chain_endpoint",
+      "ZGGNZ": "other_context",
+      "ZHDUI": "distractor_chain_intermediate",
+      "AJLAC": "distractor_chain_endpoint",
+      "DVRDF": "target_neighbor_decoy",
+      "ZFJRS": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZATEG",
+        "expected_answer": "ZBROK"
+      },
+      "hop2": {
+        "query_anchor": "ZBROK",
+        "expected_answer": "DVRRO"
+      },
+      "composite": {
+        "query_anchor": "ZATEG",
+        "expected_answer": "DVRRO"
+      },
+      "negative_graph": {
+        "query_anchor": "ZATEG",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDRHF links to ZEHIC.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEHIC maps to PBKNW.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGGNZ links to ZHDUI.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFJRS holds DVRDF.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZATEG links to ZBROK.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBROK maps to DVRRO.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHDUI maps to AJLAC.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:da8054decfee4b2c8ba98dd10645485043c1a4d2504294dbc030be43bc509d80"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "PBKNW",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "AJLAC",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i17",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAPYT",
+        "B_object": "ZBKEU",
+        "C_object": "VBLTH"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDWWH",
+        "B_object": "ZEZFA",
+        "C_object": "RRWRO"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGOVS",
+        "B_object": "ZHCMG",
+        "C_object": "LVQLN"
+      }
+    ],
+    "object_roles": {
+      "ZAPYT": "anchor_A",
+      "ZBKEU": "hop1_B",
+      "VBLTH": "answer_C",
+      "ZDWWH": "other_context",
+      "ZEZFA": "distractor_chain_intermediate",
+      "RRWRO": "distractor_chain_endpoint",
+      "ZGOVS": "other_context",
+      "ZHCMG": "distractor_chain_intermediate",
+      "LVQLN": "distractor_chain_endpoint",
+      "VBLAY": "target_neighbor_decoy",
+      "ZFHLY": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAPYT",
+        "expected_answer": "ZBKEU"
+      },
+      "hop2": {
+        "query_anchor": "ZBKEU",
+        "expected_answer": "VBLTH"
+      },
+      "composite": {
+        "query_anchor": "ZAPYT",
+        "expected_answer": "VBLTH"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAPYT",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDWWH links to ZEZFA.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEZFA maps to RRWRO.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGOVS links to ZHCMG.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFHLY holds VBLAY.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAPYT links to ZBKEU.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBKEU maps to VBLTH.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHCMG maps to LVQLN.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:af38733ac286c74dfff0f96fad7bf16c2fb44cf4d7ee7897a440bbb0ab8a4694"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "RRWRO",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "LVQLN",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i18",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAKVJ",
+        "B_object": "ZBPAG",
+        "C_object": "EPXRX"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDESK",
+        "B_object": "ZEFLJ",
+        "C_object": "VHPZM"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGSPH",
+        "B_object": "ZHELE",
+        "C_object": "EQNPV"
+      }
+    ],
+    "object_roles": {
+      "ZAKVJ": "anchor_A",
+      "ZBPAG": "hop1_B",
+      "EPXRX": "answer_C",
+      "ZDESK": "other_context",
+      "ZEFLJ": "distractor_chain_intermediate",
+      "VHPZM": "distractor_chain_endpoint",
+      "ZGSPH": "other_context",
+      "ZHELE": "distractor_chain_intermediate",
+      "EQNPV": "distractor_chain_endpoint",
+      "EPXSI": "target_neighbor_decoy",
+      "ZFVFZ": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAKVJ",
+        "expected_answer": "ZBPAG"
+      },
+      "hop2": {
+        "query_anchor": "ZBPAG",
+        "expected_answer": "EPXRX"
+      },
+      "composite": {
+        "query_anchor": "ZAKVJ",
+        "expected_answer": "EPXRX"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAKVJ",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDESK links to ZEFLJ.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEFLJ maps to VHPZM.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGSPH links to ZHELE.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFVFZ holds EPXSI.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAKVJ links to ZBPAG.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBPAG maps to EPXRX.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHELE maps to EQNPV.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:5091f0efd78f0a0cc9fce294c8993ca50e5efd0b1adb853f6fc418cdb0298bc9"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "VHPZM",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "EQNPV",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i19",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZASKW",
+        "B_object": "ZBTYC",
+        "C_object": "PVMEO"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDDLO",
+        "B_object": "ZEJVB",
+        "C_object": "SKMNK"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGZRN",
+        "B_object": "ZHLXP",
+        "C_object": "WJPGX"
+      }
+    ],
+    "object_roles": {
+      "ZASKW": "anchor_A",
+      "ZBTYC": "hop1_B",
+      "PVMEO": "answer_C",
+      "ZDDLO": "other_context",
+      "ZEJVB": "distractor_chain_intermediate",
+      "SKMNK": "distractor_chain_endpoint",
+      "ZGZRN": "other_context",
+      "ZHLXP": "distractor_chain_intermediate",
+      "WJPGX": "distractor_chain_endpoint",
+      "PVMRC": "target_neighbor_decoy",
+      "ZFZPJ": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZASKW",
+        "expected_answer": "ZBTYC"
+      },
+      "hop2": {
+        "query_anchor": "ZBTYC",
+        "expected_answer": "PVMEO"
+      },
+      "composite": {
+        "query_anchor": "ZASKW",
+        "expected_answer": "PVMEO"
+      },
+      "negative_graph": {
+        "query_anchor": "ZASKW",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDDLO links to ZEJVB.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEJVB maps to SKMNK.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGZRN links to ZHLXP.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFZPJ holds PVMRC.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZASKW links to ZBTYC.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBTYC maps to PVMEO.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHLXP maps to WJPGX.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:07ef8c6e255937bab15aa5d247956ee9c02dc6da2c70713cef00f11e7dc4293f"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "SKMNK",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "WJPGX",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i20",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAWGI",
+        "B_object": "ZBATA",
+        "C_object": "MLIMZ"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDCQN",
+        "B_object": "ZETRL",
+        "C_object": "UDNSZ"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGVOI",
+        "B_object": "ZHAIF",
+        "C_object": "PPQDD"
+      }
+    ],
+    "object_roles": {
+      "ZAWGI": "anchor_A",
+      "ZBATA": "hop1_B",
+      "MLIMZ": "answer_C",
+      "ZDCQN": "other_context",
+      "ZETRL": "distractor_chain_intermediate",
+      "UDNSZ": "distractor_chain_endpoint",
+      "ZGVOI": "other_context",
+      "ZHAIF": "distractor_chain_intermediate",
+      "PPQDD": "distractor_chain_endpoint",
+      "BOIMZ": "target_neighbor_decoy",
+      "ZFKXV": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAWGI",
+        "expected_answer": "ZBATA"
+      },
+      "hop2": {
+        "query_anchor": "ZBATA",
+        "expected_answer": "MLIMZ"
+      },
+      "composite": {
+        "query_anchor": "ZAWGI",
+        "expected_answer": "MLIMZ"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAWGI",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDCQN links to ZETRL.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZETRL maps to UDNSZ.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGVOI links to ZHAIF.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFKXV holds BOIMZ.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAWGI links to ZBATA.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBATA maps to MLIMZ.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHAIF maps to PPQDD.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:2cd67a9cac2d792a948233b970ab117627295fd7583597737c9d3181341d9b98"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "UDNSZ",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "PPQDD",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i21",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAAHE",
+        "B_object": "ZBJLH",
+        "C_object": "SYPKQ"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDKOW",
+        "B_object": "ZECPD",
+        "C_object": "AWILF"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGCWJ",
+        "B_object": "ZHMEN",
+        "C_object": "FJUDM"
+      }
+    ],
+    "object_roles": {
+      "ZAAHE": "anchor_A",
+      "ZBJLH": "hop1_B",
+      "SYPKQ": "answer_C",
+      "ZDKOW": "other_context",
+      "ZECPD": "distractor_chain_intermediate",
+      "AWILF": "distractor_chain_endpoint",
+      "ZGCWJ": "other_context",
+      "ZHMEN": "distractor_chain_intermediate",
+      "FJUDM": "distractor_chain_endpoint",
+      "HYPKQ": "target_neighbor_decoy",
+      "ZFPQP": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAAHE",
+        "expected_answer": "ZBJLH"
+      },
+      "hop2": {
+        "query_anchor": "ZBJLH",
+        "expected_answer": "SYPKQ"
+      },
+      "composite": {
+        "query_anchor": "ZAAHE",
+        "expected_answer": "SYPKQ"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAAHE",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDKOW links to ZECPD.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZECPD maps to AWILF.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGCWJ links to ZHMEN.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFPQP holds HYPKQ.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAAHE links to ZBJLH.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBJLH maps to SYPKQ.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHMEN maps to FJUDM.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:766767ed495b14697e3b9fc55ef034e04825cb1b5fa91ee13288b9e87cfa3ece"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "AWILF",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "FJUDM",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i22",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAOIA",
+        "B_object": "ZBQWL",
+        "C_object": "DAAXS"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDBVI",
+        "B_object": "ZEGXY",
+        "C_object": "IXENM"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGPLC",
+        "B_object": "ZHIBY",
+        "C_object": "FLZAC"
+      }
+    ],
+    "object_roles": {
+      "ZAOIA": "anchor_A",
+      "ZBQWL": "hop1_B",
+      "DAAXS": "answer_C",
+      "ZDBVI": "other_context",
+      "ZEGXY": "distractor_chain_intermediate",
+      "IXENM": "distractor_chain_endpoint",
+      "ZGPLC": "other_context",
+      "ZHIBY": "distractor_chain_intermediate",
+      "FLZAC": "distractor_chain_endpoint",
+      "HFAXS": "target_neighbor_decoy",
+      "ZFGWM": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAOIA",
+        "expected_answer": "ZBQWL"
+      },
+      "hop2": {
+        "query_anchor": "ZBQWL",
+        "expected_answer": "DAAXS"
+      },
+      "composite": {
+        "query_anchor": "ZAOIA",
+        "expected_answer": "DAAXS"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAOIA",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDBVI links to ZEGXY.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEGXY maps to IXENM.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGPLC links to ZHIBY.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFGWM holds HFAXS.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAOIA links to ZBQWL.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBQWL maps to DAAXS.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHIBY maps to FLZAC.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:bf203af0fb28af86c9a4da0d4a3eee032c89abc6aa5243bf31eb3271bbd7ed25"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "IXENM",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "FLZAC",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i23",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAZCV",
+        "B_object": "ZBIKR",
+        "C_object": "OFWGM"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDVER",
+        "B_object": "ZENDP",
+        "C_object": "NTELO"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGJFW",
+        "B_object": "ZHXQQ",
+        "C_object": "SGEJJ"
+      }
+    ],
+    "object_roles": {
+      "ZAZCV": "anchor_A",
+      "ZBIKR": "hop1_B",
+      "OFWGM": "answer_C",
+      "ZDVER": "other_context",
+      "ZENDP": "distractor_chain_intermediate",
+      "NTELO": "distractor_chain_endpoint",
+      "ZGJFW": "other_context",
+      "ZHXQQ": "distractor_chain_intermediate",
+      "SGEJJ": "distractor_chain_endpoint",
+      "OFWLP": "target_neighbor_decoy",
+      "ZFIUH": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAZCV",
+        "expected_answer": "ZBIKR"
+      },
+      "hop2": {
+        "query_anchor": "ZBIKR",
+        "expected_answer": "OFWGM"
+      },
+      "composite": {
+        "query_anchor": "ZAZCV",
+        "expected_answer": "OFWGM"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAZCV",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDVER links to ZENDP.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZENDP maps to NTELO.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGJFW links to ZHXQQ.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFIUH holds OFWLP.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAZCV links to ZBIKR.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBIKR maps to OFWGM.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHXQQ maps to SGEJJ.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:a4489a0492413692b4dcec0a0ead571749e40f356a667f28afb5a6ee022cfa05"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "NTELO",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "SGEJJ",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  },
+  {
+    "item_id": "twohop_l1_c02_i24",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAUFK",
+        "B_object": "ZBEFX",
+        "C_object": "PBKNW"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDFZA",
+        "B_object": "ZESOF",
+        "C_object": "AJLAC"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGASO",
+        "B_object": "ZHRCD",
+        "C_object": "DVRRO"
+      }
+    ],
+    "object_roles": {
+      "ZAUFK": "anchor_A",
+      "ZBEFX": "hop1_B",
+      "PBKNW": "answer_C",
+      "ZDFZA": "other_context",
+      "ZESOF": "distractor_chain_intermediate",
+      "AJLAC": "distractor_chain_endpoint",
+      "ZGASO": "other_context",
+      "ZHRCD": "distractor_chain_intermediate",
+      "DVRRO": "distractor_chain_endpoint",
+      "CMKNW": "target_neighbor_decoy",
+      "ZFCYU": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAUFK",
+        "expected_answer": "ZBEFX"
+      },
+      "hop2": {
+        "query_anchor": "ZBEFX",
+        "expected_answer": "PBKNW"
+      },
+      "composite": {
+        "query_anchor": "ZAUFK",
+        "expected_answer": "PBKNW"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAUFK",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDFZA links to ZESOF.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZESOF maps to AJLAC.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGASO links to ZHRCD.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFCYU holds CMKNW.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAUFK links to ZBEFX.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBEFX maps to PBKNW.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHRCD maps to DVRRO.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:f6771d80b2405ad7bbe3252227e5d31ca8652c8c795c4ee9cb9499f63b14c378"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell02",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_c_object_by_hop2_position",
+        "expected_answer": "AJLAC",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_c_object_by_hop2_position",
+        "expected_answer": "DVRRO",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last_split",
+    "axis_note_detail": "T-hop2 at context position 6. decoy_chain_2 hop2 at position 7 (after target hop2) \u2014 mechanically required for Gate 5 dummy ceiling compliance. See generate_cell02.py module docstring."
+  }
+]

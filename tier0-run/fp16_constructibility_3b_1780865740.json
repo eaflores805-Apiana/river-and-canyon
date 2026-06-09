@@ -1,0 +1,4408 @@
+{
+  "track": "Synthetic Key-Value Selection Constructibility",
+  "run_type": "two-rung frozen-construction constructibility check",
+  "rung": "3b",
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "bits": 16,
+  "preflight": {
+    "preflight_ok": true,
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "size": "3b",
+    "manifest_hash": "sha256:4036b1ad0819be74e32521cea8f9117b503c6d9d79142969820175ecde95a1bc",
+    "approved_hash": "sha256:4036b1ad0819be74e32521cea8f9117b503c6d9d79142969820175ecde95a1bc",
+    "hash_match": true,
+    "scorer_hash": "sha256:4036b1ad0819be74e32521cea8f9117b503c6d9d79142969820175ecde95a1bc",
+    "validator_hash": "sha256:4036b1ad0819be74e32521cea8f9117b503c6d9d79142969820175ecde95a1bc",
+    "tokenizer_hash": "sha256:29caa515cc153c78bf846329ad2a4e94df271c49c309024635cc015834acacce",
+    "runner_hash": "sha256:321a49a570652a516be1c5fa4d56817ac1db5b64b619cc6d667154478032d719",
+    "decoding": {
+      "temperature": 0.0,
+      "max_tokens": 16
+    },
+    "top_k_depth": 10,
+    "n_items": 8,
+    "feasibility_n": 7,
+    "note_scorer_validator": "scorer_hash and validator_hash are identical to manifest_hash: scorer and validator are defined in tasks_exp8.py (same file as items)."
+  },
+  "fresh_generation": true,
+  "decoding": {
+    "temperature": 0.0,
+    "max_tokens": 16
+  },
+  "top_k_depth": 10,
+  "top_k_note": "Decision-token top-k logs are provenance and diagnostic artifacts only. Not used to make capability or mechanism claims.",
+  "run_timestamp": 1780865740,
+  "n_items": 8,
+  "pass_count": 8,
+  "feasibility_n": 7,
+  "feasible": true,
+  "numeric_ooc_count": 0,
+  "content_class_breakdown": {
+    "RETURNED_TARGET_OBJ": 8
+  },
+  "position_subgroup": {
+    "2": {
+      "pass": 3,
+      "fail": 0,
+      "items": [
+        "L2_01",
+        "L2_02",
+        "L2_03"
+      ]
+    },
+    "3": {
+      "pass": 3,
+      "fail": 0,
+      "items": [
+        "L2_04",
+        "L2_05",
+        "L2_06"
+      ]
+    },
+    "4": {
+      "pass": 2,
+      "fail": 0,
+      "items": [
+        "L2_07",
+        "L2_08"
+      ]
+    }
+  },
+  "ladder_rule_note": "Partial subgroup success is diagnostic only. Does not license n>=20, INT8/INT4, or seam testing.",
+  "results": [
+    {
+      "id": "L2_01",
+      "target_pos": 2,
+      "target_subj": "ARVUX",
+      "target_obj": "ICVLX",
+      "prompt_hash": "sha256:75f220be2c6957119afd6a40c4390155b428e939fe687a2463ea57edf31c265e",
+      "raw_output": "ANSWER: ICVLX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "ICVLX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 2,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|ICVLX|2",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "A"
+        ],
+        "obj_prefixes": [
+          "I"
+        ],
+        "homogeneous_subj_prefix": true,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 934,
+              "token_str": "AR",
+              "logprob": -8.5
+            },
+            {
+              "rank": 3,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -8.75
+            },
+            {
+              "rank": 4,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -9.0
+            },
+            {
+              "rank": 5,
+              "token_id": 9051,
+              "token_str": "ARN",
+              "logprob": -13.375
+            },
+            {
+              "rank": 6,
+              "token_id": 2821,
+              "token_str": "ANT",
+              "logprob": -14.25
+            },
+            {
+              "rank": 7,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -14.375
+            },
+            {
+              "rank": 8,
+              "token_id": 52428,
+              "token_str": "QUESTION",
+              "logprob": -14.375
+            },
+            {
+              "rank": 9,
+              "token_id": 67783,
+              "token_str": "RESP",
+              "logprob": -14.75
+            },
+            {
+              "rank": 10,
+              "token_id": 49064,
+              "token_str": "ARB",
+              "logprob": -15.0
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -11.5
+            },
+            {
+              "rank": 3,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -15.0
+            },
+            {
+              "rank": 4,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -15.25
+            },
+            {
+              "rank": 5,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -16.0
+            },
+            {
+              "rank": 6,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -16.5
+            },
+            {
+              "rank": 7,
+              "token_id": 17925,
+              "token_str": "WR",
+              "logprob": -18.0
+            },
+            {
+              "rank": 8,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -18.375
+            },
+            {
+              "rank": 9,
+              "token_id": 59329,
+              "token_str": "ERV",
+              "logprob": -19.625
+            },
+            {
+              "rank": 10,
+              "token_id": 4521,
+              "token_str": "URE",
+              "logprob": -19.875
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -20.5
+            },
+            {
+              "rank": 3,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -25.125
+            },
+            {
+              "rank": 4,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -28.375
+            },
+            {
+              "rank": 5,
+              "token_id": 57155,
+              "token_str": ":I",
+              "logprob": -28.375
+            },
+            {
+              "rank": 6,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -28.5
+            },
+            {
+              "rank": 7,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -29.25
+            },
+            {
+              "rank": 8,
+              "token_id": 1648,
+              "token_str": "):",
+              "logprob": -29.625
+            },
+            {
+              "rank": 9,
+              "token_id": 16976,
+              "token_str": ":.",
+              "logprob": -29.75
+            },
+            {
+              "rank": 10,
+              "token_id": 19288,
+              "token_str": " IC",
+              "logprob": -30.125
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 19288,
+          "token_str": " IC",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 19288,
+              "token_str": " IC",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 11551,
+              "token_str": " IF",
+              "logprob": -4.875
+            },
+            {
+              "rank": 3,
+              "token_id": 12102,
+              "token_str": " IB",
+              "logprob": -6.0
+            },
+            {
+              "rank": 4,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -10.125
+            },
+            {
+              "rank": 5,
+              "token_id": 358,
+              "token_str": " I",
+              "logprob": -10.5
+            },
+            {
+              "rank": 6,
+              "token_id": 3034,
+              "token_str": " ID",
+              "logprob": -10.75
+            },
+            {
+              "rank": 7,
+              "token_id": 40563,
+              "token_str": " ICE",
+              "logprob": -13.25
+            },
+            {
+              "rank": 8,
+              "token_id": 25000,
+              "token_str": " IDC",
+              "logprob": -13.375
+            },
+            {
+              "rank": 9,
+              "token_id": 58232,
+              "token_str": " ICC",
+              "logprob": -13.5
+            },
+            {
+              "rank": 10,
+              "token_id": 16013,
+              "token_str": " FC",
+              "logprob": -13.625
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 30698,
+          "token_str": "VL",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 30698,
+              "token_str": "VL",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": -10.0
+            },
+            {
+              "rank": 3,
+              "token_id": 48504,
+              "token_str": "VML",
+              "logprob": -13.0
+            },
+            {
+              "rank": 4,
+              "token_id": 5594,
+              "token_str": "VAL",
+              "logprob": -14.625
+            },
+            {
+              "rank": 5,
+              "token_id": 2668,
+              "token_str": "ML",
+              "logprob": -15.75
+            },
+            {
+              "rank": 6,
+              "token_id": 2916,
+              "token_str": "PL",
+              "logprob": -16.375
+            },
+            {
+              "rank": 7,
+              "token_id": 11169,
+              "token_str": "VO",
+              "logprob": -16.625
+            },
+            {
+              "rank": 8,
+              "token_id": 18800,
+              "token_str": "VR",
+              "logprob": -16.875
+            },
+            {
+              "rank": 9,
+              "token_id": 60222,
+              "token_str": " VL",
+              "logprob": -16.875
+            },
+            {
+              "rank": 10,
+              "token_id": 61139,
+              "token_str": "WL",
+              "logprob": -17.0
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -19.5
+            },
+            {
+              "rank": 3,
+              "token_id": 27375,
+              "token_str": "XP",
+              "logprob": -22.25
+            },
+            {
+              "rank": 4,
+              "token_id": 56,
+              "token_str": "Y",
+              "logprob": -22.75
+            },
+            {
+              "rank": 5,
+              "token_id": 52821,
+              "token_str": "XR",
+              "logprob": -22.875
+            },
+            {
+              "rank": 6,
+              "token_id": 57,
+              "token_str": "Z",
+              "logprob": -23.875
+            },
+            {
+              "rank": 7,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": -24.0
+            },
+            {
+              "rank": 8,
+              "token_id": 144160,
+              "token_str": "\uff38",
+              "logprob": -24.5
+            },
+            {
+              "rank": 9,
+              "token_id": 6148,
+              "token_str": "XX",
+              "logprob": -25.125
+            },
+            {
+              "rank": 10,
+              "token_id": 45,
+              "token_str": "N",
+              "logprob": -25.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.5
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.5625
+            },
+            {
+              "rank": 4,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -12.875
+            },
+            {
+              "rank": 5,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -14.25
+            },
+            {
+              "rank": 6,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -14.4375
+            },
+            {
+              "rank": 7,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -14.5625
+            },
+            {
+              "rank": 8,
+              "token_id": 83500,
+              "token_str": " Canterbury",
+              "logprob": -15.3125
+            },
+            {
+              "rank": 9,
+              "token_id": 11162,
+              "token_str": " \ufffd",
+              "logprob": -15.8125
+            },
+            {
+              "rank": 10,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -16.0
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865837
+    },
+    {
+      "id": "L2_02",
+      "target_pos": 2,
+      "target_subj": "CIRNX",
+      "target_obj": "OBLVX",
+      "prompt_hash": "sha256:c09ed1973013f59c76f62ac4c1e6e656d446182bb39b362ff598480d5a0465cb",
+      "raw_output": "ANSWER: OBLVX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "OBLVX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 2,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|OBLVX|2",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "C"
+        ],
+        "obj_prefixes": [
+          "O"
+        ],
+        "homogeneous_subj_prefix": true,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -10.25
+            },
+            {
+              "rank": 3,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -11.125
+            },
+            {
+              "rank": 4,
+              "token_id": 16012,
+              "token_str": "ANK",
+              "logprob": -16.75
+            },
+            {
+              "rank": 5,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -16.75
+            },
+            {
+              "rank": 6,
+              "token_id": 12003,
+              "token_str": "ANN",
+              "logprob": -17.0
+            },
+            {
+              "rank": 7,
+              "token_id": 2821,
+              "token_str": "ANT",
+              "logprob": -17.375
+            },
+            {
+              "rank": 8,
+              "token_id": 52428,
+              "token_str": "QUESTION",
+              "logprob": -17.75
+            },
+            {
+              "rank": 9,
+              "token_id": 596,
+              "token_str": "ans",
+              "logprob": -18.25
+            },
+            {
+              "rank": 10,
+              "token_id": 54894,
+              "token_str": "ANO",
+              "logprob": -18.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -11.125
+            },
+            {
+              "rank": 3,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -14.75
+            },
+            {
+              "rank": 4,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -15.25
+            },
+            {
+              "rank": 5,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -15.875
+            },
+            {
+              "rank": 6,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -16.625
+            },
+            {
+              "rank": 7,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -18.25
+            },
+            {
+              "rank": 8,
+              "token_id": 17925,
+              "token_str": "WR",
+              "logprob": -18.5
+            },
+            {
+              "rank": 9,
+              "token_id": 16289,
+              "token_str": "IER",
+              "logprob": -19.25
+            },
+            {
+              "rank": 10,
+              "token_id": 4521,
+              "token_str": "URE",
+              "logprob": -19.625
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -22.125
+            },
+            {
+              "rank": 3,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -28.375
+            },
+            {
+              "rank": 4,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -29.0
+            },
+            {
+              "rank": 5,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -29.0
+            },
+            {
+              "rank": 6,
+              "token_id": 1648,
+              "token_str": "):",
+              "logprob": -29.25
+            },
+            {
+              "rank": 7,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -29.5
+            },
+            {
+              "rank": 8,
+              "token_id": 16976,
+              "token_str": ":.",
+              "logprob": -29.75
+            },
+            {
+              "rank": 9,
+              "token_id": 37457,
+              "token_str": ":NO",
+              "logprob": -30.875
+            },
+            {
+              "rank": 10,
+              "token_id": 23211,
+              "token_str": "_:",
+              "logprob": -32.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 506,
+          "token_str": " O",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 506,
+              "token_str": " O",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 43173,
+              "token_str": " OB",
+              "logprob": -12.625
+            },
+            {
+              "rank": 3,
+              "token_id": 31867,
+              "token_str": " OC",
+              "logprob": -16.125
+            },
+            {
+              "rank": 4,
+              "token_id": 75860,
+              "token_str": " OBS",
+              "logprob": -17.75
+            },
+            {
+              "rank": 5,
+              "token_id": 46,
+              "token_str": "O",
+              "logprob": -17.875
+            },
+            {
+              "rank": 6,
+              "token_id": 88013,
+              "token_str": " OCC",
+              "logprob": -17.875
+            },
+            {
+              "rank": 7,
+              "token_id": 70952,
+              "token_str": " OLED",
+              "logprob": -18.625
+            },
+            {
+              "rank": 8,
+              "token_id": 80577,
+              "token_str": " OCR",
+              "logprob": -19.0
+            },
+            {
+              "rank": 9,
+              "token_id": 97924,
+              "token_str": " OCD",
+              "logprob": -19.0
+            },
+            {
+              "rank": 10,
+              "token_id": 468,
+              "token_str": " E",
+              "logprob": -19.125
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 9389,
+          "token_str": "BL",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 9389,
+              "token_str": "BL",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 34068,
+              "token_str": "LB",
+              "logprob": -13.125
+            },
+            {
+              "rank": 3,
+              "token_id": 33497,
+              "token_str": "BLE",
+              "logprob": -13.875
+            },
+            {
+              "rank": 4,
+              "token_id": 9548,
+              "token_str": "BD",
+              "logprob": -14.25
+            },
+            {
+              "rank": 5,
+              "token_id": 10098,
+              "token_str": "BB",
+              "logprob": -14.75
+            },
+            {
+              "rank": 6,
+              "token_id": 3506,
+              "token_str": "DB",
+              "logprob": -14.875
+            },
+            {
+              "rank": 7,
+              "token_id": 40258,
+              "token_str": "LV",
+              "logprob": -14.875
+            },
+            {
+              "rank": 8,
+              "token_id": 93935,
+              "token_str": "ABL",
+              "logprob": -15.375
+            },
+            {
+              "rank": 9,
+              "token_id": 21233,
+              "token_str": "LBL",
+              "logprob": -15.625
+            },
+            {
+              "rank": 10,
+              "token_id": 3140,
+              "token_str": "CL",
+              "logprob": -16.625
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 53,
+          "token_str": "V",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 71961,
+              "token_str": "VN",
+              "logprob": -19.625
+            },
+            {
+              "rank": 3,
+              "token_id": 3090,
+              "token_str": "IV",
+              "logprob": -20.125
+            },
+            {
+              "rank": 4,
+              "token_id": 36326,
+              "token_str": "NV",
+              "logprob": -21.5
+            },
+            {
+              "rank": 5,
+              "token_id": 12474,
+              "token_str": "VD",
+              "logprob": -22.125
+            },
+            {
+              "rank": 6,
+              "token_id": 36874,
+              "token_str": "VB",
+              "logprob": -22.125
+            },
+            {
+              "rank": 7,
+              "token_id": 78177,
+              "token_str": " VX",
+              "logprob": -22.125
+            },
+            {
+              "rank": 8,
+              "token_id": 20457,
+              "token_str": "VT",
+              "logprob": -22.5
+            },
+            {
+              "rank": 9,
+              "token_id": 52,
+              "token_str": "U",
+              "logprob": -23.125
+            },
+            {
+              "rank": 10,
+              "token_id": 67707,
+              "token_str": "VV",
+              "logprob": -23.375
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 144160,
+              "token_str": "\uff38",
+              "logprob": -18.375
+            },
+            {
+              "rank": 3,
+              "token_id": 52821,
+              "token_str": "XR",
+              "logprob": -19.0
+            },
+            {
+              "rank": 4,
+              "token_id": 37946,
+              "token_str": "XC",
+              "logprob": -19.875
+            },
+            {
+              "rank": 5,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -20.25
+            },
+            {
+              "rank": 6,
+              "token_id": 59272,
+              "token_str": "XB",
+              "logprob": -20.25
+            },
+            {
+              "rank": 7,
+              "token_id": 6148,
+              "token_str": "XX",
+              "logprob": -20.5
+            },
+            {
+              "rank": 8,
+              "token_id": 1599,
+              "token_str": " X",
+              "logprob": -21.375
+            },
+            {
+              "rank": 9,
+              "token_id": 65376,
+              "token_str": "WX",
+              "logprob": -21.75
+            },
+            {
+              "rank": 10,
+              "token_id": 56,
+              "token_str": "Y",
+              "logprob": -22.125
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 7,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.375
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.375
+            },
+            {
+              "rank": 4,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -12.5625
+            },
+            {
+              "rank": 5,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": -12.8125
+            },
+            {
+              "rank": 6,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -14.125
+            },
+            {
+              "rank": 7,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -14.1875
+            },
+            {
+              "rank": 8,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -14.25
+            },
+            {
+              "rank": 9,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -14.9375
+            },
+            {
+              "rank": 10,
+              "token_id": 83500,
+              "token_str": " Canterbury",
+              "logprob": -15.625
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865839
+    },
+    {
+      "id": "L2_03",
+      "target_pos": 2,
+      "target_subj": "HIBNX",
+      "target_obj": "OICVX",
+      "prompt_hash": "sha256:6a9e6d486f383981fc22d955657e4901cef53a229a715aebcdb5a9e2a509cc4f",
+      "raw_output": "ANSWER: OICVX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "OICVX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 2,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|OICVX|2",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "H"
+        ],
+        "obj_prefixes": [
+          "O"
+        ],
+        "homogeneous_subj_prefix": true,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -9.875
+            },
+            {
+              "rank": 3,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -10.0
+            },
+            {
+              "rank": 4,
+              "token_id": 39,
+              "token_str": "H",
+              "logprob": -15.375
+            },
+            {
+              "rank": 5,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -16.125
+            },
+            {
+              "rank": 6,
+              "token_id": 596,
+              "token_str": "ans",
+              "logprob": -16.25
+            },
+            {
+              "rank": 7,
+              "token_id": 52428,
+              "token_str": "QUESTION",
+              "logprob": -16.5
+            },
+            {
+              "rank": 8,
+              "token_id": 16012,
+              "token_str": "ANK",
+              "logprob": -16.625
+            },
+            {
+              "rank": 9,
+              "token_id": 1799,
+              "token_str": "HE",
+              "logprob": -17.375
+            },
+            {
+              "rank": 10,
+              "token_id": 102349,
+              "token_str": "\u7b54\u6848",
+              "logprob": -17.5
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -10.625
+            },
+            {
+              "rank": 3,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -14.875
+            },
+            {
+              "rank": 4,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -14.875
+            },
+            {
+              "rank": 5,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -15.25
+            },
+            {
+              "rank": 6,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -16.375
+            },
+            {
+              "rank": 7,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -18.0
+            },
+            {
+              "rank": 8,
+              "token_id": 16289,
+              "token_str": "IER",
+              "logprob": -18.5
+            },
+            {
+              "rank": 9,
+              "token_id": 17925,
+              "token_str": "WR",
+              "logprob": -18.5
+            },
+            {
+              "rank": 10,
+              "token_id": 3399,
+              "token_str": "ERT",
+              "logprob": -18.875
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -21.0
+            },
+            {
+              "rank": 3,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -23.375
+            },
+            {
+              "rank": 4,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -25.0
+            },
+            {
+              "rank": 5,
+              "token_id": 1648,
+              "token_str": "):",
+              "logprob": -25.625
+            },
+            {
+              "rank": 6,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -26.0
+            },
+            {
+              "rank": 7,
+              "token_id": 5669,
+              "token_str": "]:",
+              "logprob": -27.875
+            },
+            {
+              "rank": 8,
+              "token_id": 16976,
+              "token_str": ":.",
+              "logprob": -28.25
+            },
+            {
+              "rank": 9,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -28.5
+            },
+            {
+              "rank": 10,
+              "token_id": 788,
+              "token_str": "\":",
+              "logprob": -28.5
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 506,
+          "token_str": " O",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 506,
+              "token_str": " O",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 28722,
+              "token_str": " OH",
+              "logprob": -10.0
+            },
+            {
+              "rank": 3,
+              "token_id": 55530,
+              "token_str": " OE",
+              "logprob": -15.0
+            },
+            {
+              "rank": 4,
+              "token_id": 80442,
+              "token_str": " OA",
+              "logprob": -15.125
+            },
+            {
+              "rank": 5,
+              "token_id": 86818,
+              "token_str": " OO",
+              "logprob": -15.125
+            },
+            {
+              "rank": 6,
+              "token_id": 10402,
+              "token_str": " OK",
+              "logprob": -16.625
+            },
+            {
+              "rank": 7,
+              "token_id": 31867,
+              "token_str": " OC",
+              "logprob": -17.5
+            },
+            {
+              "rank": 8,
+              "token_id": 88013,
+              "token_str": " OCC",
+              "logprob": -18.25
+            },
+            {
+              "rank": 9,
+              "token_id": 46,
+              "token_str": "O",
+              "logprob": -19.0
+            },
+            {
+              "rank": 10,
+              "token_id": 220,
+              "token_str": " ",
+              "logprob": -19.5
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 1317,
+          "token_str": "IC",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 1317,
+              "token_str": "IC",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5487,
+              "token_str": "ICE",
+              "logprob": -17.75
+            },
+            {
+              "rank": 3,
+              "token_id": 14805,
+              "token_str": "ICT",
+              "logprob": -18.0
+            },
+            {
+              "rank": 4,
+              "token_id": 7498,
+              "token_str": "EC",
+              "logprob": -18.25
+            },
+            {
+              "rank": 5,
+              "token_id": 11287,
+              "token_str": "VC",
+              "logprob": -18.25
+            },
+            {
+              "rank": 6,
+              "token_id": 4897,
+              "token_str": "BC",
+              "logprob": -18.5
+            },
+            {
+              "rank": 7,
+              "token_id": 40,
+              "token_str": "I",
+              "logprob": -18.75
+            },
+            {
+              "rank": 8,
+              "token_id": 3256,
+              "token_str": "IB",
+              "logprob": -18.75
+            },
+            {
+              "rank": 9,
+              "token_id": 3090,
+              "token_str": "IV",
+              "logprob": -19.375
+            },
+            {
+              "rank": 10,
+              "token_id": 7612,
+              "token_str": "OC",
+              "logprob": -19.375
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 53,
+          "token_str": "V",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 78177,
+              "token_str": " VX",
+              "logprob": -21.125
+            },
+            {
+              "rank": 3,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": -23.75
+            },
+            {
+              "rank": 4,
+              "token_id": 36874,
+              "token_str": "VB",
+              "logprob": -24.875
+            },
+            {
+              "rank": 5,
+              "token_id": 20457,
+              "token_str": "VT",
+              "logprob": -25.25
+            },
+            {
+              "rank": 6,
+              "token_id": 13378,
+              "token_str": "VP",
+              "logprob": -25.625
+            },
+            {
+              "rank": 7,
+              "token_id": 12820,
+              "token_str": "VA",
+              "logprob": -25.75
+            },
+            {
+              "rank": 8,
+              "token_id": 11169,
+              "token_str": "VO",
+              "logprob": -26.0
+            },
+            {
+              "rank": 9,
+              "token_id": 67707,
+              "token_str": "VV",
+              "logprob": -26.125
+            },
+            {
+              "rank": 10,
+              "token_id": 12474,
+              "token_str": "VD",
+              "logprob": -26.375
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 144160,
+              "token_str": "\uff38",
+              "logprob": -19.5
+            },
+            {
+              "rank": 3,
+              "token_id": 52821,
+              "token_str": "XR",
+              "logprob": -20.25
+            },
+            {
+              "rank": 4,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -20.875
+            },
+            {
+              "rank": 5,
+              "token_id": 59272,
+              "token_str": "XB",
+              "logprob": -21.125
+            },
+            {
+              "rank": 6,
+              "token_id": 27375,
+              "token_str": "XP",
+              "logprob": -21.5
+            },
+            {
+              "rank": 7,
+              "token_id": 6148,
+              "token_str": "XX",
+              "logprob": -21.625
+            },
+            {
+              "rank": 8,
+              "token_id": 96022,
+              "token_str": "XObject",
+              "logprob": -21.625
+            },
+            {
+              "rank": 9,
+              "token_id": 37946,
+              "token_str": "XC",
+              "logprob": -22.0
+            },
+            {
+              "rank": 10,
+              "token_id": 39,
+              "token_str": "H",
+              "logprob": -22.125
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 7,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.3125
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.25
+            },
+            {
+              "rank": 4,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": -12.375
+            },
+            {
+              "rank": 5,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -12.5
+            },
+            {
+              "rank": 6,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -14.1875
+            },
+            {
+              "rank": 7,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -14.4375
+            },
+            {
+              "rank": 8,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -14.5625
+            },
+            {
+              "rank": 9,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -15.375
+            },
+            {
+              "rank": 10,
+              "token_id": 83500,
+              "token_str": " Canterbury",
+              "logprob": -16.0
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865839
+    },
+    {
+      "id": "L2_04",
+      "target_pos": 3,
+      "target_subj": "UFBNX",
+      "target_obj": "PCIVX",
+      "prompt_hash": "sha256:0575da63617eb2bf7e815d5924ac3243fb96830aca765d435dd1c3b2ff236f9b",
+      "raw_output": "ANSWER: PCIVX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "PCIVX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 3,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|PCIVX|3",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "U"
+        ],
+        "obj_prefixes": [
+          "P"
+        ],
+        "homogeneous_subj_prefix": true,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -8.25
+            },
+            {
+              "rank": 3,
+              "token_id": 20538,
+              "token_str": "UF",
+              "logprob": -10.125
+            },
+            {
+              "rank": 4,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -10.375
+            },
+            {
+              "rank": 5,
+              "token_id": 47,
+              "token_str": "P",
+              "logprob": -13.125
+            },
+            {
+              "rank": 6,
+              "token_id": 16012,
+              "token_str": "ANK",
+              "logprob": -13.25
+            },
+            {
+              "rank": 7,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -13.375
+            },
+            {
+              "rank": 8,
+              "token_id": 67783,
+              "token_str": "RESP",
+              "logprob": -13.5
+            },
+            {
+              "rank": 9,
+              "token_id": 5459,
+              "token_str": "UC",
+              "logprob": -13.875
+            },
+            {
+              "rank": 10,
+              "token_id": 102349,
+              "token_str": "\u7b54\u6848",
+              "logprob": -13.875
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -10.125
+            },
+            {
+              "rank": 3,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -14.25
+            },
+            {
+              "rank": 4,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -14.5
+            },
+            {
+              "rank": 5,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -15.0
+            },
+            {
+              "rank": 6,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -15.75
+            },
+            {
+              "rank": 7,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -17.25
+            },
+            {
+              "rank": 8,
+              "token_id": 4521,
+              "token_str": "URE",
+              "logprob": -17.875
+            },
+            {
+              "rank": 9,
+              "token_id": 17925,
+              "token_str": "WR",
+              "logprob": -18.0
+            },
+            {
+              "rank": 10,
+              "token_id": 3399,
+              "token_str": "ERT",
+              "logprob": -18.625
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -20.25
+            },
+            {
+              "rank": 3,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -27.125
+            },
+            {
+              "rank": 4,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -29.0
+            },
+            {
+              "rank": 5,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -29.625
+            },
+            {
+              "rank": 6,
+              "token_id": 1648,
+              "token_str": "):",
+              "logprob": -29.75
+            },
+            {
+              "rank": 7,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -30.875
+            },
+            {
+              "rank": 8,
+              "token_id": 16976,
+              "token_str": ":.",
+              "logprob": -31.125
+            },
+            {
+              "rank": 9,
+              "token_id": 5669,
+              "token_str": "]:",
+              "logprob": -31.875
+            },
+            {
+              "rank": 10,
+              "token_id": 23211,
+              "token_str": "_:",
+              "logprob": -32.0
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 6673,
+          "token_str": " PC",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 6673,
+              "token_str": " PC",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 393,
+              "token_str": " P",
+              "logprob": -12.875
+            },
+            {
+              "rank": 3,
+              "token_id": 28415,
+              "token_str": " PF",
+              "logprob": -13.375
+            },
+            {
+              "rank": 4,
+              "token_id": 30513,
+              "token_str": " UC",
+              "logprob": -15.125
+            },
+            {
+              "rank": 5,
+              "token_id": 68592,
+              "token_str": " UF",
+              "logprob": -15.375
+            },
+            {
+              "rank": 6,
+              "token_id": 50077,
+              "token_str": " PCB",
+              "logprob": -15.625
+            },
+            {
+              "rank": 7,
+              "token_id": 13312,
+              "token_str": " pc",
+              "logprob": -16.875
+            },
+            {
+              "rank": 8,
+              "token_id": 27789,
+              "token_str": " PCI",
+              "logprob": -16.875
+            },
+            {
+              "rank": 9,
+              "token_id": 4872,
+              "token_str": "PC",
+              "logprob": -17.125
+            },
+            {
+              "rank": 10,
+              "token_id": 20795,
+              "token_str": " CF",
+              "logprob": -17.125
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 3090,
+          "token_str": "IV",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 3090,
+              "token_str": "IV",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 1317,
+              "token_str": "IC",
+              "logprob": -16.875
+            },
+            {
+              "rank": 3,
+              "token_id": 952,
+              "token_str": "IT",
+              "logprob": -19.375
+            },
+            {
+              "rank": 4,
+              "token_id": 5543,
+              "token_str": "II",
+              "logprob": -19.375
+            },
+            {
+              "rank": 5,
+              "token_id": 344,
+              "token_str": "iv",
+              "logprob": -19.5
+            },
+            {
+              "rank": 6,
+              "token_id": 5396,
+              "token_str": "IX",
+              "logprob": -19.5
+            },
+            {
+              "rank": 7,
+              "token_id": 16824,
+              "token_str": " IV",
+              "logprob": -19.5
+            },
+            {
+              "rank": 8,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": -20.0
+            },
+            {
+              "rank": 9,
+              "token_id": 3256,
+              "token_str": "IB",
+              "logprob": -20.25
+            },
+            {
+              "rank": 10,
+              "token_id": 5863,
+              "token_str": "IA",
+              "logprob": -20.375
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 56,
+              "token_str": "Y",
+              "logprob": -19.375
+            },
+            {
+              "rank": 3,
+              "token_id": 6148,
+              "token_str": "XX",
+              "logprob": -19.375
+            },
+            {
+              "rank": 4,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -19.625
+            },
+            {
+              "rank": 5,
+              "token_id": 45813,
+              "token_str": "RX",
+              "logprob": -20.375
+            },
+            {
+              "rank": 6,
+              "token_id": 27375,
+              "token_str": "XP",
+              "logprob": -20.5
+            },
+            {
+              "rank": 7,
+              "token_id": 52821,
+              "token_str": "XR",
+              "logprob": -20.5
+            },
+            {
+              "rank": 8,
+              "token_id": 67677,
+              "token_str": "XD",
+              "logprob": -21.5
+            },
+            {
+              "rank": 9,
+              "token_id": 59272,
+              "token_str": "XB",
+              "logprob": -22.0
+            },
+            {
+              "rank": 10,
+              "token_id": 144160,
+              "token_str": "\uff38",
+              "logprob": -22.0
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.5
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.5625
+            },
+            {
+              "rank": 4,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -12.8125
+            },
+            {
+              "rank": 5,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -14.625
+            },
+            {
+              "rank": 6,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -15.5
+            },
+            {
+              "rank": 7,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -15.875
+            },
+            {
+              "rank": 8,
+              "token_id": 83500,
+              "token_str": " Canterbury",
+              "logprob": -15.9375
+            },
+            {
+              "rank": 9,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": -16.25
+            },
+            {
+              "rank": 10,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -16.375
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865839
+    },
+    {
+      "id": "L2_05",
+      "target_pos": 3,
+      "target_subj": "EBVNX",
+      "target_obj": "SCIVX",
+      "prompt_hash": "sha256:c57f75febb40a006bb85da14944f26e62a4e7848c4b8eccca7b042495593ce02",
+      "raw_output": "ANSWER: SCIVX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "SCIVX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 3,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|SCIVX|3",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "A",
+          "C",
+          "E",
+          "H",
+          "U"
+        ],
+        "obj_prefixes": [
+          "S"
+        ],
+        "homogeneous_subj_prefix": false,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 8264,
+              "token_str": "EB",
+              "logprob": -6.5
+            },
+            {
+              "rank": 3,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -9.25
+            },
+            {
+              "rank": 4,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -9.5
+            },
+            {
+              "rank": 5,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -13.625
+            },
+            {
+              "rank": 6,
+              "token_id": 102349,
+              "token_str": "\u7b54\u6848",
+              "logprob": -14.125
+            },
+            {
+              "rank": 7,
+              "token_id": 1570,
+              "token_str": "ES",
+              "logprob": -14.25
+            },
+            {
+              "rank": 8,
+              "token_id": 67783,
+              "token_str": "RESP",
+              "logprob": -15.125
+            },
+            {
+              "rank": 9,
+              "token_id": 9197,
+              "token_str": "EP",
+              "logprob": -15.25
+            },
+            {
+              "rank": 10,
+              "token_id": 12003,
+              "token_str": "ANN",
+              "logprob": -15.375
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -9.625
+            },
+            {
+              "rank": 3,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -14.875
+            },
+            {
+              "rank": 4,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -15.625
+            },
+            {
+              "rank": 5,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -15.75
+            },
+            {
+              "rank": 6,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -16.125
+            },
+            {
+              "rank": 7,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -17.125
+            },
+            {
+              "rank": 8,
+              "token_id": 3399,
+              "token_str": "ERT",
+              "logprob": -17.875
+            },
+            {
+              "rank": 9,
+              "token_id": 4521,
+              "token_str": "URE",
+              "logprob": -17.875
+            },
+            {
+              "rank": 10,
+              "token_id": 59329,
+              "token_str": "ERV",
+              "logprob": -17.875
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -20.125
+            },
+            {
+              "rank": 3,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -25.75
+            },
+            {
+              "rank": 4,
+              "token_id": 75369,
+              "token_str": ":S",
+              "logprob": -26.625
+            },
+            {
+              "rank": 5,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -27.875
+            },
+            {
+              "rank": 6,
+              "token_id": 1648,
+              "token_str": "):",
+              "logprob": -28.375
+            },
+            {
+              "rank": 7,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -28.375
+            },
+            {
+              "rank": 8,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -28.875
+            },
+            {
+              "rank": 9,
+              "token_id": 14495,
+              "token_str": ":s",
+              "logprob": -29.125
+            },
+            {
+              "rank": 10,
+              "token_id": 69856,
+              "token_str": ":F",
+              "logprob": -29.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 7531,
+          "token_str": " SC",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 7531,
+              "token_str": " SC",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 23463,
+              "token_str": " SF",
+              "logprob": -5.25
+            },
+            {
+              "rank": 3,
+              "token_id": 20795,
+              "token_str": " CF",
+              "logprob": -11.0
+            },
+            {
+              "rank": 4,
+              "token_id": 16013,
+              "token_str": " FC",
+              "logprob": -12.0
+            },
+            {
+              "rank": 5,
+              "token_id": 328,
+              "token_str": " S",
+              "logprob": -12.125
+            },
+            {
+              "rank": 6,
+              "token_id": 92525,
+              "token_str": " SCN",
+              "logprob": -13.875
+            },
+            {
+              "rank": 7,
+              "token_id": 79299,
+              "token_str": " SCC",
+              "logprob": -14.25
+            },
+            {
+              "rank": 8,
+              "token_id": 25247,
+              "token_str": " SB",
+              "logprob": -14.625
+            },
+            {
+              "rank": 9,
+              "token_id": 68548,
+              "token_str": " SCM",
+              "logprob": -15.0
+            },
+            {
+              "rank": 10,
+              "token_id": 85523,
+              "token_str": "\tSC",
+              "logprob": -15.125
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 3090,
+          "token_str": "IV",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 3090,
+              "token_str": "IV",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 1317,
+              "token_str": "IC",
+              "logprob": -13.5
+            },
+            {
+              "rank": 3,
+              "token_id": 3298,
+              "token_str": "IP",
+              "logprob": -13.75
+            },
+            {
+              "rank": 4,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": -14.5
+            },
+            {
+              "rank": 5,
+              "token_id": 952,
+              "token_str": "IT",
+              "logprob": -15.5
+            },
+            {
+              "rank": 6,
+              "token_id": 5543,
+              "token_str": "II",
+              "logprob": -15.875
+            },
+            {
+              "rank": 7,
+              "token_id": 28561,
+              "token_str": "IK",
+              "logprob": -16.5
+            },
+            {
+              "rank": 8,
+              "token_id": 3256,
+              "token_str": "IB",
+              "logprob": -16.875
+            },
+            {
+              "rank": 9,
+              "token_id": 5396,
+              "token_str": "IX",
+              "logprob": -17.375
+            },
+            {
+              "rank": 10,
+              "token_id": 2773,
+              "token_str": "IF",
+              "logprob": -17.875
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 45,
+              "token_str": "N",
+              "logprob": -17.75
+            },
+            {
+              "rank": 3,
+              "token_id": 43304,
+              "token_str": "NX",
+              "logprob": -18.125
+            },
+            {
+              "rank": 4,
+              "token_id": 56,
+              "token_str": "Y",
+              "logprob": -19.125
+            },
+            {
+              "rank": 5,
+              "token_id": 45813,
+              "token_str": "RX",
+              "logprob": -20.375
+            },
+            {
+              "rank": 6,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -20.5
+            },
+            {
+              "rank": 7,
+              "token_id": 52821,
+              "token_str": "XR",
+              "logprob": -21.375
+            },
+            {
+              "rank": 8,
+              "token_id": 22867,
+              "token_str": "TX",
+              "logprob": -21.625
+            },
+            {
+              "rank": 9,
+              "token_id": 67677,
+              "token_str": "XD",
+              "logprob": -21.875
+            },
+            {
+              "rank": 10,
+              "token_id": 6148,
+              "token_str": "XX",
+              "logprob": -22.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.4375
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.4375
+            },
+            {
+              "rank": 4,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -12.75
+            },
+            {
+              "rank": 5,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -14.3125
+            },
+            {
+              "rank": 6,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -15.0625
+            },
+            {
+              "rank": 7,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -15.5
+            },
+            {
+              "rank": 8,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -16.25
+            },
+            {
+              "rank": 9,
+              "token_id": 83500,
+              "token_str": " Canterbury",
+              "logprob": -16.5
+            },
+            {
+              "rank": 10,
+              "token_id": 1,
+              "token_str": "\"",
+              "logprob": -16.625
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865840
+    },
+    {
+      "id": "L2_06",
+      "target_pos": 3,
+      "target_subj": "HGIVX",
+      "target_obj": "IDBVX",
+      "prompt_hash": "sha256:71208d782e342636d249f4a2f9cee4f04fbb460d67366e3a83eb305ca1e6584b",
+      "raw_output": "ANSWER: IDBVX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "IDBVX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 3,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|IDBVX|3",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "A",
+          "E",
+          "H",
+          "U"
+        ],
+        "obj_prefixes": [
+          "I"
+        ],
+        "homogeneous_subj_prefix": false,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -8.125
+            },
+            {
+              "rank": 3,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -9.5
+            },
+            {
+              "rank": 4,
+              "token_id": 52428,
+              "token_str": "QUESTION",
+              "logprob": -13.5
+            },
+            {
+              "rank": 5,
+              "token_id": 16012,
+              "token_str": "ANK",
+              "logprob": -13.625
+            },
+            {
+              "rank": 6,
+              "token_id": 90111,
+              "token_str": "HG",
+              "logprob": -13.625
+            },
+            {
+              "rank": 7,
+              "token_id": 2821,
+              "token_str": "ANT",
+              "logprob": -14.375
+            },
+            {
+              "rank": 8,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -14.375
+            },
+            {
+              "rank": 9,
+              "token_id": 12003,
+              "token_str": "ANN",
+              "logprob": -14.625
+            },
+            {
+              "rank": 10,
+              "token_id": 1808,
+              "token_str": "AD",
+              "logprob": -14.75
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -10.25
+            },
+            {
+              "rank": 3,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -15.5
+            },
+            {
+              "rank": 4,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -16.0
+            },
+            {
+              "rank": 5,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -16.125
+            },
+            {
+              "rank": 6,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -16.875
+            },
+            {
+              "rank": 7,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -18.125
+            },
+            {
+              "rank": 8,
+              "token_id": 16289,
+              "token_str": "IER",
+              "logprob": -18.875
+            },
+            {
+              "rank": 9,
+              "token_id": 4521,
+              "token_str": "URE",
+              "logprob": -19.0
+            },
+            {
+              "rank": 10,
+              "token_id": 17925,
+              "token_str": "WR",
+              "logprob": -19.0
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -19.375
+            },
+            {
+              "rank": 3,
+              "token_id": 57155,
+              "token_str": ":I",
+              "logprob": -23.125
+            },
+            {
+              "rank": 4,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -23.75
+            },
+            {
+              "rank": 5,
+              "token_id": 39125,
+              "token_str": ":id",
+              "logprob": -23.875
+            },
+            {
+              "rank": 6,
+              "token_id": 3034,
+              "token_str": " ID",
+              "logprob": -26.0
+            },
+            {
+              "rank": 7,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -26.5
+            },
+            {
+              "rank": 8,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -26.625
+            },
+            {
+              "rank": 9,
+              "token_id": 16976,
+              "token_str": ":.",
+              "logprob": -27.125
+            },
+            {
+              "rank": 10,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -27.5
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 3034,
+          "token_str": " ID",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 3034,
+              "token_str": " ID",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 358,
+              "token_str": " I",
+              "logprob": -6.125
+            },
+            {
+              "rank": 3,
+              "token_id": 18160,
+              "token_str": " IE",
+              "logprob": -6.125
+            },
+            {
+              "rank": 4,
+              "token_id": 25000,
+              "token_str": " IDC",
+              "logprob": -6.625
+            },
+            {
+              "rank": 5,
+              "token_id": 27975,
+              "token_str": " IDE",
+              "logprob": -9.125
+            },
+            {
+              "rank": 6,
+              "token_id": 71555,
+              "token_str": " IDF",
+              "logprob": -9.5
+            },
+            {
+              "rank": 7,
+              "token_id": 45311,
+              "token_str": " IH",
+              "logprob": -9.75
+            },
+            {
+              "rank": 8,
+              "token_id": 62121,
+              "token_str": " IID",
+              "logprob": -11.125
+            },
+            {
+              "rank": 9,
+              "token_id": 81455,
+              "token_str": " IDM",
+              "logprob": -11.875
+            },
+            {
+              "rank": 10,
+              "token_id": 95937,
+              "token_str": " IDX",
+              "logprob": -12.25
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 59343,
+          "token_str": "BV",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 59343,
+              "token_str": "BV",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 61971,
+              "token_str": "DV",
+              "logprob": -11.75
+            },
+            {
+              "rank": 3,
+              "token_id": 40100,
+              "token_str": " BV",
+              "logprob": -12.0
+            },
+            {
+              "rank": 4,
+              "token_id": 15594,
+              "token_str": "BN",
+              "logprob": -14.75
+            },
+            {
+              "rank": 5,
+              "token_id": 54929,
+              "token_str": "bv",
+              "logprob": -16.875
+            },
+            {
+              "rank": 6,
+              "token_id": 33,
+              "token_str": "B",
+              "logprob": -17.0
+            },
+            {
+              "rank": 7,
+              "token_id": 39718,
+              "token_str": "GV",
+              "logprob": -17.875
+            },
+            {
+              "rank": 8,
+              "token_id": 19589,
+              "token_str": "CV",
+              "logprob": -18.25
+            },
+            {
+              "rank": 9,
+              "token_id": 19883,
+              "token_str": "BF",
+              "logprob": -18.375
+            },
+            {
+              "rank": 10,
+              "token_id": 53878,
+              "token_str": "BX",
+              "logprob": -18.5
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 144160,
+              "token_str": "\uff38",
+              "logprob": -14.75
+            },
+            {
+              "rank": 3,
+              "token_id": 56,
+              "token_str": "Y",
+              "logprob": -16.75
+            },
+            {
+              "rank": 4,
+              "token_id": 57,
+              "token_str": "Z",
+              "logprob": -18.125
+            },
+            {
+              "rank": 5,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -19.25
+            },
+            {
+              "rank": 6,
+              "token_id": 52821,
+              "token_str": "XR",
+              "logprob": -19.5
+            },
+            {
+              "rank": 7,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": -19.625
+            },
+            {
+              "rank": 8,
+              "token_id": 83114,
+              "token_str": "XI",
+              "logprob": -20.0
+            },
+            {
+              "rank": 9,
+              "token_id": 96022,
+              "token_str": "XObject",
+              "logprob": -20.0
+            },
+            {
+              "rank": 10,
+              "token_id": 67677,
+              "token_str": "XD",
+              "logprob": -20.5
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.5
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.4375
+            },
+            {
+              "rank": 4,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -12.75
+            },
+            {
+              "rank": 5,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -15.1875
+            },
+            {
+              "rank": 6,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -15.6875
+            },
+            {
+              "rank": 7,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -15.6875
+            },
+            {
+              "rank": 8,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -15.875
+            },
+            {
+              "rank": 9,
+              "token_id": 83500,
+              "token_str": " Canterbury",
+              "logprob": -16.5
+            },
+            {
+              "rank": 10,
+              "token_id": 88503,
+              "token_str": " Hurricanes",
+              "logprob": -16.5
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865840
+    },
+    {
+      "id": "L2_07",
+      "target_pos": 4,
+      "target_subj": "UNVBX",
+      "target_obj": "OECVX",
+      "prompt_hash": "sha256:6adef092c0ee59d8e99d179a402cb06d17ac1342a1f8832ceb0fc2f3189dba42",
+      "raw_output": "ANSWER: OECVX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "OECVX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 4,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|OECVX|4",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "A",
+          "C",
+          "E",
+          "H",
+          "U"
+        ],
+        "obj_prefixes": [
+          "O"
+        ],
+        "homogeneous_subj_prefix": false,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 1861,
+              "token_str": "UN",
+              "logprob": -6.75
+            },
+            {
+              "rank": 3,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -8.375
+            },
+            {
+              "rank": 4,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -8.875
+            },
+            {
+              "rank": 5,
+              "token_id": 16012,
+              "token_str": "ANK",
+              "logprob": -12.25
+            },
+            {
+              "rank": 6,
+              "token_id": 2821,
+              "token_str": "ANT",
+              "logprob": -13.875
+            },
+            {
+              "rank": 7,
+              "token_id": 53756,
+              "token_str": "UNCH",
+              "logprob": -13.875
+            },
+            {
+              "rank": 8,
+              "token_id": 52428,
+              "token_str": "QUESTION",
+              "logprob": -14.0
+            },
+            {
+              "rank": 9,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -14.25
+            },
+            {
+              "rank": 10,
+              "token_id": 27819,
+              "token_str": "ANE",
+              "logprob": -15.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -11.125
+            },
+            {
+              "rank": 3,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -15.375
+            },
+            {
+              "rank": 4,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -15.75
+            },
+            {
+              "rank": 5,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -15.875
+            },
+            {
+              "rank": 6,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -16.0
+            },
+            {
+              "rank": 7,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -17.375
+            },
+            {
+              "rank": 8,
+              "token_id": 17925,
+              "token_str": "WR",
+              "logprob": -18.375
+            },
+            {
+              "rank": 9,
+              "token_id": 4521,
+              "token_str": "URE",
+              "logprob": -18.625
+            },
+            {
+              "rank": 10,
+              "token_id": 59329,
+              "token_str": "ERV",
+              "logprob": -19.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -21.75
+            },
+            {
+              "rank": 3,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -27.75
+            },
+            {
+              "rank": 4,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -28.125
+            },
+            {
+              "rank": 5,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -28.875
+            },
+            {
+              "rank": 6,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -29.0
+            },
+            {
+              "rank": 7,
+              "token_id": 1648,
+              "token_str": "):",
+              "logprob": -29.375
+            },
+            {
+              "rank": 8,
+              "token_id": 16976,
+              "token_str": ":.",
+              "logprob": -29.875
+            },
+            {
+              "rank": 9,
+              "token_id": 4820,
+              "token_str": "?:",
+              "logprob": -31.0
+            },
+            {
+              "rank": 10,
+              "token_id": 486,
+              "token_str": "::",
+              "logprob": -31.5
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 506,
+          "token_str": " O",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 506,
+              "token_str": " O",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 55530,
+              "token_str": " OE",
+              "logprob": -7.25
+            },
+            {
+              "rank": 3,
+              "token_id": 3008,
+              "token_str": " OF",
+              "logprob": -7.875
+            },
+            {
+              "rank": 4,
+              "token_id": 31867,
+              "token_str": " OC",
+              "logprob": -11.625
+            },
+            {
+              "rank": 5,
+              "token_id": 80442,
+              "token_str": " OA",
+              "logprob": -11.75
+            },
+            {
+              "rank": 6,
+              "token_id": 88013,
+              "token_str": " OCC",
+              "logprob": -12.875
+            },
+            {
+              "rank": 7,
+              "token_id": 86818,
+              "token_str": " OO",
+              "logprob": -14.125
+            },
+            {
+              "rank": 8,
+              "token_id": 43173,
+              "token_str": " OB",
+              "logprob": -14.25
+            },
+            {
+              "rank": 9,
+              "token_id": 40762,
+              "token_str": " OEM",
+              "logprob": -14.875
+            },
+            {
+              "rank": 10,
+              "token_id": 97924,
+              "token_str": " OCD",
+              "logprob": -14.875
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 7498,
+          "token_str": "EC",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 7498,
+              "token_str": "EC",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 8264,
+              "token_str": "EB",
+              "logprob": -11.75
+            },
+            {
+              "rank": 3,
+              "token_id": 4897,
+              "token_str": "BC",
+              "logprob": -16.875
+            },
+            {
+              "rank": 4,
+              "token_id": 2104,
+              "token_str": "CE",
+              "logprob": -17.125
+            },
+            {
+              "rank": 5,
+              "token_id": 50730,
+              "token_str": "Ec",
+              "logprob": -17.75
+            },
+            {
+              "rank": 6,
+              "token_id": 757,
+              "token_str": "ec",
+              "logprob": -18.25
+            },
+            {
+              "rank": 7,
+              "token_id": 14884,
+              "token_str": "EF",
+              "logprob": -18.5
+            },
+            {
+              "rank": 8,
+              "token_id": 5935,
+              "token_str": "ECT",
+              "logprob": -19.25
+            },
+            {
+              "rank": 9,
+              "token_id": 12979,
+              "token_str": "CB",
+              "logprob": -19.25
+            },
+            {
+              "rank": 10,
+              "token_id": 46010,
+              "token_str": "EV",
+              "logprob": -19.625
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 53,
+          "token_str": "V",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 36874,
+              "token_str": "VB",
+              "logprob": -15.75
+            },
+            {
+              "rank": 3,
+              "token_id": 71961,
+              "token_str": "VN",
+              "logprob": -15.75
+            },
+            {
+              "rank": 4,
+              "token_id": 36326,
+              "token_str": "NV",
+              "logprob": -16.5
+            },
+            {
+              "rank": 5,
+              "token_id": 67707,
+              "token_str": "VV",
+              "logprob": -16.625
+            },
+            {
+              "rank": 6,
+              "token_id": 78177,
+              "token_str": " VX",
+              "logprob": -17.0
+            },
+            {
+              "rank": 7,
+              "token_id": 52780,
+              "token_str": "VK",
+              "logprob": -18.625
+            },
+            {
+              "rank": 8,
+              "token_id": 12474,
+              "token_str": "VD",
+              "logprob": -19.125
+            },
+            {
+              "rank": 9,
+              "token_id": 13378,
+              "token_str": "VP",
+              "logprob": -19.125
+            },
+            {
+              "rank": 10,
+              "token_id": 11287,
+              "token_str": "VC",
+              "logprob": -19.625
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 144160,
+              "token_str": "\uff38",
+              "logprob": -14.125
+            },
+            {
+              "rank": 3,
+              "token_id": 96022,
+              "token_str": "XObject",
+              "logprob": -16.25
+            },
+            {
+              "rank": 4,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -16.375
+            },
+            {
+              "rank": 5,
+              "token_id": 56,
+              "token_str": "Y",
+              "logprob": -18.375
+            },
+            {
+              "rank": 6,
+              "token_id": 59272,
+              "token_str": "XB",
+              "logprob": -18.75
+            },
+            {
+              "rank": 7,
+              "token_id": 83114,
+              "token_str": "XI",
+              "logprob": -18.75
+            },
+            {
+              "rank": 8,
+              "token_id": 27375,
+              "token_str": "XP",
+              "logprob": -19.0
+            },
+            {
+              "rank": 9,
+              "token_id": 1599,
+              "token_str": " X",
+              "logprob": -19.125
+            },
+            {
+              "rank": 10,
+              "token_id": 67677,
+              "token_str": "XD",
+              "logprob": -19.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 7,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.4375
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.5
+            },
+            {
+              "rank": 4,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -12.8125
+            },
+            {
+              "rank": 5,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -14.25
+            },
+            {
+              "rank": 6,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -15.1875
+            },
+            {
+              "rank": 7,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -15.6875
+            },
+            {
+              "rank": 8,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -16.125
+            },
+            {
+              "rank": 9,
+              "token_id": 20378,
+              "token_str": "@RequestMapping",
+              "logprob": -16.25
+            },
+            {
+              "rank": 10,
+              "token_id": 11162,
+              "token_str": " \ufffd",
+              "logprob": -16.5
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865840
+    },
+    {
+      "id": "L2_08",
+      "target_pos": 4,
+      "target_subj": "ACNLX",
+      "target_obj": "PJBVX",
+      "prompt_hash": "sha256:386976e91766fecdeca8b432ccb2833ece6a2287282c558f1c218cf1621b1b40",
+      "raw_output": "ANSWER: PJBVX",
+      "scaffold_class": "SCAFFOLD_PRESENT",
+      "format_class": "FORMAT_PASS",
+      "content_class": "RETURNED_TARGET_OBJ",
+      "returned_token": "PJBVX",
+      "returned_token_role": "TARGET_OBJ",
+      "returned_fact_position": 4,
+      "same_error_identity_key": "RETURNED_TARGET_OBJ|PJBVX|4",
+      "is_numeric_ooc": false,
+      "is_correct": true,
+      "diagnostic": {
+        "subj_prefixes": [
+          "A",
+          "C",
+          "E",
+          "H"
+        ],
+        "obj_prefixes": [
+          "P"
+        ],
+        "homogeneous_subj_prefix": false,
+        "homogeneous_obj_prefix": true
+      },
+      "top_k_log": [
+        {
+          "response_pos": 0,
+          "token_id": 11692,
+          "token_str": "ANS",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 11692,
+              "token_str": "ANS",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 1093,
+              "token_str": "AN",
+              "logprob": -8.875
+            },
+            {
+              "rank": 3,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -9.5
+            },
+            {
+              "rank": 4,
+              "token_id": 16012,
+              "token_str": "ANK",
+              "logprob": -12.375
+            },
+            {
+              "rank": 5,
+              "token_id": 2821,
+              "token_str": "ANT",
+              "logprob": -13.5
+            },
+            {
+              "rank": 6,
+              "token_id": 1706,
+              "token_str": "AC",
+              "logprob": -14.5
+            },
+            {
+              "rank": 7,
+              "token_id": 41933,
+              "token_str": "ANCH",
+              "logprob": -14.75
+            },
+            {
+              "rank": 8,
+              "token_id": 16141,
+              "token_str": "Answer",
+              "logprob": -14.875
+            },
+            {
+              "rank": 9,
+              "token_id": 67783,
+              "token_str": "RESP",
+              "logprob": -14.875
+            },
+            {
+              "rank": 10,
+              "token_id": 12003,
+              "token_str": "ANN",
+              "logprob": -15.25
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 1,
+          "token_id": 39351,
+          "token_str": "WER",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 39351,
+              "token_str": "WER",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 640,
+              "token_str": "ER",
+              "logprob": -10.375
+            },
+            {
+              "rank": 3,
+              "token_id": 6566,
+              "token_str": "wer",
+              "logprob": -14.875
+            },
+            {
+              "rank": 4,
+              "token_id": 3559,
+              "token_str": "swer",
+              "logprob": -15.375
+            },
+            {
+              "rank": 5,
+              "token_id": 54,
+              "token_str": "W",
+              "logprob": -15.875
+            },
+            {
+              "rank": 6,
+              "token_id": 91992,
+              "token_str": "Wer",
+              "logprob": -15.875
+            },
+            {
+              "rank": 7,
+              "token_id": 45458,
+              "token_str": "WAR",
+              "logprob": -17.25
+            },
+            {
+              "rank": 8,
+              "token_id": 17925,
+              "token_str": "WR",
+              "logprob": -17.625
+            },
+            {
+              "rank": 9,
+              "token_id": 59329,
+              "token_str": "ERV",
+              "logprob": -18.5
+            },
+            {
+              "rank": 10,
+              "token_id": 4521,
+              "token_str": "URE",
+              "logprob": -18.75
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 2,
+          "token_id": 25,
+          "token_str": ":",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 25,
+              "token_str": ":",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 5122,
+              "token_str": "\uff1a",
+              "logprob": -19.75
+            },
+            {
+              "rank": 3,
+              "token_id": 18469,
+              "token_str": ".:",
+              "logprob": -25.625
+            },
+            {
+              "rank": 4,
+              "token_id": 62546,
+              "token_str": "$:",
+              "logprob": -26.0
+            },
+            {
+              "rank": 5,
+              "token_id": 92411,
+              "token_str": ":P",
+              "logprob": -26.5
+            },
+            {
+              "rank": 6,
+              "token_id": 16976,
+              "token_str": ":.",
+              "logprob": -28.875
+            },
+            {
+              "rank": 7,
+              "token_id": 1648,
+              "token_str": "):",
+              "logprob": -29.125
+            },
+            {
+              "rank": 8,
+              "token_id": 510,
+              "token_str": ":\n",
+              "logprob": -29.375
+            },
+            {
+              "rank": 9,
+              "token_id": 35575,
+              "token_str": "!:",
+              "logprob": -29.5
+            },
+            {
+              "rank": 10,
+              "token_id": 788,
+              "token_str": "\":",
+              "logprob": -30.625
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 3,
+          "token_id": 393,
+          "token_str": " P",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 393,
+              "token_str": " P",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 12878,
+              "token_str": " PA",
+              "logprob": -14.0
+            },
+            {
+              "rank": 3,
+              "token_id": 96704,
+              "token_str": " ANSW",
+              "logprob": -14.0
+            },
+            {
+              "rank": 4,
+              "token_id": 30934,
+              "token_str": " PB",
+              "logprob": -14.125
+            },
+            {
+              "rank": 5,
+              "token_id": 24826,
+              "token_str": " PK",
+              "logprob": -16.0
+            },
+            {
+              "rank": 6,
+              "token_id": 64980,
+              "token_str": " PJ",
+              "logprob": -16.75
+            },
+            {
+              "rank": 7,
+              "token_id": 72281,
+              "token_str": " PAN",
+              "logprob": -16.875
+            },
+            {
+              "rank": 8,
+              "token_id": 281,
+              "token_str": " p",
+              "logprob": -17.25
+            },
+            {
+              "rank": 9,
+              "token_id": 39864,
+              "token_str": " PAC",
+              "logprob": -17.875
+            },
+            {
+              "rank": 10,
+              "token_id": 61717,
+              "token_str": " PQ",
+              "logprob": -18.0
+            }
+          ],
+          "is_decision_token": true
+        },
+        {
+          "response_pos": 4,
+          "token_id": 46107,
+          "token_str": "JB",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 46107,
+              "token_str": "JB",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 76279,
+              "token_str": " JB",
+              "logprob": -11.25
+            },
+            {
+              "rank": 3,
+              "token_id": 14978,
+              "token_str": "BJ",
+              "logprob": -13.0
+            },
+            {
+              "rank": 4,
+              "token_id": 8264,
+              "token_str": "EB",
+              "logprob": -15.875
+            },
+            {
+              "rank": 5,
+              "token_id": 74879,
+              "token_str": "JOB",
+              "logprob": -16.125
+            },
+            {
+              "rank": 6,
+              "token_id": 38978,
+              "token_str": "jb",
+              "logprob": -16.5
+            },
+            {
+              "rank": 7,
+              "token_id": 58367,
+              "token_str": "JC",
+              "logprob": -17.0
+            },
+            {
+              "rank": 8,
+              "token_id": 12545,
+              "token_str": "JS",
+              "logprob": -17.625
+            },
+            {
+              "rank": 9,
+              "token_id": 36874,
+              "token_str": "VB",
+              "logprob": -17.625
+            },
+            {
+              "rank": 10,
+              "token_id": 3506,
+              "token_str": "DB",
+              "logprob": -18.0
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 5,
+          "token_id": 53,
+          "token_str": "V",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 53,
+              "token_str": "V",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 67707,
+              "token_str": "VV",
+              "logprob": -19.125
+            },
+            {
+              "rank": 3,
+              "token_id": 36874,
+              "token_str": "VB",
+              "logprob": -20.875
+            },
+            {
+              "rank": 4,
+              "token_id": 52780,
+              "token_str": "VK",
+              "logprob": -21.25
+            },
+            {
+              "rank": 5,
+              "token_id": 12820,
+              "token_str": "VA",
+              "logprob": -22.625
+            },
+            {
+              "rank": 6,
+              "token_id": 78196,
+              "token_str": "HV",
+              "logprob": -22.875
+            },
+            {
+              "rank": 7,
+              "token_id": 82707,
+              "token_str": "KV",
+              "logprob": -22.875
+            },
+            {
+              "rank": 8,
+              "token_id": 11169,
+              "token_str": "VO",
+              "logprob": -23.125
+            },
+            {
+              "rank": 9,
+              "token_id": 11287,
+              "token_str": "VC",
+              "logprob": -23.75
+            },
+            {
+              "rank": 10,
+              "token_id": 12474,
+              "token_str": "VD",
+              "logprob": -23.75
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 6,
+          "token_id": 55,
+          "token_str": "X",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 55,
+              "token_str": "X",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 144160,
+              "token_str": "\uff38",
+              "logprob": -14.375
+            },
+            {
+              "rank": 3,
+              "token_id": 87,
+              "token_str": "x",
+              "logprob": -18.25
+            },
+            {
+              "rank": 4,
+              "token_id": 37946,
+              "token_str": "XC",
+              "logprob": -18.875
+            },
+            {
+              "rank": 5,
+              "token_id": 27375,
+              "token_str": "XP",
+              "logprob": -19.375
+            },
+            {
+              "rank": 6,
+              "token_id": 1599,
+              "token_str": " X",
+              "logprob": -19.5
+            },
+            {
+              "rank": 7,
+              "token_id": 96022,
+              "token_str": "XObject",
+              "logprob": -19.75
+            },
+            {
+              "rank": 8,
+              "token_id": 52821,
+              "token_str": "XR",
+              "logprob": -19.875
+            },
+            {
+              "rank": 9,
+              "token_id": 56,
+              "token_str": "Y",
+              "logprob": -20.0
+            },
+            {
+              "rank": 10,
+              "token_id": 83114,
+              "token_str": "XI",
+              "logprob": -20.0
+            }
+          ],
+          "is_decision_token": false
+        },
+        {
+          "response_pos": 7,
+          "token_id": 151645,
+          "token_str": "<|im_end|>",
+          "top_k": [
+            {
+              "rank": 1,
+              "token_id": 151645,
+              "token_str": "<|im_end|>",
+              "logprob": 0.0
+            },
+            {
+              "rank": 2,
+              "token_id": 151644,
+              "token_str": "<|im_start|>",
+              "logprob": -10.4375
+            },
+            {
+              "rank": 3,
+              "token_id": 151657,
+              "token_str": "<tool_call>",
+              "logprob": -11.6875
+            },
+            {
+              "rank": 4,
+              "token_id": 151658,
+              "token_str": "</tool_call>",
+              "logprob": -13.0
+            },
+            {
+              "rank": 5,
+              "token_id": 30543,
+              "token_str": "\ufe0f",
+              "logprob": -14.9375
+            },
+            {
+              "rank": 6,
+              "token_id": 77616,
+              "token_str": "eddar",
+              "logprob": -15.375
+            },
+            {
+              "rank": 7,
+              "token_id": 83500,
+              "token_str": " Canterbury",
+              "logprob": -15.75
+            },
+            {
+              "rank": 8,
+              "token_id": 13,
+              "token_str": ".",
+              "logprob": -15.875
+            },
+            {
+              "rank": 9,
+              "token_id": 72291,
+              "token_str": "\u00e9ny",
+              "logprob": -16.5
+            },
+            {
+              "rank": 10,
+              "token_id": 11162,
+              "token_str": " \ufffd",
+              "logprob": -16.625
+            }
+          ],
+          "is_decision_token": false
+        }
+      ],
+      "timestamp": 1780865841
+    }
+  ]
+}

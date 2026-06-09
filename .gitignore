@@ -1,0 +1,29 @@
+# Model weights — do not commit
+*.safetensors
+
+# Large tokenizer files in quantized model directories
+Qwen2.5-*-mlx-*/tokenizer.json
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor artifacts
+*.swp
+*.swo
+*~

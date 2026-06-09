@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "calib": "code",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "baseline_bits": 16,
+    "rungs": {},
+    "robust_wrong_flags": [],
+    "component_competence": {}
+  },
+  "raw": {
+    "P01": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "'before, delivery'."
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 1.0,
+          "output": "During the day, Maria did the following three main things:\n\n1. Opened the shop at 9am.\n2. Received a delivery at 10am.\n3. Restocked the shelves using the delivery before lunch at 11am."
+        }
+      },
+      "counterexample": {
+        "16": {
+          "score": 1.0,
+          "output": "After"
+        }
+      },
+      "components": {}
+    },
+    "P02": {
+      "narrow": {
+        "16": {
+          "score": 0.0,
+          "output": "ANSWER: 102"
+        }
+      },
+      "broad": {
+        "16": {
+          "score": 0.6666666666666666,
+          "output": "To evaluate the expression \\((a*b) + (c-d) - (e*f)\\), you would follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)). First, you would perform the operations inside the parentheses: calculate \\(a*b\\), \\(c-d\\), and \\(e*f\\). Then, you would perform the addition and subtraction from left to right, resulting in \\((a*b) + (c-d) - (e*f)\\)."
+        }
+      },
+      "counterexample": {
+        "16": {
+          "score": 1.0,
+          "output": "ANSWER: 14"
+        }
+      },
+      "components": {}
+    }
+  }
+}

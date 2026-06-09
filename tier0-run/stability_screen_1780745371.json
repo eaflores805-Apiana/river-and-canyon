@@ -1,0 +1,957 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tasks": "tasks_exp2",
+  "results": {
+    "FA1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: File K"
+      },
+      "component_checks": [
+        {
+          "hop": "mira_card",
+          "score": 1.0,
+          "output": "ANSWER: Card 7"
+        },
+        {
+          "hop": "card_gate",
+          "score": 1.0,
+          "output": "ANSWER: Gate C"
+        },
+        {
+          "hop": "gate_room",
+          "score": 1.0,
+          "output": "ANSWER: Room 4"
+        },
+        {
+          "hop": "room_box",
+          "score": 1.0,
+          "output": "ANSWER: amber box"
+        },
+        {
+          "hop": "box_file",
+          "score": 1.0,
+          "output": "ANSWER: File K"
+        },
+        {
+          "hop": "file_status",
+          "score": 1.0,
+          "output": "ANSWER: APPROVED"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FA2": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: <status>INACTIVE"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: INACTIVE"
+      },
+      "broad_original": {
+        "score": 0.0,
+        "output": "ANSWER: The jade block contains Record 5."
+      },
+      "component_checks": [
+        {
+          "hop": "dex_pass",
+          "score": 1.0,
+          "output": "ANSWER: Pass 4"
+        },
+        {
+          "hop": "pass_bay",
+          "score": 1.0,
+          "output": "ANSWER: Bay 9"
+        },
+        {
+          "hop": "bay_shelf",
+          "score": 1.0,
+          "output": "ANSWER: Shelf 2"
+        },
+        {
+          "hop": "shelf_block",
+          "score": 0.0,
+          "output": "ANSWER: Shelf 2 holds the jade block."
+        },
+        {
+          "hop": "block_record",
+          "score": 0.0,
+          "output": "ANSWER: The jade block contains Record 5."
+        },
+        {
+          "hop": "record_status",
+          "score": 1.0,
+          "output": "ANSWER: ACTIVE"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "FA3": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: <status>UNKNOWN"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: PENDING"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Form 6"
+      },
+      "component_checks": [
+        {
+          "hop": "suki_tag",
+          "score": 1.0,
+          "output": "ANSWER: Tag A"
+        },
+        {
+          "hop": "tag_sector",
+          "score": 1.0,
+          "output": "ANSWER: Sector 7"
+        },
+        {
+          "hop": "sector_cabinet",
+          "score": 0.0,
+          "output": "ANSWER: cabinet"
+        },
+        {
+          "hop": "cabinet_tray",
+          "score": 1.0,
+          "output": "ANSWER: silver tray"
+        },
+        {
+          "hop": "tray_form",
+          "score": 1.0,
+          "output": "ANSWER: Form 6"
+        },
+        {
+          "hop": "form_status",
+          "score": 1.0,
+          "output": "ANSWER: PENDING"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "FA4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Log 3"
+      },
+      "component_checks": [
+        {
+          "hop": "vance_fob",
+          "score": 1.0,
+          "output": "ANSWER: Fob 12"
+        },
+        {
+          "hop": "fob_tunnel",
+          "score": 1.0,
+          "output": "ANSWER: Tunnel B"
+        },
+        {
+          "hop": "tunnel_alcove",
+          "score": 1.0,
+          "output": "ANSWER: alcove 5"
+        },
+        {
+          "hop": "alcove_drawer",
+          "score": 1.0,
+          "output": "ANSWER: obsidian drawer"
+        },
+        {
+          "hop": "drawer_log",
+          "score": 1.0,
+          "output": "ANSWER: Log 3"
+        },
+        {
+          "hop": "log_status",
+          "score": 1.0,
+          "output": "ANSWER: CLEAR"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FB1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: File K"
+      },
+      "component_checks": [
+        {
+          "hop": "mira_card",
+          "score": 1.0,
+          "output": "ANSWER: Card 7"
+        },
+        {
+          "hop": "card_gate",
+          "score": 1.0,
+          "output": "ANSWER: Gate C"
+        },
+        {
+          "hop": "gate_room",
+          "score": 1.0,
+          "output": "ANSWER: Room 4"
+        },
+        {
+          "hop": "room_box",
+          "score": 1.0,
+          "output": "ANSWER: amber box"
+        },
+        {
+          "hop": "box_file",
+          "score": 1.0,
+          "output": "ANSWER: File K"
+        },
+        {
+          "hop": "file_status",
+          "score": 1.0,
+          "output": "ANSWER: APPROVED"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FB2": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: <ACTIVE>"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: INACTIVE"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Record 5"
+      },
+      "component_checks": [
+        {
+          "hop": "dex_pass",
+          "score": 1.0,
+          "output": "ANSWER: Pass 4"
+        },
+        {
+          "hop": "pass_bay",
+          "score": 1.0,
+          "output": "ANSWER: Bay 9"
+        },
+        {
+          "hop": "bay_shelf",
+          "score": 1.0,
+          "output": "ANSWER: Shelf 2"
+        },
+        {
+          "hop": "shelf_block",
+          "score": 0.0,
+          "output": "ANSWER: Shelf 2 holds the jade block."
+        },
+        {
+          "hop": "block_record",
+          "score": 1.0,
+          "output": "ANSWER: Record 5"
+        },
+        {
+          "hop": "record_status",
+          "score": 1.0,
+          "output": "ANSWER: ACTIVE"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "FB3": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: PENDING"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: PENDING"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Form 6"
+      },
+      "component_checks": [
+        {
+          "hop": "suki_tag",
+          "score": 1.0,
+          "output": "ANSWER: Tag A"
+        },
+        {
+          "hop": "tag_sector",
+          "score": 1.0,
+          "output": "ANSWER: Sector 7"
+        },
+        {
+          "hop": "sector_cabinet",
+          "score": 0.0,
+          "output": "ANSWER: cabinet"
+        },
+        {
+          "hop": "cabinet_tray",
+          "score": 1.0,
+          "output": "ANSWER: silver tray"
+        },
+        {
+          "hop": "tray_form",
+          "score": 1.0,
+          "output": "ANSWER: Form 6"
+        },
+        {
+          "hop": "form_status",
+          "score": 1.0,
+          "output": "ANSWER: PENDING"
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "FB4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Log 3"
+      },
+      "component_checks": [
+        {
+          "hop": "vance_fob",
+          "score": 1.0,
+          "output": "ANSWER: Fob 12"
+        },
+        {
+          "hop": "fob_tunnel",
+          "score": 1.0,
+          "output": "ANSWER: Tunnel B"
+        },
+        {
+          "hop": "tunnel_alcove",
+          "score": 1.0,
+          "output": "ANSWER: Alcove 5"
+        },
+        {
+          "hop": "alcove_drawer",
+          "score": 1.0,
+          "output": "ANSWER: obsidian drawer"
+        },
+        {
+          "hop": "drawer_log",
+          "score": 1.0,
+          "output": "ANSWER: Log 3"
+        },
+        {
+          "hop": "log_status",
+          "score": 1.0,
+          "output": "ANSWER: CLEAR"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FC1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CYAN"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CYAN"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Panel B"
+      },
+      "component_checks": [
+        {
+          "hop": "nalo_key",
+          "score": 1.0,
+          "output": "ANSWER: red"
+        },
+        {
+          "hop": "red_key_vault",
+          "score": 1.0,
+          "output": "ANSWER: Vault 3"
+        },
+        {
+          "hop": "vault3_token",
+          "score": 1.0,
+          "output": "ANSWER: silver token"
+        },
+        {
+          "hop": "silver_token_panel",
+          "score": 1.0,
+          "output": "ANSWER: Panel B"
+        },
+        {
+          "hop": "panelB_door",
+          "score": 1.0,
+          "output": "ANSWER: Door 6"
+        },
+        {
+          "hop": "door6_lab",
+          "score": 1.0,
+          "output": "ANSWER: Lab M"
+        },
+        {
+          "hop": "labM_designation",
+          "score": 1.0,
+          "output": "ANSWER: CYAN"
+        },
+        {
+          "hop": "kira_key",
+          "score": 1.0,
+          "output": "ANSWER: blue"
+        },
+        {
+          "hop": "labQ_designation",
+          "score": 1.0,
+          "output": "ANSWER: DELTA"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FC2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: NOVA"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: NOVA"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Zone 2"
+      },
+      "component_checks": [
+        {
+          "hop": "zara_tag",
+          "score": 1.0,
+          "output": "ANSWER: bronze"
+        },
+        {
+          "hop": "bronze_tag_hub",
+          "score": 1.0,
+          "output": "ANSWER: Hub 5"
+        },
+        {
+          "hop": "hub5_zone",
+          "score": 1.0,
+          "output": "ANSWER: Zone 2"
+        },
+        {
+          "hop": "zone2_module",
+          "score": 0.0,
+          "output": "ANSWER: module"
+        },
+        {
+          "hop": "alpha_module_post",
+          "score": 1.0,
+          "output": "ANSWER: Post J"
+        },
+        {
+          "hop": "postJ_bay",
+          "score": 1.0,
+          "output": "ANSWER: Bay R"
+        },
+        {
+          "hop": "bayR_designation",
+          "score": 1.0,
+          "output": "ANSWER: NOVA"
+        },
+        {
+          "hop": "pell_tag",
+          "score": 1.0,
+          "output": "ANSWER: iron"
+        },
+        {
+          "hop": "bayW_designation",
+          "score": 1.0,
+          "output": "ANSWER: OMEGA"
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "FC3": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: IRON"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: IRON"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: white chest"
+      },
+      "component_checks": [
+        {
+          "hop": "tomas_pass",
+          "score": 1.0,
+          "output": "ANSWER: amber pass"
+        },
+        {
+          "hop": "amber_pass_lock",
+          "score": 1.0,
+          "output": "ANSWER: Lock 4"
+        },
+        {
+          "hop": "lock4_corridor",
+          "score": 1.0,
+          "output": "ANSWER: Corridor 7"
+        },
+        {
+          "hop": "corridor7_room",
+          "score": 1.0,
+          "output": "ANSWER: Room 9"
+        },
+        {
+          "hop": "room9_chest",
+          "score": 1.0,
+          "output": "ANSWER: white chest"
+        },
+        {
+          "hop": "white_chest_file",
+          "score": 1.0,
+          "output": "ANSWER: File M"
+        },
+        {
+          "hop": "fileM_designation",
+          "score": 1.0,
+          "output": "ANSWER: IRON"
+        },
+        {
+          "hop": "revi_pass",
+          "score": 0.0,
+          "output": "ANSWER: jade"
+        },
+        {
+          "hop": "fileT_designation",
+          "score": 1.0,
+          "output": "ANSWER: COPPER"
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "FC4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: PRIME"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: PRIME"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: ruby gem"
+      },
+      "component_checks": [
+        {
+          "hop": "cael_disc",
+          "score": 1.0,
+          "output": "ANSWER: crystal disc"
+        },
+        {
+          "hop": "crystal_disc_slot",
+          "score": 1.0,
+          "output": "ANSWER: Slot 6"
+        },
+        {
+          "hop": "slot6_chamber",
+          "score": 1.0,
+          "output": "ANSWER: Chamber A"
+        },
+        {
+          "hop": "chamberA_gem",
+          "score": 1.0,
+          "output": "ANSWER: ruby gem"
+        },
+        {
+          "hop": "ruby_gem_pedestal",
+          "score": 1.0,
+          "output": "ANSWER: Pedestal 3"
+        },
+        {
+          "hop": "pedestal3_unit",
+          "score": 1.0,
+          "output": "ANSWER: 9"
+        },
+        {
+          "hop": "unit9_designation",
+          "score": 1.0,
+          "output": "ANSWER: PRIME"
+        },
+        {
+          "hop": "lyra_disc",
+          "score": 1.0,
+          "output": "ANSWER: obsidian"
+        },
+        {
+          "hop": "unit4_designation",
+          "score": 1.0,
+          "output": "ANSWER: FLARE"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FD1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: URGENT"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: URGENT"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Team Delta"
+      },
+      "component_checks": [
+        {
+          "hop": "hira_route",
+          "score": 1.0,
+          "output": "ANSWER: Route 12"
+        },
+        {
+          "hop": "route12_dock",
+          "score": 1.0,
+          "output": "ANSWER: Dock F"
+        },
+        {
+          "hop": "dockF_crate",
+          "score": 1.0,
+          "output": "ANSWER: crate"
+        },
+        {
+          "hop": "crate_tool",
+          "score": 1.0,
+          "output": "ANSWER: Tool 9"
+        },
+        {
+          "hop": "tool9_team",
+          "score": 1.0,
+          "output": "ANSWER: Team Delta"
+        },
+        {
+          "hop": "teamDelta_station",
+          "score": 1.0,
+          "output": "ANSWER: Station 3"
+        },
+        {
+          "hop": "station3_priority",
+          "score": 1.0,
+          "output": "ANSWER: URGENT"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FD2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAN"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAN"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Lab Epsilon"
+      },
+      "component_checks": [
+        {
+          "hop": "sable_project",
+          "score": 1.0,
+          "output": "ANSWER: Project 44"
+        },
+        {
+          "hop": "project44_module",
+          "score": 1.0,
+          "output": "ANSWER: Module 7"
+        },
+        {
+          "hop": "module7_lab",
+          "score": 1.0,
+          "output": "ANSWER: Lab Epsilon"
+        },
+        {
+          "hop": "labEpsilon_division",
+          "score": 1.0,
+          "output": "ANSWER: Division 3"
+        },
+        {
+          "hop": "division3_clearance",
+          "score": 1.0,
+          "output": "ANSWER: CLEAN"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FD3": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: OFF"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: ON"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Switch 2"
+      },
+      "component_checks": [
+        {
+          "hop": "venn_line",
+          "score": 1.0,
+          "output": "ANSWER: Line 5"
+        },
+        {
+          "hop": "line5_node",
+          "score": 1.0,
+          "output": "ANSWER: Node K"
+        },
+        {
+          "hop": "nodeK_switch",
+          "score": 1.0,
+          "output": "ANSWER: Switch 2"
+        },
+        {
+          "hop": "switch2_circuit",
+          "score": 1.0,
+          "output": "ANSWER: Circuit 8"
+        },
+        {
+          "hop": "circuit8_status",
+          "score": 1.0,
+          "output": "ANSWER: ON"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "FD4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: RED"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: RED"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: Junction 9"
+      },
+      "component_checks": [
+        {
+          "hop": "maya_path",
+          "score": 1.0,
+          "output": "ANSWER: Path 3"
+        },
+        {
+          "hop": "path3_junction",
+          "score": 1.0,
+          "output": "ANSWER: Junction 9"
+        },
+        {
+          "hop": "junction9_tower",
+          "score": 1.0,
+          "output": "ANSWER: Signal Tower 1"
+        },
+        {
+          "hop": "tower1_channel",
+          "score": 1.0,
+          "output": "ANSWER: Channel 4"
+        },
+        {
+          "hop": "channel4_alert",
+          "score": 1.0,
+          "output": "ANSWER: RED"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FE1": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: 4"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "To determine how many packets of screws must be ordered, we need to follow these steps:\n\n1. Calculate the total number of screws needed for the shipment.\n2. Determine how many additional screws are required beyond the current stock.\n3. Calculate how many packets of screws are needed to meet the additional requirement.\n\n**Step 1: Calculate the total number of screws needed for the shipment.**\n\nThe "
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: 23"
+      },
+      "component_checks": [
+        {
+          "hop": "total_parts",
+          "score": 1.0,
+          "output": "ANSWER: 23"
+        },
+        {
+          "hop": "total_screws_needed",
+          "score": 1.0,
+          "output": "ANSWER: 92"
+        },
+        {
+          "hop": "screws_to_order",
+          "score": 0.0,
+          "output": "ANSWER: 8"
+        },
+        {
+          "hop": "packets_needed",
+          "score": 0.0,
+          "output": "ANSWER: 9"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "FE2": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: 1"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "To determine how many additional slots the second rack needs beyond what the first rack provides, we need to calculate the total number of slots in each rack and then find the difference.\n\nFirst, let's calculate the total number of slots in the first rack:\n- The first rack has 3 rows.\n- Each row has 5 slots.\n- Therefore, the total number of slots in the first rack is \\(3 \\times 5 = 15\\).\n\nNext, le"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: 15"
+      },
+      "component_checks": [
+        {
+          "hop": "first_rack_slots",
+          "score": 1.0,
+          "output": "ANSWER: 15"
+        },
+        {
+          "hop": "second_rack_slots",
+          "score": 1.0,
+          "output": "ANSWER: 22"
+        },
+        {
+          "hop": "additional_slots",
+          "score": 1.0,
+          "output": "ANSWER: 7"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "FE3": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: 11"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: 11"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: 24"
+      },
+      "component_checks": [
+        {
+          "hop": "total_members",
+          "score": 1.0,
+          "output": "ANSWER: 24"
+        },
+        {
+          "hop": "total_tools_needed",
+          "score": 1.0,
+          "output": "ANSWER: 72"
+        },
+        {
+          "hop": "tools_to_order",
+          "score": 1.0,
+          "output": "ANSWER: 47"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "AC1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: silver disk"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: silver disk"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: silver disk"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "AC2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: GOLD"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: GOLD"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: GOLD"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "NC1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: current permits"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: current permits"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: old permits"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    }
+  }
+}

@@ -1,0 +1,3458 @@
+[
+  {
+    "item_id": "twohop_l1_c01_i01",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAWMU",
+        "B_object": "ZBTJO",
+        "C_object": "ZJMOL"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDBNG",
+        "B_object": "ZEZMB",
+        "C_object": "FSLIY"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGCAV",
+        "B_object": "ZHLYS",
+        "C_object": "DNXUT"
+      }
+    ],
+    "object_roles": {
+      "ZAWMU": "anchor_A",
+      "ZBTJO": "hop1_B",
+      "ZJMOL": "answer_C",
+      "ZDBNG": "other_context",
+      "ZEZMB": "distractor_chain_intermediate",
+      "FSLIY": "distractor_chain_endpoint",
+      "ZGCAV": "other_context",
+      "ZHLYS": "distractor_chain_intermediate",
+      "DNXUT": "distractor_chain_endpoint",
+      "ZJMZY": "target_neighbor_decoy",
+      "ZFCGJ": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAWMU",
+        "expected_answer": "ZBTJO"
+      },
+      "hop2": {
+        "query_anchor": "ZBTJO",
+        "expected_answer": "ZJMOL"
+      },
+      "composite": {
+        "query_anchor": "ZAWMU",
+        "expected_answer": "ZJMOL"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAWMU",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAWMU links to ZBTJO.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBTJO maps to ZJMOL.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDBNG links to ZEZMB.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEZMB maps to FSLIY.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGCAV links to ZHLYS.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHLYS maps to DNXUT.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFCGJ holds ZJMZY.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:5d8f2c787033f4d68e69c5bd9b435df0a8be3fafc9c54bd52ba62aab0e65f167"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZAWMU",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "ZJMZY",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i02",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAXOG",
+        "B_object": "ZBEUN",
+        "C_object": "DBKSD"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDEYP",
+        "B_object": "ZEBZL",
+        "C_object": "UEBLS"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGHER",
+        "B_object": "ZHSEK",
+        "C_object": "PZUPT"
+      }
+    ],
+    "object_roles": {
+      "ZAXOG": "anchor_A",
+      "ZBEUN": "hop1_B",
+      "DBKSD": "answer_C",
+      "ZDEYP": "other_context",
+      "ZEBZL": "distractor_chain_intermediate",
+      "UEBLS": "distractor_chain_endpoint",
+      "ZGHER": "other_context",
+      "ZHSEK": "distractor_chain_intermediate",
+      "PZUPT": "distractor_chain_endpoint",
+      "IMKSD": "target_neighbor_decoy",
+      "ZFTRW": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAXOG",
+        "expected_answer": "ZBEUN"
+      },
+      "hop2": {
+        "query_anchor": "ZBEUN",
+        "expected_answer": "DBKSD"
+      },
+      "composite": {
+        "query_anchor": "ZAXOG",
+        "expected_answer": "DBKSD"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAXOG",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAXOG links to ZBEUN.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBEUN maps to DBKSD.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDEYP links to ZEBZL.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEBZL maps to UEBLS.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGHER links to ZHSEK.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHSEK maps to PZUPT.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFTRW holds IMKSD.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:4ad8aaa19fcc839d8591141e1b78c9adf1d362acd64fa9e8c1a67982bddf8735"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZAXOG",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "IMKSD",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i03",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAIHV",
+        "B_object": "ZBHKH",
+        "C_object": "MRZSP"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDAQW",
+        "B_object": "ZEFYV",
+        "C_object": "HUCAX"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGUNU",
+        "B_object": "ZHUXH",
+        "C_object": "HGKLW"
+      }
+    ],
+    "object_roles": {
+      "ZAIHV": "anchor_A",
+      "ZBHKH": "hop1_B",
+      "MRZSP": "answer_C",
+      "ZDAQW": "other_context",
+      "ZEFYV": "distractor_chain_intermediate",
+      "HUCAX": "distractor_chain_endpoint",
+      "ZGUNU": "other_context",
+      "ZHUXH": "distractor_chain_intermediate",
+      "HGKLW": "distractor_chain_endpoint",
+      "VDZSP": "target_neighbor_decoy",
+      "ZFISE": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAIHV",
+        "expected_answer": "ZBHKH"
+      },
+      "hop2": {
+        "query_anchor": "ZBHKH",
+        "expected_answer": "MRZSP"
+      },
+      "composite": {
+        "query_anchor": "ZAIHV",
+        "expected_answer": "MRZSP"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAIHV",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAIHV links to ZBHKH.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBHKH maps to MRZSP.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDAQW links to ZEFYV.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEFYV maps to HUCAX.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGUNU links to ZHUXH.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHUXH maps to HGKLW.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFISE holds VDZSP.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:47660043f627608a981a2327370ffd20e44b7c191a16094e4a872661aacfb906"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZAIHV",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "VDZSP",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i04",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAPCC",
+        "B_object": "ZBYTP",
+        "C_object": "YYQGH"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDSRS",
+        "B_object": "ZEEOS",
+        "C_object": "PLZEG"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGLUC",
+        "B_object": "ZHAZA",
+        "C_object": "QYQYP"
+      }
+    ],
+    "object_roles": {
+      "ZAPCC": "anchor_A",
+      "ZBYTP": "hop1_B",
+      "YYQGH": "answer_C",
+      "ZDSRS": "other_context",
+      "ZEEOS": "distractor_chain_intermediate",
+      "PLZEG": "distractor_chain_endpoint",
+      "ZGLUC": "other_context",
+      "ZHAZA": "distractor_chain_intermediate",
+      "QYQYP": "distractor_chain_endpoint",
+      "PJQGH": "target_neighbor_decoy",
+      "ZFMNA": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAPCC",
+        "expected_answer": "ZBYTP"
+      },
+      "hop2": {
+        "query_anchor": "ZBYTP",
+        "expected_answer": "YYQGH"
+      },
+      "composite": {
+        "query_anchor": "ZAPCC",
+        "expected_answer": "YYQGH"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAPCC",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAPCC links to ZBYTP.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBYTP maps to YYQGH.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDSRS links to ZEEOS.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEEOS maps to PLZEG.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGLUC links to ZHAZA.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHAZA maps to QYQYP.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFMNA holds PJQGH.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:2ee057199f9ff775c205fba8d538701b7603616d7869f114402aa249c02269a9"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZAPCC",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "PJQGH",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i05",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAOYL",
+        "B_object": "ZBPRJ",
+        "C_object": "BAGCR"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDMMJ",
+        "B_object": "ZELWA",
+        "C_object": "QKUOR"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGPHW",
+        "B_object": "ZHETW",
+        "C_object": "PLFBI"
+      }
+    ],
+    "object_roles": {
+      "ZAOYL": "anchor_A",
+      "ZBPRJ": "hop1_B",
+      "BAGCR": "answer_C",
+      "ZDMMJ": "other_context",
+      "ZELWA": "distractor_chain_intermediate",
+      "QKUOR": "distractor_chain_endpoint",
+      "ZGPHW": "other_context",
+      "ZHETW": "distractor_chain_intermediate",
+      "PLFBI": "distractor_chain_endpoint",
+      "BAGQI": "target_neighbor_decoy",
+      "ZFRQG": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAOYL",
+        "expected_answer": "ZBPRJ"
+      },
+      "hop2": {
+        "query_anchor": "ZBPRJ",
+        "expected_answer": "BAGCR"
+      },
+      "composite": {
+        "query_anchor": "ZAOYL",
+        "expected_answer": "BAGCR"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAOYL",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAOYL links to ZBPRJ.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBPRJ maps to BAGCR.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDMMJ links to ZELWA.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZELWA maps to QKUOR.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGPHW links to ZHETW.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHETW maps to PLFBI.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFRQG holds BAGQI.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:fc569a53c28665b7418cdb9cac32102eddc8623969d10f8fcf70146537af5a9b"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZAOYL",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "BAGQI",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i06",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAMPP",
+        "B_object": "ZBWWQ",
+        "C_object": "XFCPN"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDQIA",
+        "B_object": "ZEIND",
+        "C_object": "QDBJV"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGMRQ",
+        "B_object": "ZHXCM",
+        "C_object": "BNEQN"
+      }
+    ],
+    "object_roles": {
+      "ZAMPP": "anchor_A",
+      "ZBWWQ": "hop1_B",
+      "XFCPN": "answer_C",
+      "ZDQIA": "other_context",
+      "ZEIND": "distractor_chain_intermediate",
+      "QDBJV": "distractor_chain_endpoint",
+      "ZGMRQ": "other_context",
+      "ZHXCM": "distractor_chain_intermediate",
+      "BNEQN": "distractor_chain_endpoint",
+      "XFCUP": "target_neighbor_decoy",
+      "ZFYAM": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAMPP",
+        "expected_answer": "ZBWWQ"
+      },
+      "hop2": {
+        "query_anchor": "ZBWWQ",
+        "expected_answer": "XFCPN"
+      },
+      "composite": {
+        "query_anchor": "ZAMPP",
+        "expected_answer": "XFCPN"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAMPP",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAMPP links to ZBWWQ.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBWWQ maps to XFCPN.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDQIA links to ZEIND.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEIND maps to QDBJV.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGMRQ links to ZHXCM.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHXCM maps to BNEQN.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFYAM holds XFCUP.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:d4374f9550d180b08b512e977c84044b9b91bc7769a5ee76096bb231639dcf45"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZAMPP",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "XFCUP",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i07",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZADLE",
+        "B_object": "ZBQPU",
+        "C_object": "GTJWG"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDWED",
+        "B_object": "ZEHGU",
+        "C_object": "SVHZX"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGYJT",
+        "B_object": "ZHPQT",
+        "C_object": "DFHLZ"
+      }
+    ],
+    "object_roles": {
+      "ZADLE": "anchor_A",
+      "ZBQPU": "hop1_B",
+      "GTJWG": "answer_C",
+      "ZDWED": "other_context",
+      "ZEHGU": "distractor_chain_intermediate",
+      "SVHZX": "distractor_chain_endpoint",
+      "ZGYJT": "other_context",
+      "ZHPQT": "distractor_chain_intermediate",
+      "DFHLZ": "distractor_chain_endpoint",
+      "GTJUM": "target_neighbor_decoy",
+      "ZFDJR": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZADLE",
+        "expected_answer": "ZBQPU"
+      },
+      "hop2": {
+        "query_anchor": "ZBQPU",
+        "expected_answer": "GTJWG"
+      },
+      "composite": {
+        "query_anchor": "ZADLE",
+        "expected_answer": "GTJWG"
+      },
+      "negative_graph": {
+        "query_anchor": "ZADLE",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZADLE links to ZBQPU.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBQPU maps to GTJWG.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDWED links to ZEHGU.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEHGU maps to SVHZX.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGYJT links to ZHPQT.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHPQT maps to DFHLZ.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFDJR holds GTJUM.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:432c2f2e0dd6641b3c9c68721f3b82ab75beeddfb3cb2995e6e99d933646b287"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZADLE",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "GTJUM",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i08",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAHXA",
+        "B_object": "ZBZOM",
+        "C_object": "YXPPV"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDJLV",
+        "B_object": "ZEWDZ",
+        "C_object": "BKMVE"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGAWZ",
+        "B_object": "ZHFWF",
+        "C_object": "JEMZC"
+      }
+    ],
+    "object_roles": {
+      "ZAHXA": "anchor_A",
+      "ZBZOM": "hop1_B",
+      "YXPPV": "answer_C",
+      "ZDJLV": "other_context",
+      "ZEWDZ": "distractor_chain_intermediate",
+      "BKMVE": "distractor_chain_endpoint",
+      "ZGAWZ": "other_context",
+      "ZHFWF": "distractor_chain_intermediate",
+      "JEMZC": "distractor_chain_endpoint",
+      "UCPPV": "target_neighbor_decoy",
+      "ZFWZT": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAHXA",
+        "expected_answer": "ZBZOM"
+      },
+      "hop2": {
+        "query_anchor": "ZBZOM",
+        "expected_answer": "YXPPV"
+      },
+      "composite": {
+        "query_anchor": "ZAHXA",
+        "expected_answer": "YXPPV"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAHXA",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAHXA links to ZBZOM.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBZOM maps to YXPPV.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDJLV links to ZEWDZ.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEWDZ maps to BKMVE.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGAWZ links to ZHFWF.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHFWF maps to JEMZC.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFWZT holds UCPPV.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:cd60abc514940972af1c43c612f816ea8e9cfce05e864c0dee529c53a88860d2"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZAHXA",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "UCPPV",
+        "correct": false
+      }
+    },
+    "axis_note": "target_first"
+  },
+  {
+    "item_id": "twohop_l1_c01_i09",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZACUY",
+        "B_object": "ZBUIE",
+        "C_object": "FSLIY"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDCTK",
+        "B_object": "ZEUAT",
+        "C_object": "DNXUT"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGDXS",
+        "B_object": "ZHQJY",
+        "C_object": "ZJMOL"
+      }
+    ],
+    "object_roles": {
+      "ZACUY": "anchor_A",
+      "ZBUIE": "hop1_B",
+      "FSLIY": "answer_C",
+      "ZDCTK": "other_context",
+      "ZEUAT": "distractor_chain_intermediate",
+      "DNXUT": "distractor_chain_endpoint",
+      "ZGDXS": "other_context",
+      "ZHQJY": "distractor_chain_intermediate",
+      "ZJMOL": "distractor_chain_endpoint",
+      "DALIY": "target_neighbor_decoy",
+      "ZFABN": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZACUY",
+        "expected_answer": "ZBUIE"
+      },
+      "hop2": {
+        "query_anchor": "ZBUIE",
+        "expected_answer": "FSLIY"
+      },
+      "composite": {
+        "query_anchor": "ZACUY",
+        "expected_answer": "FSLIY"
+      },
+      "negative_graph": {
+        "query_anchor": "ZACUY",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDCTK links to ZEUAT.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEUAT maps to DNXUT.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZACUY links to ZBUIE.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBUIE maps to FSLIY.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGDXS links to ZHQJY.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHQJY maps to ZJMOL.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFABN holds DALIY.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:d4d6f4d07cc44303bb97082d6367d3cafb6d0d664a01777245a7e71adecfd0ba"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDCTK",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "DALIY",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i10",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZATTH",
+        "B_object": "ZBNBZ",
+        "C_object": "UEBLS"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDKJE",
+        "B_object": "ZEYKW",
+        "C_object": "PZUPT"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGKDD",
+        "B_object": "ZHBKJ",
+        "C_object": "DBKSD"
+      }
+    ],
+    "object_roles": {
+      "ZATTH": "anchor_A",
+      "ZBNBZ": "hop1_B",
+      "UEBLS": "answer_C",
+      "ZDKJE": "other_context",
+      "ZEYKW": "distractor_chain_intermediate",
+      "PZUPT": "distractor_chain_endpoint",
+      "ZGKDD": "other_context",
+      "ZHBKJ": "distractor_chain_intermediate",
+      "DBKSD": "distractor_chain_endpoint",
+      "UEBPD": "target_neighbor_decoy",
+      "ZFUUO": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZATTH",
+        "expected_answer": "ZBNBZ"
+      },
+      "hop2": {
+        "query_anchor": "ZBNBZ",
+        "expected_answer": "UEBLS"
+      },
+      "composite": {
+        "query_anchor": "ZATTH",
+        "expected_answer": "UEBLS"
+      },
+      "negative_graph": {
+        "query_anchor": "ZATTH",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDKJE links to ZEYKW.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEYKW maps to PZUPT.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZATTH links to ZBNBZ.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBNBZ maps to UEBLS.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGKDD links to ZHBKJ.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHBKJ maps to DBKSD.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFUUO holds UEBPD.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:8140696b9abce1527709ce2368749f0bd7bc57bc48d7c6b3b70eb963a130962b"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDKJE",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "UEBPD",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i11",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAFGM",
+        "B_object": "ZBRAL",
+        "C_object": "HUCAX"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDZGF",
+        "B_object": "ZEQLR",
+        "C_object": "HGKLW"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGOBB",
+        "B_object": "ZHDHU",
+        "C_object": "MRZSP"
+      }
+    ],
+    "object_roles": {
+      "ZAFGM": "anchor_A",
+      "ZBRAL": "hop1_B",
+      "HUCAX": "answer_C",
+      "ZDZGF": "other_context",
+      "ZEQLR": "distractor_chain_intermediate",
+      "HGKLW": "distractor_chain_endpoint",
+      "ZGOBB": "other_context",
+      "ZHDHU": "distractor_chain_intermediate",
+      "MRZSP": "distractor_chain_endpoint",
+      "HUCOC": "target_neighbor_decoy",
+      "ZFPLK": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAFGM",
+        "expected_answer": "ZBRAL"
+      },
+      "hop2": {
+        "query_anchor": "ZBRAL",
+        "expected_answer": "HUCAX"
+      },
+      "composite": {
+        "query_anchor": "ZAFGM",
+        "expected_answer": "HUCAX"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAFGM",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDZGF links to ZEQLR.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEQLR maps to HGKLW.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAFGM links to ZBRAL.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBRAL maps to HUCAX.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGOBB links to ZHDHU.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHDHU maps to MRZSP.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFPLK holds HUCOC.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:777b28aa81bc6d7d42eeed82b4984cd7a7acbdfdfad2a406b27550e51939c77a"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDZGF",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "HUCOC",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i12",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAJBO",
+        "B_object": "ZBFSG",
+        "C_object": "PLZEG"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDDCY",
+        "B_object": "ZENTO",
+        "C_object": "QYQYP"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGRFE",
+        "B_object": "ZHHLL",
+        "C_object": "YYQGH"
+      }
+    ],
+    "object_roles": {
+      "ZAJBO": "anchor_A",
+      "ZBFSG": "hop1_B",
+      "PLZEG": "answer_C",
+      "ZDDCY": "other_context",
+      "ZENTO": "distractor_chain_intermediate",
+      "QYQYP": "distractor_chain_endpoint",
+      "ZGRFE": "other_context",
+      "ZHHLL": "distractor_chain_intermediate",
+      "YYQGH": "distractor_chain_endpoint",
+      "PLZMY": "target_neighbor_decoy",
+      "ZFNDX": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAJBO",
+        "expected_answer": "ZBFSG"
+      },
+      "hop2": {
+        "query_anchor": "ZBFSG",
+        "expected_answer": "PLZEG"
+      },
+      "composite": {
+        "query_anchor": "ZAJBO",
+        "expected_answer": "PLZEG"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAJBO",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDDCY links to ZENTO.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZENTO maps to QYQYP.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAJBO links to ZBFSG.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBFSG maps to PLZEG.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGRFE links to ZHHLL.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHHLL maps to YYQGH.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFNDX holds PLZMY.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:fd768d137121ab73f7be7b0061b292554acf7195d28ec5b45db12a36deaf1f42"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDDCY",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "PLZMY",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i13",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAEAF",
+        "B_object": "ZBBDR",
+        "C_object": "QKUOR"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDXAH",
+        "B_object": "ZEJJN",
+        "C_object": "PLFBI"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGSKM",
+        "B_object": "ZHVOX",
+        "C_object": "BAGCR"
+      }
+    ],
+    "object_roles": {
+      "ZAEAF": "anchor_A",
+      "ZBBDR": "hop1_B",
+      "QKUOR": "answer_C",
+      "ZDXAH": "other_context",
+      "ZEJJN": "distractor_chain_intermediate",
+      "PLFBI": "distractor_chain_endpoint",
+      "ZGSKM": "other_context",
+      "ZHVOX": "distractor_chain_intermediate",
+      "BAGCR": "distractor_chain_endpoint",
+      "AFUOR": "target_neighbor_decoy",
+      "ZFQEL": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAEAF",
+        "expected_answer": "ZBBDR"
+      },
+      "hop2": {
+        "query_anchor": "ZBBDR",
+        "expected_answer": "QKUOR"
+      },
+      "composite": {
+        "query_anchor": "ZAEAF",
+        "expected_answer": "QKUOR"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAEAF",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDXAH links to ZEJJN.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEJJN maps to PLFBI.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAEAF links to ZBBDR.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBBDR maps to QKUOR.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGSKM links to ZHVOX.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHVOX maps to BAGCR.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFQEL holds AFUOR.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:aabe13308a0e4b62b908faecf0e41b1209fb3b6d52ff43a17a48745ed652325d"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDXAH",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "AFUOR",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i14",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZABJW",
+        "B_object": "ZBCXB",
+        "C_object": "QDBJV"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDTHC",
+        "B_object": "ZEPUQ",
+        "C_object": "BNEQN"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGTIN",
+        "B_object": "ZHRIR",
+        "C_object": "XFCPN"
+      }
+    ],
+    "object_roles": {
+      "ZABJW": "anchor_A",
+      "ZBCXB": "hop1_B",
+      "QDBJV": "answer_C",
+      "ZDTHC": "other_context",
+      "ZEPUQ": "distractor_chain_intermediate",
+      "BNEQN": "distractor_chain_endpoint",
+      "ZGTIN": "other_context",
+      "ZHRIR": "distractor_chain_intermediate",
+      "XFCPN": "distractor_chain_endpoint",
+      "QDBPZ": "target_neighbor_decoy",
+      "ZFZVY": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZABJW",
+        "expected_answer": "ZBCXB"
+      },
+      "hop2": {
+        "query_anchor": "ZBCXB",
+        "expected_answer": "QDBJV"
+      },
+      "composite": {
+        "query_anchor": "ZABJW",
+        "expected_answer": "QDBJV"
+      },
+      "negative_graph": {
+        "query_anchor": "ZABJW",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDTHC links to ZEPUQ.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEPUQ maps to BNEQN.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZABJW links to ZBCXB.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBCXB maps to QDBJV.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGTIN links to ZHRIR.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHRIR maps to XFCPN.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFZVY holds QDBPZ.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:6151ca5e82ddfa3a892b4c5fe4c0679d7f62bab6508b906a67a96d81f5c01964"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDTHC",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "QDBPZ",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i15",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAQKS",
+        "B_object": "ZBSZD",
+        "C_object": "SVHZX"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDPPB",
+        "B_object": "ZETFJ",
+        "C_object": "DFHLZ"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGNSI",
+        "B_object": "ZHIUP",
+        "C_object": "GTJWG"
+      }
+    ],
+    "object_roles": {
+      "ZAQKS": "anchor_A",
+      "ZBSZD": "hop1_B",
+      "SVHZX": "answer_C",
+      "ZDPPB": "other_context",
+      "ZETFJ": "distractor_chain_intermediate",
+      "DFHLZ": "distractor_chain_endpoint",
+      "ZGNSI": "other_context",
+      "ZHIUP": "distractor_chain_intermediate",
+      "GTJWG": "distractor_chain_endpoint",
+      "EDHZX": "target_neighbor_decoy",
+      "ZFJHP": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAQKS",
+        "expected_answer": "ZBSZD"
+      },
+      "hop2": {
+        "query_anchor": "ZBSZD",
+        "expected_answer": "SVHZX"
+      },
+      "composite": {
+        "query_anchor": "ZAQKS",
+        "expected_answer": "SVHZX"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAQKS",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDPPB links to ZETFJ.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZETFJ maps to DFHLZ.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAQKS links to ZBSZD.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBSZD maps to SVHZX.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGNSI links to ZHIUP.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHIUP maps to GTJWG.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFJHP holds EDHZX.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:3823d193a21cf204070a94d4e178a781f5ad8460913ca80a736d65fcc6595370"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDPPB",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "EDHZX",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i16",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAGNZ",
+        "B_object": "ZBJET",
+        "C_object": "BKMVE"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDRZU",
+        "B_object": "ZEDSM",
+        "C_object": "JEMZC"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGGLA",
+        "B_object": "ZHTNQ",
+        "C_object": "YXPPV"
+      }
+    ],
+    "object_roles": {
+      "ZAGNZ": "anchor_A",
+      "ZBJET": "hop1_B",
+      "BKMVE": "answer_C",
+      "ZDRZU": "other_context",
+      "ZEDSM": "distractor_chain_intermediate",
+      "JEMZC": "distractor_chain_endpoint",
+      "ZGGLA": "other_context",
+      "ZHTNQ": "distractor_chain_intermediate",
+      "YXPPV": "distractor_chain_endpoint",
+      "ZKMVE": "target_neighbor_decoy",
+      "ZFLOV": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAGNZ",
+        "expected_answer": "ZBJET"
+      },
+      "hop2": {
+        "query_anchor": "ZBJET",
+        "expected_answer": "BKMVE"
+      },
+      "composite": {
+        "query_anchor": "ZAGNZ",
+        "expected_answer": "BKMVE"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAGNZ",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDRZU links to ZEDSM.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEDSM maps to JEMZC.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAGNZ links to ZBJET.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBJET maps to BKMVE.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGGLA links to ZHTNQ.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHTNQ maps to YXPPV.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFLOV holds ZKMVE.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:cb9ed05680c7ee95f4ffc2af4cc57c8b17ff671252b0ce8ae72c0cb5e4468444"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDRZU",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "ZKMVE",
+        "correct": false
+      }
+    },
+    "axis_note": "target_middle"
+  },
+  {
+    "item_id": "twohop_l1_c01_i17",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAZDN",
+        "B_object": "ZBKYX",
+        "C_object": "DNXUT"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDYVI",
+        "B_object": "ZEAPY",
+        "C_object": "ZJMOL"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGJOJ",
+        "B_object": "ZHOMG",
+        "C_object": "FSLIY"
+      }
+    ],
+    "object_roles": {
+      "ZAZDN": "anchor_A",
+      "ZBKYX": "hop1_B",
+      "DNXUT": "answer_C",
+      "ZDYVI": "other_context",
+      "ZEAPY": "distractor_chain_intermediate",
+      "ZJMOL": "distractor_chain_endpoint",
+      "ZGJOJ": "other_context",
+      "ZHOMG": "distractor_chain_intermediate",
+      "FSLIY": "distractor_chain_endpoint",
+      "DNXHH": "target_neighbor_decoy",
+      "ZFSFU": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAZDN",
+        "expected_answer": "ZBKYX"
+      },
+      "hop2": {
+        "query_anchor": "ZBKYX",
+        "expected_answer": "DNXUT"
+      },
+      "composite": {
+        "query_anchor": "ZAZDN",
+        "expected_answer": "DNXUT"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAZDN",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDYVI links to ZEAPY.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEAPY maps to ZJMOL.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGJOJ links to ZHOMG.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHOMG maps to FSLIY.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAZDN links to ZBKYX.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBKYX maps to DNXUT.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFSFU holds DNXHH.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:451ac2c7502a8318284c486fd0db3f994404d4d719bc51cadd585bbb2f64a1f4"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDYVI",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "DNXHH",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  },
+  {
+    "item_id": "twohop_l1_c01_i18",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZARSK",
+        "B_object": "ZBAMV",
+        "C_object": "PZUPT"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDOUZ",
+        "B_object": "ZECBG",
+        "C_object": "DBKSD"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGVVK",
+        "B_object": "ZHYPE",
+        "C_object": "UEBLS"
+      }
+    ],
+    "object_roles": {
+      "ZARSK": "anchor_A",
+      "ZBAMV": "hop1_B",
+      "PZUPT": "answer_C",
+      "ZDOUZ": "other_context",
+      "ZECBG": "distractor_chain_intermediate",
+      "DBKSD": "distractor_chain_endpoint",
+      "ZGVVK": "other_context",
+      "ZHYPE": "distractor_chain_intermediate",
+      "UEBLS": "distractor_chain_endpoint",
+      "PZUML": "target_neighbor_decoy",
+      "ZFOKD": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZARSK",
+        "expected_answer": "ZBAMV"
+      },
+      "hop2": {
+        "query_anchor": "ZBAMV",
+        "expected_answer": "PZUPT"
+      },
+      "composite": {
+        "query_anchor": "ZARSK",
+        "expected_answer": "PZUPT"
+      },
+      "negative_graph": {
+        "query_anchor": "ZARSK",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDOUZ links to ZECBG.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZECBG maps to DBKSD.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGVVK links to ZHYPE.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHYPE maps to UEBLS.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZARSK links to ZBAMV.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBAMV maps to PZUPT.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFOKD holds PZUML.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:4f89142b2d873d15d5be16e4bf8adf37f87c3391ec3527f8cab909b5c156a3da"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDOUZ",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "PZUML",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  },
+  {
+    "item_id": "twohop_l1_c01_i19",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAUZI",
+        "B_object": "ZBGQC",
+        "C_object": "HGKLW"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDGBL",
+        "B_object": "ZEKHK",
+        "C_object": "MRZSP"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGXYY",
+        "B_object": "ZHWGO",
+        "C_object": "HUCAX"
+      }
+    ],
+    "object_roles": {
+      "ZAUZI": "anchor_A",
+      "ZBGQC": "hop1_B",
+      "HGKLW": "answer_C",
+      "ZDGBL": "other_context",
+      "ZEKHK": "distractor_chain_intermediate",
+      "MRZSP": "distractor_chain_endpoint",
+      "ZGXYY": "other_context",
+      "ZHWGO": "distractor_chain_intermediate",
+      "HUCAX": "distractor_chain_endpoint",
+      "YEKLW": "target_neighbor_decoy",
+      "ZFBYI": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAUZI",
+        "expected_answer": "ZBGQC"
+      },
+      "hop2": {
+        "query_anchor": "ZBGQC",
+        "expected_answer": "HGKLW"
+      },
+      "composite": {
+        "query_anchor": "ZAUZI",
+        "expected_answer": "HGKLW"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAUZI",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDGBL links to ZEKHK.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEKHK maps to MRZSP.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGXYY links to ZHWGO.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHWGO maps to HUCAX.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAUZI links to ZBGQC.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBGQC maps to HGKLW.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFBYI holds YEKLW.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:aa63c9cf8419b243777cbb17b608fd93fd89f7e35e37e9f55cb3ffa6dca98b00"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDGBL",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "YEKLW",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  },
+  {
+    "item_id": "twohop_l1_c01_i20",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAARD",
+        "B_object": "ZBOVW",
+        "C_object": "QYQYP"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDUSN",
+        "B_object": "ZERXP",
+        "C_object": "YYQGH"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGEGX",
+        "B_object": "ZHMDC",
+        "C_object": "PLZEG"
+      }
+    ],
+    "object_roles": {
+      "ZAARD": "anchor_A",
+      "ZBOVW": "hop1_B",
+      "QYQYP": "answer_C",
+      "ZDUSN": "other_context",
+      "ZERXP": "distractor_chain_intermediate",
+      "YYQGH": "distractor_chain_endpoint",
+      "ZGEGX": "other_context",
+      "ZHMDC": "distractor_chain_intermediate",
+      "PLZEG": "distractor_chain_endpoint",
+      "QKQYQ": "target_neighbor_decoy",
+      "ZFHTC": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAARD",
+        "expected_answer": "ZBOVW"
+      },
+      "hop2": {
+        "query_anchor": "ZBOVW",
+        "expected_answer": "QYQYP"
+      },
+      "composite": {
+        "query_anchor": "ZAARD",
+        "expected_answer": "QYQYP"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAARD",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDUSN links to ZERXP.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZERXP maps to YYQGH.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGEGX links to ZHMDC.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHMDC maps to PLZEG.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAARD links to ZBOVW.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBOVW maps to QYQYP.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFHTC holds QKQYQ.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:c979b7bb28798ecaeacced4aeb49f6551d23fa7ee45047e85c6dcb327a1eb697"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDUSN",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "QKQYQ",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  },
+  {
+    "item_id": "twohop_l1_c01_i21",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAVWT",
+        "B_object": "ZBMFK",
+        "C_object": "PLFBI"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDIWX",
+        "B_object": "ZEXIF",
+        "C_object": "BAGCR"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGBCF",
+        "B_object": "ZHNVB",
+        "C_object": "QKUOR"
+      }
+    ],
+    "object_roles": {
+      "ZAVWT": "anchor_A",
+      "ZBMFK": "hop1_B",
+      "PLFBI": "answer_C",
+      "ZDIWX": "other_context",
+      "ZEXIF": "distractor_chain_intermediate",
+      "BAGCR": "distractor_chain_endpoint",
+      "ZGBCF": "other_context",
+      "ZHNVB": "distractor_chain_intermediate",
+      "QKUOR": "distractor_chain_endpoint",
+      "OSFBI": "target_neighbor_decoy",
+      "ZFKXF": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAVWT",
+        "expected_answer": "ZBMFK"
+      },
+      "hop2": {
+        "query_anchor": "ZBMFK",
+        "expected_answer": "PLFBI"
+      },
+      "composite": {
+        "query_anchor": "ZAVWT",
+        "expected_answer": "PLFBI"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAVWT",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDIWX links to ZEXIF.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEXIF maps to BAGCR.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGBCF links to ZHNVB.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHNVB maps to QKUOR.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAVWT links to ZBMFK.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBMFK maps to PLFBI.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFKXF holds OSFBI.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:bae61850f3c1955fb872a1d3f556cfac5fd9bac6c8bbd771d0d9654fa30d7bfd"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDIWX",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "OSFBI",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  },
+  {
+    "item_id": "twohop_l1_c01_i22",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZALFQ",
+        "B_object": "ZBLNF",
+        "C_object": "BNEQN"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDFXO",
+        "B_object": "ZEMEX",
+        "C_object": "XFCPN"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGWPL",
+        "B_object": "ZHKSZ",
+        "C_object": "QDBJV"
+      }
+    ],
+    "object_roles": {
+      "ZALFQ": "anchor_A",
+      "ZBLNF": "hop1_B",
+      "BNEQN": "answer_C",
+      "ZDFXO": "other_context",
+      "ZEMEX": "distractor_chain_intermediate",
+      "XFCPN": "distractor_chain_endpoint",
+      "ZGWPL": "other_context",
+      "ZHKSZ": "distractor_chain_intermediate",
+      "QDBJV": "distractor_chain_endpoint",
+      "BNEOE": "target_neighbor_decoy",
+      "ZFFCH": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZALFQ",
+        "expected_answer": "ZBLNF"
+      },
+      "hop2": {
+        "query_anchor": "ZBLNF",
+        "expected_answer": "BNEQN"
+      },
+      "composite": {
+        "query_anchor": "ZALFQ",
+        "expected_answer": "BNEQN"
+      },
+      "negative_graph": {
+        "query_anchor": "ZALFQ",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDFXO links to ZEMEX.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEMEX maps to XFCPN.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGWPL links to ZHKSZ.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHKSZ maps to QDBJV.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZALFQ links to ZBLNF.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBLNF maps to BNEQN.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFFCH holds BNEOE.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:d4ce6ccf02bbde4c7ea613de1ebde14b56d7167b0e7b829921cc9871f53d34c0"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDFXO",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "BNEOE",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  },
+  {
+    "item_id": "twohop_l1_c01_i23",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZAKEB",
+        "B_object": "ZBVLS",
+        "C_object": "DFHLZ"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDHDT",
+        "B_object": "ZEORC",
+        "C_object": "GTJWG"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGQZP",
+        "B_object": "ZHJAD",
+        "C_object": "SVHZX"
+      }
+    ],
+    "object_roles": {
+      "ZAKEB": "anchor_A",
+      "ZBVLS": "hop1_B",
+      "DFHLZ": "answer_C",
+      "ZDHDT": "other_context",
+      "ZEORC": "distractor_chain_intermediate",
+      "GTJWG": "distractor_chain_endpoint",
+      "ZGQZP": "other_context",
+      "ZHJAD": "distractor_chain_intermediate",
+      "SVHZX": "distractor_chain_endpoint",
+      "FMHLZ": "target_neighbor_decoy",
+      "ZFXPS": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAKEB",
+        "expected_answer": "ZBVLS"
+      },
+      "hop2": {
+        "query_anchor": "ZBVLS",
+        "expected_answer": "DFHLZ"
+      },
+      "composite": {
+        "query_anchor": "ZAKEB",
+        "expected_answer": "DFHLZ"
+      },
+      "negative_graph": {
+        "query_anchor": "ZAKEB",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDHDT links to ZEORC.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZEORC maps to GTJWG.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGQZP links to ZHJAD.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHJAD maps to SVHZX.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZAKEB links to ZBVLS.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBVLS maps to DFHLZ.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFXPS holds FMHLZ.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:2698cff0e5287f27ef9eb2b96e2e1aab3ca44ff6c1858d7caa3cff245127301a"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDHDT",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "FMHLZ",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  },
+  {
+    "item_id": "twohop_l1_c01_i24",
+    "chains": [
+      {
+        "chain_id": "target_chain",
+        "role": "target",
+        "A_object": "ZASQR",
+        "B_object": "ZBDGA",
+        "C_object": "JEMZC"
+      },
+      {
+        "chain_id": "decoy_chain_1",
+        "role": "decoy",
+        "A_object": "ZDVKQ",
+        "B_object": "ZESCI",
+        "C_object": "YXPPV"
+      },
+      {
+        "chain_id": "decoy_chain_2",
+        "role": "decoy",
+        "A_object": "ZGITG",
+        "B_object": "ZHCFI",
+        "C_object": "BKMVE"
+      }
+    ],
+    "object_roles": {
+      "ZASQR": "anchor_A",
+      "ZBDGA": "hop1_B",
+      "JEMZC": "answer_C",
+      "ZDVKQ": "other_context",
+      "ZESCI": "distractor_chain_intermediate",
+      "YXPPV": "distractor_chain_endpoint",
+      "ZGITG": "other_context",
+      "ZHCFI": "distractor_chain_intermediate",
+      "BKMVE": "distractor_chain_endpoint",
+      "JXMZC": "target_neighbor_decoy",
+      "ZFGIQ": "inert_filler"
+    },
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZASQR",
+        "expected_answer": "ZBDGA"
+      },
+      "hop2": {
+        "query_anchor": "ZBDGA",
+        "expected_answer": "JEMZC"
+      },
+      "composite": {
+        "query_anchor": "ZASQR",
+        "expected_answer": "JEMZC"
+      },
+      "negative_graph": {
+        "query_anchor": "ZASQR",
+        "expected_answer": "NULL"
+      }
+    },
+    "context": {
+      "ordered_facts": [
+        {
+          "fact_id": "f01",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZDVKQ links to ZESCI.",
+          "position_index": 1
+        },
+        {
+          "fact_id": "f02",
+          "chain_id": "decoy_chain_1",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZESCI maps to YXPPV.",
+          "position_index": 2
+        },
+        {
+          "fact_id": "f03",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop1_fact",
+          "text": "ZGITG links to ZHCFI.",
+          "position_index": 3
+        },
+        {
+          "fact_id": "f04",
+          "chain_id": "decoy_chain_2",
+          "fact_role": "decoy_hop2_fact",
+          "text": "ZHCFI maps to BKMVE.",
+          "position_index": 4
+        },
+        {
+          "fact_id": "f05",
+          "chain_id": "target_chain",
+          "fact_role": "hop1_fact",
+          "text": "ZASQR links to ZBDGA.",
+          "position_index": 5
+        },
+        {
+          "fact_id": "f06",
+          "chain_id": "target_chain",
+          "fact_role": "hop2_fact",
+          "text": "ZBDGA maps to JEMZC.",
+          "position_index": 6
+        },
+        {
+          "fact_id": "f07",
+          "chain_id": "neighbor_context",
+          "fact_role": "neighbor_decoy_fact",
+          "text": "ZFGIQ holds JXMZC.",
+          "position_index": 7
+        }
+      ]
+    },
+    "positive_sufficiency_exclusion": {
+      "composite_requires_hop1": true,
+      "composite_requires_hop2": true,
+      "answer_from_hop1_alone_possible": false,
+      "answer_from_hop2_alone_possible": false,
+      "validation_method": "manifest_structure"
+    },
+    "same_context_controls": {
+      "identical_context_hash": "sha256:2cd32efa900465cd4d83f973e77405a52c5e84eafbee90dcb8f9512aba108f24"
+    },
+    "negative_graph_control": {
+      "negative_graph_source_cell": "twohop_l1_cell01",
+      "removed_edge": "target_chain/hop2",
+      "independently_constructed": true,
+      "valid_A_to_C_path_exists": false
+    },
+    "dummy_baselines": {
+      "uniform_random": {
+        "strategy": "uniform_random_over_context_objects",
+        "c_role_options": 3,
+        "expected_score": 0.333333
+      },
+      "first_context_object": {
+        "strategy": "first_object_in_context",
+        "expected_answer": "ZDVKQ",
+        "correct": false
+      },
+      "last_context_object": {
+        "strategy": "last_object_in_context",
+        "expected_answer": "JXMZC",
+        "correct": false
+      }
+    },
+    "axis_note": "target_last"
+  }
+]

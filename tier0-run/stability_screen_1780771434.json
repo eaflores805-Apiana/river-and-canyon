@@ -1,0 +1,396 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tasks": "tasks_exp6",
+  "results": {
+    "SA1": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: BRIFQ"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: ZUNIP"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: BRIFQ"
+      },
+      "component_checks": [
+        {
+          "hop": "axfob_tunnb",
+          "score": 1.0,
+          "output": "ANSWER: TUNNB"
+        },
+        {
+          "hop": "tunnb_alcv5",
+          "score": 1.0,
+          "output": "ANSWER: ALCV5"
+        },
+        {
+          "hop": "alcv5_zunip",
+          "score": 1.0,
+          "output": "ANSWER: ZUNIP"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "SA2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: MAVOQ"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: MAVOQ"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: PELRK"
+      },
+      "component_checks": [
+        {
+          "hop": "kromp_vlixt",
+          "score": 1.0,
+          "output": "ANSWER: VLIXT"
+        },
+        {
+          "hop": "vlixt_drufi",
+          "score": 1.0,
+          "output": "ANSWER: DRUFI"
+        },
+        {
+          "hop": "drufi_mavoq",
+          "score": 1.0,
+          "output": "ANSWER: MAVOQ"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "SA3": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: KELDA"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: KELDA"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: MIXOQ"
+      },
+      "component_checks": [
+        {
+          "hop": "gorpf_blifm",
+          "score": 1.0,
+          "output": "ANSWER: BLIFM"
+        },
+        {
+          "hop": "blifm_draxt",
+          "score": 1.0,
+          "output": "ANSWER: DRAXT"
+        },
+        {
+          "hop": "draxt_kelda",
+          "score": 1.0,
+          "output": "ANSWER: KELDA"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "SA4": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: KOLVR"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: KOLVR"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: KOLVR"
+      },
+      "component_checks": [
+        {
+          "hop": "wuqen_paxyl",
+          "score": 1.0,
+          "output": "ANSWER: PAXYL"
+        },
+        {
+          "hop": "paxyl_glebm",
+          "score": 1.0,
+          "output": "ANSWER: GLEBM"
+        },
+        {
+          "hop": "glebm_rivok",
+          "score": 1.0,
+          "output": "ANSWER: RIVOK"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "SA5": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: TANEM"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: TANEM"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: GAVEP"
+      },
+      "component_checks": [
+        {
+          "hop": "muxiv_torpx",
+          "score": 1.0,
+          "output": "ANSWER: TORPX"
+        },
+        {
+          "hop": "torpx_clavb",
+          "score": 0.0,
+          "output": "TORPX opens into CLAVB."
+        },
+        {
+          "hop": "clavb_tanem",
+          "score": 1.0,
+          "output": "ANSWER: TANEM"
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "SA6": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: GLAXU"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: GLAXU"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: ALCRN"
+      },
+      "component_checks": [
+        {
+          "hop": "zarot_flobn",
+          "score": 0.0,
+          "output": "ANSWER: GLAXU"
+        },
+        {
+          "hop": "flobn_krimp",
+          "score": 1.0,
+          "output": "ANSWER: KRIMP"
+        },
+        {
+          "hop": "krimp_glaxu",
+          "score": 1.0,
+          "output": "ANSWER: GLAXU"
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "SA7": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: VOPAR"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: VOPAR"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: NODEY"
+      },
+      "component_checks": [
+        {
+          "hop": "klaxp_glumt",
+          "score": 1.0,
+          "output": "ANSWER: GLUMT"
+        },
+        {
+          "hop": "glumt_frivb",
+          "score": 1.0,
+          "output": "ANSWER: FRIVB"
+        },
+        {
+          "hop": "frivb_vopar",
+          "score": 1.0,
+          "output": "ANSWER: VOPAR"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "SA8": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: GRUXV"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: GRUXV"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: GRUXV"
+      },
+      "component_checks": [
+        {
+          "hop": "trimp_vaxol",
+          "score": 1.0,
+          "output": "ANSWER: VAXOL"
+        },
+        {
+          "hop": "vaxol_clufb",
+          "score": 1.0,
+          "output": "ANSWER: CLUFB"
+        },
+        {
+          "hop": "clufb_drexm",
+          "score": 1.0,
+          "output": "ANSWER: DREXM"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "DE1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CHAMV"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CHAMV"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: SLOTQ"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "DE2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: BLOMP"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: BLOMP"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: ZRUVX"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "DE3": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: KRIFN"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: KRIFN"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: KRIFN"
+      },
+      "component_checks": [
+        {
+          "hop": "ploxb_grimt",
+          "score": 1.0,
+          "output": "ANSWER: GRIMT"
+        },
+        {
+          "hop": "grimt_plabt",
+          "score": 1.0,
+          "output": "ANSWER: PLABT"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "DE4": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: MUVOX"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: WUXEL"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: MUVOX"
+      },
+      "component_checks": [
+        {
+          "hop": "xombt_grivl",
+          "score": 1.0,
+          "output": "ANSWER: GRIVL"
+        },
+        {
+          "hop": "grivl_wuxel",
+          "score": 1.0,
+          "output": "ANSWER: WUXEL"
+        }
+      ],
+      "classification": "FLOOR"
+    },
+    "NC1": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: TURVL"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: TURVL"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: TURVL"
+      },
+      "component_checks": [],
+      "classification": "FLOOR"
+    },
+    "AC1": {
+      "narrow_original": {
+        "score": 0.0,
+        "output": "ANSWER: ZOVNX"
+      },
+      "narrow_paraphrase": {
+        "score": 0.0,
+        "output": "ANSWER: ZOVNX"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: ZOVNX"
+      },
+      "component_checks": [],
+      "classification": "FLOOR"
+    },
+    "AC2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: PLORN"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: PLORN"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: WAXTR"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    }
+  }
+}

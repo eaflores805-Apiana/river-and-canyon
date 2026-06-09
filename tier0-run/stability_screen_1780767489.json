@@ -1,0 +1,596 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tasks": "tasks_exp5",
+  "results": {
+    "FA1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: FILEK"
+      },
+      "component_checks": [
+        {
+          "hop": "mira_card",
+          "score": 1.0,
+          "output": "ANSWER: CARD7"
+        },
+        {
+          "hop": "card_gate",
+          "score": 1.0,
+          "output": "ANSWER: GATEC"
+        },
+        {
+          "hop": "gate_room",
+          "score": 1.0,
+          "output": "ANSWER: ROOM4"
+        },
+        {
+          "hop": "room_box",
+          "score": 1.0,
+          "output": "ANSWER: AMBERBOX"
+        },
+        {
+          "hop": "box_file",
+          "score": 1.0,
+          "output": "ANSWER: FILEK"
+        },
+        {
+          "hop": "file_status",
+          "score": 1.0,
+          "output": "ANSWER: APPROVED"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FA2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: ACTIVE"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: ACTIVE"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: RECRD5"
+      },
+      "component_checks": [
+        {
+          "hop": "dex_pass",
+          "score": 1.0,
+          "output": "ANSWER: PASS4"
+        },
+        {
+          "hop": "pass_bay",
+          "score": 1.0,
+          "output": "ANSWER: BAY9"
+        },
+        {
+          "hop": "bay_shelf",
+          "score": 1.0,
+          "output": "ANSWER: SHELF2"
+        },
+        {
+          "hop": "shelf_block",
+          "score": 1.0,
+          "output": "ANSWER: JADEBLK"
+        },
+        {
+          "hop": "block_record",
+          "score": 1.0,
+          "output": "ANSWER: RECRD5"
+        },
+        {
+          "hop": "record_status",
+          "score": 1.0,
+          "output": "ANSWER: ACTIVE"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FA3": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: PENDING"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: PENDING"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: FORM6"
+      },
+      "component_checks": [
+        {
+          "hop": "suki_tag",
+          "score": 1.0,
+          "output": "ANSWER: TAGA"
+        },
+        {
+          "hop": "tag_sector",
+          "score": 1.0,
+          "output": "ANSWER: SECTR7"
+        },
+        {
+          "hop": "sector_cabinet",
+          "score": 1.0,
+          "output": "ANSWER: CABN3"
+        },
+        {
+          "hop": "cabinet_tray",
+          "score": 1.0,
+          "output": "ANSWER: SILVTRAY"
+        },
+        {
+          "hop": "tray_form",
+          "score": 1.0,
+          "output": "ANSWER: FORM6"
+        },
+        {
+          "hop": "form_status",
+          "score": 1.0,
+          "output": "ANSWER: PENDING"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FA4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: LOG3"
+      },
+      "component_checks": [
+        {
+          "hop": "vance_fob",
+          "score": 1.0,
+          "output": "ANSWER: FOB12"
+        },
+        {
+          "hop": "fob_tunnel",
+          "score": 1.0,
+          "output": "ANSWER: TUNNELB"
+        },
+        {
+          "hop": "tunnel_alcove",
+          "score": 1.0,
+          "output": "ANSWER: ALCOVE5"
+        },
+        {
+          "hop": "alcove_drawer",
+          "score": 1.0,
+          "output": "ANSWER: OBSDRAW"
+        },
+        {
+          "hop": "drawer_log",
+          "score": 1.0,
+          "output": "ANSWER: LOG3"
+        },
+        {
+          "hop": "log_status",
+          "score": 1.0,
+          "output": "ANSWER: CLEAR"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FB1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: APPROVED"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: FILEK"
+      },
+      "component_checks": [
+        {
+          "hop": "mira_card",
+          "score": 1.0,
+          "output": "ANSWER: CARD7"
+        },
+        {
+          "hop": "card_gate",
+          "score": 1.0,
+          "output": "ANSWER: GATEC"
+        },
+        {
+          "hop": "gate_room",
+          "score": 1.0,
+          "output": "ANSWER: ROOM4"
+        },
+        {
+          "hop": "room_box",
+          "score": 1.0,
+          "output": "ANSWER: AMBERBOX"
+        },
+        {
+          "hop": "box_file",
+          "score": 1.0,
+          "output": "ANSWER: FILEK"
+        },
+        {
+          "hop": "file_status",
+          "score": 1.0,
+          "output": "ANSWER: APPROVED"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FB4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAR"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: LOG3"
+      },
+      "component_checks": [
+        {
+          "hop": "vance_fob",
+          "score": 1.0,
+          "output": "ANSWER: FOB12"
+        },
+        {
+          "hop": "fob_tunnel",
+          "score": 1.0,
+          "output": "ANSWER: TUNNELB"
+        },
+        {
+          "hop": "tunnel_alcove",
+          "score": 1.0,
+          "output": "ANSWER: ALCOVE5"
+        },
+        {
+          "hop": "alcove_drawer",
+          "score": 1.0,
+          "output": "ANSWER: OBSDRAW"
+        },
+        {
+          "hop": "drawer_log",
+          "score": 1.0,
+          "output": "ANSWER: LOG3"
+        },
+        {
+          "hop": "log_status",
+          "score": 1.0,
+          "output": "ANSWER: CLEAR"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FC1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CYAN"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CYAN"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: PANELB"
+      },
+      "component_checks": [
+        {
+          "hop": "nalo_key",
+          "score": 1.0,
+          "output": "ANSWER: REDKEY"
+        },
+        {
+          "hop": "red_key_vault",
+          "score": 1.0,
+          "output": "ANSWER: VAULT3"
+        },
+        {
+          "hop": "vault3_token",
+          "score": 1.0,
+          "output": "ANSWER: SILVTOK"
+        },
+        {
+          "hop": "silver_token_panel",
+          "score": 1.0,
+          "output": "ANSWER: PANELB"
+        },
+        {
+          "hop": "panelB_door",
+          "score": 1.0,
+          "output": "ANSWER: DOOR6"
+        },
+        {
+          "hop": "door6_lab",
+          "score": 1.0,
+          "output": "ANSWER: LABM"
+        },
+        {
+          "hop": "labM_designation",
+          "score": 1.0,
+          "output": "ANSWER: CYAN"
+        },
+        {
+          "hop": "kira_key",
+          "score": 1.0,
+          "output": "ANSWER: BLUEKEY"
+        },
+        {
+          "hop": "labQ_designation",
+          "score": 1.0,
+          "output": "ANSWER: DELTA"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FC4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: PRIME"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: PRIME"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: RUBYGEM"
+      },
+      "component_checks": [
+        {
+          "hop": "cael_disc",
+          "score": 1.0,
+          "output": "ANSWER: CRYSTDISC"
+        },
+        {
+          "hop": "crystal_disc_slot",
+          "score": 1.0,
+          "output": "ANSWER: SLOT6"
+        },
+        {
+          "hop": "slot6_chamber",
+          "score": 1.0,
+          "output": "ANSWER: CHAMBERA"
+        },
+        {
+          "hop": "chamberA_gem",
+          "score": 1.0,
+          "output": "ANSWER: RUBYGEM"
+        },
+        {
+          "hop": "ruby_gem_pedestal",
+          "score": 1.0,
+          "output": "ANSWER: PED3"
+        },
+        {
+          "hop": "pedestal3_unit",
+          "score": 1.0,
+          "output": "ANSWER: UNIT9"
+        },
+        {
+          "hop": "unit9_designation",
+          "score": 1.0,
+          "output": "ANSWER: PRIME"
+        },
+        {
+          "hop": "lyra_disc",
+          "score": 1.0,
+          "output": "ANSWER: OBSDISC"
+        },
+        {
+          "hop": "unit4_designation",
+          "score": 1.0,
+          "output": "ANSWER: FLARE"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FD1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: URGENT"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: URGENT"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: TEAMDELTA"
+      },
+      "component_checks": [
+        {
+          "hop": "hira_route",
+          "score": 1.0,
+          "output": "ANSWER: ROUTE12"
+        },
+        {
+          "hop": "route12_dock",
+          "score": 1.0,
+          "output": "ANSWER: DOCKF"
+        },
+        {
+          "hop": "dockF_crate",
+          "score": 1.0,
+          "output": "ANSWER: VOLCRATE"
+        },
+        {
+          "hop": "crate_tool",
+          "score": 1.0,
+          "output": "ANSWER: TOOL9"
+        },
+        {
+          "hop": "tool9_team",
+          "score": 1.0,
+          "output": "ANSWER: TEAMDELTA"
+        },
+        {
+          "hop": "teamDelta_station",
+          "score": 1.0,
+          "output": "ANSWER: STATION3"
+        },
+        {
+          "hop": "station3_priority",
+          "score": 1.0,
+          "output": "ANSWER: URGENT"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FD2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAN"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CLEAN"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: LABEPS"
+      },
+      "component_checks": [
+        {
+          "hop": "sable_project",
+          "score": 1.0,
+          "output": "ANSWER: PROJ44"
+        },
+        {
+          "hop": "project44_module",
+          "score": 1.0,
+          "output": "ANSWER: MOD7"
+        },
+        {
+          "hop": "module7_lab",
+          "score": 1.0,
+          "output": "ANSWER: LABEPS"
+        },
+        {
+          "hop": "labEpsilon_division",
+          "score": 1.0,
+          "output": "ANSWER: DIV3"
+        },
+        {
+          "hop": "division3_clearance",
+          "score": 1.0,
+          "output": "ANSWER: CLEAN"
+        }
+      ],
+      "classification": "STABLE"
+    },
+    "FD4": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: RED"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: RED"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: JUNCT9"
+      },
+      "component_checks": [
+        {
+          "hop": "maya_path",
+          "score": 1.0,
+          "output": "ANSWER: PATH3"
+        },
+        {
+          "hop": "path3_junction",
+          "score": 1.0,
+          "output": "ANSWER: JUNCT9"
+        },
+        {
+          "hop": "junction9_tower",
+          "score": 0.0,
+          "output": "ANSWER: JUNCT9"
+        },
+        {
+          "hop": "tower1_channel",
+          "score": 1.0,
+          "output": "ANSWER: CHAN4"
+        },
+        {
+          "hop": "channel4_alert",
+          "score": 1.0,
+          "output": "ANSWER: RED"
+        }
+      ],
+      "classification": "COMP_FAIL"
+    },
+    "AC1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: SILVDISK"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: SILVDISK"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: SILVDISK"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "AC2": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: GOLD"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: GOLD"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: GOLD"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    },
+    "NC1": {
+      "narrow_original": {
+        "score": 1.0,
+        "output": "ANSWER: CURPERM"
+      },
+      "narrow_paraphrase": {
+        "score": 1.0,
+        "output": "ANSWER: CURPERM"
+      },
+      "broad_original": {
+        "score": 1.0,
+        "output": "ANSWER: OLDPERM"
+      },
+      "component_checks": [],
+      "classification": "STABLE"
+    }
+  }
+}
