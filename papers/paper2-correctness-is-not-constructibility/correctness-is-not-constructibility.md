@@ -4,8 +4,7 @@
 
 **Release candidate.** River and Canyon program. Companion to *Survival Is Not Correctness: A
 Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation* (Paper 1). Experimental values and
-artifact hashes are attested from the locked run records and listed in Appendix B; independent recomputation of
-those values is a pre-submission step.
+artifact hashes are attested from the locked run records and listed in Appendix B; CS independently recomputed them for the freeze/tag pass.
 
 ---
 
@@ -360,8 +359,7 @@ constructible task survives stress is the open question for a future stress phas
   evaluation discipline, but the threshold values used here are local to this construction, model scale, vocabulary,
   scoring contract, and task geometry. Portability of absolute thresholds across model families, scales, or task families
   is not established here and requires independent validation.
-- **Provenance.** Per-cell hashes are attested from the artifact record; they are to be recomputed and inserted before
-  submission. Group-level composite figures are attested and artifact-backed; the Group A = 1/8 value, first re-derived
+- **Provenance.** Per-cell hashes are attested from the artifact record and listed in full in Appendix B; CS independently recomputed them for the freeze/tag pass. Group-level composite figures are attested and artifact-backed; the Group A = 1/8 value, first re-derived
   from the published totals, is confirmed directly in the decomposition packet.
 
 ---
@@ -470,9 +468,7 @@ remains blocked. See Claim Ledger v0.2.
 
 ## Appendix B — artifacts and provenance
 
-**Verification status.** All experimental values, counts, and hashes in this appendix are **attested from the locked
-artifact files** (read from the locked run records and experiment log); they have **not** been independently recomputed for
-this release. The reference list was verified against arXiv, the ACL Anthology, or the publisher of record, and each full
+**Verification status.** All experimental values, counts, and hashes in this appendix are **attested from the locked artifact files** (read from the locked run records and experiment log) and were **independently recomputed by CS for the freeze/tag pass**: the 11/11 Appendix B hash prefixes matched the on-disk artifacts, and no cited artifact was modified after recomputation. The reference list was verified against arXiv, the ACL Anthology, or the publisher of record, and each full
 hash below was cross-checked against the first-8 pointer carried in earlier drafts;
 all matched. **Recomputation:** canonical hashes are `sha256` over the locked file (`sha256sum <file>`).
 
@@ -548,7 +544,7 @@ and no compression rung was run on this construction.
 earlier drafts); the Group A 2/8 breakdown; the four UNCLASSIFIED_OFF_FRAME items; and confirmation of the scorer-amendment
 scope (additive, Gate-5-only). Still open: the pre-amendment `060afad9` scorer full hash, which is unrecoverable as
 documented above; and, lower priority, the Cell01/02 per-item intrusion-diagnostic fields, since per-item positions are
-manifest-derived rather than run-JSON-derived. Independent recomputation of the attested values is a pre-submission step.
+manifest-derived rather than run-JSON-derived. These attested values were independently recomputed by CS for the freeze/tag pass (see Verification status above).
 
 ## References
 
@@ -556,7 +552,7 @@ Bean, Andrew M., Ryan Othniel Kearns, Angelika Romanou, Franziska Sofia Hafner, 
 
 Dutta, Abhinav, Sanjeev Krishnan, Nipun Kwatra, and Ramachandran Ramjee. 2024. "Accuracy is Not All You Need." In Advances in Neural Information Processing Systems 37 (NeurIPS 2024), 124347–124390. Neural Information Processing Systems Foundation, Inc. https://doi.org/10.52202/079017-3950. arXiv:2407.09141.
 
-Flores, E. A. 2026. *Survival Is Not Correctness: A Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation*. River and Canyon program, Apiana AI, Inc. https://github.com/eaflores805-Apiana/river-and-canyon/tree/main/survival-is-not-correctness.
+Flores, E. A. 2026. *Survival Is Not Correctness: A Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation*. River and Canyon program, Apiana AI, Inc. https://github.com/eaflores805-Apiana/river-and-canyon/tree/main/papers/paper1-survival-is-not-correctness.
 
 Kurtic, Eldar, Alexandre Noll Marques, Shubhra Pandit, Mark Kurtz, and Dan Alistarh. 2025. "'Give Me BF16 or Give Me Death'? Accuracy-Performance Trade-Offs in LLM Quantization." In Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 26872–26886. Vienna, Austria: Association for Computational Linguistics. https://doi.org/10.18653/v1/2025.acl-long.1304.
 
