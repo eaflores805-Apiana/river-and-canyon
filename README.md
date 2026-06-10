@@ -6,18 +6,30 @@ A pair of essays that build a physical analogy for how large language models wor
 
 **1. The River and the Canyon**
 A physical analogy for a transformer: weights as a frozen mountain, activations as water moving over fixed stone, training as the slow carving of the rock, inference as water running over stone that no longer moves. The second half deliberately tries to break the analogy to find exactly where it stops being the territory.
-→ [`the-river-and-the-canyon/`](the-river-and-the-canyon/) — **new here? start with the lean edition** (`-lean`), the whole picture in one fast read; the full paper develops each step and stress-tests every claim. Both come in Markdown (reads in-browser), PDF (typeset), and Word. Figures are in `assets/`.
+→ [`writing/the-river-and-the-canyon/`](writing/the-river-and-the-canyon/) — **new here? start with the lean edition** (`-lean`), the whole picture in one fast read; the full paper develops each step and stress-tests every claim. Both come in Markdown (reads in-browser), PDF (typeset), and Word. Figures are in `assets/`.
 
 **2. What Kind of Water Carves the Mountain?** *(companion)*
 The first paper followed only one river: human language. This one asks what changes when the water changes — code, video, simulation, action — and finds a second axis underneath the obvious one. Not just *where* a capability's structure came from (provenance), but *how much precision it needs to survive* (fragility), with quantization as the instrument that exposes the second. The compact claim, and the guard against over-reading it: **provenance shapes the mix, not the fate.** It is framed as a perspective worth testing, not a finished framework.
-→ [`what-kind-of-water/`](what-kind-of-water/)
+→ [`writing/what-kind-of-water/`](writing/what-kind-of-water/)
 
 Read the two in order; the second assumes the first.
+
+## The metrology papers
+
+Running the baseline tier of the program above produced two evidence-bound papers that stand on their own, without the analogy — a matched pair, method and first result.
+
+**Survival Is Not Correctness** — the metrology *method*. A staged, fail-closed protocol for stress-retention evaluation. It makes operational the one blind spot the speculative work left standing: a capability that *survives* stress is not thereby *correct*, so a retention number that does not log baseline-correctness, stressed-correctness, and same-error identity together can score stable wrong behavior as robustness.
+→ [`papers/paper1-survival-is-not-correctness/`](papers/paper1-survival-is-not-correctness/) — Markdown and PDF; figures in `assets/`.
+
+**Correctness Is Not Constructibility** — the first *result* built on that method (release candidate). Pre-stress baseline mapping of a two-hop construction on one 3B model at full precision: surface correctness is not constructibility, and the tested construction's constructibility floor is structured, bounded, and mappable but **not cleared**. That floor is the precondition any compression-stress reading depends on, so the result sits *upstream* of the seam, not on it. The compression seam itself remains unrun and unclaimed.
+→ [`papers/paper2-correctness-is-not-constructibility/`](papers/paper2-correctness-is-not-constructibility/) — Markdown and PDF; figures in `figures/`.
+
+These two are the *metrology* pair (method ↔ first result); the two essays above are the *analogy* pair (the picture ↔ what the water carves). The analogy pair points; the metrology pair reports only what the evidence earns.
 
 ## Notes and proposals
 
 **No Mountain in the Sentence** — a short companion essay on the *method* behind the papers: the discipline for trusting an analogy exactly as far as it earns. It states one rule (say the claim with no mountain in the sentence) and three questions, then applies them to the mountain analogy itself.
-→ in [`the-river-and-the-canyon/`](the-river-and-the-canyon/)
+→ in [`writing/the-river-and-the-canyon/`](writing/the-river-and-the-canyon/)
 
 **A Fragility Probe for Carved Structure** — a *proposed* experiment (not a completed result) for testing one prediction of the second paper: whether precision-demanding capabilities retain less of their full-precision performance under quantization than matched broad ones. A small, runnable, falsifiable pilot, with a pre-declared decision rule that allows a flat result.
 → [`notes/fragility-probe-protocol.md`](notes/fragility-probe-protocol.md)

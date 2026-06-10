@@ -6,7 +6,7 @@
 
 ## What this project is
 
-A pair of physics-analogy papers about transformer models — **The River and the Canyon** (weights as a frozen mountain, activations as water moving over it, training as the slow carving of stone) and a companion, **What Kind of Water Carves the Mountain?** (what different training media carve, and which structure survives when precision is removed) — plus a method essay, a literature audit, a scored index of implications, and a proposed experiment.
+A pair of physics-analogy papers about transformer models — **The River and the Canyon** (weights as a frozen mountain, activations as water moving over it, training as the slow carving of stone) and a companion, **What Kind of Water Carves the Mountain?** (what different training media carve, and which structure survives when precision is removed) — plus two evidence-bound metrology papers (a stress-retention protocol and its first pre-stress result), a method essay, a literature audit, a scored index of implications, and a proposed experiment.
 
 The mature one-line statement of what it became:
 
@@ -39,6 +39,7 @@ By the project's own test — *does it survive even if the river-and-canyon acco
 - **The rescue test (B13) and cross-stress validation (B28)** — the cheapest, most direct follow-ons; mechanism-independent; they would distinguish a real fragility signature from a quantization-format artifact.
 - **The boundary markers** — what the framework says you *don't* need to worry about (FlashAttention is safe; weights are immutable at inference; claims scoped to post-training quantization only). A framework that only sounds alarms is a smoke detector with anxiety; clean negatives are what earn trust.
 - **The method itself** — find the variable underneath, render it as physical structure, read off the testable question, then **de-image** (strip the metaphor, keep only what survives as bare mechanism), and score for evidence rather than excitement. At this stage the methodology is the contribution as much as any single claim.
+- **The metrology protocol, now written.** The survival-≠-correctness blind spot — the one durable residue of the speculative work — is now a staged, fail-closed stress-retention method (*Survival Is Not Correctness*), with a first pre-stress result on it (*Correctness Is Not Constructibility*): a two-hop construction's constructibility floor, mapped at full precision and found not cleared. Mechanism-independent; this is where the discovery tool's output became an evidence-bound deliverable.
 
 Everything vivid and exciting — silent alignment decay, split-domain silicon, dynamic-precision hardware, the causal ladder — is **mechanism-dependent and clusters in the speculative tier.** Excitement and evidence came out *inversely correlated*, which is exactly why the index scores for evidence.
 
@@ -52,15 +53,17 @@ Everything vivid and exciting — silent alignment decay, split-domain silicon, 
 | Literature positioning | Done; claims shrank to synthesis-not-discovery |
 | Implications index | Converged (~52 rows), scored, saturated, feedback-stress-tested |
 | Fragility probe | Hardened, format-aware, artifact-guarded, adoption-ready |
-| **Empirical result** | **None. No model has been run. Zero data.** |
+| **Empirical result** | **Baseline-constructibility data only.** One 3B model run at full precision (the two-hop cells behind *Correctness Is Not Constructibility*); the construction's floor is mappable but not cleared. **No compression-stress retention data** — the seam is unrun. |
 
-The experimental program is now complete *as a design*: a baseline (Tier 0) plus a fan of parallel diagnostic tracks (rescue, uncertainty, cross-stress, prompting-recovery), then provenance and targeted-intervention tiers — **every tier contingent on Tier 0 producing a signal, and Tier 0 has not been run.**
+The experimental program is now complete *as a design*: a baseline (Tier 0) plus a fan of parallel diagnostic tracks (rescue, uncertainty, cross-stress, prompting-recovery), then provenance and targeted-intervention tiers — **every tier contingent on a clean baseline signal — the baseline-constructibility cells have now run (the floor is mappable but not cleared), and the compression sweep at the center has not.**
 
 This is the project's defining honesty and the reason the rest is trustworthy: it stops exactly where the evidence stops. The strongest claim is not "I proved how transformers work." It is "a disciplined analogy led to a clean, testable question that stands on its own."
 
 ---
 
 ## What remains
+
+> **Update — June 9, 2026.** Part of this has now happened. The baseline-constructibility tier was run and written up as two papers (*Survival Is Not Correctness*, the protocol; *Correctness Is Not Constructibility*, its first pre-stress result). They moved the frontier rather than retiring it: the tested two-hop construction's constructibility floor is mappable but **not cleared**, so the next genuine event is no longer "run the baseline" but "certify a constructible baseline a stress reading could trust." The bit-depth sweep described below is still the goal; the metrology work showed it has a precondition not yet met. The prose below remains accurate for that *compression sweep*, which is still unrun.
 
 Not more design. The design converged several rounds ago; the implications, the insights, and the protocol-refinements have each saturated. The single remaining move that changes the project's *state* rather than its *prose* is empirical:
 
@@ -72,4 +75,4 @@ The river pointed true; the field was standing where it pointed; and the one pla
 
 ---
 
-*Repository: the two papers (`the-river-and-the-canyon/`, `what-kind-of-water/`), method and audit notes plus the scored implications index and the fragility-probe protocol (`notes/`). Status and start-here in `STATUS.md` and the root `README.md`. Compiled for review, E. A. Flores / Apiana AI, Inc.*
+*Repository: the two papers (`writing/the-river-and-the-canyon/`, `writing/what-kind-of-water/`), method and audit notes plus the scored implications index and the fragility-probe protocol (`notes/`). Status and start-here in `STATUS.md` and the root `README.md`. Compiled for review, E. A. Flores / Apiana AI, Inc.*
