@@ -35,11 +35,14 @@ are untouched. The runner verifies these hashes against the expected values at b
 | mlx_lm (at implementation) | 0.31.3 |
 | mlx_lm (Paper 2 lock) | 0.19.3 |
 
-**Version drift note:** Paper 2 v1.0 was produced with mlx_lm 0.19.3. The current
-environment runs 0.31.3. Inference behavior is expected to be bit-identical given
-identical weights and deterministic decoding (greedy, temp=0.0), but cross-version
-drift is possible. The `paper2_regression.py` script reports any divergence in gate
-decisions as a flag rather than treating it as a B1 v2 regression.
+**Version drift note (RETIRED 2026-06-09):** Paper 2 v1.0 was produced with mlx_lm 0.19.3.
+The current environment runs 0.31.3. Cross-version drift was a recorded concern at
+implementation. The full Paper 2 regression (`paper2_regression.py --mode full`,
+2026-06-09) found **96/96 raw_output records bit-identical** to the Paper 2 v1.0
+reference (`RESULTS-TWOHOP-L1-cell03-1780948339.json`, sha256 f29783622f...). All gate
+decisions matched. The version-drift caveat is therefore retired: mlx_lm 0.19.3 and
+0.31.3 produce bit-identical inference for Qwen2.5-3B-Instruct under deterministic
+greedy decoding (temp=0.0, max_tokens=16).
 
 ## Model snapshot status
 
@@ -66,15 +69,32 @@ Senior conditions C1, C2, C3 incorporated in:
   - code/runner_b1_v2.py load_threshold_sheet (C3: hash verify before trust)
 ```
 
-## Test status at filing
+## Test status (updated 2026-06-09 after full regression)
 
 ```
 B1 unit tests (B1-T1 through B1-T24):    24/24 PASS
 Paper 2 regression sanity tests:          2/2 PASS
-Total:                                    26/26 PASS
-Dry-run end-to-end (Paper 2 context):    PASS
-Live Paper 2 regression run:              not executed at filing; runnable via
-                                          paper2_regression.py --mode full
+Subtotal (offline):                       26/26 PASS
+
+Dry-run end-to-end (Paper 2 context):     PASS
+Smoke regression (i01 × 4 query types):   PASS (4/4 raw_output bit-identical)
+Full regression (96 records):             PASS
+  raw_output bit-identical:               96/96
+  failure_class match:                    96/96
+  is_correct match:                       96/96
+  gate decisions match Paper 2 v1.0:      all 7 checks PASS
+  v1 shape preservation:                  7/7 checks PASS
+  Result artifact: results/RESULTS-B1V2-REGRESSION-full-cell03-1781070929.json
+  Output hash:    sha256:c9114c192dbaafc66d85babf6dacc62b9df8e4ffb87886fb868c875a202893f8
 ```
+
+## Model snapshot — runner-provenance backed (2026-06-09)
+
+| Field | Value |
+|---|---|
+| HuggingFace snapshot dir | `aa8e72537993ba99e69dfaafa59ed015b17504d1` |
+| Computed runner-provenance `model_snapshot_hash` | `sha256:abee745b7dfe399d9254dbcdea5e3e3...` |
+| Status at filing | Asserted only |
+| Status after full regression | **Runner-provenance-backed** — the asserted-only flag on the model snapshot in the Paper 2 v1.0 release record can be retired |
 
 — CS Engineer, 2026-06-09
