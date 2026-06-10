@@ -135,7 +135,8 @@ The released `paper3-certification-protocol-v1.0` is **lock-eligible** but lock-
 
 1. **`ONBOARDING-CS.md`** (repo root) — role/scope/conventions. ~5 minutes.
 2. **`governance/standing/STANDING-NON-AUTHORIZATIONS.md`** — boundary rules. ~5 minutes.
-3. **`governance/2026-06-10_paper3-v1.0-release/RELEASE-RECORD.md`** + **`governance/2026-06-10_paper3-v1.0-release/MANAGER-AUTHORIZATION-v1.1-SCOPE.md`** — what just released and what was authorized next. ~10 minutes total.
+3. **`governance/standing/STANDING-REVIEW-DISCIPLINE.md`** (NEW 2026-06-10) — failure-mode review prompt + protection-layer taxonomy. Applied to every substantive review CS writes going forward. ~5 minutes.
+4. **`governance/2026-06-10_paper3-v1.0-release/RELEASE-RECORD.md`** + **`governance/2026-06-10_paper3-v1.0-release/MANAGER-AUTHORIZATION-v1.1-SCOPE.md`** — what just released and what was authorized next. ~10 minutes total.
 
 After those, browse:
 - **`governance/passdown/2026-06-10_senior-passdown.md`** — Senior-side passdown for the parallel Senior Claude instance. Cross-perspective on the same program state. CS doesn't *own* Senior's content but reading it surfaces things CS sees from a different angle.
