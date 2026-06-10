@@ -459,13 +459,62 @@ Exp8B is the final unconditional Arm 2 construction attempt. No n≥20 expansion
 
 ---
 
-## Claim Status (as of 2026-06-07)
+## Claim Status (as of 2026-06-09)
 
 **Primary seam claim (Test 1):** OPEN. Not triggered across eight experiments, two models.  
-The claim has never been formally adjudicated because no experiment has passed the stability gate and run the stress sweep. Experiments 6 and 7 both failed the stability gate due to construction artifacts. Exp 8 Arm 2 failed feasibility. A clean seam test has not yet been run.
+The claim has never been formally adjudicated because no experiment has passed the stability gate and run the stress sweep. The constructibility-floor program (Two-Hop L1, see below) established why: no stress-eligible baseline exists. The seam cannot be tested until a constructibility-certified baseline clears Gate 2.
 
 **Format-degradation finding (Test 2):** RESOLVED.  
 The Exp 3/4 format cliff is real but scaffold-sensitive. Under a stronger explicit format instruction (Exp 5), the strict-score gap disappears: G_strict(INT4) CI [−0.0878, +0.2778] includes zero. Root cause: instruction-following degradation at INT4, not logit-space style drift. The format cliff cannot be used as evidence for seam fragility.
+
+---
+
+## Two-Hop L1 Constructibility Program — COMPLETE (2026-06-09)
+
+**Program question:** Is a two-hop construction constructible at full precision? What is the floor?
+
+Three cells run, all Branch 3. Cells01–03 are pre-stress baseline mapping, not a seam-fragility test. Results are published as *Correctness Is Not Constructibility* (Paper 2, v1.0, tagged `paper2-cells01-03-v1.0`).
+
+**Master ledger — Two-Hop L1:**
+
+| Cell | Model | hop1 | hop2 | composite | neg_graph | Gate 1 | Gate 2 | Branch |
+|---|---|---|---|---|---|---|---|---|
+| Cell01 | Qwen2.5-3B FP16 | 14/24 | 24/24 | 18/24 | 2/24 | PASS | FAIL | 3 |
+| Cell02 | Qwen2.5-3B FP16 | 9/24 | 23/24 | 20/24 | 0/24 | FAIL (1 FSF) | FAIL | 3 |
+| Cell03 | Qwen2.5-3B FP16 | 6/24 | 23/24 | 15/24 | 6/24 | PASS | FAIL | 3 |
+
+**Key finding:** The construction's hop1 floor blocks stress eligibility across all three cells; hop2 is near-ceiling. The failure landscape is structured and classifiable (taxonomy saturated, 288/288 outputs classified). Floor is mappable but not cleared. No compression sweep has run.
+
+**Artifact hashes (13/13 verified at tag):**
+
+| Artifact | sha256 (first 8) |
+|---|---|
+| items_twohop_l1_cell01.json | 00a7adf8 |
+| items_twohop_l1_cell02.json | b81d4716 |
+| items_twohop_l1_cell03.json | 7d5099cb |
+| runner_twohop_l1.py | f346e4f2 |
+| runner_twohop_l1_cell02.py | d14f6424 |
+| runner_twohop_l1_cell03.py | f23d99df |
+| scorer_twohop_l1.py | b65c6803 |
+| RESULTS-TWOHOP-L1-cell01-1780912218.json | 6de8b67c |
+| RESULTS-TWOHOP-L1-cell02-1780933041.json | 47b5eaa9 |
+| RESULTS-TWOHOP-L1-cell03-1780948339.json | f29783622f |
+| RESULTS-TWOHOP-L1-cell01-ALL.md | 696a1e0c |
+| RESULTS-TWOHOP-L1-cell02-ALL.md | b4274643 |
+| RESULTS-TWOHOP-L1-cell03-ALL.md | 6c6c6dfc |
+
+**Paper 2 v1.0 release (2026-06-09):**
+- Tag: `paper2-cells01-03-v1.0` on commit `40c0cd5a`
+- Tagged manuscript blob: `7d6706a346bb634bed6752ff147fd67e1ad2596f`
+- Release governance: `governance/2026-06-09_post-paper2-alignment/` (this folder) and `governance/2026-06-09_paper2-v1.0-release/` (repo root)
+- Published: `papers/paper2-correctness-is-not-constructibility/` (repo root)
+
+**Current CS state:**
+- `tier0-run/` is SEALED — never add files here
+- B1 harness hardening is the next CS lane — BLOCKED pending Manager code-change authorization
+- Paper 3 threshold framework design is the next parallel lane (design only, no runs)
+
+— CS Engineer, 2026-06-09
 
 **Instrument status:** LOCKED.  
 - Dual scorer (`strict_format_score` + `content_slot_score`) pre-registered and unit-tested.

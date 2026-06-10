@@ -1,6 +1,6 @@
 # PROJECT_BRIEFING.md — Cold-Start Briefing for Incoming Engineer
 
-**Last updated:** 2026-06-07  
+**Last updated:** 2026-06-09  
 **Purpose:** Complete context document. Allows any engineer (or new AI instance) to resume work without prior conversation history. Read this before touching any file.
 
 ---
@@ -201,26 +201,57 @@ Stability screen outcome: 3/8 SA stable (SA1, SA3, SA4). Threshold not met. **Ou
 
 ---
 
-## 7. Current status (2026-06-07)
+## 7. Current status (2026-06-09)
+
+**Two-Hop L1 constructibility program (2026-06-08 – 2026-06-09) — COMPLETE**
+
+After Exp8B, the research program pivoted from the seam-fragility question to a precondition question: *is a candidate two-hop construction constructible at full precision?* This is the constructibility-floor program, run as Three cells (Cell01, Cell02, Cell03) of a Two-Hop Level 1 task. Results:
 
 ```
-Experiment:     Exp8B (Branch F)
-Status:         NOT FEASIBLE — Arm 2B locked, no further repair loop authorized
-Pass count:     6/8 (threshold ≥7/8 not met)
-Numeric OOC:    0 (Condition 2 met)
-Stress sweep:   Not run
-Seam claim:     Open, unadjudicated
-Provenance:     Clean
-Next direction: Requires Manager / Team Lead decision
+Cell01:  hop1 14/24, hop2 24/24, composite 18/24, neg_graph 2/24
+         Gate 1 PASS, Gate 2 FAIL, Branch 3 — NOT STRESS-ELIGIBLE
+Cell02:  hop1  9/24, hop2 23/24, composite 20/24, neg_graph 0/24
+         Gate 1 FAIL (1 FSF), Gate 2 FAIL, Branch 3 — NOT STRESS-ELIGIBLE
+Cell03:  hop1  6/24, hop2 23/24, composite 15/24, neg_graph 6/24
+         Gate 1 PASS (first clean), Gate 2 FAIL, Branch 3 — NOT STRESS-ELIGIBLE
 ```
 
-**Exp8 / Exp8B summary:**
-- Exp8 Arm 2 (n=8): 6/8 pass. Both failures at target_pos=2: numeric OOC returns ("0", "10"). NOT FEASIBLE.
-- Exp8B Arm 2B (n=8): Same items, query wording changed. 6/8 pass. Numeric OOC eliminated (Condition 2 met). New failures: off-by-one positional anchoring at target_pos=2 (L2_03) and target_pos=3 (L2_04). NOT FEASIBLE.
-- Exp8B is the final unconditional Arm 2 construction attempt. No Exp8C without explicit Manager / Team Lead decision.
+All three cells routed Branch 3 (NOT STRESS-ELIGIBLE). The construction's hop1 floor is the blocking constraint; hop2 is near-ceiling across all cells. The constructibility floor is structured, bounded, and mappable — but not cleared. No compression-stress sweep has run. No stress-eligible baseline exists.
+
+**Paper 2 v1.0 — RELEASED 2026-06-09**
+
+Results written up as *Correctness Is Not Constructibility* — pre-stress baseline mapping at 3B FP16.
+- Tag: `paper2-cells01-03-v1.0` on commit `40c0cd5a`
+- Blob SHA (tagged manuscript): `7d6706a346bb634bed6752ff147fd67e1ad2596f`
+- Governance: `governance/2026-06-09_post-paper2-alignment/` (in tier0-run/) and `governance/2026-06-09_paper2-v1.0-release/` (in repo root)
+- Published to: `papers/paper2-correctness-is-not-constructibility/` (repo root)
+
+**Repo structure — RESTRUCTURED 2026-06-09**
+
+The repo root now has:
+- `papers/` — Paper 1 (Final) and Paper 2 (v1.0) in separate slots
+- `writing/` — the two analogy essays (river-and-canyon, what-kind-of-water)
+- `experiments/` — all future experiment code/results (date-slug per experiment)
+- `governance/` — root-level governance for post-v1.0 era
+- `tier0-run/` — SEALED; this folder; do not add files here
+
+**B1 harness — BLOCKED**
+
+Plan filed at `governance/2026-06-09_post-paper2-alignment/B1-IMPLEMENTATION-PLAN.md`. Adds provenance fields, `stress_eligible` boolean, per-item same-error-identity keys, and 14 unit tests. Fail-closed block checks `stress_eligible == false` (not just Gate 2 alone).
+- BLOCKED: Manager code-change authorization required before implementation begins.
+
+**Next authorized planning lanes (Team Lead disposition 2026-06-09):**
+1. B1 harness hardening (BLOCKED on Manager code-change authorization)
+2. Paper 3 threshold framework design (design only, no runs authorized)
+
+**CS scope reminder:**
+- `tier0-run/`: SEALED — never add files; existing files may be updated for documentation.
+- `experiments/`: CS lane for all new experiment code and results.
+- `governance/` (repo root): CS lane for new governance filings.
+- All other repo dirs: user and Senior Engineer scope only.
 
 **Decoding determinism (CLOSED — manuscript dependency):**
-All Exp6, Exp7, Exp8, Exp8B runs: FP16, temp=0.0, greedy, single draw per item. Exp6/Exp7 max_tokens=512; Exp8/Exp8B max_tokens=16. No seed. Provenance gap: Exp6/Exp7 decoding settings in source code only, not stored in JSON artifacts.
+All Exp6, Exp7, Exp8, Exp8B runs: FP16, temp=0.0, greedy, single draw per item. Exp6/Exp7 max_tokens=512; Exp8/Exp8B max_tokens=16. No seed. Provenance gap: Exp6/Exp7 decoding settings in source code only, not stored in JSON artifacts. All Two-Hop L1 cells: temp=0.0, greedy, single draw, mlx_lm 0.19.3, chat-template + stream_generate.
 
 ---
 
