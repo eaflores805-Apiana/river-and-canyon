@@ -205,10 +205,8 @@ def main():
                    "--output-dir", args.output_dir,
                    "--output-prefix", f"RESULTS-B1V2-REGRESSION-{args.mode}"]
     if args.mode == "smoke":
-        # For smoke mode we'd need to subset the manifest. Implementing this would
-        # require runner support for --manifest-subset; for now smoke = full but
-        # we just don't compare counts.
-        print("  (smoke mode: running full manifest; comparison limited to v1 shape only)")
+        runner_argv.extend(["--manifest-subset", "1"])
+        print("  smoke mode: 1 item × 4 query types; v1-shape validation only.")
     rc = r.main(runner_argv)
     # rc 0 = stress-eligible, 1 = not stress-eligible (informational, expected for Cell03)
     if rc >= 2:

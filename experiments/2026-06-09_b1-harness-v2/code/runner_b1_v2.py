@@ -706,6 +706,9 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument("--expected-threshold-sheet-hash", default=None,
                    help="Expected sha256:... of threshold sheet (required if --threshold-sheet given)")
     p.add_argument("--manifest", default=str(DEFAULT_MANIFEST_PATH))
+    p.add_argument("--manifest-subset", type=int, default=None,
+                   help="If set, run only the first N items of the manifest (smoke testing). "
+                        "Note: subsetting disables gate-decision regression vs Paper 2 baseline.")
     p.add_argument("--output-dir", default=str(EXP_DIR / "results"))
     p.add_argument("--output-prefix", default="RESULTS-B1V2",
                    help="Prefix for output JSON filename")
@@ -791,6 +794,13 @@ def main(argv: Optional[list[str]] = None) -> int:
         return 2
     manifest_hash = sha256_file(manifest_path)
     print(f"  manifest_hash: {manifest_hash}")
+
+    # Optional subset for smoke testing
+    if args.manifest_subset is not None and args.manifest_subset > 0:
+        original_count = len(items)
+        items = items[:args.manifest_subset]
+        print(f"  manifest-subset: using first {len(items)} of {original_count} items "
+              f"(smoke mode; gate-decision regression disabled)")
 
     # ── Provenance assembly (partial; model fields populated below) ───────
     runner_hash = sha256_file(RUNNER_PATH)
