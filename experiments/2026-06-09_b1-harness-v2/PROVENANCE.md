@@ -38,17 +38,13 @@ are untouched. The runner verifies these hashes against the expected values at b
 | mlx_lm (at implementation) | 0.31.3 |
 | mlx_lm (Paper 2 lock) | 0.19.3 |
 
-**Version drift note (verified bit-identical 2026-06-09 within scope tested):** Paper 2
-v1.0 was produced with mlx_lm 0.19.3. The current environment runs 0.31.3.
-Cross-version drift was a recorded concern at implementation. The full Paper 2
-regression (`paper2_regression.py --mode full`, 2026-06-09) found **96/96 raw_output
-records bit-identical** to the Paper 2 v1.0 reference
-(`RESULTS-TWOHOP-L1-cell03-1780948339.json`, sha256 f29783622f...) for this model
-(`Qwen/Qwen2.5-3B-Instruct`), snapshot (`aa8e7253...`), and decoding configuration
-(greedy, temp=0.0, max_tokens=16). This is a behavioral verification on the locked
-Cell03 manifest within the scope tested. It does not generalize to other models,
-snapshots, decoding configurations, or mlx_lm versions; future cases remain testable,
-not pre-cleared.
+**Version drift note — verified-null for locked Paper 2 reproduction configuration.**
+Paper 2 ran under mlx_lm 0.19.3; B1 v2 regression ran under mlx_lm 0.31.3. The 96/96
+bit-identical reproduction (`paper2_regression.py --mode full`, 2026-06-09; reference
+`RESULTS-TWOHOP-L1-cell03-1780948339.json`, sha256 f29783622f...) verifies null drift
+for the locked Paper 2 reproduction configuration only: same model, tokenizer, prompt
+path, scorer, manifest, deterministic decoding, and reproduction surface. Version
+drift remains a provenance variable for any changed configuration.
 
 ## Model snapshot status
 
