@@ -468,7 +468,7 @@ remains blocked. See Claim Ledger v0.2.
 
 ## Appendix B — artifacts and provenance
 
-**Verification status.** All experimental values, counts, and hashes in this appendix are **attested from the locked artifact files** (read from the locked run records and experiment log) and were **independently recomputed by CS for the freeze/tag pass**: the 11/11 Appendix B hash prefixes matched the on-disk artifacts, and no cited artifact was modified after recomputation. The reference list was verified against arXiv, the ACL Anthology, or the publisher of record, and each full
+**Verification status.** All experimental values, counts, and hashes in this appendix are **attested from the locked artifact files** (read from the locked run records and experiment log) and were **independently recomputed by CS for the freeze/tag pass**: the 13/13 Appendix B hash prefixes matched the on-disk artifacts, and no cited artifact was modified after recomputation. The reference list was verified against arXiv, the ACL Anthology, or the publisher of record, and each full
 hash below was cross-checked against the first-8 pointer carried in earlier drafts;
 all matched. **Recomputation:** canonical hashes are `sha256` over the locked file (`sha256sum <file>`).
 
