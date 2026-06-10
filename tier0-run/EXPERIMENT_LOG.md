@@ -516,6 +516,64 @@ Three cells run, all Branch 3. Cells01–03 are pre-stress baseline mapping, not
 
 — CS Engineer, 2026-06-09
 
+---
+
+## B1 v2 Lock — 2026-06-10
+
+B1 v2 harness merged to `main` per Manager authorization 2026-06-10.
+
+| Item | Value |
+|---|---|
+| Merge commit SHA | `3cbfce57d42536e8a5e1f35a92c931a03fe4e974` |
+| Merge type | `--no-ff` |
+| Branch merged | `b1-harness-v2` |
+| Branch tip at merge | `ff8466b2702205e9b9f95458cfe2d9023cb98ccb` |
+| Locked runner hash | `sha256:7f5efdcbf8a51a9368ee1868be7bcb734fb4ceeedbe580f29f9ff2ac87f90fe6` |
+| Model snapshot (runner-provenance-backed) | `sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20` |
+| Full regression artifact hash | `sha256:c9114c192dbaafc66d85babf6dacc62b9df8e4ffb87886fb868c875a202893f8` |
+| Smoke regression artifact hash | `sha256:7cc17649a7a20d3bf99c7c9517fe8604a9a537a6cb3baf734d78ff0e71058f39` |
+
+**Test outcomes recorded at lock:**
+
+| Test | Result |
+|---|---|
+| B1 unit tests (B1-T01 → B1-T24) | 24/24 PASS |
+| Paper 2 reproduction sanity tests | 2/2 PASS |
+| Smoke regression (i01 × 4 query types) | 4/4 raw_output bit-identical |
+| Full regression (96 records) | 96/96 raw_output bit-identical; all gate decisions match Paper 2 v1.0; v1 shape 7/7 |
+
+**Paper 2 v1.0 surface at lock:**
+
+| Item | Value |
+|---|---|
+| Tag SHA | `41c033fc59597eb42015de9019c3ac7b7d19dd98` (unmoved) |
+| Tagged commit | `40c0cd5a974b8bb10e7d3fe2a794b43efcd30fce` (unmoved) |
+| Tagged manuscript blob | `7d6706a346bb634bed6752ff147fd67e1ad2596f` (preserved in tag) |
+| Manuscript blob on main | `34ada312b96dd20138b3553e2a78a53ff0681b09` (post-v1.0 release status-label commit, predates this merge; documented in commit `69df8be`) |
+| tier0-run/ artifacts | not modified by merge |
+
+**Addendum 01 effectivity:** `governance/2026-06-09_paper2-v1.0-release/ADDENDUM-01-model-snapshot-backing.md` §5 effectivity clause activates at this merge. Snapshot status of v1.0 is now recorded as *historically asserted in v1.0; subsequently corroborated by B1 runner-provenance-backed bit-identity reproduction; release-record addendum committed; Paper 2 tag/manuscript unchanged.*
+
+**Paper 3 substrate posture:** config-gated, disabled by default. Runner defaults are `--mode dry-run`, `--context paper2-reproduction`, `--framework-version none`. Activating Paper 3 substrate at runtime is not the same as authorization to apply Paper 3 certification; certification application requires separate Manager authorization.
+
+**What the lock does NOT do:**
+- Does not activate Paper 3 certification.
+- Does not select a candidate or set any threshold value.
+- Does not introduce any candidate threshold sheet, candidate output, or certification result.
+- Does not authorize new runs, re-runs, INT8/INT4 execution, multi-model execution, or any other blocked lane.
+
+**Governance records for this lock:**
+- `governance/2026-06-09_b1-harness-v2-merge-readiness/` — pre-merge merge-ready note, branch evidence packet, wording correction report
+- `governance/2026-06-10_b1-harness-v2-merge-and-lock/` — lock note + post-merge confirmation report
+- `governance/2026-06-09_paper2-v1.0-release/ADDENDUM-01-model-snapshot-backing.md` — addendum, now active
+
+**Next CS state:**
+- B1 v2 is the active validity-harness infrastructure.
+- No further CS deliverables pending until next authorization.
+- Boundaries remain closed: no candidate selection, no thresholds, no Paper 3 execution, no new runs, no INT8/INT4, no multi-model, no Fork A, no Claim C.
+
+— CS Engineer, 2026-06-10
+
 **Instrument status:** LOCKED.  
 - Dual scorer (`strict_format_score` + `content_slot_score`) pre-registered and unit-tested.
 - Three-axis scorer (scaffold_class / format_class / content_class) implemented for Exp 8.
