@@ -574,6 +574,47 @@ B1 v2 harness merged to `main` per Manager authorization 2026-06-10.
 
 — CS Engineer, 2026-06-10
 
+---
+
+## Paper 3 v1.0 Release — 2026-06-10
+
+Paper 3 (*Certification Before Retention*) released to `main` per Manager authorization 2026-06-10.
+
+| Item | Value |
+|---|---|
+| Release commit SHA | `63d217216752f833b257d426665c872a21c5f422` |
+| Tag name | `paper3-certification-protocol-v1.0` |
+| Tag object SHA | `6dbdcc1238a186af32baac076d3d82c92fd7c205` |
+| Tagged manuscript blob (git, 40-hex) | `798f7dceacf7ea05630009d80106a6dbff47b031` |
+| Tagged manuscript sha256 | `b948521ebab74b3a225a98509a07488c0f1a4c86d1802d46796e57b2d361e714` |
+| PDF sha256 | `6223cf85a65f1bc6fe4621f717997e6b8d2b253b6156951715d6d30005080d8f` |
+| Figures | 4 PNG + 4 SVG; full hashes in `governance/2026-06-10_paper3-v1.0-release/RELEASE-RECORD.md` |
+
+**Paper 2 lesson incorporated.** The RC text IS the final v1.0 text; the commit that landed the manuscript is the commit that was tagged. No post-tag masthead flip. Tagged blob (`798f7dce...`) == main blob (`798f7dce...`) — no divergence. The audit pattern that complicated Paper 2 is explicitly avoided here.
+
+**Tag name matches lock-eligible framework identifier.** `paper3-certification-protocol-v1.0` is the first lock-eligible framework version (per the manuscript's own framework-version rule). A future threshold sheet's `framework_version` field can name the tag byte-for-byte; no mapping table required.
+
+**Pre-release verification chain (all PASS):**
+- CS release-consistency checklist: 10/10 items PASS (`governance/2026-06-10_paper3-v1.0-release/CS-RELEASE-CONSISTENCY-CHECKLIST.md`)
+- F1 (hash drift on md/pdf): cleared by Senior manifest refresh
+- F2 (PDF geometry): cleared by Senior `fitz` zero-overflows + visual confirmation
+- Senior, Team Lead, Manager authorizations all archived in `governance/2026-06-10_paper3-v1.0-release/`
+
+**Boundaries unchanged.** This release does NOT activate Paper 3 application. No candidate selection, no threshold-sheet population, no threshold lock, no certification evaluation, no runs, no INT8/INT4, no multi-model, no Fork A reactivation, no Claim C activation, no B1 v2.1 implementation, no public benchmark packaging.
+
+**B1 v2.1 backlog item #5 has a concrete rule.** Drafts use `paper3-certification-protocol-v0.*` (B1 refuses lock); released uses `paper3-certification-protocol-v1.*+` (B1 may proceed). Enforced at the future B1 v2.1 Paper 3 substrate-completion pass.
+
+**Governance records for this release:**
+- `governance/2026-06-10_paper3-v1.0-release/RELEASE-RECORD.md` — this release
+- `governance/2026-06-10_paper3-v1.0-release/CS-RELEASE-CONSISTENCY-CHECKLIST.md` — 10-item verification
+- `governance/2026-06-10_paper3-v1.0-release/CS-COMMIT-AND-TAG-PROCEDURE.md` — staged procedure (now executed)
+- `governance/2026-06-10_paper3-v1.0-release/CS-RELEASE-CONFIRMATION-REPORT.md` — pre-release CS confirmation
+- `governance/2026-06-10_paper3-v1.0-release/CS-RELEASE-EXECUTION-REPORT.md` — post-release CS confirmation
+- `governance/2026-06-10_paper3-v1.0-release/PAPER3-RELEASE-CANDIDATE-PACKAGE.md` — Senior RC package (refreshed)
+- `governance/2026-06-09_paper3-threshold-framework-review/` — full review arc (v0.2 → v1.0)
+
+— CS Engineer, 2026-06-10
+
 **Instrument status:** LOCKED.  
 - Dual scorer (`strict_format_score` + `content_slot_score`) pre-registered and unit-tested.
 - Three-axis scorer (scaffold_class / format_class / content_class) implemented for Exp 8.
