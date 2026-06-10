@@ -44,7 +44,20 @@ A behavioral stress-metrology program for LLMs. Three papers released, one in ac
 - Location: `papers/paper3-certification-before-retention/`
 - Release record: `governance/2026-06-10_paper3-v1.0-release/RELEASE-RECORD.md`
 
-**v1.1 status:** **Draft 3 ACTIVE on Senior side** (per Team Lead naming correction 2026-06-10 at `governance/2026-06-09_paper3-threshold-framework-review/TEAMLEAD-MEMO-NAMING-CORRECTION-DRAFT3-2026-06-10.md`). Draft 3 supersedes the Draft 2 / "Draft 2.1" working labels. **The "Draft 2.1" label is retired** because it collides with active project identifiers `Paper 3 v1.1` and `B1 v2.1`. Canonical draft ladder is now: `Draft 1 → Draft 2 → Draft 3 → Team Lead review → RC → tag paper3-certification-protocol-v1.1`.
+**v1.1 status:** **RELEASED 2026-06-10.** Manager-authorized release executed by CS; v1.0 now superseded-released (H3 supersession rule applies).
+- Release commit: `f769c03468bb3e39a29d10a406df4d7a59766531`
+- Tag: `paper3-certification-protocol-v1.1` (tag object SHA `0b63b2ef10974a9e5ce2f7a0c28b11799649c566`)
+- Tagged manuscript blob (git): `489d0744a43d35b600096661b4a666785ab73cee`
+- Tagged manuscript sha256: `b93f60a64c93134fff229466c92639bb2553e8e29e7ffd609551876675864089`
+- Tagged PDF blob (git): `0babd141dcad135130350bd0f6da78544100f1d1`
+- PDF sha256: `c7095f89ef9585d9a191f0749c1c30866677964a36ad1de162b4e94bf5393be7`
+- Paper 2 lesson check at release: tagged blobs == main blobs (no divergence). RC text is final text; no post-tag edits.
+- Figures unchanged from v1.0 release (4 PNG + 4 SVG bit-identical).
+- Release record: `governance/2026-06-10_paper3-v1.1-release/RELEASE-RECORD.md`
+- CS execution report: `governance/2026-06-10_paper3-v1.1-release/CS-EXECUTION-REPORT.md`
+- Senior independent confirmation: PENDING (handoff per v1.0 pattern).
+
+The full Draft ladder (`Draft 1 → Draft 2 → Draft 3 → Team Lead review → RC → tag paper3-certification-protocol-v1.1`) ran to completion 2026-06-10. The "Draft 2.1" working label was retired by Team Lead naming correction and never entered the release.
 
 **Draft history (Manager-directed seat: outgoing Senior carries v1.1 to completion):**
 - **Draft 1** — incoming-Senior seat. Reviewed by Manager + outgoing Senior; conforming on all 8 scope items; three findings (mandatory `compositional-<space>seam` typo fix; Team Lead-routed Q2 renumbering; optional D2b sharpening).
@@ -147,9 +160,8 @@ The released `paper3-certification-protocol-v1.0` is **lock-eligible** but lock-
 | Question | Owner | Status |
 |---|---|---|
 | Deliver v0.7 referee report + v1.0 external review for G1 closure | Senior | **Delivered 2026-06-10**; G1 closed |
-| Paper 3 v1.1 manuscript drafts | Senior (outgoing seat carrying to completion per Manager 2026-06-10) | **Draft 3 staged on Senior side** (adopts the three CS soft observations from Draft 2 review). Awaiting Senior G1 SEND-TO-CS enumeration + Team Lead review pass. Q2 adjudicated Option A. "Draft 2.1" label retired per Team Lead naming correction. |
-| Paper 3 v1.1 RC delivery | Senior | Pending Team Lead review pass on Draft 3; CS holds with release-rail checks preserved |
-| Paper 3 v1.1 release authorization | Manager | Pending; v1.1 release/tag/lock-eligibility blocked until issued |
+| Paper 3 v1.1 manuscript drafts | (closed) | **RELEASED 2026-06-10** at commit `f769c03` + tag `paper3-certification-protocol-v1.1`. Full ladder Draft 1 → Draft 2 → Draft 3 ran to completion. |
+| Paper 3 v1.1 Senior independent confirmation | Senior | Pending; standing handoff per v1.0 pattern (verify tag, tag→commit, tagged blob == main blob, framework identifier, v1.0 superseded-released, no unintended drift) |
 | Paper 3 candidate selection memo (Lane 1) | Manager | Open; no deadline |
 | **Paper 3 Lane 1a — certification-window occupancy sweep** (proposed Senior 2026-06-10, accepted by Manager "in principle"; undecided for execution) | Manager | Open; **pre-candidate** lane per Team Lead 2026-06-10 placement correction. Sequence: Paper 3 v1.1 release → Lane 1a sweep (if authorized) → candidate selection (Lane 1) → threshold-sheet lock (Lane 2). Requires its own Manager authorization packet; needs no locked sheet and no B1 v2.1. CS ladder construction is NOT pre-authorized — would require separate authorization packet if Manager opens the lane. Four binding design conditions: (1) sweep data informs candidate selection only, never threshold values; (2) sweep does not mint a certifiable band — SYNTHETIC visual bands only; (3) v1.1 must release before sweep launch; (4) sweep pre-registers ladder, N, diagnostics, and fixed outcome wording before launch. |
 | Scaling and tooling posture (tool vs. instrument) | Team discussion | Filed 2026-06-09; not yet held |

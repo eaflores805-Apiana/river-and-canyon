@@ -615,6 +615,57 @@ Paper 3 (*Certification Before Retention*) released to `main` per Manager author
 
 — CS Engineer, 2026-06-10
 
+---
+
+## Paper 3 v1.1 Release — 2026-06-10
+
+Paper 3 v1.1 (manuscript-only remediation of v1.0 under the v1.1 scope authorization of 2026-06-10) released to `main` per Manager authorization 2026-06-10.
+
+| Item | Value |
+|---|---|
+| Release commit SHA | `f769c03468bb3e39a29d10a406df4d7a59766531` |
+| Tag name | `paper3-certification-protocol-v1.1` |
+| Tag object SHA | `0b63b2ef10974a9e5ce2f7a0c28b11799649c566` |
+| Tagged manuscript blob (git, 40-hex) | `489d0744a43d35b600096661b4a666785ab73cee` |
+| Tagged manuscript sha256 | `b93f60a64c93134fff229466c92639bb2553e8e29e7ffd609551876675864089` |
+| Tagged PDF blob (git, 40-hex) | `0babd141dcad135130350bd0f6da78544100f1d1` |
+| PDF sha256 | `c7095f89ef9585d9a191f0749c1c30866677964a36ad1de162b4e94bf5393be7` |
+| Figures | unchanged from v1.0 release (4 PNG + 4 SVG, bit-identical to v1.0 tag) |
+
+**Paper 2 lesson incorporated.** The RC text IS the final v1.1 text; the commit that landed the manuscript is the commit that was tagged. Tagged blob == main blob — no divergence. Tag points at `f769c03`, which is the current HEAD of `main`.
+
+**v1.0 disposition.** The v1.0 tag and tagged manuscript are unmodified; v1.0 is now **superseded-released** per the H3 framework supersession rule introduced in this revision: lock-eligibility by default is now exclusively `paper3-certification-protocol-v1.1`. Use of v1.0 as a `framework_version` on a new threshold sheet is refused absent explicit written Manager authorization naming v1.0 and the specified purpose.
+
+**v1.1 scope items, all eight present in the released manuscript:** E1 three-mode D2; E2 D6 storage mapping; M1/M2 Appendix B [SYNTHETIC] satisfiability note; M3 §9 certifier operating characteristics; Q1 `reporting_mode` recording field; Q2 three quote-safe non-claim blocks per Team Lead Option A adjudication (Abstract / §6 / §10); H3 framework supersession rule; G1 strengthened transfer rule (governance, not manuscript text).
+
+**Three CS soft observations from the Draft 2 review (commit `21e33cc`) adopted into the released manuscript:**
+- A — D2b binding-vs-reported_only choice must be justified in threshold-sheet statistical plan
+- B — §5 cross-attempt clause: `full_profile` diagnostics may not derive or adjust subsequent attempts' thresholds
+- C — gate provenance table header "Documented motivating record — ancestry, not validation"
+
+**Pre-release verification chain (all PASS):**
+- Source RC manuscript bit-identity vs. Senior G1 enumeration: PASS (`b93f60a6…`)
+- Source RC PDF bit-identity vs. Senior G1 PDF enumeration: PASS (`c7095f89…`)
+- All four PNG figure hashes bit-identical to v1.0 release: PASS
+- Vehicle-decision sentence present under whitespace-collapsed identity: PASS
+- Three-block non-claim functional alignment per Q2 Option A: PASS
+- Framework target `paper3-certification-protocol-v1.1` present; v1.0 identifier appears only in H3 supersession-rule sentence: PASS
+- Post-commit blob hash == content hash for both md and pdf: PASS
+- Tag blob == main blob (Paper 2 lesson check): PASS
+- Senior G1 SEND-TO-CS for manuscript (Draft 3) verified CS-side at commit `7585afd`
+- Senior G1 SEND-TO-CS for PDF (Option A) verified CS-side at this release commit
+
+**Boundaries unchanged.** This release does NOT authorize Lane 1a execution, ladder construction, candidate selection, candidate ranking, threshold-sheet population, threshold lock, certification evaluation, new runs, INT8/INT4 stress, multi-model execution, B1 v2.1 implementation, Claim C activation, Fork A reactivation, Paper 3 application, Paper 6 activation, or public benchmark packaging. All execution gates remain closed. v1.1 lock-eligibility is a precondition, not an authorization.
+
+**Governance records for this release:**
+- `governance/2026-06-10_paper3-v1.1-release/RELEASE-RECORD.md` — this release
+- `governance/2026-06-10_paper3-v1.1-release/CS-EXECUTION-REPORT.md` — post-release CS execution report
+- Senior G1 delivery notes (audit trail; held in Senior working area until v1.1 review archive opens): `G1-DELIVERY-NOTE-DRAFT3.md` and `G1-DELIVERY-NOTE-RC-PDF.md`
+- `governance/2026-06-09_paper3-threshold-framework-review/` — full review arc (Draft 1 → Draft 2 → Draft 3)
+- `governance/2026-06-10_paper3-v1.0-release/MANAGER-AUTHORIZATION-v1.1-SCOPE.md` — v1.1 scope authorization
+
+— CS Engineer, 2026-06-10
+
 **Instrument status:** LOCKED.  
 - Dual scorer (`strict_format_score` + `content_slot_score`) pre-registered and unit-tested.
 - Three-axis scorer (scaffold_class / format_class / content_class) implemented for Exp 8.
