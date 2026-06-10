@@ -16,15 +16,18 @@ Read the two in order; the second assumes the first.
 
 ## The metrology papers
 
-Running the baseline tier of the program above produced two evidence-bound papers that stand on their own, without the analogy — a matched pair, method and first result.
+Running the baseline tier of the program above produced three evidence-bound papers that stand on their own, without the analogy — the method, its first result, and the certification protocol that gates any future stress reading.
 
 **Survival Is Not Correctness** — the metrology *method*. A staged, fail-closed protocol for stress-retention evaluation. It makes operational the one blind spot the speculative work left standing: a capability that *survives* stress is not thereby *correct*, so a retention number that does not log baseline-correctness, stressed-correctness, and same-error identity together can score stable wrong behavior as robustness.
 → [`papers/paper1-survival-is-not-correctness/`](papers/paper1-survival-is-not-correctness/) — Markdown and PDF; figures in `assets/`.
 
-**Correctness Is Not Constructibility** — the first *result* built on that method (release candidate). Pre-stress baseline mapping of a two-hop construction on one 3B model at full precision: surface correctness is not constructibility, and the tested construction's constructibility floor is structured, bounded, and mappable but **not cleared**. That floor is the precondition any compression-stress reading depends on, so the result sits *upstream* of the seam, not on it. The compression seam itself remains unrun and unclaimed.
+**Correctness Is Not Constructibility** — the first *result* built on that method (released, v1.0). Pre-stress baseline mapping of a two-hop construction on one 3B model at full precision: surface correctness is not constructibility, and the tested construction's constructibility floor is structured, bounded, and mappable but **not cleared**. That floor is the precondition any compression-stress reading depends on, so the result sits *upstream* of the seam, not on it. The compression seam itself remains unrun and unclaimed.
 → [`papers/paper2-correctness-is-not-constructibility/`](papers/paper2-correctness-is-not-constructibility/) — Markdown and PDF; figures in `figures/`.
 
-These two are the *metrology* pair (method ↔ first result); the two essays above are the *analogy* pair (the picture ↔ what the water carves). The analogy pair points; the metrology pair reports only what the evidence earns.
+**Certification Before Retention** — the certification *protocol* (released, v1.0). Papers 1 and 2 leave a gap: even a correct, constructible single-hop baseline is not automatically a valid *substrate* for retention measurement. This paper closes it with a fail-closed conjunction of seven pre-registered gates (D1–D7) — correctness above emission bias, shortcut resistance, strict-scoring stability, abstention calibration, load matching, runner-backed provenance, and a sensitivity/power floor — with a locked per-candidate threshold sheet, a data-access firewall, and negative certification as a result of record. It ships the ruler; applying it to any candidate remains separately unauthorized, and no candidate has been certified.
+→ [`papers/paper3-certification-before-retention/`](papers/paper3-certification-before-retention/) — Markdown and PDF; figures in `figures/`.
+
+These three are the *metrology* set (method ↔ first result ↔ certification gate); the two essays above are the *analogy* pair (the picture ↔ what the water carves). The analogy pair points; the metrology set reports only what the evidence earns.
 
 ## Notes and proposals
 
