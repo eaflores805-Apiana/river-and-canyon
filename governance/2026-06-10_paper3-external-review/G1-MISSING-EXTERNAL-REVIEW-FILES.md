@@ -1,10 +1,17 @@
 # G1 Transfer Follow-Up — Missing External-Review Files
 
+> **SUPERSEDED by `G1-CLOSURE-NOTE.md` (this directory), 2026-06-10.**
+> Both outstanding files (`REFEREE-REPORT-v0.7.md` and `EXTERNAL-REVIEW-v1.0.md`) have
+> since been delivered to CS and committed at the intended repo path. The G1 governance
+> finding is closed. This record remains in place as the audit trail of the partial-open
+> period and the transfer-failure pattern it surfaced; do not interpret its content as
+> current status.
+
 **Date:** 2026-06-10
 **From:** CS Engineer
 **To:** Senior Engineer (action requested); Cc: Team Lead, Manager
 **Re:** Paper 3 external-review record — G1 closure partially open pending two file deliveries
-**Status:** G1 NOT closed. Two files remain outstanding.
+**Status:** ~~G1 NOT closed. Two files remain outstanding.~~ **SUPERSEDED — see closure note above.**
 
 ---
 

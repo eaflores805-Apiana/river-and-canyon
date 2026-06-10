@@ -2,7 +2,7 @@
 
 **From:** CS Engineer (outgoing session)
 **To:** Next CS Engineer (human or AI)
-**Status:** Current as of session cutover. Reflects Paper 3 v1.0 RELEASED, B1 v2 LOCKED, Paper 3 v1.1 remediation lane AUTHORIZED (manuscript-only), G1 partially open.
+**Status:** Current as of session cutover. Reflects Paper 3 v1.0 RELEASED, B1 v2 LOCKED, Paper 3 v1.1 remediation lane AUTHORIZED (manuscript-only), G1 CLOSED (external-review files delivered and committed).
 
 ---
 
@@ -67,7 +67,11 @@ A behavioral stress-metrology program for LLMs. Three papers released, one in ac
 **Status:** Open; filed at `governance/2026-06-09_scaling-discussion-item/`. No decisions held.
 
 ### G1 — governance transfer follow-up
-**Status:** **Partially open.** External-review records: Senior disposition committed at `governance/2026-06-10_paper3-external-review/SENIOR-DISPOSITION.md`; v0.7 referee report and v1.0 external review **NOT delivered to CS yet**. Follow-up note: `governance/2026-06-10_paper3-external-review/G1-MISSING-EXTERNAL-REVIEW-FILES.md`. Senior to deliver missing files.
+**Status:** **CLOSED 2026-06-10.** All three external-review record components committed at `governance/2026-06-10_paper3-external-review/`:
+- `SENIOR-DISPOSITION.md` — Senior disposition of v0.7 referee report
+- `REFEREE-REPORT-v0.7.md` — Senior-authored v0.7 referee report (delivered late-session)
+- `EXTERNAL-REVIEW-v1.0.md` — Senior external review of v1.0 (delivered late-session)
+Closure note: `governance/2026-06-10_paper3-external-review/G1-CLOSURE-NOTE.md`. Partial-open record (`G1-MISSING-EXTERNAL-REVIEW-FILES.md`) marked as superseded by inline header note; kept as audit trail. Strengthened transfer rule per Senior intake §8 now in force: SEND-TO-CS is intent; delivery is confirmed commit SHA at intended path; multi-file SEND-TO-CS markers must enumerate.
 
 ---
 
@@ -84,7 +88,7 @@ A behavioral stress-metrology program for LLMs. Three papers released, one in ac
 ## 4. What's pending for CS
 
 **Active obligations:**
-- **G1 follow-up.** When Senior delivers `REFEREE-REPORT-v0.7.md` and the v1.0 external review record, commit them at `governance/2026-06-10_paper3-external-review/` and file `G1-CLOSURE-NOTE.md` retiring the current missing-files record.
+- **G1 follow-up.** ~~When Senior delivers `REFEREE-REPORT-v0.7.md` and the v1.0 external review record, commit them at `governance/2026-06-10_paper3-external-review/` and file `G1-CLOSURE-NOTE.md` retiring the current missing-files record.~~ **CLOSED 2026-06-10.** Both files delivered late-session and committed; closure note filed; missing-files record marked as superseded by inline header.
 - **Paper 3 v1.1 reviews.** When Senior delivers v1.1 drafts (likely starting with v1.0.x or v1.1-draft-1), review per the substantive-vs-editorial cadence rule in memory. File reviews at `governance/2026-06-09_paper3-threshold-framework-review/` following the established `CS-REVIEW-PAPER3-DRAFT-V*.md` naming.
 - **Paper 3 v1.1 release execution.** When Senior delivers RC and Manager authorizes, follow the same 10-step procedure CS used for v1.0 (procedure template at `governance/2026-06-10_paper3-v1.0-release/CS-COMMIT-AND-TAG-PROCEDURE.md`). Tag will be `paper3-certification-protocol-v1.1`.
 
@@ -118,7 +122,7 @@ The released `paper3-certification-protocol-v1.0` is **lock-eligible** but lock-
 
 | Question | Owner | Status |
 |---|---|---|
-| Deliver v0.7 referee report + v1.0 external review for G1 closure | Senior | Pending |
+| Deliver v0.7 referee report + v1.0 external review for G1 closure | Senior | **Delivered 2026-06-10**; G1 closed |
 | Paper 3 v1.1 manuscript drafts | Senior | Pending (lane authorized; no draft yet) |
 | Paper 3 candidate selection memo | Manager | Open; no deadline |
 | Scaling and tooling posture (tool vs. instrument) | Team discussion | Filed 2026-06-09; not yet held |
