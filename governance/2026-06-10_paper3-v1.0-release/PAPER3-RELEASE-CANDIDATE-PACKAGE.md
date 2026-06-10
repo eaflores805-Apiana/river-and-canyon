@@ -22,19 +22,19 @@ Design note (lesson from Paper 2's release): this RC *is* the final v1.0 text. O
 commits these files and tags that commit — no post-tag masthead flip, so the tagged blob and the on-main
 blob are identical at release.
 
-## 2. sha256 manifest (first 16 hex; CS to recompute full values independently)
+## 2. sha256 manifest (full 64-hex; md/pdf values independently computed by CS and Senior — match verified 2026-06-10, two-person rule satisfied for release artifacts)
 
 ```
-md : b948521ebab74b3a   PAPER3-certification-before-retention-RC-v1.0.md
-pdf: 6223cf85a65f1bc6   certification-before-retention-RC-v1.0.pdf
-png: 92e3df1de5f5453a   fig1_series_gap_ladder.png
-png: 7c2a7ca671ac7981   fig2_lineage_to_gates.png
-png: bd3ac23bd228d416   fig3_failclosed_pipeline.png
-png: ce9ad944f256e19e   fig4_three_artifact_layers.png
-svg: d78f3148a7336096   fig1_series_gap_ladder.svg
-svg: 404057ca715964e0   fig2_lineage_to_gates.svg
-svg: b5c55151ce0b1441   fig3_failclosed_pipeline.svg
-svg: 0820aca8bfe4c66b   fig4_three_artifact_layers.svg
+md : b948521ebab74b3a225a98509a07488c0f1a4c86d1802d46796e57b2d361e714   PAPER3-certification-before-retention-RC-v1.0.md
+pdf: 6223cf85a65f1bc6fe4621f717997e6b8d2b253b6156951715d6d30005080d8f   certification-before-retention-RC-v1.0.pdf
+png: 92e3df1de5f5453a511cf2723d185a363b61ffc3852210e255f0e01bcec082ac   fig1_series_gap_ladder.png
+png: 7c2a7ca671ac7981e52fc50e19d66f29bb343e50afb1eb2c5608ebff0a74f9b5   fig2_lineage_to_gates.png
+png: bd3ac23bd228d416e6e69036ad4b83801304007ab94ec687ddefd4ca2fd737a0   fig3_failclosed_pipeline.png
+png: ce9ad944f256e19e2f06ef82285ed528b087a0ad41326ffade0474f186214970   fig4_three_artifact_layers.png
+svg: d78f3148a733609623d0d3196a3d1961963e33557d99ee42199c5517edce323e   fig1_series_gap_ladder.svg
+svg: 404057ca715964e0bae4343a4a324b2c33f0d94c867b5735aed7a9976b78547e   fig2_lineage_to_gates.svg
+svg: b5c55151ce0b1441de4d16f7ff984e73448086715413c8eca86fe0683f288df8   fig3_failclosed_pipeline.svg
+svg: 0820aca8bfe4c66baa8822964cd095ba3f3441cdaf53ba5d992e3dd9f31ec1ee   fig4_three_artifact_layers.svg
 ```
 
 ## 3. CS release-consistency verification checklist (10 points)
