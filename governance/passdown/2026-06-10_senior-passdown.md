@@ -3,7 +3,50 @@
 *Written by Senior Engineer (Claude) for the next session's instance. Paste at the top of the new chat
 or keep in project knowledge. Authoritative state lives in the repo; this is the orientation layer.*
 
-## 0. Role and routing (unchanged, load-bearing)
+## 0a-PRE. CURRENT STATE ADDENDUM (supersedes stale lines below where they conflict)
+
+- **Paper 3 v1.1 Draft 1 exists** (produced by the incoming Senior seat; reviewed, conforming).
+- **Paper 3 v1.1 Draft 2 exists** — produced by the OUTGOING Senior seat per explicit Manager direction
+  of 2026-06-10 (the incoming Senior starts clean at the next task boundary; this supersedes the
+  earlier "Draft 2 is owned by the incoming Senior seat" routing). Draft 2 is in team review; it is not
+  committed (drafts commit at RC per the rail).
+- **The failure-mode review standard applies to Draft 2 review** (Team Lead summary §8: the
+  twelve-question battery; "a control is not structural because we describe it structurally — it is
+  structural only when it has an enforcement vehicle, owner, and audit artifact").
+- **Vehicle principle (preserved): reports get errata; instruments get revisions.** Paper 2 took a
+  release-record memo because it is a report; Paper 3 requires framework revisions because it is a
+  specification instrument — threshold sheets lock against its identifier.
+- **The v1.1 pre-tag sentence check is whitespace-collapsed, not byte-exact** (soft-wrapped source can
+  split the vehicle sentence across lines; a byte-exact check would false-block a clean RC).
+- **Q2 numbering requires explicit Team Lead adjudication** before RC: the quote-safe blocks rule names
+  Abstract/§6/§9; Draft 1/2 correctly place certifier-limits at §9 and non-claims at §10. Options and
+  recommendation in the Draft 2 submission memo §1.
+- **Lane 1a remains proposed and not authorized** (tightened doctrine in the project map: rule-out
+  only; unordered survivors; negative-use only; no gate-verdict labels; no positive visual artifacts).
+- **All execution gates remain closed.**
+
+## 0a. READ THIS FIRST — your position and your first task
+
+You are the **Senior Engineer** on this program (full role definition in §0b below). The previous
+session closed with **everything green**: Papers 1–3 released and verified; B1 v2 locked; the G1
+governance finding CLOSED (commit `ec8b13d`, both external-review files byte-verified); all execution
+gates closed; nothing in flight.
+
+**Your first task — already authorized, start immediately:** draft **Paper 3 v1.1** (manuscript-only
+remediation). Authorization: Manager, 2026-06-10
+(`governance/2026-06-10_paper3-v1.0-release/MANAGER-AUTHORIZATION-v1.1-SCOPE.md`). Implementation
+spec: the Team Lead feedback synthesis + the refined annex in
+`governance/2026-06-10_paper3-v1.0-release/PAPER3-KNOWN-ISSUES-AND-DEFERRALS.md` §7. The full scoped
+checklist is in the FIRST-TASK block in §3 of this passdown — begin with **three-mode D2** (D2a
+max-single dummy floor / D2b declared-policy union envelope / D2c pattern departure, with the verbatim
+non-claim). Base text: the released v1.0 manuscript at tag `paper3-certification-protocol-v1.0`
+(byte-identical copy in Manager's downloads as PAPER3-certification-before-retention-RC-v1.0.md).
+Rail: draft → team review → RC-is-final-text → tag `paper3-certification-protocol-v1.1`.
+**Still closed:** candidate selection, thresholds (except SYNTHETIC non-binding illustrations),
+certification evaluation, all runs, B1 v2.1 implementation. Do not reopen v1.0, the release mechanics,
+or G1.
+
+## 0b. Role and routing (unchanged, load-bearing)
 
 You are "Senior Engineer" on E. A. Flores's (Elias / Manager, Apiana AI, Inc. — "Inc." with comma)
 behavioral stress-metrology program. Sign substantive replies "— Senior Engineer." Team messages arrive
@@ -45,6 +88,15 @@ moved to evidence side; positive-control battery sensitivity; two-person hash ru
 semantics + §2 smoothing + soft-wrap reflow, content flat-identical). Figures: 4 (PNG+SVG),
 matplotlib build pattern; QA cost 4 image views; lesson: blind layout fixes regress — placement changes
 earn a view. The framework identifier is now lock-eligible as a PRECONDITION, not an authorization.
+**Post-release closure state (end of session):** known-issues intake accepted as erratum-class; v1.1
+scope Manager-AUTHORIZED; governance batch committed at `87b99a4` (intake, authorization, Senior
+disposition, both passdowns); root README/STATUS/REVIEW committed by Manager directly at `f0c3012`;
+**G1 CLOSED at `ec8b13d`** — external-review record complete at
+`governance/2026-06-10_paper3-external-review/` (SENIOR-DISPOSITION.md + REFEREE-REPORT-v0.7.md
+sha256 `0c32b961…` + EXTERNAL-REVIEW-v1.0.md sha256 `3d80f281…` + G1-CLOSURE-NOTE.md; superseded
+partial-open note kept as audit trail). Repo copies of this passdown live at
+`governance/passdown/2026-06-10_senior-passdown.md` (Senior) and `…_passdown-letter.md` (CS); the
+chat-delivered copy of this file supersedes the repo copy until CS refreshes it.
 **Parked, Manager/Team-Lead-gated (external-review disposition, never adopted):** worked synthetic
 example (needs Manager sign-off re: illustrative numbers vs no-threshold-values lock), D1×D7 squeeze
 subsection, dual-mode D2 (performance floor + pattern departure — protocol change, version increment),
@@ -96,7 +148,7 @@ authorization), 5 (every paper has a negative-result form) intact. Merging B1 di
   Future Paper 4 = applying the protocol: candidate-selection memo → pre-registered threshold sheet
   locked against `paper3-certification-protocol-v1.0` → separate run authorization.
 - Team Lead: status-board upkeep; owns acceptance of any future protocol revision.
-- CS: holding for next authorization. B1 v2.1 backlog (9 items, bundled "Paper 3 substrate completion":
+- CS: **holding for Senior v1.1 drafts** (their stated posture). G1: CLOSED 2026-06-10 (`ec8b13d`). B1 v2.1 backlog (9 items, bundled "Paper 3 substrate completion":
   evidence_artifact_path, decoding_settings_hash, per-item log schema, N_effective enforcement,
   draft-vs-released framework check `-v0.* refuse / -v1.*+ proceed`, lock/access timestamps, firewall
   status fields, D4 applicability fields per gate record) — future candidate-stage work, NOT authorized.

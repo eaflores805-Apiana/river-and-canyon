@@ -47,18 +47,37 @@ identifier lock-eligible). Rail: draft → team review → RC-is-final-text → 
 candidate family (hop2-class is the documented obvious family; choice is the Manager's), evaluated
 afresh under B1 — inherited artifacts are ineligible by the protocol's own rule.
 
-**Lane 1a — Manager gate (proposed 2026-06-10, undecided): feasibility sweep.** An
-instrument-validation mapping run — explicitly NOT certification, no locked sheet, no certification
-claim derivable — across a small ladder of single-hop difficulty variants (distractor count, key
-confusability, context load) at FP16, n≈96, producing an occupancy map of where rungs land on the
-certification-relevant axes. Design conditions (Senior, accepted by Manager in principle):
-(a) pre-registered sweep protocol with both outcome wordings fixed before launch; (b) hard rule —
-sweep data may inform candidate SELECTION, never threshold VALUES (thresholds derive only from
-pre-registered derivation rules, provenance documented at lock); (c) sequenced AFTER v1.1 so the
-diagnostics are three-mode D2; (d) any reporting band is SYNTHETIC-labeled — the sweep mints no
-de facto thresholds. Negative outcome is publishable under the negative-result lock: "the
-certification window, while logically nonempty, was unoccupied for this task family at this scale."
-Requires Manager run authorization + CS ladder construction; needs no locked sheet and no B1 v2.1.
+**Lane 1a — Manager gate (proposed, tightened by Team Lead doctrine 2026-06-10, undecided):
+feasibility sweep / reconnaissance.** An instrument-validation mapping run — NOT certification, no
+locked sheet, no certification claim derivable. Governing doctrine: **Lane 1a may rule out; it may not
+rule in.** It may eliminate clearly non-viable regions; non-eliminated regions remain an UNORDERED
+survivor set; it may not rank, recommend, shortlist, or positively favor any construction, may not
+shape thresholds, and may not reduce later candidate-selection rigor. Conditions (Team Lead final set):
+(1) sweep outputs inform candidate selection only as coarse elimination; (2) classifications are
+descriptive and pre-registered, referenced to construction-intrinsic quantities (chance, max declared
+dummy policy, declared-policy union envelope, ceiling, headroom) — never gate-verdict labels
+("fails D1/D2" prohibited; use e.g. accuracy_indistinguishable_from_token_prior,
+insufficient_measurement_headroom, requires_further_investigation — neutral, not "promising");
+(3) sequence: Paper 3 v1.1 releases FIRST; diagnostics use v1.1 gate-relevant quantities incl.
+three-mode D2; (4) pre-register ladder, N, axes, classification criteria, fixed outcome language, and
+regression-expectation language before launch; (5) consumption-side enforcement: sweep outputs are
+carved OUT of D6's historical-information allowance — selection-rationale-only, never threshold-design
+input; (6) runs under B1 v2 provenance (hashed manifests, locked artifacts); needs no B1 v2.1 and no
+locked sheet; (7) winner's-curse warning: a construction selected after the sweep is expected to
+certify worse than it swept — regression during fresh certification is not instrument failure and must
+not be used to tune thresholds. Visuals: NO heat maps, contours, smoothed curves, fitted boundaries,
+threshold lines, certification bands, viability overlays, or promising-region annotations — only
+unannotated per-rung diagnostic points, discrete categorical markers, and auditable tables. Artifacts
+carry `artifact_class: lane-1a-reconnaissance` / `certification_relevance: none`; B1 v2.1 backlog
+includes rejecting Lane 1a artifacts as threshold/certification evidence (manual review rejection until
+then). Doctrine summary (verbatim, for audit): Lane 1a may rule out. Lane 1a may not rule in. Lane 1a
+remains proposed and Manager-gated. Lane 1a is pre-candidate, not post-candidate. Non-eliminated
+regions remain an unordered survivor set. Lane 1a outputs are negative-use only. Lane 1a may not rank,
+recommend, shortlist, positively favor, certify, or inform thresholds. Lane 1a must not use
+gate-verdict-shaped labels. Lane 1a must not create positive visual artifacts such as heatmaps,
+contours, certification bands, or promising-region overlays. Lane 1a must use B1 v2 provenance capture
+if ever separately authorized. The negative outcome remains publishable: "the certification window, while logically nonempty,
+was unoccupied for this task family at this scale."
 
 **Lane 2 — Manager gate: threshold-sheet population + lock.** Pre-registered per-candidate sheet
 locked against the latest released framework identifier (v1.1 per H3); two-person hash verification;

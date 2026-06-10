@@ -70,12 +70,22 @@ A behavioral stress-metrology program for LLMs. Three papers released, one in ac
 ### Scaling / tooling discussion item
 **Status:** Open; filed at `governance/2026-06-09_scaling-discussion-item/`. No decisions held.
 
-### G1 — governance transfer follow-up
-**Status:** **CLOSED 2026-06-10.** All three external-review record components committed at `governance/2026-06-10_paper3-external-review/`:
+### G1 — governance transfer follow-up (and v1.1 handoff batch)
+
+**External-review record:** **CLOSED 2026-06-10.** All three external-review record components committed at `governance/2026-06-10_paper3-external-review/`:
 - `SENIOR-DISPOSITION.md` — Senior disposition of v0.7 referee report
 - `REFEREE-REPORT-v0.7.md` — Senior-authored v0.7 referee report (delivered late-session)
 - `EXTERNAL-REVIEW-v1.0.md` — Senior external review of v1.0 (delivered late-session)
 Closure note: `governance/2026-06-10_paper3-external-review/G1-CLOSURE-NOTE.md`. Partial-open record (`G1-MISSING-EXTERNAL-REVIEW-FILES.md`) marked as superseded by inline header note; kept as audit trail. Strengthened transfer rule per Senior intake §8 now in force: SEND-TO-CS is intent; delivery is confirmed commit SHA at intended path; multi-file SEND-TO-CS markers must enumerate.
+
+**v1.1 handoff batch (Senior redelivery 2026-06-10):** Senior issued an enumerated multi-file redelivery note (`G1-REDELIVERY-NOTE-2026-06-10.md` archived in this directory) per the strengthened rule. CS-verified bit-identity against Senior's enumerated hashes for all 5 items in batch:
+- ✓ **Committed:** `2026-06-10_project-map.md` (`sha256:f4886a98...`) — tightened Lane 1a doctrine present
+- ✓ **Committed:** `2026-06-10_senior-passdown.md` (`sha256:e0444f8c...`) — failure-mode standard reference present; Manager-corrected on Draft 2 seat ownership (outgoing seat produced Draft 2; incoming Senior starts clean at next task boundary)
+- ⊘ **Held by name:** `RESPONSE-TO-INCOMING-SENIOR-DRAFT1.md` (`sha256:46ca2927...`) — to be archived at `governance/2026-06-10_paper3-v1.1-review/` when v1.1 review directory opens
+- ⊘ **Held until RC:** `PAPER3-certification-before-retention-DRAFT2-v1.1.md` (`sha256:154da802...`) — commits at RC per release rail, not before
+- ⊘ **Held for archive:** `PAPER3-v1.1-DRAFT2-SUBMISSION-MEMO.md` (`sha256:a7512f1a...`) — to be archived with v1.1 review records
+
+Team Lead's earlier expected hash prefixes (`13377b12` / `19d81157` / `d3919288`) are stale per Senior's redelivery note §1 ("hashes changed today"); the current canonical hashes are the ones above and now committed.
 
 ---
 
