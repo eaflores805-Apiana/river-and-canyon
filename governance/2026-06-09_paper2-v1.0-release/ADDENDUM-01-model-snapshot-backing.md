@@ -46,9 +46,14 @@ historically asserted.**
 
 ## 4. Side result recorded with it
 
-The mlx_lm version-drift caveat (Paper 2 lock 0.19.3 vs. current 0.31.3) is **retired** on the same
-evidence: 96/96 bit-identity under deterministic decoding for Qwen2.5-3B-Instruct. Retirement was the
-pre-registered top-tier outcome of the regression's interpretation rule, fixed before launch.
+mlx_lm 0.19.3 → 0.31.3 was **verified-null for the locked Paper 2 reproduction configuration**: same
+model, tokenizer, prompt path, scorer, manifest, deterministic decoding, and reproduction surface.
+The 96/96 bit-identical reproduction is the evidence. Version drift remains a provenance variable
+for any changed configuration.
+
+*Editorial correction 2026-06-10 (CS, per Team Lead 2026-06-10 wording standardization):* this
+section originally used "retired" wording. Replaced with the canonical phrasing above. No claim,
+hash, or scientific content changed; only the wording standard.
 
 ## 5. Effectivity
 
