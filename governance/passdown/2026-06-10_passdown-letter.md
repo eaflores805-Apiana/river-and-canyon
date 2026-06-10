@@ -124,7 +124,8 @@ The released `paper3-certification-protocol-v1.0` is **lock-eligible** but lock-
 |---|---|---|
 | Deliver v0.7 referee report + v1.0 external review for G1 closure | Senior | **Delivered 2026-06-10**; G1 closed |
 | Paper 3 v1.1 manuscript drafts | Senior | Pending (lane authorized; no draft yet) |
-| Paper 3 candidate selection memo | Manager | Open; no deadline |
+| Paper 3 candidate selection memo (Lane 1) | Manager | Open; no deadline |
+| **Paper 3 Lane 1a — feasibility sweep authorization** (proposed Senior 2026-06-10, accepted by Manager "in principle"; undecided for execution) | Manager | Open; sequenced AFTER v1.1 release per Senior design conditions; requires Manager run authorization + CS ladder construction; needs no locked sheet and no B1 v2.1 |
 | Scaling and tooling posture (tool vs. instrument) | Team discussion | Filed 2026-06-09; not yet held |
 | Whether to commit root doc updates as CS or user-owned | User (Manager-equivalent for this) | Currently user-owned per 2026-06-10 instruction |
 
