@@ -1,0 +1,7 @@
+You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>
+If no answer can be determined from the facts, respond: ANSWER: NULL
+
+Facts:
+{CONTEXT}
+
+Question: {QUERY}
