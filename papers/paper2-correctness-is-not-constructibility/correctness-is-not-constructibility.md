@@ -2,7 +2,7 @@
 
 **E. A. Flores** · Apiana AI, Inc.
 
-**Release candidate.** River and Canyon program. Companion to *Survival Is Not Correctness: A
+**v1.0.** River and Canyon program. Companion to *Survival Is Not Correctness: A
 Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation* (Paper 1). Experimental values and
 artifact hashes are attested from the locked run records and listed in Appendix B; CS independently recomputed them for the freeze/tag pass.
 
