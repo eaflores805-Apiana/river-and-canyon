@@ -5,11 +5,14 @@
 ## Locked file hashes (this directory)
 
 ```
-code/runner_b1_v2.py            sha256:f5be33b34f59925b48e674293ae8d05f894639c49d188b98ddff01bbed00d981
+code/runner_b1_v2.py            sha256:7f5efdcbf8a51a9368ee1868be7bcb734fb4ceeedbe580f29f9ff2ac87f90fe6
 code/structural_proxies.py      sha256:96dd1e0ddfbc27ab34b908a0b6d881738b7d8bb8ee28c90cdca28ebbea49626a
 code/test_b1_harness.py         sha256:e81c11c9aab8fd26219a9161dd230aa681f39f2c573aed573f1e9215e644e37c
-code/paper2_regression.py       sha256:f9d92350133efbcf9d8ce90438b6b835086d7e83197797e5e91b60d22a6b7248
+code/paper2_regression.py       sha256:86d6fe53279ebba214f4c04f462568c631836243b5521c278e529b3f938dc5ee
 ```
+
+(runner and paper2_regression hashes updated 2026-06-09 after smoke commit
+e4322b0; prior values were the initial commit 1aefc85 values.)
 
 ## Inherited file hashes (copies from tier0-run/, hash-verified)
 
@@ -35,27 +38,30 @@ are untouched. The runner verifies these hashes against the expected values at b
 | mlx_lm (at implementation) | 0.31.3 |
 | mlx_lm (Paper 2 lock) | 0.19.3 |
 
-**Version drift note (RETIRED 2026-06-09):** Paper 2 v1.0 was produced with mlx_lm 0.19.3.
-The current environment runs 0.31.3. Cross-version drift was a recorded concern at
-implementation. The full Paper 2 regression (`paper2_regression.py --mode full`,
-2026-06-09) found **96/96 raw_output records bit-identical** to the Paper 2 v1.0
-reference (`RESULTS-TWOHOP-L1-cell03-1780948339.json`, sha256 f29783622f...). All gate
-decisions matched. The version-drift caveat is therefore retired: mlx_lm 0.19.3 and
-0.31.3 produce bit-identical inference for Qwen2.5-3B-Instruct under deterministic
-greedy decoding (temp=0.0, max_tokens=16).
+**Version drift note (verified bit-identical 2026-06-09 within scope tested):** Paper 2
+v1.0 was produced with mlx_lm 0.19.3. The current environment runs 0.31.3.
+Cross-version drift was a recorded concern at implementation. The full Paper 2
+regression (`paper2_regression.py --mode full`, 2026-06-09) found **96/96 raw_output
+records bit-identical** to the Paper 2 v1.0 reference
+(`RESULTS-TWOHOP-L1-cell03-1780948339.json`, sha256 f29783622f...) for this model
+(`Qwen/Qwen2.5-3B-Instruct`), snapshot (`aa8e7253...`), and decoding configuration
+(greedy, temp=0.0, max_tokens=16). This is a behavioral verification on the locked
+Cell03 manifest within the scope tested. It does not generalize to other models,
+snapshots, decoding configurations, or mlx_lm versions; future cases remain testable,
+not pre-cleared.
 
 ## Model snapshot status
 
 | Field | Value |
 |---|---|
 | model_id | `Qwen/Qwen2.5-3B-Instruct` |
-| HuggingFace snapshot (cached) | `aa8e72537993ba99e69dfaafa59ed015b17504d1` |
-| Snapshot status | **Asserted only** at this filing; runner-provenance backing produced when `paper2_regression.py --mode live` executes and records `model_snapshot_hash` (computed by `compute_model_snapshot_hash` over the snapshot directory). |
+| HuggingFace snapshot directory ID | `aa8e72537993ba99e69dfaafa59ed015b17504d1` (historically asserted by Paper 2 v1.0 release record) |
+| Snapshot-ID assertion | Historically asserted; runner-provenance backing produced by `paper2_regression.py --mode live` via `compute_model_snapshot_hash` over the snapshot directory. |
 | Locked tokenizer hash | `sha256:c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539` |
 
-The Paper 2 v1.0 release record documented the model snapshot as asserted-only with
-runner-provenance backing deferred to B1. B1 v2 implements the backing mechanism;
-backing is produced on the first live run.
+The Paper 2 v1.0 release record documented the snapshot ID as asserted-only with
+runner-provenance backing deferred to B1. B1 v2 implements the backing mechanism.
+Backing is produced on each live run and recorded in the provenance block.
 
 ## Authorization chain
 
@@ -88,13 +94,18 @@ Full regression (96 records):             PASS
   Output hash:    sha256:c9114c192dbaafc66d85babf6dacc62b9df8e4ffb87886fb868c875a202893f8
 ```
 
-## Model snapshot — runner-provenance backed (2026-06-09)
+## Model snapshot — runner-provenance backing recorded (2026-06-09)
+
+Per Team Lead 2026-06-09 corrected status:
+
+> "Correct wording: runner-provenance-backed via behavioral bit-identity;
+>  snapshot-ID assertion corroborated, historically asserted."
 
 | Field | Value |
 |---|---|
-| HuggingFace snapshot dir | `aa8e72537993ba99e69dfaafa59ed015b17504d1` |
-| Computed runner-provenance `model_snapshot_hash` | `sha256:abee745b7dfe399d9254dbcdea5e3e3...` |
-| Status at filing | Asserted only |
-| Status after full regression | **Runner-provenance-backed** — the asserted-only flag on the model snapshot in the Paper 2 v1.0 release record can be retired |
+| HuggingFace snapshot directory ID | `aa8e72537993ba99e69dfaafa59ed015b17504d1` |
+| Computed runner-provenance `model_snapshot_hash` (full) | `sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20` |
+| Original snapshot-ID assertion | Historically asserted in Paper 2 v1.0 release record; that historical record is unchanged. |
+| Backing status after full regression | **Runner-provenance-backed via behavioral bit-identity** — the snapshot ID is now corroborated by a runner-computed content hash and by 96/96 raw_output bit-identity to the Paper 2 v1.0 reference. The historical asserted-only status remains a fact of the original release record; what is added is corroboration, not replacement. |
 
 — CS Engineer, 2026-06-09
