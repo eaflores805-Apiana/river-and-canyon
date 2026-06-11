@@ -95,14 +95,22 @@ Total locked artifacts: 19 (was 18; sidecar schema is the +1).
 ## Lock timestamp
 
 ```text
-Lock timestamp: PENDING_TEAM_LEAD_REVIEW
+Lock timestamp: 2026-06-11T02:06:36Z
 ```
 
-Team Lead appends the RFC 3339 UTC value upon completion of combined
-adversarial review of design packet v0.3 + this remediated execution
-packet. Until appended, `lane1a_runner_wrapper.py preflight()` refuses
-to invoke (the `PENDING_TEAM_LEAD_REVIEW` sentinel triggers
-`FirstDataAccessGateError`).
+Team Lead appended this RFC 3339 UTC timestamp upon completion of the
+combined adversarial review (PASS) of design packet v0.3 + this
+remediated execution packet, filed at
+`governance/2026-06-10_lane1a/TEAMLEAD-COMBINED-REVIEW-PASS-2026-06-10.md`.
+
+The `first_data_access_timestamp` recorded by the wrapper at sweep
+time MUST postdate this lock timestamp. `lane1a_runner_wrapper.py
+preflight()` enforces this comparison.
+
+**First data access remains NOT AUTHORIZED until Manager reauthorizes
+against the remediated packet (Team Lead memo §7).** The lock
+timestamp is finalized; the gate is now waiting on Manager
+reauthorization, not on the lock timestamp.
 
 ## Unit-test verification (CS, 2026-06-10, post-remediation)
 
