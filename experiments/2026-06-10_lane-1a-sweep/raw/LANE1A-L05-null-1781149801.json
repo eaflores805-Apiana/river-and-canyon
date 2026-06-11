@@ -1,0 +1,156 @@
+{
+  "items": [
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-000",
+      "prompt_hash": "4800686b3d4e724f828417402adfa7349e88f967cfb3dc6b6036f784da2895f9",
+      "queried_key": "ktjdwr",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-001",
+      "prompt_hash": "e0cd77d1e9605afe92fb8983bbeb45b5a03253ab8d0665f640acd8be943189c5",
+      "queried_key": "mqepfx",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-002",
+      "prompt_hash": "c58350c54b91b81530c6afee9c3770ac28fe2512262727b0ac56205b52e7c305",
+      "queried_key": "kqqpev",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-003",
+      "prompt_hash": "02ddda6bd6f48d2cb1aeafcc1f37c84607b57fe600d9a9c25aa857f341d3cfa7",
+      "queried_key": "guzvzi",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-004",
+      "prompt_hash": "4d48a5ffe7c0e3e10ff95f5b22450e77d25a0e89bc1bcf3c3cd798cc4fa6030f",
+      "queried_key": "hzpfcs",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-005",
+      "prompt_hash": "161f87fe475b3b1f05c0506ba0b9eb6412cf73c334283f05b9d19345f598d7bd",
+      "queried_key": "ghehjy",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-006",
+      "prompt_hash": "625d65a614b5454bb3a2b5e90b28a07480b256c9cab8c9c6d1781d3c069f9c45",
+      "queried_key": "fmwgyj",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-007",
+      "prompt_hash": "1c519cb5a4ed47fe9b7083eb46a8e19e76debdbcf1c66b181091fb0108a8b476",
+      "queried_key": "inecbi",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-008",
+      "prompt_hash": "179d1cb704c21b7d77d897ea03dcb5b14c77079b4f20a929dac3a7bcdb754327",
+      "queried_key": "tusywn",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-009",
+      "prompt_hash": "b5c1ef2f114058b3ac57ea0ab0b59322737c947fd2c01aa9dc1b5798e8deddb1",
+      "queried_key": "qqibzy",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-010",
+      "prompt_hash": "4b0ec80e672407312afab92f42f8e1adb538178e6a75bb6eb5cf3d3cf10fb3e8",
+      "queried_key": "kxcxbm",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-011",
+      "prompt_hash": "b4d31e616a642f6377363af3e929152ab2a71c63a19374e99ac24d84edf9160d",
+      "queried_key": "qatdlp",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-012",
+      "prompt_hash": "c18effa2200a95ec256fa17c30e9f87b782c442117af93dfd060b01563788ec9",
+      "queried_key": "mdiuwt",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-013",
+      "prompt_hash": "f4b34b4c6b4a98fc4dd9dbdd7ed7a5cff34996ef698552f8901cf082beb34175",
+      "queried_key": "jyqaem",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-014",
+      "prompt_hash": "c2868c067987e45ef954ac6068a48bea611cb4f16b8e05b5fd826837a064a737",
+      "queried_key": "oshdzj",
+      "raw_output": "NULL",
+      "stratum": "null"
+    },
+    {
+      "expected_answer": "NULL",
+      "item_id": "L05-N-015",
+      "prompt_hash": "95098c3976752e199318a9dd99dacee390b7564765e710784974cfdb49b8c566",
+      "queried_key": "cgttte",
+      "raw_output": "NULL",
+      "stratum": "null"
+    }
+  ],
+  "lane1a_runner_record_schema": "v1",
+  "manifest_hash": "sha256:1b19ce5724e9c955852cb89c128a47fa58c5c558e356d426b07637352f2e7f88",
+  "manifest_path": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-10_lane-1a-sweep/manifests/L05.json",
+  "provenance": {
+    "artifact_class": "lane-1a-reconnaissance",
+    "certification_relevance": "none",
+    "completed_ts": "2026-06-11T03:50:14.261+00:00",
+    "decoding_settings": {
+      "greedy": true,
+      "max_tokens": 64,
+      "seed": 0,
+      "temperature": 0.0
+    },
+    "doctrine": "Lane 1a may rule out; Lane 1a may not rule in.",
+    "framework_version": "none",
+    "mlx_lm_version": "0.31.3",
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "model_snapshot_hash": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "runner": "lane1a_runner.py",
+    "runner_version": "v0.1",
+    "started_ts": "2026-06-11T03:50:04.818+00:00"
+  },
+  "rung_id": "L05",
+  "stratum": "null"
+}

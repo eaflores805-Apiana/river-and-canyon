@@ -1,0 +1,668 @@
+{
+  "items": [
+    {
+      "expected_answer": "bravo",
+      "item_id": "L08-AM-000",
+      "prompt_hash": "d4026892fe24ea5496b06f725eb02cb4aac4e60e656abedec0886d18529ffbf4",
+      "queried_key": "mqefgi",
+      "raw_output": "bravo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L08-AM-001",
+      "prompt_hash": "595e9e89b0bf71f30ae5bbd95118a0ea62c3ec2e33eecf450797934ccf31cf8d",
+      "queried_key": "ixjrld",
+      "raw_output": "india",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L08-AM-002",
+      "prompt_hash": "f03894e125f7934142919488739dce458835bb9b3aaf70bb90d434bee25e2756",
+      "queried_key": "myoefb",
+      "raw_output": "uniform",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "papa",
+      "item_id": "L08-AM-003",
+      "prompt_hash": "8f9728f9c846ef010d93b08cf0431f8fc459f99c6abc57c26aa9a31df84a85fe",
+      "queried_key": "ckrypc",
+      "raw_output": "papa",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "bravo",
+      "item_id": "L08-AM-004",
+      "prompt_hash": "466f08e80ad2d03d3320f1043538354e4ebc0778461082cd092a5e4f091b82d8",
+      "queried_key": "onbwwj",
+      "raw_output": "bravo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L08-AM-005",
+      "prompt_hash": "746cd38b7739daa88a8e215a82493d39c65bcc388cc2f8e3eea837ca8dbabed0",
+      "queried_key": "pkwlzo",
+      "raw_output": "whiskey",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L08-AM-006",
+      "prompt_hash": "7c41103d1d0c169c772d56991ad428bd3879274f41158f37310e1cc455af87d8",
+      "queried_key": "lszyvl",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L08-AM-007",
+      "prompt_hash": "fbd790dd667b1fc2bbfc1ae053b143da1c4a2cdf46271fc11caa31cee9398797",
+      "queried_key": "lngklq",
+      "raw_output": "kilo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L08-AM-008",
+      "prompt_hash": "4fb9425c4467a3896778ea1203dd59d5418e1ab5865f1dca2e9e540a59f82238",
+      "queried_key": "pkylsv",
+      "raw_output": "alpha",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L08-AM-009",
+      "prompt_hash": "0da52af3a50ae78e115019a14e01df5c05f4e40a2ad4eeb51a6e5894f7044a1e",
+      "queried_key": "xqlnog",
+      "raw_output": "juliet",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L08-AM-010",
+      "prompt_hash": "491c2883725c74355ca0d037215d751db7949ad16fa480261df728aa5939224d",
+      "queried_key": "frthlo",
+      "raw_output": "india",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "delta",
+      "item_id": "L08-AM-011",
+      "prompt_hash": "8cb1f19ca6a615e303342510368bc36803571ca29c1b5fde927c7c06a4ca43f0",
+      "queried_key": "nymlmj",
+      "raw_output": "delta",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L08-AM-012",
+      "prompt_hash": "dc3d145b478eb534f994fef7b4d6909447dffd1c6fef0a114f03e9a2672d1bee",
+      "queried_key": "sjusus",
+      "raw_output": "uniform",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L08-AM-013",
+      "prompt_hash": "cbdcb32351edf6f01e2e5ad7724f196b90e930d7a1504304874be8bc6699eed6",
+      "queried_key": "gietun",
+      "raw_output": "charlie",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "xray",
+      "item_id": "L08-AM-014",
+      "prompt_hash": "fe11dfa7b891919e455d55fd322d27972a2880dd24b63e3095c9671845f43f6e",
+      "queried_key": "iwvqnl",
+      "raw_output": "xray",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "golf",
+      "item_id": "L08-AM-015",
+      "prompt_hash": "94809858195628744bcec580247d290efc53be9f0a93f0ba082253a7d4ce5d18",
+      "queried_key": "dflgns",
+      "raw_output": "golf",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "hotel",
+      "item_id": "L08-AM-016",
+      "prompt_hash": "4547cb9f9b6dba4acc966749aa437a08a18c833191d4f558f73b808c7a64c98a",
+      "queried_key": "kpeixd",
+      "raw_output": "hotel",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L08-AM-017",
+      "prompt_hash": "d95a493faf64d66585622aa722afcde768074912600e522948872c36d839ad46",
+      "queried_key": "pzraca",
+      "raw_output": "kilo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "lima",
+      "item_id": "L08-AM-018",
+      "prompt_hash": "56b990696bab32d130274ee8546ec661b697e916af9cf451fed6714964b5e5f1",
+      "queried_key": "hzkdie",
+      "raw_output": "lima",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L08-AM-019",
+      "prompt_hash": "c0227d01485b3c9e30ea250c392e9633cfe5c8d4fcfb109e8c4686bc18e8e8db",
+      "queried_key": "kybuyg",
+      "raw_output": "mike",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L08-AM-020",
+      "prompt_hash": "b4ef44d357f648a116bf64427211150adde75bf7f2567757c9d8a64bf1f13d9c",
+      "queried_key": "wrtyff",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L08-AM-021",
+      "prompt_hash": "a0cc6471d779053bb7ad08987425227424ce672539ca051656d0ba4dc312a937",
+      "queried_key": "lilaut",
+      "raw_output": "kilo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "delta",
+      "item_id": "L08-AM-022",
+      "prompt_hash": "b877041cec71e66bf745e6f5da1554ee715cfa67bdee430b888e154fddd169a9",
+      "queried_key": "mnfdit",
+      "raw_output": "mnfdit: delta",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L08-AM-023",
+      "prompt_hash": "4acdf7cf8fcf36008dd3e20aaf88bd9153bd2b0b89dfbd4518a6df8ee50fc511",
+      "queried_key": "nfrhma",
+      "raw_output": "juliet",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "golf",
+      "item_id": "L08-AM-024",
+      "prompt_hash": "58f83afe57dbf5876107289e53d9926c003b1e5362d941183d2182f52ba87c64",
+      "queried_key": "vglyzm",
+      "raw_output": "golf",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "sierra",
+      "item_id": "L08-AM-025",
+      "prompt_hash": "8f11a7a8dbf0cb101bb6cdca42d66a74c36376571def8a17c7f26aca9dac9155",
+      "queried_key": "qrqojs",
+      "raw_output": "sierra",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L08-AM-026",
+      "prompt_hash": "48689916e9eccbed6340d5d4ff1cefb26608133a6e37927a14e193cfc2d448bb",
+      "queried_key": "tzghbs",
+      "raw_output": "mike",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L08-AM-027",
+      "prompt_hash": "9171ce92839bbf636dda7efb156f0d03b11b2c5a5ce30ba25526e9fa45a7b81a",
+      "queried_key": "whtrib",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L08-AM-028",
+      "prompt_hash": "d2ee9d0113235e1e668891bebd13a5d7422ae8b8046d56d547055c3e8ce3a045",
+      "queried_key": "umlpzw",
+      "raw_output": "quebec",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L08-AM-029",
+      "prompt_hash": "b21db41ba4e4bf5de29cd2a94ae3713cb996dd56732823f00ce561f3217fbce5",
+      "queried_key": "cfbugv",
+      "raw_output": "quebec",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L08-AM-030",
+      "prompt_hash": "8b425b6dcb2907e9de787d30478100b4e2ebb9d41818eff415881387749c7b86",
+      "queried_key": "oegmlt",
+      "raw_output": "india",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "xray",
+      "item_id": "L08-AM-031",
+      "prompt_hash": "0bd1e763dc67f4130c9015f961229147fc335b026f4821df171aa65aaeb4216f",
+      "queried_key": "xmasxx",
+      "raw_output": "xmasxx",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "victor",
+      "item_id": "L08-AM-032",
+      "prompt_hash": "43df3163405b57ade3de7ec5a0bfcb8aa98b59587f2750c757472b86592a1322",
+      "queried_key": "scrxee",
+      "raw_output": "victor",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "hotel",
+      "item_id": "L08-AM-033",
+      "prompt_hash": "be9429edf073e28175b8279b2bd36dc686bdd97af9c2d3f7ed229d237ff25cb4",
+      "queried_key": "itntgv",
+      "raw_output": "hotel",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L08-AM-034",
+      "prompt_hash": "c00fdc2c8bcfb2efdfca0731b6145147347bc3dfcc35049c9d93edc4aefcf6aa",
+      "queried_key": "qlbvjj",
+      "raw_output": "zulu",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "bravo",
+      "item_id": "L08-AM-035",
+      "prompt_hash": "3a4f2e7eb60dd30ef0924e012c9e48ed1d6c2ceb23a9a650f39db6647de058fb",
+      "queried_key": "eomvau",
+      "raw_output": "bravo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "lima",
+      "item_id": "L08-AM-036",
+      "prompt_hash": "5ebc9f7a93d30f70e3c9e907876aa6915afa25564e8560080198725b3244b009",
+      "queried_key": "jwxfkg",
+      "raw_output": "lima",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L08-AM-037",
+      "prompt_hash": "3dde803000a3459ba20ded51bdedf243018fecb657330cc3158c22145dfb2853",
+      "queried_key": "ropgcl",
+      "raw_output": "ropgcl: quebec",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "yankee",
+      "item_id": "L08-AM-038",
+      "prompt_hash": "f1eb29244d7f81a5cfbdd99d6f505a3142e63416c9fef7ae87fb245a98e2c344",
+      "queried_key": "xqpruo",
+      "raw_output": "yankee",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "xray",
+      "item_id": "L08-AM-039",
+      "prompt_hash": "e7285ce59ea90a269d04031dc2b278e4051f9329e6be59b12a42f319786f989a",
+      "queried_key": "xrmbcz",
+      "raw_output": "xray",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "echo",
+      "item_id": "L08-AM-040",
+      "prompt_hash": "1634f2405ff805e1dbdc43ff27aef20de8bcc1d8120aa02397c43a2cb939363e",
+      "queried_key": "unajez",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L08-AM-041",
+      "prompt_hash": "7aa6ccceb1f0c02c1b190a8cf59f6321701bb43132986050b75a98af353a313f",
+      "queried_key": "ngwbxj",
+      "raw_output": "quebec",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "papa",
+      "item_id": "L08-AM-042",
+      "prompt_hash": "d1e235cbdf163b97dfd89144c85b917bf675f10d684e20c8bf06a22eb61754ac",
+      "queried_key": "sdqgeq",
+      "raw_output": "papa",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L08-AM-043",
+      "prompt_hash": "761ce28444fb4371d894ec9622ed96dd97f68a9c90d6f2413b0f312be0e408d6",
+      "queried_key": "hkfsiu",
+      "raw_output": "whiskey",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L08-AM-044",
+      "prompt_hash": "f97962400bd9a84547fa1ce98e27ba3799f7e914b7a332eb88df9ff672987e35",
+      "queried_key": "abclrv",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "zulu",
+      "item_id": "L08-AM-045",
+      "prompt_hash": "fb4f1c51f5536552b2de4f2cc4aa4e2eb8d70381b770b9bf042619cf21a6ddaa",
+      "queried_key": "weatdi",
+      "raw_output": "zulu",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L08-AM-046",
+      "prompt_hash": "b0ed96c3cac50b0f3b0c7ee47792b059744a8e608106b70c3e8d6fadb9264b63",
+      "queried_key": "xglhov",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L08-AM-047",
+      "prompt_hash": "d90f864835a1e19881264a49e56e3edf071dcd58f3e1fbb56b5798365694472f",
+      "queried_key": "tdjbov",
+      "raw_output": "tdjbov: kilo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L08-AM-048",
+      "prompt_hash": "547647461772c0cfecb0072e1661dd19ea33c7a76e50e1f71f5349ec9f000257",
+      "queried_key": "dmaoau",
+      "raw_output": "whiskey",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "xray",
+      "item_id": "L08-AM-049",
+      "prompt_hash": "399ad39e0c5fc3933b75121d9302816f51c6c75d054b42cd72766f8937e41f94",
+      "queried_key": "qdmofv",
+      "raw_output": "xray",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L08-AM-050",
+      "prompt_hash": "97dfa79dd36c75802dbba69002bed0eeeedeb29265bc9d2fed009b3a7b7bd546",
+      "queried_key": "nwrgyw",
+      "raw_output": "kilo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L08-AM-051",
+      "prompt_hash": "5aefcec47464a36eed214ba499377ed0febcec3e22dba3d6f08473d2f770e37a",
+      "queried_key": "kwiveo",
+      "raw_output": "charlie",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L08-AM-052",
+      "prompt_hash": "f2b3b2da7e31f945ca8a427857ac0bb7d5f2299fe127519eba198d0455770e80",
+      "queried_key": "onrywi",
+      "raw_output": "alpha",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "sierra",
+      "item_id": "L08-AM-053",
+      "prompt_hash": "b0d2249620a2f5dcad22b0114fe29aea7299bfd6587d46f9c13b23468a46ebc4",
+      "queried_key": "ewzrjh",
+      "raw_output": "kilo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L08-AM-054",
+      "prompt_hash": "92c6818f49dcf5d931b6119a0bc2812641ddcc52a68ddf094fcc49c713451805",
+      "queried_key": "bxvqgu",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L08-AM-055",
+      "prompt_hash": "e1dfa0eccad1a07b36ca7f787139ac588f249f118587546bb8b215e5dcc09856",
+      "queried_key": "syrvun",
+      "raw_output": "uniform",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "victor",
+      "item_id": "L08-AM-056",
+      "prompt_hash": "2d51fcf259ec3cedc5c5d7caebb211f12aa11b0aec3b13d53365fb57825d32e5",
+      "queried_key": "szjdlc",
+      "raw_output": "victor",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L08-AM-057",
+      "prompt_hash": "bcd94d0f88e98137aff70243f01c5207d7d78d2f4382f3e06eb274782eb4a495",
+      "queried_key": "ecuzku",
+      "raw_output": "foxtrot",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "golf",
+      "item_id": "L08-AM-058",
+      "prompt_hash": "0e323368624c07ae528d9393bdded530a2a53136aeafe1aebbedc3816dd3d309",
+      "queried_key": "cpwmkg",
+      "raw_output": "golf",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "sierra",
+      "item_id": "L08-AM-059",
+      "prompt_hash": "9f96983a3bb72adae8b2ebce22dbca1983cafffed99812ca4db08a3a6fff51a5",
+      "queried_key": "pcjvzi",
+      "raw_output": "sierra",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "xray",
+      "item_id": "L08-AM-060",
+      "prompt_hash": "ff7bbd0fa2ed253cc607cbd307fa1cf5396effd18a88220340b997e50d9eec4c",
+      "queried_key": "vhemrv",
+      "raw_output": "xray",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "echo",
+      "item_id": "L08-AM-061",
+      "prompt_hash": "32593ed8030751573db5ca238ff05bd4d44516aefe43bb912f159f91335748c6",
+      "queried_key": "zbkazn",
+      "raw_output": "echo",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "oscar",
+      "item_id": "L08-AM-062",
+      "prompt_hash": "0bde279faedcffe57e1332500abf7aa930a349412b83ad5407e13fa7b62cfbe1",
+      "queried_key": "beckui",
+      "raw_output": "oscar",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L08-AM-063",
+      "prompt_hash": "a90ab1124abcfacfca069e60a2e6445166364ff3888abe260214c5e81a417334",
+      "queried_key": "znzeup",
+      "raw_output": "charlie",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "sierra",
+      "item_id": "L08-AM-064",
+      "prompt_hash": "ca20cc3e6ece4fac38923575fedee81269b2a7e05b108e66aa123a195394086d",
+      "queried_key": "lhdity",
+      "raw_output": "sierra",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L08-AM-065",
+      "prompt_hash": "485a7c5db9e1fe8ea04be2b86db13ad598d54ee4950bd44c5bcd6e3a507d3109",
+      "queried_key": "cuxkbt",
+      "raw_output": "juliet",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L08-AM-066",
+      "prompt_hash": "2304f784afc16a4a954e3b0695fcb01eefd035b4a32c9ac8f8ab41fd9aeba66f",
+      "queried_key": "aiiace",
+      "raw_output": "quebec",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L08-AM-067",
+      "prompt_hash": "308aba86ce064afd85ec94229e18d43cadafdf485f5868e508ee8dae9255f63c",
+      "queried_key": "ykccsk",
+      "raw_output": "india",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "hotel",
+      "item_id": "L08-AM-068",
+      "prompt_hash": "55b6dfa55b8107ba0c62020177d5548abd75df778391b099b8e699b539a3e8b2",
+      "queried_key": "nbpksp",
+      "raw_output": "hotel",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L08-AM-069",
+      "prompt_hash": "9c983814191b103f4055e89e998f7a31b6be5b60336eaf422a0f86dde17d1220",
+      "queried_key": "fbxclt",
+      "raw_output": "whiskey",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L08-AM-070",
+      "prompt_hash": "0aadde1ac94fbd380d494b59348fc029d61292ff86f4bdcada5b9202eb12f30e",
+      "queried_key": "mjqdlv",
+      "raw_output": "uniform",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L08-AM-071",
+      "prompt_hash": "7823230196fb16b75b4e7c19577f6ae023b758dd5b49bb0e705f777212b5ca19",
+      "queried_key": "xxrcal",
+      "raw_output": "india",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "yankee",
+      "item_id": "L08-AM-072",
+      "prompt_hash": "f7256b0259dc9166f5ccc497742c728a34d55e882e548feb2cb562dc673875a4",
+      "queried_key": "bbsjyu",
+      "raw_output": "yankee",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "tango",
+      "item_id": "L08-AM-073",
+      "prompt_hash": "1e58aef165621927a4725e73b5b8eb4c00f830b038a454be76c84c408d72a33e",
+      "queried_key": "orztmi",
+      "raw_output": "tango",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L08-AM-074",
+      "prompt_hash": "40e0ddf534ff55685204d0a3ba6f98eeba535eb6fccb6968d3c05f77361b83a6",
+      "queried_key": "wfkvhd",
+      "raw_output": "wfkvhd: juliet",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L08-AM-075",
+      "prompt_hash": "64940b05613a36964c968ff626abc10e1243096645d0fa506adf76f41c654b26",
+      "queried_key": "quorzf",
+      "raw_output": "alpha",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L08-AM-076",
+      "prompt_hash": "341518c7b8006ed670373591a7140f321b179207c9c77f572509d0edda10add6",
+      "queried_key": "uioojh",
+      "raw_output": "uiiojh: juliet",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L08-AM-077",
+      "prompt_hash": "75457e2d70f81bb41bf1c754bc7d47d7e3c861e5358b98df2b2725bf972349da",
+      "queried_key": "ulcgqw",
+      "raw_output": "quebec",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L08-AM-078",
+      "prompt_hash": "7677b6e4d35542224183f884cd327114d4f4c817a83424582fbfe88404cf382e",
+      "queried_key": "ikzhlr",
+      "raw_output": "uniform",
+      "stratum": "answerable_mirror"
+    },
+    {
+      "expected_answer": "hotel",
+      "item_id": "L08-AM-079",
+      "prompt_hash": "1d8be56aef696a4c4b08d211f40650b2a200f243889a33895aaad81aeec88390",
+      "queried_key": "uhbaeb",
+      "raw_output": "hotel",
+      "stratum": "answerable_mirror"
+    }
+  ],
+  "lane1a_runner_record_schema": "v1",
+  "manifest_hash": "sha256:4db1f8b055ecbd88fc8bf311102b9cc76701b1e82c7c06393fd5c3eec6d08fa5",
+  "manifest_path": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-10_lane-1a-sweep/manifests/L08.json",
+  "provenance": {
+    "artifact_class": "lane-1a-reconnaissance",
+    "certification_relevance": "none",
+    "completed_ts": "2026-06-11T03:55:33.358+00:00",
+    "decoding_settings": {
+      "greedy": true,
+      "max_tokens": 64,
+      "seed": 0,
+      "temperature": 0.0
+    },
+    "doctrine": "Lane 1a may rule out; Lane 1a may not rule in.",
+    "framework_version": "none",
+    "mlx_lm_version": "0.31.3",
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "model_snapshot_hash": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "runner": "lane1a_runner.py",
+    "runner_version": "v0.1",
+    "started_ts": "2026-06-11T03:55:03.985+00:00"
+  },
+  "rung_id": "L08",
+  "stratum": "answerable_mirror"
+}

@@ -1,0 +1,668 @@
+{
+  "items": [
+    {
+      "expected_answer": "juliet",
+      "item_id": "L07-A-000",
+      "prompt_hash": "1e730f3fca0d5c06eefe15748741430bdee9cb34e174f2eb037170a0dd3ce959",
+      "queried_key": "mhkpsv",
+      "raw_output": "mhkpsv: juliet",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L07-A-001",
+      "prompt_hash": "e1a8e8918324e32039b24fda203374b902e3d32a4e568f41e16bd36d504ee954",
+      "queried_key": "rhenvt",
+      "raw_output": "charlie",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L07-A-002",
+      "prompt_hash": "c721c72b5db25a8011b32db5da8ccd1a9475530067778528034118d39dac353f",
+      "queried_key": "mvukxm",
+      "raw_output": "charlie",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "hotel",
+      "item_id": "L07-A-003",
+      "prompt_hash": "36805e02f4dfed96ebde8b63340c73d97349b71f5a21a0fef920ecede5c0b6d0",
+      "queried_key": "euioww",
+      "raw_output": "hotel",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L07-A-004",
+      "prompt_hash": "dc45d4bada373094621355fdbc61762195b64d545fbc75d02a18f01de422fc8f",
+      "queried_key": "pfmqny",
+      "raw_output": "pfmqny: mike",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L07-A-005",
+      "prompt_hash": "e01f94f9e7b554457d5afbb77cf6b5b37f85f52d9110e51cc4d8319ef55d0239",
+      "queried_key": "uoyyza",
+      "raw_output": "mike",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L07-A-006",
+      "prompt_hash": "18c443082ed3cb933f25af96594b221a200ef94ec3b2a1947be484097f25fca4",
+      "queried_key": "fakjdv",
+      "raw_output": "whiskey",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "victor",
+      "item_id": "L07-A-007",
+      "prompt_hash": "4ce95150f8d3efd45ab87ce088ea890a180ce7ec1c8324d6b9473a158ed2e7cd",
+      "queried_key": "lxuien",
+      "raw_output": "victor",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L07-A-008",
+      "prompt_hash": "a1f1c4a606081eacf70540ed00d1c871969630a030fb5157377bc14fd28adcfe",
+      "queried_key": "jqlrzq",
+      "raw_output": "mike",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "bravo",
+      "item_id": "L07-A-009",
+      "prompt_hash": "1fdd2276b485ef2e822369c93fa7611b1ace24c97dfb98bcbe770953590b527d",
+      "queried_key": "iwaegq",
+      "raw_output": "bravo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L07-A-010",
+      "prompt_hash": "faa6437834e7aa3118b4eab1a7e5f78c5a2dec02c75af935f7f3aaf7c0074f82",
+      "queried_key": "cqctyi",
+      "raw_output": "charlie",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "echo",
+      "item_id": "L07-A-011",
+      "prompt_hash": "a1a8837136ebf4d82508c6954e1e77b979d26036aa8faec470b394164070076b",
+      "queried_key": "dftcqw",
+      "raw_output": "echo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "zulu",
+      "item_id": "L07-A-012",
+      "prompt_hash": "b37117f5c4d1d8d8d3b41aed0721146dfefd908f4c034f4914fbe35017a1aa48",
+      "queried_key": "rfkdkw",
+      "raw_output": "zulu",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "november",
+      "item_id": "L07-A-013",
+      "prompt_hash": "98160f358e1953d580e27906c3c42724e4119679ddbac838b285febcfbeecc02",
+      "queried_key": "brsvjr",
+      "raw_output": "november",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "lima",
+      "item_id": "L07-A-014",
+      "prompt_hash": "1909d534dc33411d5721cbab0914c8d25f194899af21c8e3b8ffd5adff8a50c3",
+      "queried_key": "ogjisc",
+      "raw_output": "lima",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "papa",
+      "item_id": "L07-A-015",
+      "prompt_hash": "dfa060c05e5793757596dcbc38b0b6cf71f98b734b9758798bdfe567de5cf1db",
+      "queried_key": "seendg",
+      "raw_output": "papa",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "oscar",
+      "item_id": "L07-A-016",
+      "prompt_hash": "30d12ba444bad9b12153ff343895e4c0db2d3f39889f33698eda6578afbdf416",
+      "queried_key": "hbadka",
+      "raw_output": "oscar",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L07-A-017",
+      "prompt_hash": "b82ef5a904b67bbddc0607a819e4dd2c2fd927f02bb85b9b643dadb7749430cd",
+      "queried_key": "vnmcst",
+      "raw_output": "vnmcst: mike",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L07-A-018",
+      "prompt_hash": "1c984debbac8acc51f42b9a174e03f4ff1ecd23caf7c557ca9db0167a618dcce",
+      "queried_key": "tuuize",
+      "raw_output": "foxtrot",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L07-A-019",
+      "prompt_hash": "7afd239b0fb6c47539e46d22b88f6aff8f523b1328ec82650d33a5f809ac7223",
+      "queried_key": "nueoxb",
+      "raw_output": "india",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "lima",
+      "item_id": "L07-A-020",
+      "prompt_hash": "47dab9438619deec4d16178904cf1690c2228fd929a8f7a4a88dacfb9ea7ebb5",
+      "queried_key": "okujft",
+      "raw_output": "lima",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L07-A-021",
+      "prompt_hash": "200b7507c72bf7b69e5b1d1d7fe5e0d34e413aa8e7565f91dfe5f149ba2e8f23",
+      "queried_key": "vgdbjw",
+      "raw_output": "alpha",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L07-A-022",
+      "prompt_hash": "d6c25e2c2c499903c9ef24cde290bd6ade6d8534d86bbfa8f892df7aabdab212",
+      "queried_key": "twjnew",
+      "raw_output": "twjnew: mike",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L07-A-023",
+      "prompt_hash": "134686bfe2855958135cab8cb6da8f19ca19075d4f6c911ece1b56af245dc4de",
+      "queried_key": "ycjqsa",
+      "raw_output": "india",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L07-A-024",
+      "prompt_hash": "dbf07567dec40111665907fff8dcd94ee891c2c0086610503f63386fdb99802f",
+      "queried_key": "okovhr",
+      "raw_output": "uniform",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "yankee",
+      "item_id": "L07-A-025",
+      "prompt_hash": "5fec3f51ce66c0c1973b5b2da89c7a9be384b5ccabc65e66228508dc2fc22106",
+      "queried_key": "pkpppr",
+      "raw_output": "yankee",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "november",
+      "item_id": "L07-A-026",
+      "prompt_hash": "5fb1308539356b5ce731b4ca750052e5f68c6d69b09c9bd306ee3e4518073e88",
+      "queried_key": "xkeutm",
+      "raw_output": "november",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "bravo",
+      "item_id": "L07-A-027",
+      "prompt_hash": "d4d48bfaf1a6a9718e38d0df6a7339df89582f3cb1ccba053c3403cbf991134c",
+      "queried_key": "boxvtc",
+      "raw_output": "bravo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "foxtrot",
+      "item_id": "L07-A-028",
+      "prompt_hash": "31c81c32d3ba64436c110d56666f3d580e4e73d3449bad10493119de79107996",
+      "queried_key": "ztpiqf",
+      "raw_output": "ztpiqf: foxtrot",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "sierra",
+      "item_id": "L07-A-029",
+      "prompt_hash": "f4a81dd92109d7e69c77b88fb056ef8b1d689b3be8404ee10ecd6941510bb8ee",
+      "queried_key": "velqbx",
+      "raw_output": "sierra",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "xray",
+      "item_id": "L07-A-030",
+      "prompt_hash": "68b46f7debce1c3d4222d65c3c094bd5ad3c7e9ed82e666861e5c6640a8d6cd3",
+      "queried_key": "guuhyw",
+      "raw_output": "xray",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L07-A-031",
+      "prompt_hash": "ce39390c7c3aeb8255004615101f2ddfdf80b9f323e302504b5dd3675f4a82d2",
+      "queried_key": "qaktec",
+      "raw_output": "qaktec: charlie",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L07-A-032",
+      "prompt_hash": "e3a5c9a89cf3691c7093388e8963053f525f7ad8bc31e02f6ac5d31e05221ce6",
+      "queried_key": "lhqpww",
+      "raw_output": "quebec",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "yankee",
+      "item_id": "L07-A-033",
+      "prompt_hash": "5697600c9c9ce758b8ed395766439488b47eb71252e4f217ff76d1a624ac9824",
+      "queried_key": "ewzzem",
+      "raw_output": "yankee",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L07-A-034",
+      "prompt_hash": "07f6d559eeb94fdbd34c69544c20a231316de16dfd4b2ea56bbb203187e40082",
+      "queried_key": "pydkze",
+      "raw_output": "kilo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "papa",
+      "item_id": "L07-A-035",
+      "prompt_hash": "db06c76b5fb09128a86d2e3c2c94f73edf177c9fbc6a33770809ebb0c11b6884",
+      "queried_key": "pfxiap",
+      "raw_output": "papa",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L07-A-036",
+      "prompt_hash": "5aed1f4f3bd495b5126d1456457a35a7e1a6d4308fe39bf8b601a348221e5033",
+      "queried_key": "tflhfz",
+      "raw_output": "whiskey",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "mike",
+      "item_id": "L07-A-037",
+      "prompt_hash": "21aba29122f99b38b42062a0c9eca50bf30d9aef4d0c2ec44d4d5f3b29dda7a9",
+      "queried_key": "vfthxk",
+      "raw_output": "mike",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "india",
+      "item_id": "L07-A-038",
+      "prompt_hash": "bcb46656cc6279ae9e7099a629046a631935b940d20dacc74cfea9fb6017036a",
+      "queried_key": "udztpt",
+      "raw_output": "india",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "quebec",
+      "item_id": "L07-A-039",
+      "prompt_hash": "9e265eb0a6ab3e25277194afbdce17dca07a071bf03c35d49f075b52783c0a3e",
+      "queried_key": "gppqna",
+      "raw_output": "quebec",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "zulu",
+      "item_id": "L07-A-040",
+      "prompt_hash": "f5b6b8b58f8bbf47d305ae18f087dbf7ac40929b1df59ec296707abac6de4ea7",
+      "queried_key": "omaxyg",
+      "raw_output": "zulu",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L07-A-041",
+      "prompt_hash": "5db6e949753c82933d75136f722ad2cc72daca63df0a69dc2130ea2dbc053b21",
+      "queried_key": "qrjnzw",
+      "raw_output": "whiskey",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L07-A-042",
+      "prompt_hash": "7d77e4ab84d2757ef5a72eb746e99bb3178045371ae4729efc64bbe46d13dfa3",
+      "queried_key": "mdhzya",
+      "raw_output": "alpha",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "zulu",
+      "item_id": "L07-A-043",
+      "prompt_hash": "fa9ab583e2c2360d02dc24ece1970bf64cf6a89fd4458601f554f20cc197f07e",
+      "queried_key": "fwvbqx",
+      "raw_output": "zulu",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L07-A-044",
+      "prompt_hash": "5c3d822137c3fd4db1a16daf2f4f2f6c8e3834340089e00e934f72fca8f4c9ba",
+      "queried_key": "qlzsln",
+      "raw_output": "kilo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "charlie",
+      "item_id": "L07-A-045",
+      "prompt_hash": "3d082c246a1ec8aafbaa60c503f1d71d22c3eed58aae3dc14c3f6ab8ed25a65f",
+      "queried_key": "admnmr",
+      "raw_output": "charlie",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "kilo",
+      "item_id": "L07-A-046",
+      "prompt_hash": "ec320c9ff98322fdc39695b71e972dca439f56a923572796d753d9f21c60c8a9",
+      "queried_key": "mzkkec",
+      "raw_output": "kilo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "romeo",
+      "item_id": "L07-A-047",
+      "prompt_hash": "3374370396ab270961cd53ae517b0b64ded6605ebd73a05107902b123c3dd755",
+      "queried_key": "ptcejr",
+      "raw_output": "romeo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "bravo",
+      "item_id": "L07-A-048",
+      "prompt_hash": "d33c94244ec31d11e2f137e99e31867d82dda115bdc1786bd5039080fafb39a8",
+      "queried_key": "rlncqa",
+      "raw_output": "bravo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L07-A-049",
+      "prompt_hash": "7d6dfdf431c3e412146d5d4f51c12c231c824b0e40c1af274e33779f63144581",
+      "queried_key": "otuhyk",
+      "raw_output": "uniform",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L07-A-050",
+      "prompt_hash": "6c67f36bf9ed35b3fdbe8291db1438eb9ca2f01b12bb60b1444529ead27448d6",
+      "queried_key": "ncntor",
+      "raw_output": "juliet",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L07-A-051",
+      "prompt_hash": "3f076d8d0ba7035694962c6d691d7517faab06c90161f2efa799d56cc0976124",
+      "queried_key": "ccswns",
+      "raw_output": "ccswns",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L07-A-052",
+      "prompt_hash": "de9c9d09bc4df04f26b3112c772df54929932e252d36134109517a9cf913ded3",
+      "queried_key": "imtwrq",
+      "raw_output": "imtwrq: juliet",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L07-A-053",
+      "prompt_hash": "fa7ccd1f9643dd331458b5d70ad476fbc61dd9ad56b60d20b45193f552ebcc71",
+      "queried_key": "zdlyzi",
+      "raw_output": "alpha",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L07-A-054",
+      "prompt_hash": "455c16e114125ade561a6b792dea73918eb63919041019f6eaa7236bf53a0d6e",
+      "queried_key": "iqqhxk",
+      "raw_output": "juliet",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L07-A-055",
+      "prompt_hash": "76793598b68eb5cfad26f7b73bb6c23146c3208159e53fe538db2f361e7fa9ff",
+      "queried_key": "jsurov",
+      "raw_output": "juliet",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L07-A-056",
+      "prompt_hash": "b2af3ee34d604a37575eeedbffdaf6e48f8957f4624214664dfaa5dbbb366900",
+      "queried_key": "ffhmux",
+      "raw_output": "whiskey",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "juliet",
+      "item_id": "L07-A-057",
+      "prompt_hash": "5767493e5dd6c67d7d021e8e3193edf2e5da13f403635a66d120bf6e212dfc10",
+      "queried_key": "lqajmp",
+      "raw_output": "juliet",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "romeo",
+      "item_id": "L07-A-058",
+      "prompt_hash": "40917c3cb10474eae4566dc79efafb85500663b81d0b46e9ed1028766787b958",
+      "queried_key": "gnzhrl",
+      "raw_output": "romeo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "golf",
+      "item_id": "L07-A-059",
+      "prompt_hash": "7d00995ac779b5bd8566b275317abf61441c19d301180d819d8fc50f3fd7e8b4",
+      "queried_key": "drzxid",
+      "raw_output": "golf",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "yankee",
+      "item_id": "L07-A-060",
+      "prompt_hash": "8ded4ac20e485a177b90dea7ea356d26f2b3d9fa78abd654e37ff4446eee3599",
+      "queried_key": "lzuoxt",
+      "raw_output": "yankee",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "lima",
+      "item_id": "L07-A-061",
+      "prompt_hash": "fe037f93afbf4931f6085a48068fed1429a21d8b01c792e7f25cf9756bd68ddf",
+      "queried_key": "mchwti",
+      "raw_output": "mchwti: lima",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "delta",
+      "item_id": "L07-A-062",
+      "prompt_hash": "eeee2143e4609c0e9835bc2dd14f7566cd8773ca3f2d8aa5effd6be56fc1d0d7",
+      "queried_key": "pcbgam",
+      "raw_output": "delta",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "sierra",
+      "item_id": "L07-A-063",
+      "prompt_hash": "4b12d78c34760d3f67c54d08887b2872380b4d4c48ffb30772bdb7f1e979d8e7",
+      "queried_key": "gcqmed",
+      "raw_output": "sierra",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "bravo",
+      "item_id": "L07-A-064",
+      "prompt_hash": "5d1e4fde0c2d3b85f53df3bcf4d8cfcea0213cc88f694349ee166dc66b11c2a8",
+      "queried_key": "tpfpnm",
+      "raw_output": "bravo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "whiskey",
+      "item_id": "L07-A-065",
+      "prompt_hash": "c2c5c67d7d402addea5a7c9eeba23f933623a93ac7cd02f2de0fd763627ea4df",
+      "queried_key": "hwohvo",
+      "raw_output": "whiskey",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L07-A-066",
+      "prompt_hash": "c7b0b3f95abec66f11f17ac021964121b7bbe26577045196f90e35999a7fd842",
+      "queried_key": "qawpnx",
+      "raw_output": "alpha",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "papa",
+      "item_id": "L07-A-067",
+      "prompt_hash": "20e35ecc9e14fcd42228f27cb9029f2bc26c4e202eada7595c9554bcd0473786",
+      "queried_key": "zgzghv",
+      "raw_output": "papa",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "delta",
+      "item_id": "L07-A-068",
+      "prompt_hash": "b71ad162889d6130d3c0bfd87d85164c54ce56404472547da044bd618d213484",
+      "queried_key": "sqtrpj",
+      "raw_output": "delta",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "oscar",
+      "item_id": "L07-A-069",
+      "prompt_hash": "86374e74d864570ad45f245d9bb6284b75418927318e7da99881cc8eb0db2c3b",
+      "queried_key": "evyhul",
+      "raw_output": "ocean",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L07-A-070",
+      "prompt_hash": "ac95a299a2be6483610cb67a5803be7467cd6c6377cfa8bf305ee3d1289c90e1",
+      "queried_key": "mhprvt",
+      "raw_output": "uniform",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "oscar",
+      "item_id": "L07-A-071",
+      "prompt_hash": "f71e270f3f5b804e4bdc71d42a86d59c8f95044f0247aacbdd6cad1c06206559",
+      "queried_key": "ooyocp",
+      "raw_output": "ocean",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "lima",
+      "item_id": "L07-A-072",
+      "prompt_hash": "520981e913ead746c9834b288e369aded10c6a93106c6d800bc58064026e275e",
+      "queried_key": "isgzwa",
+      "raw_output": "lima",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "november",
+      "item_id": "L07-A-073",
+      "prompt_hash": "ff80215406ff77f4d6aae2d12cfd9211e9fc5f7c33b49f54015bda44a569640e",
+      "queried_key": "zpsiwe",
+      "raw_output": "november",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "echo",
+      "item_id": "L07-A-074",
+      "prompt_hash": "7f9864175e991e58f409a977e087923a5d5da8e8907bd0041bda96e5c078e7bd",
+      "queried_key": "oouvkc",
+      "raw_output": "oouvkc: echo",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "alpha",
+      "item_id": "L07-A-075",
+      "prompt_hash": "752eacbcbbdf97d737967743537dfe4f7fe3e7b612202ec5506e661e2970cd31",
+      "queried_key": "miwxos",
+      "raw_output": "alpha",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "tango",
+      "item_id": "L07-A-076",
+      "prompt_hash": "f6b1b3f8c7b13280ec0dca52fd2eaa2b019b2e7563b264de578fb7be08f58eb9",
+      "queried_key": "ppbpfs",
+      "raw_output": "tango",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "uniform",
+      "item_id": "L07-A-077",
+      "prompt_hash": "07284bca09aa97c4a51fb0098b518ce2a223f0a0747f2a9ee00e59459e26758e",
+      "queried_key": "zqyymg",
+      "raw_output": "uniform",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "yankee",
+      "item_id": "L07-A-078",
+      "prompt_hash": "ee1bfe55a55fb1204ad2ed9f0d11de059376b03d686508b1199c1711902259e5",
+      "queried_key": "lhmnwl",
+      "raw_output": "yankee",
+      "stratum": "answerable"
+    },
+    {
+      "expected_answer": "echo",
+      "item_id": "L07-A-079",
+      "prompt_hash": "80a697dd443d6d169b33c6116eb027dd554228ff5927d16df2f2065aaa6d0926",
+      "queried_key": "syvqtz",
+      "raw_output": "echo",
+      "stratum": "answerable"
+    }
+  ],
+  "lane1a_runner_record_schema": "v1",
+  "manifest_hash": "sha256:4d0a184ba4062974b6670e72dd4434bae2075c609aecffc6e13f9a87858c1307",
+  "manifest_path": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-10_lane-1a-sweep/manifests/L07.json",
+  "provenance": {
+    "artifact_class": "lane-1a-reconnaissance",
+    "certification_relevance": "none",
+    "completed_ts": "2026-06-11T03:53:15.028+00:00",
+    "decoding_settings": {
+      "greedy": true,
+      "max_tokens": 64,
+      "seed": 0,
+      "temperature": 0.0
+    },
+    "doctrine": "Lane 1a may rule out; Lane 1a may not rule in.",
+    "framework_version": "none",
+    "mlx_lm_version": "0.31.3",
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "model_snapshot_hash": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "runner": "lane1a_runner.py",
+    "runner_version": "v0.1",
+    "started_ts": "2026-06-11T03:52:44.977+00:00"
+  },
+  "rung_id": "L07",
+  "stratum": "answerable"
+}

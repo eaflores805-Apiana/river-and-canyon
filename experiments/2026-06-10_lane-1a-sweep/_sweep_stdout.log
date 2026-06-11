@@ -1,0 +1,34 @@
+[01/32] L01/answerable: OK (36.4s) -> LANE1A-L01-answerable-1781149374.lane1a.sidecar.json
+[02/32] L01/null: OK (14.4s) -> LANE1A-L01-null-1781149410.lane1a.sidecar.json
+[03/32] L01/answerable_mirror: OK (33.4s) -> LANE1A-L01-answerable_mirror-1781149425.lane1a.sidecar.json
+[04/32] L01/null_mirror: OK (14.8s) -> LANE1A-L01-null_mirror-1781149458.lane1a.sidecar.json
+[05/32] L02/answerable: OK (36.0s) -> LANE1A-L02-answerable-1781149473.lane1a.sidecar.json
+[06/32] L02/null: OK (14.6s) -> LANE1A-L02-null-1781149509.lane1a.sidecar.json
+[07/32] L02/answerable_mirror: OK (33.8s) -> LANE1A-L02-answerable_mirror-1781149523.lane1a.sidecar.json
+[08/32] L02/null_mirror: OK (14.7s) -> LANE1A-L02-null_mirror-1781149557.lane1a.sidecar.json
+[09/32] L03/answerable: OK (39.3s) -> LANE1A-L03-answerable-1781149572.lane1a.sidecar.json
+[10/32] L03/null: OK (14.9s) -> LANE1A-L03-null-1781149611.lane1a.sidecar.json
+[11/32] L03/answerable_mirror: OK (38.3s) -> LANE1A-L03-answerable_mirror-1781149626.lane1a.sidecar.json
+[12/32] L03/null_mirror: OK (14.7s) -> LANE1A-L03-null_mirror-1781149665.lane1a.sidecar.json
+[13/32] L04/answerable: OK (32.0s) -> LANE1A-L04-answerable-1781149679.lane1a.sidecar.json
+[14/32] L04/null: OK (13.3s) -> LANE1A-L04-null-1781149711.lane1a.sidecar.json
+[15/32] L04/answerable_mirror: OK (31.8s) -> LANE1A-L04-answerable_mirror-1781149725.lane1a.sidecar.json
+[16/32] L04/null_mirror: OK (12.8s) -> LANE1A-L04-null_mirror-1781149756.lane1a.sidecar.json
+[17/32] L05/answerable: OK (32.3s) -> LANE1A-L05-answerable-1781149769.lane1a.sidecar.json
+[18/32] L05/null: OK (12.8s) -> LANE1A-L05-null-1781149801.lane1a.sidecar.json
+[19/32] L05/answerable_mirror: OK (32.4s) -> LANE1A-L05-answerable_mirror-1781149814.lane1a.sidecar.json
+[20/32] L05/null_mirror: OK (13.3s) -> LANE1A-L05-null_mirror-1781149847.lane1a.sidecar.json
+[21/32] L06/answerable: OK (36.2s) -> LANE1A-L06-answerable-1781149860.lane1a.sidecar.json
+[22/32] L06/null: OK (14.1s) -> LANE1A-L06-null-1781149896.lane1a.sidecar.json
+[23/32] L06/answerable_mirror: OK (36.8s) -> LANE1A-L06-answerable_mirror-1781149910.lane1a.sidecar.json
+[24/32] L06/null_mirror: OK (14.5s) -> LANE1A-L06-null_mirror-1781149947.lane1a.sidecar.json
+[25/32] L07/answerable: OK (33.5s) -> LANE1A-L07-answerable-1781149962.lane1a.sidecar.json
+[26/32] L07/null: OK (13.6s) -> LANE1A-L07-null-1781149995.lane1a.sidecar.json
+[27/32] L07/answerable_mirror: OK (32.6s) -> LANE1A-L07-answerable_mirror-1781150009.lane1a.sidecar.json
+[28/32] L07/null_mirror: OK (13.7s) -> LANE1A-L07-null_mirror-1781150041.lane1a.sidecar.json
+[29/32] L08/answerable: OK (32.5s) -> LANE1A-L08-answerable-1781150055.lane1a.sidecar.json
+[30/32] L08/null: OK (13.1s) -> LANE1A-L08-null-1781150088.lane1a.sidecar.json
+[31/32] L08/answerable_mirror: OK (32.7s) -> LANE1A-L08-answerable_mirror-1781150101.lane1a.sidecar.json
+[32/32] L08/null_mirror: OK (12.9s) -> LANE1A-L08-null_mirror-1781150133.lane1a.sidecar.json
+
+Sweep complete: 32/32 attempts succeeded in 12.9 min

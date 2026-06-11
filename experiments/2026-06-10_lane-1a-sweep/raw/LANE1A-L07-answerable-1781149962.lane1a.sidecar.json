@@ -1,0 +1,17 @@
+{
+  "attempt_id": 25,
+  "rung_id": "L07",
+  "runner_name": "lane1a_runner.py",
+  "runner_output_path": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-10_lane-1a-sweep/raw/LANE1A-L07-answerable-1781149962.json",
+  "runner_output_sha256": "7b10da23e8ce3fff5f3cacbf92421cf2a771fa54f8a59e3cd2dbd911a45c581d",
+  "schema": "lane-1a-sidecar.schema.json",
+  "stratum": "answerable",
+  "wrapper_attestation": {
+    "artifact_class": "lane-1a-reconnaissance",
+    "certification_relevance": "none",
+    "context_functional_statement": "Lane 1a uses a lane-specific runner (lane1a_runner.py) that preserves B1 v2-compatible provenance conventions and locked model-loading dependencies, while leaving B1 v2 source unedited. B1 v2's `--manifest` interface requires a Two-Hop L1-specific schema and cannot consume Lane 1a's single-hop key->value nested-dict manifests; per Manager direction (Path A, 2026-06-10), the wrapper subprocesses lane1a_runner.py instead. Lane 1a semantics are wrapper-asserted via the sidecar JSON written alongside each runner output. The runner output bytes are preserved unchanged; the sidecar records the runner output's sha256 so an auditor can verify byte-for-byte preservation. This is not native B1 v2 execution and is not B1 v2.1.",
+    "context_is_wrapper_asserted_not_runner_attested": true,
+    "lane_1a_context": "lane-1a-reconnaissance"
+  },
+  "wrapper_invocation_ts": "2026-06-11T03:53:15.528+00:00"
+}
