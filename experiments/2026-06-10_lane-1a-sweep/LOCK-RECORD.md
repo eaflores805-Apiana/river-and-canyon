@@ -103,24 +103,21 @@ Total locked artifacts: 20 (was 19; lane1a_runner.py is the +1).
 ## Lock timestamp
 
 ```text
-Lock timestamp: PENDING_TEAM_LEAD_REVIEW
+Lock timestamp: 2026-06-11T03:05:57Z
 ```
 
-**Reset to PENDING per Manager Path A.1 direction (`MANAGER-DIRECTION-
-PATH-A1-MODEL-ID-2026-06-10.md` §6):** *"The prior Manager
-authorization does not carry forward because the locked artifact set
-and model identity changed."* The review chain must replay (Senior
-intent-preservation + Team Lead combined re-review + Manager
-reauthorization) against the Path A.1 LOCK-RECORD hash before CS may
-finalize the timestamp.
+CS appended this RFC 3339 UTC timestamp under Manager reauthorization
+authority (`MANAGER-REAUTHORIZATION-PATH-A1-FIRST-DATA-ACCESS-2026-06-10.md`
+§2) after Senior Path A.1 intent-preservation PASS + Team Lead Path A.1
+combined re-review PASS.
 
-Until the timestamp is finalized, `lane1a_runner_wrapper.py
-preflight()` refuses to invoke (the `PENDING_TEAM_LEAD_REVIEW`
-sentinel triggers `FirstDataAccessGateError`).
+The `first_data_access_timestamp` recorded by the wrapper at sweep
+time MUST postdate this lock timestamp.
+`lane1a_runner_wrapper.py preflight()` enforces this comparison.
 
-The earlier timestamp `2026-06-11T02:38:46Z` and post-touch hash
-`88a2a16d…` are superseded by this re-seal; they are preserved in git
-history for audit.
+The earlier timestamps and post-touch hashes from prior cycles (Path A
+`2026-06-11T02:38:46Z` → `88a2a16d…`; pre-Path-A.1 reset to PENDING)
+are superseded; preserved in git history for audit.
 
 ## Unit-test verification (CS, 2026-06-10, post-Path-A.1)
 
