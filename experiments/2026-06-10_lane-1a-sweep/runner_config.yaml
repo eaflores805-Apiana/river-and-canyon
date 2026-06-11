@@ -1,0 +1,62 @@
+# Lane 1a runner configuration (locked; hash-recorded in LOCK-RECORD.md)
+#
+# This config is read by lane1a_runner_wrapper.py. The wrapper invokes
+# B1 v2's runner CLI exactly as the locked B1 v2 surface permits.
+# B1 v2 source is NOT edited.
+
+sweep_id: "lane-1a-2026-06-10"
+artifact_class: "lane-1a-reconnaissance"
+certification_relevance: "none"
+
+# B1 v2 invocation surface (Case B):
+b1v2:
+  invocation:
+    mode: "live"                              # B1 v2 surface: {dry-run, live}
+    context: "paper2-reproduction"            # B1 v2 surface: {paper2-reproduction, paper3-certification}
+    framework_version: "none"                 # B1 v2 surface: default value already
+  # Wrapper-layer overrides applied to B1 v2 output JSON
+  wrapper_overrides:
+    context_field: "lane-1a-reconnaissance"
+    inject_tags:
+      artifact_class: "lane-1a-reconnaissance"
+      certification_relevance: "none"
+
+# Model and decoding (Senior design packet §1.1)
+model:
+  name: "Qwen2.5-3B-Instruct"
+  precision: "FP16"
+  backend: "mlx_lm"
+  greedy: true
+  temperature: 0
+  seed: 0
+  # Model snapshot identity is runner-attested by B1 v2 at execution.
+
+# Token-prior control path (Manager Option A, 2026-06-10):
+control_path: "Option_A_authorized_by_name"
+control_authorization_string: "Manager-authorized Lane 1a token-prior control path"
+
+# Generation plan (B5; under Option A):
+planned_generations:
+  per_rung:
+    answerable: 80
+    null_stratum: 16
+    answerable_mirror: 80
+    null_mirror: 16
+    total: 192
+  total: 1536
+
+# Locked paths
+paths:
+  classification_criteria: "classification_criteria.yaml"
+  prompt_template: "prompt_template.md"
+  manifests_dir: "manifests"
+  raw_outputs_dir: "raw"
+  audit_log: "AUDIT-LOG.ndjson"
+  lock_record: "LOCK-RECORD.md"
+
+# Pre-execution gates (enforced by wrapper before any model invocation)
+gates:
+  require_lock_record: true
+  require_lock_record_token_prior_auth: true
+  require_first_data_access_postdates_lock_timestamp: true
+  refuse_re_execution_for_same_rung_id_and_stratum: true

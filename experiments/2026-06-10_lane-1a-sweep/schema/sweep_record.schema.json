@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lane-1a-sweep-record.schema.json",
+  "title": "Lane 1a sweep record",
+  "description": "Locked schema. framework_version is const:'none' to block Paper 3 misuse. additionalProperties:false. survivors enum to rung IDs only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sweep_id", "framework_version",
+    "model_attestation",
+    "lock_record_hash", "classification_criteria_hash",
+    "manifest_generator_hash", "scorer_hash", "dummy_policies_hash",
+    "analyzer_hash", "plotter_hash",
+    "prompt_template_hash", "runner_config_hash",
+    "lane1a_runner_wrapper_hash", "audit_log_writer_hash",
+    "artifact_tags_hash",
+    "per_rung_schema_hash", "sweep_schema_hash",
+    "fixed_outcome_hash", "exclusion_block_hash",
+    "manifest_recipe_seed",
+    "token_prior_control_authorization",
+    "planned_generation_count",
+    "candidate_generation_count",
+    "control_generation_count",
+    "control_scoring_denominator",
+    "null_mirror_scoring",
+    "lock_timestamp", "first_data_access_timestamp",
+    "sweep_complete_timestamp", "total_attempts",
+    "rungs", "survivors", "K",
+    "fixed_outcome_statement", "exclusion_block",
+    "artifact_class", "certification_relevance"
+  ],
+  "properties": {
+    "sweep_id": { "const": "lane-1a-2026-06-10" },
+    "framework_version": { "const": "none" },
+    "model_attestation": { "type": "object" },
+
+    "lock_record_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "classification_criteria_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "manifest_generator_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "scorer_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "dummy_policies_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "analyzer_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "plotter_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "prompt_template_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "runner_config_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "lane1a_runner_wrapper_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "audit_log_writer_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "artifact_tags_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "per_rung_schema_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "sweep_schema_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "fixed_outcome_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "exclusion_block_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+
+    "manifest_recipe_seed": { "type": "integer", "minimum": 0 },
+
+    "token_prior_control_authorization": {
+      "enum": [
+        "Manager-authorized Lane 1a token-prior control path",
+        "offline_fallback"
+      ]
+    },
+
+    "planned_generation_count": { "type": "integer", "enum": [768, 1536] },
+    "candidate_generation_count": { "type": "integer", "const": 768 },
+    "control_generation_count": { "type": "integer", "enum": [0, 768] },
+    "control_scoring_denominator": { "type": "integer", "const": 80 },
+    "null_mirror_scoring": { "const": "descriptive_only" },
+
+    "lock_timestamp": { "type": "string", "format": "date-time" },
+    "first_data_access_timestamp": { "type": "string", "format": "date-time" },
+    "sweep_complete_timestamp": { "type": "string", "format": "date-time" },
+    "total_attempts": { "type": "integer", "minimum": 0 },
+
+    "rungs": {
+      "type": "array",
+      "items": { "$ref": "per_rung_record.schema.json" },
+      "minItems": 8,
+      "maxItems": 8
+    },
+
+    "survivors": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Unordered set serialized in alphabetical rung-ID order (B5 unit-tested)",
+      "items": { "enum": ["L01","L02","L03","L04","L05","L06","L07","L08"] }
+    },
+    "K": { "type": "integer", "minimum": 0, "maximum": 8 },
+
+    "fixed_outcome_statement": { "type": "string" },
+    "exclusion_block":         { "type": "string" },
+
+    "artifact_class":          { "const": "lane-1a-reconnaissance" },
+    "certification_relevance": { "const": "none" }
+  }
+}

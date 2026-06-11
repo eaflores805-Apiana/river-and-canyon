@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "lane-1a-per-rung-record.schema.json",
+  "title": "Lane 1a per-rung record",
+  "description": "Locked schema. additionalProperties:false blocks order/preference/best fields. artifact_class and certification_relevance are const.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "rung_id", "manifest_hash",
+    "N_declared", "N_effective", "void_count",
+    "void_count_answerable", "void_count_null",
+    "void_count_control_answerable_mirror", "void_count_control_null_mirror",
+    "strict_acc", "strict_acc_se",
+    "content_acc", "gap",
+    "control_acc", "control_acc_se",
+    "max_dummy_score", "union_envelope_score",
+    "headroom",
+    "abstention_rate", "abstention_rate_se",
+    "separability_flag", "tokenization_stability_flag",
+    "harness_anomaly_flag", "missing_required_outputs_flag",
+    "answer_pos_distribution",
+    "labels", "per_item_log_path", "raw_output_dir",
+    "artifact_class", "certification_relevance"
+  ],
+  "properties": {
+    "rung_id": { "enum": ["L01","L02","L03","L04","L05","L06","L07","L08"] },
+    "manifest_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+
+    "N_declared": { "const": 96 },
+    "N_effective": { "type": "integer", "minimum": 0, "maximum": 80 },
+    "void_count": { "type": "integer", "minimum": 0 },
+    "void_count_answerable": { "type": "integer", "minimum": 0 },
+    "void_count_null": { "type": "integer", "minimum": 0 },
+    "void_count_control_answerable_mirror": { "type": "integer", "minimum": 0 },
+    "void_count_control_null_mirror": { "type": "integer", "minimum": 0 },
+
+    "strict_acc": { "type": "number", "minimum": 0, "maximum": 1 },
+    "strict_acc_se": { "type": "number", "minimum": 0 },
+    "content_acc": { "type": "number", "minimum": 0, "maximum": 1 },
+    "gap": {
+      "type": "number",
+      "description": "B1 sign convention: gap := content_acc - strict_acc (always >= 0 under strict-implies-content)"
+    },
+
+    "control_acc": {
+      "oneOf": [
+        { "type": "number", "minimum": 0, "maximum": 1 },
+        { "type": "null", "description": "null if token-prior controls skipped (B4 fallback)" }
+      ]
+    },
+    "control_acc_se": {
+      "oneOf": [
+        { "type": "number", "minimum": 0 },
+        { "type": "null" }
+      ]
+    },
+
+    "max_dummy_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "union_envelope_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "headroom": { "type": "number" },
+
+    "abstention_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+    "abstention_rate_se": { "type": "number", "minimum": 0 },
+    "separability_flag": { "type": "boolean" },
+    "tokenization_stability_flag": { "type": "boolean" },
+    "harness_anomaly_flag": { "type": "boolean" },
+    "missing_required_outputs_flag": { "type": "boolean" },
+
+    "answer_pos_distribution": {
+      "type": "object",
+      "description": "Histogram of answerable items' answer-key positions for B3 audit",
+      "additionalProperties": false,
+      "properties": {
+        "bin_counts": { "type": "array", "items": { "type": "integer", "minimum": 0 } },
+        "bin_count_total": { "type": "integer", "minimum": 0 },
+        "max_deviation_sigma": { "type": "number", "minimum": 0 }
+      },
+      "required": ["bin_counts", "bin_count_total", "max_deviation_sigma"]
+    },
+
+    "labels": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "accuracy_indistinguishable_from_token_prior",
+          "accuracy_indistinguishable_from_declared_policy_envelope",
+          "insufficient_measurement_headroom",
+          "strict_content_gap_instability",
+          "abstention_contract_instability",
+          "inconclusive_not_actionable",
+          "requires_further_investigation"
+        ]
+      }
+    },
+
+    "per_item_log_path": { "type": "string" },
+    "raw_output_dir": { "type": "string" },
+
+    "artifact_class": { "const": "lane-1a-reconnaissance" },
+    "certification_relevance": { "const": "none" }
+  }
+}
