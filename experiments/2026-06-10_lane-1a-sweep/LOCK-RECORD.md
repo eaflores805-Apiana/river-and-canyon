@@ -122,13 +122,18 @@ bit-identically from the manifest_generator.py + classification_criteria.yaml
 ## Lock timestamp
 
 ```text
-Lock timestamp: PENDING_TEAM_LEAD_REVIEW
+Lock timestamp: 2026-06-11T03:37:50Z
 ```
 
-Review chain must replay (Senior intent-preservation review of
-Path E.1 + Team Lead combined adversarial re-review + Manager
-first-data-access reauthorization against this LOCK-RECORD hash)
-before CS may finalize the timestamp.
+CS appended this RFC 3339 UTC timestamp under Manager Path E.1
+reauthorization authority (`MANAGER-REAUTHORIZATION-PATH-E1-FIRST-DATA-
+ACCESS-2026-06-10.md` §3) after Senior Path E.1 intent-preservation
+PASS + Team Lead Path E.1 combined re-review PASS with both conditions
+resolved without re-seal.
+
+The `first_data_access_timestamp` recorded by the wrapper at sweep
+time MUST postdate this lock timestamp.
+`lane1a_runner_wrapper.py preflight()` enforces this comparison.
 
 ## Unit-test verification (CS, 2026-06-10, post-Path-E.1)
 
