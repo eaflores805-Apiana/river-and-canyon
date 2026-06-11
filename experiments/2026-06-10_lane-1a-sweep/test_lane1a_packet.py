@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 import tempfile
 import unittest
@@ -556,6 +557,30 @@ class TestLane1aRunnerProvenance(unittest.TestCase):
         self.assertEqual(lane1a_runner.DECODING_SETTINGS["temperature"], 0.0)
         self.assertEqual(lane1a_runner.DECODING_SETTINGS["greedy"], True)
         self.assertEqual(lane1a_runner.DECODING_SETTINGS["seed"], 0)
+
+    def test_model_id_matches_b1v2(self):
+        """Path A.1 (Manager 2026-06-10): lane1a_runner.MODEL_ID must
+        match B1 v2's MODEL_ID byte-for-byte. Cross-references the
+        B1 v2 source directly so future drift trips CI."""
+        import lane1a_runner  # noqa: PLC0415
+        # SCRIPT_DIR = experiments/2026-06-10_lane-1a-sweep/
+        # parents[0] = experiments/
+        b1v2_src_path = (
+            SCRIPT_DIR.parents[0]
+            / "2026-06-09_b1-harness-v2" / "code" / "runner_b1_v2.py"
+        )
+        self.assertTrue(b1v2_src_path.exists(),
+                        f"B1 v2 source not found at {b1v2_src_path}")
+        b1v2_src = b1v2_src_path.read_text(encoding="utf-8")
+        # Find B1 v2's MODEL_ID assignment.
+        m = re.search(r'^MODEL_ID\s*=\s*"([^"]+)"', b1v2_src, re.MULTILINE)
+        self.assertIsNotNone(m, "could not locate MODEL_ID in B1 v2 source")
+        b1v2_model_id = m.group(1)
+        self.assertEqual(
+            lane1a_runner.MODEL_ID, b1v2_model_id,
+            f"lane1a_runner.MODEL_ID ({lane1a_runner.MODEL_ID!r}) must "
+            f"match B1 v2 MODEL_ID ({b1v2_model_id!r}) byte-for-byte",
+        )
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-# Lane 1a Lock Record — 2026-06-10 (Path A Remediated)
+# Lane 1a Lock Record — 2026-06-10 (Path A.1 — MODEL_ID matches B1 v2)
 
 Sweep ID: `lane-1a-2026-06-10`
 Framework version (declared): `none`  *(Lane 1a is NOT a certification)*
@@ -39,7 +39,7 @@ control_scoring_denominator = 80 answerable-mirroring controls per rung
 NULL-mirroring controls = descriptive-only
 ```
 
-## Runner integration (Path A, Manager 2026-06-10)
+## Runner integration (Path A → Path A.1, Manager 2026-06-10)
 
 **Root cause (Senior, Team Lead-approved one-sentence note):**
 
@@ -50,6 +50,14 @@ NULL-mirroring controls = descriptive-only
 > Lane 1a uses a lane-specific runner that preserves B1 v2-compatible
 > provenance conventions and locked model-loading dependencies, while
 > leaving B1 v2 source unedited.
+
+**Path A.1 model-identity correction (Manager 2026-06-10):**
+
+> `lane1a_runner.MODEL_ID` must match B1 v2's MODEL_ID byte-for-byte:
+> `"Qwen/Qwen2.5-3B-Instruct"`. Enforced by unit test
+> `test_model_id_matches_b1v2`, which reads B1 v2 source directly and
+> asserts equality with `lane1a_runner.MODEL_ID`. Any future drift in
+> either side trips the test at CI time.
 
 Concretely:
 
@@ -75,7 +83,7 @@ Concretely:
 | `scorer.py` | `c1aff994081829a6888338aea8dadab30bf622203dbb5f597cd7298cf8f27495` | unchanged |
 | `dummy_policies.py` | `46a5b2349051b4e51059575d056068360fe990889c57cb11a4ba155afe9ad36c` | unchanged |
 | `runner_config.yaml` | `bbb4655e5789a0eb767a26b54d58dbe4bdc428f31469082dc0cc151d47596dc3` | **PATH A — b1v2 invocation block removed; runner: section added** |
-| `lane1a_runner.py` | `23a480e701d583a91f435eca0d2d641af0e4797684d64b442d2ec9da5565d531` | **PATH A — NEW** |
+| `lane1a_runner.py` | `4174039529e5820c4ff3904c6eff9c116cd0b1b7e963afb6a7c6d4e4d397f5a7` | **PATH A.1 — MODEL_ID corrected to `Qwen/Qwen2.5-3B-Instruct`** |
 | `lane1a_runner_wrapper.py` | `4bed7fbdb938021638bda3908b7cbdb1e68e4dcc6305c7455b24df345cb444b1` | **PATH A — invokes lane1a_runner.py** |
 | `analyzer.py` | `4c0087fa949883a772f608994f439132a195583a97035b7baff700230ba2144c` | unchanged |
 | `plotter.py` | `dca510667d52d1b5a281f4a5ca5597c2abb5a7cb4a1a25a59baa98e397a5834a` | unchanged |
@@ -87,7 +95,7 @@ Concretely:
 | `schema/sweep_record.schema.json` | `449aae9259ed9fe2f188818ae880c691f419e0b62b302e40fffb1e99cea678ec` | unchanged |
 | `schema/lane1a_sidecar.schema.json` | `23195986fe8bba1fa0754f9af1d9a80ce984e62f2056320d7ac9da281b4ac4aa` | **PATH A — runner_output fields** |
 | `AUDIT-LOG-FORMAT.md` | `29b418c6cb6601d1aab4b28eba8e538ef828900eef6a02a9d821b128abc6a465` | unchanged |
-| `test_lane1a_packet.py` | `934f39773cd90c998edf19b07b621ec83ac925721804a0c6d319e47abfb2701e` | **PATH A — 13 new/updated tests; 35/35 PASS** |
+| `test_lane1a_packet.py` | `8852c5171f92280cba320360b01bb1dc3e9539d4913a32cb7dc305dfa0602a5a` | **PATH A.1 — +1 test (test_model_id_matches_b1v2); 36/36 PASS** |
 | `NOVELTY-LEDGER.md` | `aad806a47bea04d7b16b77a0c1205a472b97ecbf7b5591b2a77b71f8ccb9f112` | unchanged |
 
 Total locked artifacts: 20 (was 19; lane1a_runner.py is the +1).
@@ -95,23 +103,30 @@ Total locked artifacts: 20 (was 19; lane1a_runner.py is the +1).
 ## Lock timestamp
 
 ```text
-Lock timestamp: 2026-06-11T02:38:46Z
+Lock timestamp: PENDING_TEAM_LEAD_REVIEW
 ```
 
-CS appended this RFC 3339 UTC timestamp under Manager reauthorization
-authority (`MANAGER-REAUTHORIZATION-PATH-A-FIRST-DATA-ACCESS-2026-06-10.md`
-§2) after Senior intent-preservation PASS + Team Lead combined-review
-PASS on the Path A remediated packet.
+**Reset to PENDING per Manager Path A.1 direction (`MANAGER-DIRECTION-
+PATH-A1-MODEL-ID-2026-06-10.md` §6):** *"The prior Manager
+authorization does not carry forward because the locked artifact set
+and model identity changed."* The review chain must replay (Senior
+intent-preservation + Team Lead combined re-review + Manager
+reauthorization) against the Path A.1 LOCK-RECORD hash before CS may
+finalize the timestamp.
 
-The `first_data_access_timestamp` recorded by the wrapper at sweep
-time MUST postdate this lock timestamp.
-`lane1a_runner_wrapper.py preflight()` enforces this comparison.
+Until the timestamp is finalized, `lane1a_runner_wrapper.py
+preflight()` refuses to invoke (the `PENDING_TEAM_LEAD_REVIEW`
+sentinel triggers `FirstDataAccessGateError`).
 
-## Unit-test verification (CS, 2026-06-10, post-Path-A)
+The earlier timestamp `2026-06-11T02:38:46Z` and post-touch hash
+`88a2a16d…` are superseded by this re-seal; they are preserved in git
+history for audit.
+
+## Unit-test verification (CS, 2026-06-10, post-Path-A.1)
 
 ```text
-Tests run:    35
-Tests passed: 35
+Tests run:    36   (+1 vs Path A: test_model_id_matches_b1v2)
+Tests passed: 36
 Tests failed:  0
 Status:       OK
 ```

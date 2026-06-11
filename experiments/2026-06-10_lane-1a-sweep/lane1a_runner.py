@@ -47,7 +47,7 @@ DECODING_SETTINGS = {
     "seed": 0,
 }
 
-MODEL_ID = "mlx-community/Qwen2.5-3B-Instruct-bf16"
+MODEL_ID = "Qwen/Qwen2.5-3B-Instruct"   # Path A.1 (Manager 2026-06-10): matches B1 v2 byte-for-byte
 
 
 def _now_iso() -> str:

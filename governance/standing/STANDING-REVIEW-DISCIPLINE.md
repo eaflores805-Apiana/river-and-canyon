@@ -146,10 +146,48 @@ If a condition memo is SEND-marked but not commit-confirmed, the production cycl
 
 ---
 
+## Additional rule — sibling-artifact cross-reference tests (added 2026-06-10, Manager / Path A.1 acceptance)
+
+*Manager / Elias 2026-06-10 (Path A.1 direction, accepting CS standing-rule proposal). Permanent production rule for any artifact that integrates with a locked sibling artifact.*
+
+> **CS production of any artifact that integrates with a locked sibling artifact must include a unit test that cross-references concrete values against the sibling artifact's source.**
+
+Applies to:
+
+- `MODEL_ID`s
+- schema field names
+- required manifest fields
+- CLI constants (argparse choices, default values)
+- mode names
+- context names
+- framework-version behavior
+- artifact tags (`artifact_class`, `certification_relevance`, etc.)
+- provenance fields
+
+The test must read the sibling artifact's source file directly (not import it; not depend on the sibling being importable) and assert byte-for-byte equality with the corresponding value in the new artifact.
+
+**Why this rule exists.** Lane 1a Step-3 production exposed two CS-side specification defects that survived three review gates (Senior intent-preservation PASS, Team Lead combined-review PASS, CS Path A return) because Path A unit tests covered Python-logic invariants on synthetic inputs but did not cross-reference concrete values against B1 v2's source:
+
+- The B1 v2 manifest-interface deviation (Lane 1a nested dict vs. Two-Hop L1 flat list) would have been caught by a schema-shape cross-reference test on `validate_manifest`.
+- The `MODEL_ID` deviation (`mlx-community/Qwen2.5-3B-Instruct-bf16` vs. `Qwen/Qwen2.5-3B-Instruct`) is caught by `test_model_id_matches_b1v2`, which reads B1 v2 source directly.
+
+**Canonical examples for this rule:**
+
+- `experiments/2026-06-10_lane-1a-sweep/test_lane1a_packet.py::TestLane1aRunnerProvenance::test_model_id_matches_b1v2` — reads `experiments/2026-06-09_b1-harness-v2/code/runner_b1_v2.py`, extracts `MODEL_ID` via regex, asserts equality with `lane1a_runner.MODEL_ID`. Any future drift on either side trips CI.
+
+**Implication for CS.** The new rule complements the prior G1-open production rule (no production while condition memos are G1-open). Together they require:
+
+- Conditions arriving via memo channel: committed at intended path; hash-confirmed; explicitly superseded; or explicitly ruled out of scope.
+- Conditions arriving via existing locked artifact: unit-tested against the locked artifact's source.
+
+Both rules apply to every production cycle going forward.
+
+---
+
 ## Non-authorizations (carried forward)
 
 This standing rule does not authorize any execution lane. See `governance/standing/STANDING-NON-AUTHORIZATIONS.md` for the full canonical list.
 
 ---
 
-— Team Lead authored 2026-06-10; CS filed 2026-06-10; Manager production-rule addendum 2026-06-10
+— Team Lead authored 2026-06-10; CS filed 2026-06-10; Manager production-rule addendum 2026-06-10; Manager sibling-artifact cross-reference rule addendum 2026-06-10
