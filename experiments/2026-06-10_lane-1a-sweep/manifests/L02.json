@@ -1,0 +1,8664 @@
+{
+  "artifact_class": "lane-1a-reconnaissance",
+  "certification_relevance": "none",
+  "controls": {
+    "answerable_mirror": [
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "delta",
+        "in_context_pairs": [
+          [
+            "vymydh",
+            "tango"
+          ],
+          [
+            "adkffi",
+            "november"
+          ],
+          [
+            "rfmcdp",
+            "delta"
+          ],
+          [
+            "meikrt",
+            "uniform"
+          ],
+          [
+            "wrtzkf",
+            "kilo"
+          ],
+          [
+            "bbooko",
+            "foxtrot"
+          ],
+          [
+            "hfrhpr",
+            "charlie"
+          ],
+          [
+            "xeyply",
+            "oscar"
+          ],
+          [
+            "eehxbz",
+            "sierra"
+          ]
+        ],
+        "item_id": "L02-AM-000",
+        "queried_key": "rfmcdp",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "bravo",
+        "in_context_pairs": [
+          [
+            "fxzigi",
+            "yankee"
+          ],
+          [
+            "dmjwrx",
+            "whiskey"
+          ],
+          [
+            "qveymi",
+            "echo"
+          ],
+          [
+            "meerjb",
+            "quebec"
+          ],
+          [
+            "xxkuyl",
+            "charlie"
+          ],
+          [
+            "oeusri",
+            "oscar"
+          ],
+          [
+            "ybvtxn",
+            "alpha"
+          ],
+          [
+            "gbptfr",
+            "zulu"
+          ],
+          [
+            "klmwdr",
+            "bravo"
+          ]
+        ],
+        "item_id": "L02-AM-001",
+        "queried_key": "klmwdr",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "oscar",
+        "in_context_pairs": [
+          [
+            "zpmsll",
+            "oscar"
+          ],
+          [
+            "epfcng",
+            "yankee"
+          ],
+          [
+            "mbtvhv",
+            "zulu"
+          ],
+          [
+            "vcflpi",
+            "quebec"
+          ],
+          [
+            "szjskc",
+            "echo"
+          ],
+          [
+            "cerdkr",
+            "delta"
+          ],
+          [
+            "uyerem",
+            "charlie"
+          ],
+          [
+            "xmdfpe",
+            "mike"
+          ],
+          [
+            "ddgqey",
+            "foxtrot"
+          ]
+        ],
+        "item_id": "L02-AM-002",
+        "queried_key": "zpmsll",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "tango",
+        "in_context_pairs": [
+          [
+            "eogdbb",
+            "lima"
+          ],
+          [
+            "xgiagf",
+            "hotel"
+          ],
+          [
+            "lcrvcn",
+            "tango"
+          ],
+          [
+            "nbqsnn",
+            "kilo"
+          ],
+          [
+            "yzcere",
+            "uniform"
+          ],
+          [
+            "vqjifl",
+            "papa"
+          ],
+          [
+            "mcivsa",
+            "sierra"
+          ],
+          [
+            "acyuny",
+            "charlie"
+          ],
+          [
+            "bdwjgx",
+            "zulu"
+          ]
+        ],
+        "item_id": "L02-AM-003",
+        "queried_key": "lcrvcn",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "mliyqr",
+            "bravo"
+          ],
+          [
+            "riuopu",
+            "echo"
+          ],
+          [
+            "aoehrt",
+            "lima"
+          ],
+          [
+            "vywina",
+            "mike"
+          ],
+          [
+            "hdmaii",
+            "hotel"
+          ],
+          [
+            "lytvbr",
+            "november"
+          ],
+          [
+            "wcqmdu",
+            "victor"
+          ],
+          [
+            "dmnckr",
+            "yankee"
+          ],
+          [
+            "jczmbr",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-AM-004",
+        "queried_key": "lytvbr",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "sierra",
+        "in_context_pairs": [
+          [
+            "kzakeq",
+            "november"
+          ],
+          [
+            "otyhuh",
+            "india"
+          ],
+          [
+            "claxzn",
+            "lima"
+          ],
+          [
+            "fqyfuo",
+            "xray"
+          ],
+          [
+            "qtjgck",
+            "uniform"
+          ],
+          [
+            "xpwbtf",
+            "charlie"
+          ],
+          [
+            "aepcjf",
+            "papa"
+          ],
+          [
+            "gplbht",
+            "juliet"
+          ],
+          [
+            "eijumu",
+            "sierra"
+          ]
+        ],
+        "item_id": "L02-AM-005",
+        "queried_key": "eijumu",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "golf",
+        "in_context_pairs": [
+          [
+            "smfobj",
+            "juliet"
+          ],
+          [
+            "chdlfr",
+            "india"
+          ],
+          [
+            "unbybn",
+            "november"
+          ],
+          [
+            "nxufci",
+            "kilo"
+          ],
+          [
+            "qmfisk",
+            "xray"
+          ],
+          [
+            "xzruom",
+            "golf"
+          ],
+          [
+            "rhfzig",
+            "tango"
+          ],
+          [
+            "awnujs",
+            "echo"
+          ],
+          [
+            "bzoraf",
+            "lima"
+          ]
+        ],
+        "item_id": "L02-AM-006",
+        "queried_key": "xzruom",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "qwopun",
+            "sierra"
+          ],
+          [
+            "ppsvac",
+            "papa"
+          ],
+          [
+            "nwssue",
+            "foxtrot"
+          ],
+          [
+            "gonisr",
+            "golf"
+          ],
+          [
+            "ytscsf",
+            "yankee"
+          ],
+          [
+            "vxzgyz",
+            "november"
+          ],
+          [
+            "mwvovo",
+            "lima"
+          ],
+          [
+            "eloljx",
+            "quebec"
+          ],
+          [
+            "lwnkin",
+            "mike"
+          ]
+        ],
+        "item_id": "L02-AM-007",
+        "queried_key": "vxzgyz",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "victor",
+        "in_context_pairs": [
+          [
+            "enezom",
+            "xray"
+          ],
+          [
+            "yexaqv",
+            "charlie"
+          ],
+          [
+            "kwxfrv",
+            "uniform"
+          ],
+          [
+            "dwzzym",
+            "delta"
+          ],
+          [
+            "ghpyhv",
+            "sierra"
+          ],
+          [
+            "tghtor",
+            "tango"
+          ],
+          [
+            "jbdrjf",
+            "victor"
+          ],
+          [
+            "xmvyot",
+            "whiskey"
+          ],
+          [
+            "fuybla",
+            "yankee"
+          ]
+        ],
+        "item_id": "L02-AM-008",
+        "queried_key": "jbdrjf",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "oscar",
+        "in_context_pairs": [
+          [
+            "zpsbzc",
+            "alpha"
+          ],
+          [
+            "uuryzy",
+            "oscar"
+          ],
+          [
+            "xdevoc",
+            "victor"
+          ],
+          [
+            "hsxpow",
+            "golf"
+          ],
+          [
+            "jcmhqf",
+            "tango"
+          ],
+          [
+            "fqyzpu",
+            "kilo"
+          ],
+          [
+            "avnppk",
+            "november"
+          ],
+          [
+            "gcamsq",
+            "quebec"
+          ],
+          [
+            "ickjdg",
+            "india"
+          ]
+        ],
+        "item_id": "L02-AM-009",
+        "queried_key": "uuryzy",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "hotel",
+        "in_context_pairs": [
+          [
+            "umimmn",
+            "mike"
+          ],
+          [
+            "yingof",
+            "november"
+          ],
+          [
+            "clopub",
+            "delta"
+          ],
+          [
+            "wnwwwh",
+            "lima"
+          ],
+          [
+            "zjzpej",
+            "juliet"
+          ],
+          [
+            "parhdm",
+            "hotel"
+          ],
+          [
+            "bbvcnq",
+            "papa"
+          ],
+          [
+            "rxqfga",
+            "alpha"
+          ],
+          [
+            "ankbio",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-AM-010",
+        "queried_key": "parhdm",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "romeo",
+        "in_context_pairs": [
+          [
+            "pjlxxg",
+            "kilo"
+          ],
+          [
+            "dexfmp",
+            "papa"
+          ],
+          [
+            "fhcqle",
+            "november"
+          ],
+          [
+            "vhhxlu",
+            "zulu"
+          ],
+          [
+            "yydacs",
+            "uniform"
+          ],
+          [
+            "tsgxal",
+            "india"
+          ],
+          [
+            "qnjjua",
+            "yankee"
+          ],
+          [
+            "rznkce",
+            "oscar"
+          ],
+          [
+            "bdaija",
+            "romeo"
+          ]
+        ],
+        "item_id": "L02-AM-011",
+        "queried_key": "bdaija",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "yujucq",
+            "lima"
+          ],
+          [
+            "qonuly",
+            "golf"
+          ],
+          [
+            "gtwkgo",
+            "kilo"
+          ],
+          [
+            "jjgzhu",
+            "india"
+          ],
+          [
+            "chuqaz",
+            "sierra"
+          ],
+          [
+            "namlrl",
+            "foxtrot"
+          ],
+          [
+            "unguon",
+            "november"
+          ],
+          [
+            "wsteiy",
+            "delta"
+          ],
+          [
+            "skgzcv",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-AM-012",
+        "queried_key": "gtwkgo",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "mike",
+        "in_context_pairs": [
+          [
+            "ytiayz",
+            "hotel"
+          ],
+          [
+            "jsssbp",
+            "oscar"
+          ],
+          [
+            "xnjazz",
+            "echo"
+          ],
+          [
+            "psqdkz",
+            "quebec"
+          ],
+          [
+            "merzhy",
+            "mike"
+          ],
+          [
+            "ilfsnv",
+            "bravo"
+          ],
+          [
+            "swytxg",
+            "november"
+          ],
+          [
+            "apmase",
+            "charlie"
+          ],
+          [
+            "gvppah",
+            "foxtrot"
+          ]
+        ],
+        "item_id": "L02-AM-013",
+        "queried_key": "merzhy",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "whiskey",
+        "in_context_pairs": [
+          [
+            "qyglbm",
+            "zulu"
+          ],
+          [
+            "lqjjoh",
+            "sierra"
+          ],
+          [
+            "txtogp",
+            "echo"
+          ],
+          [
+            "squfnr",
+            "hotel"
+          ],
+          [
+            "bojzrx",
+            "whiskey"
+          ],
+          [
+            "ebnwwc",
+            "tango"
+          ],
+          [
+            "niayck",
+            "charlie"
+          ],
+          [
+            "rvwmdp",
+            "victor"
+          ],
+          [
+            "wntean",
+            "november"
+          ]
+        ],
+        "item_id": "L02-AM-014",
+        "queried_key": "bojzrx",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "papa",
+        "in_context_pairs": [
+          [
+            "qhrpct",
+            "mike"
+          ],
+          [
+            "hyiaid",
+            "quebec"
+          ],
+          [
+            "ayrbno",
+            "kilo"
+          ],
+          [
+            "pouyjd",
+            "yankee"
+          ],
+          [
+            "lcsxua",
+            "papa"
+          ],
+          [
+            "xxsrhs",
+            "lima"
+          ],
+          [
+            "fivftv",
+            "echo"
+          ],
+          [
+            "yidltc",
+            "bravo"
+          ],
+          [
+            "rbenug",
+            "juliet"
+          ]
+        ],
+        "item_id": "L02-AM-015",
+        "queried_key": "lcsxua",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "mjhknv",
+            "bravo"
+          ],
+          [
+            "sdokfq",
+            "charlie"
+          ],
+          [
+            "oxngma",
+            "zulu"
+          ],
+          [
+            "xspwau",
+            "xray"
+          ],
+          [
+            "jresmp",
+            "echo"
+          ],
+          [
+            "vmtnmq",
+            "foxtrot"
+          ],
+          [
+            "hslitg",
+            "delta"
+          ],
+          [
+            "aukrat",
+            "golf"
+          ],
+          [
+            "pjcodt",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-AM-016",
+        "queried_key": "xspwau",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "romeo",
+        "in_context_pairs": [
+          [
+            "dqbtrf",
+            "lima"
+          ],
+          [
+            "jittja",
+            "quebec"
+          ],
+          [
+            "bvbpgo",
+            "zulu"
+          ],
+          [
+            "ukyuxz",
+            "yankee"
+          ],
+          [
+            "friojw",
+            "kilo"
+          ],
+          [
+            "iljxsh",
+            "india"
+          ],
+          [
+            "aduvbh",
+            "whiskey"
+          ],
+          [
+            "gznlip",
+            "romeo"
+          ],
+          [
+            "ccvbcc",
+            "november"
+          ]
+        ],
+        "item_id": "L02-AM-017",
+        "queried_key": "gznlip",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "pxgcuc",
+            "lima"
+          ],
+          [
+            "hparuc",
+            "romeo"
+          ],
+          [
+            "oxngzg",
+            "india"
+          ],
+          [
+            "vrqndj",
+            "charlie"
+          ],
+          [
+            "gaakyu",
+            "zulu"
+          ],
+          [
+            "yvgnhk",
+            "juliet"
+          ],
+          [
+            "sdlujk",
+            "november"
+          ],
+          [
+            "fsqrmv",
+            "xray"
+          ],
+          [
+            "imsqrt",
+            "foxtrot"
+          ]
+        ],
+        "item_id": "L02-AM-018",
+        "queried_key": "sdlujk",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "xyqyyn",
+            "delta"
+          ],
+          [
+            "jwenzd",
+            "papa"
+          ],
+          [
+            "koflxq",
+            "xray"
+          ],
+          [
+            "tnejdo",
+            "bravo"
+          ],
+          [
+            "akunmt",
+            "juliet"
+          ],
+          [
+            "rryulf",
+            "victor"
+          ],
+          [
+            "hhdxar",
+            "golf"
+          ],
+          [
+            "dxrstw",
+            "india"
+          ],
+          [
+            "lwbeyv",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-AM-019",
+        "queried_key": "koflxq",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "tango",
+        "in_context_pairs": [
+          [
+            "ymmltl",
+            "tango"
+          ],
+          [
+            "mnjcwx",
+            "papa"
+          ],
+          [
+            "usxsef",
+            "bravo"
+          ],
+          [
+            "ftvaac",
+            "hotel"
+          ],
+          [
+            "nzfywm",
+            "whiskey"
+          ],
+          [
+            "wzwbst",
+            "romeo"
+          ],
+          [
+            "zemzxm",
+            "golf"
+          ],
+          [
+            "iuptyh",
+            "oscar"
+          ],
+          [
+            "kziydm",
+            "india"
+          ]
+        ],
+        "item_id": "L02-AM-020",
+        "queried_key": "ymmltl",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "oscar",
+        "in_context_pairs": [
+          [
+            "ymmpix",
+            "victor"
+          ],
+          [
+            "jxxbii",
+            "kilo"
+          ],
+          [
+            "vzmagf",
+            "november"
+          ],
+          [
+            "ewbyez",
+            "echo"
+          ],
+          [
+            "nfzpde",
+            "oscar"
+          ],
+          [
+            "bbqyxh",
+            "zulu"
+          ],
+          [
+            "omcinp",
+            "mike"
+          ],
+          [
+            "keqjqh",
+            "tango"
+          ],
+          [
+            "twidzu",
+            "romeo"
+          ]
+        ],
+        "item_id": "L02-AM-021",
+        "queried_key": "nfzpde",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "tango",
+        "in_context_pairs": [
+          [
+            "olerag",
+            "romeo"
+          ],
+          [
+            "zlntfx",
+            "bravo"
+          ],
+          [
+            "ajsqlp",
+            "quebec"
+          ],
+          [
+            "ekpjxv",
+            "hotel"
+          ],
+          [
+            "pdiffo",
+            "sierra"
+          ],
+          [
+            "ybzdsw",
+            "india"
+          ],
+          [
+            "swsntk",
+            "oscar"
+          ],
+          [
+            "rxaytn",
+            "tango"
+          ],
+          [
+            "guwfdk",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-AM-022",
+        "queried_key": "rxaytn",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "whiskey",
+        "in_context_pairs": [
+          [
+            "mmaxil",
+            "golf"
+          ],
+          [
+            "oxiyxe",
+            "lima"
+          ],
+          [
+            "beormx",
+            "whiskey"
+          ],
+          [
+            "soveux",
+            "charlie"
+          ],
+          [
+            "eerfgh",
+            "delta"
+          ],
+          [
+            "lxzctz",
+            "kilo"
+          ],
+          [
+            "jzhyzd",
+            "juliet"
+          ],
+          [
+            "yikpab",
+            "romeo"
+          ],
+          [
+            "khcmam",
+            "november"
+          ]
+        ],
+        "item_id": "L02-AM-023",
+        "queried_key": "beormx",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "bravo",
+        "in_context_pairs": [
+          [
+            "pyyziu",
+            "echo"
+          ],
+          [
+            "omiesl",
+            "yankee"
+          ],
+          [
+            "iebiti",
+            "tango"
+          ],
+          [
+            "cqwrjp",
+            "papa"
+          ],
+          [
+            "merewx",
+            "uniform"
+          ],
+          [
+            "nnielc",
+            "mike"
+          ],
+          [
+            "baeawe",
+            "sierra"
+          ],
+          [
+            "hzqzuu",
+            "bravo"
+          ],
+          [
+            "ahmuuj",
+            "oscar"
+          ]
+        ],
+        "item_id": "L02-AM-024",
+        "queried_key": "hzqzuu",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "tango",
+        "in_context_pairs": [
+          [
+            "lsgdsv",
+            "foxtrot"
+          ],
+          [
+            "oegwpy",
+            "yankee"
+          ],
+          [
+            "rizwle",
+            "delta"
+          ],
+          [
+            "zrspqu",
+            "tango"
+          ],
+          [
+            "sbyviv",
+            "india"
+          ],
+          [
+            "mwilzz",
+            "lima"
+          ],
+          [
+            "enerag",
+            "golf"
+          ],
+          [
+            "nejlhj",
+            "victor"
+          ],
+          [
+            "irictl",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-AM-025",
+        "queried_key": "zrspqu",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "tlbzqp",
+            "yankee"
+          ],
+          [
+            "emxinx",
+            "xray"
+          ],
+          [
+            "rofpbc",
+            "oscar"
+          ],
+          [
+            "holfrf",
+            "foxtrot"
+          ],
+          [
+            "xydllv",
+            "kilo"
+          ],
+          [
+            "uohebj",
+            "quebec"
+          ],
+          [
+            "danlat",
+            "uniform"
+          ],
+          [
+            "imoflv",
+            "india"
+          ],
+          [
+            "lhairq",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-AM-026",
+        "queried_key": "xydllv",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "hotel",
+        "in_context_pairs": [
+          [
+            "tehdht",
+            "charlie"
+          ],
+          [
+            "nmeuuu",
+            "echo"
+          ],
+          [
+            "qkuvlw",
+            "oscar"
+          ],
+          [
+            "ohhkjh",
+            "quebec"
+          ],
+          [
+            "alkwoz",
+            "papa"
+          ],
+          [
+            "bapavo",
+            "bravo"
+          ],
+          [
+            "zvxcuv",
+            "india"
+          ],
+          [
+            "dddroq",
+            "sierra"
+          ],
+          [
+            "rvyzed",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-AM-027",
+        "queried_key": "rvyzed",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "sptaoc",
+            "alpha"
+          ],
+          [
+            "wcxopp",
+            "bravo"
+          ],
+          [
+            "dgtxub",
+            "romeo"
+          ],
+          [
+            "pntpro",
+            "kilo"
+          ],
+          [
+            "oeukyx",
+            "tango"
+          ],
+          [
+            "igmoxb",
+            "zulu"
+          ],
+          [
+            "aztpho",
+            "november"
+          ],
+          [
+            "rttyzb",
+            "india"
+          ],
+          [
+            "kyatpa",
+            "lima"
+          ]
+        ],
+        "item_id": "L02-AM-028",
+        "queried_key": "igmoxb",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "hotel",
+        "in_context_pairs": [
+          [
+            "gsptqx",
+            "xray"
+          ],
+          [
+            "vuocbj",
+            "hotel"
+          ],
+          [
+            "pdxsqj",
+            "delta"
+          ],
+          [
+            "elkvto",
+            "charlie"
+          ],
+          [
+            "zytclx",
+            "whiskey"
+          ],
+          [
+            "iiggsg",
+            "sierra"
+          ],
+          [
+            "xojvtz",
+            "zulu"
+          ],
+          [
+            "lnflau",
+            "papa"
+          ],
+          [
+            "cbjajj",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-AM-029",
+        "queried_key": "vuocbj",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "eewjcp",
+            "victor"
+          ],
+          [
+            "wjdlur",
+            "echo"
+          ],
+          [
+            "sulkar",
+            "whiskey"
+          ],
+          [
+            "dwcaxr",
+            "bravo"
+          ],
+          [
+            "mbskdi",
+            "india"
+          ],
+          [
+            "gyyniw",
+            "zulu"
+          ],
+          [
+            "pafaqd",
+            "tango"
+          ],
+          [
+            "qhdzly",
+            "alpha"
+          ],
+          [
+            "uziqqg",
+            "lima"
+          ]
+        ],
+        "item_id": "L02-AM-030",
+        "queried_key": "mbskdi",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "juliet",
+        "in_context_pairs": [
+          [
+            "lrynkc",
+            "tango"
+          ],
+          [
+            "yjzmbr",
+            "delta"
+          ],
+          [
+            "rglkpc",
+            "juliet"
+          ],
+          [
+            "jtzvin",
+            "kilo"
+          ],
+          [
+            "aedarl",
+            "india"
+          ],
+          [
+            "spzkkl",
+            "lima"
+          ],
+          [
+            "xqmxxc",
+            "victor"
+          ],
+          [
+            "gpbtjr",
+            "romeo"
+          ],
+          [
+            "qfpwng",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-AM-031",
+        "queried_key": "rglkpc",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "juliet",
+        "in_context_pairs": [
+          [
+            "leonye",
+            "november"
+          ],
+          [
+            "afblzx",
+            "juliet"
+          ],
+          [
+            "zyvxao",
+            "papa"
+          ],
+          [
+            "klexyc",
+            "kilo"
+          ],
+          [
+            "vcwqbt",
+            "delta"
+          ],
+          [
+            "umvywa",
+            "victor"
+          ],
+          [
+            "npbqei",
+            "golf"
+          ],
+          [
+            "szueui",
+            "echo"
+          ],
+          [
+            "htyams",
+            "yankee"
+          ]
+        ],
+        "item_id": "L02-AM-032",
+        "queried_key": "afblzx",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "mike",
+        "in_context_pairs": [
+          [
+            "stxgxd",
+            "mike"
+          ],
+          [
+            "gmjnlo",
+            "golf"
+          ],
+          [
+            "wrccgl",
+            "charlie"
+          ],
+          [
+            "ydwuvp",
+            "bravo"
+          ],
+          [
+            "dlxlfp",
+            "lima"
+          ],
+          [
+            "fgxaxc",
+            "victor"
+          ],
+          [
+            "oytekg",
+            "november"
+          ],
+          [
+            "efmvmm",
+            "hotel"
+          ],
+          [
+            "qtsisa",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-AM-033",
+        "queried_key": "stxgxd",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "quebec",
+        "in_context_pairs": [
+          [
+            "naxrvj",
+            "whiskey"
+          ],
+          [
+            "mwquxm",
+            "juliet"
+          ],
+          [
+            "vombvo",
+            "foxtrot"
+          ],
+          [
+            "hwguwp",
+            "golf"
+          ],
+          [
+            "kkizhz",
+            "romeo"
+          ],
+          [
+            "grxpms",
+            "kilo"
+          ],
+          [
+            "tmzlgj",
+            "quebec"
+          ],
+          [
+            "lbsupw",
+            "bravo"
+          ],
+          [
+            "brpqtr",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-AM-034",
+        "queried_key": "tmzlgj",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "golf",
+        "in_context_pairs": [
+          [
+            "qbyjcg",
+            "delta"
+          ],
+          [
+            "fojkgx",
+            "uniform"
+          ],
+          [
+            "hwyoth",
+            "foxtrot"
+          ],
+          [
+            "lbyurz",
+            "echo"
+          ],
+          [
+            "cgstsm",
+            "charlie"
+          ],
+          [
+            "nncvvq",
+            "kilo"
+          ],
+          [
+            "sqzhmq",
+            "mike"
+          ],
+          [
+            "xisowr",
+            "golf"
+          ],
+          [
+            "oxqibh",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-AM-035",
+        "queried_key": "xisowr",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "sierra",
+        "in_context_pairs": [
+          [
+            "zbqknv",
+            "november"
+          ],
+          [
+            "gcsrne",
+            "echo"
+          ],
+          [
+            "ktbdpp",
+            "india"
+          ],
+          [
+            "srakeq",
+            "oscar"
+          ],
+          [
+            "azkpde",
+            "sierra"
+          ],
+          [
+            "lncadj",
+            "charlie"
+          ],
+          [
+            "cdmdsr",
+            "zulu"
+          ],
+          [
+            "rztnks",
+            "xray"
+          ],
+          [
+            "hasmbz",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-AM-036",
+        "queried_key": "azkpde",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "romeo",
+        "in_context_pairs": [
+          [
+            "etjvzj",
+            "mike"
+          ],
+          [
+            "hirsoy",
+            "victor"
+          ],
+          [
+            "gaxppo",
+            "oscar"
+          ],
+          [
+            "dyrciq",
+            "november"
+          ],
+          [
+            "fqzpwu",
+            "sierra"
+          ],
+          [
+            "ryveyh",
+            "romeo"
+          ],
+          [
+            "iejyee",
+            "kilo"
+          ],
+          [
+            "jtncbh",
+            "tango"
+          ],
+          [
+            "zcpfga",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-AM-037",
+        "queried_key": "ryveyh",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "papa",
+        "in_context_pairs": [
+          [
+            "ijkkqp",
+            "charlie"
+          ],
+          [
+            "dwfnun",
+            "mike"
+          ],
+          [
+            "uvkpud",
+            "november"
+          ],
+          [
+            "nsmqfh",
+            "quebec"
+          ],
+          [
+            "gcxcxl",
+            "romeo"
+          ],
+          [
+            "hscchw",
+            "bravo"
+          ],
+          [
+            "kfidom",
+            "india"
+          ],
+          [
+            "bpwkpa",
+            "zulu"
+          ],
+          [
+            "lgqmtc",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-AM-038",
+        "queried_key": "lgqmtc",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "liymxo",
+            "whiskey"
+          ],
+          [
+            "kpyeru",
+            "hotel"
+          ],
+          [
+            "pgrwzp",
+            "xray"
+          ],
+          [
+            "mtfabp",
+            "mike"
+          ],
+          [
+            "oikoep",
+            "golf"
+          ],
+          [
+            "yiwhvw",
+            "yankee"
+          ],
+          [
+            "quxbkw",
+            "papa"
+          ],
+          [
+            "hhwyti",
+            "india"
+          ],
+          [
+            "cigjlu",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-AM-039",
+        "queried_key": "cigjlu",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "tbkhri",
+            "romeo"
+          ],
+          [
+            "zqtodq",
+            "alpha"
+          ],
+          [
+            "ykszhu",
+            "foxtrot"
+          ],
+          [
+            "szlpna",
+            "charlie"
+          ],
+          [
+            "ohyzxx",
+            "golf"
+          ],
+          [
+            "vtjhxy",
+            "bravo"
+          ],
+          [
+            "gyahkf",
+            "xray"
+          ],
+          [
+            "lvlqeh",
+            "victor"
+          ],
+          [
+            "kjlbdb",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-AM-040",
+        "queried_key": "gyahkf",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "delta",
+        "in_context_pairs": [
+          [
+            "xnegdp",
+            "mike"
+          ],
+          [
+            "gxkndr",
+            "delta"
+          ],
+          [
+            "hwfxex",
+            "uniform"
+          ],
+          [
+            "whpcxn",
+            "lima"
+          ],
+          [
+            "twwjij",
+            "victor"
+          ],
+          [
+            "kslilp",
+            "kilo"
+          ],
+          [
+            "iqjxvt",
+            "hotel"
+          ],
+          [
+            "dkdbve",
+            "india"
+          ],
+          [
+            "mefsgp",
+            "golf"
+          ]
+        ],
+        "item_id": "L02-AM-041",
+        "queried_key": "gxkndr",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "tbmvyv",
+            "charlie"
+          ],
+          [
+            "xoboej",
+            "yankee"
+          ],
+          [
+            "cdhtxv",
+            "xray"
+          ],
+          [
+            "lpbhbj",
+            "romeo"
+          ],
+          [
+            "ykmylk",
+            "uniform"
+          ],
+          [
+            "bdgmpp",
+            "zulu"
+          ],
+          [
+            "ovdmsf",
+            "hotel"
+          ],
+          [
+            "uazdca",
+            "kilo"
+          ],
+          [
+            "znlcnf",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-AM-042",
+        "queried_key": "cdhtxv",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "sierra",
+        "in_context_pairs": [
+          [
+            "tzbajb",
+            "lima"
+          ],
+          [
+            "vgiwmd",
+            "juliet"
+          ],
+          [
+            "qvcuqu",
+            "foxtrot"
+          ],
+          [
+            "ciqbmr",
+            "alpha"
+          ],
+          [
+            "bhxawe",
+            "november"
+          ],
+          [
+            "uspysn",
+            "sierra"
+          ],
+          [
+            "gfbmdr",
+            "golf"
+          ],
+          [
+            "jzxrdf",
+            "charlie"
+          ],
+          [
+            "mdrnvo",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-AM-043",
+        "queried_key": "uspysn",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "whiskey",
+        "in_context_pairs": [
+          [
+            "ahjgpv",
+            "lima"
+          ],
+          [
+            "hmuuct",
+            "echo"
+          ],
+          [
+            "oieeok",
+            "whiskey"
+          ],
+          [
+            "fqzrfy",
+            "hotel"
+          ],
+          [
+            "kbukgo",
+            "bravo"
+          ],
+          [
+            "rrxcfe",
+            "charlie"
+          ],
+          [
+            "ycrpal",
+            "delta"
+          ],
+          [
+            "lvcyuc",
+            "papa"
+          ],
+          [
+            "eybhxa",
+            "sierra"
+          ]
+        ],
+        "item_id": "L02-AM-044",
+        "queried_key": "oieeok",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "bravo",
+        "in_context_pairs": [
+          [
+            "pelkbt",
+            "papa"
+          ],
+          [
+            "bafmjf",
+            "india"
+          ],
+          [
+            "dgdtbd",
+            "lima"
+          ],
+          [
+            "lkrcse",
+            "oscar"
+          ],
+          [
+            "yorezs",
+            "yankee"
+          ],
+          [
+            "stoqna",
+            "foxtrot"
+          ],
+          [
+            "fjslsd",
+            "charlie"
+          ],
+          [
+            "aioham",
+            "bravo"
+          ],
+          [
+            "qruhsk",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-AM-045",
+        "queried_key": "aioham",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "quebec",
+        "in_context_pairs": [
+          [
+            "dsshlh",
+            "papa"
+          ],
+          [
+            "fstoru",
+            "hotel"
+          ],
+          [
+            "geaqml",
+            "bravo"
+          ],
+          [
+            "oiyjed",
+            "lima"
+          ],
+          [
+            "pgfjdd",
+            "quebec"
+          ],
+          [
+            "qjaesk",
+            "uniform"
+          ],
+          [
+            "jzwpuq",
+            "alpha"
+          ],
+          [
+            "maaoak",
+            "oscar"
+          ],
+          [
+            "niiucw",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-AM-046",
+        "queried_key": "pgfjdd",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "asaeat",
+            "alpha"
+          ],
+          [
+            "mvnwjr",
+            "papa"
+          ],
+          [
+            "kyvdzs",
+            "november"
+          ],
+          [
+            "jfbppi",
+            "golf"
+          ],
+          [
+            "qqibqh",
+            "mike"
+          ],
+          [
+            "ettzlf",
+            "xray"
+          ],
+          [
+            "xecypw",
+            "yankee"
+          ],
+          [
+            "dqixcr",
+            "whiskey"
+          ],
+          [
+            "ulelwn",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-AM-047",
+        "queried_key": "ulelwn",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "victor",
+        "in_context_pairs": [
+          [
+            "yshkfy",
+            "delta"
+          ],
+          [
+            "hlfvwr",
+            "golf"
+          ],
+          [
+            "apvwyt",
+            "lima"
+          ],
+          [
+            "vxywqr",
+            "juliet"
+          ],
+          [
+            "gakzwb",
+            "whiskey"
+          ],
+          [
+            "jwntoh",
+            "oscar"
+          ],
+          [
+            "kabkxh",
+            "romeo"
+          ],
+          [
+            "oyygei",
+            "victor"
+          ],
+          [
+            "wchlsg",
+            "zulu"
+          ]
+        ],
+        "item_id": "L02-AM-048",
+        "queried_key": "oyygei",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "bravo",
+        "in_context_pairs": [
+          [
+            "kvgfzh",
+            "whiskey"
+          ],
+          [
+            "wzvynb",
+            "kilo"
+          ],
+          [
+            "hzarej",
+            "foxtrot"
+          ],
+          [
+            "zjhlvb",
+            "hotel"
+          ],
+          [
+            "vqbqiu",
+            "charlie"
+          ],
+          [
+            "sbijso",
+            "bravo"
+          ],
+          [
+            "pbbkob",
+            "mike"
+          ],
+          [
+            "fawoqg",
+            "quebec"
+          ],
+          [
+            "bwvbos",
+            "yankee"
+          ]
+        ],
+        "item_id": "L02-AM-049",
+        "queried_key": "sbijso",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "yankee",
+        "in_context_pairs": [
+          [
+            "lqgvzg",
+            "foxtrot"
+          ],
+          [
+            "pwwkif",
+            "victor"
+          ],
+          [
+            "wscvxb",
+            "papa"
+          ],
+          [
+            "atceie",
+            "alpha"
+          ],
+          [
+            "kzyffb",
+            "zulu"
+          ],
+          [
+            "qshxqf",
+            "kilo"
+          ],
+          [
+            "rytpgt",
+            "quebec"
+          ],
+          [
+            "vivpyz",
+            "yankee"
+          ],
+          [
+            "gcvksl",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-AM-050",
+        "queried_key": "vivpyz",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "wylgge",
+            "echo"
+          ],
+          [
+            "fmplrk",
+            "xray"
+          ],
+          [
+            "txcxnf",
+            "quebec"
+          ],
+          [
+            "ewaifv",
+            "juliet"
+          ],
+          [
+            "sugvfx",
+            "mike"
+          ],
+          [
+            "rlzapa",
+            "yankee"
+          ],
+          [
+            "mnoexq",
+            "kilo"
+          ],
+          [
+            "xnqffy",
+            "bravo"
+          ],
+          [
+            "gktmne",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-AM-051",
+        "queried_key": "fmplrk",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "rfglxe",
+            "uniform"
+          ],
+          [
+            "sddkgl",
+            "india"
+          ],
+          [
+            "uhnila",
+            "delta"
+          ],
+          [
+            "ganzkb",
+            "sierra"
+          ],
+          [
+            "oimlod",
+            "xray"
+          ],
+          [
+            "blluts",
+            "yankee"
+          ],
+          [
+            "fqkikf",
+            "papa"
+          ],
+          [
+            "pkzzzr",
+            "november"
+          ],
+          [
+            "ezsiir",
+            "juliet"
+          ]
+        ],
+        "item_id": "L02-AM-052",
+        "queried_key": "oimlod",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "alpha",
+        "in_context_pairs": [
+          [
+            "gqfoah",
+            "sierra"
+          ],
+          [
+            "rpcuqc",
+            "bravo"
+          ],
+          [
+            "aqvbxt",
+            "quebec"
+          ],
+          [
+            "zidnwz",
+            "tango"
+          ],
+          [
+            "hpgfaf",
+            "yankee"
+          ],
+          [
+            "ljesdy",
+            "alpha"
+          ],
+          [
+            "xbleab",
+            "romeo"
+          ],
+          [
+            "ottlry",
+            "golf"
+          ],
+          [
+            "tnanjr",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-AM-053",
+        "queried_key": "ljesdy",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "wkxnkb",
+            "november"
+          ],
+          [
+            "eahmwe",
+            "kilo"
+          ],
+          [
+            "obefum",
+            "alpha"
+          ],
+          [
+            "rkggam",
+            "papa"
+          ],
+          [
+            "myrfeh",
+            "foxtrot"
+          ],
+          [
+            "hnnxei",
+            "romeo"
+          ],
+          [
+            "nhvpsr",
+            "hotel"
+          ],
+          [
+            "srjtca",
+            "india"
+          ],
+          [
+            "bvecwj",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-AM-054",
+        "queried_key": "wkxnkb",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "vwxnsq",
+            "juliet"
+          ],
+          [
+            "fkmrqh",
+            "lima"
+          ],
+          [
+            "szlwui",
+            "zulu"
+          ],
+          [
+            "arrezm",
+            "echo"
+          ],
+          [
+            "nssuik",
+            "romeo"
+          ],
+          [
+            "ubrduo",
+            "sierra"
+          ],
+          [
+            "ryrhem",
+            "victor"
+          ],
+          [
+            "pguarm",
+            "india"
+          ],
+          [
+            "tmrdrd",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-AM-055",
+        "queried_key": "pguarm",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "psftxg",
+            "quebec"
+          ],
+          [
+            "gizknc",
+            "papa"
+          ],
+          [
+            "ujxcvl",
+            "kilo"
+          ],
+          [
+            "abhyey",
+            "india"
+          ],
+          [
+            "vgqcsm",
+            "juliet"
+          ],
+          [
+            "rxapoc",
+            "hotel"
+          ],
+          [
+            "xqbssp",
+            "tango"
+          ],
+          [
+            "kktjly",
+            "sierra"
+          ],
+          [
+            "lzucov",
+            "lima"
+          ]
+        ],
+        "item_id": "L02-AM-056",
+        "queried_key": "ujxcvl",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "byqtmx",
+            "oscar"
+          ],
+          [
+            "zoiwet",
+            "xray"
+          ],
+          [
+            "pvczxw",
+            "mike"
+          ],
+          [
+            "fhrulc",
+            "victor"
+          ],
+          [
+            "aoqwhe",
+            "tango"
+          ],
+          [
+            "dmedsb",
+            "india"
+          ],
+          [
+            "kokkni",
+            "golf"
+          ],
+          [
+            "cotmoq",
+            "zulu"
+          ],
+          [
+            "svtxlc",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-AM-057",
+        "queried_key": "zoiwet",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "emuhto",
+            "alpha"
+          ],
+          [
+            "hrhyft",
+            "juliet"
+          ],
+          [
+            "mkfued",
+            "whiskey"
+          ],
+          [
+            "wfjroq",
+            "sierra"
+          ],
+          [
+            "qatzds",
+            "echo"
+          ],
+          [
+            "tkplrl",
+            "november"
+          ],
+          [
+            "nugvrh",
+            "bravo"
+          ],
+          [
+            "bmtjuu",
+            "foxtrot"
+          ],
+          [
+            "vtxquk",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-AM-058",
+        "queried_key": "tkplrl",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "dxalvd",
+            "oscar"
+          ],
+          [
+            "vbzqsc",
+            "lima"
+          ],
+          [
+            "ujrfnt",
+            "bravo"
+          ],
+          [
+            "ojpklz",
+            "whiskey"
+          ],
+          [
+            "rlujue",
+            "golf"
+          ],
+          [
+            "kyljrp",
+            "romeo"
+          ],
+          [
+            "btydbm",
+            "charlie"
+          ],
+          [
+            "jcwgos",
+            "zulu"
+          ],
+          [
+            "sknndg",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-AM-059",
+        "queried_key": "jcwgos",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "delta",
+        "in_context_pairs": [
+          [
+            "vehdta",
+            "whiskey"
+          ],
+          [
+            "jyybzm",
+            "victor"
+          ],
+          [
+            "dgcnhh",
+            "papa"
+          ],
+          [
+            "ipuobw",
+            "foxtrot"
+          ],
+          [
+            "pxoisq",
+            "india"
+          ],
+          [
+            "wooqyr",
+            "november"
+          ],
+          [
+            "kwtayc",
+            "mike"
+          ],
+          [
+            "audkgs",
+            "charlie"
+          ],
+          [
+            "qgozka",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-AM-060",
+        "queried_key": "qgozka",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "xhdpfs",
+            "foxtrot"
+          ],
+          [
+            "wnniqx",
+            "tango"
+          ],
+          [
+            "gbirxu",
+            "kilo"
+          ],
+          [
+            "fbyqwg",
+            "whiskey"
+          ],
+          [
+            "byxdgf",
+            "india"
+          ],
+          [
+            "dwwzdm",
+            "juliet"
+          ],
+          [
+            "kndino",
+            "charlie"
+          ],
+          [
+            "jumcoi",
+            "november"
+          ],
+          [
+            "ynijpo",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-AM-061",
+        "queried_key": "ynijpo",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "pyqpdm",
+            "lima"
+          ],
+          [
+            "ijhmft",
+            "india"
+          ],
+          [
+            "tfoquf",
+            "delta"
+          ],
+          [
+            "acvsdh",
+            "hotel"
+          ],
+          [
+            "dhhwlw",
+            "kilo"
+          ],
+          [
+            "nysruk",
+            "november"
+          ],
+          [
+            "yqzazh",
+            "mike"
+          ],
+          [
+            "cfvbxq",
+            "tango"
+          ],
+          [
+            "zgzywf",
+            "romeo"
+          ]
+        ],
+        "item_id": "L02-AM-062",
+        "queried_key": "dhhwlw",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "foxtrot",
+        "in_context_pairs": [
+          [
+            "ltpkcz",
+            "foxtrot"
+          ],
+          [
+            "fpolnq",
+            "bravo"
+          ],
+          [
+            "exqdvk",
+            "india"
+          ],
+          [
+            "dclrwd",
+            "victor"
+          ],
+          [
+            "ghhxxb",
+            "yankee"
+          ],
+          [
+            "zglqgj",
+            "hotel"
+          ],
+          [
+            "bhxluz",
+            "kilo"
+          ],
+          [
+            "jgyhed",
+            "zulu"
+          ],
+          [
+            "arwxqn",
+            "sierra"
+          ]
+        ],
+        "item_id": "L02-AM-063",
+        "queried_key": "ltpkcz",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "gqgcrt",
+            "yankee"
+          ],
+          [
+            "fmhbtt",
+            "lima"
+          ],
+          [
+            "cromai",
+            "golf"
+          ],
+          [
+            "pjldce",
+            "uniform"
+          ],
+          [
+            "esnoiw",
+            "foxtrot"
+          ],
+          [
+            "qqtsjv",
+            "whiskey"
+          ],
+          [
+            "ylikkv",
+            "zulu"
+          ],
+          [
+            "vpepel",
+            "oscar"
+          ],
+          [
+            "rbnaiz",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-AM-064",
+        "queried_key": "ylikkv",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "uniform",
+        "in_context_pairs": [
+          [
+            "kpnite",
+            "whiskey"
+          ],
+          [
+            "aagvkf",
+            "oscar"
+          ],
+          [
+            "iggyfq",
+            "uniform"
+          ],
+          [
+            "ldwoss",
+            "hotel"
+          ],
+          [
+            "dpcqpl",
+            "bravo"
+          ],
+          [
+            "rsqxkt",
+            "lima"
+          ],
+          [
+            "ydgdnd",
+            "tango"
+          ],
+          [
+            "utkewj",
+            "delta"
+          ],
+          [
+            "fcfkoh",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-AM-065",
+        "queried_key": "iggyfq",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "yankee",
+        "in_context_pairs": [
+          [
+            "lraxlh",
+            "yankee"
+          ],
+          [
+            "jfljmk",
+            "bravo"
+          ],
+          [
+            "uzxeum",
+            "mike"
+          ],
+          [
+            "rfswaw",
+            "juliet"
+          ],
+          [
+            "xwunml",
+            "alpha"
+          ],
+          [
+            "vsqoxk",
+            "november"
+          ],
+          [
+            "fnjbgk",
+            "echo"
+          ],
+          [
+            "crgqwv",
+            "sierra"
+          ],
+          [
+            "ewruoo",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-AM-066",
+        "queried_key": "lraxlh",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "olequl",
+            "bravo"
+          ],
+          [
+            "bpbmcp",
+            "romeo"
+          ],
+          [
+            "jhsvhc",
+            "oscar"
+          ],
+          [
+            "xetedm",
+            "xray"
+          ],
+          [
+            "ivulir",
+            "alpha"
+          ],
+          [
+            "fyxavs",
+            "kilo"
+          ],
+          [
+            "dlodfm",
+            "zulu"
+          ],
+          [
+            "wemkgb",
+            "golf"
+          ],
+          [
+            "tlkfpo",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-AM-067",
+        "queried_key": "dlodfm",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "fxmxud",
+            "yankee"
+          ],
+          [
+            "wjouot",
+            "india"
+          ],
+          [
+            "grilvy",
+            "romeo"
+          ],
+          [
+            "klfcxl",
+            "alpha"
+          ],
+          [
+            "hldmor",
+            "november"
+          ],
+          [
+            "beeoiv",
+            "papa"
+          ],
+          [
+            "tbeyni",
+            "victor"
+          ],
+          [
+            "egydrp",
+            "bravo"
+          ],
+          [
+            "aguant",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-AM-068",
+        "queried_key": "wjouot",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "victor",
+        "in_context_pairs": [
+          [
+            "wjlzya",
+            "xray"
+          ],
+          [
+            "zqcxfp",
+            "juliet"
+          ],
+          [
+            "orclzo",
+            "charlie"
+          ],
+          [
+            "jylvaq",
+            "quebec"
+          ],
+          [
+            "qmfebd",
+            "echo"
+          ],
+          [
+            "tlvvjs",
+            "victor"
+          ],
+          [
+            "kmibtf",
+            "romeo"
+          ],
+          [
+            "nwvecr",
+            "yankee"
+          ],
+          [
+            "yrxigb",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-AM-069",
+        "queried_key": "tlvvjs",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "victor",
+        "in_context_pairs": [
+          [
+            "nusdyj",
+            "yankee"
+          ],
+          [
+            "tyoowk",
+            "foxtrot"
+          ],
+          [
+            "dqxtbc",
+            "romeo"
+          ],
+          [
+            "jzbowp",
+            "tango"
+          ],
+          [
+            "woqneo",
+            "kilo"
+          ],
+          [
+            "fkpfqv",
+            "lima"
+          ],
+          [
+            "zbjbzu",
+            "victor"
+          ],
+          [
+            "vzvpqo",
+            "india"
+          ],
+          [
+            "kmzttd",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-AM-070",
+        "queried_key": "zbjbzu",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "papa",
+        "in_context_pairs": [
+          [
+            "bnpnel",
+            "romeo"
+          ],
+          [
+            "fyfbgh",
+            "echo"
+          ],
+          [
+            "xnumzg",
+            "victor"
+          ],
+          [
+            "lbgtdm",
+            "whiskey"
+          ],
+          [
+            "esuoqs",
+            "kilo"
+          ],
+          [
+            "pygzbw",
+            "hotel"
+          ],
+          [
+            "dmjkuy",
+            "oscar"
+          ],
+          [
+            "csxbmz",
+            "alpha"
+          ],
+          [
+            "tgnjcd",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-AM-071",
+        "queried_key": "tgnjcd",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "alpha",
+        "in_context_pairs": [
+          [
+            "hvpduz",
+            "oscar"
+          ],
+          [
+            "rhyzmh",
+            "delta"
+          ],
+          [
+            "paknrl",
+            "victor"
+          ],
+          [
+            "jtfbbf",
+            "quebec"
+          ],
+          [
+            "aubwzy",
+            "echo"
+          ],
+          [
+            "kzawxs",
+            "alpha"
+          ],
+          [
+            "zozppj",
+            "xray"
+          ],
+          [
+            "qzixvx",
+            "november"
+          ],
+          [
+            "cwhiyl",
+            "sierra"
+          ]
+        ],
+        "item_id": "L02-AM-072",
+        "queried_key": "kzawxs",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "sierra",
+        "in_context_pairs": [
+          [
+            "djzhin",
+            "alpha"
+          ],
+          [
+            "xqdhow",
+            "delta"
+          ],
+          [
+            "qkqujj",
+            "foxtrot"
+          ],
+          [
+            "vdbvny",
+            "india"
+          ],
+          [
+            "tvpzqg",
+            "sierra"
+          ],
+          [
+            "sknqmi",
+            "oscar"
+          ],
+          [
+            "msnbeq",
+            "charlie"
+          ],
+          [
+            "uymbpl",
+            "zulu"
+          ],
+          [
+            "zxqsbw",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-AM-073",
+        "queried_key": "tvpzqg",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "yankee",
+        "in_context_pairs": [
+          [
+            "pwevak",
+            "xray"
+          ],
+          [
+            "yqhqij",
+            "charlie"
+          ],
+          [
+            "aytqfq",
+            "yankee"
+          ],
+          [
+            "rdaqys",
+            "lima"
+          ],
+          [
+            "glmhzd",
+            "uniform"
+          ],
+          [
+            "ezxtrb",
+            "echo"
+          ],
+          [
+            "jzdtww",
+            "bravo"
+          ],
+          [
+            "tawaku",
+            "whiskey"
+          ],
+          [
+            "icxyel",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-AM-074",
+        "queried_key": "aytqfq",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "ceiwve",
+            "india"
+          ],
+          [
+            "khbxmz",
+            "whiskey"
+          ],
+          [
+            "bwbvtj",
+            "lima"
+          ],
+          [
+            "rorzvy",
+            "tango"
+          ],
+          [
+            "msyyun",
+            "yankee"
+          ],
+          [
+            "ulsxxy",
+            "mike"
+          ],
+          [
+            "ghbpxq",
+            "golf"
+          ],
+          [
+            "skupmf",
+            "zulu"
+          ],
+          [
+            "nudkcf",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-AM-075",
+        "queried_key": "skupmf",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "whiskey",
+        "in_context_pairs": [
+          [
+            "hijeax",
+            "kilo"
+          ],
+          [
+            "guvsye",
+            "delta"
+          ],
+          [
+            "ppenls",
+            "juliet"
+          ],
+          [
+            "bsssno",
+            "november"
+          ],
+          [
+            "jnxzsi",
+            "romeo"
+          ],
+          [
+            "zfvngg",
+            "mike"
+          ],
+          [
+            "xkrsbk",
+            "papa"
+          ],
+          [
+            "ftfywt",
+            "charlie"
+          ],
+          [
+            "acgzqv",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-AM-076",
+        "queried_key": "acgzqv",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "foxtrot",
+        "in_context_pairs": [
+          [
+            "edioea",
+            "zulu"
+          ],
+          [
+            "hirylm",
+            "bravo"
+          ],
+          [
+            "yncjmw",
+            "mike"
+          ],
+          [
+            "kthkkn",
+            "hotel"
+          ],
+          [
+            "niynax",
+            "juliet"
+          ],
+          [
+            "mnkyop",
+            "foxtrot"
+          ],
+          [
+            "ryuhql",
+            "uniform"
+          ],
+          [
+            "bmdnex",
+            "sierra"
+          ],
+          [
+            "tvytiz",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-AM-077",
+        "queried_key": "mnkyop",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "lima",
+        "in_context_pairs": [
+          [
+            "abqqvu",
+            "xray"
+          ],
+          [
+            "klrzpw",
+            "golf"
+          ],
+          [
+            "qysjsa",
+            "charlie"
+          ],
+          [
+            "ggbohi",
+            "sierra"
+          ],
+          [
+            "dfnroi",
+            "uniform"
+          ],
+          [
+            "wummxx",
+            "zulu"
+          ],
+          [
+            "ymgxar",
+            "bravo"
+          ],
+          [
+            "tpclmu",
+            "lima"
+          ],
+          [
+            "lpsnwg",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-AM-078",
+        "queried_key": "tpclmu",
+        "stratum": "answerable_mirror"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "lywecn",
+            "golf"
+          ],
+          [
+            "emidrw",
+            "quebec"
+          ],
+          [
+            "alpwgl",
+            "xray"
+          ],
+          [
+            "berbjh",
+            "romeo"
+          ],
+          [
+            "sohfma",
+            "delta"
+          ],
+          [
+            "yjizfv",
+            "oscar"
+          ],
+          [
+            "nulvgc",
+            "november"
+          ],
+          [
+            "jmkfgi",
+            "uniform"
+          ],
+          [
+            "gqajwq",
+            "foxtrot"
+          ]
+        ],
+        "item_id": "L02-AM-079",
+        "queried_key": "alpwgl",
+        "stratum": "answerable_mirror"
+      }
+    ],
+    "null_mirror": [
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "wyksbm",
+            "lima"
+          ],
+          [
+            "zkviuh",
+            "papa"
+          ],
+          [
+            "gfayfl",
+            "november"
+          ],
+          [
+            "lffxni",
+            "romeo"
+          ],
+          [
+            "kswdaf",
+            "alpha"
+          ],
+          [
+            "mhfbuh",
+            "uniform"
+          ],
+          [
+            "cwmouq",
+            "whiskey"
+          ],
+          [
+            "uninpr",
+            "mike"
+          ],
+          [
+            "eyaxdr",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-NM-000",
+        "queried_key": "omrmhi",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "lschac",
+            "alpha"
+          ],
+          [
+            "vhmmtd",
+            "sierra"
+          ],
+          [
+            "neatfl",
+            "oscar"
+          ],
+          [
+            "asxwgr",
+            "juliet"
+          ],
+          [
+            "eqnxmk",
+            "victor"
+          ],
+          [
+            "dklekb",
+            "kilo"
+          ],
+          [
+            "stwxrp",
+            "november"
+          ],
+          [
+            "wfttpe",
+            "bravo"
+          ],
+          [
+            "oqyfpm",
+            "foxtrot"
+          ]
+        ],
+        "item_id": "L02-NM-001",
+        "queried_key": "eoniwb",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "gbxejk",
+            "oscar"
+          ],
+          [
+            "izjlvh",
+            "mike"
+          ],
+          [
+            "hmgtyc",
+            "foxtrot"
+          ],
+          [
+            "luztde",
+            "juliet"
+          ],
+          [
+            "pvrzeh",
+            "sierra"
+          ],
+          [
+            "zpogej",
+            "charlie"
+          ],
+          [
+            "tfvxwk",
+            "lima"
+          ],
+          [
+            "wkstha",
+            "whiskey"
+          ],
+          [
+            "ygxoxn",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-NM-002",
+        "queried_key": "pnkxyg",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "rsknll",
+            "romeo"
+          ],
+          [
+            "vherkm",
+            "yankee"
+          ],
+          [
+            "dwotxq",
+            "xray"
+          ],
+          [
+            "zrqkgh",
+            "hotel"
+          ],
+          [
+            "fisfrm",
+            "charlie"
+          ],
+          [
+            "wqiklb",
+            "tango"
+          ],
+          [
+            "oehxta",
+            "uniform"
+          ],
+          [
+            "hmpdxc",
+            "lima"
+          ],
+          [
+            "qnkegc",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-NM-003",
+        "queried_key": "qwphbr",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "ubqndq",
+            "india"
+          ],
+          [
+            "cvksha",
+            "victor"
+          ],
+          [
+            "dkujwl",
+            "bravo"
+          ],
+          [
+            "bmcyfb",
+            "quebec"
+          ],
+          [
+            "zrgrew",
+            "november"
+          ],
+          [
+            "tlzmzz",
+            "charlie"
+          ],
+          [
+            "sdigap",
+            "hotel"
+          ],
+          [
+            "fjrgqe",
+            "xray"
+          ],
+          [
+            "xaxsqu",
+            "lima"
+          ]
+        ],
+        "item_id": "L02-NM-004",
+        "queried_key": "mtywzb",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "gpwumo",
+            "juliet"
+          ],
+          [
+            "edulhb",
+            "echo"
+          ],
+          [
+            "rxxmca",
+            "mike"
+          ],
+          [
+            "skrnjj",
+            "alpha"
+          ],
+          [
+            "acegez",
+            "sierra"
+          ],
+          [
+            "dohexn",
+            "delta"
+          ],
+          [
+            "qryanw",
+            "yankee"
+          ],
+          [
+            "oqxrfa",
+            "whiskey"
+          ],
+          [
+            "mvfnom",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-NM-005",
+        "queried_key": "tbewng",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "qyegad",
+            "november"
+          ],
+          [
+            "plomee",
+            "juliet"
+          ],
+          [
+            "jcrqnp",
+            "kilo"
+          ],
+          [
+            "wshxhh",
+            "oscar"
+          ],
+          [
+            "obtlpu",
+            "tango"
+          ],
+          [
+            "ztoksn",
+            "lima"
+          ],
+          [
+            "drffix",
+            "charlie"
+          ],
+          [
+            "nzpupq",
+            "romeo"
+          ],
+          [
+            "rnhfpa",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-NM-006",
+        "queried_key": "oxcsuz",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "kbpfkp",
+            "charlie"
+          ],
+          [
+            "leaoyr",
+            "india"
+          ],
+          [
+            "rwwhcd",
+            "xray"
+          ],
+          [
+            "mpgvuv",
+            "whiskey"
+          ],
+          [
+            "qphxsk",
+            "alpha"
+          ],
+          [
+            "udcple",
+            "bravo"
+          ],
+          [
+            "ssukrm",
+            "yankee"
+          ],
+          [
+            "ybxtxo",
+            "papa"
+          ],
+          [
+            "ecwhhh",
+            "november"
+          ]
+        ],
+        "item_id": "L02-NM-007",
+        "queried_key": "umwpyw",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "qxcdmq",
+            "kilo"
+          ],
+          [
+            "pgkybo",
+            "november"
+          ],
+          [
+            "hzhvul",
+            "yankee"
+          ],
+          [
+            "fmptre",
+            "quebec"
+          ],
+          [
+            "celgzn",
+            "papa"
+          ],
+          [
+            "bvttzr",
+            "romeo"
+          ],
+          [
+            "strcvj",
+            "charlie"
+          ],
+          [
+            "gvsarz",
+            "alpha"
+          ],
+          [
+            "nsihoc",
+            "oscar"
+          ]
+        ],
+        "item_id": "L02-NM-008",
+        "queried_key": "eprwkw",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "pxjhrm",
+            "bravo"
+          ],
+          [
+            "likvun",
+            "yankee"
+          ],
+          [
+            "bbgavs",
+            "quebec"
+          ],
+          [
+            "chxvfr",
+            "alpha"
+          ],
+          [
+            "mscvjj",
+            "papa"
+          ],
+          [
+            "trvehe",
+            "golf"
+          ],
+          [
+            "zhcfze",
+            "juliet"
+          ],
+          [
+            "ierwhg",
+            "hotel"
+          ],
+          [
+            "vwxstf",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-NM-009",
+        "queried_key": "naydyr",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "kgvvcd",
+            "whiskey"
+          ],
+          [
+            "npcrqb",
+            "golf"
+          ],
+          [
+            "xrxjjv",
+            "romeo"
+          ],
+          [
+            "tkywxd",
+            "tango"
+          ],
+          [
+            "bfyzqr",
+            "yankee"
+          ],
+          [
+            "hmvbhu",
+            "bravo"
+          ],
+          [
+            "rsxzcf",
+            "papa"
+          ],
+          [
+            "migoaq",
+            "victor"
+          ],
+          [
+            "oacxno",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-NM-010",
+        "queried_key": "izbxwg",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "fkfyiv",
+            "quebec"
+          ],
+          [
+            "cxhoey",
+            "juliet"
+          ],
+          [
+            "poqahr",
+            "oscar"
+          ],
+          [
+            "nbhvyu",
+            "charlie"
+          ],
+          [
+            "xvyazz",
+            "india"
+          ],
+          [
+            "dguuyu",
+            "papa"
+          ],
+          [
+            "jobfmw",
+            "foxtrot"
+          ],
+          [
+            "ukgtyf",
+            "hotel"
+          ],
+          [
+            "qeqmnn",
+            "bravo"
+          ]
+        ],
+        "item_id": "L02-NM-011",
+        "queried_key": "pptltw",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "sxpgui",
+            "romeo"
+          ],
+          [
+            "qnsmtu",
+            "india"
+          ],
+          [
+            "wlkuir",
+            "mike"
+          ],
+          [
+            "gkptls",
+            "uniform"
+          ],
+          [
+            "yhgfte",
+            "bravo"
+          ],
+          [
+            "envqxw",
+            "yankee"
+          ],
+          [
+            "peiyyo",
+            "lima"
+          ],
+          [
+            "nxjjnc",
+            "kilo"
+          ],
+          [
+            "vieqxc",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-NM-012",
+        "queried_key": "fpfati",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "gsmkyi",
+            "kilo"
+          ],
+          [
+            "htqsqn",
+            "charlie"
+          ],
+          [
+            "wbsyea",
+            "oscar"
+          ],
+          [
+            "iznvfd",
+            "golf"
+          ],
+          [
+            "mnjdep",
+            "quebec"
+          ],
+          [
+            "kmlugu",
+            "tango"
+          ],
+          [
+            "edevep",
+            "romeo"
+          ],
+          [
+            "skzgve",
+            "juliet"
+          ],
+          [
+            "rfbmmu",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-NM-013",
+        "queried_key": "empsav",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "edlrpg",
+            "bravo"
+          ],
+          [
+            "qofhur",
+            "november"
+          ],
+          [
+            "yqpewi",
+            "tango"
+          ],
+          [
+            "mutwtt",
+            "hotel"
+          ],
+          [
+            "vjhmxj",
+            "charlie"
+          ],
+          [
+            "kgppnm",
+            "uniform"
+          ],
+          [
+            "nkwmkr",
+            "foxtrot"
+          ],
+          [
+            "prcuno",
+            "romeo"
+          ],
+          [
+            "jboedr",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-NM-014",
+        "queried_key": "ubqxvu",
+        "stratum": "null_mirror"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "zybxni",
+            "quebec"
+          ],
+          [
+            "oqmgea",
+            "whiskey"
+          ],
+          [
+            "qdjqdo",
+            "hotel"
+          ],
+          [
+            "jbwnay",
+            "golf"
+          ],
+          [
+            "khosqw",
+            "lima"
+          ],
+          [
+            "phiuqs",
+            "india"
+          ],
+          [
+            "gvwqeh",
+            "charlie"
+          ],
+          [
+            "usgllt",
+            "delta"
+          ],
+          [
+            "dsjpxl",
+            "november"
+          ]
+        ],
+        "item_id": "L02-NM-015",
+        "queried_key": "nuahoh",
+        "stratum": "null_mirror"
+      }
+    ]
+  },
+  "extended_padding": "",
+  "items": {
+    "answerable": [
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "juliet",
+        "in_context_pairs": [
+          [
+            "ibpzdj",
+            "india"
+          ],
+          [
+            "ymzrpu",
+            "mike"
+          ],
+          [
+            "dfjsdd",
+            "lima"
+          ],
+          [
+            "tntgwn",
+            "delta"
+          ],
+          [
+            "wvzzhu",
+            "echo"
+          ],
+          [
+            "jngjmk",
+            "alpha"
+          ],
+          [
+            "bhsjfc",
+            "hotel"
+          ],
+          [
+            "zuntbc",
+            "juliet"
+          ],
+          [
+            "atexmg",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-A-000",
+        "queried_key": "zuntbc",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "sierra",
+        "in_context_pairs": [
+          [
+            "dgdgku",
+            "echo"
+          ],
+          [
+            "zggaef",
+            "hotel"
+          ],
+          [
+            "rrkucd",
+            "yankee"
+          ],
+          [
+            "kcivkn",
+            "india"
+          ],
+          [
+            "ntkemz",
+            "romeo"
+          ],
+          [
+            "vayflt",
+            "sierra"
+          ],
+          [
+            "huycag",
+            "uniform"
+          ],
+          [
+            "itiryy",
+            "charlie"
+          ],
+          [
+            "ygoycu",
+            "november"
+          ]
+        ],
+        "item_id": "L02-A-001",
+        "queried_key": "vayflt",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "golf",
+        "in_context_pairs": [
+          [
+            "ybylfe",
+            "charlie"
+          ],
+          [
+            "tvhdce",
+            "xray"
+          ],
+          [
+            "lxhycl",
+            "mike"
+          ],
+          [
+            "mqlfpe",
+            "uniform"
+          ],
+          [
+            "ognase",
+            "zulu"
+          ],
+          [
+            "bduqvl",
+            "hotel"
+          ],
+          [
+            "xdfabl",
+            "golf"
+          ],
+          [
+            "hieofo",
+            "romeo"
+          ],
+          [
+            "nvzevl",
+            "lima"
+          ]
+        ],
+        "item_id": "L02-A-002",
+        "queried_key": "xdfabl",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "lima",
+        "in_context_pairs": [
+          [
+            "akiikq",
+            "golf"
+          ],
+          [
+            "pdqmcm",
+            "yankee"
+          ],
+          [
+            "vhruqh",
+            "sierra"
+          ],
+          [
+            "umvapd",
+            "victor"
+          ],
+          [
+            "jcwpjz",
+            "mike"
+          ],
+          [
+            "zbeeux",
+            "oscar"
+          ],
+          [
+            "yjkyxc",
+            "lima"
+          ],
+          [
+            "ifexfs",
+            "india"
+          ],
+          [
+            "obuikj",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-A-003",
+        "queried_key": "yjkyxc",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "golf",
+        "in_context_pairs": [
+          [
+            "pbetok",
+            "oscar"
+          ],
+          [
+            "fcahjo",
+            "tango"
+          ],
+          [
+            "xtxhgh",
+            "bravo"
+          ],
+          [
+            "bttvmh",
+            "kilo"
+          ],
+          [
+            "jupmsh",
+            "romeo"
+          ],
+          [
+            "ungrhs",
+            "foxtrot"
+          ],
+          [
+            "tmstcy",
+            "delta"
+          ],
+          [
+            "gibnfc",
+            "xray"
+          ],
+          [
+            "eobsgj",
+            "golf"
+          ]
+        ],
+        "item_id": "L02-A-004",
+        "queried_key": "eobsgj",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "wgqskw",
+            "juliet"
+          ],
+          [
+            "cmvyjb",
+            "whiskey"
+          ],
+          [
+            "zpylpx",
+            "november"
+          ],
+          [
+            "emsbof",
+            "kilo"
+          ],
+          [
+            "snamoe",
+            "mike"
+          ],
+          [
+            "rhplwy",
+            "delta"
+          ],
+          [
+            "mguswp",
+            "zulu"
+          ],
+          [
+            "qijlcf",
+            "victor"
+          ],
+          [
+            "psasja",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-A-005",
+        "queried_key": "zpylpx",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "lima",
+        "in_context_pairs": [
+          [
+            "yyyuko",
+            "whiskey"
+          ],
+          [
+            "oplosd",
+            "alpha"
+          ],
+          [
+            "ezwerd",
+            "lima"
+          ],
+          [
+            "sfotrx",
+            "tango"
+          ],
+          [
+            "faxsfz",
+            "victor"
+          ],
+          [
+            "xdhemg",
+            "echo"
+          ],
+          [
+            "twmtqp",
+            "oscar"
+          ],
+          [
+            "kogwxp",
+            "papa"
+          ],
+          [
+            "iddyih",
+            "juliet"
+          ]
+        ],
+        "item_id": "L02-A-006",
+        "queried_key": "ezwerd",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "jwlude",
+            "kilo"
+          ],
+          [
+            "gfrhxe",
+            "india"
+          ],
+          [
+            "fumqwy",
+            "lima"
+          ],
+          [
+            "lbvodl",
+            "delta"
+          ],
+          [
+            "nyruki",
+            "alpha"
+          ],
+          [
+            "cvbbii",
+            "yankee"
+          ],
+          [
+            "vidyaw",
+            "hotel"
+          ],
+          [
+            "zjbapk",
+            "tango"
+          ],
+          [
+            "upczuw",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-A-007",
+        "queried_key": "gfrhxe",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "papa",
+        "in_context_pairs": [
+          [
+            "xobpsb",
+            "charlie"
+          ],
+          [
+            "aifced",
+            "victor"
+          ],
+          [
+            "mqclep",
+            "foxtrot"
+          ],
+          [
+            "udsafg",
+            "sierra"
+          ],
+          [
+            "rdewne",
+            "alpha"
+          ],
+          [
+            "kvjuvu",
+            "papa"
+          ],
+          [
+            "suhakh",
+            "zulu"
+          ],
+          [
+            "nkgigu",
+            "delta"
+          ],
+          [
+            "djsviu",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-A-008",
+        "queried_key": "kvjuvu",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "ewcvuh",
+            "alpha"
+          ],
+          [
+            "hpsrsc",
+            "mike"
+          ],
+          [
+            "bmayoc",
+            "yankee"
+          ],
+          [
+            "aobkgi",
+            "india"
+          ],
+          [
+            "zwrmah",
+            "charlie"
+          ],
+          [
+            "jercjc",
+            "quebec"
+          ],
+          [
+            "wpuzsk",
+            "zulu"
+          ],
+          [
+            "frvcdi",
+            "kilo"
+          ],
+          [
+            "nlontr",
+            "sierra"
+          ]
+        ],
+        "item_id": "L02-A-009",
+        "queried_key": "aobkgi",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "tango",
+        "in_context_pairs": [
+          [
+            "varwfz",
+            "delta"
+          ],
+          [
+            "ynahat",
+            "hotel"
+          ],
+          [
+            "bjaszn",
+            "november"
+          ],
+          [
+            "abqshd",
+            "zulu"
+          ],
+          [
+            "mcbccg",
+            "juliet"
+          ],
+          [
+            "qjvywd",
+            "tango"
+          ],
+          [
+            "pmarvd",
+            "quebec"
+          ],
+          [
+            "wpbyry",
+            "alpha"
+          ],
+          [
+            "hdtdav",
+            "yankee"
+          ]
+        ],
+        "item_id": "L02-A-010",
+        "queried_key": "qjvywd",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "quebec",
+        "in_context_pairs": [
+          [
+            "gkqdcj",
+            "golf"
+          ],
+          [
+            "udbibf",
+            "tango"
+          ],
+          [
+            "hhaujo",
+            "november"
+          ],
+          [
+            "xxkdcj",
+            "quebec"
+          ],
+          [
+            "fxzqpx",
+            "kilo"
+          ],
+          [
+            "yybuxo",
+            "hotel"
+          ],
+          [
+            "kljknf",
+            "xray"
+          ],
+          [
+            "ndyqkj",
+            "whiskey"
+          ],
+          [
+            "lbwxfe",
+            "india"
+          ]
+        ],
+        "item_id": "L02-A-011",
+        "queried_key": "xxkdcj",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "foxtrot",
+        "in_context_pairs": [
+          [
+            "uzsmma",
+            "india"
+          ],
+          [
+            "ghpcvy",
+            "mike"
+          ],
+          [
+            "wqaxss",
+            "romeo"
+          ],
+          [
+            "pzyxfm",
+            "oscar"
+          ],
+          [
+            "sxkarw",
+            "foxtrot"
+          ],
+          [
+            "jjdrmr",
+            "juliet"
+          ],
+          [
+            "zucxru",
+            "kilo"
+          ],
+          [
+            "txgilf",
+            "uniform"
+          ],
+          [
+            "brivns",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-012",
+        "queried_key": "sxkarw",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "foxtrot",
+        "in_context_pairs": [
+          [
+            "jslfeo",
+            "sierra"
+          ],
+          [
+            "yiexbn",
+            "lima"
+          ],
+          [
+            "idywhq",
+            "alpha"
+          ],
+          [
+            "equccf",
+            "hotel"
+          ],
+          [
+            "qzwqha",
+            "foxtrot"
+          ],
+          [
+            "vfiwnf",
+            "bravo"
+          ],
+          [
+            "goymdv",
+            "echo"
+          ],
+          [
+            "rxopoe",
+            "golf"
+          ],
+          [
+            "lmwcqr",
+            "india"
+          ]
+        ],
+        "item_id": "L02-A-013",
+        "queried_key": "qzwqha",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "jcxubf",
+            "victor"
+          ],
+          [
+            "xurnbo",
+            "alpha"
+          ],
+          [
+            "nadkis",
+            "november"
+          ],
+          [
+            "chalaf",
+            "hotel"
+          ],
+          [
+            "uncwqv",
+            "whiskey"
+          ],
+          [
+            "ijrqtu",
+            "charlie"
+          ],
+          [
+            "wgpbgk",
+            "yankee"
+          ],
+          [
+            "zwgokn",
+            "juliet"
+          ],
+          [
+            "ltbsof",
+            "sierra"
+          ]
+        ],
+        "item_id": "L02-A-014",
+        "queried_key": "nadkis",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "eewqft",
+            "charlie"
+          ],
+          [
+            "kmhavo",
+            "juliet"
+          ],
+          [
+            "izweeh",
+            "mike"
+          ],
+          [
+            "vuryav",
+            "victor"
+          ],
+          [
+            "bmadih",
+            "hotel"
+          ],
+          [
+            "tovgzc",
+            "delta"
+          ],
+          [
+            "ajqxgd",
+            "alpha"
+          ],
+          [
+            "oqoyiw",
+            "november"
+          ],
+          [
+            "fmsiqt",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-A-015",
+        "queried_key": "oqoyiw",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "delta",
+        "in_context_pairs": [
+          [
+            "auiucp",
+            "uniform"
+          ],
+          [
+            "kjqlkm",
+            "hotel"
+          ],
+          [
+            "ucgwsm",
+            "delta"
+          ],
+          [
+            "brwddq",
+            "charlie"
+          ],
+          [
+            "lviohv",
+            "romeo"
+          ],
+          [
+            "pbhbua",
+            "india"
+          ],
+          [
+            "gzjgai",
+            "sierra"
+          ],
+          [
+            "csijgn",
+            "bravo"
+          ],
+          [
+            "nozkfx",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-A-016",
+        "queried_key": "ucgwsm",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "hotel",
+        "in_context_pairs": [
+          [
+            "uotrfj",
+            "kilo"
+          ],
+          [
+            "clbhpy",
+            "oscar"
+          ],
+          [
+            "ilnvta",
+            "hotel"
+          ],
+          [
+            "vgcifo",
+            "sierra"
+          ],
+          [
+            "duzoej",
+            "bravo"
+          ],
+          [
+            "tmqrfw",
+            "papa"
+          ],
+          [
+            "klllaf",
+            "india"
+          ],
+          [
+            "rgtunh",
+            "delta"
+          ],
+          [
+            "fwkwuz",
+            "charlie"
+          ]
+        ],
+        "item_id": "L02-A-017",
+        "queried_key": "ilnvta",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "golf",
+        "in_context_pairs": [
+          [
+            "ueikox",
+            "foxtrot"
+          ],
+          [
+            "diibdr",
+            "bravo"
+          ],
+          [
+            "chaqol",
+            "november"
+          ],
+          [
+            "wkelpv",
+            "golf"
+          ],
+          [
+            "ntfqfm",
+            "uniform"
+          ],
+          [
+            "zgcoca",
+            "xray"
+          ],
+          [
+            "ezhftu",
+            "sierra"
+          ],
+          [
+            "voreyz",
+            "alpha"
+          ],
+          [
+            "ixdchj",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-018",
+        "queried_key": "wkelpv",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "delta",
+        "in_context_pairs": [
+          [
+            "rjihvh",
+            "delta"
+          ],
+          [
+            "tschhh",
+            "bravo"
+          ],
+          [
+            "hfanav",
+            "tango"
+          ],
+          [
+            "ceruyu",
+            "sierra"
+          ],
+          [
+            "velffi",
+            "kilo"
+          ],
+          [
+            "lzqkjn",
+            "xray"
+          ],
+          [
+            "gtdokr",
+            "lima"
+          ],
+          [
+            "ilbyru",
+            "echo"
+          ],
+          [
+            "kmwzby",
+            "charlie"
+          ]
+        ],
+        "item_id": "L02-A-019",
+        "queried_key": "rjihvh",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "juliet",
+        "in_context_pairs": [
+          [
+            "fgtnsu",
+            "november"
+          ],
+          [
+            "ugobdx",
+            "delta"
+          ],
+          [
+            "jmohre",
+            "lima"
+          ],
+          [
+            "opyqdw",
+            "foxtrot"
+          ],
+          [
+            "gglmrc",
+            "mike"
+          ],
+          [
+            "zlmytd",
+            "sierra"
+          ],
+          [
+            "nwoorz",
+            "juliet"
+          ],
+          [
+            "earyom",
+            "golf"
+          ],
+          [
+            "ywgytz",
+            "romeo"
+          ]
+        ],
+        "item_id": "L02-A-020",
+        "queried_key": "nwoorz",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "golf",
+        "in_context_pairs": [
+          [
+            "ksdpyh",
+            "papa"
+          ],
+          [
+            "ismgwj",
+            "lima"
+          ],
+          [
+            "dsrejr",
+            "romeo"
+          ],
+          [
+            "eeslbe",
+            "oscar"
+          ],
+          [
+            "yqmozc",
+            "golf"
+          ],
+          [
+            "nityot",
+            "uniform"
+          ],
+          [
+            "pmqlpq",
+            "hotel"
+          ],
+          [
+            "vqasjv",
+            "tango"
+          ],
+          [
+            "gncshm",
+            "mike"
+          ]
+        ],
+        "item_id": "L02-A-021",
+        "queried_key": "yqmozc",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "gphnti",
+            "mike"
+          ],
+          [
+            "iysvuy",
+            "charlie"
+          ],
+          [
+            "vbbnae",
+            "romeo"
+          ],
+          [
+            "jeymrr",
+            "bravo"
+          ],
+          [
+            "lvwyof",
+            "golf"
+          ],
+          [
+            "zgtdbb",
+            "lima"
+          ],
+          [
+            "bfotnd",
+            "hotel"
+          ],
+          [
+            "dvkhjw",
+            "quebec"
+          ],
+          [
+            "kbdkdt",
+            "zulu"
+          ]
+        ],
+        "item_id": "L02-A-022",
+        "queried_key": "kbdkdt",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "juliet",
+        "in_context_pairs": [
+          [
+            "xjplmf",
+            "golf"
+          ],
+          [
+            "ugnhbr",
+            "quebec"
+          ],
+          [
+            "qzslpj",
+            "november"
+          ],
+          [
+            "ehknou",
+            "zulu"
+          ],
+          [
+            "wptcsb",
+            "india"
+          ],
+          [
+            "gqnjln",
+            "kilo"
+          ],
+          [
+            "bowggb",
+            "papa"
+          ],
+          [
+            "zxkcvh",
+            "juliet"
+          ],
+          [
+            "kytito",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-023",
+        "queried_key": "zxkcvh",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "charlie",
+        "in_context_pairs": [
+          [
+            "tmruhi",
+            "hotel"
+          ],
+          [
+            "avfhuk",
+            "lima"
+          ],
+          [
+            "nsfrwy",
+            "juliet"
+          ],
+          [
+            "ujwckf",
+            "quebec"
+          ],
+          [
+            "lqgqvq",
+            "charlie"
+          ],
+          [
+            "pebsbi",
+            "bravo"
+          ],
+          [
+            "zlbjsx",
+            "delta"
+          ],
+          [
+            "mnjeya",
+            "zulu"
+          ],
+          [
+            "ybggqw",
+            "romeo"
+          ]
+        ],
+        "item_id": "L02-A-024",
+        "queried_key": "lqgqvq",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "gcwava",
+            "hotel"
+          ],
+          [
+            "znljnp",
+            "golf"
+          ],
+          [
+            "nyhauj",
+            "foxtrot"
+          ],
+          [
+            "jfvfma",
+            "echo"
+          ],
+          [
+            "oxscny",
+            "juliet"
+          ],
+          [
+            "iqltsq",
+            "charlie"
+          ],
+          [
+            "hivukx",
+            "november"
+          ],
+          [
+            "wpynge",
+            "tango"
+          ],
+          [
+            "pschma",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-A-025",
+        "queried_key": "pschma",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "papa",
+        "in_context_pairs": [
+          [
+            "wiilpz",
+            "yankee"
+          ],
+          [
+            "htcikx",
+            "delta"
+          ],
+          [
+            "aerjux",
+            "november"
+          ],
+          [
+            "bvpurq",
+            "mike"
+          ],
+          [
+            "juxmgm",
+            "papa"
+          ],
+          [
+            "yxjjpi",
+            "kilo"
+          ],
+          [
+            "tzojfr",
+            "juliet"
+          ],
+          [
+            "qweyhp",
+            "hotel"
+          ],
+          [
+            "cbidlk",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-A-026",
+        "queried_key": "juxmgm",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "hotel",
+        "in_context_pairs": [
+          [
+            "bqhzla",
+            "lima"
+          ],
+          [
+            "xvdnxz",
+            "oscar"
+          ],
+          [
+            "hxklre",
+            "romeo"
+          ],
+          [
+            "ilwnak",
+            "whiskey"
+          ],
+          [
+            "sokkxg",
+            "golf"
+          ],
+          [
+            "alsuqx",
+            "november"
+          ],
+          [
+            "fipmjg",
+            "hotel"
+          ],
+          [
+            "zafgbv",
+            "charlie"
+          ],
+          [
+            "lagljv",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-A-027",
+        "queried_key": "fipmjg",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "wvvjkh",
+            "bravo"
+          ],
+          [
+            "ywtdyr",
+            "victor"
+          ],
+          [
+            "xwdwgy",
+            "papa"
+          ],
+          [
+            "tbcfkr",
+            "november"
+          ],
+          [
+            "uldava",
+            "mike"
+          ],
+          [
+            "gcuegb",
+            "romeo"
+          ],
+          [
+            "nflxdj",
+            "whiskey"
+          ],
+          [
+            "amtumf",
+            "tango"
+          ],
+          [
+            "zlqskf",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-A-028",
+        "queried_key": "tbcfkr",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "uniform",
+        "in_context_pairs": [
+          [
+            "caovxu",
+            "foxtrot"
+          ],
+          [
+            "ufmqps",
+            "mike"
+          ],
+          [
+            "ahhnas",
+            "echo"
+          ],
+          [
+            "xuuype",
+            "india"
+          ],
+          [
+            "wlcqfs",
+            "golf"
+          ],
+          [
+            "lvpynm",
+            "kilo"
+          ],
+          [
+            "vwkxez",
+            "zulu"
+          ],
+          [
+            "goeqtd",
+            "uniform"
+          ],
+          [
+            "fnadgp",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-A-029",
+        "queried_key": "goeqtd",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "foxtrot",
+        "in_context_pairs": [
+          [
+            "lzcitb",
+            "papa"
+          ],
+          [
+            "srvrwc",
+            "bravo"
+          ],
+          [
+            "djrrnl",
+            "juliet"
+          ],
+          [
+            "yfuxgu",
+            "xray"
+          ],
+          [
+            "bqcgll",
+            "romeo"
+          ],
+          [
+            "ebyuux",
+            "tango"
+          ],
+          [
+            "nayoid",
+            "charlie"
+          ],
+          [
+            "ooolgx",
+            "foxtrot"
+          ],
+          [
+            "uouint",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-A-030",
+        "queried_key": "ooolgx",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "fcyvei",
+            "quebec"
+          ],
+          [
+            "kshgiq",
+            "papa"
+          ],
+          [
+            "losdqd",
+            "echo"
+          ],
+          [
+            "dbkonb",
+            "delta"
+          ],
+          [
+            "qlxvxr",
+            "november"
+          ],
+          [
+            "twbpww",
+            "india"
+          ],
+          [
+            "addxfl",
+            "alpha"
+          ],
+          [
+            "uxdohn",
+            "whiskey"
+          ],
+          [
+            "nluxsa",
+            "charlie"
+          ]
+        ],
+        "item_id": "L02-A-031",
+        "queried_key": "twbpww",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "xwvllv",
+            "sierra"
+          ],
+          [
+            "jdtaik",
+            "india"
+          ],
+          [
+            "qwezgr",
+            "papa"
+          ],
+          [
+            "ycqjmo",
+            "charlie"
+          ],
+          [
+            "guhwtd",
+            "uniform"
+          ],
+          [
+            "nachcz",
+            "foxtrot"
+          ],
+          [
+            "carytl",
+            "tango"
+          ],
+          [
+            "tayzwk",
+            "xray"
+          ],
+          [
+            "wcqaps",
+            "november"
+          ]
+        ],
+        "item_id": "L02-A-032",
+        "queried_key": "jdtaik",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "quebec",
+        "in_context_pairs": [
+          [
+            "zaekcc",
+            "charlie"
+          ],
+          [
+            "cxpuvd",
+            "tango"
+          ],
+          [
+            "jazhzb",
+            "golf"
+          ],
+          [
+            "opgqyt",
+            "zulu"
+          ],
+          [
+            "xlvgfj",
+            "whiskey"
+          ],
+          [
+            "niylrn",
+            "kilo"
+          ],
+          [
+            "wmsypg",
+            "quebec"
+          ],
+          [
+            "ltegbn",
+            "sierra"
+          ],
+          [
+            "euabut",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-A-033",
+        "queried_key": "wmsypg",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "bravo",
+        "in_context_pairs": [
+          [
+            "mctsqk",
+            "whiskey"
+          ],
+          [
+            "hufert",
+            "alpha"
+          ],
+          [
+            "xsvnvs",
+            "foxtrot"
+          ],
+          [
+            "absqgm",
+            "bravo"
+          ],
+          [
+            "prtjjg",
+            "india"
+          ],
+          [
+            "igvgqh",
+            "juliet"
+          ],
+          [
+            "rnciku",
+            "uniform"
+          ],
+          [
+            "chvvnh",
+            "tango"
+          ],
+          [
+            "bkaklg",
+            "oscar"
+          ]
+        ],
+        "item_id": "L02-A-034",
+        "queried_key": "absqgm",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "quebec",
+        "in_context_pairs": [
+          [
+            "meaibh",
+            "zulu"
+          ],
+          [
+            "kkiuop",
+            "bravo"
+          ],
+          [
+            "hqhgyp",
+            "delta"
+          ],
+          [
+            "nhstsw",
+            "uniform"
+          ],
+          [
+            "afihmz",
+            "oscar"
+          ],
+          [
+            "sbvjzx",
+            "yankee"
+          ],
+          [
+            "jhapuv",
+            "echo"
+          ],
+          [
+            "dzbeqa",
+            "quebec"
+          ],
+          [
+            "prsafy",
+            "mike"
+          ]
+        ],
+        "item_id": "L02-A-035",
+        "queried_key": "dzbeqa",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "quebec",
+        "in_context_pairs": [
+          [
+            "pnrvbs",
+            "tango"
+          ],
+          [
+            "ivrcfa",
+            "quebec"
+          ],
+          [
+            "lidivi",
+            "yankee"
+          ],
+          [
+            "bhmcfr",
+            "kilo"
+          ],
+          [
+            "quqvir",
+            "delta"
+          ],
+          [
+            "rbajfl",
+            "sierra"
+          ],
+          [
+            "mnysjf",
+            "golf"
+          ],
+          [
+            "xpmdnn",
+            "zulu"
+          ],
+          [
+            "tzrdmf",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-036",
+        "queried_key": "ivrcfa",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "charlie",
+        "in_context_pairs": [
+          [
+            "frvvpz",
+            "papa"
+          ],
+          [
+            "mkfidl",
+            "uniform"
+          ],
+          [
+            "ksqtqd",
+            "lima"
+          ],
+          [
+            "iujmfc",
+            "kilo"
+          ],
+          [
+            "aagpjb",
+            "oscar"
+          ],
+          [
+            "wbihpj",
+            "delta"
+          ],
+          [
+            "ufgyuu",
+            "charlie"
+          ],
+          [
+            "njoieo",
+            "zulu"
+          ],
+          [
+            "xftkmp",
+            "juliet"
+          ]
+        ],
+        "item_id": "L02-A-037",
+        "queried_key": "ufgyuu",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "charlie",
+        "in_context_pairs": [
+          [
+            "mtzmil",
+            "mike"
+          ],
+          [
+            "bdvtks",
+            "uniform"
+          ],
+          [
+            "ylshok",
+            "charlie"
+          ],
+          [
+            "loypbe",
+            "foxtrot"
+          ],
+          [
+            "csvllg",
+            "victor"
+          ],
+          [
+            "kpmzoz",
+            "zulu"
+          ],
+          [
+            "xoqfdp",
+            "quebec"
+          ],
+          [
+            "ujaang",
+            "kilo"
+          ],
+          [
+            "pxtywa",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-A-038",
+        "queried_key": "ylshok",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "oscar",
+        "in_context_pairs": [
+          [
+            "dovigl",
+            "oscar"
+          ],
+          [
+            "jgytsw",
+            "india"
+          ],
+          [
+            "pttugi",
+            "uniform"
+          ],
+          [
+            "exxuhk",
+            "quebec"
+          ],
+          [
+            "lcrnec",
+            "whiskey"
+          ],
+          [
+            "cwqthg",
+            "tango"
+          ],
+          [
+            "wrvakw",
+            "yankee"
+          ],
+          [
+            "nurifh",
+            "lima"
+          ],
+          [
+            "igbism",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-A-039",
+        "queried_key": "dovigl",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "duywsd",
+            "romeo"
+          ],
+          [
+            "arskkm",
+            "lima"
+          ],
+          [
+            "ryzshb",
+            "november"
+          ],
+          [
+            "nigjqg",
+            "victor"
+          ],
+          [
+            "oxglsd",
+            "tango"
+          ],
+          [
+            "kkwsok",
+            "charlie"
+          ],
+          [
+            "mwpdne",
+            "alpha"
+          ],
+          [
+            "pqbbof",
+            "uniform"
+          ],
+          [
+            "jykkdw",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-A-040",
+        "queried_key": "ryzshb",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "hotel",
+        "in_context_pairs": [
+          [
+            "wrdncr",
+            "november"
+          ],
+          [
+            "kampvv",
+            "uniform"
+          ],
+          [
+            "udfkpv",
+            "alpha"
+          ],
+          [
+            "vlfahi",
+            "hotel"
+          ],
+          [
+            "zzlrmo",
+            "yankee"
+          ],
+          [
+            "ekvwdf",
+            "xray"
+          ],
+          [
+            "mbropy",
+            "kilo"
+          ],
+          [
+            "oncaov",
+            "foxtrot"
+          ],
+          [
+            "ybfmjv",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-A-041",
+        "queried_key": "vlfahi",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "hotel",
+        "in_context_pairs": [
+          [
+            "vbdjmd",
+            "november"
+          ],
+          [
+            "yeqtxq",
+            "hotel"
+          ],
+          [
+            "exxnzy",
+            "delta"
+          ],
+          [
+            "relnwl",
+            "papa"
+          ],
+          [
+            "ijpfua",
+            "oscar"
+          ],
+          [
+            "gmnary",
+            "charlie"
+          ],
+          [
+            "ukujfl",
+            "victor"
+          ],
+          [
+            "oheueo",
+            "india"
+          ],
+          [
+            "dtpxad",
+            "golf"
+          ]
+        ],
+        "item_id": "L02-A-042",
+        "queried_key": "yeqtxq",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "november",
+        "in_context_pairs": [
+          [
+            "vrrbwc",
+            "echo"
+          ],
+          [
+            "wrmndz",
+            "lima"
+          ],
+          [
+            "xnmejc",
+            "uniform"
+          ],
+          [
+            "skpdpv",
+            "november"
+          ],
+          [
+            "noyhzi",
+            "golf"
+          ],
+          [
+            "mkjsyz",
+            "xray"
+          ],
+          [
+            "rifxoi",
+            "hotel"
+          ],
+          [
+            "gvjulr",
+            "kilo"
+          ],
+          [
+            "yanloi",
+            "india"
+          ]
+        ],
+        "item_id": "L02-A-043",
+        "queried_key": "skpdpv",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "jjgrcj",
+            "bravo"
+          ],
+          [
+            "fthiig",
+            "november"
+          ],
+          [
+            "bpqkmo",
+            "india"
+          ],
+          [
+            "qohoup",
+            "xray"
+          ],
+          [
+            "mjuhsw",
+            "zulu"
+          ],
+          [
+            "ejgmag",
+            "quebec"
+          ],
+          [
+            "gxbnqv",
+            "lima"
+          ],
+          [
+            "oqqlap",
+            "charlie"
+          ],
+          [
+            "shqulb",
+            "foxtrot"
+          ]
+        ],
+        "item_id": "L02-A-044",
+        "queried_key": "bpqkmo",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "romeo",
+        "in_context_pairs": [
+          [
+            "tnmfby",
+            "mike"
+          ],
+          [
+            "jptpea",
+            "romeo"
+          ],
+          [
+            "bpcqdd",
+            "quebec"
+          ],
+          [
+            "hnehmf",
+            "papa"
+          ],
+          [
+            "igxiiq",
+            "delta"
+          ],
+          [
+            "pclzga",
+            "oscar"
+          ],
+          [
+            "dbwhzw",
+            "juliet"
+          ],
+          [
+            "ubunhl",
+            "echo"
+          ],
+          [
+            "oaibfw",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-A-045",
+        "queried_key": "jptpea",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "echo",
+        "in_context_pairs": [
+          [
+            "vtzfwm",
+            "echo"
+          ],
+          [
+            "yjxroy",
+            "november"
+          ],
+          [
+            "zykshr",
+            "kilo"
+          ],
+          [
+            "phoniq",
+            "bravo"
+          ],
+          [
+            "hjrzpi",
+            "romeo"
+          ],
+          [
+            "tdboin",
+            "yankee"
+          ],
+          [
+            "isiqiy",
+            "hotel"
+          ],
+          [
+            "xpejyw",
+            "charlie"
+          ],
+          [
+            "cjhdvq",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-A-046",
+        "queried_key": "vtzfwm",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "charlie",
+        "in_context_pairs": [
+          [
+            "phfcjl",
+            "hotel"
+          ],
+          [
+            "stteqk",
+            "xray"
+          ],
+          [
+            "lktfif",
+            "alpha"
+          ],
+          [
+            "iqxmiu",
+            "oscar"
+          ],
+          [
+            "cnisjy",
+            "tango"
+          ],
+          [
+            "xrvfic",
+            "charlie"
+          ],
+          [
+            "rsngsv",
+            "yankee"
+          ],
+          [
+            "htodgw",
+            "echo"
+          ],
+          [
+            "uufeoj",
+            "uniform"
+          ]
+        ],
+        "item_id": "L02-A-047",
+        "queried_key": "xrvfic",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "juliet",
+        "in_context_pairs": [
+          [
+            "reluqr",
+            "november"
+          ],
+          [
+            "uyamph",
+            "mike"
+          ],
+          [
+            "ctkdhy",
+            "bravo"
+          ],
+          [
+            "wuxmvd",
+            "juliet"
+          ],
+          [
+            "dvzrut",
+            "romeo"
+          ],
+          [
+            "fqmuvr",
+            "quebec"
+          ],
+          [
+            "azyekb",
+            "xray"
+          ],
+          [
+            "htndec",
+            "papa"
+          ],
+          [
+            "vrkojr",
+            "alpha"
+          ]
+        ],
+        "item_id": "L02-A-048",
+        "queried_key": "wuxmvd",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "uniform",
+        "in_context_pairs": [
+          [
+            "czklvp",
+            "alpha"
+          ],
+          [
+            "nhiaea",
+            "zulu"
+          ],
+          [
+            "qrcpuw",
+            "xray"
+          ],
+          [
+            "sqetou",
+            "hotel"
+          ],
+          [
+            "ztzfxp",
+            "papa"
+          ],
+          [
+            "gobkqz",
+            "tango"
+          ],
+          [
+            "fcrxzq",
+            "lima"
+          ],
+          [
+            "bbpsbk",
+            "uniform"
+          ],
+          [
+            "uvgbtl",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-049",
+        "queried_key": "bbpsbk",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "lima",
+        "in_context_pairs": [
+          [
+            "mvrlne",
+            "echo"
+          ],
+          [
+            "jebavd",
+            "zulu"
+          ],
+          [
+            "yxvpvq",
+            "uniform"
+          ],
+          [
+            "owqrgw",
+            "juliet"
+          ],
+          [
+            "zjxjxj",
+            "lima"
+          ],
+          [
+            "rrxrqb",
+            "romeo"
+          ],
+          [
+            "vsjled",
+            "foxtrot"
+          ],
+          [
+            "elnict",
+            "golf"
+          ],
+          [
+            "ltcyzd",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-A-050",
+        "queried_key": "zjxjxj",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "echo",
+        "in_context_pairs": [
+          [
+            "kaggpb",
+            "whiskey"
+          ],
+          [
+            "yaarlv",
+            "echo"
+          ],
+          [
+            "aigcdb",
+            "quebec"
+          ],
+          [
+            "znsvhb",
+            "tango"
+          ],
+          [
+            "strutr",
+            "hotel"
+          ],
+          [
+            "gbhtgd",
+            "papa"
+          ],
+          [
+            "izfvcc",
+            "romeo"
+          ],
+          [
+            "cdhgvo",
+            "zulu"
+          ],
+          [
+            "oxqtnh",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-A-051",
+        "queried_key": "yaarlv",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "charlie",
+        "in_context_pairs": [
+          [
+            "parmul",
+            "yankee"
+          ],
+          [
+            "fyteph",
+            "lima"
+          ],
+          [
+            "qfmnbv",
+            "golf"
+          ],
+          [
+            "jkkvjx",
+            "charlie"
+          ],
+          [
+            "rvugta",
+            "xray"
+          ],
+          [
+            "htwuzl",
+            "hotel"
+          ],
+          [
+            "irgawd",
+            "victor"
+          ],
+          [
+            "gdpfoa",
+            "india"
+          ],
+          [
+            "exjcea",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-A-052",
+        "queried_key": "jkkvjx",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "foxtrot",
+        "in_context_pairs": [
+          [
+            "ojwyhm",
+            "india"
+          ],
+          [
+            "vfavds",
+            "yankee"
+          ],
+          [
+            "wzltwz",
+            "foxtrot"
+          ],
+          [
+            "tolhwb",
+            "juliet"
+          ],
+          [
+            "evpzyz",
+            "kilo"
+          ],
+          [
+            "nhimay",
+            "zulu"
+          ],
+          [
+            "ujcwqo",
+            "bravo"
+          ],
+          [
+            "frceod",
+            "xray"
+          ],
+          [
+            "adaebw",
+            "alpha"
+          ]
+        ],
+        "item_id": "L02-A-053",
+        "queried_key": "wzltwz",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "delta",
+        "in_context_pairs": [
+          [
+            "qawvqj",
+            "tango"
+          ],
+          [
+            "plfvcq",
+            "charlie"
+          ],
+          [
+            "utvggf",
+            "hotel"
+          ],
+          [
+            "ssgphz",
+            "lima"
+          ],
+          [
+            "tcezxh",
+            "delta"
+          ],
+          [
+            "fstjqb",
+            "mike"
+          ],
+          [
+            "cdyjfl",
+            "whiskey"
+          ],
+          [
+            "bxhzfe",
+            "kilo"
+          ],
+          [
+            "inpffd",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-054",
+        "queried_key": "tcezxh",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "bnoxvd",
+            "whiskey"
+          ],
+          [
+            "kogtaq",
+            "zulu"
+          ],
+          [
+            "cclykf",
+            "victor"
+          ],
+          [
+            "qxfqoh",
+            "quebec"
+          ],
+          [
+            "mfhqtd",
+            "echo"
+          ],
+          [
+            "pxnxmh",
+            "oscar"
+          ],
+          [
+            "tosztg",
+            "romeo"
+          ],
+          [
+            "nvxziw",
+            "bravo"
+          ],
+          [
+            "ufjeff",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-A-055",
+        "queried_key": "kogtaq",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "zulu",
+        "in_context_pairs": [
+          [
+            "lbmgjo",
+            "zulu"
+          ],
+          [
+            "qulxar",
+            "charlie"
+          ],
+          [
+            "vkncuk",
+            "kilo"
+          ],
+          [
+            "xqqqkr",
+            "xray"
+          ],
+          [
+            "rpouge",
+            "mike"
+          ],
+          [
+            "jzsfwp",
+            "victor"
+          ],
+          [
+            "imsmqg",
+            "tango"
+          ],
+          [
+            "njwtsd",
+            "delta"
+          ],
+          [
+            "mmbeby",
+            "romeo"
+          ]
+        ],
+        "item_id": "L02-A-056",
+        "queried_key": "lbmgjo",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "whiskey",
+        "in_context_pairs": [
+          [
+            "mjngcm",
+            "whiskey"
+          ],
+          [
+            "vbipdv",
+            "golf"
+          ],
+          [
+            "oeviwm",
+            "tango"
+          ],
+          [
+            "fwwxjv",
+            "juliet"
+          ],
+          [
+            "cogoyq",
+            "oscar"
+          ],
+          [
+            "euhrhx",
+            "zulu"
+          ],
+          [
+            "krlzpa",
+            "romeo"
+          ],
+          [
+            "recboj",
+            "quebec"
+          ],
+          [
+            "qsztnq",
+            "lima"
+          ]
+        ],
+        "item_id": "L02-A-057",
+        "queried_key": "mjngcm",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "papa",
+        "in_context_pairs": [
+          [
+            "uhhlmz",
+            "golf"
+          ],
+          [
+            "kyaarn",
+            "sierra"
+          ],
+          [
+            "dsibkt",
+            "quebec"
+          ],
+          [
+            "vbqlaj",
+            "mike"
+          ],
+          [
+            "qhrzfy",
+            "alpha"
+          ],
+          [
+            "stzmor",
+            "papa"
+          ],
+          [
+            "fogqcq",
+            "kilo"
+          ],
+          [
+            "ainjap",
+            "india"
+          ],
+          [
+            "gbjqjg",
+            "zulu"
+          ]
+        ],
+        "item_id": "L02-A-058",
+        "queried_key": "stzmor",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "qyuzqz",
+            "uniform"
+          ],
+          [
+            "tisxht",
+            "india"
+          ],
+          [
+            "uotkid",
+            "november"
+          ],
+          [
+            "ldwlpb",
+            "delta"
+          ],
+          [
+            "ovvydz",
+            "romeo"
+          ],
+          [
+            "bcprrv",
+            "bravo"
+          ],
+          [
+            "vfwdlo",
+            "yankee"
+          ],
+          [
+            "jrqfjb",
+            "echo"
+          ],
+          [
+            "xxvicb",
+            "quebec"
+          ]
+        ],
+        "item_id": "L02-A-059",
+        "queried_key": "tisxht",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "echo",
+        "in_context_pairs": [
+          [
+            "nonceo",
+            "alpha"
+          ],
+          [
+            "sbdgcw",
+            "india"
+          ],
+          [
+            "wgyywe",
+            "charlie"
+          ],
+          [
+            "cunpin",
+            "bravo"
+          ],
+          [
+            "jdaawz",
+            "golf"
+          ],
+          [
+            "zjbjsp",
+            "lima"
+          ],
+          [
+            "auhxmz",
+            "echo"
+          ],
+          [
+            "eyjiht",
+            "quebec"
+          ],
+          [
+            "yanlxv",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-A-060",
+        "queried_key": "auhxmz",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "sierra",
+        "in_context_pairs": [
+          [
+            "vehwhc",
+            "uniform"
+          ],
+          [
+            "yzwczq",
+            "alpha"
+          ],
+          [
+            "scooir",
+            "papa"
+          ],
+          [
+            "ugexvw",
+            "juliet"
+          ],
+          [
+            "hezcot",
+            "india"
+          ],
+          [
+            "rvcllb",
+            "xray"
+          ],
+          [
+            "ppetjm",
+            "november"
+          ],
+          [
+            "trimox",
+            "sierra"
+          ],
+          [
+            "wwsrjp",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-A-061",
+        "queried_key": "trimox",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "romeo",
+        "in_context_pairs": [
+          [
+            "fgdyto",
+            "echo"
+          ],
+          [
+            "nprrcn",
+            "kilo"
+          ],
+          [
+            "hbwbyj",
+            "yankee"
+          ],
+          [
+            "doppyo",
+            "foxtrot"
+          ],
+          [
+            "jfyntt",
+            "romeo"
+          ],
+          [
+            "roageq",
+            "victor"
+          ],
+          [
+            "pjywne",
+            "golf"
+          ],
+          [
+            "ichyzu",
+            "zulu"
+          ],
+          [
+            "ytzxca",
+            "oscar"
+          ]
+        ],
+        "item_id": "L02-A-062",
+        "queried_key": "jfyntt",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "tango",
+        "in_context_pairs": [
+          [
+            "lfnvmd",
+            "whiskey"
+          ],
+          [
+            "jphrkn",
+            "tango"
+          ],
+          [
+            "aplewq",
+            "uniform"
+          ],
+          [
+            "finonc",
+            "sierra"
+          ],
+          [
+            "hntudv",
+            "mike"
+          ],
+          [
+            "maqdpm",
+            "romeo"
+          ],
+          [
+            "ouqjqq",
+            "lima"
+          ],
+          [
+            "bmzaqy",
+            "bravo"
+          ],
+          [
+            "qtksof",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-063",
+        "queried_key": "jphrkn",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "xray",
+        "in_context_pairs": [
+          [
+            "ccpcpc",
+            "xray"
+          ],
+          [
+            "itrfek",
+            "echo"
+          ],
+          [
+            "aafhsh",
+            "juliet"
+          ],
+          [
+            "rvfmyd",
+            "november"
+          ],
+          [
+            "bzuied",
+            "zulu"
+          ],
+          [
+            "jlkxyn",
+            "papa"
+          ],
+          [
+            "ngtpnz",
+            "delta"
+          ],
+          [
+            "zteehl",
+            "golf"
+          ],
+          [
+            "yzpieo",
+            "bravo"
+          ]
+        ],
+        "item_id": "L02-A-064",
+        "queried_key": "ccpcpc",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "yankee",
+        "in_context_pairs": [
+          [
+            "evclgm",
+            "yankee"
+          ],
+          [
+            "njggxd",
+            "juliet"
+          ],
+          [
+            "cflhcc",
+            "lima"
+          ],
+          [
+            "hzznyk",
+            "mike"
+          ],
+          [
+            "bymuoa",
+            "echo"
+          ],
+          [
+            "lkqhcx",
+            "victor"
+          ],
+          [
+            "pnzhxn",
+            "golf"
+          ],
+          [
+            "yrhfvj",
+            "india"
+          ],
+          [
+            "sfuvjm",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-A-065",
+        "queried_key": "evclgm",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "sierra",
+        "in_context_pairs": [
+          [
+            "twawbg",
+            "whiskey"
+          ],
+          [
+            "zdbeqk",
+            "sierra"
+          ],
+          [
+            "szwhzl",
+            "delta"
+          ],
+          [
+            "peulwl",
+            "uniform"
+          ],
+          [
+            "wfijkw",
+            "victor"
+          ],
+          [
+            "dxjbbr",
+            "india"
+          ],
+          [
+            "otcxsn",
+            "alpha"
+          ],
+          [
+            "gmejtp",
+            "yankee"
+          ],
+          [
+            "apipcx",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-A-066",
+        "queried_key": "zdbeqk",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "victor",
+        "in_context_pairs": [
+          [
+            "zpjgwx",
+            "kilo"
+          ],
+          [
+            "xhmhfw",
+            "sierra"
+          ],
+          [
+            "vtcawk",
+            "foxtrot"
+          ],
+          [
+            "tagplr",
+            "november"
+          ],
+          [
+            "hqcgvg",
+            "papa"
+          ],
+          [
+            "qimiab",
+            "alpha"
+          ],
+          [
+            "frwkip",
+            "india"
+          ],
+          [
+            "exdtvf",
+            "victor"
+          ],
+          [
+            "dpbfjk",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-A-067",
+        "queried_key": "exdtvf",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "yankee",
+        "in_context_pairs": [
+          [
+            "lffcbf",
+            "mike"
+          ],
+          [
+            "dobjfq",
+            "yankee"
+          ],
+          [
+            "ifwsvk",
+            "november"
+          ],
+          [
+            "swcdtk",
+            "zulu"
+          ],
+          [
+            "wkjzcy",
+            "romeo"
+          ],
+          [
+            "jhznrg",
+            "xray"
+          ],
+          [
+            "zudnde",
+            "echo"
+          ],
+          [
+            "ttdlvu",
+            "bravo"
+          ],
+          [
+            "vkyemu",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-A-068",
+        "queried_key": "dobjfq",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "romeo",
+        "in_context_pairs": [
+          [
+            "fmwjxw",
+            "xray"
+          ],
+          [
+            "rmebgx",
+            "golf"
+          ],
+          [
+            "mnzlgv",
+            "victor"
+          ],
+          [
+            "uslzax",
+            "india"
+          ],
+          [
+            "acklov",
+            "sierra"
+          ],
+          [
+            "kesqcl",
+            "kilo"
+          ],
+          [
+            "tdsfcp",
+            "charlie"
+          ],
+          [
+            "sgsvlw",
+            "romeo"
+          ],
+          [
+            "pxaikp",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-A-069",
+        "queried_key": "sgsvlw",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "lima",
+        "in_context_pairs": [
+          [
+            "ubrifd",
+            "november"
+          ],
+          [
+            "rorxji",
+            "yankee"
+          ],
+          [
+            "catydd",
+            "oscar"
+          ],
+          [
+            "kdljys",
+            "golf"
+          ],
+          [
+            "pgmkml",
+            "hotel"
+          ],
+          [
+            "hmwwck",
+            "charlie"
+          ],
+          [
+            "gqpsqp",
+            "sierra"
+          ],
+          [
+            "wnembh",
+            "lima"
+          ],
+          [
+            "iydrxb",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-A-070",
+        "queried_key": "wnembh",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "foxtrot",
+        "in_context_pairs": [
+          [
+            "lzosnb",
+            "sierra"
+          ],
+          [
+            "weqjah",
+            "kilo"
+          ],
+          [
+            "qfjxdp",
+            "foxtrot"
+          ],
+          [
+            "yyuwuf",
+            "charlie"
+          ],
+          [
+            "hobtwv",
+            "hotel"
+          ],
+          [
+            "vpjrqg",
+            "uniform"
+          ],
+          [
+            "kkapds",
+            "mike"
+          ],
+          [
+            "ocbbmt",
+            "bravo"
+          ],
+          [
+            "tvzgxw",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-A-071",
+        "queried_key": "qfjxdp",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "kilo",
+        "in_context_pairs": [
+          [
+            "gcxpbo",
+            "echo"
+          ],
+          [
+            "ztwjif",
+            "bravo"
+          ],
+          [
+            "lrmizi",
+            "hotel"
+          ],
+          [
+            "jsdvgu",
+            "whiskey"
+          ],
+          [
+            "bsvnzc",
+            "papa"
+          ],
+          [
+            "xyhssr",
+            "lima"
+          ],
+          [
+            "epitoo",
+            "mike"
+          ],
+          [
+            "vegvst",
+            "oscar"
+          ],
+          [
+            "ttlnol",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-A-072",
+        "queried_key": "ttlnol",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "alpha",
+        "in_context_pairs": [
+          [
+            "vvkiko",
+            "uniform"
+          ],
+          [
+            "dfqwja",
+            "xray"
+          ],
+          [
+            "mkoway",
+            "charlie"
+          ],
+          [
+            "lyvbzl",
+            "lima"
+          ],
+          [
+            "sckxeg",
+            "yankee"
+          ],
+          [
+            "xoncjl",
+            "alpha"
+          ],
+          [
+            "pjwhum",
+            "kilo"
+          ],
+          [
+            "qsiwqs",
+            "zulu"
+          ],
+          [
+            "bxykwf",
+            "juliet"
+          ]
+        ],
+        "item_id": "L02-A-073",
+        "queried_key": "xoncjl",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "yankee",
+        "in_context_pairs": [
+          [
+            "cngaws",
+            "lima"
+          ],
+          [
+            "dhwdst",
+            "zulu"
+          ],
+          [
+            "omtfxc",
+            "mike"
+          ],
+          [
+            "rafetx",
+            "hotel"
+          ],
+          [
+            "mvhnkv",
+            "sierra"
+          ],
+          [
+            "klyzae",
+            "kilo"
+          ],
+          [
+            "wuhwxt",
+            "alpha"
+          ],
+          [
+            "jozars",
+            "yankee"
+          ],
+          [
+            "lreubp",
+            "golf"
+          ]
+        ],
+        "item_id": "L02-A-074",
+        "queried_key": "jozars",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "golf",
+        "in_context_pairs": [
+          [
+            "zmtyqz",
+            "lima"
+          ],
+          [
+            "mbhqxy",
+            "tango"
+          ],
+          [
+            "xovtdx",
+            "golf"
+          ],
+          [
+            "uyyxhf",
+            "quebec"
+          ],
+          [
+            "sflhxk",
+            "alpha"
+          ],
+          [
+            "fmhebj",
+            "mike"
+          ],
+          [
+            "ohobbg",
+            "foxtrot"
+          ],
+          [
+            "tmnguo",
+            "zulu"
+          ],
+          [
+            "ljxjer",
+            "charlie"
+          ]
+        ],
+        "item_id": "L02-A-075",
+        "queried_key": "xovtdx",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "india",
+        "in_context_pairs": [
+          [
+            "lnmzvo",
+            "charlie"
+          ],
+          [
+            "moflxm",
+            "uniform"
+          ],
+          [
+            "bampil",
+            "kilo"
+          ],
+          [
+            "ghndtr",
+            "sierra"
+          ],
+          [
+            "peoypf",
+            "mike"
+          ],
+          [
+            "kmcvkd",
+            "bravo"
+          ],
+          [
+            "aoxwbf",
+            "foxtrot"
+          ],
+          [
+            "vlnoip",
+            "yankee"
+          ],
+          [
+            "nmkhog",
+            "india"
+          ]
+        ],
+        "item_id": "L02-A-076",
+        "queried_key": "nmkhog",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "whiskey",
+        "in_context_pairs": [
+          [
+            "qxlzuw",
+            "whiskey"
+          ],
+          [
+            "xdvght",
+            "alpha"
+          ],
+          [
+            "zrngup",
+            "quebec"
+          ],
+          [
+            "bekfqb",
+            "charlie"
+          ],
+          [
+            "fbvyqw",
+            "foxtrot"
+          ],
+          [
+            "wkyvqm",
+            "india"
+          ],
+          [
+            "rdjnok",
+            "papa"
+          ],
+          [
+            "cxsuxk",
+            "kilo"
+          ],
+          [
+            "kqzyhw",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-A-077",
+        "queried_key": "qxlzuw",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "papa",
+        "in_context_pairs": [
+          [
+            "stduvj",
+            "foxtrot"
+          ],
+          [
+            "ktmoqi",
+            "november"
+          ],
+          [
+            "gnbvuy",
+            "hotel"
+          ],
+          [
+            "mmlyyw",
+            "papa"
+          ],
+          [
+            "bchcxk",
+            "victor"
+          ],
+          [
+            "yxceiu",
+            "charlie"
+          ],
+          [
+            "rbghmf",
+            "golf"
+          ],
+          [
+            "jawdfr",
+            "xray"
+          ],
+          [
+            "vrnbov",
+            "kilo"
+          ]
+        ],
+        "item_id": "L02-A-078",
+        "queried_key": "mmlyyw",
+        "stratum": "answerable"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "victor",
+        "in_context_pairs": [
+          [
+            "dnvskz",
+            "victor"
+          ],
+          [
+            "zpwhbc",
+            "romeo"
+          ],
+          [
+            "bsofsf",
+            "whiskey"
+          ],
+          [
+            "nlatsv",
+            "mike"
+          ],
+          [
+            "xdiccl",
+            "kilo"
+          ],
+          [
+            "wkuxxu",
+            "hotel"
+          ],
+          [
+            "jkraew",
+            "uniform"
+          ],
+          [
+            "fjeyuz",
+            "oscar"
+          ],
+          [
+            "gclhfk",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-A-079",
+        "queried_key": "dnvskz",
+        "stratum": "answerable"
+      }
+    ],
+    "null": [
+      {
+        "answer_slot_index": 7,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "kqtvan",
+            "xray"
+          ],
+          [
+            "bzdazv",
+            "oscar"
+          ],
+          [
+            "ltzzuv",
+            "delta"
+          ],
+          [
+            "tcdyrf",
+            "tango"
+          ],
+          [
+            "govxvp",
+            "alpha"
+          ],
+          [
+            "vwaxxk",
+            "whiskey"
+          ],
+          [
+            "ucppfl",
+            "golf"
+          ],
+          [
+            "eeciko",
+            "romeo"
+          ],
+          [
+            "mwrhyo",
+            "juliet"
+          ]
+        ],
+        "item_id": "L02-N-000",
+        "queried_key": "vnbvaq",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "podicw",
+            "juliet"
+          ],
+          [
+            "gythvm",
+            "tango"
+          ],
+          [
+            "hlhcpw",
+            "bravo"
+          ],
+          [
+            "vgkvcq",
+            "kilo"
+          ],
+          [
+            "ubaeoy",
+            "yankee"
+          ],
+          [
+            "flxxsx",
+            "golf"
+          ],
+          [
+            "yjywip",
+            "india"
+          ],
+          [
+            "bfnvio",
+            "papa"
+          ],
+          [
+            "chjfsn",
+            "xray"
+          ]
+        ],
+        "item_id": "L02-N-001",
+        "queried_key": "rucktd",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "isqmfe",
+            "kilo"
+          ],
+          [
+            "rycyog",
+            "whiskey"
+          ],
+          [
+            "hwljjl",
+            "quebec"
+          ],
+          [
+            "kfsedx",
+            "zulu"
+          ],
+          [
+            "zqtyhn",
+            "foxtrot"
+          ],
+          [
+            "nbggkf",
+            "tango"
+          ],
+          [
+            "dvddgl",
+            "charlie"
+          ],
+          [
+            "vpcvsr",
+            "yankee"
+          ],
+          [
+            "pibrpb",
+            "papa"
+          ]
+        ],
+        "item_id": "L02-N-002",
+        "queried_key": "klfktt",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "bezhzs",
+            "kilo"
+          ],
+          [
+            "iawgsw",
+            "alpha"
+          ],
+          [
+            "fqnlic",
+            "mike"
+          ],
+          [
+            "esfwek",
+            "golf"
+          ],
+          [
+            "llasje",
+            "sierra"
+          ],
+          [
+            "kqiyek",
+            "november"
+          ],
+          [
+            "xzwhpc",
+            "bravo"
+          ],
+          [
+            "tqigct",
+            "lima"
+          ],
+          [
+            "cvpchf",
+            "victor"
+          ]
+        ],
+        "item_id": "L02-N-003",
+        "queried_key": "llsifk",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 3,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "xwxome",
+            "quebec"
+          ],
+          [
+            "iqqwtm",
+            "echo"
+          ],
+          [
+            "cytdaw",
+            "hotel"
+          ],
+          [
+            "vyoprv",
+            "uniform"
+          ],
+          [
+            "pubqrz",
+            "papa"
+          ],
+          [
+            "zvdgpi",
+            "mike"
+          ],
+          [
+            "dihyoh",
+            "delta"
+          ],
+          [
+            "yjttkz",
+            "foxtrot"
+          ],
+          [
+            "qplmco",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-N-004",
+        "queried_key": "mtqmoj",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "xggqeg",
+            "kilo"
+          ],
+          [
+            "lmxqnt",
+            "mike"
+          ],
+          [
+            "thhhjo",
+            "juliet"
+          ],
+          [
+            "qzkbee",
+            "golf"
+          ],
+          [
+            "ngihnt",
+            "papa"
+          ],
+          [
+            "iznahh",
+            "foxtrot"
+          ],
+          [
+            "alwtxg",
+            "tango"
+          ],
+          [
+            "ufwonn",
+            "zulu"
+          ],
+          [
+            "mhaspf",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-N-005",
+        "queried_key": "jmbryx",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 5,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "zdfwtr",
+            "alpha"
+          ],
+          [
+            "bktqcl",
+            "papa"
+          ],
+          [
+            "wkfpxd",
+            "echo"
+          ],
+          [
+            "sdedgv",
+            "charlie"
+          ],
+          [
+            "psnwvz",
+            "yankee"
+          ],
+          [
+            "dpiipu",
+            "quebec"
+          ],
+          [
+            "oawqio",
+            "delta"
+          ],
+          [
+            "mafemj",
+            "romeo"
+          ],
+          [
+            "cuuplv",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-N-006",
+        "queried_key": "cundht",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 4,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "quzdyh",
+            "romeo"
+          ],
+          [
+            "bnsfbo",
+            "uniform"
+          ],
+          [
+            "xamumw",
+            "hotel"
+          ],
+          [
+            "gucdge",
+            "charlie"
+          ],
+          [
+            "rrtnln",
+            "lima"
+          ],
+          [
+            "vhnhyi",
+            "foxtrot"
+          ],
+          [
+            "dhrelo",
+            "november"
+          ],
+          [
+            "avntlp",
+            "india"
+          ],
+          [
+            "hqqouk",
+            "juliet"
+          ]
+        ],
+        "item_id": "L02-N-007",
+        "queried_key": "ckqvje",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 6,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "mbdiqc",
+            "charlie"
+          ],
+          [
+            "dyiejk",
+            "kilo"
+          ],
+          [
+            "rktvku",
+            "victor"
+          ],
+          [
+            "emdyvi",
+            "bravo"
+          ],
+          [
+            "gpyhkf",
+            "lima"
+          ],
+          [
+            "uwkjwm",
+            "sierra"
+          ],
+          [
+            "iiavbe",
+            "echo"
+          ],
+          [
+            "yvyhlp",
+            "india"
+          ],
+          [
+            "knfnps",
+            "delta"
+          ]
+        ],
+        "item_id": "L02-N-008",
+        "queried_key": "nkywis",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "ypsfxn",
+            "zulu"
+          ],
+          [
+            "bngkev",
+            "golf"
+          ],
+          [
+            "kkkrun",
+            "bravo"
+          ],
+          [
+            "zrvicv",
+            "alpha"
+          ],
+          [
+            "nbsfiv",
+            "charlie"
+          ],
+          [
+            "viddse",
+            "delta"
+          ],
+          [
+            "fqqywj",
+            "india"
+          ],
+          [
+            "gurzrn",
+            "uniform"
+          ],
+          [
+            "qutsir",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-N-009",
+        "queried_key": "unxrgm",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 1,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "ibztre",
+            "hotel"
+          ],
+          [
+            "laxnax",
+            "quebec"
+          ],
+          [
+            "xucsil",
+            "lima"
+          ],
+          [
+            "jwvsdq",
+            "november"
+          ],
+          [
+            "gzrnyi",
+            "romeo"
+          ],
+          [
+            "hwrifp",
+            "papa"
+          ],
+          [
+            "bxwmxg",
+            "yankee"
+          ],
+          [
+            "pvgavh",
+            "xray"
+          ],
+          [
+            "cidvza",
+            "tango"
+          ]
+        ],
+        "item_id": "L02-N-010",
+        "queried_key": "tlqdho",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "mzdtmk",
+            "uniform"
+          ],
+          [
+            "zfzlmy",
+            "oscar"
+          ],
+          [
+            "rcrfud",
+            "kilo"
+          ],
+          [
+            "gyojgs",
+            "quebec"
+          ],
+          [
+            "dekfxc",
+            "echo"
+          ],
+          [
+            "xlsbgo",
+            "victor"
+          ],
+          [
+            "cstryj",
+            "sierra"
+          ],
+          [
+            "yhjgrc",
+            "charlie"
+          ],
+          [
+            "pndxtf",
+            "india"
+          ]
+        ],
+        "item_id": "L02-N-011",
+        "queried_key": "mvqhcj",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "drjczz",
+            "november"
+          ],
+          [
+            "bnnssn",
+            "bravo"
+          ],
+          [
+            "ftcczn",
+            "foxtrot"
+          ],
+          [
+            "pybpng",
+            "mike"
+          ],
+          [
+            "sshavf",
+            "charlie"
+          ],
+          [
+            "elabqi",
+            "alpha"
+          ],
+          [
+            "gdvqim",
+            "yankee"
+          ],
+          [
+            "yimjga",
+            "victor"
+          ],
+          [
+            "lduyaa",
+            "echo"
+          ]
+        ],
+        "item_id": "L02-N-012",
+        "queried_key": "ryzylo",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 8,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "hgnnvp",
+            "india"
+          ],
+          [
+            "nlocws",
+            "bravo"
+          ],
+          [
+            "qvvsod",
+            "charlie"
+          ],
+          [
+            "kwrara",
+            "juliet"
+          ],
+          [
+            "embinz",
+            "victor"
+          ],
+          [
+            "yqdzco",
+            "yankee"
+          ],
+          [
+            "uveeux",
+            "zulu"
+          ],
+          [
+            "xkakjo",
+            "mike"
+          ],
+          [
+            "wanwlh",
+            "golf"
+          ]
+        ],
+        "item_id": "L02-N-013",
+        "queried_key": "tygxbq",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 0,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "jagfmq",
+            "delta"
+          ],
+          [
+            "ipvtjx",
+            "xray"
+          ],
+          [
+            "fsowqt",
+            "zulu"
+          ],
+          [
+            "aprssr",
+            "golf"
+          ],
+          [
+            "hujcio",
+            "romeo"
+          ],
+          [
+            "dverir",
+            "victor"
+          ],
+          [
+            "rxgrwx",
+            "oscar"
+          ],
+          [
+            "vynsqb",
+            "sierra"
+          ],
+          [
+            "svodyd",
+            "whiskey"
+          ]
+        ],
+        "item_id": "L02-N-014",
+        "queried_key": "fzkjma",
+        "stratum": "null"
+      },
+      {
+        "answer_slot_index": 2,
+        "expected_answer": "NULL",
+        "in_context_pairs": [
+          [
+            "jfroeo",
+            "uniform"
+          ],
+          [
+            "rzhxjr",
+            "papa"
+          ],
+          [
+            "ijefui",
+            "whiskey"
+          ],
+          [
+            "ozutpm",
+            "zulu"
+          ],
+          [
+            "hbsenj",
+            "yankee"
+          ],
+          [
+            "tqgkzk",
+            "victor"
+          ],
+          [
+            "ubfnan",
+            "tango"
+          ],
+          [
+            "skwocr",
+            "charlie"
+          ],
+          [
+            "amjhpo",
+            "hotel"
+          ]
+        ],
+        "item_id": "L02-N-015",
+        "queried_key": "avtajs",
+        "stratum": "null"
+      }
+    ]
+  },
+  "per_rung_seed": 3934039659059433267,
+  "rung_id": "L02",
+  "rung_spec": {
+    "D": 8,
+    "K": "low",
+    "X": "base"
+  }
+}
