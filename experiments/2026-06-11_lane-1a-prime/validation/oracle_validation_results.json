@@ -1,0 +1,102 @@
+[
+  {
+    "oracle_case_id": "oracle-ideal-retriever",
+    "oracle_case_type": "ideal_retriever",
+    "expected_verdict": "not_ruled_out",
+    "actual_full_instrument_outcome": "not_ruled_out",
+    "attached_labels": [],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-last-position-shortcut",
+    "oracle_case_type": "last_position_shortcut",
+    "expected_verdict": "eliminated",
+    "actual_full_instrument_outcome": "eliminated",
+    "attached_labels": [
+      "null_abstention_floor_unmet"
+    ],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-salient-endpoint-shortcut",
+    "oracle_case_type": "salient_endpoint_shortcut",
+    "expected_verdict": "eliminated",
+    "actual_full_instrument_outcome": "eliminated",
+    "attached_labels": [
+      "null_abstention_floor_unmet"
+    ],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-token-prior-emitter",
+    "oracle_case_type": "token_prior_emitter",
+    "expected_verdict": "eliminated",
+    "actual_full_instrument_outcome": "eliminated",
+    "attached_labels": [
+      "null_abstention_floor_unmet"
+    ],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-universal-answerer",
+    "oracle_case_type": "universal_answerer",
+    "expected_verdict": "eliminated",
+    "actual_full_instrument_outcome": "eliminated",
+    "attached_labels": [
+      "null_abstention_floor_unmet"
+    ],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-universal-abstainer",
+    "oracle_case_type": "universal_abstainer",
+    "expected_verdict": "eliminated",
+    "actual_full_instrument_outcome": "eliminated",
+    "attached_labels": [
+      "answerable_abstention_ceiling_exceeded"
+    ],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-perfect-null-handler",
+    "oracle_case_type": "perfect_null_handler",
+    "expected_verdict": "not_ruled_out",
+    "actual_full_instrument_outcome": "not_ruled_out",
+    "attached_labels": [],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-mixture-70-30",
+    "oracle_case_type": "mixture_oracle",
+    "expected_verdict": "flag_indeterminate",
+    "actual_full_instrument_outcome": "not_ruled_out",
+    "attached_labels": [],
+    "boundary_proximity_flags": {},
+    "verdict_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "oracle-malformed-control",
+    "oracle_case_type": "malformed_control",
+    "expected_verdict": "eliminated",
+    "actual_full_instrument_outcome": "not_ruled_out",
+    "attached_labels": [],
+    "boundary_proximity_flags": {},
+    "verdict_matched": false,
+    "failure_interpretation": "actual 'not_ruled_out' does not match expected 'eliminated'; review T3 threshold values or oracle case construction."
+  }
+]

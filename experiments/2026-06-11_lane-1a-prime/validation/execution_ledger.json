@@ -1,0 +1,27 @@
+{
+  "what_was_generated": "pilot manifests (seed=0, rung=L01, n=96); final manifests (seed=1, rung=L01, n=96); oracle case predictions for 9 oracle types; per-policy score tables; union envelope scores; A6 drift block; T1 / T3 / T4 reports",
+  "what_was_computed": "per-policy answerable + null accuracy; distinct outputs; policy classifications (discriminative / operation_equivalent / degenerate_constant); union envelope at answerable stratum; Wilson score intervals; aggregate_per_stratum; full-instrument outcome per oracle case via emit_elimination_label + compute_rung_outcome; A6 per-policy and envelope drift; drift_within_tolerance flag",
+  "files_created": [
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/pilot_manifests_L01.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/final_manifests_L01.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/oracle_validation_results.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/t1_report.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/t3_report.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/t4_report.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/instrument_validation_report.md"
+  ],
+  "artifact_hashes": {
+    "pilot_manifests_L01.json": "bcf5f9bc2fea8d869923f4a852f3886a455c01b24d6e87f8fbddefb3192d9e54",
+    "final_manifests_L01.json": "ab1629dc8b6817c0d825f362bf3598b4cb4f43506f18a0558a7192dce67acd67",
+    "oracle_validation_results.json": "e8877197c7c9ca074de28cd1eaa77c2c9300a2d9e2274b3edd3689e5e822d6aa",
+    "t1_report.json": "2a2ab53c9c2b401e0b3484ae25d425a4dd09a7145bfb5f7783fc4c46ce15e68d",
+    "t3_report.json": "9522b29d3ba55eac10c2bbc894dddf62cb92df78c128a13267fa3c2eb6359cdc",
+    "t4_report.json": "a9f812eadb20a4eea9546ef65566c01e355b1fcf51255ab8908940424bc41da1",
+    "instrument_validation_report.md": "24bd4724223fcb4e1250eabb69ea41850d8f6f9272000916d906fea9ba9783d5"
+  },
+  "no_model_invoked": "CONFIRMED",
+  "no_sweep_id_created": "CONFIRMED",
+  "no_sweep_execution": "CONFIRMED",
+  "no_candidate_or_model_outputs": "CONFIRMED",
+  "outputs_validation_only": "CONFIRMED -- SYNTHETIC/DIAGNOSTIC, NON-BINDING, NOT FOR THRESHOLD DERIVATION"
+}

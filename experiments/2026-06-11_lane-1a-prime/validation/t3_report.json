@@ -1,0 +1,25 @@
+{
+  "rows": [
+    {
+      "criterion_label": "null_abstention_floor_unmet",
+      "stratum": "null",
+      "comparison": "ci_lower_bound",
+      "floor_or_ceiling": 0.5,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    },
+    {
+      "criterion_label": "answerable_abstention_ceiling_exceeded",
+      "stratum": "answerable",
+      "comparison": "ci_upper_bound",
+      "floor_or_ceiling": 0.5,
+      "is_floor": false,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    }
+  ],
+  "ideal_witness_in_pass_region": true
+}

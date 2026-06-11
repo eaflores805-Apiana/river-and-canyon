@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "review_item_id": "INH-1",
+      "reviewer": "inherited (v1 close-out) + joint disposition",
+      "risk_class": "semantics",
+      "summary": "Per-diagnostic stratum semantics; pooled N=96 limited to distinct_outputs, copy_completion_agreement, void_accounting",
+      "disposition": "incorporated",
+      "rationale": "joint disposition commit 019a964",
+      "owner": "New Senior + CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "INH-2",
+      "reviewer": "inherited (v1 close-out) + joint disposition",
+      "risk_class": "totality",
+      "summary": "Three-way outcome: INCONCLUSIVE | ELIMINATED | NOT_RULED_OUT; K = |NOT_RULED_OUT|; boundary_proximity_flag diagnostic-only",
+      "disposition": "incorporated",
+      "rationale": "joint disposition commit 019a964",
+      "owner": "New Senior + CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "INH-3",
+      "reviewer": "inherited (v1 close-out) + joint disposition",
+      "risk_class": "statistics",
+      "summary": "Wilson without continuity correction; Newcombe-Wilson for differences; no Wald",
+      "disposition": "incorporated",
+      "rationale": "joint disposition commit 019a964",
+      "owner": "New Senior + CS",
+      "blocking_status": "resolved"
+    }
+  ]
+}

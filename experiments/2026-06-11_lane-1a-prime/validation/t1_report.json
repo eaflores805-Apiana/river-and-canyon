@@ -1,0 +1,114 @@
+{
+  "per_policy_scores": {
+    "pure_last_position": {
+      "answerable": {
+        "policy_name": "pure_last_position",
+        "stratum": "answerable",
+        "n_effective": 80,
+        "correct": 12,
+        "accuracy": 0.15,
+        "distinct_outputs": 25
+      },
+      "null": {
+        "policy_name": "pure_last_position",
+        "stratum": "null",
+        "n_effective": 16,
+        "correct": 0,
+        "accuracy": 0.0,
+        "distinct_outputs": 12
+      }
+    },
+    "salient_endpoint": {
+      "answerable": {
+        "policy_name": "salient_endpoint",
+        "stratum": "answerable",
+        "n_effective": 80,
+        "correct": 16,
+        "accuracy": 0.2,
+        "distinct_outputs": 24
+      },
+      "null": {
+        "policy_name": "salient_endpoint",
+        "stratum": "null",
+        "n_effective": 16,
+        "correct": 0,
+        "accuracy": 0.0,
+        "distinct_outputs": 11
+      }
+    },
+    "recency_excluding_target": {
+      "answerable": {
+        "policy_name": "recency_excluding_target",
+        "stratum": "answerable",
+        "n_effective": 80,
+        "correct": 3,
+        "accuracy": 0.0375,
+        "distinct_outputs": 24
+      },
+      "null": {
+        "policy_name": "recency_excluding_target",
+        "stratum": "null",
+        "n_effective": 16,
+        "correct": 0,
+        "accuracy": 0.0,
+        "distinct_outputs": 12
+      }
+    },
+    "prefix_neighbor_confusion": {
+      "answerable": {
+        "policy_name": "prefix_neighbor_confusion",
+        "stratum": "answerable",
+        "n_effective": 80,
+        "correct": 0,
+        "accuracy": 0.0,
+        "distinct_outputs": 1
+      },
+      "null": {
+        "policy_name": "prefix_neighbor_confusion",
+        "stratum": "null",
+        "n_effective": 16,
+        "correct": 0,
+        "accuracy": 0.0,
+        "distinct_outputs": 1
+      }
+    },
+    "copy_completion": {
+      "answerable": {
+        "policy_name": "copy_completion",
+        "stratum": "answerable",
+        "n_effective": 80,
+        "correct": 0,
+        "accuracy": 0.0,
+        "distinct_outputs": 68
+      },
+      "null": {
+        "policy_name": "copy_completion",
+        "stratum": "null",
+        "n_effective": 16,
+        "correct": 0,
+        "accuracy": 0.0,
+        "distinct_outputs": 16
+      }
+    }
+  },
+  "union_envelope_score": 0.3375,
+  "envelope_cap": 0.8,
+  "room_below_envelope": 0.4625,
+  "policy_classifications": {
+    "pure_last_position": "discriminative",
+    "salient_endpoint": "discriminative",
+    "recency_excluding_target": "discriminative",
+    "prefix_neighbor_confusion": "degenerate_constant"
+  },
+  "a6_drift_block": {
+    "per_policy_drift": {
+      "pure_last_position": 0.13749999999999998,
+      "salient_endpoint": 0.025000000000000022,
+      "recency_excluding_target": 0.0375,
+      "prefix_neighbor_confusion": 0.0
+    },
+    "envelope_drift": 0.09999999999999998,
+    "drift_within_tolerance": true,
+    "flagged_drifts": []
+  }
+}
