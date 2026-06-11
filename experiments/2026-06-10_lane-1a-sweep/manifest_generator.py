@@ -32,7 +32,7 @@ from dummy_policies import (
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-SWEEP_ID = "lane-1a-2026-06-10"
+SWEEP_ID = "lane-1a-2026-06-11"   # Path E.1 (Manager 2026-06-10): new sweep_id after runtime-env instrument failure
 
 
 def _sha256_str(s: str) -> str:

@@ -34,19 +34,19 @@
           "nondegenerate": true
         },
         "homogeneous_prefix_completion": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 23,
           "nondegenerate": true
         },
         "pure_last_position": {
-          "distinct_predictions": 26,
+          "distinct_predictions": 21,
           "nondegenerate": true
         },
         "salient_endpoint": {
-          "distinct_predictions": 26,
+          "distinct_predictions": 21,
           "nondegenerate": true
         },
         "target_recency": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 23,
           "nondegenerate": true
         }
       },
@@ -60,7 +60,7 @@
           "nondegenerate": true
         },
         "homogeneous_prefix_completion": {
-          "distinct_predictions": 24,
+          "distinct_predictions": 26,
           "nondegenerate": true
         },
         "pure_last_position": {
@@ -72,7 +72,7 @@
           "nondegenerate": true
         },
         "target_recency": {
-          "distinct_predictions": 24,
+          "distinct_predictions": 26,
           "nondegenerate": true
         }
       },
@@ -90,15 +90,15 @@
           "nondegenerate": true
         },
         "pure_last_position": {
-          "distinct_predictions": 23,
+          "distinct_predictions": 25,
           "nondegenerate": true
         },
         "salient_endpoint": {
-          "distinct_predictions": 23,
+          "distinct_predictions": 25,
           "nondegenerate": true
         },
         "target_recency": {
-          "distinct_predictions": 23,
+          "distinct_predictions": 25,
           "nondegenerate": true
         }
       },
@@ -112,19 +112,19 @@
           "nondegenerate": true
         },
         "homogeneous_prefix_completion": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 24,
           "nondegenerate": true
         },
         "pure_last_position": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 24,
           "nondegenerate": true
         },
         "salient_endpoint": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 24,
           "nondegenerate": true
         },
         "target_recency": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 24,
           "nondegenerate": true
         }
       },
@@ -142,15 +142,15 @@
           "nondegenerate": true
         },
         "pure_last_position": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 26,
           "nondegenerate": true
         },
         "salient_endpoint": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 26,
           "nondegenerate": true
         },
         "target_recency": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 26,
           "nondegenerate": true
         }
       },
@@ -164,19 +164,19 @@
           "nondegenerate": true
         },
         "homogeneous_prefix_completion": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 26,
           "nondegenerate": true
         },
         "pure_last_position": {
-          "distinct_predictions": 26,
+          "distinct_predictions": 25,
           "nondegenerate": true
         },
         "salient_endpoint": {
-          "distinct_predictions": 26,
+          "distinct_predictions": 25,
           "nondegenerate": true
         },
         "target_recency": {
-          "distinct_predictions": 25,
+          "distinct_predictions": 26,
           "nondegenerate": true
         }
       },
@@ -190,19 +190,19 @@
           "nondegenerate": true
         },
         "homogeneous_prefix_completion": {
-          "distinct_predictions": 24,
+          "distinct_predictions": 25,
           "nondegenerate": true
         },
         "pure_last_position": {
-          "distinct_predictions": 24,
+          "distinct_predictions": 25,
           "nondegenerate": true
         },
         "salient_endpoint": {
-          "distinct_predictions": 24,
+          "distinct_predictions": 25,
           "nondegenerate": true
         },
         "target_recency": {
-          "distinct_predictions": 24,
+          "distinct_predictions": 25,
           "nondegenerate": true
         }
       },

@@ -61,6 +61,16 @@ EXPECTED_TOKEN_PRIOR_AUTH = (
 )
 PENDING_TIMESTAMP_SENTINEL = "PENDING_TEAM_LEAD_REVIEW"
 
+# Path E.1 (Manager 2026-06-10) — Production subprocess interpreter pin.
+# The wrapper uses this EXPLICIT path, not sys.executable, because sys.executable
+# in the production environment previously resolved to /opt/anaconda3/bin/python
+# (mlx_lm 0.19.3, no make_sampler), causing an instrument failure before any
+# model load. The explicit path below pins Python 3.13 with mlx_lm 0.31.3.
+# Cross-referenced against runner_config.yaml production.python_interpreter by
+# unit test test_interpreter_path_matches_config.
+PRODUCTION_PYTHON = "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3"
+EXPECTED_MLX_LM_VERSION = "0.31.3"
+
 CONTEXT_FUNCTIONAL_STATEMENT = (
     "Lane 1a uses a lane-specific runner (lane1a_runner.py) that "
     "preserves B1 v2-compatible provenance conventions and locked "
@@ -244,7 +254,7 @@ def invoke_runner(
     )
 
     cmd = [
-        sys.executable,
+        PRODUCTION_PYTHON,
         str(LANE1A_RUNNER),
         "--manifest", str(manifest_path),
         "--output-dir", str(output_dir),
@@ -317,12 +327,58 @@ def invoke_runner(
 invoke_b1v2 = invoke_runner
 
 
+def production_subprocess_smoke_test() -> dict[str, Any]:
+    """Path E.1: spawn the production subprocess and verify its import
+    surface succeeds AND its mlx_lm version matches the locked
+    expected value.
+
+    This is the test that would have caught the prior instrument
+    failure. It runs at preflight time before any model load.
+
+    Returns dict with: interpreter, mlx_lm_version, import_ok.
+    Raises RuntimeError on failure.
+    """
+    if not Path(PRODUCTION_PYTHON).exists():
+        raise RuntimeError(
+            f"production python interpreter not found: {PRODUCTION_PYTHON}"
+        )
+    probe = (
+        "import sys, mlx_lm; "
+        "from mlx_lm.sample_utils import make_sampler; "
+        "print(mlx_lm.__version__)"
+    )
+    proc = subprocess.run(
+        [PRODUCTION_PYTHON, "-c", probe],
+        capture_output=True, text=True,
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"production subprocess smoke test FAILED:\n"
+            f"  interpreter: {PRODUCTION_PYTHON}\n"
+            f"  stderr: {proc.stderr.strip()}"
+        )
+    observed_version = proc.stdout.strip()
+    if observed_version != EXPECTED_MLX_LM_VERSION:
+        raise RuntimeError(
+            f"production subprocess mlx_lm version mismatch:\n"
+            f"  expected: {EXPECTED_MLX_LM_VERSION}\n"
+            f"  observed: {observed_version}"
+        )
+    return {
+        "interpreter": PRODUCTION_PYTHON,
+        "mlx_lm_version": observed_version,
+        "import_ok": True,
+    }
+
+
 def preflight() -> str:
     """Read LOCK-RECORD; validate token-prior auth + first-data-access
-    ordering. Returns 'option_a' or 'option_b'."""
+    ordering; run production subprocess smoke test (Path E.1).
+    Returns 'option_a' or 'option_b'."""
     fields = _read_lock_record()
     path = _validate_lock_record(fields)
     _validate_first_data_access_ordering(fields)
+    production_subprocess_smoke_test()
     return path
 
 

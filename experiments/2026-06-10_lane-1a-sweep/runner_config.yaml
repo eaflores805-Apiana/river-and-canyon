@@ -8,7 +8,20 @@
 # leaving B1 v2 source unedited. This is not native B1 v2 execution and
 # is not B1 v2.1.
 
-sweep_id: "lane-1a-2026-06-10"
+sweep_id: "lane-1a-2026-06-11"   # Path E.1 (Manager 2026-06-10): new sweep_id after runtime-env failure
+
+# Production subprocess environment (Path E.1 remediation).
+# The wrapper invokes the runner via this EXPLICIT interpreter, not sys.executable.
+# A production-path subprocess smoke test asserts the interpreter is reachable and
+# has the expected mlx_lm version before any sweep execution.
+production:
+  python_interpreter: "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3"
+  expected_mlx_lm_version: "0.31.3"
+  note: |
+    sys.executable was used previously and resolved to anaconda Python 3.10
+    in PATH, which carries mlx_lm 0.19.3 (older API, no make_sampler in
+    sample_utils). The explicit path above pins the production interpreter
+    to Python 3.13 with mlx_lm 0.31.3.
 artifact_class: "lane-1a-reconnaissance"
 certification_relevance: "none"
 

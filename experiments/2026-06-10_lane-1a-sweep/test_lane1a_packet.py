@@ -583,5 +583,51 @@ class TestLane1aRunnerProvenance(unittest.TestCase):
         )
 
 
+class TestPathE1ProductionSubprocess(unittest.TestCase):
+    """Path E.1 (Manager 2026-06-10): production subprocess interpreter
+    pin + cross-reference + smoke test. The instrument failure occurred
+    because sys.executable resolved to a Python whose mlx_lm did not
+    have the expected import surface; these tests prevent recurrence."""
+
+    def test_interpreter_path_matches_config(self):
+        import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
+        cfg_text = (SCRIPT_DIR / "runner_config.yaml").read_text()
+        m = re.search(r'python_interpreter:\s*"([^"]+)"', cfg_text)
+        self.assertIsNotNone(m, "could not locate python_interpreter in runner_config.yaml")
+        cfg_path = m.group(1)
+        self.assertEqual(
+            wrapper.PRODUCTION_PYTHON, cfg_path,
+            f"wrapper PRODUCTION_PYTHON ({wrapper.PRODUCTION_PYTHON!r}) must "
+            f"match runner_config.yaml production.python_interpreter ({cfg_path!r})",
+        )
+
+    def test_expected_mlx_lm_version_matches_config(self):
+        import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
+        cfg_text = (SCRIPT_DIR / "runner_config.yaml").read_text()
+        m = re.search(r'expected_mlx_lm_version:\s*"([^"]+)"', cfg_text)
+        self.assertIsNotNone(m, "could not locate expected_mlx_lm_version")
+        cfg_version = m.group(1)
+        self.assertEqual(wrapper.EXPECTED_MLX_LM_VERSION, cfg_version)
+
+    def test_production_subprocess_smoke(self):
+        """Spawn the production subprocess; verify the runner's import
+        surface succeeds; verify mlx_lm version. This is the test that
+        would have caught the prior instrument failure."""
+        import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
+        result = wrapper.production_subprocess_smoke_test()
+        self.assertTrue(result["import_ok"])
+        self.assertEqual(result["mlx_lm_version"], wrapper.EXPECTED_MLX_LM_VERSION)
+        self.assertEqual(result["interpreter"], wrapper.PRODUCTION_PYTHON)
+
+    def test_wrapper_does_not_use_sys_executable_for_subprocess(self):
+        """Subprocess argv[0] must be PRODUCTION_PYTHON, not sys.executable."""
+        wrapper_src = (SCRIPT_DIR / "lane1a_runner_wrapper.py").read_text()
+        m = re.search(r'cmd\s*=\s*\[\s*([A-Za-z_\.]+),', wrapper_src)
+        self.assertIsNotNone(m, "could not locate cmd = [...] in wrapper")
+        argv0 = m.group(1)
+        self.assertEqual(argv0, "PRODUCTION_PYTHON",
+                         f"wrapper subprocess argv[0] should be PRODUCTION_PYTHON, got {argv0!r}")
+
+
 if __name__ == "__main__":
     unittest.main()

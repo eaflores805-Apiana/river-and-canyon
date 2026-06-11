@@ -30,7 +30,7 @@
     "artifact_class", "certification_relevance"
   ],
   "properties": {
-    "sweep_id": { "const": "lane-1a-2026-06-10" },
+    "sweep_id": { "const": "lane-1a-2026-06-11" },
     "framework_version": { "const": "none" },
     "model_attestation": { "type": "object" },
 

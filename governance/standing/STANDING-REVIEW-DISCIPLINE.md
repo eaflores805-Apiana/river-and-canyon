@@ -184,10 +184,48 @@ Both rules apply to every production cycle going forward.
 
 ---
 
+## Additional rule — production-path subprocess smoke test (added 2026-06-10, Manager / Path E.1 acceptance)
+
+*Manager / Elias 2026-06-10 (Path E.1 direction, accepting CS standing-rule proposal). Permanent production rule for any artifact that invokes a subprocess.*
+
+> **Any artifact that invokes a subprocess in production must include a production-path smoke test that spawns that subprocess exactly as production will, verifies import success, verifies required dependency versions, and records the interpreter path.**
+
+Same-process import checks are not sufficient. They test the test runner's environment, not the production subprocess environment.
+
+The test must:
+
+- Spawn the subprocess using the EXACT interpreter resolution the production wrapper uses (not `sys.executable` if production uses a pinned path).
+- Verify the runner module's import surface succeeds in that subprocess (the production wrapper must not be able to invoke the runner only to have it crash at import time).
+- Verify required dependency versions match the locked expected values (e.g., `mlx_lm.__version__`).
+- Record the interpreter path so any future drift is traceable.
+
+**Why this rule exists.** The third Lane 1a deviation surfaced because `sys.executable` in the production environment resolved to a Python interpreter (anaconda Python 3.10) whose `mlx_lm` was version 0.19.3 — an older release without the `make_sampler` symbol the runner imports. The runtime mlx_lm version was not cross-referenced against B1 v2's documented runtime environment. The wrapper's subprocess invocation produced 31 `ImportError` events before any model load, consuming 31 (rung, stratum) attempts under the no-re-execution rule. The new rule converts the implicit assumption "the host has the right Python" into a tested, locked production invariant.
+
+**Canonical example.**
+
+`experiments/2026-06-10_lane-1a-sweep/test_lane1a_packet.py::TestPathE1ProductionSubprocess`:
+
+- `test_interpreter_path_matches_config` — cross-references `wrapper.PRODUCTION_PYTHON` against `runner_config.yaml production.python_interpreter`.
+- `test_expected_mlx_lm_version_matches_config` — cross-references the expected mlx_lm version.
+- `test_production_subprocess_smoke` — spawns the production subprocess; runs `import mlx_lm; from mlx_lm.sample_utils import make_sampler; print(mlx_lm.__version__)`; verifies the version equals expected.
+- `test_wrapper_does_not_use_sys_executable_for_subprocess` — source-level grep asserts the wrapper's subprocess argv[0] is `PRODUCTION_PYTHON`, not `sys.executable`.
+
+**Three production rules now in force.**
+
+| Rule | Catches |
+|---|---|
+| No production while G1-open condition memo affects it | wrapper-rewrite pattern defect |
+| Sibling-artifact cross-reference unit test | source-side drift (MODEL_IDs, schema shapes, CLI flags) |
+| Production-path subprocess smoke test | environment-side drift (interpreter paths, dependency versions, import surface availability) |
+
+Together they cover memo-channel, source-code-channel, and runtime-environment-channel discipline.
+
+---
+
 ## Non-authorizations (carried forward)
 
 This standing rule does not authorize any execution lane. See `governance/standing/STANDING-NON-AUTHORIZATIONS.md` for the full canonical list.
 
 ---
 
-— Team Lead authored 2026-06-10; CS filed 2026-06-10; Manager production-rule addendum 2026-06-10; Manager sibling-artifact cross-reference rule addendum 2026-06-10
+— Team Lead authored 2026-06-10; CS filed 2026-06-10; Manager production-rule addendum 2026-06-10; Manager sibling-artifact cross-reference rule addendum 2026-06-10; Manager production-path subprocess smoke test rule addendum 2026-06-10
