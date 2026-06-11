@@ -1,88 +1,77 @@
-# LOCK-RECORD Finalization — Post-Timestamp Hash
+# LOCK-RECORD Finalization — Path A Post-Touch Hash
 
 From: CS Engineer
-To: Manager (for reauthorization)
+To: Manager
 Cc: Team Lead, Senior Engineer
-Date: 2026-06-10 (UTC: 2026-06-11T02:06:36Z)
-Status: Lock timestamp appended per Team Lead authorization; LOCK-RECORD hash recorded for preflight comparison
+Date: 2026-06-10 (UTC: 2026-06-11T02:38:46Z)
+Status: Authorized single LOCK-RECORD touch performed; new post-touch hash recorded for preflight comparison
 
 ---
 
-## Lock-timestamp finalization
+## Lock-finalization (per Manager reauthorization §2)
 
-Per Team Lead combined-review PASS memo §4 (filed at
-`governance/2026-06-10_lane1a/TEAMLEAD-COMBINED-REVIEW-PASS-2026-06-10.md`):
+CS performed the single authorized LOCK-RECORD touch. The touch included
+only the two authorized changes:
 
-> *"CS may replace `PENDING_TEAM_LEAD_REVIEW` with the RFC 3339 UTC
-> timestamp of this Team Lead review acceptance. […] If timestamp
-> insertion changes the LOCK-RECORD hash, CS must record the final
-> post-timestamp hash in the preflight record before first data
-> access."*
+1. **Lock timestamp replacement:**
 
-CS appended:
+   ```text
+   PENDING_TEAM_LEAD_REVIEW  →  2026-06-11T02:38:46Z
+   ```
+
+2. **Root-cause note (Team Lead-approved, Senior-noted):**
+
+   ```text
+   B1 v2 validates against the Two-Hop L1 manifest schema.
+   ```
+
+   Inserted in §"Runner integration (Path A, Manager 2026-06-10)" as a
+   one-sentence block above the Manager-prescribed wording.
+
+No other locked artifact was modified.
+
+## Post-touch hashes
 
 ```text
-Lock timestamp: 2026-06-11T02:06:36Z
+LOCK-RECORD.md (pre-touch,  Path A sealed):    68edbdcd68660e60b99ad19d9ccae0cdfb8b246cea50b8d8036fbbd7f8a743f9
+LOCK-RECORD.md (post-touch, finalized):        88a2a16d889e171e039ed17d477d1cfb96fe2d0ccda6059f0c7bd76c7f2a2025
 ```
 
-## Post-finalization hashes
+`88a2a16d…` is the binding execution-time hash and the value
+`lane1a_runner_wrapper.py preflight()` will see at first-data-access
+time.
 
-```text
-LOCK-RECORD.md (pre-timestamp,  PENDING_TEAM_LEAD_REVIEW):  f8175e69a1feb967220ea94d0f764e8f298d40ee63c82432131fd3b9afa71ca1
-LOCK-RECORD.md (post-timestamp, finalized):                 ef170fd737809209c7a1785ae0dbc7314bc9da792bf313cad31913abaf575acb
-```
-
-The pre-timestamp hash was the value Team Lead reviewed and accepted.
-The post-timestamp hash is the value `lane1a_runner_wrapper.py`
-`preflight()` will see at first-data-access time. The two hashes
-differ only by the timestamp line; all other LOCK-RECORD content is
-bit-identical.
-
-## Inner artifact hashes unchanged
-
-The 19 locked artifact hashes recorded inside LOCK-RECORD remain
-bit-identical to the values Team Lead reviewed. Spot-check:
+## Inner artifact hashes unchanged (all 20 verified)
 
 | Artifact | sha256 | Status |
 |---|---|---|
 | `classification_criteria.yaml` | `9b32fa1e…` | unchanged |
-| `lane1a_runner_wrapper.py` | `a91e0c89…` | unchanged |
-| `schema/lane1a_sidecar.schema.json` | `c1944773…` | unchanged |
-| `test_lane1a_packet.py` | `2697d69e…` | unchanged |
-| (… 15 other artifacts …) | (per LOCK-RECORD) | unchanged |
-
-CS verified by re-running `shasum -a 256` against every locked
-artifact and comparing to the LOCK-RECORD table — all match. No
-artifact was modified during the timestamp-finalization step.
+| `manifest_generator.py` | `e2962139…` | unchanged |
+| `prompt_template.md` | `1fa889ae…` | unchanged |
+| `scorer.py` | `c1aff994…` | unchanged |
+| `dummy_policies.py` | `46a5b234…` | unchanged |
+| `runner_config.yaml` | `bbb4655e…` | unchanged |
+| `lane1a_runner.py` | `23a480e7…` | unchanged |
+| `lane1a_runner_wrapper.py` | `4bed7fbd…` | unchanged |
+| `analyzer.py` | `4c0087fa…` | unchanged |
+| `plotter.py` | `dca51066…` | unchanged |
+| `artifact_tags.py` | `bb5d396e…` | unchanged |
+| `audit_log.py` | `1c657804…` | unchanged |
+| `fixed_outcome.md` | `bde3c804…` | unchanged |
+| `exclusion_block.md` | `feb4b80c…` | unchanged |
+| `schema/per_rung_record.schema.json` | `beb48aac…` | unchanged |
+| `schema/sweep_record.schema.json` | `449aae92…` | unchanged |
+| `schema/lane1a_sidecar.schema.json` | `23195986…` | unchanged |
+| `AUDIT-LOG-FORMAT.md` | `29b418c6…` | unchanged |
+| `test_lane1a_packet.py` | `934f3977…` | unchanged |
+| `NOVELTY-LEDGER.md` | `aad806a4…` | unchanged |
 
 ## What this record does NOT do
 
 - It does NOT authorize first data access.
-- It does NOT authorize `lane1a_runner_wrapper.py preflight()` invocation.
-- It does NOT trigger any model load.
-
-It records the post-finalization LOCK-RECORD hash so that:
-
-1. An auditor can verify the LOCK-RECORD hash at first-data-access
-   time matches `ef170fd7…` and not `f8175e69…` (the unfinalized
-   value).
-2. Manager reauthorization can reference the specific hash that
-   `preflight()` will see.
-
-## Remaining authorization gate (Team Lead memo §7)
-
-```text
-1. Senior wrapper finding — REMEDIATED ✓
-2. CS remediation — COMPLETE ✓
-3. Team Lead combined adversarial review — PASS ✓
-4. CS lock-timestamp finalization — COMPLETE ✓ (this record)
-5. Manager first-data-access reauthorization — REQUIRED (pending)
-6. CS preflight — NOT YET AUTHORIZED
-7. First data access — NOT YET AUTHORIZED
-```
-
-Manager reauthorization is the only remaining gate. The
-reauthorization should reference the post-timestamp LOCK-RECORD hash
-(`ef170fd7…`) for unambiguous binding.
+- It records the lock-finalization touch and the resulting hash.
+- The wrapper's `preflight()` reads the post-touch LOCK-RECORD;
+  if all 16 checks pass, the wrapper may proceed to `invoke_runner()`
+  per Manager reauthorization §3–§4.
 
 — CS Engineer, 2026-06-10

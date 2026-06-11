@@ -41,6 +41,10 @@ NULL-mirroring controls = descriptive-only
 
 ## Runner integration (Path A, Manager 2026-06-10)
 
+**Root cause (Senior, Team Lead-approved one-sentence note):**
+
+> B1 v2 validates against the Two-Hop L1 manifest schema.
+
 **Wording (Manager-prescribed, applied verbatim):**
 
 > Lane 1a uses a lane-specific runner that preserves B1 v2-compatible
@@ -91,14 +95,17 @@ Total locked artifacts: 20 (was 19; lane1a_runner.py is the +1).
 ## Lock timestamp
 
 ```text
-Lock timestamp: PENDING_TEAM_LEAD_REVIEW
+Lock timestamp: 2026-06-11T02:38:46Z
 ```
 
-Team Lead appends the RFC 3339 UTC value upon completion of combined
-adversarial review of design packet v0.3 + the Path A remediated
-execution packet. Until appended, `lane1a_runner_wrapper.py preflight()`
-refuses to invoke (the `PENDING_TEAM_LEAD_REVIEW` sentinel triggers
-`FirstDataAccessGateError`).
+CS appended this RFC 3339 UTC timestamp under Manager reauthorization
+authority (`MANAGER-REAUTHORIZATION-PATH-A-FIRST-DATA-ACCESS-2026-06-10.md`
+§2) after Senior intent-preservation PASS + Team Lead combined-review
+PASS on the Path A remediated packet.
+
+The `first_data_access_timestamp` recorded by the wrapper at sweep
+time MUST postdate this lock timestamp.
+`lane1a_runner_wrapper.py preflight()` enforces this comparison.
 
 ## Unit-test verification (CS, 2026-06-10, post-Path-A)
 
