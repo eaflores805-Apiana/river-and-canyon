@@ -3,7 +3,10 @@
 *Canonical list of lanes that are blocked across the program. Every CS memo, every governance filing, and every implementation decision must respect this list. Items move OFF this list only by explicit Manager authorization filed in `governance/`.*
 
 **Last reviewed:** 2026-06-10
-**Status:** All items below remain in force.
+**Status:** All items below remain in force except where explicitly noted.
+
+**Recent partial movement (do NOT generalize):**
+- **Lane 1a (pre-candidate occupancy / failure-map sweep)** — moved from FULLY BLOCKED to **PACKET PREPARATION AUTHORIZED** per `governance/2026-06-10_lane-1a-authorization/MANAGER-AUTHORIZATION.md`. First data access remains **NOT AUTHORIZED** until the final execution packet passes Team Lead adversarial review AND Manager confirms execution start. Lane 1a is **negative-use only** ("may rule out; may not rule in") — survivorship is not authorization, ranking, or positive evidence. All Lane 1a outputs must carry `artifact_class: lane-1a-reconnaissance` / `certification_relevance: none` and are excluded from threshold design and certification evidence. Consumption-side rule: a later threshold sheet must attest no Lane 1a statistic was copied or transformed in.
 
 ---
 
