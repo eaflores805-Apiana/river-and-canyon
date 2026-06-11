@@ -116,10 +116,40 @@ Team Lead will include the failure-mode prompt section in future review packets 
 
 ---
 
+## Additional rule — production cycle vs. G1-open condition memos (added 2026-06-10)
+
+*Manager / Elias 2026-06-10 (routing Senior finding on Lane 1a Step-3 wrapper). Permanent production rule for any work package that has multiple condition memos in flight.*
+
+> **No production cycle may begin while any condition memo affecting that production cycle is G1-open.**
+
+A production cycle includes (but is not limited to) writing locked artifacts, hash-recording in a lock record, or any work whose semantic depends on the resolution of a still-in-flight instruction.
+
+This applies to:
+
+- Senior correction memos
+- Team Lead conditions
+- Manager constraints
+- CS implementation notes that alter artifact semantics
+
+A production cycle may proceed only after the relevant condition memos are either:
+
+- **committed at intended path** (CS verifies on disk before starting),
+- **hash-confirmed** (the SEND-marked content's sha256 matches the on-disk copy),
+- **explicitly superseded** by a later authoritative memo, or
+- **explicitly ruled out of scope** by Team Lead or Manager.
+
+If a condition memo is SEND-marked but not commit-confirmed, the production cycle does not start. CS reports the G1-open state and waits.
+
+**Why this rule exists.** It was added after Senior surfaced a Lane 1a Step-3 wrapper defect (`SENIOR-FINDING-WRAPPER-REWRITE-2026-06-10.md`): Senior's correction memo specifying the sidecar-attestation pattern was SEND-marked but G1-open at production time, so CS built from the prior confirmed spec, which still permitted "honest override" — the rejected pattern. Zero damage occurred because the LOCK-RECORD was still PENDING and no first data access happened; the rule prevents recurrence.
+
+**Implication for CS.** CS reads memo channels with the same discipline as artifact channels: SEND-TO-CS is intent; delivery is confirmed commit SHA at intended path. This rule extends that discipline to *correction* memos, not only to artifact deliveries.
+
+---
+
 ## Non-authorizations (carried forward)
 
 This standing rule does not authorize any execution lane. See `governance/standing/STANDING-NON-AUTHORIZATIONS.md` for the full canonical list.
 
 ---
 
-— Team Lead authored 2026-06-10; CS filed 2026-06-10
+— Team Lead authored 2026-06-10; CS filed 2026-06-10; Manager production-rule addendum 2026-06-10

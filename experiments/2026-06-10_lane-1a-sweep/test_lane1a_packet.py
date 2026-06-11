@@ -339,5 +339,113 @@ class TestDummyPoliciesNondegenerate(unittest.TestCase):
             )
 
 
+class TestWrapperSidecarPattern(unittest.TestCase):
+    """Senior finding 2026-06-10: wrapper must preserve B1 output bytes
+    byte-for-byte and record Lane 1a metadata in a sidecar JSON only."""
+
+    def _stage_fake_b1_output(self, tmp: Path, rung_id: str, stratum: str) -> Path:
+        out_dir = tmp / "raw"
+        out_dir.mkdir()
+        # Simulate a B1 v2 output JSON. Includes a context field with the
+        # value B1 would emit under paper2-reproduction.
+        b1_output = {
+            "context": "paper2-reproduction",
+            "framework_version": "none",
+            "rung": rung_id,
+            "stratum": stratum,
+            "items": [{"id": "x", "model_output": "alpha", "expected": "alpha"}],
+            "model_attestation": {"snapshot_hash": "sha256:abee745b..."},
+        }
+        path = out_dir / f"LANE1A-{rung_id}-{stratum}-1234.json"
+        path.write_text(json.dumps(b1_output, sort_keys=True, indent=2), encoding="utf-8")
+        return path
+
+    def test_b1_output_preserved_byte_for_byte(self):
+        """Remediation requirement 5: original B1 output is preserved."""
+        import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            b1_path = self._stage_fake_b1_output(tmp, "L01", "answerable")
+            original_bytes = b1_path.read_bytes()
+            original_sha = wrapper._sha256_file(b1_path)
+
+            sidecar = wrapper.write_sidecar(
+                b1_output_path=b1_path,
+                b1_output_sha256=original_sha,
+                rung_id="L01",
+                stratum="answerable",
+                attempt_id=1,
+            )
+
+            # B1 output must be byte-identical after sidecar write.
+            self.assertEqual(b1_path.read_bytes(), original_bytes)
+            self.assertEqual(wrapper._sha256_file(b1_path), original_sha)
+            # Sidecar exists alongside B1 output.
+            self.assertTrue(sidecar.exists())
+            self.assertNotEqual(sidecar, b1_path)
+
+    def test_lane1a_metadata_only_in_sidecar(self):
+        """Remediation requirement 6: Lane 1a metadata never injected into
+        B1 output."""
+        import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            b1_path = self._stage_fake_b1_output(tmp, "L02", "answerable_mirror")
+
+            sidecar_path = wrapper.write_sidecar(
+                b1_output_path=b1_path,
+                b1_output_sha256=wrapper._sha256_file(b1_path),
+                rung_id="L02",
+                stratum="answerable_mirror",
+                attempt_id=1,
+            )
+
+            # B1 output JSON must NOT contain any Lane 1a metadata.
+            b1_payload = json.loads(b1_path.read_text(encoding="utf-8"))
+            self.assertEqual(b1_payload["context"], "paper2-reproduction",
+                             "B1 output context must remain runner-attested")
+            self.assertNotIn("artifact_class", b1_payload)
+            self.assertNotIn("certification_relevance", b1_payload)
+            self.assertNotIn("lane_1a_context", b1_payload)
+            self.assertNotIn("original_context_from_b1v2", b1_payload)
+
+            # Sidecar carries the Lane 1a metadata.
+            sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
+            self.assertEqual(sidecar["wrapper_attestation"]["artifact_class"],
+                             "lane-1a-reconnaissance")
+            self.assertEqual(sidecar["wrapper_attestation"]["lane_1a_context"],
+                             "lane-1a-reconnaissance")
+            self.assertTrue(
+                sidecar["wrapper_attestation"]
+                ["context_is_wrapper_asserted_not_runner_attested"]
+            )
+            self.assertGreater(
+                len(sidecar["wrapper_attestation"]["context_functional_statement"]),
+                200,
+            )
+
+    def test_sidecar_validates_against_schema(self):
+        try:
+            import jsonschema
+        except ImportError:
+            self.skipTest("jsonschema not installed")
+        import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
+        schema = json.loads(
+            (SCRIPT_DIR / "schema" / "lane1a_sidecar.schema.json").read_text()
+        )
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            b1_path = self._stage_fake_b1_output(tmp, "L03", "null")
+            sidecar_path = wrapper.write_sidecar(
+                b1_output_path=b1_path,
+                b1_output_sha256=wrapper._sha256_file(b1_path),
+                rung_id="L03",
+                stratum="null",
+                attempt_id=2,
+            )
+            sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
+            jsonschema.validate(sidecar, schema)
+
+
 if __name__ == "__main__":
     unittest.main()
