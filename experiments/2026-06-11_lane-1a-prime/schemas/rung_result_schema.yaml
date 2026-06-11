@@ -1,0 +1,163 @@
+# Lane 1a' per-rung result schema (Phase 1)
+#
+# SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION
+# D2 IMPLEMENTATION ARTIFACT
+# NO MODEL INVOKED -- NO SWEEP_ID CREATED -- NO SWEEP EXECUTION AUTHORIZED
+#
+# Per INH-2 joint disposition (three-way outcome) and INH-1
+# (per-stratum N_effective). Implements:
+#   - Three-way outcome enum (NO passes_X value; NO fails token).
+#   - Six descriptive elimination labels plus
+#     requires_further_investigation.
+#   - boundary_proximity_flags as per-criterion diagnostic field,
+#     STRUCTURALLY DISJOINT from outcome determination and K
+#     computation.
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://lane-1a-prime/rung_result.schema.yaml"
+title: "Lane 1a' per-rung result"
+
+type: object
+additionalProperties: false
+required:
+  - rung_id
+  - outcome
+  - attached_labels
+  - n_effective
+  - k_contribution
+  - boundary_proximity_flags
+  - audit
+
+properties:
+
+  rung_id:
+    type: string
+    pattern: "^L0[1-8]$"
+
+  # INH-2 three-way outcome. NO passes_X value. NO fails token in
+  # any value. Joint disposition approved at commit 019a964.
+  outcome:
+    type: string
+    enum:
+      - "inconclusive_not_actionable"
+      - "eliminated"
+      - "not_ruled_out"
+
+  # Attached labels per outcome:
+  #   inconclusive_not_actionable -> []
+  #   eliminated                  -> non-empty subset of the six
+  #                                  descriptive elimination labels
+  #   not_ruled_out               -> ["requires_further_investigation"]
+  #                                  (exactly this singleton)
+  attached_labels:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      enum:
+        # Inherited v1 label for not-ruled-out rungs:
+        - "requires_further_investigation"
+        # Six descriptive elimination labels (no `fails` token):
+        - "accuracy_indistinguishable_from_token_prior"
+        - "accuracy_indistinguishable_from_declared_policy_envelope"
+        - "insufficient_measurement_headroom"
+        - "strict_content_gap_instability"
+        - "null_abstention_floor_unmet"
+        - "answerable_abstention_ceiling_exceeded"
+
+  # INH-1 per-stratum N_effective. Cross-stratum aggregation
+  # forbidden for accuracy and abstention metrics (governance
+  # sentence locked at joint disposition).
+  n_effective:
+    type: object
+    additionalProperties: false
+    required:
+      - answerable
+      - null_stratum
+    properties:
+      answerable:
+        type: integer
+        minimum: 0
+        description: >
+          N_eff_answerable = N_declared_answerable - void_answerable
+          (NS materials v0.2 §3 refinement).
+      null_stratum:
+        type: integer
+        minimum: 0
+        description: >
+          N_eff_null = N_declared_null - void_null. Property name
+          is null_stratum (not "null") to avoid YAML/JSON keyword
+          collision.
+      pooled:
+        type: integer
+        minimum: 0
+        description: >
+          N_eff_pooled = (N_declared_answerable + N_declared_null)
+          - void_total. Only used for the three permitted pooled
+          diagnostics: distinct_outputs, copy_completion agreement,
+          void_accounting.
+
+  # K contribution: 1 iff outcome == not_ruled_out; else 0.
+  # Hard-Boolean by design (equality predicate, not subset).
+  k_contribution:
+    type: integer
+    enum:
+      - 0
+      - 1
+
+  # boundary_proximity_flags: per-criterion diagnostic field.
+  # Diagnostic-only and non-eliminating. Excluded from outcome
+  # determination, from K computation, and from all fixed language.
+  # Reported in diagnostics / sidecar context only.
+  # Joint disposition approved at commit 019a964.
+  boundary_proximity_flags:
+    type: object
+    description: >
+      Per-criterion diagnostic flags. Keys are criterion IDs (e.g.,
+      'null_abstention_floor', 'answerable_abstention_ceiling').
+      Values are booleans indicating whether the measurement falls
+      within the criterion's pre-declared proximity zone. NEVER
+      referenced by elimination labels, outcomes, or fixed language.
+    additionalProperties:
+      type: boolean
+
+  # Optional per-criterion measurements bag. Diagnostic-only;
+  # consumers must not use these to override the outcome field.
+  measurements:
+    type: object
+    description: >
+      Per-criterion point estimates and CI intervals. Values are
+      objects with point_estimate, ci_lower, ci_upper, comparison
+      (per CriterionComparison enum). Diagnostic; the outcome field
+      is the authoritative classification.
+    additionalProperties:
+      type: object
+      additionalProperties: false
+      properties:
+        point_estimate:
+          type: number
+        ci_lower:
+          type: number
+        ci_upper:
+          type: number
+        comparison:
+          type: string
+          enum:
+            - "point_estimate"
+            - "ci_lower_bound"
+            - "ci_upper_bound"
+            - "difference_interval"
+
+  audit:
+    type: object
+    additionalProperties: false
+    required:
+      - evaluated_at
+      - analyzer_script_hash
+    properties:
+      evaluated_at:
+        type: string
+        format: "date-time"
+      analyzer_script_hash:
+        type: string
+        pattern: "^[a-f0-9]{64}$"

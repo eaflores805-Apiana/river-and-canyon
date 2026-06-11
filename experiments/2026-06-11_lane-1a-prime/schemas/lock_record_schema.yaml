@@ -1,0 +1,328 @@
+# Lane 1a' LOCK-RECORD schema (Phase 1)
+#
+# SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION
+# D2 IMPLEMENTATION ARTIFACT
+# NO MODEL INVOKED -- NO SWEEP_ID CREATED -- NO SWEEP EXECUTION AUTHORIZED
+# NO SEALED STATE PERMITTED UNDER D2 PACKAGE ASSEMBLY
+#
+# Per LOCK-RECORD v0.2 §2 + §2.1 (governance/2026-06-11_lane-1a-prime/
+# LOCK-RECORD-DRAFT-STRUCTURE-v0.2.md sha256 6532806f...).
+#
+# This schema validates the structure of a LOCK-RECORD instance.
+# Instances of this schema may only be created in PENDING state under
+# D2 package assembly. SEALED state requires D3 / D4 preconditions
+# satisfied (see lock_packet.py at Phase 4).
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://lane-1a-prime/lock_record.schema.yaml"
+title: "Lane 1a' LOCK-RECORD"
+
+type: object
+additionalProperties: false
+required:
+  - schema_version
+  - state
+  - identity
+  - bound_hashes
+  - bound_versions
+  - token_prior_authorization
+  - c2_considered_memos
+  - g1_open_check
+  - r6_inheritance_screen
+  - audit
+
+definitions:
+
+  sha256_hex:
+    type: string
+    pattern: "^[a-f0-9]{64}$"
+
+  sha256_or_null:
+    type:
+      - "string"
+      - "null"
+    pattern: "^[a-f0-9]{64}$"
+
+  iso8601_or_null:
+    type:
+      - "string"
+      - "null"
+
+  string_or_null:
+    type:
+      - "string"
+      - "null"
+
+properties:
+
+  schema_version:
+    type: string
+    const: "v0.2"
+
+  state:
+    type: string
+    enum:
+      - "PENDING"
+      - "SEALED"
+      - "SUPERSEDED"
+
+  identity:
+    type: object
+    additionalProperties: false
+    required:
+      - lane
+      - sweep_id
+    properties:
+      lock_id:
+        $ref: "#/definitions/string_or_null"
+      lane:
+        type: string
+        const: "lane-1a-prime"
+      sweep_id:
+        # PER D2 BOUNDARY: sweep_id remains null throughout D2.
+        # Only becomes non-null at D4 by-name authorization.
+        $ref: "#/definitions/string_or_null"
+      created_at:
+        $ref: "#/definitions/iso8601_or_null"
+      sealed_at:
+        $ref: "#/definitions/iso8601_or_null"
+      superseded_at:
+        $ref: "#/definitions/iso8601_or_null"
+      superseded_by_lock_id:
+        $ref: "#/definitions/string_or_null"
+
+  bound_hashes:
+    type: object
+    additionalProperties: false
+    properties:
+      design_packet_hash:
+        $ref: "#/definitions/sha256_or_null"
+      t1_plan_hash:
+        $ref: "#/definitions/sha256_or_null"
+      t2_plan_hash:
+        $ref: "#/definitions/sha256_or_null"
+      t3_plan_hash:
+        $ref: "#/definitions/sha256_or_null"
+      t4_plan_hash:
+        $ref: "#/definitions/sha256_or_null"
+      execution_packet_proposal_hash:
+        $ref: "#/definitions/sha256_or_null"
+      manifest_schema_hash:
+        $ref: "#/definitions/sha256_or_null"
+      manifest_recipe_hash:
+        $ref: "#/definitions/sha256_or_null"
+      runner_source_hash:
+        $ref: "#/definitions/sha256_or_null"
+      runner_wrapper_source_hash:
+        $ref: "#/definitions/sha256_or_null"
+      runner_config_hash:
+        $ref: "#/definitions/sha256_or_null"
+      analysis_script_hash:
+        $ref: "#/definitions/sha256_or_null"
+      instrument_validation_report_hash:
+        $ref: "#/definitions/sha256_or_null"
+      non_authorization_section_hash:
+        $ref: "#/definitions/sha256_or_null"
+      # Per joint disposition approval at commit 019a964:
+      control_prompt_shell_hash:
+        $ref: "#/definitions/sha256_or_null"
+
+  # AL-Q5-opt per-table sub-block. Populated at D3 (Instrument
+  # Validation Report seal), not at packet seal. Must remain null
+  # under D2.
+  validation_artifact_hashes:
+    type: object
+    additionalProperties: false
+    properties:
+      t1_sealed_hash:
+        $ref: "#/definitions/sha256_or_null"
+      t2_sealed_hash:
+        $ref: "#/definitions/sha256_or_null"
+      t3_sealed_hash:
+        $ref: "#/definitions/sha256_or_null"
+      t4_sealed_hash:
+        $ref: "#/definitions/sha256_or_null"
+      ideal_witness_record_hash:
+        $ref: "#/definitions/sha256_or_null"
+      pilot_iteration_log_hash:
+        $ref: "#/definitions/sha256_or_null"
+      oracle_case_verdict_table_hash:
+        $ref: "#/definitions/sha256_or_null"
+      a6_reverification_block_hash:
+        $ref: "#/definitions/sha256_or_null"
+      drift_tolerance_declaration_hash:
+        $ref: "#/definitions/sha256_or_null"
+
+  bound_versions:
+    type: object
+    additionalProperties: false
+    required:
+      - addendum_path
+      - addendum_sha256
+      - addendum_adoption_commit
+      - paper3_tag
+    properties:
+      addendum_path:
+        type: string
+        const: "governance/standing/PRE-LOCK-INSTRUMENT-VALIDATION-ADDENDUM.md"
+      addendum_sha256:
+        type: string
+        const: "124f6046d57d365dd47596877fd1eb09088f6990ec3c9a52ac150d0c8ca103b8"
+      addendum_adoption_commit:
+        type: string
+        const: "e76e7f8"
+      standing_review_discipline_sha256:
+        $ref: "#/definitions/sha256_or_null"
+      standing_non_authorizations_sha256:
+        $ref: "#/definitions/sha256_or_null"
+      paper3_tag:
+        type: string
+        const: "paper3-certification-protocol-v1.1"
+      mlx_lm_version:
+        $ref: "#/definitions/string_or_null"
+      production_python:
+        $ref: "#/definitions/string_or_null"
+      model_id:
+        $ref: "#/definitions/string_or_null"
+      model_snapshot:
+        $ref: "#/definitions/string_or_null"
+
+  # D4 by-name token-prior resolution slot.
+  # Per New Senior D1 ack item 7 + LOCK-RECORD v0.2 §5.
+  token_prior_authorization:
+    type: object
+    additionalProperties: false
+    required:
+      - state
+    properties:
+      state:
+        type: string
+        enum:
+          - "NOT_AUTHORIZED"
+          - "AUTHORIZED"
+          - "DECLINED"
+      manager_memo_path:
+        $ref: "#/definitions/string_or_null"
+      manager_memo_sha256:
+        $ref: "#/definitions/sha256_or_null"
+      by_name_decision_text:
+        $ref: "#/definitions/string_or_null"
+      decision_date:
+        $ref: "#/definitions/iso8601_or_null"
+      declined_rationale:
+        $ref: "#/definitions/string_or_null"
+
+  # Standing C2 rule: every PASS record closing a gate enumerates the
+  # condition memos it considered, by hash.
+  c2_considered_memos:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - memo_id
+        - memo_path
+        - memo_sha256
+        - review_state
+        - considered_for_gate
+      properties:
+        memo_id:
+          type: string
+          minLength: 1
+        memo_path:
+          type: string
+          minLength: 1
+        memo_sha256:
+          $ref: "#/definitions/sha256_hex"
+        review_state:
+          type: string
+          enum:
+            - "COMMITTED"
+            - "HASH-CONFIRMED"
+            - "SUPERSEDED"
+            - "OUT-OF-SCOPE"
+        considered_for_gate:
+          type: string
+          enum:
+            - "D1"
+            - "D2"
+            - "D3"
+            - "D4"
+            - "D5"
+
+  # Standing G1-open production rule. g1_open_count must be 0 for
+  # any state transition (PENDING -> SEALED, etc.).
+  g1_open_check:
+    type: object
+    additionalProperties: false
+    required:
+      - g1_open_count
+      - pending_memo_ids
+    properties:
+      timestamp:
+        $ref: "#/definitions/iso8601_or_null"
+      checker:
+        $ref: "#/definitions/string_or_null"
+      g1_open_count:
+        type: integer
+        minimum: 0
+      pending_memo_ids:
+        type: array
+        items:
+          type: string
+      confirmation:
+        $ref: "#/definitions/string_or_null"
+
+  # R6 inheritance screen per adopted addendum §8.
+  r6_inheritance_screen:
+    type: object
+    additionalProperties: false
+    required:
+      - screened_prior_lane_requirements
+    properties:
+      screened_prior_lane_requirements:
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          required:
+            - requirement
+            - prior_lane
+            - disposition
+            - rationale
+          properties:
+            requirement:
+              type: string
+              minLength: 1
+            prior_lane:
+              type: string
+              minLength: 1
+            disposition:
+              type: string
+              enum:
+                - "adopted"
+                - "adapted"
+                - "declined"
+            rationale:
+              type: string
+              minLength: 1
+
+  audit:
+    type: object
+    additionalProperties: false
+    required:
+      - created_by
+    properties:
+      created_at:
+        $ref: "#/definitions/iso8601_or_null"
+      created_by:
+        type: string
+        minLength: 1
+      sealed_at:
+        $ref: "#/definitions/iso8601_or_null"
+      sealed_by:
+        $ref: "#/definitions/string_or_null"
+      audit_log_hash_at_seal:
+        $ref: "#/definitions/sha256_or_null"
+      last_modified_at:
+        $ref: "#/definitions/iso8601_or_null"

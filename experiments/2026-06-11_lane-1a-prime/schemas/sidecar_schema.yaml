@@ -1,0 +1,198 @@
+# Lane 1a' sidecar schemas (Phase 1)
+#
+# SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION
+# D2 IMPLEMENTATION ARTIFACT
+# NO MODEL INVOKED -- NO SWEEP_ID CREATED -- NO SWEEP EXECUTION AUTHORIZED
+#
+# Per CS-EP v0.2 §5 (runner-attested sidecar) and §5.1 (diagnostic
+# sidecar; AL-Q4 closure). Layer-2 schema enforcement of DE-2
+# (AL-Q2-schema) via closed-enum on elimination_label_basis.basis_policies:
+# scrambled_binding_retrieval is STRUCTURALLY UNREPRESENTABLE in any
+# elimination basis; copy_completion is OMITTED (outside the union
+# envelope per Bundle v0.3 §I.4).
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://lane-1a-prime/sidecar.schema.yaml"
+title: "Lane 1a' sidecar records"
+
+definitions:
+
+  iso8601_datetime:
+    type: string
+    format: "date-time"
+
+  sha256_hex:
+    type: string
+    pattern: "^[a-f0-9]{64}$"
+
+  # Closed enum of artifact labels per addendum E15.
+  artifact_label:
+    type: string
+    enum:
+      - "SYNTHETIC — NON-BINDING — NOT FOR THRESHOLD DERIVATION"
+      - "RECONNAISSANCE — NON-BINDING — NOT FOR THRESHOLD DERIVATION"
+      - "DIAGNOSTIC — NON-BINDING — NOT FOR THRESHOLD DERIVATION"
+
+  # AL-Q2-schema Layer-2 closure.
+  # The basis_policies enum is closed over the four envelope-eligible
+  # policies. scrambled_binding_retrieval and copy_completion are
+  # STRUCTURALLY UNREPRESENTABLE here.
+  elimination_label_basis:
+    type: object
+    additionalProperties: false
+    required:
+      - basis_policies
+    properties:
+      basis_policies:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+          enum:
+            - "pure_last_position"
+            - "salient_endpoint"
+            - "recency_excluding_target"
+            - "prefix_neighbor_confusion"
+            # NOTE: copy_completion OMITTED (outside union envelope
+            #       per Bundle v0.3 §I.4; not an elimination basis).
+            # NOTE: NO control names. scrambled_binding_retrieval is
+            #       STRUCTURALLY UNREPRESENTABLE in this enum.
+
+  runner_attested_sidecar:
+    type: object
+    additionalProperties: false
+    required:
+      - sidecar_type
+      - record_id
+      - runner_output_hash
+      - sweep_id
+      - rung_id
+      - stratum
+      - artifact_label
+      - audit
+    properties:
+      sidecar_type:
+        type: string
+        const: "runner_attested"
+      record_id:
+        type: string
+        minLength: 1
+      runner_output_hash:
+        $ref: "#/definitions/sha256_hex"
+      sweep_id:
+        # Per D2 boundary: sweep_id is null throughout D2 package
+        # preparation and implementation. Only becomes non-null at
+        # D4 by-name authorization.
+        type:
+          - "string"
+          - "null"
+      rung_id:
+        type: string
+        pattern: "^L0[1-8]$"
+      stratum:
+        type: string
+        enum:
+          - "answerable"
+          - "null"
+      policies_applied:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+          enum:
+            - "pure_last_position"
+            - "salient_endpoint"
+            - "recency_excluding_target"
+            - "prefix_neighbor_confusion"
+            - "copy_completion"
+      controls_applied:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+          enum:
+            - "unconditioned_token_prior"
+            - "scrambled_binding_retrieval"
+      elimination_label_basis:
+        $ref: "#/definitions/elimination_label_basis"
+      artifact_label:
+        $ref: "#/definitions/artifact_label"
+      audit:
+        type: object
+        additionalProperties: false
+        required:
+          - written_at
+          - written_by_wrapper_hash
+        properties:
+          written_at:
+            $ref: "#/definitions/iso8601_datetime"
+          written_by_wrapper_hash:
+            $ref: "#/definitions/sha256_hex"
+
+  # AL-Q4 diagnostic sidecar — for copy_completion agreement and any
+  # future non-eliminating per-item diagnostic. Disjoint from the
+  # runner-attested sidecar by sidecar_type; the union envelope
+  # computation function cannot consume this type.
+  diagnostic_sidecar:
+    type: object
+    additionalProperties: false
+    required:
+      - sidecar_type
+      - record_id
+      - diagnostic_class
+      - artifact_class
+      - artifact_label
+      - per_item
+      - audit
+    properties:
+      sidecar_type:
+        type: string
+        const: "diagnostic"
+      record_id:
+        type: string
+        minLength: 1
+      diagnostic_class:
+        type: string
+        enum:
+          - "copy_completion_agreement"
+      artifact_class:
+        type: string
+        const: "lane-1a-prime-diagnostic"
+      artifact_label:
+        type: string
+        const: "DIAGNOSTIC — NON-BINDING — NOT FOR THRESHOLD DERIVATION"
+      per_item:
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          required:
+            - item_id
+            - diagnostic_value
+            - runner_output_ref
+          properties:
+            item_id:
+              type: string
+              minLength: 1
+            diagnostic_value:
+              type: number
+            runner_output_ref:
+              type: string
+              minLength: 1
+      audit:
+        type: object
+        additionalProperties: false
+        required:
+          - written_at
+          - written_by_wrapper_hash
+        properties:
+          written_at:
+            $ref: "#/definitions/iso8601_datetime"
+          written_by_wrapper_hash:
+            $ref: "#/definitions/sha256_hex"
+
+# Top-level: a sidecar is exactly one of the two types, discriminated
+# by sidecar_type. JSON Schema oneOf with closed sidecar_type values.
+oneOf:
+  - $ref: "#/definitions/runner_attested_sidecar"
+  - $ref: "#/definitions/diagnostic_sidecar"

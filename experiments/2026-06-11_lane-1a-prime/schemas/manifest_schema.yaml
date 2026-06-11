@@ -1,0 +1,164 @@
+# Lane 1a' manifest record schema (Phase 1)
+#
+# SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION
+# D2 IMPLEMENTATION ARTIFACT
+# NO MODEL INVOKED -- NO SWEEP_ID CREATED -- NO SWEEP EXECUTION AUTHORIZED
+#
+# Per CS-EP v0.2 §4. Real-pair-block start_idx/end_idx (IS-2 closure).
+# Token-id-sequence fields (IS-9). Closed stratum enum (INH-1).
+
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://lane-1a-prime/manifest_record.schema.yaml"
+title: "Lane 1a' manifest record"
+description: >
+  Per-record schema for a Lane 1a' pilot or final manifest record.
+  All fields are deterministic and synthetic; no model output appears
+  here. The schema applies to both pilot and final manifest records.
+
+type: object
+additionalProperties: false
+required:
+  - rung_id
+  - context_block
+  - queried_key
+  - gold
+  - stratum
+  - metadata
+properties:
+
+  rung_id:
+    type: string
+    pattern: "^L0[1-8]$"
+    description: "Neutral 8-rung ladder identifier L01..L08."
+
+  context_block:
+    type: object
+    additionalProperties: false
+    required:
+      - padding_prefix
+      - real_pair_block
+    properties:
+      padding_prefix:
+        type: array
+        items:
+          type: integer
+          minimum: 0
+        description: >
+          Padding token IDs prepended to the visible context per
+          Bundle v0.3 §I.3 ("padding prepended").
+      real_pair_block:
+        type: object
+        additionalProperties: false
+        required:
+          - start_idx
+          - end_idx
+          - pairs
+        properties:
+          start_idx:
+            type: integer
+            minimum: 0
+            description: >
+              Start index of the real-pair block in the visible
+              context. IS-2 closure: explicit boundary so policies
+              that operate on the recency-relevant tail
+              (recency_excluding_target, prefix_neighbor_confusion)
+              read indices directly rather than infer from heuristics.
+          end_idx:
+            type: integer
+            minimum: 0
+            description: "End index (exclusive) of the real-pair block."
+          pairs:
+            type: array
+            minItems: 0
+            items:
+              type: object
+              additionalProperties: false
+              required:
+                - key_token_ids
+                - value_token_ids
+              properties:
+                key_token_ids:
+                  type: array
+                  minItems: 1
+                  items:
+                    type: integer
+                    minimum: 0
+                  description: >
+                    Tokenizer-canonical token-id sequence per IS-9 /
+                    DE-3 equality predicate.
+                value_token_ids:
+                  type: array
+                  minItems: 1
+                  items:
+                    type: integer
+                    minimum: 0
+
+  queried_key:
+    type: object
+    additionalProperties: false
+    required:
+      - key_token_ids
+    properties:
+      key_token_ids:
+        type: array
+        minItems: 1
+        items:
+          type: integer
+          minimum: 0
+        description: >
+          Tokenizer-canonical form the equality predicate operates on.
+          Per IS-9: token-id-sequence equality after tokenizer
+          canonicalization. CS reserves the right to propose a
+          stricter rule at packet stage if edge cases surface.
+
+  gold:
+    type: object
+    additionalProperties: false
+    required:
+      - value_token_ids
+    properties:
+      value_token_ids:
+        type: array
+        items:
+          type: integer
+          minimum: 0
+        description: >
+          Gold value token-id sequence. Empty array is permitted for
+          NULL-stratum records (no answer expected).
+
+  stratum:
+    type: string
+    enum:
+      - "answerable"
+      - "null"
+    description: >
+      INH-1 stratum tag. Per-stratum N_effective semantics:
+      answerable -> 80 - void_answerable; null -> 16 - void_null.
+      Cross-stratum aggregation is forbidden for accuracy and
+      abstention metrics.
+
+  metadata:
+    type: object
+    additionalProperties: false
+    required:
+      - construction_recipe_hash
+      - pilot_or_final
+    properties:
+      construction_recipe_hash:
+        type: string
+        pattern: "^[a-f0-9]{64}$"
+        description: >
+          sha256 of the locked construction recipe used to generate
+          this record. Hashed into LOCK-RECORD via
+          manifest_recipe_hash at packet seal.
+      pilot_or_final:
+        type: string
+        enum:
+          - "pilot"
+          - "final"
+      iteration_index:
+        type: integer
+        minimum: 0
+        description: >
+          Pilot iteration index per E11. Required if pilot_or_final
+          == "pilot". For "final" records this is absent.
