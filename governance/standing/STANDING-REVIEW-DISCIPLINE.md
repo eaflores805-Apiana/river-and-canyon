@@ -222,10 +222,54 @@ Together they cover memo-channel, source-code-channel, and runtime-environment-c
 
 ---
 
+## Additional rule — R6 requirement-inheritance check (added 2026-06-10, Manager / Pre-Lock Instrument Validation Addendum v0.4.1 adoption)
+
+*Manager / Elias 2026-06-10 (adoption of Pre-Lock Instrument Validation Addendum v0.4.1; R6 installed once here per the "whichever adoption commits first" coordination rule). Permanent review-discipline rule for every new packet review going forward.*
+
+> **R6 — Requirement-inheritance check: every new packet review screens prior-lane requirements for portability; an applicable requirement is adopted, adapted with rationale, or declined with rationale — never silently un-inherited.**
+
+A requirement is *applicable* to a new packet if it concerns instrumentation, controls, batteries, classification rules, criterion well-formedness, manifest discipline, or any other structural property the new packet shares with the prior lane.
+
+For each applicable requirement, the packet review records one of:
+
+```text
+adopted        — the requirement is carried forward verbatim or with non-substantive form changes
+adapted with   — the requirement is carried forward with substantive form changes; rationale recorded
+  rationale
+declined with  — the requirement is judged not to apply to this packet; rationale recorded;
+  rationale      decline cannot preserve an ill-formed criterion in an active eliminative path
+```
+
+No applicable requirement may be silently un-inherited.
+
+**Why this rule exists.** Lane 1a failed partly because a battery-sensitivity requirement existed in Paper 3 v1.1 §D2 ("Battery sensitivity is demonstrated against the pre-registered deterministic shortcut implementations — dummy-policy outputs computed offline — not inferred from the candidate's failure to exhibit the shortcut.") and was not inherited into the reconnaissance lane. R6 prevents the same un-inheritance pattern from recurring across future packets.
+
+**Canonical incident.** The Lane 1a fail-closed instrument-discrimination finding (close-out v1.x); the R6 inheritance trace is documented in `governance/standing/PRE-LOCK-INSTRUMENT-VALIDATION-ADDENDUM.md` §8.
+
+**Install coordination.** R6 is the same rule referenced in the Lane 1a close-out's §10. The close-out (Senior owns the v1.2 draft) cross-references this install rather than re-installing R6 separately. Both citations resolve to this section.
+
+**Enforcement triple.** Vehicle: inheritance-screen section in every future packet review. Owner: packet reviewer. Audit artifact: the inheritance-screen section itself (one row per applicable prior-lane requirement with disposition + rationale). Pass: every applicable prior-lane requirement carries one of {adopted, adapted, declined} with rationale. Review consequence: review is incomplete without the section; gate cannot close.
+
+---
+
+## Path conventions (added 2026-06-10, Pre-Lock Instrument Validation Addendum v0.4.1 adoption)
+
+*CS Engineer / Elias 2026-06-10 (adoption of Pre-Lock Instrument Validation Addendum v0.4.1; closes the addendum's §9 adoption-condition E20 by codifying the operating convention).*
+
+> **Path conventions for governance artifacts.**
+>
+> Lane-specific governance lives under `governance/<date>_<lane>/`. Cross-lane standing rules (rules binding more than one lane) live under `governance/standing/`. Standing rules are uniquely named at that path; addenda to standing rules live alongside the rule they extend.
+
+This subsection codifies the convention that has been operating since the first standing rules were filed. The Pre-Lock Instrument Validation Addendum v0.4.1 §9 flagged that the convention had never been formally written down; this subsection closes that gap.
+
+The convention applies to all future governance filings.
+
+---
+
 ## Non-authorizations (carried forward)
 
 This standing rule does not authorize any execution lane. See `governance/standing/STANDING-NON-AUTHORIZATIONS.md` for the full canonical list.
 
 ---
 
-— Team Lead authored 2026-06-10; CS filed 2026-06-10; Manager production-rule addendum 2026-06-10; Manager sibling-artifact cross-reference rule addendum 2026-06-10; Manager production-path subprocess smoke test rule addendum 2026-06-10
+— Team Lead authored 2026-06-10; CS filed 2026-06-10; Manager production-rule addendum 2026-06-10; Manager sibling-artifact cross-reference rule addendum 2026-06-10; Manager production-path subprocess smoke test rule addendum 2026-06-10; Manager R6 requirement-inheritance check addendum 2026-06-10 (Pre-Lock Instrument Validation Addendum v0.4.1 adoption); CS path-conventions subsection 2026-06-10 (Pre-Lock Instrument Validation Addendum v0.4.1 adoption, PA-1)
