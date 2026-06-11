@@ -108,7 +108,10 @@
       "prefix_neighbor_confusion": 0.0
     },
     "envelope_drift": 0.09999999999999998,
-    "drift_within_tolerance": true,
-    "flagged_drifts": []
+    "drift_within_tolerance": false,
+    "flagged_drifts": [
+      "pure_last_position",
+      "envelope"
+    ]
   }
 }

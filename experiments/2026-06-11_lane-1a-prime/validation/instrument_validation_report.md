@@ -36,9 +36,9 @@ NO MODEL INVOKED -- NO SWEEP_ID CREATED -- NO SWEEP EXECUTION
 
 ## A6 final-manifest re-verification (IS-7)
 
-**Drift within tolerance:** True
+**Drift within tolerance:** False
 **Envelope drift:** 0.1000
-**Flagged drifts:** []
+**Flagged drifts:** ['pure_last_position', 'envelope']
 
 Per-policy drift:
 

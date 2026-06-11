@@ -105,15 +105,21 @@ def main():
     pilot_envelope = compute_union_envelope(pilot_records, pilot_outputs)
     final_envelope = compute_union_envelope(final_records, final_outputs)
 
-    # 4. A6 re-verification
+    # 4. A6 re-verification under the joint-disposition tolerance
+    # (per IS-7 / joint disposition: per_policy=0.05; envelope=0.05).
+    # On synthetic seeds with different draws (pilot seed=0; final
+    # seed=1), drift exceeds tolerance — this is the CORRECT A6
+    # behavior under the locked tolerance. Production use case has
+    # pilot and final drawn from the same locked construction recipe
+    # (same seed family), where drift is naturally near zero.
     a6 = a6_final_manifest_reverification(
         pilot_battery_scores=pilot_battery_scores,
         pilot_envelope=pilot_envelope,
         final_battery_scores=final_battery_scores,
         final_envelope=final_envelope,
         declared_drift_tolerance=DriftToleranceDeclaration(
-            per_policy=0.30,  # synthetic data; generous tolerance for Phase 5 demo
-            envelope=0.30,
+            per_policy=0.05,
+            envelope=0.05,
         ),
     )
 
