@@ -210,38 +210,50 @@ def construct_pilot_manifests(recipe: ManifestRecipe) -> list[dict]:
         answerable_records.append((pairs, queried_key, gold_value))
 
     # Stratum 3: queried_key in prefix neighborhood
-    # The queried_key shares a prefix with another pair (the "neighbor").
-    # The recency_excluding_target shortcut may or may not hit gold;
-    # prefix_neighbor_confusion shortcut targets the neighbor's value.
+    # The queried_key shares a prefix with a non-target pair (the "neighbor").
+    # The neighbor's value is deliberately set equal to gold so the
+    # prefix_neighbor_confusion shortcut hits by construction (12/80 = 0.15).
+    # Placement: neighbor at a NON-edge slot (not position 0, not position
+    # -1) to avoid incidental hits by pure_last_position or
+    # salient_endpoint. Last pair's value is forced ≠ gold so
+    # recency_excluding_target does not coincidentally hit.
     for _ in range(recipe.n_in_prefix_neighborhood):
-        # 2-token queried_key for prefix-shared behavior
         prefix_token = rng.randint(0, key_pool_size - 1)
         queried_key = (prefix_token, rng.randint(0, key_pool_size - 1))
         # One neighbor sharing the prefix token
         neighbor_key = (prefix_token, rng.randint(0, key_pool_size - 1))
+        while neighbor_key == queried_key:
+            neighbor_key = (prefix_token, rng.randint(0, key_pool_size - 1))
         # Distractors with different prefixes
-        distractor_keys = [neighbor_key]
-        while len(distractor_keys) < recipe.distractor_count:
+        other_distractors: list[tuple[int, ...]] = []
+        while len(other_distractors) < recipe.distractor_count - 1:
             k = (rng.randint(0, key_pool_size - 1), rng.randint(0, key_pool_size - 1))
             if (
                 k != queried_key
+                and k != neighbor_key
                 and k[0] != prefix_token
-                and k not in distractor_keys
+                and k not in other_distractors
             ):
-                distractor_keys.append(k)
-        # Place queried_key at the MIDDLE (index 2 if it's a 5-element list)
-        middle_idx = recipe.distractor_count // 2
-        all_keys = distractor_keys[:middle_idx] + [queried_key] + distractor_keys[middle_idx:]
+                other_distractors.append(k)
+        # Slot layout for 5 positions (4 distractors + queried):
+        #   pos 0: distractor (not neighbor, not queried)
+        #   pos 1: neighbor (carries gold value)
+        #   pos 2: queried (carries gold value by binding)
+        #   pos 3: distractor
+        #   pos 4: distractor (last; value forced ≠ gold)
+        # This avoids salient_endpoint (pos 0 != gold) and pure_last_position
+        # (pos -1 != gold) co-hits.
+        slot0, slot3, slot4 = other_distractors[0], other_distractors[1], other_distractors[2]
+        gold_token = rng.choice(VALUE_POOL)
+        non_gold_token = rng.choice([t for t in VALUE_POOL if t != gold_token])
         pairs = [
-            {"key_token_ids": list(k), "value_token_ids": [rng.choice(VALUE_POOL)]}
-            for k in all_keys
+            {"key_token_ids": list(slot0), "value_token_ids": [rng.choice([t for t in VALUE_POOL if t != gold_token])]},
+            {"key_token_ids": list(neighbor_key), "value_token_ids": [gold_token]},
+            {"key_token_ids": list(queried_key), "value_token_ids": [gold_token]},
+            {"key_token_ids": list(slot3), "value_token_ids": [rng.choice([t for t in VALUE_POOL if t != gold_token])]},
+            {"key_token_ids": list(slot4), "value_token_ids": [non_gold_token]},
         ]
-        # Find gold (queried_key's value)
-        gold_value = None
-        for p in pairs:
-            if tuple(p["key_token_ids"]) == queried_key:
-                gold_value = p["value_token_ids"]
-                break
+        gold_value = [gold_token]
         answerable_records.append((pairs, queried_key, gold_value))
 
     # Stratum 4: recency_adjacent (queried at middle; last non-target pair carries

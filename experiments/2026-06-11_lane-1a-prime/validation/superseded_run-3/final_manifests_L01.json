@@ -1,0 +1,6442 @@
+[
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              194
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              107
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              10
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              66
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              98
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        98
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        9
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              91
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              149
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              55
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              129
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              122
+            ],
+            "value_token_ids": [
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        122
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        3
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              64
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              136
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              180
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              154
+            ],
+            "value_token_ids": [
+              23
+            ]
+          },
+          {
+            "key_token_ids": [
+              158
+            ],
+            "value_token_ids": [
+              2
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        158
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        2
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              84
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              120
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              143
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              25
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              175
+            ],
+            "value_token_ids": [
+              20
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        175
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        20
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              141
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              122
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              113
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              133
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              52
+            ],
+            "value_token_ids": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        52
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        0
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              184
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              102
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              181
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              171
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              10
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        23
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        10
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              186
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              83
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              180
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              16
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              62
+            ],
+            "value_token_ids": [
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        62
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              139
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              114
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              20
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              36
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        36
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        9
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              74
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              180
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              31
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              140
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              141
+            ],
+            "value_token_ids": [
+              19
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        141
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        19
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              150
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              73
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              113
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              140
+            ],
+            "value_token_ids": [
+              18
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        140
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        18
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              74
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              47
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              48
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              8
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              61
+            ],
+            "value_token_ids": [
+              2
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        61
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        2
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              173
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              193
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              33
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              38
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              22
+            ],
+            "value_token_ids": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        22
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        21
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              100
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              180
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              134
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              70
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              133
+            ],
+            "value_token_ids": [
+              18
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        100
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              107
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              148
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              70
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              115
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              126
+            ],
+            "value_token_ids": [
+              11
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        107
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        21
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              21
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              83
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              156
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              29
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              124
+            ],
+            "value_token_ids": [
+              7
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        21
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        18
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              4
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              187
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              69
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              29
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              180
+            ],
+            "value_token_ids": [
+              10
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        4
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        7
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              109
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              15
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              25
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              37
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              178
+            ],
+            "value_token_ids": [
+              17
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        109
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        7
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              154
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              174
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              18
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              6
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              31
+            ],
+            "value_token_ids": [
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        154
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        20
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              100
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              94
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              29
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              9
+            ],
+            "value_token_ids": [
+              22
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        100
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        19
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              31
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              122
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              53
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              186
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              15
+            ],
+            "value_token_ids": [
+              19
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        31
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        21
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              25
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              66
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              17
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              56
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              18
+            ],
+            "value_token_ids": [
+              5
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        25
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        20
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              15
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              128
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              119
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              10
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              152
+            ],
+            "value_token_ids": [
+              8
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        15
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        3
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              91
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              187
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              120
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              145
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              43
+            ],
+            "value_token_ids": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        91
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        22
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              173
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              40
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              41
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              87
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              135
+            ],
+            "value_token_ids": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        173
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        8
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              44,
+              120
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              174,
+              104
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              44,
+              3
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              145,
+              130
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              79,
+              166
+            ],
+            "value_token_ids": [
+              4
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        44,
+        3
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        21
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              143,
+              3
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              117,
+              189
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              143,
+              176
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              20,
+              85
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              189,
+              11
+            ],
+            "value_token_ids": [
+              24
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        143,
+        176
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        4
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              123,
+              156
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              73,
+              172
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              123,
+              90
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              91,
+              151
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              162,
+              158
+            ],
+            "value_token_ids": [
+              23
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        123,
+        90
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        9
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              106,
+              20
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              0,
+              152
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              106,
+              166
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              49,
+              178
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              85,
+              40
+            ],
+            "value_token_ids": [
+              12
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        106,
+        166
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        20
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              181,
+              145
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              106,
+              8
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              181,
+              172
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              102,
+              179
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              145,
+              107
+            ],
+            "value_token_ids": [
+              5
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        181,
+        172
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        22
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              114,
+              66
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              179,
+              40
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              114,
+              16
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              124,
+              143
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              154,
+              193
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        114,
+        16
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        15
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              119,
+              106
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              48,
+              140
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              119,
+              12
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              162,
+              21
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              185,
+              33
+            ],
+            "value_token_ids": [
+              10
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        119,
+        12
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        21
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              0,
+              3
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              183,
+              193
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              0,
+              54
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              135,
+              156
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              25,
+              48
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        0,
+        54
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        20
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              71,
+              46
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              25,
+              121
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              71,
+              176
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              101,
+              160
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              20,
+              5
+            ],
+            "value_token_ids": [
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        71,
+        176
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              65,
+              167
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              133,
+              166
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              65,
+              34
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              165,
+              88
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              29,
+              39
+            ],
+            "value_token_ids": [
+              6
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        65,
+        34
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        1
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              174,
+              142
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              80,
+              93
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              174,
+              66
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              145,
+              10
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              191,
+              179
+            ],
+            "value_token_ids": [
+              20
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        174,
+        66
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        15
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              117,
+              111
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              95,
+              137
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              117,
+              163
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              45,
+              53
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              96,
+              150
+            ],
+            "value_token_ids": [
+              8
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        117,
+        163
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        4
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              86
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              94
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              85
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              183
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              10
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        85
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        10
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              69
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              41
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              10
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              38
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              149
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        10
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        9
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              75
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              29
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              33
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              122
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              187
+            ],
+            "value_token_ids": [
+              7
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        33
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        7
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              186
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              18
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              133
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              77
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              103
+            ],
+            "value_token_ids": [
+              10
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        133
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        10
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              143
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              123
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              25
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              121
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              86
+            ],
+            "value_token_ids": [
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        25
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              179
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              127
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              29
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              109
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              9
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        29
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        9
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              42
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              160
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              39
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              144
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              96
+            ],
+            "value_token_ids": [
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        39
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              50
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              191
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              21
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              56
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              15
+            ],
+            "value_token_ids": [
+              12
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        21
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        12
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              132
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              74
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              142
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              114
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              125
+            ],
+            "value_token_ids": [
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        142
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              108
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              21
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              55
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              94
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              56
+            ],
+            "value_token_ids": [
+              8
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        55
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        8
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              49
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              91
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              110
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              29
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              16
+            ],
+            "value_token_ids": [
+              22
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        110
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        22
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              173
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              51
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              192
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              30
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              127
+            ],
+            "value_token_ids": [
+              12
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        192
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        12
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              55
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              159
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              10
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              37
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              26
+            ],
+            "value_token_ids": [
+              18
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        10
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        6
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              26
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              152
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              38
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              124
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              37
+            ],
+            "value_token_ids": [
+              13
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        38
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        18
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              126
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              173
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              133
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              82
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              127
+            ],
+            "value_token_ids": [
+              18
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        133
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        15
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              56
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              2
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              156
+            ],
+            "value_token_ids": [
+              23
+            ]
+          },
+          {
+            "key_token_ids": [
+              87
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              180
+            ],
+            "value_token_ids": [
+              16
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        156
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        23
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              65
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              154
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              37
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              39
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              97
+            ],
+            "value_token_ids": [
+              15
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        37
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        18
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              21
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              132
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              16
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              10
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              57
+            ],
+            "value_token_ids": [
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        16
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        4
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              84
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              41
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              114
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              38
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              167
+            ],
+            "value_token_ids": [
+              17
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        114
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        14
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              8
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              146
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              128
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              173
+            ],
+            "value_token_ids": [
+              19
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        128
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              191
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              109
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              19
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              193
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              52
+            ],
+            "value_token_ids": [
+              16
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        19
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        9
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              155
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              150
+            ],
+            "value_token_ids": [
+              23
+            ]
+          },
+          {
+            "key_token_ids": [
+              99
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              59
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              5
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        99
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        21
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              145
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              65
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              129
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              85
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              16
+            ],
+            "value_token_ids": [
+              13
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        129
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        15
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              15
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              41
+            ],
+            "value_token_ids": [
+              23
+            ]
+          },
+          {
+            "key_token_ids": [
+              98
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              164
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              32
+            ],
+            "value_token_ids": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        98
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        7
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              123
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              106
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              9
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              36
+            ],
+            "value_token_ids": [
+              21
+            ]
+          },
+          {
+            "key_token_ids": [
+              125
+            ],
+            "value_token_ids": [
+              23
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        9
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        19
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              90
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              105
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              38
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              9
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              156
+            ],
+            "value_token_ids": [
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        38
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        14
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              199
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              38
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              120
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              5
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              8
+            ],
+            "value_token_ids": [
+              10
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        120
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        19
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              179
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              140
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              26
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              166
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              88
+            ],
+            "value_token_ids": [
+              25
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        26
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        6
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              28
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              15
+            ],
+            "value_token_ids": [
+              20
+            ]
+          },
+          {
+            "key_token_ids": [
+              125
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              156
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              179
+            ],
+            "value_token_ids": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        125
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        14
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              174
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              182
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              31
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              159
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              75
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        31
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        25
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              174
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              31
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              190
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              132
+            ],
+            "value_token_ids": [
+              14
+            ]
+          },
+          {
+            "key_token_ids": [
+              48
+            ],
+            "value_token_ids": [
+              12
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        190
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        1
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              48
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              116
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              193
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              91
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              161
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        193
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        2
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              133
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              170
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              6
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              145
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              146
+            ],
+            "value_token_ids": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        6
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        6
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              128
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              178
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              199
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              134
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              107
+            ],
+            "value_token_ids": [
+              13
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        199
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        16
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              108
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              21
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              144
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              26
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              106
+            ],
+            "value_token_ids": [
+              5
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        144
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        2
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              7
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              114
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              187
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              110
+            ],
+            "value_token_ids": [
+              10
+            ]
+          },
+          {
+            "key_token_ids": [
+              175
+            ],
+            "value_token_ids": [
+              24
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        187
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        13
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              20
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              90
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              64
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              18
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              31
+            ],
+            "value_token_ids": [
+              12
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        64
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        11
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              2
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              59
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              45
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              93
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              18
+            ],
+            "value_token_ids": [
+              6
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        45
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        19
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              172
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              187
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              168
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              31
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              191
+            ],
+            "value_token_ids": [
+              1
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        168
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        0
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              59
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              36
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              154
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              47
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              116
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        154
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        3
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              7
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              53
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              33
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              92
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              85
+            ],
+            "value_token_ids": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        33
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        15
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              47
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              151
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              83
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              20
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              26
+            ],
+            "value_token_ids": [
+              12
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        83
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        17
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              32
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              57
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              37
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              80
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              130
+            ],
+            "value_token_ids": [
+              10
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        37
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        7
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 5,
+        "pairs": [
+          {
+            "key_token_ids": [
+              107
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              169
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              95
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              11
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              33
+            ],
+            "value_token_ids": [
+              23
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        95
+      ]
+    },
+    "gold": {
+      "value_token_ids": [
+        19
+      ]
+    },
+    "stratum": "answerable",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              18
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              33
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              107
+            ],
+            "value_token_ids": [
+              23
+            ]
+          },
+          {
+            "key_token_ids": [
+              76
+            ],
+            "value_token_ids": [
+              4
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        200
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              151
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              108
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              76
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              163
+            ],
+            "value_token_ids": [
+              14
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        201
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              161
+            ],
+            "value_token_ids": [
+              1
+            ]
+          },
+          {
+            "key_token_ids": [
+              94
+            ],
+            "value_token_ids": [
+              12
+            ]
+          },
+          {
+            "key_token_ids": [
+              163
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              135
+            ],
+            "value_token_ids": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        202
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              106
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              186
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              82
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              112
+            ],
+            "value_token_ids": [
+              15
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        203
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              47
+            ],
+            "value_token_ids": [
+              17
+            ]
+          },
+          {
+            "key_token_ids": [
+              27
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              70
+            ],
+            "value_token_ids": [
+              22
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        204
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              39
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              179
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              114
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              102
+            ],
+            "value_token_ids": [
+              13
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        205
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              44
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              63
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              116
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              87
+            ],
+            "value_token_ids": [
+              14
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        206
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              161
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              163
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              22
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              123
+            ],
+            "value_token_ids": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        207
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              178
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              114
+            ],
+            "value_token_ids": [
+              6
+            ]
+          },
+          {
+            "key_token_ids": [
+              158
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              118
+            ],
+            "value_token_ids": [
+              3
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        208
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              196
+            ],
+            "value_token_ids": [
+              19
+            ]
+          },
+          {
+            "key_token_ids": [
+              161
+            ],
+            "value_token_ids": [
+              4
+            ]
+          },
+          {
+            "key_token_ids": [
+              77
+            ],
+            "value_token_ids": [
+              13
+            ]
+          },
+          {
+            "key_token_ids": [
+              139
+            ],
+            "value_token_ids": [
+              22
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        209
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              192
+            ],
+            "value_token_ids": [
+              15
+            ]
+          },
+          {
+            "key_token_ids": [
+              120
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              23
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              173
+            ],
+            "value_token_ids": [
+              17
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        210
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              195
+            ],
+            "value_token_ids": [
+              0
+            ]
+          },
+          {
+            "key_token_ids": [
+              103
+            ],
+            "value_token_ids": [
+              3
+            ]
+          },
+          {
+            "key_token_ids": [
+              71
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              161
+            ],
+            "value_token_ids": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        211
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              10
+            ],
+            "value_token_ids": [
+              16
+            ]
+          },
+          {
+            "key_token_ids": [
+              0
+            ],
+            "value_token_ids": [
+              18
+            ]
+          },
+          {
+            "key_token_ids": [
+              65
+            ],
+            "value_token_ids": [
+              22
+            ]
+          },
+          {
+            "key_token_ids": [
+              101
+            ],
+            "value_token_ids": [
+              12
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        212
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              113
+            ],
+            "value_token_ids": [
+              11
+            ]
+          },
+          {
+            "key_token_ids": [
+              26
+            ],
+            "value_token_ids": [
+              9
+            ]
+          },
+          {
+            "key_token_ids": [
+              191
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              64
+            ],
+            "value_token_ids": [
+              21
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        213
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              50
+            ],
+            "value_token_ids": [
+              2
+            ]
+          },
+          {
+            "key_token_ids": [
+              152
+            ],
+            "value_token_ids": [
+              25
+            ]
+          },
+          {
+            "key_token_ids": [
+              21
+            ],
+            "value_token_ids": [
+              8
+            ]
+          },
+          {
+            "key_token_ids": [
+              9
+            ],
+            "value_token_ids": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        214
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  },
+  {
+    "rung_id": "L01",
+    "context_block": {
+      "padding_prefix": [],
+      "real_pair_block": {
+        "start_idx": 0,
+        "end_idx": 4,
+        "pairs": [
+          {
+            "key_token_ids": [
+              136
+            ],
+            "value_token_ids": [
+              7
+            ]
+          },
+          {
+            "key_token_ids": [
+              87
+            ],
+            "value_token_ids": [
+              24
+            ]
+          },
+          {
+            "key_token_ids": [
+              30
+            ],
+            "value_token_ids": [
+              5
+            ]
+          },
+          {
+            "key_token_ids": [
+              135
+            ],
+            "value_token_ids": [
+              2
+            ]
+          }
+        ]
+      }
+    },
+    "queried_key": {
+      "key_token_ids": [
+        215
+      ]
+    },
+    "gold": {
+      "value_token_ids": []
+    },
+    "stratum": "null",
+    "metadata": {
+      "construction_recipe_hash": "fb4459ffae8880d48d203b88a6f1c9a157d7369db54538518c06c16dfeb7821a",
+      "pilot_or_final": "pilot",
+      "iteration_index": 0
+    }
+  }
+]

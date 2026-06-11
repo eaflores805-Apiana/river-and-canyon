@@ -1,0 +1,280 @@
+[
+  {
+    "oracle_case_id": "ORC-01",
+    "oracle_case_type": "ideal_retriever",
+    "expected_outcome": "not_ruled_out",
+    "actual_outcome": "not_ruled_out",
+    "required_labels": [],
+    "permitted_co_labels": [],
+    "required_absent_labels": [
+      "accuracy_indistinguishable_from_token_prior",
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "insufficient_measurement_headroom",
+      "strict_content_gap_instability",
+      "null_abstention_floor_unmet",
+      "answerable_abstention_ceiling_exceeded"
+    ],
+    "attached_labels": [],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-02",
+    "oracle_case_type": "pure_last_position_shortcut",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "permitted_co_labels": [
+      "null_abstention_floor_unmet",
+      "accuracy_indistinguishable_from_token_prior"
+    ],
+    "required_absent_labels": [],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "null_abstention_floor_unmet"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-03",
+    "oracle_case_type": "salient_endpoint_shortcut",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "permitted_co_labels": [
+      "null_abstention_floor_unmet",
+      "accuracy_indistinguishable_from_token_prior"
+    ],
+    "required_absent_labels": [],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "null_abstention_floor_unmet"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-04",
+    "oracle_case_type": "recency_excluding_target_shortcut",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "permitted_co_labels": [
+      "null_abstention_floor_unmet",
+      "accuracy_indistinguishable_from_token_prior"
+    ],
+    "required_absent_labels": [],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "null_abstention_floor_unmet"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-05",
+    "oracle_case_type": "prefix_neighbor_confusion_shortcut",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "permitted_co_labels": [
+      "null_abstention_floor_unmet",
+      "accuracy_indistinguishable_from_token_prior"
+    ],
+    "required_absent_labels": [],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "null_abstention_floor_unmet"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-06",
+    "oracle_case_type": "token_prior_emitter",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "accuracy_indistinguishable_from_token_prior"
+    ],
+    "permitted_co_labels": [
+      "null_abstention_floor_unmet",
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "required_absent_labels": [],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "accuracy_indistinguishable_from_token_prior",
+      "null_abstention_floor_unmet"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-07",
+    "oracle_case_type": "universal_answerer",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "null_abstention_floor_unmet"
+    ],
+    "permitted_co_labels": [
+      "accuracy_indistinguishable_from_token_prior",
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "required_absent_labels": [],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "accuracy_indistinguishable_from_token_prior",
+      "null_abstention_floor_unmet"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-08",
+    "oracle_case_type": "universal_abstainer",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "answerable_abstention_ceiling_exceeded"
+    ],
+    "permitted_co_labels": [
+      "accuracy_indistinguishable_from_token_prior",
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "required_absent_labels": [],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "accuracy_indistinguishable_from_token_prior",
+      "answerable_abstention_ceiling_exceeded"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-09",
+    "oracle_case_type": "perfect_null_on_null_handler",
+    "expected_outcome": "not_ruled_out",
+    "actual_outcome": "not_ruled_out",
+    "required_labels": [],
+    "permitted_co_labels": [],
+    "required_absent_labels": [
+      "accuracy_indistinguishable_from_token_prior",
+      "accuracy_indistinguishable_from_declared_policy_envelope",
+      "insufficient_measurement_headroom",
+      "strict_content_gap_instability",
+      "null_abstention_floor_unmet",
+      "answerable_abstention_ceiling_exceeded"
+    ],
+    "attached_labels": [],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-10",
+    "oracle_case_type": "malformed_control_semantic_separation_guard",
+    "expected_outcome": "not_ruled_out",
+    "actual_outcome": "not_ruled_out",
+    "required_labels": [],
+    "permitted_co_labels": [],
+    "required_absent_labels": [
+      "accuracy_indistinguishable_from_token_prior"
+    ],
+    "attached_labels": [],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-11",
+    "oracle_case_type": "mixture_shortcut_heavy",
+    "expected_outcome": "eliminated",
+    "actual_outcome": "eliminated",
+    "required_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "permitted_co_labels": [],
+    "required_absent_labels": [
+      "null_abstention_floor_unmet",
+      "answerable_abstention_ceiling_exceeded"
+    ],
+    "attached_labels": [
+      "accuracy_indistinguishable_from_declared_policy_envelope"
+    ],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  },
+  {
+    "oracle_case_id": "ORC-12",
+    "oracle_case_type": "mixture_retrieval_heavy",
+    "expected_outcome": "not_ruled_out",
+    "actual_outcome": "not_ruled_out",
+    "required_labels": [],
+    "permitted_co_labels": [],
+    "required_absent_labels": [
+      "accuracy_indistinguishable_from_token_prior",
+      "null_abstention_floor_unmet",
+      "answerable_abstention_ceiling_exceeded"
+    ],
+    "attached_labels": [],
+    "outcome_matched": true,
+    "required_labels_present": true,
+    "required_absent_labels_absent": true,
+    "only_required_or_permitted_attached": true,
+    "overall_matched": true,
+    "failure_interpretation": ""
+  }
+]
