@@ -1,4 +1,4 @@
-# Lane 1a Lock Record — 2026-06-10 (Remediated: Sidecar Attestation Pattern)
+# Lane 1a Lock Record — 2026-06-10 (Path A Remediated)
 
 Sweep ID: `lane-1a-2026-06-10`
 Framework version (declared): `none`  *(Lane 1a is NOT a certification)*
@@ -13,10 +13,15 @@ Source §13 normative manifest recipe: `governance/2026-06-10_lane1a/EXECUTION-P
 
 Senior remediation finding: `governance/2026-06-10_lane1a/SENIOR-FINDING-WRAPPER-REWRITE-2026-06-10.md`
 
+CS deviation report (Step-3 architecture defect): `governance/2026-06-10_lane1a/CS-DEVIATION-REPORT-B1V2-MANIFEST-INTERFACE-2026-06-10.md`
+
+Manager Path A direction: `governance/2026-06-10_lane1a/MANAGER-DIRECTION-PATH-A-2026-06-10.md`
+
 Manager authorization memos:
   - `governance/2026-06-10_lane-1a-authorization/MANAGER-AUTHORIZATION.md` (lane opened)
   - `governance/2026-06-10_lane1a/MANAGER-DIRECTION-v0.3-OPTION-A-2026-06-10.md` (v0.3 + Option A)
-  - `governance/2026-06-10_lane1a/MANAGER-AUTHORIZATION-FIRST-DATA-ACCESS-2026-06-10.md` (first data access, conditional)
+  - `governance/2026-06-10_lane1a/MANAGER-AUTHORIZATION-FIRST-DATA-ACCESS-2026-06-10.md` (first data access, prior conditional)
+  - `governance/2026-06-10_lane1a/MANAGER-REAUTHORIZATION-FIRST-DATA-ACCESS-2026-06-10.md` (re-issued against ef170fd7…; now superseded by Path A re-seal)
 
 ## B4 — Token-prior control authorization (Manager 2026-06-10)
 
@@ -34,39 +39,29 @@ control_scoring_denominator = 80 answerable-mirroring controls per rung
 NULL-mirroring controls = descriptive-only
 ```
 
-## --context functional statement (Senior remediation §7)
+## Runner integration (Path A, Manager 2026-06-10)
 
-The wrapper passes `--context paper2-reproduction` to B1 v2 because:
+**Wording (Manager-prescribed, applied verbatim):**
 
-```text
-B1 v2's locked argparse surface (merge 3cbfce57) accepts only
-{paper2-reproduction, paper3-certification} as values for --context;
-B1 v2 source must not be edited (B1 v2.1 is unauthorized).
-```
+> Lane 1a uses a lane-specific runner that preserves B1 v2-compatible
+> provenance conventions and locked model-loading dependencies, while
+> leaving B1 v2 source unedited.
 
-Functionally, `--context paper2-reproduction` selects B1 v2's
-post-generation code path that:
+Concretely:
 
-```text
-- requires no threshold sheet;
-- accepts framework_version="none";
-- engages no Paper 3 certification-gate logic.
-```
+- The wrapper subprocesses `lane1a_runner.py` (NOT B1 v2's CLI).
+- `lane1a_runner.py` uses `mlx_lm` directly (the shared dependency).
+- `lane1a_runner.py` computes the model snapshot hash using the same
+  algorithm B1 v2 uses (sha256 over a sorted manifest of
+  (relative path, file size, per-file sha256)); the two records are
+  comparable.
+- `lane1a_runner.py` does NOT import any module from
+  `experiments/2026-06-09_b1-harness-v2/`. Verified by unit test
+  `test_no_b1v2_imports`.
+- B1 v2 source remains unedited; B1 v2.1 is not created.
+- This is not native B1 v2 execution and is not B1 v2.1.
 
-Lane 1a semantics are NOT carried by the B1 `context` field. The B1
-output bytes are preserved unchanged by the wrapper. Lane 1a metadata
-(artifact_class, certification_relevance, lane_1a_context,
-context_is_wrapper_asserted_not_runner_attested,
-context_functional_statement) lives only in a sidecar JSON written
-alongside each B1 output. The sidecar records the B1 output's sha256
-so an auditor can verify byte-for-byte preservation.
-
-This is the sidecar-attestation pattern. The earlier rewrite pattern
-(committed at `25613d3`) is superseded by this LOCK-RECORD; the
-wrapper code is corrected; new unit tests prove byte preservation and
-sidecar-only Lane 1a metadata; the sidecar schema is locked.
-
-## Locked artifact hashes (post-remediation)
+## Locked artifact hashes (Path A)
 
 | Artifact | sha256 | Status |
 |---|---|---|
@@ -75,8 +70,9 @@ sidecar-only Lane 1a metadata; the sidecar schema is locked.
 | `prompt_template.md` | `1fa889ae8fede10d8b539a8f8672d4e68eedf67f8d0ce3592bbe9eb910df7cd1` | unchanged |
 | `scorer.py` | `c1aff994081829a6888338aea8dadab30bf622203dbb5f597cd7298cf8f27495` | unchanged |
 | `dummy_policies.py` | `46a5b2349051b4e51059575d056068360fe990889c57cb11a4ba155afe9ad36c` | unchanged |
-| `runner_config.yaml` | `49401bf572d0491ab9f771fa3cce92edff6bd112c905f71372ca12eea4ca3bcc` | unchanged |
-| `lane1a_runner_wrapper.py` | `a91e0c89be9e4a7d330be0c4dab6b4c25541d5e97112832653b04b576fc95dc3` | **REMEDIATED — sidecar pattern** |
+| `runner_config.yaml` | `bbb4655e5789a0eb767a26b54d58dbe4bdc428f31469082dc0cc151d47596dc3` | **PATH A — b1v2 invocation block removed; runner: section added** |
+| `lane1a_runner.py` | `23a480e701d583a91f435eca0d2d641af0e4797684d64b442d2ec9da5565d531` | **PATH A — NEW** |
+| `lane1a_runner_wrapper.py` | `4bed7fbdb938021638bda3908b7cbdb1e68e4dcc6305c7455b24df345cb444b1` | **PATH A — invokes lane1a_runner.py** |
 | `analyzer.py` | `4c0087fa949883a772f608994f439132a195583a97035b7baff700230ba2144c` | unchanged |
 | `plotter.py` | `dca510667d52d1b5a281f4a5ca5597c2abb5a7cb4a1a25a59baa98e397a5834a` | unchanged |
 | `artifact_tags.py` | `bb5d396eeee45d0e08ae987d487ea57579e12bf87efc2fe4e76896b505290f2f` | unchanged |
@@ -85,78 +81,82 @@ sidecar-only Lane 1a metadata; the sidecar schema is locked.
 | `exclusion_block.md` | `feb4b80cbc4b95be838fc39321086749c457ce3bfa745f0c57658ea5749318ce` | unchanged |
 | `schema/per_rung_record.schema.json` | `beb48aacf384cee21c29265802d320292544875e342e26cc3b1ef4b7959ae14c` | unchanged |
 | `schema/sweep_record.schema.json` | `449aae9259ed9fe2f188818ae880c691f419e0b62b302e40fffb1e99cea678ec` | unchanged |
-| `schema/lane1a_sidecar.schema.json` | `c1944773a5c686586bb39e553e803b6e2e66278ccbd7047e9000027e0a0502e1` | **NEW** |
+| `schema/lane1a_sidecar.schema.json` | `23195986fe8bba1fa0754f9af1d9a80ce984e62f2056320d7ac9da281b4ac4aa` | **PATH A — runner_output fields** |
 | `AUDIT-LOG-FORMAT.md` | `29b418c6cb6601d1aab4b28eba8e538ef828900eef6a02a9d821b128abc6a465` | unchanged |
-| `test_lane1a_packet.py` | `2697d69e2040722472d5cfb70df3042f67690164456c11b5b0c726fdfc73fa60` | **REMEDIATED — 3 new sidecar tests** |
+| `test_lane1a_packet.py` | `934f39773cd90c998edf19b07b621ec83ac925721804a0c6d319e47abfb2701e` | **PATH A — 13 new/updated tests; 35/35 PASS** |
 | `NOVELTY-LEDGER.md` | `aad806a47bea04d7b16b77a0c1205a472b97ecbf7b5591b2a77b71f8ccb9f112` | unchanged |
 
-Total locked artifacts: 19 (was 18; sidecar schema is the +1).
+Total locked artifacts: 20 (was 19; lane1a_runner.py is the +1).
 
 ## Lock timestamp
 
 ```text
-Lock timestamp: 2026-06-11T02:06:36Z
+Lock timestamp: PENDING_TEAM_LEAD_REVIEW
 ```
 
-Team Lead appended this RFC 3339 UTC timestamp upon completion of the
-combined adversarial review (PASS) of design packet v0.3 + this
-remediated execution packet, filed at
-`governance/2026-06-10_lane1a/TEAMLEAD-COMBINED-REVIEW-PASS-2026-06-10.md`.
+Team Lead appends the RFC 3339 UTC value upon completion of combined
+adversarial review of design packet v0.3 + the Path A remediated
+execution packet. Until appended, `lane1a_runner_wrapper.py preflight()`
+refuses to invoke (the `PENDING_TEAM_LEAD_REVIEW` sentinel triggers
+`FirstDataAccessGateError`).
 
-The `first_data_access_timestamp` recorded by the wrapper at sweep
-time MUST postdate this lock timestamp. `lane1a_runner_wrapper.py
-preflight()` enforces this comparison.
-
-**First data access remains NOT AUTHORIZED until Manager reauthorizes
-against the remediated packet (Team Lead memo §7).** The lock
-timestamp is finalized; the gate is now waiting on Manager
-reauthorization, not on the lock timestamp.
-
-## Unit-test verification (CS, 2026-06-10, post-remediation)
+## Unit-test verification (CS, 2026-06-10, post-Path-A)
 
 ```text
-Tests run:    25  (22 prior + 3 new sidecar tests)
-Tests passed: 25
+Tests run:    35
+Tests passed: 35
 Tests failed:  0
 Status:       OK
 ```
 
-New sidecar tests (Senior remediation §5, §6):
-- `test_b1_output_preserved_byte_for_byte`:
-    verifies the wrapper does NOT modify the B1 output file.
-    Before/after byte-equality and sha256-equality both asserted.
-- `test_lane1a_metadata_only_in_sidecar`:
-    verifies the B1 output JSON contains no Lane 1a fields
-    (`artifact_class`, `certification_relevance`, `lane_1a_context`,
-    `original_context_from_b1v2`) and the sidecar carries them.
-- `test_sidecar_validates_against_schema`:
-    verifies the sidecar passes `jsonschema` validation against
-    `schema/lane1a_sidecar.schema.json`.
+Breakdown:
+- 22 prior invariants (B1 gap sign; B2 preempt; B5 ordering; outcome
+  determinism; plot prohibitions; schema rejection; recipe acceptance;
+  audit log; tag override; scorer; dummy policies).
+- 3 updated sidecar tests (runner_output byte preservation;
+  lane1a_metadata only in sidecar; sidecar validates against the new
+  schema with `runner_output_*` and `runner_name = lane1a_runner.py`
+  fields).
+- 7 new lane1a_runner manifest-validation tests (good manifest accepted;
+  missing top-level key rejected; wrong artifact_class rejected; wrong
+  certification_relevance rejected; invalid stratum rejected; missing
+  item field rejected; **all 8 actual generated Lane 1a manifests pass
+  lane1a_runner.validate_lane1a_manifest**).
+- 3 new lane1a_runner provenance tests (no B1 v2 imports; B1 v2-
+  compatible compute_model_snapshot_hash signature; decoding settings
+  locked).
 
-All prior invariants still verified (B1 gap sign, B2 preempt, B5
-survivor ordering, outcome determinism, plot prohibitions, schema
-rejection, recipe acceptance, audit-log append-only, tag override,
-scorer rules, dummy-policy non-degeneracy).
-
-## CS Engineer sign-off (REMEDIATED)
+## CS Engineer sign-off (PATH A REMEDIATED)
 
 ```text
 I certify that the artifact set above implements the Lane 1a design
-packet v0.3 (sha256 f1280a85...) with the B-series corrections
-(B1, B2, B3, B4 Option A, B5) applied AND the Senior remediation
-(sidecar-attestation pattern; B1 output preserved byte-for-byte; Lane
-1a metadata only in the sidecar).
+packet v0.3 (sha256 f1280a85…) with:
+  - all B-series corrections (B1 / B2 / B3 / B4 Option A / B5),
+  - the Senior remediation (sidecar-attestation pattern; runner output
+    preserved byte-for-byte; Lane 1a metadata only in sidecar), and
+  - the Path A remediation (lane1a_runner.py; B1 v2-compatible
+    provenance conventions; B1 v2 source unedited; B1 v2.1 not created
+    or used).
 
-All 25 unit tests pass. No first data access has occurred; no model
+All 35 unit tests pass. No first data access has occurred; no model
 has been invoked; no live sweep output exists. B1 v2 source is
-unmodified; B1 v2.1 has not been created or used. The Case B wrapper
-invokes B1 v2 exclusively through its locked argparse surface and
-does NOT mutate the B1 output.
+unmodified; B1 v2.1 has not been created or used. The wrapper
+subprocesses lane1a_runner.py and writes a sidecar JSON alongside
+each runner output; runner output bytes are preserved unchanged.
 
-The earlier rewrite-pattern wrapper (committed at 25613d3,
-sha256 deff94c9...) is SUPERSEDED by this LOCK-RECORD and replaced
-with the sidecar-pattern wrapper at sha256 a91e0c89.... The earlier
-artifact remains in git history as historical audit trail.
+The packet does not claim native B1 v2 execution. The Manager-
+prescribed wording ("Lane 1a uses a lane-specific runner that
+preserves B1 v2-compatible provenance conventions and locked
+model-loading dependencies, while leaving B1 v2 source unedited") is
+applied verbatim in LOCK-RECORD, runner_config.yaml, the wrapper's
+CONTEXT_FUNCTIONAL_STATEMENT, every sidecar's
+context_functional_statement, and the CS remediation return.
+
+The earlier wrapper sha256 a91e0c89… (sidecar over B1 v2 CLI) is
+SUPERSEDED by the Path A wrapper sha256 4bed7fbd… (sidecar over
+lane1a_runner.py). The earlier artifact remains in git history as
+historical audit trail. The earlier LOCK-RECORD sha256 ef170fd7… is
+superseded by the Path A LOCK-RECORD sha256 (computed post-seal).
 
 This record is sealed against the listed hashes. No edit to any
 listed artifact is permitted after Team Lead appends the lock
@@ -171,19 +171,21 @@ record.
 - It does NOT authorize first data access.
 - It does NOT authorize model invocation.
 - It does NOT authorize the sweep to execute.
-- These require Team Lead adversarial review of the remediated
-  packet followed by explicit Manager execution authorization.
+- These require Team Lead adversarial review of the Path A
+  remediated packet followed by explicit Manager reauthorization.
 
 ## Audit anchors
 
-- B1 v2 runner locked at merge `3cbfce57`; not modified by Lane 1a.
+- B1 v2 runner locked at merge `3cbfce57`; not modified by Lane 1a
+  in any cycle.
 - Senior remediation finding (2026-06-10): wrapper rewrite pattern
   rejected; sidecar attestation pattern adopted.
+- CS deviation discovery (2026-06-10): B1 v2 manifest-interface
+  incompatibility; remediated by Path A (lane1a_runner.py).
 - Standing non-authorizations card: token-prior runs were blocked
   except by name; this LOCK-RECORD resolves the named exception for
   Lane 1a only.
-- New permanent production rule (standing review-discipline): no
-  production cycle may begin while any G1-open condition memo
-  affects it.
+- Standing review-discipline rule: no production cycle may begin
+  while any G1-open condition memo affects it.
 - All execution gates other than Lane 1a packet preparation remain
   CLOSED.

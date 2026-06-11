@@ -1,36 +1,41 @@
-"""Lane 1a runner wrapper — Case B, SIDECAR-ATTESTATION PATTERN (locked).
+"""Lane 1a runner wrapper — Path A, SIDECAR-ATTESTATION PATTERN (locked).
 
-REMEDIATION 2026-06-10: This wrapper PRESERVES B1 v2 output bytes
-unchanged. Lane 1a metadata lives in a sidecar JSON companion file
-with its own schema. The wrapper does NOT mutate the runner-attested
-output; doing so would create a wrapper-asserted (not runner-attested)
-artifact, which is the rejected pattern.
+PATH A REMEDIATION 2026-06-10: B1 v2's --manifest interface requires a
+Two-Hop L1-specific schema; Lane 1a manifests are single-hop key->value
+nested dicts and do not match that schema. Per Manager direction,
+Lane 1a uses a lane-specific runner that preserves B1 v2-compatible
+provenance conventions and locked model-loading dependencies, while
+leaving B1 v2 source unedited.
 
-B1 v2 does not expose Lane 1a as a native mode/context, and B1 v2 must
-not be edited (B1 v2 locked at merge 3cbfce57; B1 v2.1 unauthorized).
+The wrapper subprocesses `lane1a_runner.py` (not B1 v2 CLI) and
+preserves the runner output bytes byte-for-byte. Lane 1a metadata
+lives in a sidecar JSON companion file with its own schema.
+
+B1 v2 source remains unedited; B1 v2.1 is not created. The shared
+dependency is `mlx_lm` (the locked model-loading library both B1 v2
+and `lane1a_runner.py` use); the runner records the model snapshot
+hash in the same format B1 v2 uses.
+
 The wrapper:
 
   1. Reads LOCK-RECORD.md before any invocation. Refuses to proceed
      if the token-prior authorization line is missing or malformed,
      OR if the lock_timestamp is not finalized.
   2. Verifies lock_timestamp < first_data_access_timestamp.
-  3. Invokes B1 v2 runner via subprocess with only the locked flags
-     B1 v2's argparse accepts:
-        --mode live --context paper2-reproduction
-        --framework-version none --manifest <path>
-  4. Locates the B1 output file produced by the subprocess.
-  5. Computes sha256 of the B1 output file (does NOT open + rewrite).
-  6. Writes a SIDECAR JSON next to the B1 output file with Lane 1a
+  3. Invokes `lane1a_runner.py` via subprocess.
+  4. Locates the runner output file produced by the subprocess.
+  5. Computes sha256 of the runner output file (does NOT open + rewrite).
+  6. Writes a SIDECAR JSON next to the runner output file with Lane 1a
      metadata (artifact_class, certification_relevance, the wrapper-
-     asserted Lane 1a context, the --context functional statement,
-     the B1 output path, and the B1 output sha256).
+     asserted Lane 1a context, the runner-functional statement,
+     the runner output path, and the runner output sha256).
   7. Enforces the no-re-execution rule by checking the audit log
      for prior runner_started events at the same (rung_id, stratum).
   8. Emits runner_started / runner_completed / runner_anomaly events.
 
-The B1 output file is bit-identical to what B1 v2 produced. Any
-auditor can re-hash and verify against the sidecar's recorded
-`b1_output_sha256`.
+The runner output file is bit-identical to what lane1a_runner.py
+produced. Any auditor can re-hash and verify against the sidecar's
+recorded `runner_output_sha256`.
 """
 
 from __future__ import annotations
@@ -57,26 +62,22 @@ EXPECTED_TOKEN_PRIOR_AUTH = (
 PENDING_TIMESTAMP_SENTINEL = "PENDING_TEAM_LEAD_REVIEW"
 
 CONTEXT_FUNCTIONAL_STATEMENT = (
-    "B1 v2 `--context paper2-reproduction` is passed because B1 v2's "
-    "locked argparse surface (merge 3cbfce57) does not include "
-    "'lane-1a-reconnaissance' as a --context value, and B1 v2 must "
-    "not be edited. The `--context` flag selects B1 v2's post-generation "
-    "code path; the paper2-reproduction path is used by Lane 1a because "
-    "it engages no certification-gate logic and accepts "
-    "`framework_version=\"none\"`. Lane 1a semantics are NOT carried by "
-    "the B1 `context` field — they are wrapper-asserted via the sidecar "
-    "JSON written alongside each B1 output. The B1 output bytes are "
-    "preserved unchanged; the sidecar records the B1 output's sha256 "
-    "so an auditor can verify byte-for-byte preservation."
+    "Lane 1a uses a lane-specific runner (lane1a_runner.py) that "
+    "preserves B1 v2-compatible provenance conventions and locked "
+    "model-loading dependencies, while leaving B1 v2 source unedited. "
+    "B1 v2's `--manifest` interface requires a Two-Hop L1-specific "
+    "schema and cannot consume Lane 1a's single-hop key->value "
+    "nested-dict manifests; per Manager direction (Path A, 2026-06-10), "
+    "the wrapper subprocesses lane1a_runner.py instead. Lane 1a "
+    "semantics are wrapper-asserted via the sidecar JSON written "
+    "alongside each runner output. The runner output bytes are "
+    "preserved unchanged; the sidecar records the runner output's "
+    "sha256 so an auditor can verify byte-for-byte preservation. "
+    "This is not native B1 v2 execution and is not B1 v2.1."
 )
 
-# B1 v2 runner CLI location (in-repo, locked at merge 3cbfce57).
-B1V2_RUNNER = (
-    SCRIPT_DIR.parents[1]
-    / "2026-06-09_b1-harness-v2"
-    / "code"
-    / "runner_b1_v2.py"
-)
+# Lane 1a runner (in-repo, locked alongside the wrapper).
+LANE1A_RUNNER = SCRIPT_DIR / "lane1a_runner.py"
 
 
 class LockRecordError(RuntimeError):
@@ -147,23 +148,32 @@ def _validate_first_data_access_ordering(fields: dict[str, str]) -> None:
 
 def write_sidecar(
     *,
-    b1_output_path: Path,
-    b1_output_sha256: str,
+    runner_output_path: Path,
+    runner_output_sha256: str,
     rung_id: str,
     stratum: str,
     attempt_id: int,
+    # Back-compat alias for prior unit-test signature; the legacy
+    # parameter name b1_output_path is accepted but the canonical name
+    # going forward is runner_output_path.
+    b1_output_path: Path | None = None,
+    b1_output_sha256: str | None = None,
 ) -> Path:
-    """Write the Lane 1a sidecar JSON next to the B1 output file.
+    """Write the Lane 1a sidecar JSON next to the runner output file.
 
-    The sidecar is the ONLY place Lane 1a metadata is recorded. The B1
-    output file itself is not modified.
+    The sidecar is the ONLY place Lane 1a metadata is recorded. The
+    runner output file itself is not modified.
     """
+    if runner_output_path is None and b1_output_path is not None:
+        runner_output_path = b1_output_path
+    if runner_output_sha256 is None and b1_output_sha256 is not None:
+        runner_output_sha256 = b1_output_sha256
+
     sidecar = {
         "schema": "lane-1a-sidecar.schema.json",
-        "b1_output_path": str(b1_output_path),
-        "b1_output_sha256": b1_output_sha256,
-        "b1_context_argument_passed": "paper2-reproduction",
-        "b1_framework_version_argument_passed": "none",
+        "runner_output_path": str(runner_output_path),
+        "runner_output_sha256": runner_output_sha256,
+        "runner_name": "lane1a_runner.py",
         "wrapper_attestation": {
             "artifact_class": ARTIFACT_CLASS,
             "certification_relevance": CERTIFICATION_RELEVANCE,
@@ -176,7 +186,7 @@ def write_sidecar(
         "attempt_id": attempt_id,
         "wrapper_invocation_ts": _now_iso(),
     }
-    sidecar_path = b1_output_path.with_suffix(".lane1a.sidecar.json")
+    sidecar_path = runner_output_path.with_suffix(".lane1a.sidecar.json")
     sidecar_path.write_text(
         json.dumps(sidecar, sort_keys=True, indent=2),
         encoding="utf-8",
@@ -184,7 +194,7 @@ def write_sidecar(
     return sidecar_path
 
 
-def invoke_b1v2(
+def invoke_runner(
     rung_id: str,
     stratum: str,
     manifest_path: Path,
@@ -192,12 +202,12 @@ def invoke_b1v2(
     audit: AuditLogWriter,
     attempt_id: int,
 ) -> dict[str, Any]:
-    """Invoke B1 v2 once for one (rung_id, stratum).
+    """Invoke lane1a_runner.py once for one (rung_id, stratum).
 
     Returns:
         dict with keys:
-          - b1_output_path: the bit-identical B1 v2 output file
-          - b1_output_sha256: sha256 of the B1 output (recorded but not mutated)
+          - runner_output_path: the bit-identical lane1a_runner.py output file
+          - runner_output_sha256: sha256 of the runner output (recorded but not mutated)
           - sidecar_path: the Lane 1a sidecar JSON file path
     """
     if audit.has_prior("runner_started", rung_id, stratum):
@@ -218,26 +228,29 @@ def invoke_b1v2(
         stratum=stratum,
         attempt_id=attempt_id,
         details={
-            "b1v2_invocation_args": [
-                "--mode", "live",
-                "--context", "paper2-reproduction",
-                "--framework-version", "none",
+            "runner_invocation_args": [
                 "--manifest", str(manifest_path),
+                "--output-dir", str(output_dir),
+                "--output-prefix", f"LANE1A-{rung_id}-{stratum}",
+                "--stratum", stratum,
+                "--rung-id", rung_id,
             ],
+            "runner_name": "lane1a_runner.py",
             "lane_1a_context_attestation": "sidecar",
-            "b1_output_will_be_preserved_byte_for_byte": True,
+            "runner_output_will_be_preserved_byte_for_byte": True,
+            "b1_v2_unedited": True,
+            "b1_v2_1_unused": True,
         },
     )
 
     cmd = [
         sys.executable,
-        str(B1V2_RUNNER),
-        "--mode", "live",
-        "--context", "paper2-reproduction",
-        "--framework-version", "none",
+        str(LANE1A_RUNNER),
         "--manifest", str(manifest_path),
         "--output-dir", str(output_dir),
         "--output-prefix", f"LANE1A-{rung_id}-{stratum}",
+        "--stratum", stratum,
+        "--rung-id", rung_id,
     ]
 
     try:
@@ -252,7 +265,7 @@ def invoke_b1v2(
         )
         raise
 
-    # Locate the result file produced by B1 v2.
+    # Locate the result file produced by lane1a_runner.py.
     result_files = sorted(
         output_dir.glob(f"LANE1A-{rung_id}-{stratum}*.json")
     )
@@ -266,15 +279,15 @@ def invoke_b1v2(
         )
         raise RuntimeError(f"no result file produced for {rung_id} {stratum}")
 
-    b1_output_path = result_files[-1]
+    runner_output_path = result_files[-1]
 
-    # Compute sha256 of the B1 output WITHOUT opening + rewriting.
-    b1_output_sha256 = _sha256_file(b1_output_path)
+    # Compute sha256 of the runner output WITHOUT opening + rewriting.
+    runner_output_sha256 = _sha256_file(runner_output_path)
 
-    # Write the sidecar; do NOT modify b1_output_path.
+    # Write the sidecar; do NOT modify runner_output_path.
     sidecar_path = write_sidecar(
-        b1_output_path=b1_output_path,
-        b1_output_sha256=b1_output_sha256,
+        runner_output_path=runner_output_path,
+        runner_output_sha256=runner_output_sha256,
         rung_id=rung_id,
         stratum=stratum,
         attempt_id=attempt_id,
@@ -286,18 +299,22 @@ def invoke_b1v2(
         stratum=stratum,
         attempt_id=attempt_id,
         details={
-            "b1_output_path": str(b1_output_path),
-            "b1_output_sha256": b1_output_sha256,
+            "runner_output_path": str(runner_output_path),
+            "runner_output_sha256": runner_output_sha256,
             "sidecar_path": str(sidecar_path),
-            "b1_output_preserved_unmutated": True,
+            "runner_output_preserved_unmutated": True,
         },
     )
 
     return {
-        "b1_output_path": b1_output_path,
-        "b1_output_sha256": b1_output_sha256,
+        "runner_output_path": runner_output_path,
+        "runner_output_sha256": runner_output_sha256,
         "sidecar_path": sidecar_path,
     }
+
+
+# Back-compat alias (deprecated name; kept to minimize ripple on prior tests).
+invoke_b1v2 = invoke_runner
 
 
 def preflight() -> str:

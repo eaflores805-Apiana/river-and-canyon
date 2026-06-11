@@ -340,81 +340,78 @@ class TestDummyPoliciesNondegenerate(unittest.TestCase):
 
 
 class TestWrapperSidecarPattern(unittest.TestCase):
-    """Senior finding 2026-06-10: wrapper must preserve B1 output bytes
-    byte-for-byte and record Lane 1a metadata in a sidecar JSON only."""
+    """Wrapper must preserve runner output bytes byte-for-byte and record
+    Lane 1a metadata in a sidecar JSON only."""
 
-    def _stage_fake_b1_output(self, tmp: Path, rung_id: str, stratum: str) -> Path:
+    def _stage_fake_runner_output(self, tmp: Path, rung_id: str, stratum: str) -> Path:
         out_dir = tmp / "raw"
         out_dir.mkdir()
-        # Simulate a B1 v2 output JSON. Includes a context field with the
-        # value B1 would emit under paper2-reproduction.
-        b1_output = {
-            "context": "paper2-reproduction",
-            "framework_version": "none",
-            "rung": rung_id,
+        # Simulate a lane1a_runner.py output JSON (Path A schema).
+        runner_output = {
+            "lane1a_runner_record_schema": "v1",
+            "rung_id": rung_id,
             "stratum": stratum,
-            "items": [{"id": "x", "model_output": "alpha", "expected": "alpha"}],
-            "model_attestation": {"snapshot_hash": "sha256:abee745b..."},
+            "manifest_path": "manifests/L01.json",
+            "manifest_hash": "sha256:" + "0" * 64,
+            "provenance": {
+                "runner": "lane1a_runner.py",
+                "framework_version": "none",
+                "model_snapshot_hash": "sha256:abee745b...",
+            },
+            "items": [{"item_id": "x", "raw_output": "alpha"}],
         }
         path = out_dir / f"LANE1A-{rung_id}-{stratum}-1234.json"
-        path.write_text(json.dumps(b1_output, sort_keys=True, indent=2), encoding="utf-8")
+        path.write_text(json.dumps(runner_output, sort_keys=True, indent=2), encoding="utf-8")
         return path
 
-    def test_b1_output_preserved_byte_for_byte(self):
-        """Remediation requirement 5: original B1 output is preserved."""
+    def test_runner_output_preserved_byte_for_byte(self):
+        """Wrapper does not modify the runner output file."""
         import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
         with tempfile.TemporaryDirectory() as td:
             tmp = Path(td)
-            b1_path = self._stage_fake_b1_output(tmp, "L01", "answerable")
-            original_bytes = b1_path.read_bytes()
-            original_sha = wrapper._sha256_file(b1_path)
+            runner_path = self._stage_fake_runner_output(tmp, "L01", "answerable")
+            original_bytes = runner_path.read_bytes()
+            original_sha = wrapper._sha256_file(runner_path)
 
             sidecar = wrapper.write_sidecar(
-                b1_output_path=b1_path,
-                b1_output_sha256=original_sha,
+                runner_output_path=runner_path,
+                runner_output_sha256=original_sha,
                 rung_id="L01",
                 stratum="answerable",
                 attempt_id=1,
             )
 
-            # B1 output must be byte-identical after sidecar write.
-            self.assertEqual(b1_path.read_bytes(), original_bytes)
-            self.assertEqual(wrapper._sha256_file(b1_path), original_sha)
-            # Sidecar exists alongside B1 output.
+            self.assertEqual(runner_path.read_bytes(), original_bytes)
+            self.assertEqual(wrapper._sha256_file(runner_path), original_sha)
             self.assertTrue(sidecar.exists())
-            self.assertNotEqual(sidecar, b1_path)
+            self.assertNotEqual(sidecar, runner_path)
 
     def test_lane1a_metadata_only_in_sidecar(self):
-        """Remediation requirement 6: Lane 1a metadata never injected into
-        B1 output."""
+        """Lane 1a metadata never injected into runner output."""
         import lane1a_runner_wrapper as wrapper  # noqa: PLC0415
         with tempfile.TemporaryDirectory() as td:
             tmp = Path(td)
-            b1_path = self._stage_fake_b1_output(tmp, "L02", "answerable_mirror")
-
+            runner_path = self._stage_fake_runner_output(tmp, "L02", "answerable_mirror")
             sidecar_path = wrapper.write_sidecar(
-                b1_output_path=b1_path,
-                b1_output_sha256=wrapper._sha256_file(b1_path),
+                runner_output_path=runner_path,
+                runner_output_sha256=wrapper._sha256_file(runner_path),
                 rung_id="L02",
                 stratum="answerable_mirror",
                 attempt_id=1,
             )
 
-            # B1 output JSON must NOT contain any Lane 1a metadata.
-            b1_payload = json.loads(b1_path.read_text(encoding="utf-8"))
-            self.assertEqual(b1_payload["context"], "paper2-reproduction",
-                             "B1 output context must remain runner-attested")
-            self.assertNotIn("artifact_class", b1_payload)
-            self.assertNotIn("certification_relevance", b1_payload)
-            self.assertNotIn("lane_1a_context", b1_payload)
-            self.assertNotIn("original_context_from_b1v2", b1_payload)
+            runner_payload = json.loads(runner_path.read_text(encoding="utf-8"))
+            self.assertNotIn("artifact_class", runner_payload)
+            self.assertNotIn("certification_relevance", runner_payload)
+            self.assertNotIn("lane_1a_context", runner_payload)
+            self.assertNotIn("original_context_from_b1v2", runner_payload)
 
-            # Sidecar carries the Lane 1a metadata.
             sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
             self.assertEqual(sidecar["wrapper_attestation"]["artifact_class"],
                              "lane-1a-reconnaissance")
             self.assertEqual(sidecar["wrapper_attestation"]["lane_1a_context"],
                              "lane-1a-reconnaissance")
+            self.assertEqual(sidecar["runner_name"], "lane1a_runner.py")
             self.assertTrue(
                 sidecar["wrapper_attestation"]
                 ["context_is_wrapper_asserted_not_runner_attested"]
@@ -435,16 +432,130 @@ class TestWrapperSidecarPattern(unittest.TestCase):
         )
         with tempfile.TemporaryDirectory() as td:
             tmp = Path(td)
-            b1_path = self._stage_fake_b1_output(tmp, "L03", "null")
+            runner_path = self._stage_fake_runner_output(tmp, "L03", "null")
             sidecar_path = wrapper.write_sidecar(
-                b1_output_path=b1_path,
-                b1_output_sha256=wrapper._sha256_file(b1_path),
+                runner_output_path=runner_path,
+                runner_output_sha256=wrapper._sha256_file(runner_path),
                 rung_id="L03",
                 stratum="null",
                 attempt_id=2,
             )
             sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
             jsonschema.validate(sidecar, schema)
+
+
+class TestLane1aRunnerManifestValidation(unittest.TestCase):
+    """Path A: lane1a_runner.py validates the Lane 1a manifest schema."""
+
+    def setUp(self):
+        import lane1a_runner  # noqa: PLC0415
+        self.runner = lane1a_runner
+
+    def _good_manifest(self):
+        return {
+            "rung_id": "L01",
+            "rung_spec": {"D": 4, "K": "low", "X": "base"},
+            "per_rung_seed": 123,
+            "items": {
+                "answerable": [
+                    {"item_id": "L01-A-000", "stratum": "answerable",
+                     "in_context_pairs": [["a", "alpha"]],
+                     "queried_key": "a", "expected_answer": "alpha"}
+                ],
+                "null": [
+                    {"item_id": "L01-N-000", "stratum": "null",
+                     "in_context_pairs": [["a", "alpha"]],
+                     "queried_key": "z", "expected_answer": "NULL"}
+                ],
+            },
+            "controls": {
+                "answerable_mirror": [
+                    {"item_id": "L01-AM-000", "stratum": "answerable_mirror",
+                     "in_context_pairs": [["a", "alpha"]],
+                     "queried_key": "a", "expected_answer": "bravo"}
+                ],
+                "null_mirror": [
+                    {"item_id": "L01-NM-000", "stratum": "null_mirror",
+                     "in_context_pairs": [["a", "alpha"]],
+                     "queried_key": "z", "expected_answer": "NULL"}
+                ],
+            },
+            "artifact_class": "lane-1a-reconnaissance",
+            "certification_relevance": "none",
+        }
+
+    def test_valid_manifest_accepted(self):
+        self.runner.validate_lane1a_manifest(self._good_manifest())
+
+    def test_missing_top_level_keys_rejected(self):
+        m = self._good_manifest()
+        del m["items"]
+        with self.assertRaises(self.runner.ManifestValidationError):
+            self.runner.validate_lane1a_manifest(m)
+
+    def test_wrong_artifact_class_rejected(self):
+        m = self._good_manifest()
+        m["artifact_class"] = "paper3-certification"
+        with self.assertRaises(self.runner.ManifestValidationError):
+            self.runner.validate_lane1a_manifest(m)
+
+    def test_wrong_certification_relevance_rejected(self):
+        m = self._good_manifest()
+        m["certification_relevance"] = "high"
+        with self.assertRaises(self.runner.ManifestValidationError):
+            self.runner.validate_lane1a_manifest(m)
+
+    def test_invalid_stratum_rejected(self):
+        m = self._good_manifest()
+        m["items"]["answerable"][0]["stratum"] = "not-a-stratum"
+        with self.assertRaises(self.runner.ManifestValidationError):
+            self.runner.validate_lane1a_manifest(m)
+
+    def test_missing_item_field_rejected(self):
+        m = self._good_manifest()
+        del m["items"]["answerable"][0]["queried_key"]
+        with self.assertRaises(self.runner.ManifestValidationError):
+            self.runner.validate_lane1a_manifest(m)
+
+    def test_actual_generated_manifests_validate(self):
+        """All 8 generated Lane 1a manifests pass lane1a_runner validation."""
+        for rid in ["L01","L02","L03","L04","L05","L06","L07","L08"]:
+            p = SCRIPT_DIR / "manifests" / f"{rid}.json"
+            if not p.exists():
+                self.skipTest(f"manifest {rid} not generated yet")
+            m = json.loads(p.read_text(encoding="utf-8"))
+            self.runner.validate_lane1a_manifest(m)
+
+
+class TestLane1aRunnerProvenance(unittest.TestCase):
+    """Path A: lane1a_runner.py uses B1 v2-compatible model attestation
+    convention without importing B1 v2 source."""
+
+    def test_no_b1v2_imports(self):
+        # Strict check: lane1a_runner.py must not reference B1 v2 modules.
+        src = (SCRIPT_DIR / "lane1a_runner.py").read_text(encoding="utf-8")
+        self.assertNotIn("import runner_b1_v2", src)
+        self.assertNotIn("from runner_b1_v2", src)
+        self.assertNotIn("from experiments.2026-06-09_b1-harness-v2", src)
+        self.assertNotIn("b1_harness", src)
+
+    def test_compute_model_snapshot_hash_signature(self):
+        import lane1a_runner  # noqa: PLC0415
+        # B1 v2 compatibility: same algorithm signature.
+        self.assertTrue(hasattr(lane1a_runner, "compute_model_snapshot_hash"))
+        # Verify on a tiny synthetic directory.
+        with tempfile.TemporaryDirectory() as td:
+            (Path(td) / "config.json").write_text("{}")
+            (Path(td) / "weights.bin").write_text("x")
+            h = lane1a_runner.compute_model_snapshot_hash(Path(td))
+            self.assertTrue(h.startswith("sha256:"))
+            self.assertEqual(len(h), len("sha256:") + 64)
+
+    def test_decoding_settings_locked(self):
+        import lane1a_runner  # noqa: PLC0415
+        self.assertEqual(lane1a_runner.DECODING_SETTINGS["temperature"], 0.0)
+        self.assertEqual(lane1a_runner.DECODING_SETTINGS["greedy"], True)
+        self.assertEqual(lane1a_runner.DECODING_SETTINGS["seed"], 0)
 
 
 if __name__ == "__main__":

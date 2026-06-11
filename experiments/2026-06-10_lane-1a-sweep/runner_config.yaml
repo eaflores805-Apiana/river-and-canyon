@@ -1,35 +1,42 @@
 # Lane 1a runner configuration (locked; hash-recorded in LOCK-RECORD.md)
 #
 # This config is read by lane1a_runner_wrapper.py. The wrapper invokes
-# B1 v2's runner CLI exactly as the locked B1 v2 surface permits.
-# B1 v2 source is NOT edited.
+# lane1a_runner.py via subprocess.
+#
+# Lane 1a uses a lane-specific runner that preserves B1 v2-compatible
+# provenance conventions and locked model-loading dependencies, while
+# leaving B1 v2 source unedited. This is not native B1 v2 execution and
+# is not B1 v2.1.
 
 sweep_id: "lane-1a-2026-06-10"
 artifact_class: "lane-1a-reconnaissance"
 certification_relevance: "none"
 
-# B1 v2 invocation surface (Case B):
-b1v2:
-  invocation:
-    mode: "live"                              # B1 v2 surface: {dry-run, live}
-    context: "paper2-reproduction"            # B1 v2 surface: {paper2-reproduction, paper3-certification}
-    framework_version: "none"                 # B1 v2 surface: default value already
-  # Wrapper-layer overrides applied to B1 v2 output JSON
-  wrapper_overrides:
-    context_field: "lane-1a-reconnaissance"
-    inject_tags:
-      artifact_class: "lane-1a-reconnaissance"
-      certification_relevance: "none"
+# Runner integration (Path A)
+runner:
+  name: "lane1a_runner.py"
+  path: "lane1a_runner.py"        # relative to this directory
+  manifest_schema: "Lane 1a single-hop key->value nested-dict"
+  validates_manifest_with: "lane1a_runner.validate_lane1a_manifest"
+  framework_version_recorded: "none"
+  decoding_settings:
+    temperature: 0
+    greedy: true
+    max_tokens: 64
+    seed: 0
+  model_id: "mlx-community/Qwen2.5-3B-Instruct-bf16"
+  model_attestation:
+    method: "sha256 over sorted manifest of (relative path, file size, per-file sha256)"
+    compatible_with: "B1 v2 compute_model_snapshot_hash (same algorithm)"
+    note: "lane1a_runner.py does NOT import B1 v2 source; it computes the hash itself."
 
-# Model and decoding (Senior design packet §1.1)
-model:
-  name: "Qwen2.5-3B-Instruct"
-  precision: "FP16"
-  backend: "mlx_lm"
-  greedy: true
-  temperature: 0
-  seed: 0
-  # Model snapshot identity is runner-attested by B1 v2 at execution.
+# Wrapper-layer Lane 1a tagging (sidecar pattern)
+wrapper_attestation:
+  artifact_class: "lane-1a-reconnaissance"
+  certification_relevance: "none"
+  sidecar_schema: "schema/lane1a_sidecar.schema.json"
+  runner_output_byte_preservation: "enforced by unit test"
+  lane_1a_metadata_location: "sidecar JSON only; never injected into runner output"
 
 # Token-prior control path (Manager Option A, 2026-06-10):
 control_path: "Option_A_authorized_by_name"
@@ -60,3 +67,5 @@ gates:
   require_lock_record_token_prior_auth: true
   require_first_data_access_postdates_lock_timestamp: true
   refuse_re_execution_for_same_rung_id_and_stratum: true
+  require_b1v2_source_unedited: true
+  refuse_b1v2_1: true
