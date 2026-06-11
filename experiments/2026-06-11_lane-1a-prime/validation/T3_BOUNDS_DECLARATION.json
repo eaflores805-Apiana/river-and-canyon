@@ -1,0 +1,61 @@
+{
+  "schema_version": "v2",
+  "lock_event_date": "2026-06-11",
+  "anti_tuning_attestation": "Every bound below derives from contract semantics (FLOOR, CEIL), shell construction (TP_margin), declared cap structure (ENV_margin, HEAD), and the documented format-cliff class (GAP). No value is chosen from any Phase 5 run-1 or run-2 numeric outcome. The values become unchangeable at the joint lock event; any later change is a must-fix requiring C1 disposition. The four CS-side counter-proposed values relative to the provisional set move in BOTH directions (FLOOR up, CEIL down, HEAD down, GAP up) — severity calibration from first principles, not tuning toward any outcome.",
+  "criteria": [
+    {
+      "label": "null_abstention_floor_unmet",
+      "stratum": "null",
+      "comparison": "ci_upper_bound",
+      "floor_or_ceiling": 0.75,
+      "is_floor": true,
+      "measurement_source": "null_stratum_abstention_proportion",
+      "rationale": "Contract semantic: abstention IS the correct operation on the NULL stratum. At n=16, Wilson CI upper < 0.75 eliminates candidates that confidently abstain less than half the time (CI upper bound on 8/16 is approximately 0.720, and on 0/16 is approximately 0.194 — both below 0.75). Ideal NULL corner 16/16 carries CI [0.806, 1.000]; upper bound 1.000 clears 0.75 by 0.25 of the interval. Provisional 0.50 was withdrawn (appearance of run-1 placeholder coincidence; near-redundant with the universal-answerer detection)."
+    },
+    {
+      "label": "answerable_abstention_ceiling_exceeded",
+      "stratum": "answerable",
+      "comparison": "ci_lower_bound",
+      "floor_or_ceiling": 0.20,
+      "is_floor": false,
+      "measurement_source": "answerable_stratum_abstention_proportion",
+      "rationale": "Symmetric severity to FLOOR on the answerable stratum. Refusing more than one in five answerable items confidently (Wilson CI lower > 0.20 at n=80) is operation-breaking on the contract. Universal-abstainer 80/80 carries CI [0.954, 1.000]; lower bound 0.954 well above 0.20. Ideal 0/80 carries CI [0.000, 0.046]; lower 0 well below 0.20. Provisional 0.50 was withdrawn (permitted 40% answerable refusal to survive)."
+    },
+    {
+      "label": "accuracy_indistinguishable_from_token_prior",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.10,
+      "is_floor": true,
+      "measurement_source": "newcombe_wilson_difference_candidate_minus_control_token_prior",
+      "rationale": "Control baseline = 1/26 by shell construction (uniform visible VALUE_POOL of size 26 with queried key absent and bindings removed). 0.10 absolute margin is approximately 2.6x the baseline; only prior-driven behavior sits confidently within it. ORC-06 fires (candidate-control difference CI upper bound approximately +0.07 < 0.10); ideal separates by approximately 0.96."
+    },
+    {
+      "label": "accuracy_indistinguishable_from_declared_policy_envelope",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.10,
+      "is_floor": true,
+      "measurement_source": "newcombe_wilson_difference_candidate_minus_envelope",
+      "rationale": "Same separation logic as TP_margin, against the structural envelope. Under the locked stratified schedule (4 disjoint shortcut strata at 12/80 each), envelope = 48/80 = 0.60 exactly. ORC-02..05 (in-envelope shortcuts) fire; ORC-11 fires (candidate approximately 0.36 minus envelope 0.60 = -0.24, CI upper well below 0.10); ORC-12 sits NOT_RULED_OUT (candidate approximately 0.79 minus envelope 0.60 = +0.19, CI upper above 0.10)."
+    },
+    {
+      "label": "insufficient_measurement_headroom",
+      "stratum": "answerable",
+      "comparison": "ci_upper_bound",
+      "floor_or_ceiling": 0.15,
+      "is_floor": true,
+      "measurement_source": "wilson_ci_upper_on_(1_minus_envelope_score_answerable)",
+      "rationale": "HEAD is the declared B4 headroom-class exception: it fires only when the envelope confidently exceeds 0.85 (i.e., (1 - envelope) Wilson CI upper < 0.15), meaning shortcuts explain the answerable stratum to within 15% — the instrument lacks substrate for above-shortcut measurement. Under the locked schedule, envelope = 0.60 exactly and (1 - envelope) = 0.40 (Wilson CI [0.300, 0.510]); upper 0.510 well above 0.15 — HEAD does not fire at validation, as expected. Provisional 0.20 was withdrawn (near-tautological with the 0.80 envelope cap). Provisional candidate-attempted-proportion measurement source was withdrawn (it was a candidate-behavior proxy, not the envelope-derived headroom the rationale requires)."
+    },
+    {
+      "label": "strict_content_gap_instability",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.30,
+      "is_floor": false,
+      "measurement_source": "newcombe_wilson_difference_content_minus_strict",
+      "rationale": "Targets the documented format-cliff class. Sign pinned: strict ⊆ content, so (content - strict) >= 0 always. CI lower > 0.30 means at least 30% of answerable items are content-correct but format-broken — contract instability, not statistical noise. Smaller gaps remain descriptive through dual scoring. Provisional 0.20 withdrawn (no stricter-format severity rationale on record; would have been a placeholder). In the synthetic validation, content == strict by construction; criterion does not fire on any oracle case."
+    }
+  ]
+}

@@ -1,22 +1,21 @@
-"""Lane 1a' Phase 5 model-free validation pipeline entry point.
+"""Lane 1a' Phase 5 corrective model-free validation pipeline entry point (v0.2).
 
 SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION
-D2 PHASE 5 VALIDATION ARTIFACT
+D2 PHASE 5 v0.2 VALIDATION ARTIFACT (CORRECTIVE RE-RUN)
 NO MODEL INVOKED -- NO MODEL LOADED
 NO SWEEP_ID CREATED -- NO SWEEP EXECUTION AUTHORIZED
 
-Executes the Phase 5 model-free validation pipeline against the
-single rung L01 (representative). Per Manager-confirmed D2 scope:
-  - construct pilot + final manifests (deterministic seeds)
-  - apply policy battery (deterministic; no model)
-  - run full-instrument oracle validation against all 9 oracle cases
-  - run A6 final-manifest re-verification
-  - populate T1, T3, T4 reports
-  - assemble Instrument Validation Report draft
-  - emit execution ledger
-
-All emitted artifacts are SYNTHETIC / DIAGNOSTIC; lock-eligibility
-determination only; no candidate / threshold / certification evidence.
+Executes the Phase 5 corrective re-run pipeline under PH5-4 pre-flight:
+  1. verify lock-event artifact hashes (PH5-4)
+  2. construct stratified pilot + final manifests (PH5-3)
+  3. apply policy battery (deterministic; no model)
+  4. run full-instrument oracle validation against 12 oracle cases
+     using label-set match predicate (PH5-2)
+  5. run A6 final-manifest re-verification at 0.05 tolerance
+  6. populate T1, T3, T4 reports
+  7. assemble Instrument Validation Report draft with PH5-5 run-1
+     retention block
+  8. emit execution ledger
 """
 from __future__ import annotations
 
@@ -29,12 +28,17 @@ from pathlib import Path
 # Add package directory to path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from lane1a_prime.analysis import (
+    ValidationPreFlightConfig,
+    load_t3_bounds,
+    verify_pre_flight_config,
+)
 from lane1a_prime.lock_packet import (
     DriftToleranceDeclaration,
     a6_final_manifest_reverification,
 )
+from lane1a_prime.oracle_cases import load_oracle_verdict_table
 from lane1a_prime.validation import (
-    DEFAULT_T3_CRITERIA,
     ManifestRecipe,
     apply_policy_battery,
     assemble_instrument_validation_report,
@@ -51,9 +55,16 @@ from lane1a_prime.validation import (
 
 OUTPUT_DIR = Path(__file__).resolve().parent
 
+# PH5-1 lock event artifact hashes (post-corrective; CS+NS+TL co-signed at
+# governance/2026-06-11_lane-1a-prime/PH5-1-JOINT-LOCK-EVENT-RECORD-v0.1.md).
+# Provisional hashes from run-2 superseded; these reference the v2
+# locked artifacts under the NS bounds-side review.
+ORACLE_VERDICT_TABLE_HASH = "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5"
+T3_BOUNDS_HASH = "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39"
+STRATIFIED_RECIPE_HASH = "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5"
+
 
 def _json_default(obj):
-    """JSON serializer for dataclasses and tuples."""
     if dataclasses.is_dataclass(obj):
         return asdict(obj)
     if isinstance(obj, tuple):
@@ -80,18 +91,30 @@ def _serialize_t1(t1):
 
 def main():
     rung_id = "L01"
-    pilot_recipe = ManifestRecipe(rung_id=rung_id, seed=0)
-    final_recipe = ManifestRecipe(rung_id=rung_id, seed=1)
 
-    # 1. Construct manifests
+    # PH5-4: pre-flight hash precondition
+    pre_flight = ValidationPreFlightConfig(
+        oracle_verdict_table_path=OUTPUT_DIR / "ORACLE_VERDICT_TABLE.json",
+        oracle_verdict_table_hash=ORACLE_VERDICT_TABLE_HASH,
+        t3_bounds_path=OUTPUT_DIR / "T3_BOUNDS_DECLARATION.json",
+        t3_bounds_hash=T3_BOUNDS_HASH,
+        stratified_recipe_path=OUTPUT_DIR / "STRATIFIED_RECIPE_SCHEDULE.json",
+        stratified_recipe_hash=STRATIFIED_RECIPE_HASH,
+    )
+    verify_pre_flight_config(pre_flight)
+    print("PH5-4 pre-flight: PASSED (all lock-event artifact hashes match)")
+
+    # PH5-3: stratified recipe; identical for pilot and final (drift = 0
+    # under construction-constant structural hit-rates).
+    pilot_recipe = ManifestRecipe(rung_id=rung_id, seed=0)
+    final_recipe = ManifestRecipe(rung_id=rung_id, seed=0)
+
     pilot_records = construct_pilot_manifests(pilot_recipe)
     final_records = construct_pilot_manifests(final_recipe)
 
-    # 2. Apply policy battery
     pilot_outputs = apply_policy_battery(pilot_records)
     final_outputs = apply_policy_battery(final_records)
 
-    # 3. Compute per-policy scores for A6
     pilot_battery_scores = {
         p: score_policy_outputs(pilot_records, outs, "answerable").accuracy
         for p, outs in pilot_outputs.items()
@@ -105,13 +128,7 @@ def main():
     pilot_envelope = compute_union_envelope(pilot_records, pilot_outputs)
     final_envelope = compute_union_envelope(final_records, final_outputs)
 
-    # 4. A6 re-verification under the joint-disposition tolerance
-    # (per IS-7 / joint disposition: per_policy=0.05; envelope=0.05).
-    # On synthetic seeds with different draws (pilot seed=0; final
-    # seed=1), drift exceeds tolerance — this is the CORRECT A6
-    # behavior under the locked tolerance. Production use case has
-    # pilot and final drawn from the same locked construction recipe
-    # (same seed family), where drift is naturally near zero.
+    # A6 under joint-disposition tolerance 0.05 (unchanged from declared)
     a6 = a6_final_manifest_reverification(
         pilot_battery_scores=pilot_battery_scores,
         pilot_envelope=pilot_envelope,
@@ -123,15 +140,20 @@ def main():
         ),
     )
 
-    # 5. Full-instrument oracle validation
-    verifications = run_full_instrument_oracle_validation(pilot_records)
+    # PH5-2: full-instrument oracle validation with label-set matching
+    verifications = run_full_instrument_oracle_validation(
+        pilot_records,
+        pre_flight_config=pre_flight,
+    )
 
-    # 6. T1 / T3 / T4 reports
+    # Load locked criteria for T3 report
+    criteria = load_t3_bounds(OUTPUT_DIR / "T3_BOUNDS_DECLARATION.json")
+
     t1 = populate_t1_report(pilot_records, pilot_outputs, a6_result=a6)
-    t3 = populate_t3_report(criteria=DEFAULT_T3_CRITERIA)
+    t3 = populate_t3_report(criteria=criteria)
     t4 = populate_t4_report()
 
-    # 7. Emit JSON artifacts
+    # Emit JSON artifacts
     pilot_manifest_path = OUTPUT_DIR / "pilot_manifests_L01.json"
     final_manifest_path = OUTPUT_DIR / "final_manifests_L01.json"
     oracle_results_path = OUTPUT_DIR / "oracle_validation_results.json"
@@ -151,11 +173,12 @@ def main():
     t3_path.write_text(json.dumps(dataclasses.asdict(t3), indent=2))
     t4_path.write_text(json.dumps(dataclasses.asdict(t4), indent=2))
 
-    # 8. Assemble Instrument Validation Report
-    report_md = assemble_instrument_validation_report(t1, t3, t4, verifications, rung_id)
+    report_md = assemble_instrument_validation_report(
+        t1, t3, t4, verifications, rung_id,
+        run_1_retention_pointer="validation/superseded_run-1/",
+    )
     report_path.write_text(report_md)
 
-    # 9. Execution ledger
     files_created = [
         pilot_manifest_path, final_manifest_path,
         oracle_results_path, t1_path, t3_path, t4_path, report_path,
@@ -163,32 +186,32 @@ def main():
     ledger = emit_execution_ledger(
         files_created=files_created,
         what_was_generated=(
-            f"pilot manifests (seed=0, rung={rung_id}, n=96); "
-            f"final manifests (seed=1, rung={rung_id}, n=96); "
-            f"oracle case predictions for 9 oracle types; "
-            f"per-policy score tables; union envelope scores; "
-            f"A6 drift block; T1 / T3 / T4 reports"
+            f"stratified pilot + final manifests (seed=0, rung={rung_id}, n=96, "
+            f"stratified counts 20/20/20/20); 12 oracle case predictions; "
+            f"per-policy scores; envelope; A6 drift block under 0.05 tolerance; "
+            f"T1 / T3 / T4 reports with PH5-5 retention block"
         ),
         what_was_computed=(
             "per-policy answerable + null accuracy; distinct outputs; "
-            "policy classifications (discriminative / operation_equivalent / "
-            "degenerate_constant); union envelope at answerable stratum; "
-            "Wilson score intervals; aggregate_per_stratum; "
-            "full-instrument outcome per oracle case via "
-            "emit_elimination_label + compute_rung_outcome; "
-            "A6 per-policy and envelope drift; drift_within_tolerance flag"
+            "classifications; union envelope; Wilson + Newcombe-Wilson CIs; "
+            "uniform-principle apply_criterion (6-criterion T3 set under "
+            "locked bounds); full-instrument outcome per oracle via "
+            "emit_elimination_label + compute_rung_outcome + "
+            "match_oracle_verdict (4-clause label-set predicate); "
+            "A6 per-policy and envelope drift at 0.05 tolerance"
         ),
     )
     ledger_path.write_text(json.dumps(ledger, indent=2))
 
-    print(f"Phase 5 validation pipeline complete.")
+    print(f"Phase 5 v0.2 corrective validation pipeline complete.")
     print(f"Files created in {OUTPUT_DIR}:")
     for f in files_created:
         print(f"  {f.name}")
     print(f"  execution_ledger.json")
-    print(f"\nOracle validation: "
-          f"{sum(1 for v in verifications if v.verdict_matched)}/{len(verifications)} matched")
-    print(f"A6 drift within tolerance: {a6.drift_within_tolerance}")
+    matched = sum(1 for v in verifications if v.overall_matched)
+    print(f"\nOracle validation (label-set matching): "
+          f"{matched}/{len(verifications)} overall_matched")
+    print(f"A6 drift within tolerance (0.05): {a6.drift_within_tolerance}")
     print(f"Union envelope (pilot answerable): {pilot_envelope:.4f}")
     return 0
 

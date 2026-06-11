@@ -1,29 +1,29 @@
-"""Lane 1a' Phase 5 model-free validation harness.
+"""Lane 1a' Phase 5 corrective model-free validation harness (v0.2).
 
 SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION
-D2 IMPLEMENTATION ARTIFACT (PHASE 5)
+D2 IMPLEMENTATION ARTIFACT (PHASE 5 CORRECTIVE)
 NO MODEL INVOKED -- NO MODEL LOADED
 NO SWEEP_ID CREATED -- NO SWEEP EXECUTION AUTHORIZED
 
-Orchestrates the full Phase 5 model-free validation pipeline per the
-Manager-confirmed D2 model-free validation scope:
+v0.2 changes from v0.1 (per joint NS+CS+TL corrective disposition):
 
-  1. construct_pilot_manifests : synthetic deterministic seeds
-  2. apply_policy_battery     : deterministic; no model
-  3. compute_per_stratum_scores: INH-1 aggregation
-  4. run_a5_oracle_preflight   : oracle case verdict table
-  5. run_full_instrument_oracle_validation : Team Lead §5 NEW;
-     tests the whole classifier end-to-end against each oracle case
-  6. run_a6_reverification    : pilot vs final drift (IS-7)
-  7. populate_t1_report       : per-policy scores + classification
-  8. populate_t3_report       : ideal-witness pass-region checklist
-  9. populate_t4_report       : disposition table
- 10. assemble_instrument_validation_report : markdown report
- 11. emit_execution_ledger    : per joint memo §9b
+  PH5-2: label-set match predicate (required_labels /
+         permitted_co_labels / required_absent_labels) replaces
+         verdict-only matching.
 
-All artifacts are SYNTHETIC / DIAGNOSTIC; the report carries the
-report-level non-claim (E16): a Validation Report PASS means pre-lock
-adequacy on declared cases, pilots, and required checks only.
+  PH5-3: stratified recipe — ManifestRecipe gains stratification
+         fields; construct_pilot_manifests assigns gold position
+         by stratum (last_position / salient_endpoint /
+         prefix_neighborhood / none). Structural hit-rates become
+         construction constants; A6 verifies implementation
+         fidelity, not sampling luck.
+
+  PH5-4: pre-flight hash precondition — run_full_instrument_oracle_
+         validation refuses to proceed unless verify_pre_flight_config
+         passes (verdict table + bounds + recipe schedule hashes
+         match lock event).
+
+  PH5-5: run-1 retention block in IVR.
 """
 from __future__ import annotations
 
@@ -37,8 +37,15 @@ from typing import Callable, Optional
 from lane1a_prime.analysis import (
     CriterionComparison,
     EliminationCriterion,
+    PERMITTED_POOLED_DIAGNOSTICS,
+    ValidationPreFlightConfig,
+    ValidationPreFlightRefused,
     aggregate_per_stratum,
+    apply_criterion,
     emit_elimination_label,
+    load_t3_bounds,
+    newcombe_wilson_difference,
+    verify_pre_flight_config,
     wilson_score_interval,
 )
 from lane1a_prime.controls import (
@@ -52,12 +59,12 @@ from lane1a_prime.lock_packet import (
     a6_final_manifest_reverification,
 )
 from lane1a_prime.oracle_cases import (
-    ORACLE_CASE_CATALOG,
-    ExpectedVerdict,
     OracleCase,
+    ORACLE_VERDICT_TABLE_PATH,
     SimulatedPrediction,
     VALUE_POOL,
     get_predict_function,
+    load_oracle_verdict_table,
 )
 from lane1a_prime.outcome import (
     K_EQUALS_ZERO_STATEMENT,
@@ -90,14 +97,48 @@ DEFAULT_N_ANSWERABLE = 80
 DEFAULT_N_NULL = 16
 DEFAULT_DISTRACTOR_COUNT = 4
 
+# Lock event artifact paths
+LOCK_EVENT_DIR = Path(__file__).resolve().parent.parent / "validation"
+T3_BOUNDS_PATH = LOCK_EVENT_DIR / "T3_BOUNDS_DECLARATION.json"
+STRATIFIED_RECIPE_PATH = LOCK_EVENT_DIR / "STRATIFIED_RECIPE_SCHEDULE.json"
+
 
 @dataclass(frozen=True)
 class ManifestRecipe:
+    """Lane 1a' manifest construction recipe (PH5-1 lock event: 5-stratum schedule).
+
+    Per the locked STRATIFIED_RECIPE_SCHEDULE.json v2: each answerable
+    item carries exactly one structural-feature label from the set
+    {gold_at_last_position, gold_at_salient_endpoint,
+     gold_in_prefix_neighborhood, gold_recency_adjacent,
+     no_structural_feature}. The five disjoint counts sum to
+    n_answerable. NULL stratum unchanged.
+    """
     rung_id: str
     n_answerable: int = DEFAULT_N_ANSWERABLE
     n_null: int = DEFAULT_N_NULL
     distractor_count: int = DEFAULT_DISTRACTOR_COUNT
     seed: int = 0
+    # Locked stratified counts (5-stratum disjoint schedule):
+    n_at_last_position: int = 12
+    n_at_salient_endpoint: int = 12
+    n_in_prefix_neighborhood: int = 12
+    n_recency_adjacent: int = 12
+    n_no_structural_feature: int = 32
+
+    def __post_init__(self) -> None:
+        stratified_sum = (
+            self.n_at_last_position
+            + self.n_at_salient_endpoint
+            + self.n_in_prefix_neighborhood
+            + self.n_recency_adjacent
+            + self.n_no_structural_feature
+        )
+        if stratified_sum != self.n_answerable:
+            raise ValueError(
+                f"Stratified count sum {stratified_sum} must equal "
+                f"n_answerable {self.n_answerable}"
+            )
 
 
 def _compute_recipe_hash(recipe: ManifestRecipe) -> str:
@@ -107,44 +148,168 @@ def _compute_recipe_hash(recipe: ManifestRecipe) -> str:
 
 
 def construct_pilot_manifests(recipe: ManifestRecipe) -> list[dict]:
-    """Construct synthetic pilot manifests for a single rung.
+    """Construct synthetic pilot manifests for a single rung (v0.2 stratified).
 
-    Deterministic; no model invocation; no I/O beyond reading the
-    recipe. Returns a list of manifest record dicts conformant to
+    Per PH5-3: gold position is assigned by stratum:
+      - n_at_last_position items: queried_key placed at index -1
+      - n_at_salient_endpoint items: queried_key placed at index 0
+      - n_in_prefix_neighborhood items: queried_key shares prefix
+        with another pair
+      - n_at_none_of_these items: queried_key placed elsewhere
+
+    The shortcut policies then hit exactly the stratified counts
+    by construction; pilot and final manifests with the same recipe
+    produce identical structural hit-rates regardless of seed.
+
+    Returns a list of manifest record dicts conformant to
     manifest_schema.yaml.
     """
     rng = random.Random(recipe.seed)
-    records = []
+    records: list[dict] = []
     recipe_hash = _compute_recipe_hash(recipe)
     key_pool_size = 200
 
-    # Answerable items: queried_key IS one of the pairs
-    for i in range(recipe.n_answerable):
+    # Stratified assignment for answerable items.
+    # We construct items per stratum so structural hit-rates are
+    # exact construction constants.
+
+    answerable_records = []
+
+    # Stratum 1: queried_key at last position
+    for _ in range(recipe.n_at_last_position):
         queried_key = (rng.randint(0, key_pool_size - 1),)
         distractor_keys: list[tuple[int, ...]] = []
         while len(distractor_keys) < recipe.distractor_count:
             k = (rng.randint(0, key_pool_size - 1),)
             if k != queried_key and k not in distractor_keys:
                 distractor_keys.append(k)
-
+        # Place queried_key at the LAST position
         all_keys = distractor_keys + [queried_key]
-        rng.shuffle(all_keys)
+        pairs = [
+            {"key_token_ids": list(k), "value_token_ids": [rng.choice(VALUE_POOL)]}
+            for k in all_keys
+        ]
+        gold_value = pairs[-1]["value_token_ids"]
+        answerable_records.append((pairs, queried_key, gold_value))
 
-        pairs = []
-        for k in all_keys:
-            v = rng.choice(VALUE_POOL)
-            pairs.append({
-                "key_token_ids": list(k),
-                "value_token_ids": [v],
-            })
+    # Stratum 2: queried_key at salient endpoint (index 0)
+    for _ in range(recipe.n_at_salient_endpoint):
+        queried_key = (rng.randint(0, key_pool_size - 1),)
+        distractor_keys = []
+        while len(distractor_keys) < recipe.distractor_count:
+            k = (rng.randint(0, key_pool_size - 1),)
+            if k != queried_key and k not in distractor_keys:
+                distractor_keys.append(k)
+        # Place queried_key at INDEX 0
+        all_keys = [queried_key] + distractor_keys
+        pairs = [
+            {"key_token_ids": list(k), "value_token_ids": [rng.choice(VALUE_POOL)]}
+            for k in all_keys
+        ]
+        gold_value = pairs[0]["value_token_ids"]
+        answerable_records.append((pairs, queried_key, gold_value))
 
-        # Locate gold (the value of the pair matching queried_key)
+    # Stratum 3: queried_key in prefix neighborhood
+    # The queried_key shares a prefix with another pair (the "neighbor").
+    # The recency_excluding_target shortcut may or may not hit gold;
+    # prefix_neighbor_confusion shortcut targets the neighbor's value.
+    for _ in range(recipe.n_in_prefix_neighborhood):
+        # 2-token queried_key for prefix-shared behavior
+        prefix_token = rng.randint(0, key_pool_size - 1)
+        queried_key = (prefix_token, rng.randint(0, key_pool_size - 1))
+        # One neighbor sharing the prefix token
+        neighbor_key = (prefix_token, rng.randint(0, key_pool_size - 1))
+        # Distractors with different prefixes
+        distractor_keys = [neighbor_key]
+        while len(distractor_keys) < recipe.distractor_count:
+            k = (rng.randint(0, key_pool_size - 1), rng.randint(0, key_pool_size - 1))
+            if (
+                k != queried_key
+                and k[0] != prefix_token
+                and k not in distractor_keys
+            ):
+                distractor_keys.append(k)
+        # Place queried_key at the MIDDLE (index 2 if it's a 5-element list)
+        middle_idx = recipe.distractor_count // 2
+        all_keys = distractor_keys[:middle_idx] + [queried_key] + distractor_keys[middle_idx:]
+        pairs = [
+            {"key_token_ids": list(k), "value_token_ids": [rng.choice(VALUE_POOL)]}
+            for k in all_keys
+        ]
+        # Find gold (queried_key's value)
         gold_value = None
         for p in pairs:
             if tuple(p["key_token_ids"]) == queried_key:
                 gold_value = p["value_token_ids"]
                 break
+        answerable_records.append((pairs, queried_key, gold_value))
 
+    # Stratum 4: recency_adjacent (queried at middle; last non-target pair carries
+    # gold value, so recency_excluding_target shortcut hits by construction).
+    # Constructibility note: under the current policy definitions
+    # (pure_last_position emits position[-1].value), the last pair's
+    # value coinciding with gold causes pure_last_position to also hit
+    # these 12 items. The disjointness is at the ITEM-LABEL level
+    # (each item carries one feature label), not at the policy-hit
+    # level. This is documented in the joint lock-event memo as a
+    # BLOCKER for NS+TL resolution before run-3.
+    for _ in range(recipe.n_recency_adjacent):
+        queried_key = (rng.randint(0, key_pool_size - 1),)
+        distractor_keys = []
+        while len(distractor_keys) < recipe.distractor_count:
+            k = (rng.randint(0, key_pool_size - 1),)
+            if k != queried_key and k not in distractor_keys:
+                distractor_keys.append(k)
+        # Place queried_key at the MIDDLE (index 2 of 5)
+        middle_idx = recipe.distractor_count // 2
+        all_keys = distractor_keys[:middle_idx] + [queried_key] + distractor_keys[middle_idx:]
+        # gold = a value chosen now; both the queried_key's binding and
+        # the last pair's value are set to gold so recency hits.
+        gold_token = rng.choice(VALUE_POOL)
+        pairs = []
+        for i, k in enumerate(all_keys):
+            if tuple(k) == queried_key:
+                v = [gold_token]
+            elif i == len(all_keys) - 1:
+                v = [gold_token]  # last non-target pair carries gold value
+            else:
+                # ensure value != gold to keep distractors clean
+                alt = rng.choice([t for t in VALUE_POOL if t != gold_token])
+                v = [alt]
+            pairs.append({"key_token_ids": list(k), "value_token_ids": v})
+        gold_value = [gold_token]
+        answerable_records.append((pairs, queried_key, gold_value))
+
+    # Stratum 5: no_structural_feature (queried at middle; no last-pair
+    # gold coincidence; no prefix neighbor; no salient endpoint).
+    for _ in range(recipe.n_no_structural_feature):
+        queried_key = (rng.randint(0, key_pool_size - 1),)
+        distractor_keys = []
+        while len(distractor_keys) < recipe.distractor_count:
+            k = (rng.randint(0, key_pool_size - 1),)
+            if k != queried_key and k not in distractor_keys:
+                distractor_keys.append(k)
+        middle_idx = recipe.distractor_count // 2
+        all_keys = distractor_keys[:middle_idx] + [queried_key] + distractor_keys[middle_idx:]
+        # gold is the queried_key's binding; ensure last non-target
+        # pair's value does NOT equal gold (so recency_excluding_target
+        # does not coincidentally hit).
+        gold_token = rng.choice(VALUE_POOL)
+        pairs = []
+        for i, k in enumerate(all_keys):
+            if tuple(k) == queried_key:
+                v = [gold_token]
+            elif i == len(all_keys) - 1:
+                alt = rng.choice([t for t in VALUE_POOL if t != gold_token])
+                v = [alt]
+            else:
+                v = [rng.choice(VALUE_POOL)]
+            pairs.append({"key_token_ids": list(k), "value_token_ids": v})
+        gold_value = [gold_token]
+        answerable_records.append((pairs, queried_key, gold_value))
+
+    # Convert to manifest records
+    for (pairs, queried_key, gold_value) in answerable_records:
         records.append({
             "rung_id": recipe.rung_id,
             "context_block": {
@@ -167,7 +332,6 @@ def construct_pilot_manifests(recipe: ManifestRecipe) -> list[dict]:
 
     # NULL items: queried_key is NOT in the pairs
     for i in range(recipe.n_null):
-        # Generate a queried key outside the standard key pool
         queried_key = (key_pool_size + i,)
         distractor_keys = []
         while len(distractor_keys) < recipe.distractor_count:
@@ -175,14 +339,9 @@ def construct_pilot_manifests(recipe: ManifestRecipe) -> list[dict]:
             if k not in distractor_keys:
                 distractor_keys.append(k)
         pairs = [
-            {
-                "key_token_ids": list(k),
-                "value_token_ids": [rng.choice(VALUE_POOL)],
-            }
+            {"key_token_ids": list(k), "value_token_ids": [rng.choice(VALUE_POOL)]}
             for k in distractor_keys
         ]
-        rng.shuffle(pairs)
-
         records.append({
             "rung_id": recipe.rung_id,
             "context_block": {
@@ -194,7 +353,7 @@ def construct_pilot_manifests(recipe: ManifestRecipe) -> list[dict]:
                 },
             },
             "queried_key": {"key_token_ids": list(queried_key)},
-            "gold": {"value_token_ids": []},  # NULL: gold is abstention
+            "gold": {"value_token_ids": []},
             "stratum": "null",
             "metadata": {
                 "construction_recipe_hash": recipe_hash,
@@ -219,11 +378,7 @@ class PolicyScore:
 
 
 def apply_policy_battery(records: list[dict]) -> dict[str, list[PolicyOutput]]:
-    """Apply each envelope policy to each manifest record.
-
-    Returns a dict {policy_name: [PolicyOutput per record]}.
-    Deterministic; no model invocation.
-    """
+    """Apply each envelope policy to each manifest record."""
     policies: list[tuple[str, Callable]] = [
         ("pure_last_position", pure_last_position),
         ("salient_endpoint", salient_endpoint),
@@ -235,7 +390,6 @@ def apply_policy_battery(records: list[dict]) -> dict[str, list[PolicyOutput]]:
         view = build_policy_input_view(record)
         for name, fn in policies:
             results[name].append(fn(view))
-    # copy_completion uses DiagnosticInputView (diagnostic; outside envelope)
     results["copy_completion"] = []
     for record in records:
         d_view = build_diagnostic_input_view(record)
@@ -280,9 +434,7 @@ def compute_union_envelope(
     stratum: str = "answerable",
 ) -> float:
     """Union envelope: max fraction of items where ANY envelope policy
-    predicts the gold value. INH-1 closure: computes over the
-    specified stratum.
-    """
+    predicts the gold value."""
     n = 0
     n_covered = 0
     for idx, record in enumerate(records):
@@ -302,13 +454,7 @@ def classify_policies(
     policy_scores: dict[str, PolicyScore],
     declared_cap: float = 0.50,
 ) -> dict[str, str]:
-    """Classify each policy per addendum A4.
-
-    For Phase 5: classification based on answerable_acc:
-      operation_equivalent if accuracy >= declared_cap
-      degenerate_constant  if distinct_outputs <= 1
-      discriminative       otherwise
-    """
+    """Classify each policy per addendum A4."""
     out = {}
     for name, score in policy_scores.items():
         if score.accuracy >= declared_cap:
@@ -320,156 +466,302 @@ def classify_policies(
     return out
 
 
-# ---------- A5 oracle pre-flight (per-component) ----------
+# ---------- PH5-2: match_oracle_verdict predicate ----------
 
 @dataclass(frozen=True)
 class OracleVerification:
-    """Single oracle case verification result."""
+    """Per-case verification result with full label-set accounting (v0.2)."""
     oracle_case_id: str
     oracle_case_type: str
-    expected_verdict: str
-    actual_full_instrument_outcome: str
+    expected_outcome: str
+    actual_outcome: str
+    required_labels: tuple[str, ...]
+    permitted_co_labels: tuple[str, ...]
+    required_absent_labels: tuple[str, ...]
     attached_labels: tuple[str, ...]
-    boundary_proximity_flags: dict[str, bool]
-    verdict_matched: bool
+    outcome_matched: bool
+    required_labels_present: bool
+    required_absent_labels_absent: bool
+    only_required_or_permitted_attached: bool
+    overall_matched: bool
     failure_interpretation: str = ""
 
 
-# ---------- T3 criteria (Phase 5 default declared values) ----------
+def match_oracle_verdict(
+    oracle_case: OracleCase,
+    actual_outcome: str,
+    attached_labels: frozenset[str],
+) -> OracleVerification:
+    """PH5-2 closure: full label-set match predicate.
 
-# These threshold values are SWEEP PARAMETERS declared at packet stage.
-# Phase 5 uses the two symmetric abstention criteria as the
-# default set for the validation run. These two suffice to
-# discriminate the universal answerer (triggers NULL floor) and the
-# universal abstainer (triggers answerable ceiling) while letting the
-# ideal retriever and perfect NULL handler pass (ideal-corner
-# closure per joint disposition).
-#
-# The four additional descriptive elimination labels declared in
-# ELIMINATION_LABEL_VALUES (insufficient_measurement_headroom,
-# strict_content_gap_instability,
-# accuracy_indistinguishable_from_token_prior,
-# accuracy_indistinguishable_from_declared_policy_envelope) are
-# vocabulary placeholders; their corresponding T3 criteria and
-# threshold values are declared at packet stage with explicit
-# rationale per the joint disposition INH-3 rule (each criterion
-# states whether it compares point estimate, CI_LOWER, CI_UPPER,
-# or DIFFERENCE_INTERVAL).
+    A case passes iff all four hold:
+      1. actual_outcome == expected_outcome
+      2. required_labels subset attached_labels
+      3. required_absent_labels intersection attached_labels = empty
+      4. attached_labels subset (required_labels union permitted_co_labels)
+    """
+    outcome_matched = actual_outcome == oracle_case.expected_outcome
+    required_set = set(oracle_case.required_labels)
+    permitted_set = set(oracle_case.permitted_co_labels)
+    absent_set = set(oracle_case.required_absent_labels)
+    attached_set = set(attached_labels)
 
-DEFAULT_T3_CRITERIA: tuple[EliminationCriterion, ...] = (
-    EliminationCriterion(
-        label="null_abstention_floor_unmet",
-        stratum="null",
-        comparison=CriterionComparison.CI_LOWER_BOUND,
-        floor_or_ceiling=0.50,
-        is_floor=True,
-    ),
-    EliminationCriterion(
-        label="answerable_abstention_ceiling_exceeded",
-        stratum="answerable",
-        comparison=CriterionComparison.CI_UPPER_BOUND,
-        floor_or_ceiling=0.50,
-        is_floor=False,
-    ),
-)
+    required_labels_present = required_set.issubset(attached_set)
+    required_absent_labels_absent = not (absent_set & attached_set)
+    allowed = required_set | permitted_set
+    only_required_or_permitted_attached = attached_set.issubset(allowed)
+
+    overall_matched = (
+        outcome_matched
+        and required_labels_present
+        and required_absent_labels_absent
+        and only_required_or_permitted_attached
+    )
+
+    failure_parts: list[str] = []
+    if not outcome_matched:
+        failure_parts.append(
+            f"outcome {actual_outcome!r} != expected "
+            f"{oracle_case.expected_outcome!r}"
+        )
+    if not required_labels_present:
+        missing = sorted(required_set - attached_set)
+        failure_parts.append(f"required labels missing: {missing}")
+    if not required_absent_labels_absent:
+        present = sorted(absent_set & attached_set)
+        failure_parts.append(f"required-absent labels present: {present}")
+    if not only_required_or_permitted_attached:
+        unexpected = sorted(attached_set - allowed)
+        failure_parts.append(f"unexpected labels attached: {unexpected}")
+    failure_interpretation = "; ".join(failure_parts)
+
+    return OracleVerification(
+        oracle_case_id=oracle_case.oracle_case_id,
+        oracle_case_type=oracle_case.oracle_case_type,
+        expected_outcome=oracle_case.expected_outcome,
+        actual_outcome=actual_outcome,
+        required_labels=oracle_case.required_labels,
+        permitted_co_labels=oracle_case.permitted_co_labels,
+        required_absent_labels=oracle_case.required_absent_labels,
+        attached_labels=tuple(sorted(attached_set)),
+        outcome_matched=outcome_matched,
+        required_labels_present=required_labels_present,
+        required_absent_labels_absent=required_absent_labels_absent,
+        only_required_or_permitted_attached=only_required_or_permitted_attached,
+        overall_matched=overall_matched,
+        failure_interpretation=failure_interpretation,
+    )
 
 
-# ---------- full-instrument oracle validation (Team Lead §5 NEW) ----------
+# ---------- full-instrument oracle validation (v0.2 — label-set matching) ----------
+
+def _build_measurements_for_predictions(
+    records: list[dict],
+    predictions: tuple[SimulatedPrediction, ...],
+) -> dict[str, dict]:
+    """Build measurement dicts for each criterion from simulated predictions.
+
+    Computes per-stratum abstention rates and accuracy; for difference
+    criteria, computes candidate vs control differences (control =
+    fixed token-prior emitter; envelope = computed envelope).
+    """
+    n_answerable = sum(1 for r in records if r["stratum"] == "answerable")
+    n_null = sum(1 for r in records if r["stratum"] == "null")
+
+    null_abstentions = 0
+    answerable_abstentions = 0
+    answerable_correct = 0
+    # Token-prior baseline accuracy: count records where prediction
+    # matches the synthetic token_prior emitter's output
+    from lane1a_prime.oracle_cases import predict_token_prior_emitter
+    tp_preds = predict_token_prior_emitter(tuple(records))
+    candidate_matches_tp = 0
+
+    for record, pred, tp_pred in zip(records, predictions, tp_preds):
+        if record["stratum"] == "null":
+            if pred.abstained:
+                null_abstentions += 1
+        else:
+            if pred.abstained:
+                answerable_abstentions += 1
+            else:
+                gold = tuple(record["gold"]["value_token_ids"])
+                if pred.predicted_value_token_ids == gold:
+                    answerable_correct += 1
+        # Token-prior overlap
+        if (
+            not pred.abstained
+            and not tp_pred.abstained
+            and pred.predicted_value_token_ids == tp_pred.predicted_value_token_ids
+        ):
+            candidate_matches_tp += 1
+
+    measurements: dict[str, dict] = {}
+
+    # null_abstention_floor_unmet (NULL stratum; CI_UPPER < floor)
+    if n_null > 0:
+        m = aggregate_per_stratum(
+            successes=null_abstentions,
+            n_effective=n_null,
+            stratum="null",
+            metric_name="null_abstention",
+        )
+        measurements["null_abstention_floor_unmet"] = m
+
+    # answerable_abstention_ceiling_exceeded (answerable stratum; CI_LOWER > ceiling)
+    if n_answerable > 0:
+        m = aggregate_per_stratum(
+            successes=answerable_abstentions,
+            n_effective=n_answerable,
+            stratum="answerable",
+            metric_name="answerable_abstention",
+        )
+        measurements["answerable_abstention_ceiling_exceeded"] = m
+
+    # accuracy_indistinguishable_from_token_prior (DIFFERENCE; candidate - control)
+    if n_answerable > 0:
+        # Control accuracy: token_prior baseline against gold
+        tp_correct = 0
+        for r, tp in zip(records, tp_preds):
+            if r["stratum"] != "answerable":
+                continue
+            if (
+                not tp.abstained
+                and tp.predicted_value_token_ids == tuple(r["gold"]["value_token_ids"])
+            ):
+                tp_correct += 1
+        diff_lower, diff_upper = newcombe_wilson_difference(
+            successes_a=answerable_correct,
+            n_a=n_answerable,
+            successes_b=tp_correct,
+            n_b=n_answerable,
+        )
+        measurements["accuracy_indistinguishable_from_token_prior"] = {
+            "stratum": "answerable",
+            "n_effective": n_answerable,
+            "point_estimate": (answerable_correct - tp_correct) / n_answerable
+                              if n_answerable > 0 else 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 1.0,
+            "difference_lower": diff_lower,
+            "difference_upper": diff_upper,
+        }
+
+    # accuracy_indistinguishable_from_declared_policy_envelope (DIFFERENCE; candidate - envelope)
+    # The envelope's "accuracy" against gold per-record is computed
+    # from the policy battery; for oracles, we approximate the envelope
+    # as the best-of-4-policies hit rate which is rung-deterministic
+    # under the stratified recipe (~0.25 per shortcut * 4 ≈ 1.0
+    # without overlap; with overlap, the union envelope ≈ 0.4-0.6).
+    if n_answerable > 0:
+        # Apply policy battery to the records; compute envelope
+        outputs_by_policy = apply_policy_battery(records)
+        envelope = compute_union_envelope(records, outputs_by_policy, "answerable")
+        env_correct = int(envelope * n_answerable)
+        diff_lower, diff_upper = newcombe_wilson_difference(
+            successes_a=answerable_correct,
+            n_a=n_answerable,
+            successes_b=env_correct,
+            n_b=n_answerable,
+        )
+        measurements["accuracy_indistinguishable_from_declared_policy_envelope"] = {
+            "stratum": "answerable",
+            "n_effective": n_answerable,
+            "point_estimate": (answerable_correct - env_correct) / n_answerable
+                              if n_answerable > 0 else 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 1.0,
+            "difference_lower": diff_lower,
+            "difference_upper": diff_upper,
+        }
+
+    # insufficient_measurement_headroom (CI_UPPER < required headroom)
+    # PH5-1 locked semantic: measurement_source = Wilson CI upper on
+    # (1 - envelope_score_answerable). Fires when the envelope confidently
+    # exceeds 0.85 (i.e., (1 - envelope) CI upper < 0.15) — the B4
+    # headroom-class exception (shortcuts saturate the answerable
+    # stratum; instrument lacks substrate for above-shortcut measurement).
+    # Under the locked schedule, envelope = 48/80 = 0.60, headroom 32/80
+    # = 0.40, Wilson CI upper on 32/80 ≈ 0.510; criterion does not fire
+    # at validation. The measurement is a manifest property — independent
+    # of the oracle candidate — so HEAD does not attach to any oracle case.
+    if n_answerable > 0:
+        # env_correct already computed above for envelope difference
+        # measurement; reuse it.
+        n_envelope_misses = n_answerable - env_correct
+        m = aggregate_per_stratum(
+            successes=n_envelope_misses,
+            n_effective=n_answerable,
+            stratum="answerable",
+            metric_name="measurement_headroom",
+        )
+        measurements["insufficient_measurement_headroom"] = m
+
+    # strict_content_gap_instability (DIFFERENCE; content - strict)
+    # Under synthetic construction, content == strict (no format
+    # variants); difference = 0; never fires.
+    if n_answerable > 0:
+        diff_lower, diff_upper = newcombe_wilson_difference(
+            successes_a=answerable_correct,
+            n_a=n_answerable,
+            successes_b=answerable_correct,
+            n_b=n_answerable,
+        )
+        measurements["strict_content_gap_instability"] = {
+            "stratum": "answerable",
+            "n_effective": n_answerable,
+            "point_estimate": 0.0,
+            "ci_lower": 0.0,
+            "ci_upper": 1.0,
+            "difference_lower": diff_lower,
+            "difference_upper": diff_upper,
+        }
+
+    return measurements
+
 
 def run_full_instrument_oracle_validation(
     records: list[dict],
-    criteria: tuple[EliminationCriterion, ...] = DEFAULT_T3_CRITERIA,
+    criteria: Optional[tuple[EliminationCriterion, ...]] = None,
+    oracle_cases: Optional[tuple[OracleCase, ...]] = None,
+    pre_flight_config: Optional[ValidationPreFlightConfig] = None,
 ) -> list[OracleVerification]:
-    """Per Team Lead §5: test the full classifier against known cases.
+    """Per joint disposition + PH5-2/4 closure: test the full classifier
+    against each oracle case using full label-set matching.
 
-    For each oracle case in the catalog:
-      1. Compute simulated predictions on the pilot records
-      2. Score the predictions per stratum
-      3. Build measurements dict for the criteria
-      4. Apply emit_elimination_label to get attached labels
-      5. Build RungEvaluation (data_sufficient=True; boundary flags empty)
-      6. Apply compute_rung_outcome -> actual outcome
-      7. Compare actual outcome to expected_verdict
+    Pre-flight: if pre_flight_config is provided, verify_pre_flight_config
+    is called first. If hashes mismatch or artifacts are missing,
+    ValidationPreFlightRefused is raised.
     """
+    if pre_flight_config is not None:
+        verify_pre_flight_config(pre_flight_config)
+
+    if criteria is None:
+        criteria = load_t3_bounds(T3_BOUNDS_PATH)
+    if oracle_cases is None:
+        oracle_cases = load_oracle_verdict_table()
+
     verifications: list[OracleVerification] = []
 
-    for oracle_case in ORACLE_CASE_CATALOG:
+    for oracle_case in oracle_cases:
         predict_fn = get_predict_function(oracle_case.oracle_case_type)
-        predictions = predict_fn(tuple(records))
-
-        # Score predictions per stratum
-        n_answerable = sum(1 for r in records if r["stratum"] == "answerable")
-        n_null = sum(1 for r in records if r["stratum"] == "null")
-
-        # Compute abstention rates and token-prior accuracy
-        null_abstentions = 0
-        answerable_abstentions = 0
-        answerable_correct = 0
-        token_prior_count = 0  # times prediction matches the fixed
-                                # token-prior emission (deterministic per record)
-
-        for record, pred in zip(records, predictions):
-            if record["stratum"] == "null":
-                if pred.abstained:
-                    null_abstentions += 1
-            else:  # answerable
-                if pred.abstained:
-                    answerable_abstentions += 1
-                else:
-                    gold = tuple(record["gold"]["value_token_ids"])
-                    if pred.predicted_value_token_ids == gold:
-                        answerable_correct += 1
-            # Token-prior accuracy: how often the prediction equals the
-            # fixed token-prior emission for that record
-            from lane1a_prime.oracle_cases import predict_token_prior_emitter
-            tp_pred_set = predict_token_prior_emitter((record,))
-            if (
-                not pred.abstained
-                and pred.predicted_value_token_ids == tp_pred_set[0].predicted_value_token_ids
-            ):
-                token_prior_count += 1
-
-        # Build measurements dict for the criteria
-        measurements = {}
-        if n_null > 0:
-            null_abstention_meas = aggregate_per_stratum(
-                successes=null_abstentions,
-                n_effective=n_null,
-                stratum="null",
-                metric_name="null_abstention",
+        # Mixture oracles take a blend_fraction parameter
+        if oracle_case.blend_fraction_sweep_parameter is not None:
+            predictions = predict_fn(
+                tuple(records),
+                blend_fraction=oracle_case.blend_fraction_sweep_parameter,
             )
-            measurements["null_abstention_floor_unmet"] = null_abstention_meas
-        if n_answerable > 0:
-            answerable_abstention_meas = aggregate_per_stratum(
-                successes=answerable_abstentions,
-                n_effective=n_answerable,
-                stratum="answerable",
-                metric_name="answerable_abstention",
-            )
-            measurements["answerable_abstention_ceiling_exceeded"] = answerable_abstention_meas
-            envelope_meas = aggregate_per_stratum(
-                successes=answerable_correct,
-                n_effective=n_answerable,
-                stratum="answerable",
-                metric_name="answerable_acc",
-            )
-            measurements["accuracy_indistinguishable_from_declared_policy_envelope"] = envelope_meas
-            tp_meas = aggregate_per_stratum(
-                successes=token_prior_count,
-                n_effective=n_answerable,
-                stratum="answerable",
-                metric_name="token_prior_acc",
-            )
-            measurements["accuracy_indistinguishable_from_token_prior"] = tp_meas
+        else:
+            predictions = predict_fn(tuple(records))
 
-        # Apply emit_elimination_label
+        measurements = _build_measurements_for_predictions(records, predictions)
+
         label_input = LabelInput(
             rung_id=records[0]["rung_id"] if records else "L00",
             policy_outputs=tuple(predictions),
         )
         attached = emit_elimination_label(label_input, criteria, measurements)
 
-        # Build RungEvaluation (data is sufficient under D2 synthetic data)
         eval_ = RungEvaluation(
             rung_id=label_input.rung_id,
             is_data_sufficient=True,
@@ -478,32 +770,12 @@ def run_full_instrument_oracle_validation(
         )
         outcome, _ = compute_rung_outcome(eval_)
 
-        verdict_matched = (
-            outcome.value == oracle_case.expected_verdict.value
-            or (
-                oracle_case.expected_verdict == ExpectedVerdict.FLAG_INDETERMINATE
-                and outcome in (RungOutcome.ELIMINATED, RungOutcome.NOT_RULED_OUT)
-            )
+        verification = match_oracle_verdict(
+            oracle_case=oracle_case,
+            actual_outcome=outcome.value,
+            attached_labels=frozenset(attached),
         )
-
-        failure_interp = ""
-        if not verdict_matched:
-            failure_interp = (
-                f"actual {outcome.value!r} does not match expected "
-                f"{oracle_case.expected_verdict.value!r}; review T3 "
-                f"threshold values or oracle case construction."
-            )
-
-        verifications.append(OracleVerification(
-            oracle_case_id=oracle_case.oracle_case_id,
-            oracle_case_type=oracle_case.oracle_case_type,
-            expected_verdict=oracle_case.expected_verdict.value,
-            actual_full_instrument_outcome=outcome.value,
-            attached_labels=attached,
-            boundary_proximity_flags={},
-            verdict_matched=verdict_matched,
-            failure_interpretation=failure_interp,
-        ))
+        verifications.append(verification)
 
     return verifications
 
@@ -513,7 +785,7 @@ def run_full_instrument_oracle_validation(
 @dataclass(frozen=True)
 class T1Report:
     """T1 battery degeneracy audit report."""
-    per_policy_scores: dict[str, dict[str, PolicyScore]]  # {policy: {stratum: score}}
+    per_policy_scores: dict[str, dict[str, PolicyScore]]
     union_envelope_score: float
     envelope_cap: float
     room_below_envelope: float
@@ -571,16 +843,12 @@ def populate_t1_report(
 
 
 def populate_t3_report(
-    criteria: tuple[EliminationCriterion, ...] = DEFAULT_T3_CRITERIA,
+    criteria: Optional[tuple[EliminationCriterion, ...]] = None,
     ideal_witness_in_pass_region: bool = True,
 ) -> T3Report:
-    """Populate T3 ideal-witness / pass-region checklist.
-
-    The ideal_witness_in_pass_region flag is True iff the
-    perfect-null-handler oracle is classified NOT_RULED_OUT (the
-    B4 closure: criterion's pass region contains the ideal corner
-    by construction).
-    """
+    """Populate T3 ideal-witness / pass-region checklist."""
+    if criteria is None:
+        criteria = load_t3_bounds(T3_BOUNDS_PATH)
     rows = []
     for c in criteria:
         rows.append({
@@ -589,7 +857,7 @@ def populate_t3_report(
             "comparison": c.comparison.value,
             "floor_or_ceiling": c.floor_or_ceiling,
             "is_floor": c.is_floor,
-            "ideal_in_pass_region": True,  # synthetic verifications confirm this
+            "ideal_in_pass_region": True,
             "perfect_model_eliminable": False,
             "disposition": "pass",
         })
@@ -597,8 +865,7 @@ def populate_t3_report(
 
 
 def populate_t4_report() -> T4Report:
-    """Populate T4 disposition table with INH-1/2/3 inherited items
-    and joint-disposition dispositions."""
+    """Populate T4 disposition table with INH + PH5 rows."""
     rows = (
         {
             "review_item_id": "INH-1",
@@ -624,10 +891,60 @@ def populate_t4_report() -> T4Report:
             "review_item_id": "INH-3",
             "reviewer": "inherited (v1 close-out) + joint disposition",
             "risk_class": "statistics",
-            "summary": "Wilson without continuity correction; Newcombe-Wilson for differences; no Wald",
+            "summary": "Wilson without continuity correction; Newcombe-Wilson for differences; no Wald; uniform principle CI bounds",
             "disposition": "incorporated",
-            "rationale": "joint disposition commit 019a964",
+            "rationale": "joint disposition commit 019a964 + D2-APPROVED §B uniform principle",
             "owner": "New Senior + CS",
+            "blocking_status": "resolved",
+        },
+        {
+            "review_item_id": "PH5-1",
+            "reviewer": "TL+NS+CS joint lock event",
+            "risk_class": "process",
+            "summary": "Joint verdict/bounds/recipe lock event held before re-run",
+            "disposition": "incorporated",
+            "rationale": "lock event record (governance/.../PH5-1-JOINT-LOCK-EVENT-RECORD)",
+            "owner": "NS + CS",
+            "blocking_status": "resolved",
+        },
+        {
+            "review_item_id": "PH5-2",
+            "reviewer": "CS implementation",
+            "risk_class": "implementation",
+            "summary": "Label-set match predicate replaces verdict-only matching",
+            "disposition": "incorporated",
+            "rationale": "match_oracle_verdict in validation.py",
+            "owner": "CS",
+            "blocking_status": "resolved",
+        },
+        {
+            "review_item_id": "PH5-3",
+            "reviewer": "CS implementation",
+            "risk_class": "implementation",
+            "summary": "Stratified recipe makes structural hit-rates construction constants",
+            "disposition": "incorporated",
+            "rationale": "ManifestRecipe + construct_pilot_manifests stratified version",
+            "owner": "CS",
+            "blocking_status": "resolved",
+        },
+        {
+            "review_item_id": "PH5-4",
+            "reviewer": "CS implementation",
+            "risk_class": "implementation",
+            "summary": "Pre-flight refuses unless verdict-table + bounds + recipe hashes match lock event",
+            "disposition": "incorporated",
+            "rationale": "ValidationPreFlightRefused + verify_pre_flight_config",
+            "owner": "CS",
+            "blocking_status": "resolved",
+        },
+        {
+            "review_item_id": "PH5-5",
+            "reviewer": "CS implementation",
+            "risk_class": "implementation",
+            "summary": "Run-1 retention block in IVR per E11",
+            "disposition": "incorporated",
+            "rationale": "validation/superseded_run-1/ + RUN-1-RETENTION.md",
+            "owner": "CS",
             "blocking_status": "resolved",
         },
     )
@@ -642,17 +959,18 @@ def assemble_instrument_validation_report(
     t4: T4Report,
     oracle_verifications: list[OracleVerification],
     rung_id: str,
+    run_1_retention_pointer: Optional[str] = None,
 ) -> str:
-    """Assemble the Instrument Validation Report markdown."""
-    matched = sum(1 for v in oracle_verifications if v.verdict_matched)
+    """Assemble the Instrument Validation Report markdown (v0.2)."""
+    matched = sum(1 for v in oracle_verifications if v.overall_matched)
     total = len(oracle_verifications)
 
     lines = [
-        "# Lane 1a' Instrument Validation Report — Phase 5 Draft",
+        "# Lane 1a' Instrument Validation Report — Phase 5 Corrective Re-Run",
         "",
         "```text",
         "SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION",
-        "D2 PHASE 5 VALIDATION ARTIFACT",
+        "D2 PHASE 5 v0.2 VALIDATION ARTIFACT (CORRECTIVE RE-RUN)",
         "NO MODEL INVOKED -- NO SWEEP_ID CREATED -- NO SWEEP EXECUTION",
         "```",
         "",
@@ -701,7 +1019,7 @@ def assemble_instrument_validation_report(
         lines.append("")
 
     lines.extend([
-        "## T3 — Ideal-Witness / Pass-Region Checklist",
+        "## T3 — Ideal-Witness / Pass-Region Checklist (6 criteria, locked bounds)",
         "",
         f"**Ideal witness in pass region:** {t3.ideal_witness_in_pass_region}",
         "",
@@ -717,24 +1035,25 @@ def assemble_instrument_validation_report(
 
     lines.extend([
         "",
-        "## Full-instrument oracle validation (Team Lead §5)",
+        "## Full-instrument oracle validation (Team Lead §5; v0.2 label-set matching)",
         "",
-        f"**Oracle cases verified:** {matched}/{total}",
+        f"**Oracle cases overall_matched:** {matched}/{total}",
         "",
-        "| Oracle Case ID | Type | Expected | Actual | Attached Labels | Matched |",
-        "|---|---|---|---|---|---|",
+        "| Case ID | Type | Expected | Actual | Attached | Required | Required Absent | Matched |",
+        "|---|---|---|---|---|---|---|---|",
     ])
     for v in oracle_verifications:
-        labels_str = ", ".join(v.attached_labels) if v.attached_labels else "-"
-        matched_str = "✓" if v.verdict_matched else "✗"
+        attached_str = ",".join(v.attached_labels) if v.attached_labels else "-"
+        req_str = ",".join(v.required_labels) if v.required_labels else "-"
+        abs_str = ",".join(v.required_absent_labels) if v.required_absent_labels else "-"
+        matched_str = "PASS" if v.overall_matched else "FAIL"
         lines.append(
             f"| {v.oracle_case_id} | {v.oracle_case_type} | "
-            f"{v.expected_verdict} | {v.actual_full_instrument_outcome} | "
-            f"{labels_str} | {matched_str} |"
+            f"{v.expected_outcome} | {v.actual_outcome} | "
+            f"{attached_str} | {req_str} | {abs_str} | {matched_str} |"
         )
 
-    # Failure interpretations
-    failed = [v for v in oracle_verifications if not v.verdict_matched]
+    failed = [v for v in oracle_verifications if not v.overall_matched]
     if failed:
         lines.extend([
             "",
@@ -743,7 +1062,8 @@ def assemble_instrument_validation_report(
         ])
         for v in failed:
             lines.append(
-                f"- **{v.oracle_case_id}**: {v.failure_interpretation}"
+                f"- **{v.oracle_case_id}** ({v.oracle_case_type}): "
+                f"{v.failure_interpretation}"
             )
 
     lines.extend([
@@ -760,8 +1080,32 @@ def assemble_instrument_validation_report(
             f"{row['owner']} | {row['blocking_status']} |"
         )
 
+    # E11 / PH5-5 run-1 retention block
+    if run_1_retention_pointer:
+        lines.extend([
+            "",
+            "## E11 / PH5-5 Run-1 Retention Block",
+            "",
+            f"- **Superseded artifact pointer:** {run_1_retention_pointer}",
+            "- **pilot_iteration_count:** 2 (run-1 superseded; run-2 current)",
+            "- **failed_pilot_records_retained:** validation/superseded_run-1/",
+            "- **reason_for_each_repilot:**",
+            "    - reduced-criteria run (CS used 2 of 6 criteria)",
+            "    - unlocked verdict table (NS oracle expected verdicts not co-signed)",
+            "    - unstratified recipe (per-draw random structural hit-rates)",
+            "    - A6 drift exceedance (pure_last_position 0.1375; envelope 0.10; both > 0.05)",
+            "- **changed_fields_between_pilots:**",
+            "    - apply_criterion CI bound (CI_LOWER -> CI_UPPER for floor; CI_UPPER -> CI_LOWER for ceiling)",
+            "    - DEFAULT_T3_CRITERIA (2 -> 6 criteria; loaded from T3_BOUNDS_DECLARATION.json)",
+            "    - ORACLE_CASE_CATALOG (9 -> 12 cases; ORC-10 semantic redefined; loaded from ORACLE_VERDICT_TABLE.json)",
+            "    - ManifestRecipe (added stratification fields; n_at_last/salient/prefix/none)",
+            "    - run_validation tolerance (0.30 -> 0.05; identical seed for pilot/final irrelevant after stratification)",
+            "    - match_oracle_verdict predicate (4-clause label-set match replaces verdict-only)",
+            "    - verify_pre_flight_config refusal precondition (PH5-4)",
+            "",
+        ])
+
     lines.extend([
-        "",
         "## Non-authorizations",
         "",
         "No execution authorized. No new sweep_id. No model runs.",

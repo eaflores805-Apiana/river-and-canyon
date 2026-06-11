@@ -31,9 +31,12 @@ LabelInput.policy_outputs by upstream code, never from controls).
 """
 from __future__ import annotations
 
+import hashlib
+import json
 import math
 from dataclasses import dataclass, field
 from enum import Enum
+from pathlib import Path
 from typing import Optional
 
 from lane1a_prime.controls import (
@@ -258,12 +261,26 @@ def apply_criterion(
 ) -> bool:
     """Return True iff the criterion fires given a measurement.
 
-    measurement should be a dict from aggregate_per_stratum or
-    equivalent, containing 'point_estimate', 'ci_lower', 'ci_upper'.
+    Per NS uniform comparison principle (D2-APPROVED v0.2 §B):
+    elimination requires the FULL confidence interval on the
+    eliminating side. Uncertainty resolves toward NOT_RULED_OUT,
+    never toward elimination.
 
-    For DIFFERENCE_INTERVAL criteria the measurement dict should
-    additionally carry 'difference_lower' and 'difference_upper'
-    from newcombe_wilson_difference.
+    For non-difference comparisons:
+      - is_floor=True (criterion fires when value too LOW):
+        comparison MUST be CI_UPPER_BOUND; fires iff ci_upper < floor.
+      - is_floor=False (criterion fires when value too HIGH):
+        comparison MUST be CI_LOWER_BOUND; fires iff ci_lower > ceiling.
+      - POINT_ESTIMATE is permitted but the uniform principle then
+        does not apply (caller's choice; declared in T3 plan).
+
+    For DIFFERENCE_INTERVAL comparisons:
+      - is_floor=True (difference too LOW): fires iff difference_upper < margin.
+      - is_floor=False (difference too HIGH): fires iff difference_lower > gap.
+
+    measurement should contain: 'point_estimate', 'ci_lower',
+    'ci_upper'; for DIFFERENCE_INTERVAL criteria also
+    'difference_lower' and 'difference_upper'.
     """
     floor_or_ceiling = criterion.floor_or_ceiling
 
@@ -274,25 +291,29 @@ def apply_criterion(
     elif criterion.comparison == CriterionComparison.CI_UPPER_BOUND:
         value = measurement["ci_upper"]
     elif criterion.comparison == CriterionComparison.DIFFERENCE_INTERVAL:
-        # For differences, "fires" rule depends on whether the
-        # interval contains the floor/ceiling boundary.
-        # For Phase 3 skeleton: criterion fires iff the
-        # difference_lower exceeds the floor (or
-        # difference_upper falls below the ceiling).
+        # Uniform principle for differences:
+        # is_floor=True (fires when difference too low):
+        #   use difference_upper (entire interval below margin)
+        # is_floor=False (fires when difference too high):
+        #   use difference_lower (entire interval above gap)
         if criterion.is_floor:
-            value = measurement.get("difference_lower", 0.0)
-        else:
             value = measurement.get("difference_upper", 0.0)
+        else:
+            value = measurement.get("difference_lower", 0.0)
     else:
         raise ValueError(
             f"Unknown CriterionComparison: {criterion.comparison!r}"
         )
 
     if criterion.is_floor:
-        # Criterion fires when measurement falls BELOW the floor.
+        # Criterion fires when value is below the floor.
+        # Under the uniform principle (with CI_UPPER comparison for
+        # non-difference floors), the entire CI is below the floor.
         return value < floor_or_ceiling
     else:
-        # Criterion fires when measurement exceeds the ceiling.
+        # Criterion fires when value is above the ceiling.
+        # Under the uniform principle (with CI_LOWER comparison for
+        # non-difference ceilings), the entire CI is above the ceiling.
         return value > floor_or_ceiling
 
 
@@ -376,3 +397,126 @@ def emit_elimination_label(
             attached_labels.append(criterion.label)
 
     return tuple(attached_labels)
+
+
+# ---------- PH5-4: ValidationPreFlightConfig + ValidationPreFlightRefused ----------
+
+class ValidationPreFlightRefused(Exception):
+    """Raised when the validation pre-flight check refuses to proceed.
+
+    Pattern-equivalent to PacketLockRefused (IS-8). Per PH5-4 joint
+    disposition: pre-flight refuses to run unless the co-signed
+    verdict-table hash, T3 bounds hash, and stratified recipe
+    schedule hash are all present and match the values declared at
+    the lock event.
+
+    Converts the "lock event held" procedural requirement into a
+    code-level mechanical refusal.
+    """
+    pass
+
+
+@dataclass(frozen=True)
+class ValidationPreFlightConfig:
+    """PH5-4: required inputs for a corrective Phase 5 validation run.
+
+    The three hashes guarantee that the artifacts loaded at runtime
+    are the same ones declared at the PH5-1 joint lock event
+    (NS+CS co-signed; TL witnessed).
+    """
+    oracle_verdict_table_path: Path
+    oracle_verdict_table_hash: str
+    t3_bounds_path: Path
+    t3_bounds_hash: str
+    stratified_recipe_path: Path
+    stratified_recipe_hash: str
+
+
+def _file_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def verify_pre_flight_config(config: ValidationPreFlightConfig) -> None:
+    """PH5-4 closure: verify all three lock-event artifacts on disk
+    match the declared hashes.
+
+    Raises ValidationPreFlightRefused if any artifact is missing or
+    any hash mismatches. The validation pipeline cannot proceed
+    without this check passing.
+    """
+    for path, expected_hash, name in [
+        (config.oracle_verdict_table_path, config.oracle_verdict_table_hash, "oracle verdict table"),
+        (config.t3_bounds_path, config.t3_bounds_hash, "T3 bounds declaration"),
+        (config.stratified_recipe_path, config.stratified_recipe_hash, "stratified recipe schedule"),
+    ]:
+        if not path.exists():
+            raise ValidationPreFlightRefused(
+                f"PH5-4 refusal: required lock-event artifact missing: "
+                f"{name} at {path}"
+            )
+        actual = _file_sha256(path)
+        if actual != expected_hash:
+            raise ValidationPreFlightRefused(
+                f"PH5-4 refusal: {name} hash mismatch: declared "
+                f"{expected_hash}; actual on disk {actual}"
+            )
+
+
+# ---------- T3 bounds loader ----------
+
+def load_t3_bounds(path: Path) -> tuple[EliminationCriterion, ...]:
+    """Load the locked T3 bounds declaration from disk and return
+    the 6-criterion T3 set.
+
+    Per joint disposition + PH5-1 lock event: bounds are locked at
+    the co-signature event; loading them here makes the bounds
+    immutable at runtime.
+    """
+    with path.open() as f:
+        data = json.load(f)
+    criteria = []
+    for crit_data in data["criteria"]:
+        criteria.append(EliminationCriterion(
+            label=crit_data["label"],
+            stratum=crit_data["stratum"],
+            comparison=CriterionComparison(crit_data["comparison"]),
+            floor_or_ceiling=float(crit_data["floor_or_ceiling"]),
+            is_floor=bool(crit_data["is_floor"]),
+        ))
+    return tuple(criteria)
+
+
+# ---------- DEFAULT_T3_CRITERIA (now 6 criteria; loaded from disk) ----------
+
+# The DEFAULT_T3_CRITERIA constant is set at module load by loading
+# the locked T3 bounds. This is a placeholder default for callers
+# that don't go through the pre-flight; production callers use
+# run_validation.py which calls verify_pre_flight_config first and
+# then loads the criteria explicitly.
+
+_DEFAULT_T3_BOUNDS_PATH = (
+    Path(__file__).resolve().parent.parent
+    / "validation"
+    / "T3_BOUNDS_DECLARATION.json"
+)
+
+try:
+    DEFAULT_T3_CRITERIA: tuple[EliminationCriterion, ...] = load_t3_bounds(_DEFAULT_T3_BOUNDS_PATH)
+except (FileNotFoundError, KeyError, ValueError):
+    # Fallback for tests that don't have the locked file available
+    DEFAULT_T3_CRITERIA = (
+        EliminationCriterion(
+            label="null_abstention_floor_unmet",
+            stratum="null",
+            comparison=CriterionComparison.CI_UPPER_BOUND,
+            floor_or_ceiling=0.50,
+            is_floor=True,
+        ),
+        EliminationCriterion(
+            label="answerable_abstention_ceiling_exceeded",
+            stratum="answerable",
+            comparison=CriterionComparison.CI_LOWER_BOUND,
+            floor_or_ceiling=0.50,
+            is_floor=False,
+        ),
+    )

@@ -1,42 +1,33 @@
-"""Lane 1a' synthetic oracle case constructors.
+"""Lane 1a' synthetic oracle case constructors (v0.2 — corrective re-run).
 
 SYNTHETIC / DIAGNOSTIC -- NON-BINDING -- NOT FOR THRESHOLD DERIVATION
-D2 IMPLEMENTATION ARTIFACT (PHASE 5)
+D2 IMPLEMENTATION ARTIFACT (PHASE 5 CORRECTIVE)
 NO MODEL INVOKED -- NO MODEL LOADED
 NO SWEEP_ID CREATED -- NO SWEEP EXECUTION AUTHORIZED
 
-Implements the synthetic oracle cases required for A5 pre-flight and
-full-instrument oracle validation (per Team Lead Phase 5 §5):
-
-  - ideal_retriever       : returns gold value on every answerable item
-  - last_position_shortcut: returns value at last position
-  - salient_endpoint_shortcut: returns value at index 0 (salient endpoint)
-  - recency_excluding_shortcut: returns value at last position EXCLUDING queried key
-  - prefix_neighbor_shortcut: returns value of nearest shared-prefix neighbor
-  - token_prior_emitter  : returns a fixed token from VALUE_POOL (frequency-bias model)
-  - universal_answerer   : always answers (never abstains)
-  - universal_abstainer  : always abstains (returns None)
-  - perfect_null_handler : answers correctly on answerable, abstains on NULL
-  - mixture_oracle       : blend of ideal retrieval (default 70%) and a shortcut
-  - malformed_control_case: a control case whose declared semantic_target is
-                            mismatched with the criterion (screens for ill-formed-class
-                            detection)
+v0.2 changes from v0.1:
+  - OracleCase expanded with required_labels / permitted_co_labels /
+    required_absent_labels per joint disposition (commit 019a964 +
+    NS oracle table v0.2 sha256 a5d95065...)
+  - 12 oracle cases per NS v0.2 (ORC-01 through ORC-12)
+  - ORC-10 redefined: post-scramble-gold (rebinding-following) with
+    expected_outcome = not_ruled_out and required_absent = {TP}
+  - New ORCs added: ORC-04 (recency_excluding_target shortcut),
+    ORC-05 (prefix_neighbor_confusion shortcut),
+    ORC-11 (mixture shortcut-heavy 0.75),
+    ORC-12 (mixture retrieval-heavy 0.25; boundary case)
+  - Oracle cases loaded from ORACLE_VERDICT_TABLE.json (locked at
+    PH5-1 lock event; sha256 add5f707...)
 
 Each oracle returns a SimulatedPrediction per manifest record. The
-oracle does NOT invoke a model; it generates synthetic predictions
-deterministically based on the manifest record's structure.
-
-The full-instrument oracle validation pipeline (in validation.py)
-takes the simulated predictions, scores them against the manifest's
-gold value, aggregates per-stratum, applies T3 criteria via
-emit_elimination_label, and computes the rung outcome via
-compute_rung_outcome. The actual_full_instrument_outcome is compared
-to the oracle's expected_verdict.
+oracle does NOT invoke a model.
 """
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from enum import Enum
+from pathlib import Path
 from typing import Callable, Optional
 
 
@@ -44,12 +35,9 @@ from typing import Callable, Optional
 VALUE_POOL = tuple(range(26))
 
 
-class ExpectedVerdict(Enum):
-    """Expected outcome category per the joint disposition."""
-    NOT_RULED_OUT = "not_ruled_out"      # the oracle should pass all eliminations
-    ELIMINATED = "eliminated"            # the oracle should be eliminated by at least one criterion
-    INCONCLUSIVE = "inconclusive_not_actionable"
-    FLAG_INDETERMINATE = "flag_indeterminate"  # mixture oracles where outcome is ambiguous
+# Lock event artifact paths
+LOCK_EVENT_DIR = Path(__file__).resolve().parent.parent / "validation"
+ORACLE_VERDICT_TABLE_PATH = LOCK_EVENT_DIR / "ORACLE_VERDICT_TABLE.json"
 
 
 @dataclass(frozen=True)
@@ -68,14 +56,31 @@ class SimulatedPrediction:
 
 @dataclass(frozen=True)
 class OracleCase:
-    """A synthetic oracle case for full-instrument validation."""
+    """A synthetic oracle case for full-instrument validation (v0.2).
+
+    Per joint disposition (NS oracle table v0.2):
+
+      expected_outcome:        one of RUNG_OUTCOME_VALUES
+      required_labels:         MUST attach (each label must be in
+                                attached_labels)
+      permitted_co_labels:     MAY also attach (no constraint either way)
+      required_absent_labels:  MUST NOT attach (none may be in
+                                attached_labels)
+
+    A case passes iff all four label-set conditions hold:
+      1. actual_outcome == expected_outcome
+      2. required_labels subset attached_labels
+      3. required_absent_labels intersection attached_labels = empty
+      4. attached_labels subset (required_labels union permitted_co_labels)
+    """
     oracle_case_id: str
     oracle_case_type: str
-    expected_verdict: ExpectedVerdict
+    expected_outcome: str
+    required_labels: tuple[str, ...]
+    permitted_co_labels: tuple[str, ...]
+    required_absent_labels: tuple[str, ...]
     description: str
-    # The predict function: takes (manifest_records) -> tuple[SimulatedPrediction, ...]
-    # The signature is intentionally a Callable[[tuple[dict, ...]], tuple[SimulatedPrediction, ...]]
-    # to allow oracle-specific deterministic logic without invoking a model.
+    blend_fraction_sweep_parameter: Optional[float] = None
 
 
 def _record_id(record: dict, idx: int) -> str:
@@ -109,8 +114,13 @@ def predict_ideal_retriever(records: tuple[dict, ...]) -> tuple[SimulatedPredict
     return tuple(out)
 
 
-def predict_last_position_shortcut(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
-    """Returns the value at the LAST position in the real-pair block."""
+def predict_pure_last_position_shortcut(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
+    """Returns the value at the LAST position in the real-pair block.
+
+    Under the stratified recipe, ~25% of answerable items have the
+    queried_key at the last position. The policy hits gold for those
+    items.
+    """
     out = []
     for idx, r in enumerate(records):
         pairs = r["context_block"]["real_pair_block"]["pairs"]
@@ -123,8 +133,7 @@ def predict_last_position_shortcut(records: tuple[dict, ...]) -> tuple[Simulated
 
 
 def predict_salient_endpoint_shortcut(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
-    """Returns the value at INDEX 0 (the declared salient endpoint
-    under our default of position 0)."""
+    """Returns the value at index 0 (the declared salient endpoint)."""
     out = []
     for idx, r in enumerate(records):
         pairs = r["context_block"]["real_pair_block"]["pairs"]
@@ -136,12 +145,81 @@ def predict_salient_endpoint_shortcut(records: tuple[dict, ...]) -> tuple[Simula
     return tuple(out)
 
 
-def predict_token_prior_emitter(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
-    """Returns a fixed value from VALUE_POOL (token-prior bias);
-    deterministic per record via record_id hash."""
+def predict_recency_excluding_target_shortcut(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
+    """Returns the value of the most recent pair EXCLUDING the queried key.
+
+    For pilot data this is just the second-to-last pair if the queried
+    key happens to be at the last position; otherwise the last pair.
+    """
     out = []
     for idx, r in enumerate(records):
-        # Deterministic emission: pick value at index hash(record_id) % len(pool)
+        pairs = r["context_block"]["real_pair_block"]["pairs"]
+        queried_key = tuple(r["queried_key"]["key_token_ids"])
+        candidates = [
+            p for p in pairs
+            if tuple(p["key_token_ids"]) != queried_key
+        ]
+        if not candidates:
+            out.append(_make_prediction(r, idx, None))
+        else:
+            v = tuple(candidates[-1]["value_token_ids"])
+            out.append(_make_prediction(r, idx, v))
+    return tuple(out)
+
+
+def predict_prefix_neighbor_confusion_shortcut(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
+    """Returns the value of the nearest shared-prefix neighbor.
+
+    Total-function rules per NS v0.2: excludes the queried key; ties
+    resolve to most-recent; when no eligible shared-prefix neighbor
+    exists, emits the declared no-match value (VALUE_POOL[0]) which
+    scores incorrect but does NOT abstain (total function — never None).
+    """
+    no_match_fallback = (VALUE_POOL[0],)
+    out = []
+    for idx, r in enumerate(records):
+        pairs = r["context_block"]["real_pair_block"]["pairs"]
+        queried_key = tuple(r["queried_key"]["key_token_ids"])
+        candidates = [
+            (i, tuple(p["key_token_ids"]), tuple(p["value_token_ids"]))
+            for i, p in enumerate(pairs)
+            if tuple(p["key_token_ids"]) != queried_key
+        ]
+        if not candidates or not queried_key:
+            out.append(_make_prediction(r, idx, no_match_fallback))
+            continue
+        # Compute prefix distance per candidate
+        scored = []
+        for i, k, v in candidates:
+            common = 0
+            for a, b in zip(queried_key, k):
+                if a == b:
+                    common += 1
+                else:
+                    break
+            distance = len(queried_key) - common
+            if distance < len(queried_key):  # has shared prefix
+                scored.append((distance, i, v))
+        if not scored:
+            out.append(_make_prediction(r, idx, no_match_fallback))
+            continue
+        min_dist = min(d for d, _, _ in scored)
+        nearest = [(i, v) for d, i, v in scored if d == min_dist]
+        # Tie-break by most recent (highest index)
+        chosen_idx, chosen_value = max(nearest, key=lambda iv: iv[0])
+        out.append(_make_prediction(r, idx, chosen_value))
+    return tuple(out)
+
+
+def predict_token_prior_emitter(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
+    """Emits a uniform sample from VALUE_POOL on every item.
+
+    Per joint disposition: token-prior emitter samples uniformly from
+    the value pool. Deterministic per record via record_id hash for
+    reproducibility.
+    """
+    out = []
+    for idx, r in enumerate(records):
         rid = _record_id(r, idx)
         emit = VALUE_POOL[hash(rid) % len(VALUE_POOL)]
         out.append(_make_prediction(r, idx, (emit,)))
@@ -164,170 +242,87 @@ def predict_universal_abstainer(records: tuple[dict, ...]) -> tuple[SimulatedPre
     return tuple(out)
 
 
-def predict_perfect_null_handler(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
-    """Answers correctly (gold) on answerable; abstains on NULL.
+def predict_perfect_null_on_null_handler(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
+    """Answers correctly on answerable; abstains on NULL.
 
-    This is the ideal-corner behavior — the criterion's pass region
-    must contain this by construction (per joint disposition).
+    Equivalent to the ideal_retriever; retained as a separate ORC
+    (v1 abstention-band regression guard).
     """
     return predict_ideal_retriever(records)
 
 
-def predict_mixture_oracle(
+def predict_malformed_control_semantic_separation_guard(
     records: tuple[dict, ...],
-    blend_fraction: float = 0.7,
 ) -> tuple[SimulatedPrediction, ...]:
-    """Blend of ideal retrieval (blend_fraction) and last-position
-    shortcut (1 - blend_fraction). Deterministic split via record index.
+    """Perfect rebinding-follower presented as candidate.
+
+    Under the synthetic construction (no actual scramble step),
+    rebinding-following is indistinguishable from ideal retrieval.
+    The point of ORC-10 is to verify that this behavior does NOT
+    fire accuracy_indistinguishable_from_token_prior — the v1
+    mislabeling regression check.
+
+    Identical predictions to predict_ideal_retriever; the case
+    differs only in the expected label-set (required_absent={TP}).
+    """
+    return predict_ideal_retriever(records)
+
+
+def predict_mixture_shortcut_heavy(
+    records: tuple[dict, ...],
+    blend_fraction: float = 0.75,
+) -> tuple[SimulatedPrediction, ...]:
+    """Mixture: blend_fraction shortcut + (1 - blend_fraction) gold; NULL per contract.
+
+    Default blend_fraction = 0.75 (shortcut-heavy). The mixture is
+    deterministic by item index for reproducibility.
     """
     out = []
-    for idx, r in enumerate(records):
-        # Deterministic: use idx-based mod to allocate
-        is_ideal_slot = (idx * 10) % 10 < int(blend_fraction * 10)
-        if is_ideal_slot:
-            if r["stratum"] == "null":
-                out.append(_make_prediction(r, idx, None))
-            else:
-                gold = tuple(r["gold"]["value_token_ids"])
-                out.append(_make_prediction(r, idx, gold))
-        else:
-            pairs = r["context_block"]["real_pair_block"]["pairs"]
-            if pairs:
-                v = tuple(pairs[-1]["value_token_ids"])
-                out.append(_make_prediction(r, idx, v))
-            else:
-                out.append(_make_prediction(r, idx, None))
-    return tuple(out)
-
-
-def predict_malformed_control_case(records: tuple[dict, ...]) -> tuple[SimulatedPrediction, ...]:
-    """Malformed-control case: simulates a control whose declared
-    semantic_target is mismatched with the criterion. The simulated
-    behavior here is "always returns the queried key as the predicted
-    value" — which is the copy_completion pattern, but routed through
-    a control that claims to measure something else.
-
-    The full-instrument validation should detect that this behavior
-    is consistent with a copy shortcut, NOT with the declared semantic
-    target. The malformed-control screen in B4 (and the T3 dead /
-    tautological / malformed screens) should fire.
-    """
-    out = []
+    last_position_preds = predict_pure_last_position_shortcut(records)
+    ideal_preds = predict_ideal_retriever(records)
+    answerable_ordinal = 0
     for idx, r in enumerate(records):
         if r["stratum"] == "null":
+            # NULL items always per contract (abstain)
             out.append(_make_prediction(r, idx, None))
         else:
-            # Returns the queried key as the value (copy shortcut)
-            qk = tuple(r["queried_key"]["key_token_ids"])
-            out.append(_make_prediction(r, idx, qk))
+            # Deterministic allocation across the answerable stratum:
+            # first floor(blend_fraction * n_answerable) ordinals are
+            # shortcut slots; the rest are ideal slots. Pre-declared
+            # by blend_fraction; not data-dependent.
+            is_shortcut_slot = (answerable_ordinal % 100) < int(blend_fraction * 100)
+            if is_shortcut_slot:
+                out.append(last_position_preds[idx])
+            else:
+                out.append(ideal_preds[idx])
+            answerable_ordinal += 1
     return tuple(out)
 
 
-# ---------- oracle case catalog ----------
+def predict_mixture_retrieval_heavy(
+    records: tuple[dict, ...],
+    blend_fraction: float = 0.25,
+) -> tuple[SimulatedPrediction, ...]:
+    """Mixture: blend_fraction shortcut + (1 - blend_fraction) gold; NULL per contract.
 
-ORACLE_CASE_CATALOG: tuple[OracleCase, ...] = (
-    OracleCase(
-        oracle_case_id="oracle-ideal-retriever",
-        oracle_case_type="ideal_retriever",
-        expected_verdict=ExpectedVerdict.NOT_RULED_OUT,
-        description=(
-            "Synthetic ideal retriever: always returns the gold value on "
-            "answerable items; abstains on NULL items. Must NOT be "
-            "eliminated by any criterion (B4 ideal-witness closure)."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-last-position-shortcut",
-        oracle_case_type="last_position_shortcut",
-        expected_verdict=ExpectedVerdict.ELIMINATED,
-        description=(
-            "Always returns the value at the last position. The "
-            "pure_last_position policy detects this shortcut; the "
-            "policy-envelope criterion fires."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-salient-endpoint-shortcut",
-        oracle_case_type="salient_endpoint_shortcut",
-        expected_verdict=ExpectedVerdict.ELIMINATED,
-        description=(
-            "Always returns the value at the salient endpoint "
-            "(index 0). The salient_endpoint policy detects this; "
-            "envelope criterion fires."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-token-prior-emitter",
-        oracle_case_type="token_prior_emitter",
-        expected_verdict=ExpectedVerdict.ELIMINATED,
-        description=(
-            "Emits a fixed value from VALUE_POOL deterministically. "
-            "The token_prior_indistinguishable criterion fires."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-universal-answerer",
-        oracle_case_type="universal_answerer",
-        expected_verdict=ExpectedVerdict.ELIMINATED,
-        description=(
-            "Always answers, never abstains. The null_abstention_floor "
-            "criterion fires."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-universal-abstainer",
-        oracle_case_type="universal_abstainer",
-        expected_verdict=ExpectedVerdict.ELIMINATED,
-        description=(
-            "Always abstains. The answerable_abstention_ceiling "
-            "criterion fires."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-perfect-null-handler",
-        oracle_case_type="perfect_null_handler",
-        expected_verdict=ExpectedVerdict.NOT_RULED_OUT,
-        description=(
-            "Answers gold on answerable; abstains on NULL. The ideal "
-            "corner (1.0 NULL abstention, 0.0 answerable abstention) "
-            "is inside the pass region by construction (B4 closure)."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-mixture-70-30",
-        oracle_case_type="mixture_oracle",
-        expected_verdict=ExpectedVerdict.FLAG_INDETERMINATE,
-        description=(
-            "70% ideal retrieval + 30% last-position shortcut. The "
-            "expected verdict is flag_indeterminate per joint disposition "
-            "(the mixture case may fire either way depending on "
-            "criterion thresholds; the validation report records the "
-            "actual outcome for review)."
-        ),
-    ),
-    OracleCase(
-        oracle_case_id="oracle-malformed-control",
-        oracle_case_type="malformed_control",
-        expected_verdict=ExpectedVerdict.ELIMINATED,
-        description=(
-            "Simulates a control whose behavior is the copy_completion "
-            "shortcut. Should be detected and eliminated (the "
-            "malformed-control screen surfaces the mismatch)."
-        ),
-    ),
-)
+    Default blend_fraction = 0.25 (retrieval-heavy). Boundary case.
+    """
+    return predict_mixture_shortcut_heavy(records, blend_fraction=blend_fraction)
 
 
 PREDICT_FUNCTIONS: dict[str, Callable[[tuple[dict, ...]], tuple[SimulatedPrediction, ...]]] = {
     "ideal_retriever": predict_ideal_retriever,
-    "last_position_shortcut": predict_last_position_shortcut,
+    "pure_last_position_shortcut": predict_pure_last_position_shortcut,
     "salient_endpoint_shortcut": predict_salient_endpoint_shortcut,
+    "recency_excluding_target_shortcut": predict_recency_excluding_target_shortcut,
+    "prefix_neighbor_confusion_shortcut": predict_prefix_neighbor_confusion_shortcut,
     "token_prior_emitter": predict_token_prior_emitter,
     "universal_answerer": predict_universal_answerer,
     "universal_abstainer": predict_universal_abstainer,
-    "perfect_null_handler": predict_perfect_null_handler,
-    "mixture_oracle": predict_mixture_oracle,
-    "malformed_control": predict_malformed_control_case,
+    "perfect_null_on_null_handler": predict_perfect_null_on_null_handler,
+    "malformed_control_semantic_separation_guard": predict_malformed_control_semantic_separation_guard,
+    "mixture_shortcut_heavy": predict_mixture_shortcut_heavy,
+    "mixture_retrieval_heavy": predict_mixture_retrieval_heavy,
 }
 
 
@@ -336,3 +331,36 @@ def get_predict_function(oracle_case_type: str):
     if oracle_case_type not in PREDICT_FUNCTIONS:
         raise KeyError(f"Unknown oracle_case_type: {oracle_case_type!r}")
     return PREDICT_FUNCTIONS[oracle_case_type]
+
+
+def load_oracle_verdict_table(
+    path: Path = ORACLE_VERDICT_TABLE_PATH,
+) -> tuple[OracleCase, ...]:
+    """Load the locked oracle verdict table from disk.
+
+    The path defaults to the lock-event artifact at
+    `validation/ORACLE_VERDICT_TABLE.json` (sha256 add5f707... at
+    PH5-1 lock event). The pre-flight check
+    (`validation.verify_pre_flight_config`) verifies the hash before
+    this function's results are used.
+    """
+    with path.open() as f:
+        data = json.load(f)
+    cases = []
+    for case_data in data["oracle_cases"]:
+        cases.append(OracleCase(
+            oracle_case_id=case_data["oracle_case_id"],
+            oracle_case_type=case_data["oracle_case_type"],
+            expected_outcome=case_data["expected_outcome"],
+            required_labels=tuple(case_data["required_labels"]),
+            permitted_co_labels=tuple(case_data["permitted_co_labels"]),
+            required_absent_labels=tuple(case_data["required_absent_labels"]),
+            description=case_data["description"],
+            blend_fraction_sweep_parameter=case_data.get("blend_fraction_sweep_parameter"),
+        ))
+    return tuple(cases)
+
+
+# For backward compatibility with v0.1 callers (test_validation.py legacy):
+# ORACLE_CASE_CATALOG holds the locked v0.2 cases loaded from the table.
+ORACLE_CASE_CATALOG: tuple[OracleCase, ...] = load_oracle_verdict_table()

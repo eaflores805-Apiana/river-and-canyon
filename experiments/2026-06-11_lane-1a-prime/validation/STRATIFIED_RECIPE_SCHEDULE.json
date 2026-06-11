@@ -1,0 +1,38 @@
+{
+  "schema_version": "v2",
+  "lock_event_date": "2026-06-11",
+  "description": "Disjoint structural-feature schedule per rung. Each answerable item carries EXACTLY ONE structural feature label (or none). Per-feature counts are construction constants — identical across pilot and final by design. A6 verifies implementation fidelity rather than sampling luck.",
+  "anti_tuning_attestation": "Counts derive from the intended-structural-rate band [0.06, 0.20] declared in D2 materials v0.1 (before Phase 5 run-1 existed). 12/80 = 0.15 sits inside that declared band. Counts are NOT derived from any Phase 5 run-1 or run-2 numeric outcome. Locked at this joint co-signature event; post-lock change is a must-fix requiring C1 disposition.",
+  "per_rung_default": {
+    "n_answerable": 80,
+    "n_null": 16,
+    "distractor_count": 4,
+    "stratified_answerable_counts": {
+      "gold_at_last_position": 12,
+      "gold_at_salient_endpoint": 12,
+      "gold_in_prefix_neighborhood": 12,
+      "gold_recency_adjacent": 12,
+      "no_structural_feature": 32
+    },
+    "stratified_sum_must_equal_n_answerable": 80,
+    "disjointness_constraint": "Each answerable item carries exactly one structural-feature label from the set {gold_at_last_position, gold_at_salient_endpoint, gold_in_prefix_neighborhood, gold_recency_adjacent, no_structural_feature}. No item carries two feature labels. Assignment within strata is shuffled by the locked seed."
+  },
+  "rung_schedule": {
+    "L01": "per_rung_default",
+    "L02": "per_rung_default",
+    "L03": "per_rung_default",
+    "L04": "per_rung_default",
+    "L05": "per_rung_default",
+    "L06": "per_rung_default",
+    "L07": "per_rung_default",
+    "L08": "per_rung_default"
+  },
+  "construction_consequences": {
+    "per_policy_structural_hit_rate": "12/80 = 0.15 exactly per shortcut policy (below 0.50 cap with maximal margin)",
+    "union_envelope": "48/80 = 0.60 exactly under disjointness (below 0.80 envelope cap with 0.20 room)",
+    "headroom": "1 - 0.60 = 0.40 (above HEAD bound 0.15 with 0.25 of CI room)",
+    "expected_a6_drift": "0.00 under faithful implementation — pilot and final manifests carry the identical schedule; any nonzero drift is implementation infidelity, which is exactly what A6 measures",
+    "recency_excluding_target_pin": "The new `gold_recency_adjacent` stratum pins the recency_excluding_target shortcut's hit stratum at exactly 12/80 = 0.15, eliminating the unstratified-luck failure mode from run-1"
+  },
+  "rationale": "Five disjoint structural-feature classes sum to 80 answerable items at construction constants (12/12/12/12/32 + 16 NULL = 96 per rung). Structural hit-rates become deterministic by construction, not by random draw. Disjointness ensures the union envelope is exactly 4*12/80 = 0.60 with no overlap arithmetic. The previous 4-stratum recipe (run-2) had no recency_adjacent stratum, leaving recency_excluding_target's hit rate dependent on incidental adjacency in the random fill — that has been corrected here at the design level. CS will verify per-rung constructibility at implementation; per-rung-class counts will be substituted only if a specific rung cannot host the disjoint schedule (anticipated constructible on L01..L08)."
+}

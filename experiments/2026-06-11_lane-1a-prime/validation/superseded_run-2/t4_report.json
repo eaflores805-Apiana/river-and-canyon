@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "review_item_id": "INH-1",
+      "reviewer": "inherited (v1 close-out) + joint disposition",
+      "risk_class": "semantics",
+      "summary": "Per-diagnostic stratum semantics; pooled N=96 limited to distinct_outputs, copy_completion_agreement, void_accounting",
+      "disposition": "incorporated",
+      "rationale": "joint disposition commit 019a964",
+      "owner": "New Senior + CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "INH-2",
+      "reviewer": "inherited (v1 close-out) + joint disposition",
+      "risk_class": "totality",
+      "summary": "Three-way outcome: INCONCLUSIVE | ELIMINATED | NOT_RULED_OUT; K = |NOT_RULED_OUT|; boundary_proximity_flag diagnostic-only",
+      "disposition": "incorporated",
+      "rationale": "joint disposition commit 019a964",
+      "owner": "New Senior + CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "INH-3",
+      "reviewer": "inherited (v1 close-out) + joint disposition",
+      "risk_class": "statistics",
+      "summary": "Wilson without continuity correction; Newcombe-Wilson for differences; no Wald; uniform principle CI bounds",
+      "disposition": "incorporated",
+      "rationale": "joint disposition commit 019a964 + D2-APPROVED \u00a7B uniform principle",
+      "owner": "New Senior + CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "PH5-1",
+      "reviewer": "TL+NS+CS joint lock event",
+      "risk_class": "process",
+      "summary": "Joint verdict/bounds/recipe lock event held before re-run",
+      "disposition": "incorporated",
+      "rationale": "lock event record (governance/.../PH5-1-JOINT-LOCK-EVENT-RECORD)",
+      "owner": "NS + CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "PH5-2",
+      "reviewer": "CS implementation",
+      "risk_class": "implementation",
+      "summary": "Label-set match predicate replaces verdict-only matching",
+      "disposition": "incorporated",
+      "rationale": "match_oracle_verdict in validation.py",
+      "owner": "CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "PH5-3",
+      "reviewer": "CS implementation",
+      "risk_class": "implementation",
+      "summary": "Stratified recipe makes structural hit-rates construction constants",
+      "disposition": "incorporated",
+      "rationale": "ManifestRecipe + construct_pilot_manifests stratified version",
+      "owner": "CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "PH5-4",
+      "reviewer": "CS implementation",
+      "risk_class": "implementation",
+      "summary": "Pre-flight refuses unless verdict-table + bounds + recipe hashes match lock event",
+      "disposition": "incorporated",
+      "rationale": "ValidationPreFlightRefused + verify_pre_flight_config",
+      "owner": "CS",
+      "blocking_status": "resolved"
+    },
+    {
+      "review_item_id": "PH5-5",
+      "reviewer": "CS implementation",
+      "risk_class": "implementation",
+      "summary": "Run-1 retention block in IVR per E11",
+      "disposition": "incorporated",
+      "rationale": "validation/superseded_run-1/ + RUN-1-RETENTION.md",
+      "owner": "CS",
+      "blocking_status": "resolved"
+    }
+  ]
+}

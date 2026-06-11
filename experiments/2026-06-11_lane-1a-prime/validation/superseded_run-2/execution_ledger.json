@@ -1,0 +1,27 @@
+{
+  "what_was_generated": "stratified pilot + final manifests (seed=0, rung=L01, n=96, stratified counts 20/20/20/20); 12 oracle case predictions; per-policy scores; envelope; A6 drift block under 0.05 tolerance; T1 / T3 / T4 reports with PH5-5 retention block",
+  "what_was_computed": "per-policy answerable + null accuracy; distinct outputs; classifications; union envelope; Wilson + Newcombe-Wilson CIs; uniform-principle apply_criterion (6-criterion T3 set under locked bounds); full-instrument outcome per oracle via emit_elimination_label + compute_rung_outcome + match_oracle_verdict (4-clause label-set predicate); A6 per-policy and envelope drift at 0.05 tolerance",
+  "files_created": [
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/pilot_manifests_L01.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/final_manifests_L01.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/oracle_validation_results.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/t1_report.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/t3_report.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/t4_report.json",
+    "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-11_lane-1a-prime/validation/instrument_validation_report.md"
+  ],
+  "artifact_hashes": {
+    "pilot_manifests_L01.json": "ddb2401531263464ea70d8517d05b31f660efeca6cf164d894fc1c8a71bed730",
+    "final_manifests_L01.json": "ddb2401531263464ea70d8517d05b31f660efeca6cf164d894fc1c8a71bed730",
+    "oracle_validation_results.json": "8e3761de2b4fd8c75ff6fe930de4facc711dab7fd890be4e88892e41d4abab41",
+    "t1_report.json": "41ddf8fba1b2aa1515844d5b8b3062aa0772d45e7d34e56181e7a3ae04d82304",
+    "t3_report.json": "e12a4893c31d14dd1febe6c3f50e9b9be9c9b2c5f3dee37ad788ba103074cd7c",
+    "t4_report.json": "104ff3d64a05f0228e53a17ae404586bf421716ad5503ed0c62345dca4a44782",
+    "instrument_validation_report.md": "1af478dea6e3fa2b377a1081152893b56c7d5d45e0fbb4d4420d8a3a94181547"
+  },
+  "no_model_invoked": "CONFIRMED",
+  "no_sweep_id_created": "CONFIRMED",
+  "no_sweep_execution": "CONFIRMED",
+  "no_candidate_or_model_outputs": "CONFIRMED",
+  "outputs_validation_only": "CONFIRMED -- SYNTHETIC/DIAGNOSTIC, NON-BINDING, NOT FOR THRESHOLD DERIVATION"
+}

@@ -1,0 +1,178 @@
+{
+  "schema_version": "v2",
+  "lock_event_date": "2026-06-11",
+  "v2_change_note": "v1 -> v2: ORC-08 permitted_co_labels: removed 'insufficient_measurement_headroom'. Under the corrected HEAD semantic (measurement source = (1 - envelope_score_answerable), bound 0.15), HEAD evaluates a manifest property independent of the oracle candidate; with envelope = 0.60 by the locked schedule, HEAD does not attach to any oracle case including ORC-08. Per Team Lead §4 PH5-1 cleanup direction (2026-06-11), the dead permission is dropped for table-semantic clarity. No verdict change; ORC-08 remains ELIMINATED with required_labels = [answerable_abstention_ceiling_exceeded].",
+  "source_memo": "governance/2026-06-11_lane-1a-prime/NEW-SENIOR-ORACLE-EXPECTED-VERDICT-DECLARATION-v0.2-PROPOSED-2026-06-11.md",
+  "source_memo_sha256": "a5d95065c497025b9d07f3b65ffd6d6477a5f94a70323f4abf462a810df32f85",
+  "label_abbreviations": {
+    "TP": "accuracy_indistinguishable_from_token_prior",
+    "ENV": "accuracy_indistinguishable_from_declared_policy_envelope",
+    "HEAD": "insufficient_measurement_headroom",
+    "GAP": "strict_content_gap_instability",
+    "FLOOR": "null_abstention_floor_unmet",
+    "CEIL": "answerable_abstention_ceiling_exceeded"
+  },
+  "all_six_labels": [
+    "accuracy_indistinguishable_from_token_prior",
+    "accuracy_indistinguishable_from_declared_policy_envelope",
+    "insufficient_measurement_headroom",
+    "strict_content_gap_instability",
+    "null_abstention_floor_unmet",
+    "answerable_abstention_ceiling_exceeded"
+  ],
+  "oracle_cases": [
+    {
+      "oracle_case_id": "ORC-01",
+      "oracle_case_type": "ideal_retriever",
+      "description": "ideal retriever: gold + contract abstention + byte-exact format",
+      "expected_outcome": "not_ruled_out",
+      "required_labels": [],
+      "permitted_co_labels": [],
+      "required_absent_labels": [
+        "accuracy_indistinguishable_from_token_prior",
+        "accuracy_indistinguishable_from_declared_policy_envelope",
+        "insufficient_measurement_headroom",
+        "strict_content_gap_instability",
+        "null_abstention_floor_unmet",
+        "answerable_abstention_ceiling_exceeded"
+      ]
+    },
+    {
+      "oracle_case_id": "ORC-02",
+      "oracle_case_type": "pure_last_position_shortcut",
+      "description": "pure_last_position emitter",
+      "expected_outcome": "eliminated",
+      "required_labels": ["accuracy_indistinguishable_from_declared_policy_envelope"],
+      "permitted_co_labels": [
+        "null_abstention_floor_unmet",
+        "accuracy_indistinguishable_from_token_prior"
+      ],
+      "required_absent_labels": []
+    },
+    {
+      "oracle_case_id": "ORC-03",
+      "oracle_case_type": "salient_endpoint_shortcut",
+      "description": "salient_endpoint emitter",
+      "expected_outcome": "eliminated",
+      "required_labels": ["accuracy_indistinguishable_from_declared_policy_envelope"],
+      "permitted_co_labels": [
+        "null_abstention_floor_unmet",
+        "accuracy_indistinguishable_from_token_prior"
+      ],
+      "required_absent_labels": []
+    },
+    {
+      "oracle_case_id": "ORC-04",
+      "oracle_case_type": "recency_excluding_target_shortcut",
+      "description": "recency_excluding_target emitter",
+      "expected_outcome": "eliminated",
+      "required_labels": ["accuracy_indistinguishable_from_declared_policy_envelope"],
+      "permitted_co_labels": [
+        "null_abstention_floor_unmet",
+        "accuracy_indistinguishable_from_token_prior"
+      ],
+      "required_absent_labels": []
+    },
+    {
+      "oracle_case_id": "ORC-05",
+      "oracle_case_type": "prefix_neighbor_confusion_shortcut",
+      "description": "prefix_neighbor_confusion emitter (total-function; no-match scores incorrect)",
+      "expected_outcome": "eliminated",
+      "required_labels": ["accuracy_indistinguishable_from_declared_policy_envelope"],
+      "permitted_co_labels": [
+        "null_abstention_floor_unmet",
+        "accuracy_indistinguishable_from_token_prior"
+      ],
+      "required_absent_labels": []
+    },
+    {
+      "oracle_case_id": "ORC-06",
+      "oracle_case_type": "token_prior_emitter",
+      "description": "token-prior emitter: uniform over visible pool",
+      "expected_outcome": "eliminated",
+      "required_labels": ["accuracy_indistinguishable_from_token_prior"],
+      "permitted_co_labels": [
+        "null_abstention_floor_unmet",
+        "accuracy_indistinguishable_from_declared_policy_envelope"
+      ],
+      "required_absent_labels": []
+    },
+    {
+      "oracle_case_id": "ORC-07",
+      "oracle_case_type": "universal_answerer",
+      "description": "universal answerer: constant pool value everywhere incl. NULL",
+      "expected_outcome": "eliminated",
+      "required_labels": ["null_abstention_floor_unmet"],
+      "permitted_co_labels": [
+        "accuracy_indistinguishable_from_token_prior",
+        "accuracy_indistinguishable_from_declared_policy_envelope"
+      ],
+      "required_absent_labels": []
+    },
+    {
+      "oracle_case_id": "ORC-08",
+      "oracle_case_type": "universal_abstainer",
+      "description": "universal abstainer: contract abstention everywhere incl. answerable",
+      "expected_outcome": "eliminated",
+      "required_labels": ["answerable_abstention_ceiling_exceeded"],
+      "permitted_co_labels": [
+        "accuracy_indistinguishable_from_token_prior",
+        "accuracy_indistinguishable_from_declared_policy_envelope"
+      ],
+      "required_absent_labels": []
+    },
+    {
+      "oracle_case_id": "ORC-09",
+      "oracle_case_type": "perfect_null_on_null_handler",
+      "description": "perfect NULL-on-NULL handler (v1 abstention-band regression guard)",
+      "expected_outcome": "not_ruled_out",
+      "required_labels": [],
+      "permitted_co_labels": [],
+      "required_absent_labels": [
+        "accuracy_indistinguishable_from_token_prior",
+        "accuracy_indistinguishable_from_declared_policy_envelope",
+        "insufficient_measurement_headroom",
+        "strict_content_gap_instability",
+        "null_abstention_floor_unmet",
+        "answerable_abstention_ceiling_exceeded"
+      ]
+    },
+    {
+      "oracle_case_id": "ORC-10",
+      "oracle_case_type": "malformed_control_semantic_separation_guard",
+      "description": "perfect rebinding-follower presented as candidate (v1 mislabeling regression check)",
+      "expected_outcome": "not_ruled_out",
+      "required_labels": [],
+      "permitted_co_labels": [],
+      "required_absent_labels": ["accuracy_indistinguishable_from_token_prior"]
+    },
+    {
+      "oracle_case_id": "ORC-11",
+      "oracle_case_type": "mixture_shortcut_heavy",
+      "description": "mixture: 0.75 pure_last_position / 0.25 gold; NULL per contract [blend = SWEEP-PARAMETER]",
+      "expected_outcome": "eliminated",
+      "required_labels": ["accuracy_indistinguishable_from_declared_policy_envelope"],
+      "permitted_co_labels": [],
+      "required_absent_labels": [
+        "null_abstention_floor_unmet",
+        "answerable_abstention_ceiling_exceeded"
+      ],
+      "blend_fraction_sweep_parameter": 0.75
+    },
+    {
+      "oracle_case_id": "ORC-12",
+      "oracle_case_type": "mixture_retrieval_heavy",
+      "description": "mixture: 0.25 shortcut / 0.75 gold; NULL per contract; boundary case",
+      "expected_outcome": "not_ruled_out",
+      "required_labels": [],
+      "permitted_co_labels": [],
+      "required_absent_labels": [
+        "accuracy_indistinguishable_from_token_prior",
+        "null_abstention_floor_unmet",
+        "answerable_abstention_ceiling_exceeded"
+      ],
+      "blend_fraction_sweep_parameter": 0.25,
+      "expected_boundary_proximity_flag_on": "accuracy_indistinguishable_from_declared_policy_envelope"
+    }
+  ]
+}
