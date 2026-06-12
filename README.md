@@ -29,6 +29,11 @@ Running the baseline tier of the program above produced three evidence-bound pap
 
 These three are the *metrology* set (method ↔ first result ↔ certification gate); the two essays above are the *analogy* pair (the picture ↔ what the water carves). The analogy pair points; the metrology set reports only what the evidence earns.
 
+## Standing governance note
+
+**Hash Integrity Is Not Construct Validity** — a methodological companion to Papers 1–2, released as a standing governance note (v0.7.2). It names a third project discipline at the artifact/concept layer: an artifact's bytes can be perfectly hash-bound — pinned, provenance-tracked, mutation-proof — and still fail to instantiate the experimental concept it is named for. The note adopts a *shown semantic-read* gate for every load-bearing artifact before any model-facing execution, with a worked example, a mechanical-rendering floor that prevents the gate from becoming prose ritual, a detection signature (improbable identity across nominally distinct conditions is a semantic-validity alarm, sufficient to trigger review but not necessary for mismatch), and a designator mechanism (put the qualifier inside the result name). The case study is Path A (rung-uniform), closed by Manager disposition as a schedule-layer finding: a faithful run whose sealed schedule mapped eight rung labels to one structure, so the run measured one surface eight times rather than eight distinct surfaces. Standing record only — not Paper 4, not a publication-ready paper, not a model-behavior claim. *Hashes bind bytes; they do not bind concepts.*
+→ [`governance/standing/HASH-INTEGRITY-IS-NOT-CONSTRUCT-VALIDITY-v0.7.2.md`](governance/standing/HASH-INTEGRITY-IS-NOT-CONSTRUCT-VALIDITY-v0.7.2.md) — Markdown and PDF; figures in `governance/standing/figures/`.
+
 ## Notes and proposals
 
 **No Mountain in the Sentence** — a short companion essay on the *method* behind the papers: the discipline for trusting an analogy exactly as far as it earns. It states one rule (say the claim with no mountain in the sentence) and three questions, then applies them to the mountain analogy itself.
