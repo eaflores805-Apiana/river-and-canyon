@@ -1,0 +1,26 @@
+{
+  "record_id": "L01-052-answerable",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      138
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      22
+    ]
+  },
+  "prompt_user_text": "Pairs:\n156 -> x\n56 -> k\n138 -> w\n2 -> k\n87 -> b\n\nQuery: 138",
+  "output_text": "w",
+  "parsed": {
+    "predicted_value_token_ids": [
+      22
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "w",
+    "extracted_token": "w"
+  },
+  "latency_ms": 255.49006462097168,
+  "finish_reason": "completed"
+}

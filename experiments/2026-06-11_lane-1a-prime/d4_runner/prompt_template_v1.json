@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "system": "You will receive a list of integer key-to-letter pairs. Then you will be asked to retrieve the letter associated with a specific key.\n\nRules:\n- Respond with ONLY the single lowercase letter (a through z).\n- If the queried key is NOT in the list, respond with exactly the word: NONE\n- Do not explain. Do not include the key. Do not use punctuation.",
+  "user_template": "Pairs:\n{pair_lines}\n\nQuery: {query_key}",
+  "pair_format": "{key} -> {value}",
+  "value_pool_mapping_rationale": "Lane 1a' manifests use abstract token-pool IDs (VALUE_POOL = range(26), keys up to ~200). For the model-facing prompt, value IDs 0..25 are mapped to letters 'a'..'z' (1:1); key IDs are rendered as their decimal integer (multi-token keys space-separated). The parser performs the inverse mapping.",
+  "abstention_string": "NONE",
+  "expected_response_grammar": "single lowercase letter [a-z], OR the word NONE"
+}

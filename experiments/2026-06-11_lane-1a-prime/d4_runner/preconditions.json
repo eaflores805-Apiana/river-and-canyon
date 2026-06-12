@@ -1,0 +1,44 @@
+{
+  "authorization_chain": {
+    "manager_d4a_authorization": "Lane 1a' D4-A Minimal Operational Pilot — Manager 2026-06-11",
+    "manager_blocker_disposition": "D4-A Pre-Execution BLOCKER Disposition — Manager 2026-06-11",
+    "pin_substitution_binding_memo": "CS-D4A-MLX-LM-PIN-SUBSTITUTION-2026-06-11.md",
+    "sealed_lock_record_memo": "LANE1A-PRIME-SEALED-LOCK-RECORD-v1.0.md"
+  },
+  "authorized_mlx_lm_version": "0.31.3",
+  "mlx_lm_pin_substitution_authority": "Manager Disposition §1 (Option A approved 2026-06-11)",
+  "prior_packet_pin_provenance": "mlx_lm 0.19.3 (preserved as provenance per Manager §1; not the active pin)",
+  "verified_null_lineage": "B1 v2 PROVENANCE 2026-06-10: mlx_lm 0.19.3 -> 0.31.3 verified-null for locked Paper 2 reproduction configuration",
+  "authorized_model_snapshot_hash": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "snapshot_hash_routine": "B1 v2 compute_model_snapshot_hash: sha256 over sorted manifest of (rel_path, file_size, per_file_sha256), tab-separated, newline-joined",
+  "model_identity": {
+    "family": "Qwen2.5",
+    "variant": "Qwen2.5-3B-Instruct",
+    "precision": "bf16",
+    "huggingface_id": "Qwen/Qwen2.5-3B-Instruct",
+    "hf_revision_id": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "local_snapshot_glob": "~/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/*"
+  },
+  "lock_event_hashes": {
+    "oracle_verdict_table": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "t3_bounds": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "stratified_recipe": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5"
+  },
+  "sealed_manifest_hashes": {
+    "pilot_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f",
+    "final_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f"
+  },
+  "sealed_lock_record_hash": "51e18fa9f45379a37aaac6f33b2bcef442e3dff6eeb0268ad073ac04423d1935",
+  "token_prior_decision": "DECLINED BY MANAGER (Q2 2026-06-11)",
+  "tp_criterion_status": "INACTIVE BY MANAGER DECISION",
+  "approved_extent": "L01_only_96_records",
+  "manager_q3_extent_decision": "L01 only / 96 records (Reading A); L02-L08 / 768 records DECLINED",
+  "abort_triggers_per_manager_section_6": [
+    "pre-flight hash refusal (PH5-4)",
+    "A6 drift exceedance",
+    "schema validation failure",
+    "artifact hash mismatch",
+    "runner/model identity mismatch (mlx_lm version OR snapshot hash)",
+    "unhandled exception"
+  ]
+}

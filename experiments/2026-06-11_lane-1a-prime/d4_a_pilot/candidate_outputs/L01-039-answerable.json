@@ -1,0 +1,26 @@
+{
+  "record_id": "L01-039-answerable",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      149
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      4
+    ]
+  },
+  "prompt_user_text": "Pairs:\n74 -> k\n92 -> d\n149 -> e\n101 -> q\n140 -> e\n\nQuery: 149",
+  "output_text": "e",
+  "parsed": {
+    "predicted_value_token_ids": [
+      4
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "e",
+    "extracted_token": "e"
+  },
+  "latency_ms": 254.3323040008545,
+  "finish_reason": "completed"
+}

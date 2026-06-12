@@ -1,0 +1,26 @@
+{
+  "record_id": "L01-074-answerable",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      177
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      0
+    ]
+  },
+  "prompt_user_text": "Pairs:\n7 -> h\n88 -> l\n177 -> a\n89 -> c\n45 -> u\n\nQuery: 177",
+  "output_text": "a",
+  "parsed": {
+    "predicted_value_token_ids": [
+      0
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "a",
+    "extracted_token": "a"
+  },
+  "latency_ms": 256.8798065185547,
+  "finish_reason": "completed"
+}

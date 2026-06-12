@@ -1,0 +1,11 @@
+{
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": -1,
+  "repetition_penalty": 1.0,
+  "max_new_tokens": 32,
+  "seed": 0,
+  "greedy": true,
+  "stop_strings": ["\n", "<|im_end|>", "<|endoftext|>"],
+  "rationale": "Deterministic greedy decoding per Manager D4-A authorization (single-pass requirement). max_new_tokens=32 leaves margin for short answer + format token; truncation = soft stop per readiness packet v0.2 §13.7."
+}

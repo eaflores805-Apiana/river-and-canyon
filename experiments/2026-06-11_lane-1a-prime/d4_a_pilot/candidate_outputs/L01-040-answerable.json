@@ -1,0 +1,26 @@
+{
+  "record_id": "L01-040-answerable",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      187
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      16
+    ]
+  },
+  "prompt_user_text": "Pairs:\n61 -> y\n12 -> c\n187 -> q\n78 -> j\n45 -> q\n\nQuery: 187",
+  "output_text": "q",
+  "parsed": {
+    "predicted_value_token_ids": [
+      16
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "q",
+    "extracted_token": "q"
+  },
+  "latency_ms": 257.10320472717285,
+  "finish_reason": "completed"
+}

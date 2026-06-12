@@ -1,0 +1,182 @@
+{
+  "ideal_witness_in_pass_region": true,
+  "rows": [
+    {
+      "criterion_label": "null_abstention_floor_unmet",
+      "stratum": "null",
+      "comparison": "ci_upper_bound",
+      "floor_or_ceiling": 0.75,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass",
+      "fired_d4a": false,
+      "measurement_d4a": {
+        "stratum": "null",
+        "n_effective": 16,
+        "successes": 16,
+        "point_estimate": 1.0,
+        "ci_lower": 0.8063923194655637,
+        "ci_upper": 1.0
+      }
+    },
+    {
+      "criterion_label": "answerable_abstention_ceiling_exceeded",
+      "stratum": "answerable",
+      "comparison": "ci_lower_bound",
+      "floor_or_ceiling": 0.2,
+      "is_floor": false,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass",
+      "fired_d4a": false,
+      "measurement_d4a": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "successes": 0,
+        "point_estimate": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0458181295355271
+      }
+    },
+    {
+      "criterion_label": "accuracy_indistinguishable_from_token_prior",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.1,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass",
+      "disposition_d4a": "INACTIVE_BY_MANAGER_DECISION",
+      "fired_d4a": false,
+      "manager_decision_ref": "MANAGER-AUTHORIZATION-LANE-1A-PRIME-D4A 2026-06-11 \u00a74"
+    },
+    {
+      "criterion_label": "accuracy_indistinguishable_from_declared_policy_envelope",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.1,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass",
+      "fired_d4a": false,
+      "measurement_d4a": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "point_estimate": 0.3875,
+        "ci_lower": 0.0,
+        "ci_upper": 1.0,
+        "difference_lower": 0.27818062047690084,
+        "difference_upper": 0.49706342789244284
+      }
+    },
+    {
+      "criterion_label": "insufficient_measurement_headroom",
+      "stratum": "answerable",
+      "comparison": "ci_upper_bound",
+      "floor_or_ceiling": 0.15,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass",
+      "fired_d4a": false,
+      "measurement_d4a": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "successes": 31,
+        "point_estimate": 0.3875,
+        "ci_lower": 0.2882456512530507,
+        "ci_upper": 0.49706342789244284
+      }
+    },
+    {
+      "criterion_label": "strict_content_gap_instability",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.3,
+      "is_floor": false,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass",
+      "fired_d4a": false,
+      "measurement_d4a": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "point_estimate": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 1.0,
+        "difference_lower": -0.04581812953552722,
+        "difference_upper": 0.04581812953552722
+      }
+    }
+  ],
+  "criterion_evaluations_against_candidate": {
+    "null_abstention_floor_unmet": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "null",
+        "n_effective": 16,
+        "successes": 16,
+        "point_estimate": 1.0,
+        "ci_lower": 0.8063923194655637,
+        "ci_upper": 1.0
+      }
+    },
+    "answerable_abstention_ceiling_exceeded": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "successes": 0,
+        "point_estimate": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0458181295355271
+      }
+    },
+    "accuracy_indistinguishable_from_token_prior": {
+      "outcome": "INACTIVE",
+      "reason": "Token-prior generations declined by Manager Q2 (2026-06-11)"
+    },
+    "accuracy_indistinguishable_from_declared_policy_envelope": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "point_estimate": 0.3875,
+        "ci_lower": 0.0,
+        "ci_upper": 1.0,
+        "difference_lower": 0.27818062047690084,
+        "difference_upper": 0.49706342789244284
+      }
+    },
+    "insufficient_measurement_headroom": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "successes": 31,
+        "point_estimate": 0.3875,
+        "ci_lower": 0.2882456512530507,
+        "ci_upper": 0.49706342789244284
+      }
+    },
+    "strict_content_gap_instability": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "point_estimate": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 1.0,
+        "difference_lower": -0.04581812953552722,
+        "difference_upper": 0.04581812953552722
+      }
+    }
+  },
+  "attached_labels": [],
+  "candidate_outcome": "NOT_RULED_OUT",
+  "tp_inactive_by_manager_decision": true,
+  "tp_inactivity_authority": "MANAGER-AUTHORIZATION-LANE-1A-PRIME-D4A 2026-06-11 \u00a74 (Q2 decline)"
+}
