@@ -27,7 +27,9 @@ Project file, primarily maintained by Senior. CS adds rows for memos it files di
 | 2026-06-12 | NS | NS → CS+TL | `LANE1A-PRIME-PATH-A-READINESS-PACKET-v0.1.md` | SUPERSEDED by v0.1.1 (generator-path correction) | `f23b40d0e9f8d9b6` | NS-drafted Path A readiness packet. Generator-path string error (d4_runner/ → lane1a_prime/) caught at CS state-verification; corrected via v0.1.1 patch per TL §4. Retained. |
 | 2026-06-12 | CS | CS → TL | `CS-PATH-A-READINESS-PACKET-STATE-VERIFICATION-v0.1.md` | DISPOSITIONED (TL: VERIFIED WITH ONE CORRECTION REQUIRED) | `c9a1cd1df3028fdc` | TL §8 state-verification co-sign for v0.1: VERIFIED with one minor finding (path string). TL elevated finding to required correction; CS applied as v0.1.1. |
 | 2026-06-12 | CS | CS → TL | `LANE1A-PRIME-PATH-A-READINESS-PACKET-v0.1.1.md` | ACTIVE | `cf21aaa1b7fbda47` | TL-required patch: generator path corrected `d4_runner/validation.py` → `lane1a_prime/validation.py`. Generator hash `db69519f…` unchanged. No other substantive content changed. |
-| 2026-06-12 | CS | CS → TL | `CS-PATH-A-READINESS-PACKET-v0.1.1-FILING-RETURN-v0.1.md` | FILED (return) | `[computed at commit]` | TL §5 14-item return for the v0.1.1 patch filing. |
+| 2026-06-12 | CS | CS → TL | `CS-PATH-A-READINESS-PACKET-v0.1.1-FILING-RETURN-v0.1.md` | FILED (return) | `8a689b1827046dd9` | TL §5 14-item return for the v0.1.1 patch filing. |
+| 2026-06-12 | CS | CS → Manager | `../standing/STANDARD-RETURN-TEMPLATE-v1.0.md` (cross-project) | DRAFT (awaiting TL filter under PROCESS-ACCELERATION-ADOPTION-MEMO) | `488a5cc147b7f11b` | CS deliverable per Manager §13 / §14 process-acceleration notice. Consolidates STANDARD-RETURN-TEMPLATE + 3 CS conventions (artifact-hash-table, G1 enumeration, test-log/assertion). Cross-project; lives in `governance/standing/`. |
+| 2026-06-12 | CS | CS → Manager | `CS-STANDARD-RETURN-TEMPLATE-v1.0-DELIVERY-v0.1.md` | FILED (return) | `[computed at commit]` | Manager §14 7-item process artifact return (path, sha256, owner, scope, what-standardizes, what-doesn't-authorize, exit conditions). |
 | 2026-06-11 | CS | CS → all | `INDEX.md` (this file) | LIVE | (self-referencing) | Canonical project INDEX. CS seeds with new rows it files; Senior merges workspace catalog at next pass. |
 
 ## Gate state (carried verbatim from Senior's workspace `FULL-DOCUMENT-INDEX.md`; update at each project state change)
@@ -50,4 +52,4 @@ D1 ✓ · D2 ✓ · PH5-1 ✓ · run-3 complete (run of record; 12/12, drift 0.0
 - Claim C INACTIVE.
 - Forbidden phrasings (binding for all future references to D4-A / D4-B): `model passed` · `capability established` · `not shortcut-driven` · `candidate certified` · `task family viable` · `Claim C progressed` · `seam evidence` · `public benchmark result` · `certification achieved`.
 
-— Last touched: CS, 2026-06-12 (Path A readiness packet v0.1.1 generator-path patch + return memo filed per TL §4; v0.1 + v0.1.1 retained; gate-state updated)
+— Last touched: CS, 2026-06-12 (STANDARD-RETURN-TEMPLATE-v1.0 filed under governance/standing/ per Manager process-acceleration §13/§14; CS delivery memo added; awaiting TL filter under PROCESS-ACCELERATION-ADOPTION-MEMO)
