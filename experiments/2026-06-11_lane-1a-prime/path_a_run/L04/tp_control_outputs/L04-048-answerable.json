@@ -1,0 +1,26 @@
+{
+  "record_id": "L04-048-answerable",
+  "rung_id": "L04",
+  "sweep_label": "tp_control",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      134
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      3
+    ]
+  },
+  "prompt_user_text": "Pairs:\n\n\nQuery: 134",
+  "output_text": "NONE",
+  "parsed": {
+    "predicted_value_token_ids": null,
+    "parse_status": "parsed_abstention",
+    "raw_text": "NONE",
+    "extracted_token": "NONE"
+  },
+  "latency_ms": 252.16984748840332,
+  "finish_reason": "completed"
+}

@@ -1,0 +1,159 @@
+{
+  "tp_banner": {
+    "tp_criterion_status": "ACTIVE",
+    "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+    "tp_generation_status": "RUN (authorized)",
+    "tp_elimination_labels_enabled": true
+  },
+  "rung_id": "L02",
+  "rows": [
+    {
+      "criterion_label": "null_abstention_floor_unmet",
+      "stratum": "null",
+      "comparison": "ci_upper_bound",
+      "floor_or_ceiling": 0.75,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    },
+    {
+      "criterion_label": "answerable_abstention_ceiling_exceeded",
+      "stratum": "answerable",
+      "comparison": "ci_lower_bound",
+      "floor_or_ceiling": 0.2,
+      "is_floor": false,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    },
+    {
+      "criterion_label": "accuracy_indistinguishable_from_token_prior",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.1,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    },
+    {
+      "criterion_label": "accuracy_indistinguishable_from_declared_policy_envelope",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.1,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    },
+    {
+      "criterion_label": "insufficient_measurement_headroom",
+      "stratum": "answerable",
+      "comparison": "ci_upper_bound",
+      "floor_or_ceiling": 0.15,
+      "is_floor": true,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    },
+    {
+      "criterion_label": "strict_content_gap_instability",
+      "stratum": "answerable",
+      "comparison": "difference_interval",
+      "floor_or_ceiling": 0.3,
+      "is_floor": false,
+      "ideal_in_pass_region": true,
+      "perfect_model_eliminable": false,
+      "disposition": "pass"
+    }
+  ],
+  "criterion_evaluations_against_candidate": {
+    "null_abstention_floor_unmet": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "null",
+        "n_effective": 16,
+        "successes": 16,
+        "point_estimate": 1.0,
+        "ci_lower": 0.8063923194655637,
+        "ci_upper": 1.0
+      }
+    },
+    "answerable_abstention_ceiling_exceeded": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "successes": 0,
+        "point_estimate": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0458181295355271
+      }
+    },
+    "accuracy_indistinguishable_from_token_prior": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "point_estimate": 0.9875,
+        "ci_lower": 0.0,
+        "ci_upper": 1.0,
+        "difference_lower": 0.9159444308889801,
+        "difference_upper": 0.9977900244795478,
+        "candidate_correct": 80,
+        "tp_control_correct_measured": 1,
+        "measurement_source": "MEASURED MODEL TP via no-bindings shell (L02; Path A; fresh control)"
+      }
+    },
+    "accuracy_indistinguishable_from_declared_policy_envelope": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "point_estimate": 0.3875,
+        "ci_lower": 0.0,
+        "ci_upper": 1.0,
+        "difference_lower": 0.27818062047690084,
+        "difference_upper": 0.49706342789244284
+      }
+    },
+    "insufficient_measurement_headroom": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "successes": 31,
+        "point_estimate": 0.3875,
+        "ci_lower": 0.2882456512530507,
+        "ci_upper": 0.49706342789244284
+      }
+    },
+    "strict_content_gap_instability": {
+      "outcome": "PASSED",
+      "measurement": {
+        "stratum": "answerable",
+        "n_effective": 80,
+        "point_estimate": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 1.0,
+        "difference_lower": -0.04581812953552722,
+        "difference_upper": 0.04581812953552722
+      }
+    }
+  },
+  "candidate_vs_tp_comparison": {
+    "candidate_accuracy": 1.0,
+    "tp_control_accuracy": 0.0125,
+    "point_difference": 0.9875,
+    "newcombe_wilson_diff_lower": 0.9159444308889801,
+    "newcombe_wilson_diff_upper": 0.9977900244795478,
+    "tp_margin_locked": 0.1,
+    "tp_fires": false
+  },
+  "attached_labels": [],
+  "candidate_outcome": "NOT_RULED_OUT",
+  "tp_active_by_manager_decision": true,
+  "tp_activity_authority": "AUTHORIZED \u2014 Manager Path A 2026-06-12 (unconditioned_token_prior method; control artifacts only; not candidate evidence, not threshold material, not reusable outside this lane's locked comparison)",
+  "envelope_measured": 0.6125
+}

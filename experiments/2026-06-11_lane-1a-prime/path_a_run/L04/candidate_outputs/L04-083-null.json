@@ -1,0 +1,24 @@
+{
+  "record_id": "L04-083-null",
+  "rung_id": "L04",
+  "sweep_label": "candidate",
+  "stratum": "null",
+  "queried_key": {
+    "key_token_ids": [
+      203
+    ]
+  },
+  "gold": {
+    "value_token_ids": []
+  },
+  "prompt_user_text": "Pairs:\n108 -> c\n76 -> h\n163 -> o\n90 -> u\n\nQuery: 203",
+  "output_text": "none",
+  "parsed": {
+    "predicted_value_token_ids": null,
+    "parse_status": "parsed_abstention",
+    "raw_text": "none",
+    "extracted_token": "NONE"
+  },
+  "latency_ms": 262.2363567352295,
+  "finish_reason": "completed"
+}

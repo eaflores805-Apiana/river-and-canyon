@@ -1,0 +1,29 @@
+{
+  "record_id": "L08-028-answerable",
+  "rung_id": "L08",
+  "sweep_label": "tp_control",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      57,
+      163
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      12
+    ]
+  },
+  "prompt_user_text": "Pairs:\n\n\nQuery: 57 163",
+  "output_text": "z",
+  "parsed": {
+    "predicted_value_token_ids": [
+      25
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "z",
+    "extracted_token": "z"
+  },
+  "latency_ms": 280.74097633361816,
+  "finish_reason": "completed"
+}

@@ -1,0 +1,28 @@
+{
+  "record_id": "L06-004-answerable",
+  "rung_id": "L06",
+  "sweep_label": "tp_control",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      52
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      0
+    ]
+  },
+  "prompt_user_text": "Pairs:\n\n\nQuery: 52",
+  "output_text": "z",
+  "parsed": {
+    "predicted_value_token_ids": [
+      25
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "z",
+    "extracted_token": "z"
+  },
+  "latency_ms": 236.647367477417,
+  "finish_reason": "completed"
+}

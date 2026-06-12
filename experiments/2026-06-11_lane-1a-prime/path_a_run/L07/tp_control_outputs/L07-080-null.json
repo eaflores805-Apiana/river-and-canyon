@@ -1,0 +1,24 @@
+{
+  "record_id": "L07-080-null",
+  "rung_id": "L07",
+  "sweep_label": "tp_control",
+  "stratum": "null",
+  "queried_key": {
+    "key_token_ids": [
+      200
+    ]
+  },
+  "gold": {
+    "value_token_ids": []
+  },
+  "prompt_user_text": "Pairs:\n\n\nQuery: 200",
+  "output_text": "NONE",
+  "parsed": {
+    "predicted_value_token_ids": null,
+    "parse_status": "parsed_abstention",
+    "raw_text": "NONE",
+    "extracted_token": "NONE"
+  },
+  "latency_ms": 251.24788284301758,
+  "finish_reason": "completed"
+}

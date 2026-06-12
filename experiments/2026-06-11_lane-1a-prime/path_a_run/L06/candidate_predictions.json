@@ -1,0 +1,546 @@
+[
+  {
+    "record_id": "L06-000-answerable",
+    "predicted_value_token_ids": [
+      9
+    ]
+  },
+  {
+    "record_id": "L06-001-answerable",
+    "predicted_value_token_ids": [
+      3
+    ]
+  },
+  {
+    "record_id": "L06-002-answerable",
+    "predicted_value_token_ids": [
+      2
+    ]
+  },
+  {
+    "record_id": "L06-003-answerable",
+    "predicted_value_token_ids": [
+      20
+    ]
+  },
+  {
+    "record_id": "L06-004-answerable",
+    "predicted_value_token_ids": [
+      0
+    ]
+  },
+  {
+    "record_id": "L06-005-answerable",
+    "predicted_value_token_ids": [
+      10
+    ]
+  },
+  {
+    "record_id": "L06-006-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L06-007-answerable",
+    "predicted_value_token_ids": [
+      9
+    ]
+  },
+  {
+    "record_id": "L06-008-answerable",
+    "predicted_value_token_ids": [
+      19
+    ]
+  },
+  {
+    "record_id": "L06-009-answerable",
+    "predicted_value_token_ids": [
+      18
+    ]
+  },
+  {
+    "record_id": "L06-010-answerable",
+    "predicted_value_token_ids": [
+      2
+    ]
+  },
+  {
+    "record_id": "L06-011-answerable",
+    "predicted_value_token_ids": [
+      21
+    ]
+  },
+  {
+    "record_id": "L06-012-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L06-013-answerable",
+    "predicted_value_token_ids": [
+      21
+    ]
+  },
+  {
+    "record_id": "L06-014-answerable",
+    "predicted_value_token_ids": [
+      18
+    ]
+  },
+  {
+    "record_id": "L06-015-answerable",
+    "predicted_value_token_ids": [
+      7
+    ]
+  },
+  {
+    "record_id": "L06-016-answerable",
+    "predicted_value_token_ids": [
+      7
+    ]
+  },
+  {
+    "record_id": "L06-017-answerable",
+    "predicted_value_token_ids": [
+      20
+    ]
+  },
+  {
+    "record_id": "L06-018-answerable",
+    "predicted_value_token_ids": [
+      19
+    ]
+  },
+  {
+    "record_id": "L06-019-answerable",
+    "predicted_value_token_ids": [
+      21
+    ]
+  },
+  {
+    "record_id": "L06-020-answerable",
+    "predicted_value_token_ids": [
+      20
+    ]
+  },
+  {
+    "record_id": "L06-021-answerable",
+    "predicted_value_token_ids": [
+      3
+    ]
+  },
+  {
+    "record_id": "L06-022-answerable",
+    "predicted_value_token_ids": [
+      22
+    ]
+  },
+  {
+    "record_id": "L06-023-answerable",
+    "predicted_value_token_ids": [
+      8
+    ]
+  },
+  {
+    "record_id": "L06-024-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L06-025-answerable",
+    "predicted_value_token_ids": [
+      1
+    ]
+  },
+  {
+    "record_id": "L06-026-answerable",
+    "predicted_value_token_ids": [
+      20
+    ]
+  },
+  {
+    "record_id": "L06-027-answerable",
+    "predicted_value_token_ids": [
+      22
+    ]
+  },
+  {
+    "record_id": "L06-028-answerable",
+    "predicted_value_token_ids": [
+      12
+    ]
+  },
+  {
+    "record_id": "L06-029-answerable",
+    "predicted_value_token_ids": [
+      5
+    ]
+  },
+  {
+    "record_id": "L06-030-answerable",
+    "predicted_value_token_ids": [
+      1
+    ]
+  },
+  {
+    "record_id": "L06-031-answerable",
+    "predicted_value_token_ids": [
+      0
+    ]
+  },
+  {
+    "record_id": "L06-032-answerable",
+    "predicted_value_token_ids": [
+      20
+    ]
+  },
+  {
+    "record_id": "L06-033-answerable",
+    "predicted_value_token_ids": [
+      14
+    ]
+  },
+  {
+    "record_id": "L06-034-answerable",
+    "predicted_value_token_ids": [
+      1
+    ]
+  },
+  {
+    "record_id": "L06-035-answerable",
+    "predicted_value_token_ids": [
+      20
+    ]
+  },
+  {
+    "record_id": "L06-036-answerable",
+    "predicted_value_token_ids": [
+      5
+    ]
+  },
+  {
+    "record_id": "L06-037-answerable",
+    "predicted_value_token_ids": [
+      10
+    ]
+  },
+  {
+    "record_id": "L06-038-answerable",
+    "predicted_value_token_ids": [
+      1
+    ]
+  },
+  {
+    "record_id": "L06-039-answerable",
+    "predicted_value_token_ids": [
+      4
+    ]
+  },
+  {
+    "record_id": "L06-040-answerable",
+    "predicted_value_token_ids": [
+      16
+    ]
+  },
+  {
+    "record_id": "L06-041-answerable",
+    "predicted_value_token_ids": [
+      3
+    ]
+  },
+  {
+    "record_id": "L06-042-answerable",
+    "predicted_value_token_ids": [
+      22
+    ]
+  },
+  {
+    "record_id": "L06-043-answerable",
+    "predicted_value_token_ids": [
+      5
+    ]
+  },
+  {
+    "record_id": "L06-044-answerable",
+    "predicted_value_token_ids": [
+      23
+    ]
+  },
+  {
+    "record_id": "L06-045-answerable",
+    "predicted_value_token_ids": [
+      9
+    ]
+  },
+  {
+    "record_id": "L06-046-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L06-047-answerable",
+    "predicted_value_token_ids": [
+      3
+    ]
+  },
+  {
+    "record_id": "L06-048-answerable",
+    "predicted_value_token_ids": [
+      3
+    ]
+  },
+  {
+    "record_id": "L06-049-answerable",
+    "predicted_value_token_ids": [
+      3
+    ]
+  },
+  {
+    "record_id": "L06-050-answerable",
+    "predicted_value_token_ids": [
+      4
+    ]
+  },
+  {
+    "record_id": "L06-051-answerable",
+    "predicted_value_token_ids": [
+      15
+    ]
+  },
+  {
+    "record_id": "L06-052-answerable",
+    "predicted_value_token_ids": [
+      22
+    ]
+  },
+  {
+    "record_id": "L06-053-answerable",
+    "predicted_value_token_ids": [
+      12
+    ]
+  },
+  {
+    "record_id": "L06-054-answerable",
+    "predicted_value_token_ids": [
+      2
+    ]
+  },
+  {
+    "record_id": "L06-055-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L06-056-answerable",
+    "predicted_value_token_ids": [
+      18
+    ]
+  },
+  {
+    "record_id": "L06-057-answerable",
+    "predicted_value_token_ids": [
+      24
+    ]
+  },
+  {
+    "record_id": "L06-058-answerable",
+    "predicted_value_token_ids": [
+      7
+    ]
+  },
+  {
+    "record_id": "L06-059-answerable",
+    "predicted_value_token_ids": [
+      8
+    ]
+  },
+  {
+    "record_id": "L06-060-answerable",
+    "predicted_value_token_ids": [
+      5
+    ]
+  },
+  {
+    "record_id": "L06-061-answerable",
+    "predicted_value_token_ids": [
+      13
+    ]
+  },
+  {
+    "record_id": "L06-062-answerable",
+    "predicted_value_token_ids": [
+      13
+    ]
+  },
+  {
+    "record_id": "L06-063-answerable",
+    "predicted_value_token_ids": [
+      4
+    ]
+  },
+  {
+    "record_id": "L06-064-answerable",
+    "predicted_value_token_ids": [
+      17
+    ]
+  },
+  {
+    "record_id": "L06-065-answerable",
+    "predicted_value_token_ids": [
+      19
+    ]
+  },
+  {
+    "record_id": "L06-066-answerable",
+    "predicted_value_token_ids": [
+      19
+    ]
+  },
+  {
+    "record_id": "L06-067-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L06-068-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L06-069-answerable",
+    "predicted_value_token_ids": [
+      21
+    ]
+  },
+  {
+    "record_id": "L06-070-answerable",
+    "predicted_value_token_ids": [
+      22
+    ]
+  },
+  {
+    "record_id": "L06-071-answerable",
+    "predicted_value_token_ids": [
+      2
+    ]
+  },
+  {
+    "record_id": "L06-072-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L06-073-answerable",
+    "predicted_value_token_ids": [
+      2
+    ]
+  },
+  {
+    "record_id": "L06-074-answerable",
+    "predicted_value_token_ids": [
+      0
+    ]
+  },
+  {
+    "record_id": "L06-075-answerable",
+    "predicted_value_token_ids": [
+      21
+    ]
+  },
+  {
+    "record_id": "L06-076-answerable",
+    "predicted_value_token_ids": [
+      7
+    ]
+  },
+  {
+    "record_id": "L06-077-answerable",
+    "predicted_value_token_ids": [
+      0
+    ]
+  },
+  {
+    "record_id": "L06-078-answerable",
+    "predicted_value_token_ids": [
+      5
+    ]
+  },
+  {
+    "record_id": "L06-079-answerable",
+    "predicted_value_token_ids": [
+      4
+    ]
+  },
+  {
+    "record_id": "L06-080-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-081-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-082-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-083-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-084-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-085-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-086-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-087-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-088-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-089-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-090-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-091-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-092-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-093-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-094-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L06-095-null",
+    "predicted_value_token_ids": null
+  }
+]

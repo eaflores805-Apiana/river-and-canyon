@@ -1,0 +1,60 @@
+{
+  "tp_banner": {
+    "tp_criterion_status": "ACTIVE",
+    "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+    "tp_generation_status": "RUN (authorized)",
+    "tp_elimination_labels_enabled": true
+  },
+  "run_header": {
+    "candidate_sweep_id": "lane1a-prime-pathA-cand-20260612-003538-v4uva6",
+    "tp_sweep_id": "lane1a-prime-pathA-tp-20260612-003538-hdo9fu",
+    "tp_banner": {
+      "tp_criterion_status": "ACTIVE",
+      "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+      "tp_generation_status": "RUN (authorized)",
+      "tp_elimination_labels_enabled": true
+    }
+  },
+  "ph5_4": {
+    "status": "PASSED",
+    "oracle_verdict_table": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "t3_bounds": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "stratified_recipe": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5"
+  },
+  "mlx_lm_version_check": "PASSED",
+  "mlx_lm_version": "0.31.3",
+  "sealed_lock_record_hash": "51e18fa9f45379a37aaac6f33b2bcef442e3dff6eeb0268ad073ac04423d1935",
+  "generator_path": "experiments/2026-06-11_lane-1a-prime/lane1a_prime/validation.py",
+  "generator_hash": "db69519fe84396e7854f80460b41b60c7aeb1ef06948171b7fd91b4c1860bcac",
+  "snapshot_hash_authorized": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "snapshot_hash_computed": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "approved_rungs": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08"
+  ],
+  "all_preconditions": "PASSED",
+  "env": {
+    "hostname": "Eliass-Mac-Studio.local",
+    "os_release": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "cpu_brand": "arm",
+    "chip_arch": "arm64",
+    "python_version": "3.13.3",
+    "sys_platform": "darwin",
+    "preconditions_hash": "59f61465fc915ecd0c9a412eeb183ce6f5e70c04aae7d3bc5aa875136c069fa2",
+    "sealed_dir_file_count_before": 12,
+    "mlx_lm_version": "0.31.3",
+    "mlx_core_version": "0.31.2",
+    "hf_snapshot_dir": "/Users/eliasflores/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "hf_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "model_snapshot_hash_computed": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "model_snapshot_hash_authorized": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "candidate_sweep_id": "lane1a-prime-pathA-cand-20260612-003538-v4uva6",
+    "tp_sweep_id": "lane1a-prime-pathA-tp-20260612-003538-hdo9fu"
+  }
+}

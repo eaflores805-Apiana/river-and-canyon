@@ -1,0 +1,28 @@
+{
+  "record_id": "L07-045-answerable",
+  "rung_id": "L07",
+  "sweep_label": "candidate",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      2
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      9
+    ]
+  },
+  "prompt_user_text": "Pairs:\n25 -> p\n100 -> q\n2 -> j\n142 -> t\n132 -> j\n\nQuery: 2",
+  "output_text": "j",
+  "parsed": {
+    "predicted_value_token_ids": [
+      9
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "j",
+    "extracted_token": "j"
+  },
+  "latency_ms": 248.75521659851074,
+  "finish_reason": "completed"
+}

@@ -1,0 +1,28 @@
+{
+  "record_id": "L08-064-answerable",
+  "rung_id": "L08",
+  "sweep_label": "candidate",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      33
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      17
+    ]
+  },
+  "prompt_user_text": "Pairs:\n161 -> u\n82 -> l\n33 -> r\n26 -> g\n179 -> m\n\nQuery: 33",
+  "output_text": "r",
+  "parsed": {
+    "predicted_value_token_ids": [
+      17
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "r",
+    "extracted_token": "r"
+  },
+  "latency_ms": 253.5557746887207,
+  "finish_reason": "completed"
+}

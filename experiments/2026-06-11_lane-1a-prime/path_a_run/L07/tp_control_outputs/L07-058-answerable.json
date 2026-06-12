@@ -1,0 +1,26 @@
+{
+  "record_id": "L07-058-answerable",
+  "rung_id": "L07",
+  "sweep_label": "tp_control",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      106
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      7
+    ]
+  },
+  "prompt_user_text": "Pairs:\n\n\nQuery: 106",
+  "output_text": "NONE",
+  "parsed": {
+    "predicted_value_token_ids": null,
+    "parse_status": "parsed_abstention",
+    "raw_text": "NONE",
+    "extracted_token": "NONE"
+  },
+  "latency_ms": 254.9419403076172,
+  "finish_reason": "completed"
+}

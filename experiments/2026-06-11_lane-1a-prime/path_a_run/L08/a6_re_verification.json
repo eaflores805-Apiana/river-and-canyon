@@ -1,0 +1,14 @@
+{
+  "tp_banner": {
+    "tp_criterion_status": "ACTIVE",
+    "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+    "tp_generation_status": "RUN (authorized)",
+    "tp_elimination_labels_enabled": true
+  },
+  "rung_id": "L08",
+  "drift_within_tolerance": true,
+  "envelope_drift": 0.0,
+  "per_rung_manifest_pilot_hash": "3aa32862f1cf8a699b6afcd885b1b141fda5b0ce6c7a7cf6b4aa6f8a489220a8",
+  "per_rung_manifest_final_hash": "3aa32862f1cf8a699b6afcd885b1b141fda5b0ce6c7a7cf6b4aa6f8a489220a8",
+  "pilot_equals_final": true
+}

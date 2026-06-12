@@ -1,0 +1,9 @@
+{
+  "candidate_accuracy": 1.0,
+  "tp_control_accuracy": 0.0125,
+  "point_difference": 0.9875,
+  "newcombe_wilson_diff_lower": 0.9159444308889801,
+  "newcombe_wilson_diff_upper": 0.9977900244795478,
+  "tp_margin_locked": 0.1,
+  "tp_fires": false
+}

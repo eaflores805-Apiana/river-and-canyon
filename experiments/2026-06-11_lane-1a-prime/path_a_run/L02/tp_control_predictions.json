@@ -1,0 +1,480 @@
+[
+  {
+    "record_id": "L02-000-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-001-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-002-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-003-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-004-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-005-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-006-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-007-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-008-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-009-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-010-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-011-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-012-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-013-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-014-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-015-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-016-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-017-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-018-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-019-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-020-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-021-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-022-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-023-answerable",
+    "predicted_value_token_ids": [
+      13
+    ]
+  },
+  {
+    "record_id": "L02-024-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-025-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-026-answerable",
+    "predicted_value_token_ids": [
+      14
+    ]
+  },
+  {
+    "record_id": "L02-027-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-028-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-029-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-030-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-031-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-032-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-033-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-034-answerable",
+    "predicted_value_token_ids": [
+      23
+    ]
+  },
+  {
+    "record_id": "L02-035-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-036-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-037-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-038-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-039-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-040-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-041-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-042-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-043-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-044-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-045-answerable",
+    "predicted_value_token_ids": [
+      3
+    ]
+  },
+  {
+    "record_id": "L02-046-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-047-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-048-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-049-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-050-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-051-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-052-answerable",
+    "predicted_value_token_ids": [
+      23
+    ]
+  },
+  {
+    "record_id": "L02-053-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-054-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-055-answerable",
+    "predicted_value_token_ids": [
+      2
+    ]
+  },
+  {
+    "record_id": "L02-056-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-057-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-058-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-059-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-060-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-061-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-062-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-063-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-064-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-065-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-066-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-067-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-068-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-069-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-070-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-071-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-072-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-073-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-074-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-075-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-076-answerable",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-077-answerable",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-078-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-079-answerable",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-080-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-081-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-082-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-083-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-084-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-085-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-086-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-087-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-088-null",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-089-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-090-null",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-091-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-092-null",
+    "predicted_value_token_ids": [
+      25
+    ]
+  },
+  {
+    "record_id": "L02-093-null",
+    "predicted_value_token_ids": null
+  },
+  {
+    "record_id": "L02-094-null",
+    "predicted_value_token_ids": [
+      11
+    ]
+  },
+  {
+    "record_id": "L02-095-null",
+    "predicted_value_token_ids": [
+      14
+    ]
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "authorization_chain": {
+    "manager_path_a_authorization": "Lane 1a' Prime Path A Execution — Manager 2026-06-12 (all four boxes: model execution + sweep_id creation + L01-L08 sweep execution + token-prior generations by name)",
+    "path_a_readiness_packet_of_record": "LANE1A-PRIME-PATH-A-READINESS-PACKET-v0.1.1.md (sha256 cf21aaa1b7fbda47848c4443ba574585c0b0055463c7298ea773ded5a8d9c7c8)",
+    "pin_substitution_carryforward": "CS-D4A-MLX-LM-PIN-SUBSTITUTION-2026-06-11.md (Option A; carried forward)",
+    "tp_banner_future_run_fix_active": "CS-D4A-TP-BANNER-DEVIATION-ACK-AND-FIX-PLAN-v0.1.md (commit 5c60fbd; applied; symmetric ACTIVE form expected)",
+    "sealed_lock_record_memo": "LANE1A-PRIME-SEALED-LOCK-RECORD-v1.0.md",
+    "d4_synthesis_accepted": "LANE1A-PRIME-D4-SYNTHESIS-AND-NEXT-QUESTIONS-v0.3.md (Manager-accepted 2026-06-11)"
+  },
+  "authorized_mlx_lm_version": "0.31.3",
+  "authorized_model_snapshot_hash": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "snapshot_hash_routine": "B1 v2 compute_model_snapshot_hash: sha256 over sorted manifest of (rel_path, file_size, per_file_sha256), tab-separated, newline-joined",
+  "model_identity": {
+    "family": "Qwen2.5",
+    "variant": "Qwen2.5-3B-Instruct",
+    "precision": "bf16",
+    "huggingface_id": "Qwen/Qwen2.5-3B-Instruct",
+    "hf_revision_id": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "local_snapshot_glob": "~/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/*"
+  },
+  "lock_event_hashes": {
+    "oracle_verdict_table": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "t3_bounds": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "stratified_recipe": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5"
+  },
+  "sealed_manifest_hashes_L01": {
+    "pilot_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f",
+    "final_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f"
+  },
+  "sealed_lock_record_hash": "51e18fa9f45379a37aaac6f33b2bcef442e3dff6eeb0268ad073ac04423d1935",
+  "approved_generator_path": "experiments/2026-06-11_lane-1a-prime/lane1a_prime/validation.py",
+  "approved_generator_sha256": "db69519fe84396e7854f80460b41b60c7aeb1ef06948171b7fd91b4c1860bcac",
+  "approved_generation_function": "construct_pilot_manifests",
+  "locked_seed": 0,
+  "approved_rungs": ["L01", "L02", "L03", "L04", "L05", "L06", "L07", "L08"],
+  "token_prior_decision": "AUTHORIZED — Manager Path A 2026-06-12 (unconditioned_token_prior method; control artifacts only; not candidate evidence, not threshold material, not reusable outside this lane's locked comparison)",
+  "token_prior_method": "unconditioned_token_prior — no-bindings shell (same prompt template structure with empty pair list); not scrambled-binding; prior-only emission over visible VALUE_POOL; per-rung fresh (NO reuse of D4-B L01 prior)",
+  "tp_criterion_status": "ACTIVE BY MANAGER DECISION",
+  "approved_extent": "L01_L08_breadth_768_records",
+  "approved_two_sweep_structure": {
+    "candidate_sweep_purpose": "retrieval-shell inference using the locked prompt_template_v1.json; per-rung",
+    "tp_control_sweep_purpose": "no-bindings shell inference using prompt_template_v1_tp.json; per-rung fresh control",
+    "tp_criterion_evaluation": "per-rung Newcombe-Wilson CI on (candidate_correct - tp_control_correct) / n_answerable; fires iff CI upper < locked margin 0.10"
+  },
+  "per_rung_adjudication": {
+    "rule": "Each rung adjudicated SEPARATELY under the full six-criterion set. NO cross-rung aggregation. NO composite score. NO survival count. NO '8/8 survived' phrasing. Eight non-eliminations, if they occur, are eight rung-local bounded sentences."
+  },
+  "materialization_plan": {
+    "L01": "use sealed manifests at experiments/.../validation/pilot_manifests_L01.json + final_manifests_L01.json; do NOT regenerate; hashes must equal afe0e545...",
+    "L02_to_L08": "materialize PILOT and FINAL under path_a_run/manifests/L0k/ using construct_pilot_manifests(ManifestRecipe(rung_id=Lk, seed=0)); PILOT must equal FINAL byte-for-byte (PH5-3 identical-seed property); per-rung sha256 recorded BEFORE inference",
+    "sealed_byte_protection": "any write attempt under experiments/.../validation/ aborts the run before any inference"
+  },
+  "abort_triggers_per_manager_section_7": [
+    "pre-flight hash refusal (PH5-4)",
+    "A6 drift exceedance",
+    "candidate batch schema failure",
+    "TP control batch schema failure",
+    "artifact hash mismatch",
+    "runner/model identity mismatch",
+    "unhandled exception",
+    "missing TP field in any emitted report",
+    "generator hash mismatch",
+    "pilot/final manifest mismatch",
+    "per-rung recipe-conformance failure",
+    "sealed-byte write attempt"
+  ]
+}

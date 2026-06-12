@@ -1,0 +1,172 @@
+{
+  "tp_banner": {
+    "tp_criterion_status": "ACTIVE",
+    "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+    "tp_generation_status": "RUN (authorized)",
+    "tp_elimination_labels_enabled": true
+  },
+  "model_invoked": true,
+  "model_loaded": true,
+  "candidate_sweep_id_created": "lane1a-prime-pathA-cand-20260612-003538-v4uva6",
+  "tp_sweep_id_created": "lane1a-prime-pathA-tp-20260612-003538-hdo9fu",
+  "structure": "Path A: 8 rungs (L01-L08) \u00d7 2 sweeps (candidate + TP control) = 1,536 inferences; per-rung adjudication; no cross-rung aggregation",
+  "sweep_execution": true,
+  "candidate_model_outputs_produced": true,
+  "tp_control_model_outputs_produced": true,
+  "no_threshold_work": "CONFIRMED",
+  "no_certification_evaluation": "CONFIRMED",
+  "no_claim_c_activation": "CONFIRMED",
+  "no_sealed_byte_change": "CONFIRMED (sealed dir inventory unchanged before/after)",
+  "no_quantization": "CONFIRMED",
+  "no_int8_or_int4": "CONFIRMED",
+  "tp_generation_method": "unconditioned_token_prior \u2014 no-bindings shell (same prompt template structure with empty pair list); not scrambled-binding; prior-only emission over visible VALUE_POOL; per-rung fresh (NO reuse of D4-B L01 prior)",
+  "no_scrambled_binding_generations": "CONFIRMED \u2014 TP method is no-bindings shell",
+  "outputs_validation_only": "SYNTHETIC/DIAGNOSTIC \u2014 Path A instrument-use artifacts",
+  "manager_authorization": "Lane 1a' Prime Path A Execution \u2014 Manager 2026-06-12",
+  "model_snapshot_hash_authorized": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "model_snapshot_hash_computed": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "mlx_lm_version": "0.31.3",
+  "runner_hash": "9ce0f9bdd903cfb19a52ea3f30a738f85de13511a476af9393a68d47d652717a",
+  "parser_hash": "fbdf989cdb8f258b7b2e18000835aafd9814a195b3eae0d73f540c08d35a1180",
+  "prompt_template_candidate_hash": "f1956e7dd43f165c8707fe88bc11757888f108e7e9766aa186ac9fc04f8b368a",
+  "prompt_template_tp_hash": "af55f9757005c6cd7c1baa1c77852d4a4bb596f185ceaccfb875ad29f3108615",
+  "decoding_config_hash": "a20391d89972d47c0b231f5c6da9f8a9f4c7be8c975ab98bd95a32327196f803",
+  "preconditions_hash": "59f61465fc915ecd0c9a412eeb183ce6f5e70c04aae7d3bc5aa875136c069fa2",
+  "scorer_hash": "db69519fe84396e7854f80460b41b60c7aeb1ef06948171b7fd91b4c1860bcac",
+  "generator_path": "experiments/2026-06-11_lane-1a-prime/lane1a_prime/validation.py",
+  "generator_hash": "db69519fe84396e7854f80460b41b60c7aeb1ef06948171b7fd91b4c1860bcac",
+  "sealed_lock_record_hash": "51e18fa9f45379a37aaac6f33b2bcef442e3dff6eeb0268ad073ac04423d1935",
+  "lock_event_hashes": {
+    "oracle_verdict_table": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "t3_bounds": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "stratified_recipe": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5"
+  },
+  "per_rung_manifest_hashes": {
+    "L01": {
+      "pilot": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f",
+      "final": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f"
+    },
+    "L02": {
+      "pilot": "068f0a9ac9e005cff77d111b59eb3064b0d8a40f4096357831686ed065a918ab",
+      "final": "068f0a9ac9e005cff77d111b59eb3064b0d8a40f4096357831686ed065a918ab"
+    },
+    "L03": {
+      "pilot": "b4110a2851d2ad5c4acc802535094865b0d16ee5db60bf56878fc3507411f7e9",
+      "final": "b4110a2851d2ad5c4acc802535094865b0d16ee5db60bf56878fc3507411f7e9"
+    },
+    "L04": {
+      "pilot": "02e528e65d7dd4925ae3f97896707b8846e08c1edae152ab11b1a8800f34a4b6",
+      "final": "02e528e65d7dd4925ae3f97896707b8846e08c1edae152ab11b1a8800f34a4b6"
+    },
+    "L05": {
+      "pilot": "bb8c60979112741a7b1df92b9ec550a05eb30b11e7ac465fcd6c40047abaa1bb",
+      "final": "bb8c60979112741a7b1df92b9ec550a05eb30b11e7ac465fcd6c40047abaa1bb"
+    },
+    "L06": {
+      "pilot": "2dc44b6072015539a9cd11c18a918dd5e0338da40b1749ad2def86991eb3b489",
+      "final": "2dc44b6072015539a9cd11c18a918dd5e0338da40b1749ad2def86991eb3b489"
+    },
+    "L07": {
+      "pilot": "94b70ce3b880e13ab40611d288bc89b4b845efdc53388827a42545e921de050a",
+      "final": "94b70ce3b880e13ab40611d288bc89b4b845efdc53388827a42545e921de050a"
+    },
+    "L08": {
+      "pilot": "3aa32862f1cf8a699b6afcd885b1b141fda5b0ce6c7a7cf6b4aa6f8a489220a8",
+      "final": "3aa32862f1cf8a699b6afcd885b1b141fda5b0ce6c7a7cf6b4aa6f8a489220a8"
+    }
+  },
+  "env": {
+    "hostname": "Eliass-Mac-Studio.local",
+    "os_release": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "cpu_brand": "arm",
+    "chip_arch": "arm64",
+    "python_version": "3.13.3",
+    "sys_platform": "darwin",
+    "preconditions_hash": "59f61465fc915ecd0c9a412eeb183ce6f5e70c04aae7d3bc5aa875136c069fa2",
+    "sealed_dir_file_count_before": 12,
+    "mlx_lm_version": "0.31.3",
+    "mlx_core_version": "0.31.2",
+    "hf_snapshot_dir": "/Users/eliasflores/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "hf_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "model_snapshot_hash_computed": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "model_snapshot_hash_authorized": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "candidate_sweep_id": "lane1a-prime-pathA-cand-20260612-003538-v4uva6",
+    "tp_sweep_id": "lane1a-prime-pathA-tp-20260612-003538-hdo9fu",
+    "model_loaded": true
+  },
+  "per_rung_results": [
+    {
+      "rung_id": "L01",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    },
+    {
+      "rung_id": "L02",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    },
+    {
+      "rung_id": "L03",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    },
+    {
+      "rung_id": "L04",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    },
+    {
+      "rung_id": "L05",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    },
+    {
+      "rung_id": "L06",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    },
+    {
+      "rung_id": "L07",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    },
+    {
+      "rung_id": "L08",
+      "outcome": "NOT_RULED_OUT",
+      "attached_labels": [],
+      "cand_acc": 1.0,
+      "tp_acc": 0.0125,
+      "nw_diff_upper": 0.9977900244795478,
+      "tp_fires": false
+    }
+  ],
+  "elapsed_seconds": 404.7393159866333
+}

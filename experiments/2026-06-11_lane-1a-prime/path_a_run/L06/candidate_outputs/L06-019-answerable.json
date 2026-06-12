@@ -1,0 +1,28 @@
+{
+  "record_id": "L06-019-answerable",
+  "rung_id": "L06",
+  "sweep_label": "candidate",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      31
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      21
+    ]
+  },
+  "prompt_user_text": "Pairs:\n31 -> v\n122 -> a\n53 -> r\n186 -> n\n15 -> t\n\nQuery: 31",
+  "output_text": "v",
+  "parsed": {
+    "predicted_value_token_ids": [
+      21
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "v",
+    "extracted_token": "v"
+  },
+  "latency_ms": 252.1970272064209,
+  "finish_reason": "completed"
+}
