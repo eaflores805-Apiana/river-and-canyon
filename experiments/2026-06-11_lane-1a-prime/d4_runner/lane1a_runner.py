@@ -260,6 +260,35 @@ def run_inference(model, tokenizer, system_text: str, user_text: str,
     return output_text, latency_ms, finish_reason
 
 
+def tp_banner_block(token_prior_authorized: bool,
+                    authority_ref: str) -> dict:
+    """Standard TP inactive-by-Manager-decision banner block.
+
+    Per Manager Disposition D4-A TP-Banner Deviation (2026-06-11),
+    every emitted report MUST include this banner whenever Manager
+    declines token-prior generations. Returns the canonical 4-field
+    banner block; callers embed it into their JSON-encoded artifact.
+
+    The banner is BY-RUN — produced once per run-start and embedded
+    in every emitted artifact in that run. Past artifacts emitted
+    before this helper existed are NOT mutated post-hoc (per Manager
+    no-post-hoc-mutation rule).
+    """
+    if token_prior_authorized:
+        return {
+            "tp_criterion_status": "ACTIVE",
+            "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+            "tp_generation_status": "RUN (authorized)",
+            "tp_elimination_labels_enabled": True,
+        }
+    return {
+        "tp_criterion_status": "INACTIVE BY MANAGER DECISION",
+        "tp_inactivity_authority": authority_ref,
+        "tp_generation_status": "NOT RUN — DECLINED BY MANAGER",
+        "tp_elimination_labels_enabled": False,
+    }
+
+
 def make_sweep_id() -> str:
     """Manager-authorized sweep_id per Q1.5."""
     ts = time.strftime("%Y%m%d-%H%M%S")
@@ -293,6 +322,20 @@ def main(argv: list[str] | None = None) -> int:
         preconditions = json.loads(PRECONDITIONS_PATH.read_text())
         env["preconditions_hash"] = sha256_file(PRECONDITIONS_PATH)
 
+        # Step 1a: TP banner — single source of truth for the run.
+        # Per Manager TP-Banner Deviation disposition (2026-06-11), every
+        # emitted artifact MUST carry this banner whenever Q2 was declined.
+        # The banner is composed ONCE here and propagated by-value to each
+        # emission envelope below.
+        token_prior_authorized = preconditions.get(
+            "token_prior_decision", "DECLINED"
+        ).upper().startswith("AUTHORIZED")
+        tp_authority_ref = preconditions.get(
+            "token_prior_decision",
+            "MANAGER-AUTHORIZATION-LANE-1A-PRIME-D4A 2026-06-11 §4 (Q2 declined)",
+        )
+        tp_banner = tp_banner_block(token_prior_authorized, tp_authority_ref)
+
         # Step 2: mlx_lm version check
         precondition_mlx_lm_version_check(
             env, preconditions["authorized_mlx_lm_version"]
@@ -320,8 +363,13 @@ def main(argv: list[str] | None = None) -> int:
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         (OUTPUT_DIR / "candidate_outputs").mkdir(exist_ok=True)
 
-        # Step 8: Write pre-flight log immediately
+        # Step 8: Write pre-flight log (with TP banner in run header + top level)
         (OUTPUT_DIR / "pre_flight_log.json").write_text(json.dumps({
+            "tp_banner": tp_banner,
+            "run_header": {
+                "sweep_id": sweep_id,
+                "tp_banner": tp_banner,
+            },
             "sweep_id": sweep_id,
             "ph5_4": pre_flight_log,
             "mlx_lm_version_check": "PASSED",
@@ -584,6 +632,7 @@ def main(argv: list[str] | None = None) -> int:
                 return [_to_jsonable(x) for x in obj]
             return obj
         (OUTPUT_DIR / "t1_report.json").write_text(json.dumps({
+            "tp_banner": tp_banner,
             "per_policy_scores": _to_jsonable(t1_report.per_policy_scores),
             "union_envelope_score": t1_report.union_envelope_score,
             "envelope_cap": t1_report.envelope_cap,
@@ -594,18 +643,24 @@ def main(argv: list[str] | None = None) -> int:
         }, indent=2, default=str))
 
         (OUTPUT_DIR / "t3_report.json").write_text(json.dumps({
+            "tp_banner": tp_banner,
             "ideal_witness_in_pass_region": t3_report.ideal_witness_in_pass_region,
             "rows": _to_jsonable(list(t3_report.rows)),
             "criterion_evaluations_against_candidate": _to_jsonable(criterion_evaluations),
             "attached_labels": sorted(attached_labels),
             "candidate_outcome": outcome,
-            "tp_inactive_by_manager_decision": True,
-            "tp_inactivity_authority": "MANAGER-AUTHORIZATION-LANE-1A-PRIME-D4A 2026-06-11 §4 (Q2 decline)",
+            "tp_inactive_by_manager_decision": not token_prior_authorized,
+            "tp_inactivity_authority": tp_authority_ref,
         }, indent=2, default=str))
 
-        (OUTPUT_DIR / "t4_report.json").write_text(json.dumps({"rows": t4_d4a_rows}, indent=2))
+        (OUTPUT_DIR / "t4_report.json").write_text(json.dumps({
+            "tp_banner": tp_banner,
+            "rows": t4_d4a_rows,
+        }, indent=2))
 
-        (OUTPUT_DIR / "a6_re_verification.json").write_text(json.dumps(a6_block, indent=2))
+        a6_block_with_banner = dict(a6_block)
+        a6_block_with_banner["tp_banner"] = tp_banner
+        (OUTPUT_DIR / "a6_re_verification.json").write_text(json.dumps(a6_block_with_banner, indent=2))
 
         # Step 20: Execution ledger
         runner_hash = sha256_file(RUNNER_PATH)
@@ -615,6 +670,7 @@ def main(argv: list[str] | None = None) -> int:
         preconditions_hash = sha256_file(PRECONDITIONS_PATH)
         scorer_hash = sha256_file(EXPERIMENT_DIR / "lane1a_prime" / "validation.py")
         ledger = {
+            "tp_banner": tp_banner,
             "model_invoked": True,
             "model_loaded": True,
             "sweep_id_created": sweep_id,
