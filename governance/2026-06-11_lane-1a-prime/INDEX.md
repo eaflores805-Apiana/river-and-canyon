@@ -18,14 +18,16 @@ Project file, primarily maintained by Senior. CS adds rows for memos it files di
 
 | Date | Author | Routed to | Document | Status | sha256(16) | Notes |
 |---|---|---|---|---|---|---|
-| 2026-06-11 | NS | NS → CS+TL | `LANE1A-PRIME-D4-SYNTHESIS-AND-NEXT-QUESTIONS-v0.2.md` | SUPERSEDED by v0.2.1 | `22bc922ba7c05a90` | NS-finalized synthesis with C5 adversarial layer merged. C5 wording edits E1–E3 applied as v0.2.1 per TL direction. |
-| 2026-06-11 | CS | CS → TL | `LANE1A-PRIME-D4-SYNTHESIS-AND-NEXT-QUESTIONS-v0.2.1.md` | ACTIVE | `1900fc1fd24ede11` | E1 (breadth wording), E2 (transfer wording), E3 (constructibility-name collision) applied verbatim; no other content change; v0.2 retained. |
-| 2026-06-11 | CS | CS → TL | `CS-D4-SYNTHESIS-v0.2.1-FILING-RETURN-v0.1.md` | FILED (return) | `[computed at commit]` | TL §7 10-item return for the v0.2.1 patch filing. |
+| 2026-06-11 | NS | NS → CS+TL | `LANE1A-PRIME-D4-SYNTHESIS-AND-NEXT-QUESTIONS-v0.2.md` | SUPERSEDED by v0.3 | `22bc922ba7c05a90` | NS-finalized synthesis with C5 adversarial layer merged. Retained. |
+| 2026-06-11 | CS | CS → TL | `LANE1A-PRIME-D4-SYNTHESIS-AND-NEXT-QUESTIONS-v0.2.1.md` | SUPERSEDED by v0.3 (parallel CS patch) | `1900fc1fd24ede11` | CS interim patch applying E1-E3 to v0.2; superseded by NS workspace v0.3 (same E1-E3 + optional N1; NS authored as synthesis lead = canonical). Retained. |
+| 2026-06-11 | CS | CS → TL | `CS-D4-SYNTHESIS-v0.2.1-FILING-RETURN-v0.1.md` | FILED (return) | `0f7f712f8ebcc399` | TL §7 10-item return for the v0.2.1 patch filing. Retained; superseded as v0.2.1 was. |
+| 2026-06-11 | NS | NS → CS+TL | `LANE1A-PRIME-D4-SYNTHESIS-AND-NEXT-QUESTIONS-v0.3.md` | ACTIVE | `674c98c86ed4f613` | NS workspace v0.3: applies E1, E2, E3 exactly + optional N1 ("two operationally clean, bounded pilots"). Canonical synthesis going forward. C5 stop-rule applies — no further C5 round required. |
+| 2026-06-11 | CS | CS → TL | `CS-D4-SYNTHESIS-v0.3-STATE-VERIFICATION-v0.1.md` | FILED (return) | `[computed at commit]` | TL §6 state-verification co-sign for v0.3: VERIFIED — Manager-ready. |
 | 2026-06-11 | CS | CS → all | `INDEX.md` (this file) | LIVE | (self-referencing) | Canonical project INDEX. CS seeds with new rows it files; Senior merges workspace catalog at next pass. |
 
 ## Gate state (carried verbatim from Senior's workspace `FULL-DOCUMENT-INDEX.md`; update at each project state change)
 
-D1 ✓ · D2 ✓ · PH5-1 ✓ · run-3 complete (run of record; 12/12, drift 0.0000, 6/6 PASS) · incidental dispositioned ✓ · D3 ACCEPTED ✓ · sealing package PASS ✓ · LOCK-RECORD v1.0 SEALED ✓ · D4-A complete · **D5 ACCEPTED — D4-A record closed as finished auditable unit** · **D4-B COMPLETE + NS-VERIFIED (9b0e0ee)**: six-criterion vs real model; candidate 80/80, TP control 1/80 = 0.0125, NW diff [0.9159, 0.9978] independently recomputed; TP did not fire; NOT_RULED_OUT; banner deviation did NOT recur; per-run runner provenance · Manager-accepted · **D5-B ACCEPTED — D4-B LIFECYCLE CLOSED** · **D4 synthesis v0.2.1 filed (C5 wording edits E1–E3 applied; awaiting TL filter)** · LANE AT FULL REST AGAIN: two complete model-facing lifecycles closed (D4-A five-criterion, D4-B six-criterion w/ measured TP), both bounded, both auditable · TP guard binding for all future reference · all successor gates closed by name (successor D4 / L02–L08 / further TP / quantization / Claim C / benchmark / funder-facing release / SBIR submission).
+D1 ✓ · D2 ✓ · PH5-1 ✓ · run-3 complete (run of record; 12/12, drift 0.0000, 6/6 PASS) · incidental dispositioned ✓ · D3 ACCEPTED ✓ · sealing package PASS ✓ · LOCK-RECORD v1.0 SEALED ✓ · D4-A complete · **D5 ACCEPTED — D4-A record closed as finished auditable unit** · **D4-B COMPLETE + NS-VERIFIED (9b0e0ee)**: six-criterion vs real model; candidate 80/80, TP control 1/80 = 0.0125, NW diff [0.9159, 0.9978] independently recomputed; TP did not fire; NOT_RULED_OUT; banner deviation did NOT recur; per-run runner provenance · Manager-accepted · **D5-B ACCEPTED — D4-B LIFECYCLE CLOSED** · **D4 synthesis v0.3 filed (E1-E3 + N1; CS state-verified; Manager-ready; awaiting TL filter)** · LANE AT FULL REST AGAIN: two complete model-facing lifecycles closed (D4-A five-criterion, D4-B six-criterion w/ measured TP), both bounded, both auditable · TP guard binding for all future reference · all successor gates closed by name (successor D4 / L02–L08 / further TP / quantization / Claim C / benchmark / funder-facing release / SBIR submission).
 
 ## Where canonical artifacts live
 
@@ -43,4 +45,4 @@ D1 ✓ · D2 ✓ · PH5-1 ✓ · run-3 complete (run of record; 12/12, drift 0.0
 - Claim C INACTIVE.
 - Forbidden phrasings (binding for all future references to D4-A / D4-B): `model passed` · `capability established` · `not shortcut-driven` · `candidate certified` · `task family viable` · `Claim C progressed` · `seam evidence` · `public benchmark result` · `certification achieved`.
 
-— Last touched: CS, 2026-06-11 (seed pass at canonical repo path)
+— Last touched: CS, 2026-06-11 (v0.3 mirror + state-verification co-sign added; v0.2.1 reclassified as SUPERSEDED by v0.3)
