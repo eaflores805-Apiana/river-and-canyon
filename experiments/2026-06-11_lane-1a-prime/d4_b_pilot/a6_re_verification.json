@@ -1,0 +1,19 @@
+{
+  "drift_within_tolerance": true,
+  "envelope_drift": 0.0,
+  "flagged_drifts": [],
+  "per_policy_drift": {
+    "pure_last_position": 0.0,
+    "salient_endpoint": 0.0,
+    "recency_excluding_target": 0.0,
+    "prefix_neighbor_confusion": 0.0,
+    "copy_completion": 0.0
+  },
+  "rationale": "pilot and final manifests share sealed sha256 by PH5-3 construction; A6 drift is 0 by identity.",
+  "tp_banner": {
+    "tp_criterion_status": "ACTIVE",
+    "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+    "tp_generation_status": "RUN (authorized)",
+    "tp_elimination_labels_enabled": true
+  }
+}

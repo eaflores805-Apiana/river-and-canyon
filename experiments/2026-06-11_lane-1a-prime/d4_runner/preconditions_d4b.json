@@ -1,0 +1,50 @@
+{
+  "authorization_chain": {
+    "manager_d4b_authorization": "Lane 1a' D4-B L01 Token-Prior-Active Pilot — Manager 2026-06-11",
+    "d4a_close_out_acceptance": "Manager D4-A Close-Out Accepted + D4-B Authorized — Manager 2026-06-11",
+    "pin_substitution_carryforward": "CS-D4A-MLX-LM-PIN-SUBSTITUTION-2026-06-11.md (Option A; carried forward)",
+    "tp_banner_future_run_fix": "CS-D4A-TP-BANNER-DEVIATION-ACK-AND-FIX-PLAN-v0.1.md (commit 5c60fbd; applied)",
+    "sealed_lock_record_memo": "LANE1A-PRIME-SEALED-LOCK-RECORD-v1.0.md"
+  },
+  "authorized_mlx_lm_version": "0.31.3",
+  "mlx_lm_pin_substitution_authority": "Manager Disposition §1 (Option A approved 2026-06-11; carried forward into D4-B)",
+  "authorized_model_snapshot_hash": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "snapshot_hash_routine": "B1 v2 compute_model_snapshot_hash: sha256 over sorted manifest of (rel_path, file_size, per_file_sha256), tab-separated, newline-joined",
+  "model_identity": {
+    "family": "Qwen2.5",
+    "variant": "Qwen2.5-3B-Instruct",
+    "precision": "bf16",
+    "huggingface_id": "Qwen/Qwen2.5-3B-Instruct",
+    "hf_revision_id": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "local_snapshot_glob": "~/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/*"
+  },
+  "lock_event_hashes": {
+    "oracle_verdict_table": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "t3_bounds": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "stratified_recipe": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5"
+  },
+  "sealed_manifest_hashes": {
+    "pilot_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f",
+    "final_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f"
+  },
+  "sealed_lock_record_hash": "51e18fa9f45379a37aaac6f33b2bcef442e3dff6eeb0268ad073ac04423d1935",
+  "token_prior_decision": "AUTHORIZED — Manager D4-B 2026-06-11 (unconditioned_token_prior method)",
+  "token_prior_method": "unconditioned_token_prior — no-bindings shell (same prompt template structure with empty pair list); not scrambled-binding; prior-only emission over visible VALUE_POOL",
+  "tp_criterion_status": "ACTIVE BY MANAGER DECISION",
+  "approved_extent": "L01_only_96_records",
+  "approved_two_sweep_structure": {
+    "candidate_sweep_purpose": "retrieval-shell inference using the locked prompt_template_v1.json",
+    "tp_control_sweep_purpose": "no-bindings shell inference using prompt_template_v1_tp.json; measured prior baseline",
+    "tp_criterion_evaluation": "Newcombe-Wilson CI on (candidate_correct - tp_control_correct) / n_answerable; fires iff CI upper < locked margin 0.10"
+  },
+  "abort_triggers_per_manager_section_7": [
+    "pre-flight hash refusal (PH5-4)",
+    "A6 drift exceedance",
+    "candidate batch schema failure",
+    "TP control batch schema failure",
+    "artifact hash mismatch",
+    "runner/model identity mismatch",
+    "unhandled exception",
+    "missing TP fields in any emitted report"
+  ]
+}

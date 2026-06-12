@@ -1,0 +1,54 @@
+{
+  "tp_banner": {
+    "tp_criterion_status": "ACTIVE",
+    "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+    "tp_generation_status": "RUN (authorized)",
+    "tp_elimination_labels_enabled": true
+  },
+  "run_header": {
+    "candidate_sweep_id": "lane1a-prime-d4b-cand-20260611-220303-ueitv3",
+    "tp_sweep_id": "lane1a-prime-d4b-tp-20260611-220303-bt29ky",
+    "tp_banner": {
+      "tp_criterion_status": "ACTIVE",
+      "tp_inactivity_authority": "n/a (Manager authorized TP generations for this run)",
+      "tp_generation_status": "RUN (authorized)",
+      "tp_elimination_labels_enabled": true
+    }
+  },
+  "candidate_sweep_id": "lane1a-prime-d4b-cand-20260611-220303-ueitv3",
+  "tp_sweep_id": "lane1a-prime-d4b-tp-20260611-220303-bt29ky",
+  "ph5_4": {
+    "status": "PASSED",
+    "oracle_verdict_table_hash": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "t3_bounds_hash": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "stratified_recipe_hash": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5"
+  },
+  "mlx_lm_version_check": "PASSED",
+  "mlx_lm_version_authorized": "0.31.3",
+  "mlx_lm_version_actual": "0.31.3",
+  "manifest_hashes": {
+    "pilot_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f",
+    "final_L01": "afe0e545c318132a5821e6d02ba3f41093c05ce7a2623a120d0088e03b29b09f"
+  },
+  "sealed_lock_record_hash": "51e18fa9f45379a37aaac6f33b2bcef442e3dff6eeb0268ad073ac04423d1935",
+  "snapshot_hash_authorized": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "snapshot_hash_computed": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+  "all_preconditions": "PASSED",
+  "env": {
+    "hostname": "Eliass-Mac-Studio.local",
+    "os_release": "macOS-26.5-arm64-arm-64bit-Mach-O",
+    "cpu_brand": "arm",
+    "chip_arch": "arm64",
+    "python_version": "3.13.3",
+    "sys_platform": "darwin",
+    "preconditions_hash": "e7376ac8e5c2faa1037b7afb3a6b44ca703bd0685299b2efd9116fbb93ccd0c0",
+    "mlx_lm_version": "0.31.3",
+    "mlx_core_version": "0.31.2",
+    "hf_snapshot_dir": "/Users/eliasflores/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "hf_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "model_snapshot_hash_computed": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "model_snapshot_hash_authorized": "sha256:abee745b7dfe399d9254dbcdea5e3e3902aa95d71a31989b7b720b7ac9907b20",
+    "candidate_sweep_id": "lane1a-prime-d4b-cand-20260611-220303-ueitv3",
+    "tp_sweep_id": "lane1a-prime-d4b-tp-20260611-220303-bt29ky"
+  }
+}

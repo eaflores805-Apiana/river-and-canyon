@@ -1,0 +1,23 @@
+{
+  "record_id": "L01-080-null",
+  "sweep_label": "candidate",
+  "stratum": "null",
+  "queried_key": {
+    "key_token_ids": [
+      200
+    ]
+  },
+  "gold": {
+    "value_token_ids": []
+  },
+  "prompt_user_text": "Pairs:\n62 -> j\n60 -> l\n193 -> n\n47 -> v\n\nQuery: 200",
+  "output_text": "none",
+  "parsed": {
+    "predicted_value_token_ids": null,
+    "parse_status": "parsed_abstention",
+    "raw_text": "none",
+    "extracted_token": "NONE"
+  },
+  "latency_ms": 255.39708137512207,
+  "finish_reason": "completed"
+}

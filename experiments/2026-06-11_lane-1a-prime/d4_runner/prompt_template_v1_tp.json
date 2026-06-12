@@ -1,0 +1,13 @@
+{
+  "version": "v1-tp",
+  "purpose": "Unconditioned token-prior (no-bindings shell) per Manager D4-B authorization. The model receives NO key-value pairs; it must emit a prior-only guess over VALUE_POOL or NONE.",
+  "system": "You will receive a list of integer key-to-letter pairs. Then you will be asked to retrieve the letter associated with a specific key.\n\nRules:\n- Respond with ONLY the single lowercase letter (a through z).\n- If the queried key is NOT in the list, respond with exactly the word: NONE\n- Do not explain. Do not include the key. Do not use punctuation.",
+  "user_template": "Pairs:\n{pair_lines}\n\nQuery: {query_key}",
+  "pair_format": "{key} -> {value}",
+  "pair_list_override": "empty",
+  "scrambled_binding": false,
+  "scrambled_binding_note": "This shell is NOT scrambled-binding. No bindings are scrambled because no bindings exist in the prompt. Manager prohibits scrambled-binding generations in this lane; this method honors that prohibition.",
+  "value_pool_mapping_rationale": "Same as v1: VALUE_POOL ids 0..25 mapped to letters 'a'..'z'. With no pair list rendered, the model cannot retrieve and must emit a prior-only prediction.",
+  "abstention_string": "NONE",
+  "expected_response_grammar": "single lowercase letter [a-z], OR the word NONE"
+}

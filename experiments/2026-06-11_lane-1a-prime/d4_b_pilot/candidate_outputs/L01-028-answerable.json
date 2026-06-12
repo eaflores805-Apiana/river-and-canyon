@@ -1,0 +1,28 @@
+{
+  "record_id": "L01-028-answerable",
+  "sweep_label": "candidate",
+  "stratum": "answerable",
+  "queried_key": {
+    "key_token_ids": [
+      57,
+      163
+    ]
+  },
+  "gold": {
+    "value_token_ids": [
+      12
+    ]
+  },
+  "prompt_user_text": "Pairs:\n96 181 -> t\n57 114 -> m\n57 163 -> m\n172 145 -> o\n106 8 -> x\n\nQuery: 57 163",
+  "output_text": "m",
+  "parsed": {
+    "predicted_value_token_ids": [
+      12
+    ],
+    "parse_status": "parsed_value",
+    "raw_text": "m",
+    "extracted_token": "m"
+  },
+  "latency_ms": 301.8002510070801,
+  "finish_reason": "completed"
+}
