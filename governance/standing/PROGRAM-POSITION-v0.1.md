@@ -9,14 +9,15 @@ Maintained by Senior; verified by CS.
 ## ▶ RIGHT NOW
 
 ```text
-MAIN MAP:   Program Map v2.0  →  node: "Baseline Gate Diagnosis (the hinge)"
-SUBMAP:     Phase-0 → Phase-1 readiness mini-map
-ON STAGE:   F — Phase-1 readiness decision   ← THE LIVE STEP
-WAITING ON: Manager (ACCEPT / RETURN / PIVOT)
-ROUTE STATE: YELLOW (model-free work proceeds) · RED (no model execution)
+MAIN MAP:   Program Map v2.0  →  node: "Certification track (Lanes 1–3)"
+SUBMAP:     Certification-readiness / off-ceiling repair design  (OPEN)
+ON STAGE:   repair design filed → next: off-ceiling CALIBRATION READ (model-free)  ← THE LIVE STEP
+WAITING ON: nobody — model-free calibration read is the next Senior+CS work
+ROUTE STATE: YELLOW (model-free work proceeds) · RED (no model execution / certification run / compression)
+PRIOR SUBMAP: Phase-0→Phase-1 mini-map CLOSED at F = ACCEPT (scoped: repair design only)
 ```
 
-**In one sentence:** every model-free stage up to the baseline diagnosis is done; we are waiting on the Manager's Phase-1 readiness decision, which is the gate that would authorize the off-ceiling repair design.
+**In one sentence:** the Manager accepted Stage F (model-free repair design only — no execution/certification/compression); the repair design is filed with a design-level checklist PASS, and the one remaining model-free step is the off-ceiling calibration read that determines whether a certifiable band exists (→ license a gated certification-run request) or does not (→ pivot to Tier 1).
 
 ---
 
@@ -26,8 +27,8 @@ ROUTE STATE: YELLOW (model-free work proceeds) · RED (no model execution)
 [done]  Foundation / earned (Papers 1–3, Hash Integrity note, North Star,
         Stage Map, Route-State Gate, quarantine discipline)
 [done]  Lane 1a′ accepted as instrument-development detour (INT8-RUNG-1 quarantined)
-[HERE]  Baseline Gate Diagnosis — the hinge   ◀── current main-map node
-[next]  Certification track (Lanes 1–3)  — only if the hinge says "reachable"
+[done]  Baseline Gate Diagnosis — the hinge (FIXABLE + one narrow structural risk)
+[HERE]  Certification track (Lanes 1–3)  ◀── repair design filed; calibration read next
 [gated] Lane 4 — official compression on a certified baseline
 [horizon] portability · external usability · predictive/qualification · Claim C
 ```
@@ -42,15 +43,27 @@ B  INT8 quarantine package        HOLD   (filed + byte-matched; Manager acceptan
 C  Route-state gate               PASS
 D  Map reconciliation             PASS   (Reading C; Program Map v2.0 is map of record)
 E  Baseline Gate Diagnosis        PASS   (FIXABLE + one narrow structural risk)
-F  Phase-1 readiness decision     LIVE   ◀── we are here; Manager decision
+F  Phase-1 readiness decision     ACCEPT (scoped: model-free repair design only)
+```
+
+Phase-0→Phase-1 mini-map: CLOSED at F = ACCEPT. Returned to main map a decided
+route at the BGD hinge → opened the certification-readiness submap.
+
+### Now-open submap — Certification-readiness / off-ceiling repair design
+
+```text
+stage 1  repair design (OFF-CEILING-D4-REPAIR-DESIGN-v0.1)   FILED — checklist PASS
+stage 2  off-ceiling CALIBRATION READ (model-free)           LIVE   ◀── we are here
+stage 3  (gated) certification-run request                   NOT EVALUATED
 ```
 
 ```text
-What closes this submap: F resolves to ACCEPT / RETURN / PIVOT.
-  ACCEPT → opens the next submap (certification-readiness / repair design)
-  RETURN → names a blocker to fix, stay in this submap
-  PIVOT  → redirect to Tier 1 eval-validity auditing
-What it returns to the main map: a decided route at the BGD hinge.
+What closes this submap:
+  (A) calibration read shows a band exists → certification-run request well-formed → Manager auth
+  (B) calibration read shows no band → PIVOT to Tier 1
+  (C) no band + no second family → STOP
+What it returns to the main map: either a licensed (gated) certification-run
+  request, or a Tier-1 pivot decision.
 ```
 
 ---
