@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "run_timestamp_utc": "2026-06-13T16:01:18.151779+00:00",
+    "authorization": "Manager 2026-06-13: Constructed-positive validation run: ACCEPT (model-facing validation only; no quantization stress, INT8/INT4, Path B, Path D, schedule v2, certification, ranking, Claim C)",
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "mlx_lm_version": "0.31.3",
+    "decoding_config_sha256": "a20391d89972d47c0b231f5c6da9f8a9f4c7be8c975ab98bd95a32327196f803",
+    "prompt_template_sha256": "f1956e7dd43f165c8707fe88bc11757888f108e7e9766aa186ac9fc04f8b368a",
+    "t3_bounds_sha256": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "schedule_sha256": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5",
+    "oracle_verdict_sha256": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "clean_member_sha256": "f412d04cec56e468ddf775cd00123d681ad9073acb5c17385c3086a960b13097",
+    "defective_member_sha256": "4ea3c277eda4acbea5749a5c2f3fa9f0eec77b3ca6f386600f46ee0d213d9fe6",
+    "realized_match_manifest_sha256": "49cd64510fc8f9e3f54bf958f55dcbc0254b24eca2a389c19a9be1ab2f44b376",
+    "scope_note": "single-pair validation; TP/ENV/HEAD/GAP marked NOT_APPLICABLE rather than computed by guessing or scope-expansion"
+  },
+  "clean_member": {
+    "summary": {
+      "member": "clean",
+      "stratum_label": "answerable",
+      "n": 40,
+      "n_strict_correct": 40,
+      "n_content_correct": 40,
+      "n_strict_abstained": 0,
+      "n_content_abstained": 0,
+      "n_letter_response_strict": 40,
+      "n_other_response_strict": 0,
+      "strict_accuracy": 1.0,
+      "content_accuracy": 1.0,
+      "strict_abstention_rate": 0.0,
+      "content_abstention_rate": 0.0,
+      "strict_accuracy_ci_lower": 0.9123754607496077,
+      "strict_accuracy_ci_upper": 1.0,
+      "strict_abstention_ci_lower": 0.0,
+      "strict_abstention_ci_upper": 0.08762453925039232,
+      "content_minus_strict_correct": 0.0,
+      "content_minus_strict_ci_lower": -0.08762453925039226,
+      "content_minus_strict_ci_upper": 0.08762453925039226
+    },
+    "criteria_outcomes": {
+      "null_abstention_floor_unmet": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no NULL stratum in constructed pair (n_null = 0 matched on both members per realized_match_manifest)"
+      },
+      "answerable_abstention_ceiling_exceeded": {
+        "status": "NOT_FIRED",
+        "bound": 0.2,
+        "comparison": "ci_lower > bound",
+        "strict_abstention_ci_lower": 0.0,
+        "strict_abstention_rate": 0.0
+      },
+      "accuracy_indistinguishable_from_token_prior": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no TP control sub-run generated for constructed pair (would expand scope beyond TL routing's authorized validation)"
+      },
+      "accuracy_indistinguishable_from_declared_policy_envelope": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no shortcut-policy hit rates computed for constructed pair (the constructed pair does not carry the sealed 5-stratum disjoint envelope structure)"
+      },
+      "insufficient_measurement_headroom": {
+        "status": "NOT_APPLICABLE",
+        "reason": "depends on ENV computation (which is NOT_APPLICABLE for this pair)"
+      },
+      "strict_content_gap_instability": {
+        "status": "NOT_FIRED",
+        "bound": 0.3,
+        "comparison": "nw_diff_ci_lower > bound",
+        "content_minus_strict": 0.0,
+        "nw_diff_ci_lower": -0.08762453925039226,
+        "nw_diff_ci_upper": 0.08762453925039226,
+        "note": "content abstention = any case of NONE; strict = uppercase NONE exact (per prompt template's expected_response_grammar)"
+      }
+    },
+    "outcome": "NOT_RULED_OUT",
+    "elimination_labels": []
+  },
+  "defective_member": {
+    "summary": {
+      "member": "defective",
+      "stratum_label": "answerable (defective-stratum-labeled)",
+      "n": 40,
+      "n_strict_correct": 5,
+      "n_content_correct": 36,
+      "n_strict_abstained": 5,
+      "n_content_abstained": 36,
+      "n_letter_response_strict": 4,
+      "n_other_response_strict": 31,
+      "strict_accuracy": 0.125,
+      "content_accuracy": 0.9,
+      "strict_abstention_rate": 0.125,
+      "content_abstention_rate": 0.9,
+      "strict_accuracy_ci_lower": 0.05459419773541284,
+      "strict_accuracy_ci_upper": 0.26112420670238146,
+      "strict_abstention_ci_lower": 0.05459419773541284,
+      "strict_abstention_ci_upper": 0.26112420670238146,
+      "content_minus_strict_correct": 0.775,
+      "content_minus_strict_ci_lower": 0.5864119192162587,
+      "content_minus_strict_ci_upper": 0.8677776256255156
+    },
+    "criteria_outcomes": {
+      "null_abstention_floor_unmet": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no NULL stratum in constructed pair (n_null = 0 matched on both members per realized_match_manifest)"
+      },
+      "answerable_abstention_ceiling_exceeded": {
+        "status": "NOT_FIRED",
+        "bound": 0.2,
+        "comparison": "ci_lower > bound",
+        "strict_abstention_ci_lower": 0.05459419773541284,
+        "strict_abstention_rate": 0.125
+      },
+      "accuracy_indistinguishable_from_token_prior": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no TP control sub-run generated for constructed pair (would expand scope beyond TL routing's authorized validation)"
+      },
+      "accuracy_indistinguishable_from_declared_policy_envelope": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no shortcut-policy hit rates computed for constructed pair (the constructed pair does not carry the sealed 5-stratum disjoint envelope structure)"
+      },
+      "insufficient_measurement_headroom": {
+        "status": "NOT_APPLICABLE",
+        "reason": "depends on ENV computation (which is NOT_APPLICABLE for this pair)"
+      },
+      "strict_content_gap_instability": {
+        "status": "FIRED",
+        "bound": 0.3,
+        "comparison": "nw_diff_ci_lower > bound",
+        "content_minus_strict": 0.775,
+        "nw_diff_ci_lower": 0.5864119192162587,
+        "nw_diff_ci_upper": 0.8677776256255156,
+        "note": "content abstention = any case of NONE; strict = uppercase NONE exact (per prompt template's expected_response_grammar)"
+      }
+    },
+    "outcome": "eliminated",
+    "elimination_labels": [
+      "strict_content_gap_instability"
+    ]
+  },
+  "overall_pattern": "PASS",
+  "inference_seconds_clean": 12.801436185836792,
+  "inference_seconds_defective": 11.693542003631592,
+  "inference_seconds_total": 24.494978189468384,
+  "model_load_seconds": 2.6155829429626465
+}
