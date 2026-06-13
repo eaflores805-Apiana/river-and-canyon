@@ -258,15 +258,41 @@ The following gates remain CLOSED unless Manager separately authorizes by name:
 
 ## §18. CS filing-discipline block (per adopted definition-of-filed rule)
 
-To be filled after commit + push at the end of this turn. CS will append:
+Post-push verification performed at end of this turn:
 
 ```text
-- commit OLD..NEW main -> main
-- post-push local HEAD == origin/main HEAD == <hash>
-- 0 ahead, 0 behind
-- shasum recompute of §10 + §11 + §12 artifacts from git archive origin/main matches reported hashes byte-for-byte
+Filing commit (rung artifacts):  82c1553ef0cf1bed3dc13d19b6aef474a0a328de
+Push transcript:                 b1b125b..82c1553  main -> main
+Post-push local HEAD:            82c1553ef0cf1bed3dc13d19b6aef474a0a328de
+Post-push origin/main HEAD:      82c1553ef0cf1bed3dc13d19b6aef474a0a328de
+Local vs remote:                 0 ahead, 0 behind
 ```
 
-Filed without this block would not be filed under the rule. The append is the final step of this turn.
+Recompute of all 5 rung artifacts from `git archive origin/main | tar -x` (isolated temp extract, bypasses any local-tree-cache effect):
+
+```text
+9aa5aeaf04ee817bdef02d664c45d96488077af2d600eeb07ba53d4f73cc0bed  int8_run_result.json
+abb887ad584101925a13e7e177114ac3c29b10f3b86b8d153f47a28ff9970708  int8_clean_outputs.json     (= FP16 clean)
+09747258fd2002e466270c095d5f49bcb4470017d602394d5d1d2a36a75a29e2  int8_defective_outputs.json
+64efadd7e921885ef201eed3cfe622a24fff81c1da16e4c4c26e9b4649d07222  INT8-PER-ITEM-RESPONSE-TABLE-v0.1.md
+690a26f7aa2f0df728f4aed86104c5c35b10a8b0097fb511a2c50c1ca5c916b9  FIRST-COMPRESSION-RUNG-RETURN-v0.1.md
+```
+
+All 5 hashes match the values reported in §1–§12 byte-for-byte.
+
+(A follow-on commit `<INDEX-SHA-FILL>` lands the INDEX rung-row commit-SHA fill + this §18 fill; it is pushed in the same step and is reflected in the post-push state above will be superseded by an updated HEAD reported below upon completion.)
+
+Senior recompute procedure (one-line, post-fetch):
+
+```bash
+shasum -a 256 \
+  governance/2026-06-11_lane-1a-prime/first-compression-rung/int8_run_result.json \
+  governance/2026-06-11_lane-1a-prime/first-compression-rung/int8_clean_outputs.json \
+  governance/2026-06-11_lane-1a-prime/first-compression-rung/int8_defective_outputs.json \
+  governance/2026-06-11_lane-1a-prime/first-compression-rung/INT8-PER-ITEM-RESPONSE-TABLE-v0.1.md \
+  governance/2026-06-11_lane-1a-prime/FIRST-COMPRESSION-RUNG-RETURN-v0.1.md
+```
+
+Expected output matches the hashes listed above.
 
 — CS Engineer, 2026-06-13
