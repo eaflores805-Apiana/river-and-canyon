@@ -61,7 +61,7 @@ CLEAN_PATH = SCRIPT_DIR / "clean_member.json"
 DEFECTIVE_PATH = SCRIPT_DIR / "defective_member.json"
 MANIFEST_PATH = SCRIPT_DIR / "realized_match_manifest.json"
 
-OUTPUT_DIR = SCRIPT_DIR / "validation_run"
+OUTPUT_DIR = REPO_ROOT / "governance/2026-06-11_lane-1a-prime/constructed-positive-validation"
 
 MODEL_ID = "Qwen/Qwen2.5-3B-Instruct"
 
