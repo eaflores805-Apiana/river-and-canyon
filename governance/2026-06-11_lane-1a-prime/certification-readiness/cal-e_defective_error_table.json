@@ -1,0 +1,606 @@
+[
+  {
+    "i": 0,
+    "record_id": "CAL-E-DEF-000",
+    "matched_clean_id": "CAL-E-CLEAN-000",
+    "queried_key": 87,
+    "queried_slot_1indexed": 14,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "l",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 1,
+    "record_id": "CAL-E-DEF-001",
+    "matched_clean_id": "CAL-E-CLEAN-001",
+    "queried_key": 173,
+    "queried_slot_1indexed": 13,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "t",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 2,
+    "record_id": "CAL-E-DEF-002",
+    "matched_clean_id": "CAL-E-CLEAN-002",
+    "queried_key": 61,
+    "queried_slot_1indexed": 14,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "f",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 3,
+    "record_id": "CAL-E-DEF-003",
+    "matched_clean_id": "CAL-E-CLEAN-003",
+    "queried_key": 115,
+    "queried_slot_1indexed": 14,
+    "raw_output": "y",
+    "parsed_kind": "letter",
+    "parsed_value": "y",
+    "strict_correct": false,
+    "matched_clean_gold_value": "l",
+    "source_labels": [
+      "matches_near_miss_distractor_value",
+      "emitted_value_positions_[6]"
+    ]
+  },
+  {
+    "i": 4,
+    "record_id": "CAL-E-DEF-004",
+    "matched_clean_id": "CAL-E-CLEAN-004",
+    "queried_key": 97,
+    "queried_slot_1indexed": 15,
+    "raw_output": "a",
+    "parsed_kind": "letter",
+    "parsed_value": "a",
+    "strict_correct": false,
+    "matched_clean_gold_value": "p",
+    "source_labels": [
+      "matches_some_other_context_value",
+      "emitted_value_positions_[17]"
+    ]
+  },
+  {
+    "i": 5,
+    "record_id": "CAL-E-DEF-005",
+    "matched_clean_id": "CAL-E-CLEAN-005",
+    "queried_key": 189,
+    "queried_slot_1indexed": 17,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "y",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 6,
+    "record_id": "CAL-E-DEF-006",
+    "matched_clean_id": "CAL-E-CLEAN-006",
+    "queried_key": 142,
+    "queried_slot_1indexed": 18,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "o",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 7,
+    "record_id": "CAL-E-DEF-007",
+    "matched_clean_id": "CAL-E-CLEAN-007",
+    "queried_key": 125,
+    "queried_slot_1indexed": 16,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "v",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 8,
+    "record_id": "CAL-E-DEF-008",
+    "matched_clean_id": "CAL-E-CLEAN-008",
+    "queried_key": 193,
+    "queried_slot_1indexed": 14,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "x",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 9,
+    "record_id": "CAL-E-DEF-009",
+    "matched_clean_id": "CAL-E-CLEAN-009",
+    "queried_key": 139,
+    "queried_slot_1indexed": 13,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "x",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 10,
+    "record_id": "CAL-E-DEF-010",
+    "matched_clean_id": "CAL-E-CLEAN-010",
+    "queried_key": 76,
+    "queried_slot_1indexed": 14,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "u",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 11,
+    "record_id": "CAL-E-DEF-011",
+    "matched_clean_id": "CAL-E-CLEAN-011",
+    "queried_key": 17,
+    "queried_slot_1indexed": 17,
+    "raw_output": "l",
+    "parsed_kind": "letter",
+    "parsed_value": "l",
+    "strict_correct": false,
+    "matched_clean_gold_value": "t",
+    "source_labels": [
+      "matches_some_other_context_value",
+      "emitted_value_positions_[6]"
+    ]
+  },
+  {
+    "i": 12,
+    "record_id": "CAL-E-DEF-012",
+    "matched_clean_id": "CAL-E-CLEAN-012",
+    "queried_key": 160,
+    "queried_slot_1indexed": 18,
+    "raw_output": "x",
+    "parsed_kind": "letter",
+    "parsed_value": "x",
+    "strict_correct": false,
+    "matched_clean_gold_value": "k",
+    "source_labels": [
+      "matches_value_at_slot_minus_1",
+      "emitted_value_positions_[17]"
+    ]
+  },
+  {
+    "i": 13,
+    "record_id": "CAL-E-DEF-013",
+    "matched_clean_id": "CAL-E-CLEAN-013",
+    "queried_key": 199,
+    "queried_slot_1indexed": 14,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "c",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 14,
+    "record_id": "CAL-E-DEF-014",
+    "matched_clean_id": "CAL-E-CLEAN-014",
+    "queried_key": 163,
+    "queried_slot_1indexed": 17,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "n",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 15,
+    "record_id": "CAL-E-DEF-015",
+    "matched_clean_id": "CAL-E-CLEAN-015",
+    "queried_key": 98,
+    "queried_slot_1indexed": 15,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "a",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 16,
+    "record_id": "CAL-E-DEF-016",
+    "matched_clean_id": "CAL-E-CLEAN-016",
+    "queried_key": 98,
+    "queried_slot_1indexed": 16,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "l",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 17,
+    "record_id": "CAL-E-DEF-017",
+    "matched_clean_id": "CAL-E-CLEAN-017",
+    "queried_key": 136,
+    "queried_slot_1indexed": 16,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "x",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 18,
+    "record_id": "CAL-E-DEF-018",
+    "matched_clean_id": "CAL-E-CLEAN-018",
+    "queried_key": 90,
+    "queried_slot_1indexed": 13,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "l",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 19,
+    "record_id": "CAL-E-DEF-019",
+    "matched_clean_id": "CAL-E-CLEAN-019",
+    "queried_key": 76,
+    "queried_slot_1indexed": 17,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "c",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 20,
+    "record_id": "CAL-E-DEF-020",
+    "matched_clean_id": "CAL-E-CLEAN-020",
+    "queried_key": 30,
+    "queried_slot_1indexed": 17,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "y",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 21,
+    "record_id": "CAL-E-DEF-021",
+    "matched_clean_id": "CAL-E-CLEAN-021",
+    "queried_key": 113,
+    "queried_slot_1indexed": 16,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "i",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 22,
+    "record_id": "CAL-E-DEF-022",
+    "matched_clean_id": "CAL-E-CLEAN-022",
+    "queried_key": 94,
+    "queried_slot_1indexed": 15,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "z",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 23,
+    "record_id": "CAL-E-DEF-023",
+    "matched_clean_id": "CAL-E-CLEAN-023",
+    "queried_key": 177,
+    "queried_slot_1indexed": 18,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "q",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 24,
+    "record_id": "CAL-E-DEF-024",
+    "matched_clean_id": "CAL-E-CLEAN-024",
+    "queried_key": 184,
+    "queried_slot_1indexed": 13,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "d",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 25,
+    "record_id": "CAL-E-DEF-025",
+    "matched_clean_id": "CAL-E-CLEAN-025",
+    "queried_key": 198,
+    "queried_slot_1indexed": 16,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "u",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 26,
+    "record_id": "CAL-E-DEF-026",
+    "matched_clean_id": "CAL-E-CLEAN-026",
+    "queried_key": 187,
+    "queried_slot_1indexed": 14,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "u",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 27,
+    "record_id": "CAL-E-DEF-027",
+    "matched_clean_id": "CAL-E-CLEAN-027",
+    "queried_key": 52,
+    "queried_slot_1indexed": 15,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "t",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 28,
+    "record_id": "CAL-E-DEF-028",
+    "matched_clean_id": "CAL-E-CLEAN-028",
+    "queried_key": 195,
+    "queried_slot_1indexed": 13,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "n",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 29,
+    "record_id": "CAL-E-DEF-029",
+    "matched_clean_id": "CAL-E-CLEAN-029",
+    "queried_key": 128,
+    "queried_slot_1indexed": 18,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "u",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 30,
+    "record_id": "CAL-E-DEF-030",
+    "matched_clean_id": "CAL-E-CLEAN-030",
+    "queried_key": 177,
+    "queried_slot_1indexed": 17,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "n",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 31,
+    "record_id": "CAL-E-DEF-031",
+    "matched_clean_id": "CAL-E-CLEAN-031",
+    "queried_key": 146,
+    "queried_slot_1indexed": 15,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "c",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 32,
+    "record_id": "CAL-E-DEF-032",
+    "matched_clean_id": "CAL-E-CLEAN-032",
+    "queried_key": 37,
+    "queried_slot_1indexed": 14,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false,
+    "matched_clean_gold_value": "x",
+    "source_labels": [
+      "OTHER_raw_'none'"
+    ]
+  },
+  {
+    "i": 33,
+    "record_id": "CAL-E-DEF-033",
+    "matched_clean_id": "CAL-E-CLEAN-033",
+    "queried_key": 67,
+    "queried_slot_1indexed": 14,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "z",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 34,
+    "record_id": "CAL-E-DEF-034",
+    "matched_clean_id": "CAL-E-CLEAN-034",
+    "queried_key": 21,
+    "queried_slot_1indexed": 13,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "b",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 35,
+    "record_id": "CAL-E-DEF-035",
+    "matched_clean_id": "CAL-E-CLEAN-035",
+    "queried_key": 185,
+    "queried_slot_1indexed": 18,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "i",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 36,
+    "record_id": "CAL-E-DEF-036",
+    "matched_clean_id": "CAL-E-CLEAN-036",
+    "queried_key": 143,
+    "queried_slot_1indexed": 13,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "v",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 37,
+    "record_id": "CAL-E-DEF-037",
+    "matched_clean_id": "CAL-E-CLEAN-037",
+    "queried_key": 144,
+    "queried_slot_1indexed": 14,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "z",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 38,
+    "record_id": "CAL-E-DEF-038",
+    "matched_clean_id": "CAL-E-CLEAN-038",
+    "queried_key": 55,
+    "queried_slot_1indexed": 13,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "z",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  },
+  {
+    "i": 39,
+    "record_id": "CAL-E-DEF-039",
+    "matched_clean_id": "CAL-E-CLEAN-039",
+    "queried_key": 53,
+    "queried_slot_1indexed": 14,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true,
+    "matched_clean_gold_value": "y",
+    "source_labels": [
+      "strict_NONE"
+    ]
+  }
+]
