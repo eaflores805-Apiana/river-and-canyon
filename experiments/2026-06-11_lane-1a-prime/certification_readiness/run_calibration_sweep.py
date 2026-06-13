@@ -265,192 +265,197 @@ def score_member(model, tokenizer, system_prompt, decoding_config, items):
             "outputs": outputs}
 
 
-# === Pre-flight hash checks ===
-print("=== PRE-FLIGHT: hashes ===")
-input_hashes = {}
-for label, p, expected_prefix in [
-    ("prompt_template", PROMPT_TEMPLATE_PATH, "f1956e7d"),
-    ("decoding_config", DECODING_CONFIG_PATH, "a20391d8"),
-    ("scorer (run_validation.py)", SCORER_PATH, None),  # may be the updated version
-]:
-    h = sha256_file(p)
-    input_hashes[p.name] = h
-    if expected_prefix and not h.startswith(expected_prefix):
-        print(f"  ABORT: {label} hash mismatch — got {h[:16]}, expected prefix {expected_prefix}")
-        sys.exit(1)
-    print(f"  {label}: {h}")
+# === Main execution guard (added 2026-06-13 to prevent re-execution on import) ===
+def main():
+    print("=== PRE-FLIGHT: hashes ===")
+    input_hashes = {}
+    for label, p, expected_prefix in [
+        ("prompt_template", PROMPT_TEMPLATE_PATH, "f1956e7d"),
+        ("decoding_config", DECODING_CONFIG_PATH, "a20391d8"),
+        ("scorer (run_validation.py)", SCORER_PATH, None),  # may be the updated version
+    ]:
+        h = sha256_file(p)
+        input_hashes[p.name] = h
+        if expected_prefix and not h.startswith(expected_prefix):
+            print(f"  ABORT: {label} hash mismatch — got {h[:16]}, expected prefix {expected_prefix}")
+            sys.exit(1)
+        print(f"  {label}: {h}")
 
-# CAL-A input bytes (existing constructed-positive)
-print()
-print("=== PRE-FLIGHT: CAL-A reuses existing constructed-positive bytes ===")
-for label, p, expected_prefix in [
-    ("CAL-A clean_member", CAL_A_CLEAN, "f412d04c"),
-    ("CAL-A defective_member", CAL_A_DEF, "4ea3c277"),
-    ("CAL-A manifest", CAL_A_MANIFEST, "49cd6451"),
-]:
-    h = sha256_file(p)
-    input_hashes[p.name] = h
-    if not h.startswith(expected_prefix):
-        print(f"  ABORT: {label} hash mismatch — got {h[:16]}, expected prefix {expected_prefix}")
-        sys.exit(1)
-    print(f"  {label}: {h}")
-
-prompt_template = json.loads(PROMPT_TEMPLATE_PATH.read_text())
-decoding_config = json.loads(DECODING_CONFIG_PATH.read_text())
-system_prompt = prompt_template["system"]
-print()
-print(f"Decoding: temp={decoding_config['temperature']}, greedy={decoding_config['greedy']}, "
-      f"max_new={decoding_config['max_new_tokens']}")
-print(f"Model: {MODEL_ID}")
-
-
-# === Construct CAL-A (reuse) + CAL-B + CAL-C ===
-candidates = []
-
-# CAL-A: reuse existing constructed-positive bytes
-print()
-print("=== CAL-A: reuse existing constructed-positive ===")
-clean_a = json.loads(CAL_A_CLEAN.read_text())
-def_a = json.loads(CAL_A_DEF.read_text())
-single_diff_a_ok, _ = single_difference_check(
-    {**clean_a, "items": clean_a["items"]},
-    {**def_a, "items": def_a["items"]},
-)
-print(f"  CAL-A single_difference_ok: {single_diff_a_ok}")
-candidates.append({
-    "id": "CAL-A", "list_len": 9, "slot_range": [6,7,8],
-    "near_miss_count": 0, "seed": 20260613,
-    "clean": clean_a, "defective": def_a,
-    "clean_path": str(CAL_A_CLEAN.relative_to(REPO_ROOT)),
-    "defective_path": str(CAL_A_DEF.relative_to(REPO_ROOT)),
-    "manifest_path": str(CAL_A_MANIFEST.relative_to(REPO_ROOT)),
-    "manifest_sha256": input_hashes[CAL_A_MANIFEST.name],
-    "single_difference_ok": single_diff_a_ok,
-})
-
-# CAL-B: fresh construct, list_len 13, slots 8-11, light near-miss (count=2)
-print()
-print("=== CAL-B: constructing fresh (list_len=13, slots [8,9,10,11], near_miss_count=2) ===")
-cal_b_clean, cal_b_def = construct_pair("CAL-B", list_len=13, slot_range=[8,9,10,11],
-                                         n_items=40, near_miss_count=2, seed=20260613001)
-single_diff_b_ok, b_checks = single_difference_check(cal_b_clean, cal_b_def)
-print(f"  CAL-B single_difference_ok: {single_diff_b_ok}  {b_checks}")
-
-# CAL-C: fresh construct, list_len 17, slots 10-15, mild near-miss (count=4)
-print()
-print("=== CAL-C: constructing fresh (list_len=17, slots [10..15], near_miss_count=4) ===")
-cal_c_clean, cal_c_def = construct_pair("CAL-C", list_len=17, slot_range=[10,11,12,13,14,15],
-                                         n_items=40, near_miss_count=4, seed=20260613002)
-single_diff_c_ok, c_checks = single_difference_check(cal_c_clean, cal_c_def)
-print(f"  CAL-C single_difference_ok: {single_diff_c_ok}  {c_checks}")
-
-# Write CAL-B and CAL-C member files + manifests
-for cid, clean, defective, list_len, slots, near_miss, seed, sd_ok in [
-    ("CAL-B", cal_b_clean, cal_b_def, 13, [8,9,10,11], 2, 20260613001, single_diff_b_ok),
-    ("CAL-C", cal_c_clean, cal_c_def, 17, [10,11,12,13,14,15], 4, 20260613002, single_diff_c_ok),
-]:
-    clean_path = OUTPUT_DIR / f"{cid.lower()}_clean_member.json"
-    def_path = OUTPUT_DIR / f"{cid.lower()}_defective_member.json"
-    manifest_path = OUTPUT_DIR / f"{cid.lower()}_realized_match_manifest.json"
-    clean_path.write_text(json.dumps(clean, indent=2))
-    def_path.write_text(json.dumps(defective, indent=2))
-    manifest = {
-        "match_manifest": "realized",
-        "candidate_id": cid,
-        "held_constant": ["list_len", "queried_slot_distribution", "key_value_vocabulary_family",
-                          "near_miss_distractor_density", "item_count", "scoring_harness",
-                          "queried_key_per_item_index"],
-        "permitted_difference": "P2 defect only: queried key absent from listed pairs",
-        "n_items_each": 40,
-        "list_len": list_len,
-        "queried_slots": slots,
-        "near_miss_count": near_miss,
-        "construction_seed": seed,
-        "single_difference_invariant_check": "PASS" if sd_ok else "FAIL",
-        "off_ceiling_design_intent": f"calibration sweep — list_len {list_len}, slots {slots}, near-miss {near_miss}",
-    }
-    manifest_path.write_text(json.dumps(manifest, indent=2))
-    candidates_entry = next(c for c in [
-        {"id":"CAL-B","list_len":13,"slot_range":[8,9,10,11],"near_miss_count":2,"seed":20260613001},
-        {"id":"CAL-C","list_len":17,"slot_range":[10,11,12,13,14,15],"near_miss_count":4,"seed":20260613002},
-    ] if c["id"] == cid)
-    candidates_entry.update({
-        "clean": clean, "defective": defective,
-        "clean_path": str(clean_path.relative_to(REPO_ROOT)),
-        "defective_path": str(def_path.relative_to(REPO_ROOT)),
-        "manifest_path": str(manifest_path.relative_to(REPO_ROOT)),
-        "manifest_sha256": sha256_file(manifest_path),
-        "single_difference_ok": sd_ok,
-    })
-    candidates.append(candidates_entry)
-
-
-# === Load model ONCE, run all candidates ===
-print()
-print(f"=== Loading model {MODEL_ID} ===")
-t_load = time.time()
-model, tokenizer = mlx_lm.load(MODEL_ID)
-load_sec = time.time() - t_load
-print(f"Loaded in {load_sec:.1f}s")
-
-scorer_sha = sha256_file(SCORER_PATH)
-prompt_sha = sha256_file(PROMPT_TEMPLATE_PATH)
-
-
-# === Execute sweep ===
-for c in candidates:
-    cid = c["id"]
+    # CAL-A input bytes (existing constructed-positive)
     print()
-    print(f"=== {cid}: running clean ({c['clean']['n_items']} items) + defective ({c['defective']['n_items']} items) ===")
-    t0 = time.time()
-    clean_result = score_member(model, tokenizer, system_prompt, decoding_config, c["clean"]["items"])
-    print(f"  clean:     {clean_result['n_correct']}/{clean_result['n']} = {clean_result['strict_accuracy']:.4f}   ({time.time()-t0:.1f}s)")
-    t1 = time.time()
-    def_result = score_member(model, tokenizer, system_prompt, decoding_config, c["defective"]["items"])
-    print(f"  defective: {def_result['n_correct']}/{def_result['n']} = {def_result['strict_accuracy']:.4f}   ({time.time()-t1:.1f}s)")
+    print("=== PRE-FLIGHT: CAL-A reuses existing constructed-positive bytes ===")
+    for label, p, expected_prefix in [
+        ("CAL-A clean_member", CAL_A_CLEAN, "f412d04c"),
+        ("CAL-A defective_member", CAL_A_DEF, "4ea3c277"),
+        ("CAL-A manifest", CAL_A_MANIFEST, "49cd6451"),
+    ]:
+        h = sha256_file(p)
+        input_hashes[p.name] = h
+        if not h.startswith(expected_prefix):
+            print(f"  ABORT: {label} hash mismatch — got {h[:16]}, expected prefix {expected_prefix}")
+            sys.exit(1)
+        print(f"  {label}: {h}")
 
-    # Write raw outputs
-    raw_clean_path = OUTPUT_DIR / f"{cid.lower()}_clean_outputs.json"
-    raw_def_path = OUTPUT_DIR / f"{cid.lower()}_defective_outputs.json"
-    raw_clean_path.write_text(json.dumps(clean_result["outputs"], indent=2))
-    raw_def_path.write_text(json.dumps(def_result["outputs"], indent=2))
+    prompt_template = json.loads(PROMPT_TEMPLATE_PATH.read_text())
+    decoding_config = json.loads(DECODING_CONFIG_PATH.read_text())
+    system_prompt = prompt_template["system"]
+    print()
+    print(f"Decoding: temp={decoding_config['temperature']}, greedy={decoding_config['greedy']}, "
+          f"max_new={decoding_config['max_new_tokens']}")
+    print(f"Model: {MODEL_ID}")
 
-    # Per-candidate run JSON (the schema the harness consumes)
-    run_record = {
-        "candidate_id": cid,
-        "clean_member": {"summary": {"strict_accuracy": clean_result["strict_accuracy"],
-                                      "n": clean_result["n"],
-                                      "n_correct": clean_result["n_correct"]}},
-        "defective_member": {"summary": {"strict_accuracy": def_result["strict_accuracy"],
-                                          "n": def_result["n"],
-                                          "n_correct": def_result["n_correct"]}},
-        "single_difference_ok": c["single_difference_ok"],
-        "manifest_sha256": c["manifest_sha256"],
-        "scorer_sha256": scorer_sha,
-        "prompt_template_sha256": prompt_sha,
-        "raw_output_path": str(raw_clean_path.relative_to(REPO_ROOT)),  # clean is the primary
-        "raw_defective_output_path": str(raw_def_path.relative_to(REPO_ROOT)),
-        "manifest_path": c["manifest_path"],
-        "clean_member_path": c["clean_path"],
-        "defective_member_path": c["defective_path"],
-        "candidate_config": {
-            "list_len": c["list_len"],
-            "queried_slots": c["slot_range"],
-            "near_miss_count": c["near_miss_count"],
-            "construction_seed": c["seed"],
-        },
-        "model_id": MODEL_ID,
-        "precision": "bf16-mlx-native",
-        "run_timestamp_utc": datetime.now(timezone.utc).isoformat(),
-    }
-    run_path = GOV_DIR / f"{cid.lower()}_run.json"
-    run_path.write_text(json.dumps(run_record, indent=2))
-    print(f"  run record: {run_path.relative_to(REPO_ROOT)}  sha256={sha256_file(run_path)}")
 
-print()
-print("=== SWEEP COMPLETE ===")
-print(f"Run records: {GOV_DIR.relative_to(REPO_ROOT)}/")
-print(f"Raw outputs + member files: {OUTPUT_DIR.relative_to(REPO_ROOT)}/")
-print()
-print("Next: Senior runs calibration_sweep_verdict.py on the run records to produce the band verdict.")
-print("CS does NOT interpret.")
+    # === Construct CAL-A (reuse) + CAL-B + CAL-C ===
+    candidates = []
+
+    # CAL-A: reuse existing constructed-positive bytes
+    print()
+    print("=== CAL-A: reuse existing constructed-positive ===")
+    clean_a = json.loads(CAL_A_CLEAN.read_text())
+    def_a = json.loads(CAL_A_DEF.read_text())
+    single_diff_a_ok, _ = single_difference_check(
+        {**clean_a, "items": clean_a["items"]},
+        {**def_a, "items": def_a["items"]},
+    )
+    print(f"  CAL-A single_difference_ok: {single_diff_a_ok}")
+    candidates.append({
+        "id": "CAL-A", "list_len": 9, "slot_range": [6,7,8],
+        "near_miss_count": 0, "seed": 20260613,
+        "clean": clean_a, "defective": def_a,
+        "clean_path": str(CAL_A_CLEAN.relative_to(REPO_ROOT)),
+        "defective_path": str(CAL_A_DEF.relative_to(REPO_ROOT)),
+        "manifest_path": str(CAL_A_MANIFEST.relative_to(REPO_ROOT)),
+        "manifest_sha256": input_hashes[CAL_A_MANIFEST.name],
+        "single_difference_ok": single_diff_a_ok,
+    })
+
+    # CAL-B: fresh construct, list_len 13, slots 8-11, light near-miss (count=2)
+    print()
+    print("=== CAL-B: constructing fresh (list_len=13, slots [8,9,10,11], near_miss_count=2) ===")
+    cal_b_clean, cal_b_def = construct_pair("CAL-B", list_len=13, slot_range=[8,9,10,11],
+                                             n_items=40, near_miss_count=2, seed=20260613001)
+    single_diff_b_ok, b_checks = single_difference_check(cal_b_clean, cal_b_def)
+    print(f"  CAL-B single_difference_ok: {single_diff_b_ok}  {b_checks}")
+
+    # CAL-C: fresh construct, list_len 17, slots 10-15, mild near-miss (count=4)
+    print()
+    print("=== CAL-C: constructing fresh (list_len=17, slots [10..15], near_miss_count=4) ===")
+    cal_c_clean, cal_c_def = construct_pair("CAL-C", list_len=17, slot_range=[10,11,12,13,14,15],
+                                             n_items=40, near_miss_count=4, seed=20260613002)
+    single_diff_c_ok, c_checks = single_difference_check(cal_c_clean, cal_c_def)
+    print(f"  CAL-C single_difference_ok: {single_diff_c_ok}  {c_checks}")
+
+    # Write CAL-B and CAL-C member files + manifests
+    for cid, clean, defective, list_len, slots, near_miss, seed, sd_ok in [
+        ("CAL-B", cal_b_clean, cal_b_def, 13, [8,9,10,11], 2, 20260613001, single_diff_b_ok),
+        ("CAL-C", cal_c_clean, cal_c_def, 17, [10,11,12,13,14,15], 4, 20260613002, single_diff_c_ok),
+    ]:
+        clean_path = OUTPUT_DIR / f"{cid.lower()}_clean_member.json"
+        def_path = OUTPUT_DIR / f"{cid.lower()}_defective_member.json"
+        manifest_path = OUTPUT_DIR / f"{cid.lower()}_realized_match_manifest.json"
+        clean_path.write_text(json.dumps(clean, indent=2))
+        def_path.write_text(json.dumps(defective, indent=2))
+        manifest = {
+            "match_manifest": "realized",
+            "candidate_id": cid,
+            "held_constant": ["list_len", "queried_slot_distribution", "key_value_vocabulary_family",
+                              "near_miss_distractor_density", "item_count", "scoring_harness",
+                              "queried_key_per_item_index"],
+            "permitted_difference": "P2 defect only: queried key absent from listed pairs",
+            "n_items_each": 40,
+            "list_len": list_len,
+            "queried_slots": slots,
+            "near_miss_count": near_miss,
+            "construction_seed": seed,
+            "single_difference_invariant_check": "PASS" if sd_ok else "FAIL",
+            "off_ceiling_design_intent": f"calibration sweep — list_len {list_len}, slots {slots}, near-miss {near_miss}",
+        }
+        manifest_path.write_text(json.dumps(manifest, indent=2))
+        candidates_entry = next(c for c in [
+            {"id":"CAL-B","list_len":13,"slot_range":[8,9,10,11],"near_miss_count":2,"seed":20260613001},
+            {"id":"CAL-C","list_len":17,"slot_range":[10,11,12,13,14,15],"near_miss_count":4,"seed":20260613002},
+        ] if c["id"] == cid)
+        candidates_entry.update({
+            "clean": clean, "defective": defective,
+            "clean_path": str(clean_path.relative_to(REPO_ROOT)),
+            "defective_path": str(def_path.relative_to(REPO_ROOT)),
+            "manifest_path": str(manifest_path.relative_to(REPO_ROOT)),
+            "manifest_sha256": sha256_file(manifest_path),
+            "single_difference_ok": sd_ok,
+        })
+        candidates.append(candidates_entry)
+
+
+    # === Load model ONCE, run all candidates ===
+    print()
+    print(f"=== Loading model {MODEL_ID} ===")
+    t_load = time.time()
+    model, tokenizer = mlx_lm.load(MODEL_ID)
+    load_sec = time.time() - t_load
+    print(f"Loaded in {load_sec:.1f}s")
+
+    scorer_sha = sha256_file(SCORER_PATH)
+    prompt_sha = sha256_file(PROMPT_TEMPLATE_PATH)
+
+
+    # === Execute sweep ===
+    for c in candidates:
+        cid = c["id"]
+        print()
+        print(f"=== {cid}: running clean ({c['clean']['n_items']} items) + defective ({c['defective']['n_items']} items) ===")
+        t0 = time.time()
+        clean_result = score_member(model, tokenizer, system_prompt, decoding_config, c["clean"]["items"])
+        print(f"  clean:     {clean_result['n_correct']}/{clean_result['n']} = {clean_result['strict_accuracy']:.4f}   ({time.time()-t0:.1f}s)")
+        t1 = time.time()
+        def_result = score_member(model, tokenizer, system_prompt, decoding_config, c["defective"]["items"])
+        print(f"  defective: {def_result['n_correct']}/{def_result['n']} = {def_result['strict_accuracy']:.4f}   ({time.time()-t1:.1f}s)")
+
+        # Write raw outputs
+        raw_clean_path = OUTPUT_DIR / f"{cid.lower()}_clean_outputs.json"
+        raw_def_path = OUTPUT_DIR / f"{cid.lower()}_defective_outputs.json"
+        raw_clean_path.write_text(json.dumps(clean_result["outputs"], indent=2))
+        raw_def_path.write_text(json.dumps(def_result["outputs"], indent=2))
+
+        # Per-candidate run JSON (the schema the harness consumes)
+        run_record = {
+            "candidate_id": cid,
+            "clean_member": {"summary": {"strict_accuracy": clean_result["strict_accuracy"],
+                                          "n": clean_result["n"],
+                                          "n_correct": clean_result["n_correct"]}},
+            "defective_member": {"summary": {"strict_accuracy": def_result["strict_accuracy"],
+                                              "n": def_result["n"],
+                                              "n_correct": def_result["n_correct"]}},
+            "single_difference_ok": c["single_difference_ok"],
+            "manifest_sha256": c["manifest_sha256"],
+            "scorer_sha256": scorer_sha,
+            "prompt_template_sha256": prompt_sha,
+            "raw_output_path": str(raw_clean_path.relative_to(REPO_ROOT)),  # clean is the primary
+            "raw_defective_output_path": str(raw_def_path.relative_to(REPO_ROOT)),
+            "manifest_path": c["manifest_path"],
+            "clean_member_path": c["clean_path"],
+            "defective_member_path": c["defective_path"],
+            "candidate_config": {
+                "list_len": c["list_len"],
+                "queried_slots": c["slot_range"],
+                "near_miss_count": c["near_miss_count"],
+                "construction_seed": c["seed"],
+            },
+            "model_id": MODEL_ID,
+            "precision": "bf16-mlx-native",
+            "run_timestamp_utc": datetime.now(timezone.utc).isoformat(),
+        }
+        run_path = GOV_DIR / f"{cid.lower()}_run.json"
+        run_path.write_text(json.dumps(run_record, indent=2))
+        print(f"  run record: {run_path.relative_to(REPO_ROOT)}  sha256={sha256_file(run_path)}")
+
+    print()
+    print("=== SWEEP COMPLETE ===")
+    print(f"Run records: {GOV_DIR.relative_to(REPO_ROOT)}/")
+    print(f"Raw outputs + member files: {OUTPUT_DIR.relative_to(REPO_ROOT)}/")
+    print()
+    print("Next: Senior runs calibration_sweep_verdict.py on the run records to produce the band verdict.")
+    print("CS does NOT interpret.")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,378 @@
+{
+  "member": "clean",
+  "candidate_id": "CAL-E",
+  "n_items": 40,
+  "list_len": 21,
+  "queried_slots": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "near_miss_count": 4,
+  "construction_seed": 20260613005,
+  "items": [
+    {
+      "record_id": "CAL-E-CLEAN-000",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 87,
+      "queried_slot_1indexed": 14,
+      "gold_value": "l",
+      "prompt_user_text": "Pairs:\n35 -> j\n121 -> t\n141 -> e\n172 -> o\n54 -> z\n101 -> m\n160 -> t\n28 -> y\n83 -> f\n150 -> l\n127 -> g\n88 -> s\n52 -> h\n87 -> l\n86 -> a\n45 -> q\n167 -> e\n151 -> l\n90 -> z\n128 -> d\n168 -> e\n\nQuery: 87"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-001",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 173,
+      "queried_slot_1indexed": 13,
+      "gold_value": "t",
+      "prompt_user_text": "Pairs:\n168 -> b\n188 -> e\n16 -> h\n187 -> i\n17 -> w\n107 -> y\n172 -> w\n178 -> x\n99 -> u\n37 -> u\n49 -> j\n128 -> h\n173 -> t\n144 -> q\n53 -> l\n102 -> k\n162 -> o\n174 -> t\n52 -> m\n119 -> l\n18 -> k\n\nQuery: 173"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-002",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 61,
+      "queried_slot_1indexed": 14,
+      "gold_value": "f",
+      "prompt_user_text": "Pairs:\n55 -> h\n123 -> g\n63 -> m\n132 -> l\n65 -> i\n59 -> q\n62 -> s\n60 -> v\n36 -> r\n143 -> y\n147 -> c\n27 -> g\n91 -> n\n61 -> f\n66 -> m\n42 -> f\n38 -> c\n128 -> b\n81 -> f\n103 -> l\n32 -> q\n\nQuery: 61"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-003",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 115,
+      "queried_slot_1indexed": 14,
+      "gold_value": "l",
+      "prompt_user_text": "Pairs:\n23 -> m\n159 -> e\n48 -> d\n120 -> m\n134 -> e\n116 -> n\n110 -> k\n177 -> g\n161 -> p\n141 -> g\n169 -> s\n65 -> a\n182 -> y\n115 -> l\n192 -> z\n109 -> u\n196 -> q\n117 -> h\n158 -> d\n66 -> a\n127 -> c\n\nQuery: 115"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-004",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 97,
+      "queried_slot_1indexed": 15,
+      "gold_value": "p",
+      "prompt_user_text": "Pairs:\n100 -> i\n146 -> w\n93 -> l\n50 -> e\n104 -> x\n111 -> v\n189 -> o\n175 -> n\n69 -> z\n144 -> r\n127 -> p\n197 -> w\n92 -> j\n48 -> n\n97 -> p\n96 -> n\n25 -> x\n102 -> s\n129 -> m\n54 -> j\n98 -> a\n\nQuery: 97"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-005",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 189,
+      "queried_slot_1indexed": 17,
+      "gold_value": "y",
+      "prompt_user_text": "Pairs:\n148 -> n\n133 -> g\n188 -> v\n174 -> r\n27 -> z\n125 -> m\n66 -> j\n67 -> f\n76 -> v\n34 -> y\n44 -> o\n87 -> u\n48 -> o\n71 -> h\n194 -> y\n193 -> l\n189 -> y\n186 -> g\n86 -> a\n136 -> m\n104 -> a\n\nQuery: 189"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-006",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 142,
+      "queried_slot_1indexed": 18,
+      "gold_value": "o",
+      "prompt_user_text": "Pairs:\n141 -> y\n60 -> q\n144 -> t\n73 -> q\n44 -> v\n146 -> w\n143 -> p\n135 -> p\n145 -> g\n129 -> p\n109 -> y\n102 -> c\n66 -> w\n119 -> d\n37 -> d\n175 -> e\n113 -> g\n142 -> o\n133 -> n\n86 -> w\n87 -> b\n\nQuery: 142"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-007",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 125,
+      "queried_slot_1indexed": 16,
+      "gold_value": "v",
+      "prompt_user_text": "Pairs:\n140 -> d\n166 -> e\n13 -> h\n123 -> x\n122 -> j\n185 -> p\n198 -> x\n115 -> u\n34 -> p\n128 -> v\n31 -> d\n120 -> m\n58 -> a\n109 -> p\n171 -> z\n125 -> v\n193 -> s\n145 -> w\n116 -> r\n76 -> e\n45 -> n\n\nQuery: 125"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-008",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 193,
+      "queried_slot_1indexed": 14,
+      "gold_value": "x",
+      "prompt_user_text": "Pairs:\n88 -> x\n142 -> v\n30 -> j\n66 -> t\n72 -> g\n169 -> l\n191 -> p\n129 -> p\n162 -> i\n180 -> v\n135 -> v\n196 -> j\n65 -> a\n193 -> x\n190 -> n\n188 -> d\n68 -> z\n122 -> u\n126 -> i\n179 -> e\n97 -> x\n\nQuery: 193"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-009",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 139,
+      "queried_slot_1indexed": 13,
+      "gold_value": "x",
+      "prompt_user_text": "Pairs:\n141 -> g\n109 -> d\n18 -> h\n121 -> t\n155 -> q\n135 -> x\n118 -> x\n45 -> e\n196 -> p\n60 -> v\n25 -> k\n143 -> l\n139 -> x\n46 -> z\n30 -> t\n197 -> e\n142 -> w\n85 -> b\n48 -> m\n188 -> p\n54 -> a\n\nQuery: 139"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-010",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 76,
+      "queried_slot_1indexed": 14,
+      "gold_value": "u",
+      "prompt_user_text": "Pairs:\n39 -> b\n78 -> h\n64 -> c\n72 -> h\n186 -> w\n140 -> l\n177 -> o\n17 -> m\n148 -> w\n160 -> k\n75 -> g\n149 -> l\n88 -> z\n76 -> u\n20 -> k\n66 -> v\n136 -> k\n56 -> b\n89 -> a\n79 -> o\n116 -> z\n\nQuery: 76"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-011",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 17,
+      "queried_slot_1indexed": 17,
+      "gold_value": "t",
+      "prompt_user_text": "Pairs:\n104 -> o\n13 -> i\n51 -> m\n79 -> i\n143 -> s\n172 -> z\n85 -> b\n64 -> f\n21 -> z\n18 -> z\n136 -> d\n116 -> f\n171 -> o\n130 -> o\n184 -> m\n162 -> p\n17 -> t\n24 -> i\n22 -> w\n103 -> p\n88 -> q\n\nQuery: 17"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-012",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 160,
+      "queried_slot_1indexed": 18,
+      "gold_value": "k",
+      "prompt_user_text": "Pairs:\n173 -> f\n68 -> x\n164 -> v\n104 -> u\n165 -> j\n25 -> p\n158 -> c\n180 -> d\n196 -> v\n53 -> w\n167 -> d\n118 -> p\n155 -> r\n98 -> e\n194 -> e\n11 -> z\n13 -> g\n160 -> k\n47 -> w\n112 -> p\n170 -> w\n\nQuery: 160"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-013",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 199,
+      "queried_slot_1indexed": 14,
+      "gold_value": "c",
+      "prompt_user_text": "Pairs:\n81 -> y\n187 -> d\n155 -> z\n75 -> w\n156 -> v\n33 -> x\n133 -> j\n198 -> i\n194 -> b\n173 -> j\n82 -> i\n180 -> k\n197 -> f\n199 -> c\n27 -> e\n150 -> j\n195 -> m\n76 -> q\n56 -> z\n14 -> z\n77 -> t\n\nQuery: 199"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-014",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 163,
+      "queried_slot_1indexed": 17,
+      "gold_value": "n",
+      "prompt_user_text": "Pairs:\n78 -> v\n156 -> o\n194 -> g\n25 -> i\n195 -> j\n137 -> w\n41 -> m\n65 -> u\n162 -> y\n168 -> j\n139 -> a\n16 -> s\n46 -> g\n108 -> b\n60 -> q\n165 -> s\n163 -> n\n158 -> f\n132 -> k\n90 -> j\n47 -> m\n\nQuery: 163"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-015",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 98,
+      "queried_slot_1indexed": 15,
+      "gold_value": "a",
+      "prompt_user_text": "Pairs:\n92 -> i\n10 -> c\n171 -> b\n173 -> r\n121 -> w\n102 -> k\n99 -> v\n123 -> j\n16 -> y\n58 -> j\n56 -> w\n100 -> z\n103 -> x\n187 -> e\n98 -> a\n93 -> i\n130 -> f\n29 -> k\n54 -> b\n94 -> s\n134 -> v\n\nQuery: 98"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-016",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 98,
+      "queried_slot_1indexed": 16,
+      "gold_value": "l",
+      "prompt_user_text": "Pairs:\n149 -> c\n131 -> j\n138 -> j\n13 -> e\n121 -> d\n60 -> n\n93 -> j\n58 -> n\n199 -> b\n155 -> t\n197 -> v\n147 -> j\n103 -> i\n189 -> a\n114 -> g\n98 -> l\n102 -> a\n59 -> o\n132 -> h\n99 -> i\n185 -> w\n\nQuery: 98"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-017",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 136,
+      "queried_slot_1indexed": 16,
+      "gold_value": "x",
+      "prompt_user_text": "Pairs:\n138 -> l\n71 -> f\n195 -> d\n98 -> v\n48 -> c\n117 -> s\n164 -> q\n134 -> h\n30 -> l\n166 -> c\n147 -> y\n101 -> d\n75 -> v\n133 -> m\n189 -> z\n136 -> x\n88 -> i\n50 -> p\n132 -> b\n95 -> m\n54 -> j\n\nQuery: 136"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-018",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 90,
+      "queried_slot_1indexed": 13,
+      "gold_value": "l",
+      "prompt_user_text": "Pairs:\n166 -> q\n92 -> g\n91 -> w\n93 -> z\n87 -> c\n95 -> u\n181 -> t\n96 -> o\n99 -> d\n107 -> h\n125 -> g\n144 -> c\n90 -> l\n177 -> e\n110 -> m\n109 -> i\n46 -> e\n62 -> c\n88 -> l\n72 -> u\n169 -> e\n\nQuery: 90"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-019",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 76,
+      "queried_slot_1indexed": 17,
+      "gold_value": "c",
+      "prompt_user_text": "Pairs:\n101 -> h\n120 -> m\n132 -> g\n71 -> e\n103 -> c\n93 -> c\n156 -> g\n144 -> i\n162 -> a\n77 -> b\n124 -> k\n80 -> x\n23 -> h\n130 -> d\n14 -> e\n74 -> q\n76 -> c\n79 -> z\n155 -> e\n54 -> l\n81 -> r\n\nQuery: 76"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-020",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 30,
+      "queried_slot_1indexed": 17,
+      "gold_value": "y",
+      "prompt_user_text": "Pairs:\n93 -> n\n32 -> z\n165 -> o\n24 -> c\n25 -> g\n21 -> w\n119 -> m\n66 -> y\n102 -> o\n54 -> u\n197 -> u\n33 -> n\n183 -> a\n28 -> m\n13 -> g\n191 -> m\n30 -> y\n27 -> p\n70 -> d\n190 -> a\n31 -> v\n\nQuery: 30"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-021",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 113,
+      "queried_slot_1indexed": 16,
+      "gold_value": "i",
+      "prompt_user_text": "Pairs:\n126 -> t\n182 -> r\n141 -> l\n111 -> i\n171 -> r\n131 -> l\n155 -> y\n116 -> c\n76 -> f\n110 -> g\n132 -> h\n57 -> p\n35 -> f\n191 -> v\n46 -> m\n113 -> i\n47 -> j\n11 -> a\n114 -> u\n26 -> u\n146 -> f\n\nQuery: 113"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-022",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 94,
+      "queried_slot_1indexed": 15,
+      "gold_value": "z",
+      "prompt_user_text": "Pairs:\n88 -> i\n61 -> z\n71 -> w\n124 -> y\n87 -> q\n90 -> d\n96 -> f\n58 -> q\n43 -> g\n169 -> h\n145 -> y\n16 -> z\n40 -> f\n91 -> i\n94 -> z\n89 -> o\n102 -> g\n62 -> q\n153 -> c\n175 -> t\n152 -> c\n\nQuery: 94"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-023",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 177,
+      "queried_slot_1indexed": 18,
+      "gold_value": "q",
+      "prompt_user_text": "Pairs:\n187 -> d\n174 -> g\n75 -> y\n176 -> k\n181 -> g\n104 -> l\n173 -> y\n139 -> n\n196 -> q\n81 -> c\n128 -> z\n131 -> p\n142 -> u\n48 -> e\n172 -> k\n133 -> m\n166 -> h\n177 -> q\n70 -> w\n192 -> v\n165 -> y\n\nQuery: 177"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-024",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 184,
+      "queried_slot_1indexed": 13,
+      "gold_value": "d",
+      "prompt_user_text": "Pairs:\n192 -> w\n15 -> p\n68 -> b\n47 -> t\n142 -> b\n119 -> j\n182 -> x\n77 -> c\n14 -> l\n75 -> h\n145 -> y\n169 -> p\n184 -> d\n126 -> z\n179 -> z\n183 -> i\n19 -> u\n123 -> i\n188 -> h\n124 -> h\n29 -> j\n\nQuery: 184"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-025",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 198,
+      "queried_slot_1indexed": 16,
+      "gold_value": "u",
+      "prompt_user_text": "Pairs:\n23 -> l\n167 -> s\n116 -> e\n28 -> k\n20 -> t\n195 -> s\n173 -> v\n155 -> a\n194 -> o\n148 -> m\n161 -> p\n88 -> i\n112 -> n\n176 -> u\n27 -> g\n198 -> u\n196 -> q\n95 -> d\n199 -> w\n130 -> x\n90 -> j\n\nQuery: 198"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-026",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 187,
+      "queried_slot_1indexed": 14,
+      "gold_value": "u",
+      "prompt_user_text": "Pairs:\n79 -> g\n93 -> a\n178 -> i\n188 -> y\n170 -> k\n92 -> w\n15 -> h\n139 -> h\n95 -> z\n112 -> k\n185 -> y\n85 -> v\n190 -> s\n187 -> u\n191 -> j\n194 -> x\n124 -> f\n21 -> h\n184 -> m\n36 -> p\n76 -> j\n\nQuery: 187"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-027",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 52,
+      "queried_slot_1indexed": 15,
+      "gold_value": "t",
+      "prompt_user_text": "Pairs:\n50 -> q\n37 -> m\n126 -> g\n57 -> s\n169 -> l\n36 -> d\n33 -> m\n90 -> g\n149 -> s\n31 -> z\n74 -> z\n192 -> x\n27 -> e\n177 -> a\n52 -> t\n59 -> w\n87 -> i\n148 -> s\n48 -> o\n51 -> e\n143 -> s\n\nQuery: 52"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-028",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 195,
+      "queried_slot_1indexed": 13,
+      "gold_value": "n",
+      "prompt_user_text": "Pairs:\n136 -> t\n51 -> c\n190 -> l\n97 -> q\n198 -> u\n123 -> q\n29 -> h\n124 -> w\n77 -> p\n28 -> t\n199 -> b\n50 -> l\n195 -> n\n191 -> l\n76 -> i\n138 -> n\n80 -> e\n182 -> t\n100 -> a\n19 -> u\n196 -> l\n\nQuery: 195"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-029",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 128,
+      "queried_slot_1indexed": 18,
+      "gold_value": "u",
+      "prompt_user_text": "Pairs:\n150 -> i\n90 -> g\n45 -> t\n71 -> t\n127 -> s\n66 -> m\n123 -> u\n107 -> r\n61 -> t\n109 -> w\n122 -> e\n111 -> u\n133 -> p\n108 -> b\n54 -> p\n119 -> o\n130 -> g\n128 -> u\n125 -> a\n131 -> s\n129 -> v\n\nQuery: 128"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-030",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 177,
+      "queried_slot_1indexed": 17,
+      "gold_value": "n",
+      "prompt_user_text": "Pairs:\n182 -> o\n45 -> s\n191 -> s\n94 -> r\n84 -> j\n30 -> f\n173 -> g\n160 -> b\n178 -> e\n179 -> o\n98 -> i\n161 -> g\n175 -> a\n108 -> m\n153 -> f\n165 -> f\n177 -> n\n142 -> x\n149 -> l\n174 -> f\n193 -> i\n\nQuery: 177"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-031",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 146,
+      "queried_slot_1indexed": 15,
+      "gold_value": "c",
+      "prompt_user_text": "Pairs:\n180 -> h\n122 -> d\n69 -> w\n104 -> f\n152 -> l\n143 -> y\n40 -> f\n108 -> n\n149 -> s\n144 -> k\n160 -> b\n102 -> a\n76 -> k\n148 -> p\n146 -> c\n142 -> m\n174 -> p\n81 -> a\n137 -> d\n106 -> c\n186 -> a\n\nQuery: 146"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-032",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 37,
+      "queried_slot_1indexed": 14,
+      "gold_value": "x",
+      "prompt_user_text": "Pairs:\n143 -> c\n38 -> f\n177 -> s\n36 -> s\n21 -> l\n79 -> u\n41 -> r\n66 -> g\n119 -> r\n47 -> x\n153 -> g\n165 -> u\n155 -> o\n37 -> x\n14 -> l\n83 -> m\n42 -> w\n35 -> k\n151 -> p\n46 -> g\n152 -> d\n\nQuery: 37"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-033",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 67,
+      "queried_slot_1indexed": 14,
+      "gold_value": "z",
+      "prompt_user_text": "Pairs:\n76 -> g\n163 -> e\n68 -> y\n69 -> h\n61 -> a\n72 -> c\n120 -> p\n98 -> p\n185 -> j\n152 -> w\n159 -> w\n182 -> e\n149 -> v\n67 -> z\n56 -> v\n102 -> p\n82 -> g\n10 -> d\n62 -> h\n71 -> b\n46 -> r\n\nQuery: 67"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-034",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 21,
+      "queried_slot_1indexed": 13,
+      "gold_value": "b",
+      "prompt_user_text": "Pairs:\n198 -> x\n19 -> g\n59 -> g\n25 -> i\n114 -> c\n145 -> b\n136 -> b\n42 -> o\n80 -> u\n195 -> t\n94 -> g\n196 -> k\n21 -> b\n20 -> x\n95 -> r\n69 -> q\n190 -> d\n151 -> x\n17 -> j\n15 -> k\n177 -> z\n\nQuery: 21"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-035",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 185,
+      "queried_slot_1indexed": 18,
+      "gold_value": "i",
+      "prompt_user_text": "Pairs:\n190 -> q\n40 -> t\n18 -> t\n170 -> d\n105 -> a\n92 -> l\n89 -> m\n95 -> w\n196 -> g\n76 -> u\n182 -> b\n183 -> j\n158 -> b\n139 -> c\n181 -> q\n94 -> c\n188 -> v\n185 -> i\n130 -> s\n110 -> l\n164 -> j\n\nQuery: 185"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-036",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 143,
+      "queried_slot_1indexed": 13,
+      "gold_value": "v",
+      "prompt_user_text": "Pairs:\n126 -> v\n198 -> v\n152 -> y\n117 -> v\n144 -> j\n188 -> n\n177 -> g\n176 -> x\n175 -> i\n113 -> g\n140 -> b\n169 -> h\n143 -> v\n108 -> x\n43 -> v\n34 -> k\n147 -> f\n66 -> b\n81 -> q\n138 -> w\n160 -> a\n\nQuery: 143"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-037",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 144,
+      "queried_slot_1indexed": 14,
+      "gold_value": "z",
+      "prompt_user_text": "Pairs:\n74 -> r\n19 -> q\n140 -> q\n34 -> y\n180 -> f\n152 -> f\n36 -> b\n181 -> a\n68 -> l\n177 -> o\n149 -> z\n129 -> k\n146 -> y\n144 -> z\n11 -> v\n101 -> j\n48 -> q\n150 -> e\n145 -> f\n148 -> f\n170 -> h\n\nQuery: 144"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-038",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 55,
+      "queried_slot_1indexed": 13,
+      "gold_value": "z",
+      "prompt_user_text": "Pairs:\n132 -> e\n164 -> v\n58 -> d\n167 -> h\n92 -> v\n181 -> s\n30 -> l\n59 -> h\n70 -> y\n85 -> o\n126 -> m\n151 -> g\n55 -> z\n197 -> b\n23 -> n\n176 -> b\n56 -> g\n12 -> t\n153 -> w\n185 -> k\n52 -> u\n\nQuery: 55"
+    },
+    {
+      "record_id": "CAL-E-CLEAN-039",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 53,
+      "queried_slot_1indexed": 14,
+      "gold_value": "y",
+      "prompt_user_text": "Pairs:\n23 -> v\n135 -> l\n16 -> q\n112 -> s\n125 -> f\n58 -> n\n61 -> u\n113 -> w\n27 -> y\n149 -> b\n152 -> q\n51 -> y\n140 -> s\n53 -> y\n54 -> q\n150 -> j\n30 -> m\n31 -> h\n190 -> b\n57 -> b\n63 -> n\n\nQuery: 53"
+    }
+  ]
+}

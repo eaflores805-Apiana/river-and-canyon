@@ -1,0 +1,419 @@
+{
+  "member": "defective",
+  "candidate_id": "CAL-E",
+  "n_items": 40,
+  "list_len": 21,
+  "queried_slots": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "near_miss_count": 4,
+  "defect": "queried_key_absent_from_pairs",
+  "construction_seed": 20260613005,
+  "items": [
+    {
+      "record_id": "CAL-E-DEF-000",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 87,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n35 -> r\n121 -> t\n141 -> j\n172 -> z\n54 -> n\n101 -> e\n160 -> y\n28 -> h\n83 -> q\n150 -> m\n127 -> e\n88 -> f\n52 -> c\n152 -> o\n86 -> g\n45 -> u\n167 -> t\n151 -> g\n90 -> p\n128 -> c\n168 -> y\n\nQuery: 87"
+    },
+    {
+      "record_id": "CAL-E-DEF-001",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 173,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n168 -> n\n188 -> d\n16 -> w\n187 -> f\n17 -> q\n107 -> b\n172 -> d\n178 -> k\n99 -> k\n37 -> x\n49 -> e\n128 -> w\n131 -> i\n144 -> d\n53 -> f\n102 -> g\n162 -> k\n174 -> t\n52 -> v\n119 -> d\n18 -> n\n\nQuery: 173"
+    },
+    {
+      "record_id": "CAL-E-DEF-002",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 61,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n55 -> z\n123 -> q\n63 -> w\n132 -> l\n65 -> r\n59 -> r\n62 -> t\n60 -> f\n36 -> q\n143 -> j\n147 -> m\n27 -> x\n91 -> o\n138 -> z\n66 -> y\n42 -> v\n38 -> b\n128 -> q\n81 -> w\n103 -> b\n32 -> t\n\nQuery: 61"
+    },
+    {
+      "record_id": "CAL-E-DEF-003",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 115,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n23 -> s\n159 -> u\n48 -> j\n120 -> m\n134 -> p\n116 -> y\n110 -> p\n177 -> o\n161 -> t\n141 -> n\n169 -> q\n65 -> n\n182 -> v\n165 -> b\n192 -> i\n109 -> j\n196 -> j\n117 -> o\n158 -> c\n66 -> g\n127 -> w\n\nQuery: 115"
+    },
+    {
+      "record_id": "CAL-E-DEF-004",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 97,
+      "queried_slot_1indexed": 15,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n100 -> m\n146 -> p\n93 -> i\n50 -> m\n104 -> q\n111 -> e\n189 -> l\n175 -> w\n69 -> l\n144 -> l\n127 -> c\n197 -> t\n92 -> p\n48 -> d\n80 -> n\n96 -> c\n25 -> a\n102 -> s\n129 -> o\n54 -> c\n98 -> z\n\nQuery: 97"
+    },
+    {
+      "record_id": "CAL-E-DEF-005",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 189,
+      "queried_slot_1indexed": 17,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n148 -> r\n133 -> l\n188 -> a\n174 -> j\n27 -> a\n125 -> u\n66 -> a\n67 -> l\n76 -> v\n34 -> t\n44 -> b\n87 -> a\n48 -> e\n71 -> y\n194 -> g\n193 -> l\n102 -> p\n186 -> m\n86 -> p\n136 -> e\n104 -> p\n\nQuery: 189"
+    },
+    {
+      "record_id": "CAL-E-DEF-006",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 142,
+      "queried_slot_1indexed": 18,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n141 -> y\n60 -> p\n144 -> v\n73 -> v\n44 -> b\n146 -> w\n143 -> m\n135 -> q\n145 -> w\n129 -> k\n109 -> h\n102 -> l\n66 -> e\n119 -> s\n37 -> g\n175 -> h\n113 -> c\n71 -> u\n133 -> d\n86 -> n\n87 -> h\n\nQuery: 142"
+    },
+    {
+      "record_id": "CAL-E-DEF-007",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 125,
+      "queried_slot_1indexed": 16,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n140 -> o\n166 -> v\n13 -> a\n123 -> p\n122 -> d\n185 -> h\n198 -> l\n115 -> i\n34 -> n\n128 -> x\n31 -> a\n120 -> z\n58 -> g\n109 -> b\n171 -> s\n113 -> t\n193 -> i\n145 -> y\n116 -> h\n76 -> j\n45 -> j\n\nQuery: 125"
+    },
+    {
+      "record_id": "CAL-E-DEF-008",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 193,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n88 -> n\n142 -> y\n30 -> j\n66 -> k\n72 -> g\n169 -> c\n191 -> o\n129 -> g\n162 -> y\n180 -> r\n135 -> c\n196 -> r\n65 -> o\n171 -> r\n190 -> y\n188 -> h\n68 -> q\n122 -> v\n126 -> t\n179 -> q\n97 -> r\n\nQuery: 193"
+    },
+    {
+      "record_id": "CAL-E-DEF-009",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 139,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n141 -> c\n109 -> h\n18 -> d\n121 -> b\n155 -> s\n135 -> q\n118 -> x\n45 -> n\n196 -> u\n60 -> c\n25 -> k\n143 -> w\n49 -> n\n46 -> q\n30 -> a\n197 -> z\n142 -> z\n85 -> q\n48 -> x\n188 -> k\n54 -> y\n\nQuery: 139"
+    },
+    {
+      "record_id": "CAL-E-DEF-010",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 76,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n39 -> y\n78 -> r\n64 -> e\n72 -> y\n186 -> j\n140 -> z\n177 -> y\n17 -> g\n148 -> j\n160 -> v\n75 -> l\n149 -> y\n88 -> g\n184 -> d\n20 -> c\n66 -> w\n136 -> j\n56 -> u\n89 -> m\n79 -> g\n116 -> v\n\nQuery: 76"
+    },
+    {
+      "record_id": "CAL-E-DEF-011",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 17,
+      "queried_slot_1indexed": 17,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n104 -> h\n13 -> o\n51 -> y\n79 -> u\n143 -> b\n172 -> l\n85 -> c\n64 -> k\n21 -> k\n18 -> d\n136 -> e\n116 -> t\n171 -> o\n130 -> u\n184 -> g\n162 -> g\n37 -> b\n24 -> t\n22 -> d\n103 -> e\n88 -> s\n\nQuery: 17"
+    },
+    {
+      "record_id": "CAL-E-DEF-012",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 160,
+      "queried_slot_1indexed": 18,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n173 -> i\n68 -> w\n164 -> n\n104 -> p\n165 -> i\n25 -> o\n158 -> i\n180 -> w\n196 -> g\n53 -> n\n167 -> y\n118 -> h\n155 -> h\n98 -> q\n194 -> u\n11 -> z\n13 -> x\n147 -> p\n47 -> w\n112 -> l\n170 -> y\n\nQuery: 160"
+    },
+    {
+      "record_id": "CAL-E-DEF-013",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 199,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n81 -> p\n187 -> o\n155 -> f\n75 -> a\n156 -> n\n33 -> s\n133 -> e\n198 -> t\n194 -> f\n173 -> h\n82 -> l\n180 -> z\n197 -> w\n90 -> m\n27 -> t\n150 -> l\n195 -> f\n76 -> x\n56 -> a\n14 -> b\n77 -> n\n\nQuery: 199"
+    },
+    {
+      "record_id": "CAL-E-DEF-014",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 163,
+      "queried_slot_1indexed": 17,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n78 -> f\n156 -> u\n194 -> a\n25 -> v\n195 -> o\n137 -> b\n41 -> t\n65 -> y\n162 -> q\n168 -> o\n139 -> n\n16 -> f\n46 -> r\n108 -> t\n60 -> o\n165 -> e\n179 -> k\n158 -> v\n132 -> e\n90 -> s\n47 -> f\n\nQuery: 163"
+    },
+    {
+      "record_id": "CAL-E-DEF-015",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 98,
+      "queried_slot_1indexed": 15,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n92 -> n\n10 -> z\n171 -> v\n173 -> i\n121 -> x\n102 -> m\n99 -> k\n123 -> x\n16 -> k\n58 -> c\n56 -> v\n100 -> b\n103 -> d\n187 -> a\n168 -> c\n93 -> p\n130 -> h\n29 -> i\n54 -> h\n94 -> n\n134 -> r\n\nQuery: 98"
+    },
+    {
+      "record_id": "CAL-E-DEF-016",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 98,
+      "queried_slot_1indexed": 16,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n149 -> n\n131 -> y\n138 -> z\n13 -> q\n121 -> p\n60 -> p\n93 -> d\n58 -> y\n199 -> h\n155 -> v\n197 -> f\n147 -> g\n103 -> u\n189 -> q\n114 -> j\n170 -> z\n102 -> m\n59 -> f\n132 -> c\n99 -> e\n185 -> r\n\nQuery: 98"
+    },
+    {
+      "record_id": "CAL-E-DEF-017",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 136,
+      "queried_slot_1indexed": 16,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n138 -> t\n71 -> t\n195 -> f\n98 -> p\n48 -> u\n117 -> b\n164 -> x\n134 -> s\n30 -> g\n166 -> v\n147 -> s\n101 -> k\n75 -> h\n133 -> h\n189 -> z\n89 -> w\n88 -> p\n50 -> r\n132 -> u\n95 -> e\n54 -> b\n\nQuery: 136"
+    },
+    {
+      "record_id": "CAL-E-DEF-018",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 90,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n166 -> n\n92 -> i\n91 -> p\n93 -> t\n87 -> n\n95 -> j\n181 -> b\n96 -> h\n99 -> v\n107 -> g\n125 -> m\n144 -> k\n84 -> v\n177 -> z\n110 -> d\n109 -> l\n46 -> m\n62 -> i\n88 -> c\n72 -> m\n169 -> r\n\nQuery: 90"
+    },
+    {
+      "record_id": "CAL-E-DEF-019",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 76,
+      "queried_slot_1indexed": 17,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n101 -> h\n120 -> r\n132 -> w\n71 -> h\n103 -> b\n93 -> a\n156 -> p\n144 -> u\n162 -> v\n77 -> k\n124 -> l\n80 -> l\n23 -> d\n130 -> t\n14 -> a\n74 -> h\n28 -> s\n79 -> k\n155 -> p\n54 -> m\n81 -> n\n\nQuery: 76"
+    },
+    {
+      "record_id": "CAL-E-DEF-020",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 30,
+      "queried_slot_1indexed": 17,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n93 -> b\n32 -> k\n165 -> n\n24 -> j\n25 -> l\n21 -> o\n119 -> u\n66 -> z\n102 -> x\n54 -> x\n197 -> z\n33 -> n\n183 -> o\n28 -> z\n13 -> t\n191 -> h\n154 -> x\n27 -> d\n70 -> e\n190 -> b\n31 -> l\n\nQuery: 30"
+    },
+    {
+      "record_id": "CAL-E-DEF-021",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 113,
+      "queried_slot_1indexed": 16,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n126 -> u\n182 -> n\n141 -> y\n111 -> q\n171 -> i\n131 -> d\n155 -> e\n116 -> i\n76 -> v\n110 -> f\n132 -> q\n57 -> p\n35 -> j\n191 -> l\n46 -> s\n175 -> m\n47 -> q\n11 -> g\n114 -> x\n26 -> j\n146 -> m\n\nQuery: 113"
+    },
+    {
+      "record_id": "CAL-E-DEF-022",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 94,
+      "queried_slot_1indexed": 15,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n88 -> x\n61 -> h\n71 -> g\n124 -> f\n87 -> l\n90 -> n\n96 -> a\n58 -> j\n43 -> g\n169 -> s\n145 -> n\n16 -> u\n40 -> h\n91 -> n\n178 -> q\n89 -> h\n102 -> d\n62 -> x\n153 -> t\n175 -> j\n152 -> u\n\nQuery: 94"
+    },
+    {
+      "record_id": "CAL-E-DEF-023",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 177,
+      "queried_slot_1indexed": 18,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n187 -> v\n174 -> g\n75 -> s\n176 -> v\n181 -> d\n104 -> n\n173 -> i\n139 -> j\n196 -> i\n81 -> k\n128 -> m\n131 -> g\n142 -> n\n48 -> y\n172 -> z\n133 -> g\n166 -> f\n15 -> y\n70 -> r\n192 -> p\n165 -> g\n\nQuery: 177"
+    },
+    {
+      "record_id": "CAL-E-DEF-024",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 184,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n192 -> q\n15 -> k\n68 -> b\n47 -> l\n142 -> f\n119 -> t\n182 -> s\n77 -> m\n14 -> m\n75 -> x\n145 -> q\n169 -> i\n112 -> y\n126 -> e\n179 -> a\n183 -> n\n19 -> c\n123 -> t\n188 -> b\n124 -> q\n29 -> g\n\nQuery: 184"
+    },
+    {
+      "record_id": "CAL-E-DEF-025",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 198,
+      "queried_slot_1indexed": 16,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n23 -> m\n167 -> u\n116 -> z\n28 -> k\n20 -> t\n195 -> z\n173 -> g\n155 -> d\n194 -> e\n148 -> o\n161 -> c\n88 -> e\n112 -> n\n176 -> q\n27 -> a\n51 -> w\n196 -> u\n95 -> x\n199 -> r\n130 -> s\n90 -> a\n\nQuery: 198"
+    },
+    {
+      "record_id": "CAL-E-DEF-026",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 187,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n79 -> u\n93 -> c\n178 -> n\n188 -> p\n170 -> g\n92 -> z\n15 -> v\n139 -> i\n95 -> x\n112 -> f\n185 -> g\n85 -> a\n190 -> w\n45 -> r\n191 -> a\n194 -> d\n124 -> a\n21 -> z\n184 -> q\n36 -> j\n76 -> v\n\nQuery: 187"
+    },
+    {
+      "record_id": "CAL-E-DEF-027",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 52,
+      "queried_slot_1indexed": 15,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n50 -> v\n37 -> p\n126 -> f\n57 -> n\n169 -> z\n36 -> j\n33 -> v\n90 -> b\n149 -> s\n31 -> u\n74 -> m\n192 -> d\n27 -> g\n177 -> m\n91 -> x\n59 -> e\n87 -> q\n148 -> h\n48 -> a\n51 -> t\n143 -> j\n\nQuery: 52"
+    },
+    {
+      "record_id": "CAL-E-DEF-028",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 195,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n136 -> f\n51 -> y\n190 -> g\n97 -> e\n198 -> t\n123 -> t\n29 -> w\n124 -> w\n77 -> s\n28 -> o\n199 -> b\n50 -> j\n69 -> r\n191 -> f\n76 -> e\n138 -> l\n80 -> w\n182 -> d\n100 -> b\n19 -> o\n196 -> s\n\nQuery: 195"
+    },
+    {
+      "record_id": "CAL-E-DEF-029",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 128,
+      "queried_slot_1indexed": 18,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n150 -> d\n90 -> f\n45 -> j\n71 -> e\n127 -> q\n66 -> l\n123 -> m\n107 -> k\n61 -> w\n109 -> z\n122 -> i\n111 -> h\n133 -> c\n108 -> a\n54 -> p\n119 -> g\n130 -> c\n21 -> x\n125 -> k\n131 -> f\n129 -> u\n\nQuery: 128"
+    },
+    {
+      "record_id": "CAL-E-DEF-030",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 177,
+      "queried_slot_1indexed": 17,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n182 -> c\n45 -> c\n191 -> p\n94 -> y\n84 -> n\n30 -> q\n173 -> r\n160 -> z\n178 -> v\n179 -> f\n98 -> h\n161 -> r\n175 -> a\n108 -> k\n153 -> f\n165 -> d\n97 -> h\n142 -> i\n149 -> h\n174 -> p\n193 -> d\n\nQuery: 177"
+    },
+    {
+      "record_id": "CAL-E-DEF-031",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 146,
+      "queried_slot_1indexed": 15,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n180 -> d\n122 -> q\n69 -> x\n104 -> d\n152 -> i\n143 -> v\n40 -> h\n108 -> m\n149 -> j\n144 -> x\n160 -> g\n102 -> v\n76 -> m\n148 -> e\n192 -> i\n142 -> y\n174 -> l\n81 -> a\n137 -> f\n106 -> e\n186 -> k\n\nQuery: 146"
+    },
+    {
+      "record_id": "CAL-E-DEF-032",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 37,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n143 -> g\n38 -> h\n177 -> d\n36 -> j\n21 -> z\n79 -> n\n41 -> c\n66 -> m\n119 -> z\n47 -> i\n153 -> w\n165 -> r\n155 -> n\n189 -> k\n14 -> f\n83 -> p\n42 -> v\n35 -> r\n151 -> e\n46 -> g\n152 -> q\n\nQuery: 37"
+    },
+    {
+      "record_id": "CAL-E-DEF-033",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 67,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n76 -> g\n163 -> a\n68 -> q\n69 -> u\n61 -> m\n72 -> g\n120 -> t\n98 -> p\n185 -> z\n152 -> f\n159 -> v\n182 -> i\n149 -> k\n142 -> p\n56 -> e\n102 -> t\n82 -> g\n10 -> m\n62 -> r\n71 -> b\n46 -> l\n\nQuery: 67"
+    },
+    {
+      "record_id": "CAL-E-DEF-034",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 21,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n198 -> c\n19 -> x\n59 -> e\n25 -> r\n114 -> w\n145 -> a\n136 -> a\n42 -> q\n80 -> i\n195 -> i\n94 -> j\n196 -> p\n61 -> w\n20 -> j\n95 -> a\n69 -> r\n190 -> u\n151 -> w\n17 -> v\n15 -> h\n177 -> b\n\nQuery: 21"
+    },
+    {
+      "record_id": "CAL-E-DEF-035",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 185,
+      "queried_slot_1indexed": 18,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n190 -> p\n40 -> i\n18 -> m\n170 -> z\n105 -> p\n92 -> x\n89 -> k\n95 -> q\n196 -> v\n76 -> f\n182 -> u\n183 -> m\n158 -> s\n139 -> z\n181 -> m\n94 -> f\n188 -> y\n129 -> h\n130 -> z\n110 -> j\n164 -> v\n\nQuery: 185"
+    },
+    {
+      "record_id": "CAL-E-DEF-036",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 143,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n126 -> a\n198 -> s\n152 -> t\n117 -> e\n144 -> s\n188 -> i\n177 -> t\n176 -> b\n175 -> a\n113 -> k\n140 -> h\n169 -> f\n164 -> x\n108 -> y\n43 -> l\n34 -> i\n147 -> g\n66 -> k\n81 -> u\n138 -> z\n160 -> u\n\nQuery: 143"
+    },
+    {
+      "record_id": "CAL-E-DEF-037",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 144,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n74 -> j\n19 -> m\n140 -> k\n34 -> m\n180 -> n\n152 -> a\n36 -> u\n181 -> b\n68 -> z\n177 -> c\n149 -> k\n129 -> j\n146 -> i\n17 -> o\n11 -> y\n101 -> z\n48 -> q\n150 -> f\n145 -> t\n148 -> w\n170 -> k\n\nQuery: 144"
+    },
+    {
+      "record_id": "CAL-E-DEF-038",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 55,
+      "queried_slot_1indexed": 13,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n132 -> a\n164 -> z\n58 -> h\n167 -> q\n92 -> q\n181 -> b\n30 -> u\n59 -> x\n70 -> k\n85 -> o\n126 -> f\n151 -> j\n75 -> u\n197 -> k\n23 -> d\n176 -> h\n56 -> a\n12 -> b\n153 -> f\n185 -> g\n52 -> t\n\nQuery: 55"
+    },
+    {
+      "record_id": "CAL-E-DEF-039",
+      "stratum": "answerable",
+      "list_len": 21,
+      "queried_key": 53,
+      "queried_slot_1indexed": 14,
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Pairs:\n23 -> s\n135 -> v\n16 -> d\n112 -> t\n125 -> n\n58 -> a\n61 -> c\n113 -> e\n27 -> v\n149 -> b\n152 -> v\n51 -> c\n140 -> e\n182 -> u\n54 -> v\n150 -> w\n30 -> e\n31 -> v\n190 -> o\n57 -> j\n63 -> t\n\nQuery: 53"
+    }
+  ]
+}
