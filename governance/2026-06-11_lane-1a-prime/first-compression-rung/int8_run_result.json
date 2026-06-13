@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "run_timestamp_utc": "2026-06-13T17:23:48.476401+00:00",
+    "authorization": "TL routing 2026-06-13: First Compression Rung Execution Authorized \u2014 INT8-only first compression rung; no INT4 / full ladder / second rung / Claim C / certification / ranking / public benchmark / funder release / SBIR / Path B / Path D / schedule v2",
+    "identity": "INT8",
+    "rung_label": "FP16_baseline_to_INT8_first_compression_rung",
+    "model_source": "tier0-run/Qwen2.5-3B-Instruct-mlx-int8",
+    "mlx_lm_version": "0.31.3",
+    "decoding_config_sha256": "a20391d89972d47c0b231f5c6da9f8a9f4c7be8c975ab98bd95a32327196f803",
+    "prompt_template_sha256": "f1956e7dd43f165c8707fe88bc11757888f108e7e9766aa186ac9fc04f8b368a",
+    "t3_bounds_sha256": "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "schedule_sha256": "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5",
+    "oracle_verdict_sha256": "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "clean_member_sha256": "f412d04cec56e468ddf775cd00123d681ad9073acb5c17385c3086a960b13097",
+    "defective_member_sha256": "4ea3c277eda4acbea5749a5c2f3fa9f0eec77b3ca6f386600f46ee0d213d9fe6",
+    "realized_match_manifest_sha256": "49cd64510fc8f9e3f54bf958f55dcbc0254b24eca2a389c19a9be1ab2f44b376",
+    "int8_snapshot_hashes": {
+      "model.safetensors": "78cdda52f8c84884b1bec59a68f0abc16fe47f6cd4f074f1a0570448ca08bbfe",
+      "config.json": "0a73a0b1727e55ef5637e32e9897ad3f10b6d525f4d76c506ab7e9b87042d5f8",
+      "tokenizer_config.json": "ee8f6d44bf2353e6d3686c3adaf70e1ccfe9e6ed6822d0ab2f28cafdd7754792",
+      "model.safetensors.index.json": "3aaeed01b82210ba76290da9dbfd1c112be3b5ba4f58c68a1e51d335ec369afa",
+      "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9"
+    },
+    "fp16_baseline_run_result_sha256": "268ed175db47b7949fae18889bf0700366bd0900ecec81bf60e5b8c8a3f9f2ac",
+    "scope_note": "INT8 first compression rung on the byte-verified constructed-positive pair; TP/ENV/HEAD/FLOOR N/A by pair construction"
+  },
+  "clean_member": {
+    "summary": {
+      "member": "clean",
+      "stratum_label": "answerable",
+      "n": 40,
+      "n_strict_correct": 40,
+      "n_content_correct": 40,
+      "n_strict_abstained": 0,
+      "n_content_abstained": 0,
+      "n_letter_response_strict": 40,
+      "n_other_response_strict": 0,
+      "strict_accuracy": 1.0,
+      "content_accuracy": 1.0,
+      "strict_abstention_rate": 0.0,
+      "content_abstention_rate": 0.0,
+      "strict_accuracy_ci_lower": 0.9123754607496077,
+      "strict_accuracy_ci_upper": 1.0,
+      "strict_abstention_ci_lower": 0.0,
+      "strict_abstention_ci_upper": 0.08762453925039232,
+      "content_minus_strict_correct": 0.0,
+      "content_minus_strict_ci_lower": -0.08762453925039226,
+      "content_minus_strict_ci_upper": 0.08762453925039226
+    },
+    "criteria_outcomes": {
+      "null_abstention_floor_unmet": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no NULL stratum in constructed pair (n_null = 0 matched on both members per realized_match_manifest)"
+      },
+      "answerable_abstention_ceiling_exceeded": {
+        "status": "NOT_FIRED",
+        "bound": 0.2,
+        "comparison": "ci_lower > bound",
+        "strict_abstention_ci_lower": 0.0,
+        "strict_abstention_rate": 0.0
+      },
+      "accuracy_indistinguishable_from_token_prior": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no TP control sub-run on the constructed pair (would expand scope beyond TL routing authorization)"
+      },
+      "accuracy_indistinguishable_from_declared_policy_envelope": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no shortcut-policy hit rates on the constructed pair (no sealed 5-stratum envelope here)"
+      },
+      "insufficient_measurement_headroom": {
+        "status": "NOT_APPLICABLE",
+        "reason": "depends on ENV computation (NOT_APPLICABLE for this pair)"
+      },
+      "strict_content_gap_instability": {
+        "status": "NOT_FIRED",
+        "bound": 0.3,
+        "comparison": "nw_diff_ci_lower > bound",
+        "content_minus_strict": 0.0,
+        "nw_diff_ci_lower": -0.08762453925039226,
+        "nw_diff_ci_upper": 0.08762453925039226,
+        "note": "content abstention = any case of NONE; strict = uppercase NONE exact (per prompt template's expected_response_grammar)"
+      }
+    },
+    "outcome": "NOT_RULED_OUT",
+    "elimination_labels": []
+  },
+  "defective_member": {
+    "summary": {
+      "member": "defective",
+      "stratum_label": "answerable (defective-stratum-labeled)",
+      "n": 40,
+      "n_strict_correct": 6,
+      "n_content_correct": 35,
+      "n_strict_abstained": 6,
+      "n_content_abstained": 35,
+      "n_letter_response_strict": 5,
+      "n_other_response_strict": 29,
+      "strict_accuracy": 0.15,
+      "content_accuracy": 0.875,
+      "strict_abstention_rate": 0.15,
+      "content_abstention_rate": 0.875,
+      "strict_accuracy_ci_lower": 0.07061091708507435,
+      "strict_accuracy_ci_upper": 0.2907262603902003,
+      "strict_abstention_ci_lower": 0.07061091708507435,
+      "strict_abstention_ci_upper": 0.2907262603902003,
+      "content_minus_strict_correct": 0.725,
+      "content_minus_strict_ci_lower": 0.5292101125855497,
+      "content_minus_strict_ci_upper": 0.8311112787529822
+    },
+    "criteria_outcomes": {
+      "null_abstention_floor_unmet": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no NULL stratum in constructed pair (n_null = 0 matched on both members per realized_match_manifest)"
+      },
+      "answerable_abstention_ceiling_exceeded": {
+        "status": "NOT_FIRED",
+        "bound": 0.2,
+        "comparison": "ci_lower > bound",
+        "strict_abstention_ci_lower": 0.07061091708507435,
+        "strict_abstention_rate": 0.15
+      },
+      "accuracy_indistinguishable_from_token_prior": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no TP control sub-run on the constructed pair (would expand scope beyond TL routing authorization)"
+      },
+      "accuracy_indistinguishable_from_declared_policy_envelope": {
+        "status": "NOT_APPLICABLE",
+        "reason": "no shortcut-policy hit rates on the constructed pair (no sealed 5-stratum envelope here)"
+      },
+      "insufficient_measurement_headroom": {
+        "status": "NOT_APPLICABLE",
+        "reason": "depends on ENV computation (NOT_APPLICABLE for this pair)"
+      },
+      "strict_content_gap_instability": {
+        "status": "FIRED",
+        "bound": 0.3,
+        "comparison": "nw_diff_ci_lower > bound",
+        "content_minus_strict": 0.725,
+        "nw_diff_ci_lower": 0.5292101125855497,
+        "nw_diff_ci_upper": 0.8311112787529822,
+        "note": "content abstention = any case of NONE; strict = uppercase NONE exact (per prompt template's expected_response_grammar)"
+      }
+    },
+    "outcome": "eliminated",
+    "elimination_labels": [
+      "strict_content_gap_instability"
+    ]
+  },
+  "intra_run_pattern": "PASS",
+  "inference_seconds_clean": 13.587655067443848,
+  "inference_seconds_defective": 13.11827278137207,
+  "inference_seconds_total": 26.705927848815918,
+  "model_load_seconds": 1.366595983505249
+}
