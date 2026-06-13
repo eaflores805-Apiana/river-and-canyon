@@ -1,0 +1,373 @@
+{
+ "member": "clean",
+ "n_items": 40,
+ "list_len": 9,
+ "queried_slots": [
+  6,
+  7,
+  8
+ ],
+ "construction_seed": 20260613,
+ "items": [
+  {
+   "record_id": "CP-CLEAN-000",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 145,
+   "queried_slot_1indexed": 7,
+   "gold_value": "f",
+   "prompt_user_text": "Pairs:\n36 -> u\n139 -> n\n56 -> m\n15 -> p\n46 -> o\n112 -> c\n145 -> f\n130 -> l\n80 -> r\n\nQuery: 145"
+  },
+  {
+   "record_id": "CP-CLEAN-001",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 24,
+   "queried_slot_1indexed": 7,
+   "gold_value": "t",
+   "prompt_user_text": "Pairs:\n135 -> u\n99 -> v\n92 -> f\n185 -> g\n91 -> f\n20 -> x\n24 -> t\n78 -> s\n48 -> i\n\nQuery: 24"
+  },
+  {
+   "record_id": "CP-CLEAN-002",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 116,
+   "queried_slot_1indexed": 6,
+   "gold_value": "x",
+   "prompt_user_text": "Pairs:\n189 -> q\n28 -> f\n114 -> s\n93 -> a\n62 -> c\n116 -> x\n29 -> x\n55 -> h\n11 -> y\n\nQuery: 116"
+  },
+  {
+   "record_id": "CP-CLEAN-003",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 54,
+   "queried_slot_1indexed": 6,
+   "gold_value": "m",
+   "prompt_user_text": "Pairs:\n51 -> k\n156 -> a\n99 -> n\n60 -> t\n75 -> i\n54 -> m\n122 -> o\n52 -> m\n138 -> t\n\nQuery: 54"
+  },
+  {
+   "record_id": "CP-CLEAN-004",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 85,
+   "queried_slot_1indexed": 6,
+   "gold_value": "p",
+   "prompt_user_text": "Pairs:\n104 -> l\n20 -> u\n190 -> u\n34 -> i\n129 -> d\n85 -> p\n146 -> z\n57 -> v\n91 -> u\n\nQuery: 85"
+  },
+  {
+   "record_id": "CP-CLEAN-005",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 116,
+   "queried_slot_1indexed": 8,
+   "gold_value": "p",
+   "prompt_user_text": "Pairs:\n126 -> e\n111 -> p\n114 -> k\n58 -> b\n27 -> y\n137 -> p\n66 -> c\n116 -> p\n146 -> a\n\nQuery: 116"
+  },
+  {
+   "record_id": "CP-CLEAN-006",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 87,
+   "queried_slot_1indexed": 8,
+   "gold_value": "d",
+   "prompt_user_text": "Pairs:\n124 -> i\n148 -> u\n134 -> u\n57 -> y\n96 -> j\n160 -> x\n45 -> v\n87 -> d\n71 -> o\n\nQuery: 87"
+  },
+  {
+   "record_id": "CP-CLEAN-007",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 80,
+   "queried_slot_1indexed": 7,
+   "gold_value": "c",
+   "prompt_user_text": "Pairs:\n163 -> s\n68 -> a\n10 -> v\n148 -> c\n184 -> z\n157 -> t\n80 -> c\n28 -> f\n22 -> h\n\nQuery: 80"
+  },
+  {
+   "record_id": "CP-CLEAN-008",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 33,
+   "queried_slot_1indexed": 8,
+   "gold_value": "l",
+   "prompt_user_text": "Pairs:\n123 -> w\n16 -> t\n135 -> h\n87 -> m\n26 -> p\n21 -> q\n159 -> a\n33 -> l\n103 -> q\n\nQuery: 33"
+  },
+  {
+   "record_id": "CP-CLEAN-009",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 144,
+   "queried_slot_1indexed": 6,
+   "gold_value": "h",
+   "prompt_user_text": "Pairs:\n33 -> x\n135 -> o\n105 -> y\n92 -> o\n78 -> h\n144 -> h\n90 -> k\n198 -> o\n103 -> o\n\nQuery: 144"
+  },
+  {
+   "record_id": "CP-CLEAN-010",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 186,
+   "queried_slot_1indexed": 6,
+   "gold_value": "x",
+   "prompt_user_text": "Pairs:\n164 -> m\n145 -> b\n23 -> j\n51 -> h\n100 -> s\n186 -> x\n94 -> j\n16 -> n\n40 -> g\n\nQuery: 186"
+  },
+  {
+   "record_id": "CP-CLEAN-011",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 144,
+   "queried_slot_1indexed": 8,
+   "gold_value": "i",
+   "prompt_user_text": "Pairs:\n138 -> f\n165 -> c\n64 -> b\n108 -> v\n78 -> j\n53 -> p\n79 -> w\n144 -> i\n54 -> i\n\nQuery: 144"
+  },
+  {
+   "record_id": "CP-CLEAN-012",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 10,
+   "queried_slot_1indexed": 6,
+   "gold_value": "f",
+   "prompt_user_text": "Pairs:\n20 -> b\n179 -> b\n16 -> s\n96 -> v\n199 -> f\n10 -> f\n14 -> p\n44 -> t\n164 -> f\n\nQuery: 10"
+  },
+  {
+   "record_id": "CP-CLEAN-013",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 25,
+   "queried_slot_1indexed": 6,
+   "gold_value": "r",
+   "prompt_user_text": "Pairs:\n58 -> d\n36 -> a\n29 -> h\n126 -> m\n190 -> y\n25 -> r\n107 -> t\n89 -> e\n60 -> s\n\nQuery: 25"
+  },
+  {
+   "record_id": "CP-CLEAN-014",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 141,
+   "queried_slot_1indexed": 7,
+   "gold_value": "l",
+   "prompt_user_text": "Pairs:\n176 -> r\n140 -> p\n181 -> e\n161 -> o\n41 -> b\n24 -> z\n141 -> l\n34 -> m\n188 -> q\n\nQuery: 141"
+  },
+  {
+   "record_id": "CP-CLEAN-015",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 75,
+   "queried_slot_1indexed": 6,
+   "gold_value": "v",
+   "prompt_user_text": "Pairs:\n40 -> o\n94 -> o\n154 -> f\n153 -> y\n68 -> c\n75 -> v\n76 -> w\n135 -> r\n134 -> i\n\nQuery: 75"
+  },
+  {
+   "record_id": "CP-CLEAN-016",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 36,
+   "queried_slot_1indexed": 8,
+   "gold_value": "f",
+   "prompt_user_text": "Pairs:\n76 -> a\n77 -> n\n173 -> b\n191 -> v\n24 -> x\n131 -> r\n82 -> w\n36 -> f\n127 -> s\n\nQuery: 36"
+  },
+  {
+   "record_id": "CP-CLEAN-017",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 181,
+   "queried_slot_1indexed": 8,
+   "gold_value": "n",
+   "prompt_user_text": "Pairs:\n17 -> p\n68 -> w\n167 -> p\n102 -> e\n72 -> y\n147 -> y\n116 -> l\n181 -> n\n173 -> z\n\nQuery: 181"
+  },
+  {
+   "record_id": "CP-CLEAN-018",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 171,
+   "queried_slot_1indexed": 8,
+   "gold_value": "b",
+   "prompt_user_text": "Pairs:\n82 -> z\n177 -> x\n87 -> y\n132 -> x\n84 -> z\n38 -> h\n116 -> x\n171 -> b\n54 -> n\n\nQuery: 171"
+  },
+  {
+   "record_id": "CP-CLEAN-019",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 80,
+   "queried_slot_1indexed": 8,
+   "gold_value": "d",
+   "prompt_user_text": "Pairs:\n27 -> a\n105 -> o\n46 -> p\n158 -> o\n12 -> u\n131 -> w\n15 -> z\n80 -> d\n153 -> b\n\nQuery: 80"
+  },
+  {
+   "record_id": "CP-CLEAN-020",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 21,
+   "queried_slot_1indexed": 8,
+   "gold_value": "t",
+   "prompt_user_text": "Pairs:\n176 -> w\n101 -> n\n183 -> t\n17 -> e\n82 -> n\n62 -> h\n77 -> x\n21 -> t\n29 -> v\n\nQuery: 21"
+  },
+  {
+   "record_id": "CP-CLEAN-021",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 38,
+   "queried_slot_1indexed": 8,
+   "gold_value": "l",
+   "prompt_user_text": "Pairs:\n66 -> h\n195 -> n\n97 -> y\n158 -> f\n79 -> q\n153 -> b\n47 -> s\n38 -> l\n24 -> g\n\nQuery: 38"
+  },
+  {
+   "record_id": "CP-CLEAN-022",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 175,
+   "queried_slot_1indexed": 8,
+   "gold_value": "t",
+   "prompt_user_text": "Pairs:\n170 -> z\n112 -> x\n15 -> l\n105 -> n\n176 -> p\n99 -> t\n192 -> b\n175 -> t\n90 -> g\n\nQuery: 175"
+  },
+  {
+   "record_id": "CP-CLEAN-023",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 178,
+   "queried_slot_1indexed": 8,
+   "gold_value": "s",
+   "prompt_user_text": "Pairs:\n171 -> i\n88 -> j\n125 -> j\n194 -> h\n140 -> q\n97 -> v\n189 -> c\n178 -> s\n101 -> s\n\nQuery: 178"
+  },
+  {
+   "record_id": "CP-CLEAN-024",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 185,
+   "queried_slot_1indexed": 7,
+   "gold_value": "n",
+   "prompt_user_text": "Pairs:\n184 -> b\n155 -> k\n176 -> g\n112 -> i\n199 -> a\n104 -> l\n185 -> n\n132 -> h\n124 -> p\n\nQuery: 185"
+  },
+  {
+   "record_id": "CP-CLEAN-025",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 10,
+   "queried_slot_1indexed": 6,
+   "gold_value": "u",
+   "prompt_user_text": "Pairs:\n95 -> a\n15 -> s\n188 -> m\n32 -> w\n109 -> o\n10 -> u\n58 -> t\n129 -> n\n172 -> k\n\nQuery: 10"
+  },
+  {
+   "record_id": "CP-CLEAN-026",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 156,
+   "queried_slot_1indexed": 7,
+   "gold_value": "p",
+   "prompt_user_text": "Pairs:\n33 -> k\n67 -> x\n80 -> h\n131 -> c\n175 -> k\n170 -> u\n156 -> p\n158 -> m\n144 -> i\n\nQuery: 156"
+  },
+  {
+   "record_id": "CP-CLEAN-027",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 34,
+   "queried_slot_1indexed": 8,
+   "gold_value": "u",
+   "prompt_user_text": "Pairs:\n94 -> p\n25 -> y\n104 -> p\n122 -> z\n62 -> q\n36 -> c\n92 -> o\n34 -> u\n106 -> g\n\nQuery: 34"
+  },
+  {
+   "record_id": "CP-CLEAN-028",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 66,
+   "queried_slot_1indexed": 6,
+   "gold_value": "q",
+   "prompt_user_text": "Pairs:\n54 -> h\n84 -> d\n167 -> t\n29 -> p\n174 -> n\n66 -> q\n132 -> x\n169 -> e\n51 -> p\n\nQuery: 66"
+  },
+  {
+   "record_id": "CP-CLEAN-029",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 178,
+   "queried_slot_1indexed": 8,
+   "gold_value": "g",
+   "prompt_user_text": "Pairs:\n77 -> n\n28 -> l\n167 -> z\n116 -> v\n46 -> i\n122 -> z\n147 -> w\n178 -> g\n51 -> e\n\nQuery: 178"
+  },
+  {
+   "record_id": "CP-CLEAN-030",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 85,
+   "queried_slot_1indexed": 6,
+   "gold_value": "v",
+   "prompt_user_text": "Pairs:\n40 -> b\n160 -> h\n91 -> j\n183 -> o\n167 -> u\n85 -> v\n177 -> d\n19 -> t\n142 -> k\n\nQuery: 85"
+  },
+  {
+   "record_id": "CP-CLEAN-031",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 27,
+   "queried_slot_1indexed": 6,
+   "gold_value": "c",
+   "prompt_user_text": "Pairs:\n87 -> u\n28 -> f\n65 -> d\n80 -> o\n156 -> q\n27 -> c\n157 -> x\n64 -> n\n172 -> p\n\nQuery: 27"
+  },
+  {
+   "record_id": "CP-CLEAN-032",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 40,
+   "queried_slot_1indexed": 6,
+   "gold_value": "p",
+   "prompt_user_text": "Pairs:\n45 -> p\n125 -> f\n114 -> d\n173 -> s\n47 -> r\n40 -> p\n130 -> o\n143 -> g\n188 -> q\n\nQuery: 40"
+  },
+  {
+   "record_id": "CP-CLEAN-033",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 155,
+   "queried_slot_1indexed": 8,
+   "gold_value": "l",
+   "prompt_user_text": "Pairs:\n197 -> v\n17 -> j\n104 -> d\n34 -> y\n82 -> e\n189 -> a\n105 -> j\n155 -> l\n113 -> i\n\nQuery: 155"
+  },
+  {
+   "record_id": "CP-CLEAN-034",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 133,
+   "queried_slot_1indexed": 6,
+   "gold_value": "t",
+   "prompt_user_text": "Pairs:\n197 -> z\n177 -> e\n98 -> i\n114 -> m\n108 -> m\n133 -> t\n56 -> a\n59 -> t\n31 -> r\n\nQuery: 133"
+  },
+  {
+   "record_id": "CP-CLEAN-035",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 159,
+   "queried_slot_1indexed": 7,
+   "gold_value": "d",
+   "prompt_user_text": "Pairs:\n64 -> y\n187 -> z\n106 -> a\n113 -> a\n31 -> d\n55 -> c\n159 -> d\n95 -> n\n163 -> o\n\nQuery: 159"
+  },
+  {
+   "record_id": "CP-CLEAN-036",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 88,
+   "queried_slot_1indexed": 7,
+   "gold_value": "s",
+   "prompt_user_text": "Pairs:\n102 -> q\n59 -> b\n118 -> b\n188 -> x\n75 -> o\n138 -> m\n88 -> s\n16 -> d\n136 -> p\n\nQuery: 88"
+  },
+  {
+   "record_id": "CP-CLEAN-037",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 82,
+   "queried_slot_1indexed": 7,
+   "gold_value": "d",
+   "prompt_user_text": "Pairs:\n118 -> f\n28 -> z\n190 -> r\n86 -> u\n188 -> e\n91 -> z\n82 -> d\n180 -> m\n112 -> j\n\nQuery: 82"
+  },
+  {
+   "record_id": "CP-CLEAN-038",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 27,
+   "queried_slot_1indexed": 6,
+   "gold_value": "y",
+   "prompt_user_text": "Pairs:\n94 -> o\n187 -> x\n148 -> i\n33 -> y\n95 -> t\n27 -> y\n161 -> f\n97 -> b\n21 -> l\n\nQuery: 27"
+  },
+  {
+   "record_id": "CP-CLEAN-039",
+   "stratum": "answerable",
+   "list_len": 9,
+   "queried_key": 89,
+   "queried_slot_1indexed": 8,
+   "gold_value": "p",
+   "prompt_user_text": "Pairs:\n183 -> t\n115 -> f\n67 -> u\n44 -> g\n168 -> o\n198 -> g\n87 -> l\n89 -> p\n24 -> b\n\nQuery: 89"
+  }
+ ]
+}

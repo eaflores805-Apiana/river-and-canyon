@@ -1,0 +1,19 @@
+{
+ "match_manifest": "realized",
+ "held_constant": [
+  "list_len",
+  "queried_slot_distribution",
+  "key_value_vocabulary_family",
+  "token_length_profile",
+  "null_answerable_stratum",
+  "surface_format",
+  "item_count",
+  "scoring_harness"
+ ],
+ "permitted_difference": "P2 defect only: queried key absent from listed pairs (value not constructible)",
+ "n_items_each": 40,
+ "list_len": 9,
+ "construction_seed": 20260613,
+ "single_difference_invariant_check": "PASS",
+ "off_ceiling_design_intent": "represented via list_len=9 (>pilot 5) and queried-key bias to slots 6-8; NOT a claim of realized off-ceiling performance (gated, requires model run)"
+}
