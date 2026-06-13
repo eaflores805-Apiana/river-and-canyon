@@ -1,0 +1,26 @@
+{
+  "match_manifest": "realized",
+  "candidate_id": "CAL-B",
+  "held_constant": [
+    "list_len",
+    "queried_slot_distribution",
+    "key_value_vocabulary_family",
+    "near_miss_distractor_density",
+    "item_count",
+    "scoring_harness",
+    "queried_key_per_item_index"
+  ],
+  "permitted_difference": "P2 defect only: queried key absent from listed pairs",
+  "n_items_each": 40,
+  "list_len": 13,
+  "queried_slots": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "near_miss_count": 2,
+  "construction_seed": 20260613001,
+  "single_difference_invariant_check": "PASS",
+  "off_ceiling_design_intent": "calibration sweep \u2014 list_len 13, slots [8, 9, 10, 11], near-miss 2"
+}

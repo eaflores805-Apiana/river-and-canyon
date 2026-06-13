@@ -1,0 +1,402 @@
+[
+  {
+    "record_id": "CAL-B-DEF-000",
+    "queried_key": 51,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-001",
+    "queried_key": 150,
+    "queried_slot_1indexed": 10,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-002",
+    "queried_key": 103,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-003",
+    "queried_key": 199,
+    "queried_slot_1indexed": 10,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-004",
+    "queried_key": 177,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-005",
+    "queried_key": 115,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "n",
+    "parsed_kind": "letter",
+    "parsed_value": "n",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-006",
+    "queried_key": 50,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-007",
+    "queried_key": 33,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-008",
+    "queried_key": 157,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-009",
+    "queried_key": 183,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-010",
+    "queried_key": 55,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-011",
+    "queried_key": 64,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-012",
+    "queried_key": 32,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-013",
+    "queried_key": 56,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-014",
+    "queried_key": 76,
+    "queried_slot_1indexed": 10,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-015",
+    "queried_key": 100,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-016",
+    "queried_key": 106,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true
+  },
+  {
+    "record_id": "CAL-B-DEF-017",
+    "queried_key": 132,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "NONE",
+    "parsed_kind": "NONE",
+    "parsed_value": null,
+    "strict_correct": true
+  },
+  {
+    "record_id": "CAL-B-DEF-018",
+    "queried_key": 127,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-019",
+    "queried_key": 82,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-020",
+    "queried_key": 98,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-021",
+    "queried_key": 150,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-022",
+    "queried_key": 128,
+    "queried_slot_1indexed": 10,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-023",
+    "queried_key": 57,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-024",
+    "queried_key": 80,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-025",
+    "queried_key": 194,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-026",
+    "queried_key": 150,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-027",
+    "queried_key": 88,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-028",
+    "queried_key": 55,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-029",
+    "queried_key": 169,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-030",
+    "queried_key": 166,
+    "queried_slot_1indexed": 10,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-031",
+    "queried_key": 76,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-032",
+    "queried_key": 97,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "a",
+    "parsed_kind": "letter",
+    "parsed_value": "a",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-033",
+    "queried_key": 58,
+    "queried_slot_1indexed": 10,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-034",
+    "queried_key": 165,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-035",
+    "queried_key": 98,
+    "queried_slot_1indexed": 10,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-036",
+    "queried_key": 188,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-037",
+    "queried_key": 84,
+    "queried_slot_1indexed": 11,
+    "gold_value": null,
+    "raw_output": "f",
+    "parsed_kind": "letter",
+    "parsed_value": "f",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-038",
+    "queried_key": 142,
+    "queried_slot_1indexed": 9,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  },
+  {
+    "record_id": "CAL-B-DEF-039",
+    "queried_key": 199,
+    "queried_slot_1indexed": 8,
+    "gold_value": null,
+    "raw_output": "none",
+    "parsed_kind": "OTHER",
+    "parsed_value": "none",
+    "strict_correct": false
+  }
+]

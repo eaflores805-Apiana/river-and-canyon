@@ -1,0 +1,40 @@
+{
+  "candidate_id": "CAL-B",
+  "clean_member": {
+    "summary": {
+      "strict_accuracy": 0.975,
+      "n": 40,
+      "n_correct": 39
+    }
+  },
+  "defective_member": {
+    "summary": {
+      "strict_accuracy": 0.05,
+      "n": 40,
+      "n_correct": 2
+    }
+  },
+  "single_difference_ok": true,
+  "manifest_sha256": "ed613f086b36ba13bc48ec1e6ef9282375d5fb4cd31ed63908320efb67e2bdb5",
+  "scorer_sha256": "1de334ca1cff812dc454af693ba5c87d3945e53f0ffbb2590be346b96d67175f",
+  "prompt_template_sha256": "f1956e7dd43f165c8707fe88bc11757888f108e7e9766aa186ac9fc04f8b368a",
+  "raw_output_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-b_clean_outputs.json",
+  "raw_defective_output_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-b_defective_outputs.json",
+  "manifest_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-b_realized_match_manifest.json",
+  "clean_member_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-b_clean_member.json",
+  "defective_member_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-b_defective_member.json",
+  "candidate_config": {
+    "list_len": 13,
+    "queried_slots": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "near_miss_count": 2,
+    "construction_seed": 20260613001
+  },
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "precision": "bf16-mlx-native",
+  "run_timestamp_utc": "2026-06-13T22:55:39.128466+00:00"
+}

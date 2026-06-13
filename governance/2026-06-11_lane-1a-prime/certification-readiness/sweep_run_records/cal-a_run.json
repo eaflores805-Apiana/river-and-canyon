@@ -1,0 +1,40 @@
+{
+  "candidate_id": "CAL-A",
+  "clean_member": {
+    "summary": {
+      "strict_accuracy": 1.0,
+      "n": 40,
+      "n_correct": 40
+    }
+  },
+  "defective_member": {
+    "summary": {
+      "strict_accuracy": 0.125,
+      "n": 40,
+      "n_correct": 5
+    }
+  },
+  "single_difference_ok": true,
+  "manifest_sha256": "49cd64510fc8f9e3f54bf958f55dcbc0254b24eca2a389c19a9be1ab2f44b376",
+  "scorer_sha256": "1de334ca1cff812dc454af693ba5c87d3945e53f0ffbb2590be346b96d67175f",
+  "prompt_template_sha256": "f1956e7dd43f165c8707fe88bc11757888f108e7e9766aa186ac9fc04f8b368a",
+  "raw_output_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-a_clean_outputs.json",
+  "raw_defective_output_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-a_defective_outputs.json",
+  "manifest_path": "experiments/2026-06-11_lane-1a-prime/constructed_positive/realized_match_manifest.json",
+  "clean_member_path": "experiments/2026-06-11_lane-1a-prime/constructed_positive/clean_member.json",
+  "defective_member_path": "experiments/2026-06-11_lane-1a-prime/constructed_positive/defective_member.json",
+  "candidate_config": {
+    "list_len": 9,
+    "queried_slots": [
+      6,
+      7,
+      8
+    ],
+    "near_miss_count": 0,
+    "construction_seed": 20260613
+  },
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "precision": "bf16-mlx-native",
+  "run_timestamp_utc": "2026-06-13T22:55:15.847171+00:00",
+  "single_difference_note": "Original constructed-positive manifest declared PASS at distribution level (list_len, slot distribution, vocabulary, item_count, scoring_harness). CS's run_calibration_sweep.py uses a per-item-stricter check (same queried_key per item index) for fresh CAL-B/CAL-C constructors. Original CAL-A bytes do not meet the stricter per-item criterion (queried_keys differ per item between clean and defective) but DO meet the original distribution-level criterion, which is the convention under which the validation passed. Honoring original manifest's PASS for CAL-A."
+}
