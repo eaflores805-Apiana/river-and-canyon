@@ -9,16 +9,30 @@ Maintained by Senior; verified by CS.
 ## ▶ RIGHT NOW
 
 ```text
-MAIN MAP:   Program Map v2.0  →  node: "Certification track (Lanes 1–3)"
-SUBMAP:     Certification-readiness / off-ceiling repair design  (OPEN — FINAL D4 rescue)
-ON STAGE:   NON-CONTENT-LEVER-D4-RESCUE-SPEC (CAL-Q) DELIVERED → awaiting CS verify  ← LIVE
-WAITING ON: CS (model-free + query-side-only design checks), then Manager (authorize CAL-Q run)
+MAIN MAP:   Program Map v2.0  →  node: transition OUT of "Certification track (Lanes 1–3)"
+SUBMAP:     Certification-readiness / off-ceiling repair design  — CLOSED on D4 PIVOT
+ON STAGE:   D4 PIVOT approved · CAL-Q finding preserved on a FINDING TRACK · Tier 1 is next  ← LIVE
+WAITING ON: Manager direction on Tier 1 entry (+ the strategic instrument-vs-seam question);
+            CS pickup of the finding record (8aebefeb) to origin
 ROUTE STATE: YELLOW (model-free) · RED (no execution / certification / compression)
-D4 ROUTE:   PIVOT WATCH — content levers (length/depth/near-miss) BLOCKED; CAL-Q is the
-            one final bounded non-content attempt. If it fails like CAL-E → honest pivot to Tier 1.
+D4 ROUTE:   CLOSED — PIVOT (valuable negative result). Both lever classes tried under declared
+            rules; neither places a clean off-ceiling point with preserved discrimination.
+            No further D4 repair authorized.
 ```
 
-**In one sentence:** the off-ceiling sweep + CAL-E showed content levers move clean off ceiling only by inflating defective and collapsing separation; the D4 route is in PIVOT WATCH; one final non-content lever (CAL-Q, indirect-key query on CAL-B content) is specified and delivered (`d0bb0217`), awaiting CS design-verification before any gated run — and if it fails, the honest move is the Tier-1 pivot.
+**In one sentence:** the D4 certification-readiness route is CLOSED on a pre-declared PIVOT (a supported negative result — this synthetic key-value family at 3B/FP16 has no construct that is both off-ceiling and discrimination-preserving across the five candidates tested); the CAL-Q mechanism (abstention is format-sensitive and may be coupled to retrieval difficulty) is preserved on a finding track with strict claim scoping; the program now pivots toward Tier 1 eval-validity auditing, pending Manager direction and the strategic instrument-vs-seam decision.
+
+### Open threads (post-pivot)
+
+```text
+1. §11 REJECTION-AUDIT CONTROL  — now UNBLOCKED (CAL-Q resolved; this PIVOT is itself a
+   rejection the control governs). Methodology record v0.3 §11 is a logged stub to draft in full.
+2. STRATEGIC QUESTION           — instrument-as-deliverable vs seam-as-deliverable (C5). The
+   pivot makes this concrete; the answer reframes how the whole D4 outcome reads.
+3. LITERATURE CHECK             — deferred 5 turns; the gate to whether the methodology record
+   is a paper and whether Tier 1 auditing has a nameable market. To be RUN, not asserted.
+4. C6 FIVE-QUESTIONS            — parked pending a source pointer; no 5-question set located.
+```
 
 ---
 
