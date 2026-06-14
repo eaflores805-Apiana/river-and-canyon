@@ -11,7 +11,7 @@ This is a top-level pointer index per Manager flag-4 ratification (option c). It
 
 ## Where to look first
 
-- **For Paper A release artifacts** → `/papers/paper-a-before-retention/` (paper + figures + sections + supplement + bundled Paper A governance + revisions/).
+- **For Paper A release artifacts** → `/papers/paper4-before-retention/` (paper + figures + sections + supplement + bundled Paper A governance + revisions/).
 - **For the Tier 1 instrument architecture** → `/tier-1-instrument/specs/` (Tool Spec v0.1, G6 Spec v0.1).
 - **For the CAL-Q finding track** → `/finding-tracks/cal-q-format-sensitive-abstention/`.
 - **For closed D4 history** → `/archive/d4-closed-route/`.
