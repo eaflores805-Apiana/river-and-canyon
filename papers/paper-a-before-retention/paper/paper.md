@@ -78,7 +78,11 @@ The task family is a synthetic, closed-world key-value lookup: each item present
 
 The clean baseline saturated at ceiling: the model performed the lookup essentially perfectly, leaving no headroom in which a future compression-induced drop could be measured. A baseline at ceiling cannot serve as a retention substrate, because retention is computed relative to the baseline and a ceiling baseline can only stay flat or fall to the floor. We therefore sought a difficulty manipulation that would lower clean accuracy into a measurable band while preserving the construct. (Figure 1 plots the full calibration sweep against the certifiable region: every content-lever candidate sits at the ceiling wall, and the one off-ceiling candidate falls to the discrimination floor, so the certifiable region is unoccupied for this family.) We do not adjudicate whether the unoccupied region reflects a genuine constructibility barrier for this family or a conservatively-set gate; distinguishing these requires the external demonstration named in §6.2, and we treat it as an open question about this figure rather than a settled finding.
 
-![**Figure 1.** Clean accuracy versus defective discrimination for the five calibration candidates; the certifiable region (off-ceiling band, discrimination preserved) is shaded. Four content-lever candidates sit at the ceiling wall; the one off-ceiling candidate (CAL-Q) falls to the discrimination floor, leaving the certifiable region unoccupied for this family. Whether that reflects a constructibility barrier or a conservatively-set gate is left open (§3.1). Synthetic key-value family, Qwen2.5-3B (FP16); evidence about the instrument, not the model.](figures/fig1_certification_box.png){width=80%}
+<p align="center">
+  <img src="../figures/fig1_certification_box.png" alt="Figure 1" width="80%">
+</p>
+
+**Figure 1.** Clean accuracy versus defective discrimination for the five calibration candidates; the certifiable region (off-ceiling band, discrimination preserved) is shaded. Four content-lever candidates sit at the ceiling wall; the one off-ceiling candidate (CAL-Q) falls to the discrimination floor, leaving the certifiable region unoccupied for this family. Whether that reflects a constructibility barrier or a conservatively-set gate is left open (§3.1). Synthetic key-value family, Qwen2.5-3B (FP16); evidence about the instrument, not the model.
 
 Content-based manipulations failed to move the ceiling. A query-side manipulation succeeded: an in-prompt code-book required the model to resolve an alias before performing the lookup. This produced the first off-ceiling clean point. By the surface objective — off-ceiling difficulty with a still-high clean score — this was the baseline we were trying to build.
 
@@ -108,7 +112,11 @@ In a separate episode (the scorer-audit case), a case-sensitive NULL parser mis-
 
 The two episodes are the paper's bidirectional evidence (Figure 2).
 
-![**Figure 2.** The per-item discipline, across two checks, both confirms a sound refusal and prevents a false one. Left: the CAL-E aggregate (0.575) is lifted by the per-item read to 0.90 — a scorer artifact, refusal averted. Right: the CAL-Q aggregate (0.00) is confirmed at floor — a real construct collapse, refusal upheld. An existence proof that the read can go both ways, not evidence of reliable artifact-tracking. Synthetic key-value family, Qwen2.5-3B (FP16).](figures/fig2_reversal_confirmation.png){width=92%}
+<p align="center">
+  <img src="../figures/fig2_reversal_confirmation.png" alt="Figure 2" width="92%">
+</p>
+
+**Figure 2.** The per-item discipline, across two checks, both confirms a sound refusal and prevents a false one. Left: the CAL-E aggregate (0.575) is lifted by the per-item read to 0.90 — a scorer artifact, refusal averted. Right: the CAL-Q aggregate (0.00) is confirmed at floor — a real construct collapse, refusal upheld. An existence proof that the read can go both ways, not evidence of reliable artifact-tracking. Synthetic key-value family, Qwen2.5-3B (FP16).
  In §3.2 the per-item read confirmed a refusal that the aggregate would have passed; in §3.5 the per-item read overturned an apparent failure that the aggregate would have failed, before any refusal was acted on. These two episodes are an *existence proof* that the per-item read can go both ways — confirming a sound refusal and preventing a false one — not evidence that the gate reliably tracks artifacts: two episodes, one of each kind and chosen by the authors, are the minimum possible basis for "bidirectional," and they are consistent with responsiveness without establishing it. Note also that the two were caught by *different* checks sharing a per-item substrate — CAL-Q by the construct-validity check, CAL-E by the scorer-audit check — so the accurate framing is the per-item discipline across two checks, not a single gate disposition. This is also the motivating material for the rejection audit specified in §5: the one time a refusal would have been wrong is exactly the case the discipline must catch, and §3.5 is an instance of the per-item read catching it.
 
 ---
