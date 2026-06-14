@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "The Gate That Refused Its Authors: Construct-Validity Enforcement at the Baseline of LLM Stress-Retention Evaluation"
+message: "If you reference this work, please cite it as below."
+authors:
+  - family-names: Flores
+    given-names: E. A.
+    affiliation: "Apiana AI, Inc."
+abstract: "An instrument paper describing a fail-closed validity gate that enforces construct validity at the baseline of a stress-retention evaluation, with a worked case in which the gate refused the authors' own candidate baseline. Scoped to one synthetic task family and one model (Qwen2.5-3B, FP16); pre-stress."
+keywords:
+  - evaluation validity
+  - construct validity
+  - language model evaluation
+  - stress-retention
+  - quantization
+version: "0.6-draft"
