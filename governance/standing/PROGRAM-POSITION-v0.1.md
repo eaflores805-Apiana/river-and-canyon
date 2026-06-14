@@ -10,14 +10,15 @@ Maintained by Senior; verified by CS.
 
 ```text
 MAIN MAP:   Program Map v2.0  →  node: "Certification track (Lanes 1–3)"
-SUBMAP:     Certification-readiness / off-ceiling repair design  (OPEN)
-ON STAGE:   repair design filed → next: off-ceiling CALIBRATION READ (model-free)  ← THE LIVE STEP
-WAITING ON: nobody — model-free calibration read is the next Senior+CS work
-ROUTE STATE: YELLOW (model-free work proceeds) · RED (no model execution / certification run / compression)
-PRIOR SUBMAP: Phase-0→Phase-1 mini-map CLOSED at F = ACCEPT (scoped: repair design only)
+SUBMAP:     Certification-readiness / off-ceiling repair design  (OPEN — FINAL D4 rescue)
+ON STAGE:   NON-CONTENT-LEVER-D4-RESCUE-SPEC (CAL-Q) DELIVERED → awaiting CS verify  ← LIVE
+WAITING ON: CS (model-free + query-side-only design checks), then Manager (authorize CAL-Q run)
+ROUTE STATE: YELLOW (model-free) · RED (no execution / certification / compression)
+D4 ROUTE:   PIVOT WATCH — content levers (length/depth/near-miss) BLOCKED; CAL-Q is the
+            one final bounded non-content attempt. If it fails like CAL-E → honest pivot to Tier 1.
 ```
 
-**In one sentence:** the Manager accepted Stage F (model-free repair design only — no execution/certification/compression); the repair design is filed with a design-level checklist PASS, and the one remaining model-free step is the off-ceiling calibration read that determines whether a certifiable band exists (→ license a gated certification-run request) or does not (→ pivot to Tier 1).
+**In one sentence:** the off-ceiling sweep + CAL-E showed content levers move clean off ceiling only by inflating defective and collapsing separation; the D4 route is in PIVOT WATCH; one final non-content lever (CAL-Q, indirect-key query on CAL-B content) is specified and delivered (`d0bb0217`), awaiting CS design-verification before any gated run — and if it fails, the honest move is the Tier-1 pivot.
 
 ---
 
