@@ -1,0 +1,81 @@
+{
+  "candidate_id": "CAL-Q",
+  "spec_version": "v0.3",
+  "spec_sha256": "839249000bb1cb34d423534009d24682339e56c51ce393be45f5c03526a31a13",
+  "query_form": "in_prompt_code_book",
+  "clean_member": {
+    "summary": {
+      "strict_accuracy": 0.65,
+      "concept_accuracy": 0.65,
+      "n": 40
+    }
+  },
+  "defective_member": {
+    "summary": {
+      "strict_accuracy": 0.0,
+      "concept_abstention_accuracy": 0.0,
+      "true_false_emission_rate": 1.0,
+      "format_abstention_artifact": {
+        "lowercase_none_count": 0,
+        "uppercase_NONE_count": 0,
+        "artifact_size_fraction": 0.0
+      },
+      "n": 40,
+      "abstention_forms_observed": {},
+      "letter_values_observed": {
+        "b": 4,
+        "h": 3,
+        "z": 3,
+        "l": 3,
+        "a": 5,
+        "y": 4,
+        "p": 1,
+        "n": 5,
+        "k": 2,
+        "r": 1,
+        "w": 3,
+        "s": 1,
+        "o": 1,
+        "j": 2,
+        "c": 1,
+        "m": 1
+      }
+    }
+  },
+  "single_difference_ok": true,
+  "single_difference_check_details": {
+    "list_len_match": true,
+    "n_items_match": true,
+    "queried_slots_match": true,
+    "near_miss_match": true,
+    "query_form_match": true,
+    "per_item_invariant": true,
+    "same_key_identity_both_members": true,
+    "defect_field_on_defective": true,
+    "all_clean_have_gold": true
+  },
+  "manifest_sha256": "4de97d51f27f3146df890abcaa5efc04a23956b11e34d742dc9b54595b52102d",
+  "scorer_sha256": "1de334ca1cff812dc454af693ba5c87d3945e53f0ffbb2590be346b96d67175f",
+  "rescore_script_sha256": "bc0b48db88b7cf71e9518a8f15f48632b8388a058c3ea9663d7a98d561dfefc5",
+  "prompt_template_sha256": "f1956e7dd43f165c8707fe88bc11757888f108e7e9766aa186ac9fc04f8b368a",
+  "raw_output_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-q_clean_outputs.json",
+  "raw_defective_output_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-q_defective_outputs.json",
+  "manifest_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-q_realized_match_manifest.json",
+  "clean_member_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-q_clean_member.json",
+  "defective_member_path": "experiments/2026-06-11_lane-1a-prime/certification_readiness/sweep_outputs/cal-q_defective_member.json",
+  "candidate_config": {
+    "list_len": 13,
+    "queried_slots": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "near_miss_count": 2,
+    "construction_seed": 20260613006,
+    "query_form": "in_prompt_code_book"
+  },
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "precision": "bf16-mlx-native",
+  "run_timestamp_utc": "2026-06-14T00:45:24.522303+00:00"
+}

@@ -1,0 +1,1082 @@
+[
+  {
+    "record_id": "CAL-Q-CLEAN-000",
+    "queried_key": 93,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        93
+      ],
+      [
+        "B",
+        194
+      ],
+      [
+        "C",
+        150
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "t",
+    "raw_output": "t",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "t",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-001",
+    "queried_key": 172,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        172
+      ],
+      [
+        "B",
+        63
+      ],
+      [
+        "C",
+        128
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "y",
+    "raw_output": "e",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "e",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-002",
+    "queried_key": 185,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        185
+      ],
+      [
+        "B",
+        155
+      ],
+      [
+        "C",
+        57
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "y",
+    "raw_output": "v",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "v",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-003",
+    "queried_key": 17,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        17
+      ],
+      [
+        "B",
+        180
+      ],
+      [
+        "C",
+        120
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "a",
+    "raw_output": "a",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "a",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-004",
+    "queried_key": 69,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        69
+      ],
+      [
+        "B",
+        167
+      ],
+      [
+        "C",
+        145
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "z",
+    "raw_output": "z",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "z",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-005",
+    "queried_key": 193,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        193
+      ],
+      [
+        "B",
+        157
+      ],
+      [
+        "C",
+        186
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "y",
+    "raw_output": "c",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "c",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-006",
+    "queried_key": 152,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        152
+      ],
+      [
+        "B",
+        193
+      ],
+      [
+        "C",
+        194
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "k",
+    "raw_output": "k",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "k",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-007",
+    "queried_key": 76,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        76
+      ],
+      [
+        "B",
+        155
+      ],
+      [
+        "C",
+        13
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "d",
+    "raw_output": "d",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "d",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-008",
+    "queried_key": 120,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        120
+      ],
+      [
+        "B",
+        141
+      ],
+      [
+        "C",
+        41
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "a",
+    "raw_output": "a",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "a",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-009",
+    "queried_key": 49,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        49
+      ],
+      [
+        "B",
+        182
+      ],
+      [
+        "C",
+        95
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "u",
+    "raw_output": "u",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "u",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-010",
+    "queried_key": 14,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        14
+      ],
+      [
+        "B",
+        29
+      ],
+      [
+        "C",
+        125
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "c",
+    "raw_output": "c",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "c",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-011",
+    "queried_key": 121,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        121
+      ],
+      [
+        "B",
+        141
+      ],
+      [
+        "C",
+        104
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "m",
+    "raw_output": "m",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "m",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-012",
+    "queried_key": 47,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        47
+      ],
+      [
+        "B",
+        158
+      ],
+      [
+        "C",
+        27
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "l",
+    "raw_output": "l",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "l",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-013",
+    "queried_key": 41,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        41
+      ],
+      [
+        "B",
+        129
+      ],
+      [
+        "C",
+        89
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "v",
+    "raw_output": "v",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "v",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-014",
+    "queried_key": 100,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        100
+      ],
+      [
+        "B",
+        108
+      ],
+      [
+        "C",
+        198
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "m",
+    "raw_output": "m",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "m",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-015",
+    "queried_key": 72,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        72
+      ],
+      [
+        "B",
+        59
+      ],
+      [
+        "C",
+        51
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "j",
+    "raw_output": "j",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "j",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-016",
+    "queried_key": 58,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        58
+      ],
+      [
+        "B",
+        15
+      ],
+      [
+        "C",
+        44
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "y",
+    "raw_output": "l",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "l",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-017",
+    "queried_key": 166,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        166
+      ],
+      [
+        "B",
+        67
+      ],
+      [
+        "C",
+        16
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "m",
+    "raw_output": "e",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "e",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-018",
+    "queried_key": 114,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        114
+      ],
+      [
+        "B",
+        139
+      ],
+      [
+        "C",
+        160
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "m",
+    "raw_output": "m",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "m",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-019",
+    "queried_key": 121,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        121
+      ],
+      [
+        "B",
+        170
+      ],
+      [
+        "C",
+        144
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "p",
+    "raw_output": "p",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "p",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-020",
+    "queried_key": 197,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        197
+      ],
+      [
+        "B",
+        13
+      ],
+      [
+        "C",
+        108
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "j",
+    "raw_output": "e",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "e",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-021",
+    "queried_key": 13,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        13
+      ],
+      [
+        "B",
+        129
+      ],
+      [
+        "C",
+        63
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "n",
+    "raw_output": "t",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "t",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-022",
+    "queried_key": 11,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        11
+      ],
+      [
+        "B",
+        196
+      ],
+      [
+        "C",
+        94
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "w",
+    "raw_output": "q",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "q",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-023",
+    "queried_key": 64,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        64
+      ],
+      [
+        "B",
+        118
+      ],
+      [
+        "C",
+        82
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "w",
+    "raw_output": "d",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "d",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-024",
+    "queried_key": 95,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        95
+      ],
+      [
+        "B",
+        159
+      ],
+      [
+        "C",
+        194
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "p",
+    "raw_output": "p",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "p",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-025",
+    "queried_key": 173,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        173
+      ],
+      [
+        "B",
+        166
+      ],
+      [
+        "C",
+        161
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "s",
+    "raw_output": "s",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "s",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-026",
+    "queried_key": 85,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        85
+      ],
+      [
+        "B",
+        64
+      ],
+      [
+        "C",
+        190
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "s",
+    "raw_output": "s",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "s",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-027",
+    "queried_key": 27,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        27
+      ],
+      [
+        "B",
+        125
+      ],
+      [
+        "C",
+        82
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "s",
+    "raw_output": "s",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "s",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-028",
+    "queried_key": 83,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        83
+      ],
+      [
+        "B",
+        197
+      ],
+      [
+        "C",
+        15
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "y",
+    "raw_output": "y",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "y",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-029",
+    "queried_key": 18,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        18
+      ],
+      [
+        "B",
+        61
+      ],
+      [
+        "C",
+        189
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "a",
+    "raw_output": "a",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "a",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-030",
+    "queried_key": 157,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        157
+      ],
+      [
+        "B",
+        139
+      ],
+      [
+        "C",
+        61
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "q",
+    "raw_output": "q",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "q",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-031",
+    "queried_key": 61,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        61
+      ],
+      [
+        "B",
+        19
+      ],
+      [
+        "C",
+        100
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "a",
+    "raw_output": "a",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "a",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-032",
+    "queried_key": 34,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        34
+      ],
+      [
+        "B",
+        157
+      ],
+      [
+        "C",
+        171
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "c",
+    "raw_output": "m",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "m",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-033",
+    "queried_key": 30,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        30
+      ],
+      [
+        "B",
+        65
+      ],
+      [
+        "C",
+        109
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "y",
+    "raw_output": "i",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "i",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-034",
+    "queried_key": 19,
+    "queried_slot_1indexed": 8,
+    "code_book": [
+      [
+        "A",
+        19
+      ],
+      [
+        "B",
+        53
+      ],
+      [
+        "C",
+        160
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "j",
+    "raw_output": "j",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "j",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-035",
+    "queried_key": 35,
+    "queried_slot_1indexed": 10,
+    "code_book": [
+      [
+        "A",
+        35
+      ],
+      [
+        "B",
+        103
+      ],
+      [
+        "C",
+        115
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "g",
+    "raw_output": "i",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "i",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-036",
+    "queried_key": 184,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        184
+      ],
+      [
+        "B",
+        176
+      ],
+      [
+        "C",
+        135
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "w",
+    "raw_output": "w",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "w",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-037",
+    "queried_key": 192,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        192
+      ],
+      [
+        "B",
+        137
+      ],
+      [
+        "C",
+        193
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "o",
+    "raw_output": "o",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "o",
+    "strict_correct": true,
+    "concept_correct": true
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-038",
+    "queried_key": 11,
+    "queried_slot_1indexed": 11,
+    "code_book": [
+      [
+        "A",
+        11
+      ],
+      [
+        "B",
+        184
+      ],
+      [
+        "C",
+        65
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "o",
+    "raw_output": "p",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "p",
+    "strict_correct": false,
+    "concept_correct": false
+  },
+  {
+    "record_id": "CAL-Q-CLEAN-039",
+    "queried_key": 26,
+    "queried_slot_1indexed": 9,
+    "code_book": [
+      [
+        "A",
+        26
+      ],
+      [
+        "B",
+        29
+      ],
+      [
+        "C",
+        162
+      ]
+    ],
+    "query_code": "A",
+    "gold_value": "b",
+    "raw_output": "y",
+    "parsed_strict_kind": "letter",
+    "parsed_concept_kind": "letter",
+    "parsed_letter_value": "y",
+    "strict_correct": false,
+    "concept_correct": false
+  }
+]

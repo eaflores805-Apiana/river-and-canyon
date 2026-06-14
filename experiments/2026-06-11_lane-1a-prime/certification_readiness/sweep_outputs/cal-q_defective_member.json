@@ -1,0 +1,1018 @@
+{
+  "member": "defective",
+  "candidate_id": "CAL-Q",
+  "n_items": 40,
+  "list_len": 13,
+  "queried_slots": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "near_miss_count": 2,
+  "construction_seed": 20260613006,
+  "query_form": "in_prompt_code_book",
+  "defect": "queried_key_absent_from_pairs",
+  "items": [
+    {
+      "record_id": "CAL-Q-DEF-000",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 93,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          93
+        ],
+        [
+          "B",
+          194
+        ],
+        [
+          "C",
+          150
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_93\n  B = key_194\n  C = key_150\n\nKey-value list:\nkey_135 = n\nkey_148 = v\nkey_191 = y\nkey_117 = a\nkey_150 = b\nkey_98 = k\nkey_84 = w\nkey_194 = z\nkey_95 = g\nkey_112 = d\nkey_138 = t\nkey_147 = z\nkey_90 = q\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-001",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 172,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          172
+        ],
+        [
+          "B",
+          63
+        ],
+        [
+          "C",
+          128
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_172\n  B = key_63\n  C = key_128\n\nKey-value list:\nkey_27 = j\nkey_95 = e\nkey_128 = h\nkey_13 = i\nkey_170 = s\nkey_63 = g\nkey_111 = e\nkey_176 = d\nkey_180 = d\nkey_177 = y\nkey_150 = v\nkey_25 = b\nkey_174 = u\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-002",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 185,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          185
+        ],
+        [
+          "B",
+          155
+        ],
+        [
+          "C",
+          57
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_185\n  B = key_155\n  C = key_57\n\nKey-value list:\nkey_130 = u\nkey_196 = q\nkey_189 = m\nkey_155 = z\nkey_78 = s\nkey_181 = f\nkey_57 = c\nkey_153 = w\nkey_195 = s\nkey_112 = j\nkey_76 = y\nkey_75 = f\nkey_101 = e\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-003",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 17,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          17
+        ],
+        [
+          "B",
+          180
+        ],
+        [
+          "C",
+          120
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_17\n  B = key_180\n  C = key_120\n\nKey-value list:\nkey_181 = k\nkey_180 = q\nkey_85 = a\nkey_72 = o\nkey_14 = o\nkey_15 = c\nkey_74 = j\nkey_30 = m\nkey_20 = p\nkey_131 = m\nkey_109 = i\nkey_120 = l\nkey_177 = u\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-004",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 69,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          69
+        ],
+        [
+          "B",
+          167
+        ],
+        [
+          "C",
+          145
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_69\n  B = key_167\n  C = key_145\n\nKey-value list:\nkey_28 = h\nkey_163 = d\nkey_116 = i\nkey_58 = u\nkey_194 = g\nkey_138 = p\nkey_100 = y\nkey_133 = z\nkey_68 = c\nkey_145 = a\nkey_189 = w\nkey_65 = p\nkey_167 = m\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-005",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 193,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          193
+        ],
+        [
+          "B",
+          157
+        ],
+        [
+          "C",
+          186
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_193\n  B = key_157\n  C = key_186\n\nKey-value list:\nkey_92 = m\nkey_157 = l\nkey_175 = v\nkey_192 = y\nkey_65 = r\nkey_45 = e\nkey_186 = n\nkey_44 = b\nkey_106 = i\nkey_40 = e\nkey_81 = g\nkey_178 = j\nkey_195 = x\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-006",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 152,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          152
+        ],
+        [
+          "B",
+          193
+        ],
+        [
+          "C",
+          194
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_152\n  B = key_193\n  C = key_194\n\nKey-value list:\nkey_151 = q\nkey_137 = a\nkey_109 = d\nkey_89 = f\nkey_75 = s\nkey_193 = y\nkey_22 = f\nkey_156 = k\nkey_171 = h\nkey_194 = s\nkey_94 = f\nkey_173 = u\nkey_91 = c\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-007",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 76,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          76
+        ],
+        [
+          "B",
+          155
+        ],
+        [
+          "C",
+          13
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_76\n  B = key_155\n  C = key_13\n\nKey-value list:\nkey_77 = q\nkey_73 = e\nkey_93 = g\nkey_65 = p\nkey_150 = x\nkey_62 = g\nkey_27 = s\nkey_155 = x\nkey_81 = e\nkey_74 = c\nkey_110 = i\nkey_136 = r\nkey_13 = i\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-008",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 120,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          120
+        ],
+        [
+          "B",
+          141
+        ],
+        [
+          "C",
+          41
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_120\n  B = key_141\n  C = key_41\n\nKey-value list:\nkey_124 = g\nkey_119 = z\nkey_127 = q\nkey_122 = f\nkey_197 = t\nkey_14 = r\nkey_164 = e\nkey_34 = r\nkey_193 = k\nkey_91 = a\nkey_41 = n\nkey_178 = b\nkey_141 = b\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-009",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 49,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          49
+        ],
+        [
+          "B",
+          182
+        ],
+        [
+          "C",
+          95
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_49\n  B = key_182\n  C = key_95\n\nKey-value list:\nkey_96 = n\nkey_113 = q\nkey_155 = l\nkey_153 = s\nkey_95 = k\nkey_118 = h\nkey_182 = a\nkey_120 = j\nkey_90 = n\nkey_163 = i\nkey_47 = p\nkey_10 = y\nkey_54 = t\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-010",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 14,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          14
+        ],
+        [
+          "B",
+          29
+        ],
+        [
+          "C",
+          125
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_14\n  B = key_29\n  C = key_125\n\nKey-value list:\nkey_109 = n\nkey_107 = o\nkey_12 = l\nkey_139 = g\nkey_46 = p\nkey_71 = q\nkey_29 = a\nkey_11 = l\nkey_150 = v\nkey_158 = q\nkey_125 = y\nkey_95 = b\nkey_113 = v\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-011",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 121,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          121
+        ],
+        [
+          "B",
+          141
+        ],
+        [
+          "C",
+          104
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_121\n  B = key_141\n  C = key_104\n\nKey-value list:\nkey_141 = c\nkey_124 = l\nkey_104 = z\nkey_109 = e\nkey_135 = s\nkey_143 = h\nkey_128 = y\nkey_179 = y\nkey_37 = w\nkey_76 = v\nkey_137 = s\nkey_119 = g\nkey_14 = m\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-012",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 47,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          47
+        ],
+        [
+          "B",
+          158
+        ],
+        [
+          "C",
+          27
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_47\n  B = key_158\n  C = key_27\n\nKey-value list:\nkey_177 = h\nkey_27 = h\nkey_122 = e\nkey_186 = f\nkey_115 = j\nkey_52 = v\nkey_158 = t\nkey_107 = c\nkey_164 = r\nkey_130 = j\nkey_112 = u\nkey_46 = p\nkey_30 = c\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-013",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 41,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          41
+        ],
+        [
+          "B",
+          129
+        ],
+        [
+          "C",
+          89
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_41\n  B = key_129\n  C = key_89\n\nKey-value list:\nkey_11 = h\nkey_178 = q\nkey_46 = u\nkey_89 = a\nkey_82 = e\nkey_68 = c\nkey_67 = s\nkey_116 = r\nkey_36 = t\nkey_69 = d\nkey_185 = v\nkey_170 = u\nkey_129 = i\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-014",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 100,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          100
+        ],
+        [
+          "B",
+          108
+        ],
+        [
+          "C",
+          198
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_100\n  B = key_108\n  C = key_198\n\nKey-value list:\nkey_142 = d\nkey_98 = b\nkey_162 = i\nkey_121 = h\nkey_119 = o\nkey_94 = p\nkey_157 = i\nkey_189 = f\nkey_171 = t\nkey_96 = t\nkey_13 = f\nkey_108 = o\nkey_198 = k\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-015",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 72,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          72
+        ],
+        [
+          "B",
+          59
+        ],
+        [
+          "C",
+          51
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_72\n  B = key_59\n  C = key_51\n\nKey-value list:\nkey_194 = q\nkey_21 = g\nkey_51 = l\nkey_67 = c\nkey_197 = w\nkey_142 = g\nkey_59 = n\nkey_182 = d\nkey_69 = x\nkey_173 = w\nkey_156 = i\nkey_195 = o\nkey_146 = w\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-016",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 58,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          58
+        ],
+        [
+          "B",
+          15
+        ],
+        [
+          "C",
+          44
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_58\n  B = key_15\n  C = key_44\n\nKey-value list:\nkey_159 = f\nkey_61 = d\nkey_67 = m\nkey_36 = n\nkey_15 = r\nkey_60 = q\nkey_165 = f\nkey_135 = p\nkey_111 = u\nkey_113 = y\nkey_114 = t\nkey_44 = d\nkey_105 = o\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-017",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 166,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          166
+        ],
+        [
+          "B",
+          67
+        ],
+        [
+          "C",
+          16
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_166\n  B = key_67\n  C = key_16\n\nKey-value list:\nkey_169 = f\nkey_170 = w\nkey_67 = w\nkey_171 = x\nkey_16 = j\nkey_146 = h\nkey_24 = y\nkey_121 = c\nkey_165 = c\nkey_156 = a\nkey_71 = x\nkey_150 = m\nkey_173 = i\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-018",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 114,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          114
+        ],
+        [
+          "B",
+          139
+        ],
+        [
+          "C",
+          160
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_114\n  B = key_139\n  C = key_160\n\nKey-value list:\nkey_109 = p\nkey_187 = t\nkey_113 = k\nkey_199 = g\nkey_37 = n\nkey_196 = c\nkey_149 = f\nkey_139 = w\nkey_84 = i\nkey_46 = l\nkey_92 = p\nkey_81 = g\nkey_160 = u\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-019",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 121,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          121
+        ],
+        [
+          "B",
+          170
+        ],
+        [
+          "C",
+          144
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_121\n  B = key_170\n  C = key_144\n\nKey-value list:\nkey_144 = o\nkey_170 = b\nkey_185 = d\nkey_62 = c\nkey_154 = p\nkey_67 = w\nkey_120 = n\nkey_81 = w\nkey_106 = c\nkey_119 = n\nkey_17 = i\nkey_21 = x\nkey_20 = j\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-020",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 197,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          197
+        ],
+        [
+          "B",
+          13
+        ],
+        [
+          "C",
+          108
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_197\n  B = key_13\n  C = key_108\n\nKey-value list:\nkey_28 = y\nkey_34 = b\nkey_80 = y\nkey_112 = u\nkey_48 = x\nkey_196 = f\nkey_158 = c\nkey_119 = e\nkey_13 = a\nkey_55 = i\nkey_168 = c\nkey_108 = s\nkey_199 = j\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-021",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 13,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          13
+        ],
+        [
+          "B",
+          129
+        ],
+        [
+          "C",
+          63
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_13\n  B = key_129\n  C = key_63\n\nKey-value list:\nkey_56 = g\nkey_15 = n\nkey_145 = o\nkey_105 = c\nkey_17 = r\nkey_63 = b\nkey_55 = x\nkey_19 = h\nkey_142 = j\nkey_129 = m\nkey_156 = c\nkey_32 = a\nkey_58 = z\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-022",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 11,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          11
+        ],
+        [
+          "B",
+          196
+        ],
+        [
+          "C",
+          94
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_11\n  B = key_196\n  C = key_94\n\nKey-value list:\nkey_110 = k\nkey_12 = c\nkey_80 = n\nkey_69 = s\nkey_92 = l\nkey_153 = a\nkey_16 = i\nkey_105 = m\nkey_25 = l\nkey_196 = m\nkey_43 = w\nkey_94 = n\nkey_129 = m\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-023",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 64,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          64
+        ],
+        [
+          "B",
+          118
+        ],
+        [
+          "C",
+          82
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_64\n  B = key_118\n  C = key_82\n\nKey-value list:\nkey_66 = v\nkey_41 = e\nkey_73 = c\nkey_96 = l\nkey_76 = z\nkey_74 = n\nkey_118 = w\nkey_53 = c\nkey_82 = v\nkey_111 = u\nkey_12 = i\nkey_65 = z\nkey_20 = s\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-024",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 95,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          95
+        ],
+        [
+          "B",
+          159
+        ],
+        [
+          "C",
+          194
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_95\n  B = key_159\n  C = key_194\n\nKey-value list:\nkey_97 = b\nkey_91 = k\nkey_176 = o\nkey_85 = q\nkey_72 = o\nkey_194 = w\nkey_198 = m\nkey_99 = f\nkey_142 = w\nkey_74 = v\nkey_164 = z\nkey_104 = f\nkey_159 = r\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-025",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 173,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          173
+        ],
+        [
+          "B",
+          166
+        ],
+        [
+          "C",
+          161
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_173\n  B = key_166\n  C = key_161\n\nKey-value list:\nkey_99 = v\nkey_169 = n\nkey_117 = r\nkey_166 = n\nkey_38 = c\nkey_129 = s\nkey_46 = c\nkey_54 = e\nkey_96 = y\nkey_178 = u\nkey_70 = o\nkey_17 = c\nkey_161 = w\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-026",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 85,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          85
+        ],
+        [
+          "B",
+          64
+        ],
+        [
+          "C",
+          190
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_85\n  B = key_64\n  C = key_190\n\nKey-value list:\nkey_64 = l\nkey_73 = o\nkey_155 = w\nkey_190 = a\nkey_70 = t\nkey_90 = x\nkey_182 = z\nkey_87 = b\nkey_98 = x\nkey_168 = d\nkey_81 = p\nkey_172 = q\nkey_65 = k\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-027",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 27,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          27
+        ],
+        [
+          "B",
+          125
+        ],
+        [
+          "C",
+          82
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_27\n  B = key_125\n  C = key_82\n\nKey-value list:\nkey_72 = r\nkey_15 = t\nkey_30 = x\nkey_125 = h\nkey_82 = i\nkey_38 = z\nkey_28 = l\nkey_83 = j\nkey_115 = b\nkey_104 = g\nkey_155 = y\nkey_130 = v\nkey_12 = v\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-028",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 83,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          83
+        ],
+        [
+          "B",
+          197
+        ],
+        [
+          "C",
+          15
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_83\n  B = key_197\n  C = key_15\n\nKey-value list:\nkey_68 = f\nkey_80 = s\nkey_45 = h\nkey_197 = k\nkey_109 = i\nkey_111 = z\nkey_88 = v\nkey_24 = i\nkey_136 = i\nkey_13 = f\nkey_15 = s\nkey_164 = c\nkey_101 = u\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-029",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 18,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          18
+        ],
+        [
+          "B",
+          61
+        ],
+        [
+          "C",
+          189
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_18\n  B = key_61\n  C = key_189\n\nKey-value list:\nkey_104 = a\nkey_72 = r\nkey_159 = x\nkey_158 = j\nkey_133 = e\nkey_22 = b\nkey_16 = q\nkey_17 = j\nkey_19 = t\nkey_61 = n\nkey_50 = k\nkey_100 = q\nkey_189 = r\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-030",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 157,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          157
+        ],
+        [
+          "B",
+          139
+        ],
+        [
+          "C",
+          61
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_157\n  B = key_139\n  C = key_61\n\nKey-value list:\nkey_154 = w\nkey_120 = z\nkey_139 = p\nkey_136 = e\nkey_34 = h\nkey_153 = k\nkey_116 = j\nkey_88 = z\nkey_132 = x\nkey_114 = i\nkey_176 = y\nkey_124 = t\nkey_61 = a\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-031",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 61,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          61
+        ],
+        [
+          "B",
+          19
+        ],
+        [
+          "C",
+          100
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_61\n  B = key_19\n  C = key_100\n\nKey-value list:\nkey_14 = b\nkey_92 = x\nkey_104 = n\nkey_56 = s\nkey_19 = w\nkey_88 = w\nkey_100 = v\nkey_57 = g\nkey_190 = e\nkey_137 = w\nkey_26 = s\nkey_96 = t\nkey_154 = r\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-032",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 34,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          34
+        ],
+        [
+          "B",
+          157
+        ],
+        [
+          "C",
+          171
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_34\n  B = key_157\n  C = key_171\n\nKey-value list:\nkey_134 = n\nkey_107 = d\nkey_171 = o\nkey_30 = p\nkey_149 = y\nkey_47 = v\nkey_167 = y\nkey_124 = h\nkey_157 = o\nkey_32 = h\nkey_43 = w\nkey_11 = u\nkey_185 = c\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-033",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 30,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          30
+        ],
+        [
+          "B",
+          65
+        ],
+        [
+          "C",
+          109
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_30\n  B = key_65\n  C = key_109\n\nKey-value list:\nkey_15 = o\nkey_41 = l\nkey_26 = e\nkey_178 = d\nkey_65 = j\nkey_109 = m\nkey_131 = d\nkey_142 = y\nkey_33 = p\nkey_194 = z\nkey_132 = z\nkey_171 = s\nkey_62 = a\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-034",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 19,
+      "queried_slot_1indexed": 8,
+      "code_book": [
+        [
+          "A",
+          19
+        ],
+        [
+          "B",
+          53
+        ],
+        [
+          "C",
+          160
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_19\n  B = key_53\n  C = key_160\n\nKey-value list:\nkey_57 = y\nkey_14 = p\nkey_28 = p\nkey_114 = m\nkey_22 = j\nkey_160 = c\nkey_70 = i\nkey_84 = v\nkey_24 = v\nkey_53 = u\nkey_108 = p\nkey_125 = x\nkey_30 = c\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-035",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 35,
+      "queried_slot_1indexed": 10,
+      "code_book": [
+        [
+          "A",
+          35
+        ],
+        [
+          "B",
+          103
+        ],
+        [
+          "C",
+          115
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_35\n  B = key_103\n  C = key_115\n\nKey-value list:\nkey_143 = k\nkey_74 = d\nkey_115 = y\nkey_151 = x\nkey_188 = t\nkey_103 = l\nkey_36 = w\nkey_33 = u\nkey_104 = u\nkey_126 = w\nkey_93 = x\nkey_57 = s\nkey_148 = r\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-036",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 184,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          184
+        ],
+        [
+          "B",
+          176
+        ],
+        [
+          "C",
+          135
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_184\n  B = key_176\n  C = key_135\n\nKey-value list:\nkey_182 = t\nkey_166 = k\nkey_96 = e\nkey_153 = l\nkey_195 = p\nkey_176 = j\nkey_164 = k\nkey_151 = q\nkey_145 = f\nkey_188 = o\nkey_169 = c\nkey_35 = d\nkey_135 = q\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-037",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 192,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          192
+        ],
+        [
+          "B",
+          137
+        ],
+        [
+          "C",
+          193
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_192\n  B = key_137\n  C = key_193\n\nKey-value list:\nkey_197 = r\nkey_193 = m\nkey_137 = m\nkey_63 = k\nkey_194 = y\nkey_154 = n\nkey_14 = f\nkey_146 = u\nkey_178 = c\nkey_111 = v\nkey_32 = r\nkey_144 = r\nkey_119 = v\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-038",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 11,
+      "queried_slot_1indexed": 11,
+      "code_book": [
+        [
+          "A",
+          11
+        ],
+        [
+          "B",
+          184
+        ],
+        [
+          "C",
+          65
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_11\n  B = key_184\n  C = key_65\n\nKey-value list:\nkey_127 = j\nkey_158 = e\nkey_17 = e\nkey_54 = q\nkey_184 = z\nkey_196 = b\nkey_16 = v\nkey_155 = r\nkey_23 = c\nkey_65 = y\nkey_95 = a\nkey_15 = l\nkey_175 = r\n\nQuery: Return the value for the key assigned to code A."
+    },
+    {
+      "record_id": "CAL-Q-DEF-039",
+      "stratum": "answerable",
+      "list_len": 13,
+      "queried_key": 26,
+      "queried_slot_1indexed": 9,
+      "code_book": [
+        [
+          "A",
+          26
+        ],
+        [
+          "B",
+          29
+        ],
+        [
+          "C",
+          162
+        ]
+      ],
+      "query_code": "A",
+      "gold_value": null,
+      "defect": "queried_key_absent_from_pairs",
+      "prompt_user_text": "Use this code book:\n  A = key_26\n  B = key_29\n  C = key_162\n\nKey-value list:\nkey_101 = h\nkey_92 = w\nkey_150 = b\nkey_18 = j\nkey_169 = g\nkey_75 = t\nkey_162 = n\nkey_54 = w\nkey_45 = z\nkey_30 = s\nkey_35 = u\nkey_24 = h\nkey_29 = t\n\nQuery: Return the value for the key assigned to code A."
+    }
+  ]
+}

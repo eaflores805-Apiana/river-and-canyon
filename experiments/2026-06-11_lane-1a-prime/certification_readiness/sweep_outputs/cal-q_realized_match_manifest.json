@@ -1,0 +1,41 @@
+{
+  "match_manifest": "realized",
+  "candidate_id": "CAL-Q",
+  "spec_version": "v0.3",
+  "spec_sha256": "839249000bb1cb34d423534009d24682339e56c51ce393be45f5c03526a31a13",
+  "query_form": "in_prompt_code_book",
+  "held_constant": [
+    "list_len",
+    "queried_slots",
+    "near_miss_count",
+    "vocabulary",
+    "item_count",
+    "scoring_harness",
+    "queried_key_per_item",
+    "code_book_mapping",
+    "query_code"
+  ],
+  "permitted_difference": "P2 defect only: queried_key (= code_A's mapped key) absent from list",
+  "n_items_each": 40,
+  "list_len": 13,
+  "queried_slots": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "near_miss_count": 2,
+  "construction_seed": 20260613006,
+  "single_difference_invariant_check": "PASS",
+  "single_difference_check_details": {
+    "list_len_match": true,
+    "n_items_match": true,
+    "queried_slots_match": true,
+    "near_miss_match": true,
+    "query_form_match": true,
+    "per_item_invariant": true,
+    "same_key_identity_both_members": true,
+    "defect_field_on_defective": true,
+    "all_clean_have_gold": true
+  }
+}
