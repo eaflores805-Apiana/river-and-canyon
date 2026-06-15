@@ -15,6 +15,10 @@ CS, TL) have byte-exact access via clean fetch. They are **not** definition-of-r
 | `PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.1.md` | `9e90fbc522a9cb419688f1cd56d802ad5c304b366af4d29902d16a7b8d599c3b` | superseded by v0.2 (C5 HOLD; depth-selection confound identified) |
 | `PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.2.md` | `0e728d829e30178de4af04b95803ed19dabae007bbd1053efca03bb9d8ec11bb` | **current candidate design under review (C5 re-review)** |
 | `CONSTRUCT-DEF-v0.2-OPEN-ITEMS-LEDGER-v0.1.md` | `b2a5ec531f4377950023871596447caccc5cbd41c9a22eede93a9306058b011a` | review-tracking object (16 open items, 5 reviews consolidated into v0.2) |
+| `TARGET-CONSTRUCT-DEFINITION-v0.3.md` | `eb72abb2ae1ffbd2c7ab1490b1de704364b8fa1bb8433c8301923244b95c6366` | superseded by v0.4 (E7 R4b diagnostic split; CS verified) |
+| `TARGET-CONSTRUCT-DEFINITION-v0.4.md` | `4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29` | **current construct definition under review** (promotes dominance threshold 0.25 from scorer code into the definition; adds real-run fixture-mode guard) |
+| `PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.3.md` | `38e054601eda2ab6034ae3445ffb2b2fe2ca36f75fbcb15e3ff8e90ab8d37cae` | **current candidate design under review** (carries C5 E7/E8: depth-competitor diagnostic routed pre-lock; relation-balancing as binding admissibility property) |
+| `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.1.md` | `eb3dee053396e3db5a87c545cfb6a1e73465a1204622cee839b31c0431ddb37b` | **preregistration shell v0.1** — C5 returned HOLD–ARTIFACT ACCESS on this version (correctly refused to clear an unread lock-before-look artifact); retained for trail; superseded by v0.2 once Senior produces |
 
 ## Provenance
 
