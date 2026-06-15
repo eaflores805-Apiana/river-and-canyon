@@ -1,0 +1,31 @@
+{
+  "_status":           "SYNTHETIC FIXTURE — NOT A REAL RUN",
+  "_purpose":          "INT8 partner to the synthetic FP16 fixture. Differs from FP16 on 3 items (syn_03 hop1, syn_05 composite, syn_07 hop2) so the byte-identity rule returns DIVERGENT.",
+  "timestamp_utc":     "SYNTHETIC-NOT-A-REAL-RUN",
+  "results": [
+    {"item_id": "syn_01", "query_type": "hop1",      "expected": "B1", "raw_output": "ANSWER: B1"},
+    {"item_id": "syn_01", "query_type": "hop2",      "expected": "C1", "raw_output": "ANSWER: C1"},
+    {"item_id": "syn_01", "query_type": "composite", "expected": "C1", "raw_output": "ANSWER: C1"},
+    {"item_id": "syn_02", "query_type": "hop1",      "expected": "B2", "raw_output": "ANSWER: B2"},
+    {"item_id": "syn_02", "query_type": "hop2",      "expected": "C2", "raw_output": "ANSWER: C2"},
+    {"item_id": "syn_02", "query_type": "composite", "expected": "C2", "raw_output": "ANSWER: C2"},
+    {"item_id": "syn_03", "query_type": "hop1",      "expected": "B3", "raw_output": "ANSWER: WRONG_B3"},
+    {"item_id": "syn_03", "query_type": "hop2",      "expected": "C3", "raw_output": "ANSWER: C3"},
+    {"item_id": "syn_03", "query_type": "composite", "expected": "C3", "raw_output": "ANSWER: NONE"},
+    {"item_id": "syn_04", "query_type": "hop1",      "expected": "B4", "raw_output": "ANSWER: B4"},
+    {"item_id": "syn_04", "query_type": "hop2",      "expected": "C4", "raw_output": "ANSWER: C4"},
+    {"item_id": "syn_04", "query_type": "composite", "expected": "C4", "raw_output": "ANSWER: C4"},
+    {"item_id": "syn_05", "query_type": "hop1",      "expected": "B5", "raw_output": "ANSWER: B5"},
+    {"item_id": "syn_05", "query_type": "hop2",      "expected": "C5", "raw_output": "ANSWER: C5"},
+    {"item_id": "syn_05", "query_type": "composite", "expected": "C5", "raw_output": "ANSWER: WRONG_C5"},
+    {"item_id": "syn_06", "query_type": "hop1",      "expected": "B6", "raw_output": "ANSWER: B6"},
+    {"item_id": "syn_06", "query_type": "hop2",      "expected": "C6", "raw_output": "ANSWER: C6"},
+    {"item_id": "syn_06", "query_type": "composite", "expected": "C6", "raw_output": "ANSWER: WRONG"},
+    {"item_id": "syn_07", "query_type": "hop1",      "expected": "B7", "raw_output": "ANSWER: B7"},
+    {"item_id": "syn_07", "query_type": "hop2",      "expected": "C7", "raw_output": "ANSWER: WRONG_C7"},
+    {"item_id": "syn_07", "query_type": "composite", "expected": "C7", "raw_output": "ANSWER: C7"},
+    {"item_id": "syn_08", "query_type": "hop1",      "expected": "B8", "raw_output": "ANSWER: WRONG_HOP1"},
+    {"item_id": "syn_08", "query_type": "hop2",      "expected": "C8", "raw_output": "ANSWER: C8"},
+    {"item_id": "syn_08", "query_type": "composite", "expected": "C8", "raw_output": "ANSWER: C8"}
+  ]
+}

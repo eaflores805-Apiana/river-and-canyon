@@ -1,0 +1,21 @@
+{
+  "_purpose": "Pre-declared EXPECTED output of g6_evaluator_v0_2.py when evaluating experiments/2026-06-15_minimal-fp16-int8-twohop-l1/. Locked before the evaluator runs. If the evaluator's emitted disposition matches these verdict fields, the rules are correctly implemented. If they DIVERGE, the divergence is itself a finding (not a blocker).",
+  "_locked_for_run": "MINIMAL-FP16-INT8-TWOHOP-L1-v0.1 @ commit 9571eee",
+  "_known_basis": "v0.1 DISPOSITION.md, Senior post-run breakdown v0.2, and Terminal-Attraction finding report v0.4. These artifacts already established the disposition; this fixture is what we EXPECT a correct general evaluator to re-derive from the raw artifacts.",
+
+  "retention_compression_verdict": "INCONCLUSIVE",
+  "construction_task_verdict":     "NEGATIVE_TERMINAL_ATTRACTION",
+  "compression_observation":       "SAME_ERROR_IDENTITY",
+
+  "_expected_baseline_gate_verdict":   "FAIL",
+  "_expected_byte_identity":           "IDENTICAL",
+  "_expected_byte_identity_match_rate": 1.0,
+  "_expected_total_generations":       24,
+
+  "_rationale": [
+    "FP16 hop1 = 0/8 → rule A (component competence) fails",
+    "i06 composite-correct emits same token (YHIJZ) for hop1+hop2+composite → rule B (chain-following) fails",
+    "Both rules fail → baseline_gate.verdict = FAIL → retention = INCONCLUSIVE, construction = NEGATIVE_TERMINAL_ATTRACTION",
+    "FP16↔INT8 byte-identical on all 24/24 generations + baseline FAIL → compression = SAME_ERROR_IDENTITY (INT8 preserved the failing baseline)"
+  ]
+}

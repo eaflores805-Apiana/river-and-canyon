@@ -1,0 +1,20 @@
+{
+  "_purpose": "Pre-declared EXPECTED output of g6_evaluator_v0_2.py when evaluating this contrast fixture. Locked before the evaluator runs against the fixture. The fixture was hand-crafted to drive every verdict field to a DIFFERENT value than the real v0.1 run, proving the evaluator is not a constant function.",
+
+  "retention_compression_verdict": "NO_DROP",
+  "construction_task_verdict":     "OK",
+  "compression_observation":       "DIVERGENCE",
+
+  "_expected_baseline_gate_verdict":   "PASS",
+  "_expected_byte_identity":           "DIVERGENT",
+  "_expected_byte_identity_differences": 3,
+  "_expected_total_generations":       24,
+
+  "_contrast_with_real_run": {
+    "real_run_retention":         "INCONCLUSIVE       (contrast: NO_DROP)",
+    "real_run_construction":      "NEGATIVE_TERMINAL_ATTRACTION  (contrast: OK)",
+    "real_run_compression":       "SAME_ERROR_IDENTITY (contrast: DIVERGENCE)",
+    "real_run_baseline_gate":     "FAIL               (contrast: PASS)",
+    "real_run_byte_identity":     "IDENTICAL          (contrast: DIVERGENT)"
+  }
+}
