@@ -16,11 +16,11 @@ CS, TL) have byte-exact access via clean fetch. They are **not** definition-of-r
 | `PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.2.md` | `0e728d829e30178de4af04b95803ed19dabae007bbd1053efca03bb9d8ec11bb` | **current candidate design under review (C5 re-review)** |
 | `CONSTRUCT-DEF-v0.2-OPEN-ITEMS-LEDGER-v0.1.md` | `b2a5ec531f4377950023871596447caccc5cbd41c9a22eede93a9306058b011a` | review-tracking object (16 open items, 5 reviews consolidated into v0.2) |
 | `TARGET-CONSTRUCT-DEFINITION-v0.3.md` | `eb72abb2ae1ffbd2c7ab1490b1de704364b8fa1bb8433c8301923244b95c6366` | superseded by v0.4 (E7 R4b diagnostic split; CS verified) |
-| `TARGET-CONSTRUCT-DEFINITION-v0.4.md` | `4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29` | **current construct definition under review** (promotes dominance threshold 0.25 from scorer code into the definition; adds real-run fixture-mode guard) |
+| `TARGET-CONSTRUCT-DEFINITION-v0.4.md` | `4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29` | **ELEVATED to definition-of-record** at `path-a/of-record/TARGET-CONSTRUCT-DEFINITION-v0.4.md` (TL ACTION 2026-06-15 + Manager approval). In-review copy retained byte-identical as version trail. |
 | `PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.3.md` | `38e054601eda2ab6034ae3445ffb2b2fe2ca36f75fbcb15e3ff8e90ab8d37cae` | **current candidate design under review** (carries C5 E7/E8: depth-competitor diagnostic routed pre-lock; relation-balancing as binding admissibility property) |
 | `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.1.md` | `eb3dee053396e3db5a87c545cfb6a1e73465a1204622cee839b31c0431ddb37b` | superseded by v0.2 (predecessor only; retained for trail). C5 returned HOLD–ARTIFACT ACCESS on this version (correctly refused to clear an unread lock-before-look artifact); v0.2 folds in Senior's required edits + CS feasibility edits. |
 | `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.2.md` | `d9a4cf4a830cf63276e49d69ed43bf7a6d9517dc799c32aa970e9f1e32f03dcb` | superseded by v0.3 (predecessor; retained for trail) |
-| `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md` | `d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c` | **current preregistration shell** (TL-review-passed for byte-exact filing; NOT locked of-record; pending v0.4 of-record elevation per shell §16) |
+| `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md` | `d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c` | **LOCKED of-record** at `path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md` (TL ACTION 2026-06-15 + Manager approval). In-review copy retained byte-identical as version trail. Locking does NOT authorize a run — Manager by-name authorization still required. |
 
 ## Provenance
 

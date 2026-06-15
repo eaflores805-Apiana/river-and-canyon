@@ -60,17 +60,20 @@ DOMINANT_RATE_THRESHOLD = 0.25
 
 DOMINANT_RATE_THRESHOLD_PROVENANCE = {
     "value":            DOMINANT_RATE_THRESHOLD,
-    "source":           "scorer-code constant in path-a/inspector/constants.py",
-    "status":           "FLAGGED FOR PROMOTION",
-    "promotion_needed_to": [
-        "TARGET-CONSTRUCT-DEFINITION (a future v0.4 §11 entry, OR)",
-        "the run's pre-registration (R11 failure-signature dominance threshold)",
-    ],
-    "must_be_resolved_before": "any real-run pre-registration referencing this software",
+    "source":           "TARGET-CONSTRUCT-DEFINITION-v0.4 §11 + checklist #7 (of-record)",
+    "status":           "PROMOTED",
+    "promoted_to":      "TARGET-CONSTRUCT-DEFINITION-v0.4",
+    "promoted_to_sha256": "4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29",
+    "promoted_to_path": "path-a/of-record/TARGET-CONSTRUCT-DEFINITION-v0.4.md",
+    "promotion_authority": "TL ACTION 2026-06-15 + Manager approval (Elevate v0.4 and Lock Prereg v0.3)",
+    "definition_text":  "A failure category is 'dominant' when its rate is >= 0.25 over the pre-declared analysis unit (definition v0.4 §11).",
     "rationale": (
-        "Per construct-definition v0.3 §11, failure signatures are pre-declared; "
-        "what numerically counts as 'dominant' should be declared with them, not "
-        "buried in scorer code. Routed to Senior + Manager."
+        "Closes the v0.3-prior scorer-code-only provenance gap CS raised in the "
+        "value-lock-patch review. The 0.25 threshold is now declared with the "
+        "failure signatures it governs (definition R11), qualified by a "
+        "pre-declared analysis unit (R11), not buried in scorer code. The "
+        "scorer code still imports this constant from here for shared use; the "
+        "code is the implementation, the definition is the source of truth."
     ),
 }
 
