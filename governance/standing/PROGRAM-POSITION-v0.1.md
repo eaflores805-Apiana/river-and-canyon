@@ -34,6 +34,14 @@ D4 ROUTE:   CLOSED — PIVOT (valuable negative result). Both lever classes trie
 4. C6 FIVE-QUESTIONS            — parked pending a source pointer; no 5-question set located.
 ```
 
+### Recent done (lag-reduction; added post-snapshot pending Senior refresh)
+
+```text
+[done]  G6 retrospective audit (internal consistency on design-target cases; not general validity)
+```
+
+*This subsection is a CS lag-reduction stub authorized by the TL coupled-follow-on on PROGRAM-CONTROL-LEDGER-v0.3 (route §8). It records a milestone without re-anchoring the doc; the full position refresh remains Senior-owned.*
+
 ---
 
 ## The main map (Program Map v2.0) — which node we're at
