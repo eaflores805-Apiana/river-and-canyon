@@ -1,6 +1,6 @@
 # Program Path Map
 
-**Last updated:** 2026-06-14 (rev 2 — Senior content revision; CS verifies + files. See change-note at foot.)
+**Last updated:** 2026-06-15 (rev 3 — CS additions after first authorized model runs + Terminal Attraction finding-track filing. See change-note at foot.)
 **Re-sync rule:** if this and the record disagree, the record wins. Re-sync when a stage closes or a new branch opens. The `git log` is the authoritative timestamp for each commit.
 
 A living overview of where the program has been, where it is, and where it ventured off. Coarse-grained: main stages, not every commit. The trunk reads top → bottom in time; branches show where the work split (closed routes, parked tracks, new directions).
@@ -85,11 +85,33 @@ PROGRAM TRUNK
        │   tier-1-instrument/
        ├── Eval-Validity Gate Tool Spec v0.1   (CS PASS)
        └── G6 Standing Rejection-Audit Spec v0.1  (CS PASS)
-              │
-              ├── G6 Entry Framing v0.1 filed  (CS PASS)        ◄── YOU ARE HERE
-              │
-              └── [next · model-free] Retrospective audit of standing refusals
-                  (D4 saturation, CAL-Q) against G6 spec's validation targets
+              │   tier-1-instrument/modules/g6-standing-rejection-audit/
+              ├── G6 Entry Framing v0.1 filed              (CS PASS)
+              ├── G6 Retrospective Audit Framing v0.1     (CS PASS)
+              ├── G6 Retrospective Audit RESULT v0.1      (CS PASS; design-target cases only; consistency, not validation)
+              ├── G6 Internal Consistency Closeout v0.1   (Manager Option A; first exercise CLOSED)
+              ├── G6 Option B Readiness Note v0.1         (definition + criteria; Option B not opened)
+              ├── G6 Non-Design-Target Candidate Inventory v0.1   (Option C; record exhausted)
+              ├── G6 HOLD Review Superseded Validation Runs v0.1+v0.2 (HOLD bucket → EXCLUDE)
+              ├── G6 Option B Case 1 Missing-Channel Design v0.1  (Manager opened Option B design-only)
+              ├── case-1-missing-channel/ — constructed Case 1 bundle (CS-built; channel-absent record)
+              │     └── G6 Case 1 Manual Audit Result v0.1  (by-hand application of G6 rules)
+              └── evaluator/                              (FIRST G6 SOFTWARE — minimal Case 1 evaluator; returned AUDIT-CIRCULARITY)
+
+[done · 2026-06-14/15]  FIRST AUTHORIZED MODEL RUNS — instrument-side, NOT certification
+│   experiments/2026-06-15_minimal-fp16-int8-twohop-l1/  (FP16↔INT8 byte-identical
+│     on 24/24; VERDICT INCONCLUSIVE per pre-registered FP16-baseline gate)
+│   experiments/2026-06-15_terminal-attraction-bounds-sweep/  (3×2 factorial, n=12/cell;
+│     §8 reading POSITION_EFFECT; dominant signal REVERSE-K — attraction falls with clutter)
+│
+├── ↳ Finding track (parked) — Terminal Attraction
+│      │   finding-tracks/terminal-attraction/
+│      └── Senior-authored finding report v0.4 + 2 figures + PDF
+│             (C5 PASS w/ I1+G1/G2 ; C6 prior-art PASS scoped diagnostic)        ◄── YOU ARE HERE
+│
+[next · per Senior post-run breakdown v0.2 + finding report §8 recommendation]
+    Bank the terminal-attraction finding; keep G6 the next build of record.
+    Two model runs done; instrument-first stance preserved; no reorder against G6.
 ```
 
 ## Round-trips (ventured and came back — recorded for honesty)
@@ -154,3 +176,10 @@ Repo-level docs ................. README · STATUS · REVIEW · _meta/INDEX
 *— NOTED the NORTH-STAR v1.1 → v1.2 method-as-basis reframe (a conceptual shift, not just a version bump) and that Paper A's positioning section went through external peer review (v0.7).*
 *— ADDED the tier0-run delete (06-05, 75a2c27) → restore (06-08, 49aa222) round-trip + the 06-14 tokenizer-untrack revert (18c357d) to Round-trips.*
 *— Ledger pointer LEFT at v0.1 (v0.2 not yet on origin; bump when filed). Records state only; reopens nothing; unseals nothing; changes no scientific meaning.*
+
+*Change-note (rev 3, CS additions, 2026-06-15):*
+*— EXPANDED the G6 module home (under Tier 1) to enumerate the full Case 1 / Option B workflow: entry framing, audit framing, audit RESULT, internal-consistency closeout, Option B readiness note, non-design-target candidate inventory, HOLD review (v0.1+v0.2), Case 1 design, the constructed `case-1-missing-channel/` bundle + G6 Case 1 Manual Audit Result, and the FIRST G6 SOFTWARE (`evaluator/`, returned AUDIT-CIRCULARITY).*
+*— ADDED the two FIRST AUTHORIZED MODEL RUNS as a new trunk stage (2026-06-14/15): the minimal FP16↔INT8 run (byte-identical 24/24; INCONCLUSIVE per pre-registered FP16-baseline gate) and the TERMINAL-ATTRACTION-BOUNDS-SWEEP-v0.1 (3×2 factorial, 216 generations, primary §8 reading POSITION_EFFECT, dominant signal REVERSE-K). These are the first model-facing events of the program; classified instrument-side, NOT certification / NOT Lane 4.*
+*— ADDED the Terminal Attraction finding track (`finding-tracks/terminal-attraction/`) as a branch — Senior-authored finding report v0.4 + 2 figures + PDF, parked beside the CAL-Q finding track. C5 PASS w/ I1+G1/G2 carried; C6 prior-art PASS scoped diagnostic.*
+*— UPDATED "YOU ARE HERE" to the finding-track branch; the next build of record remains G6 (per finding-report §8 Senior recommendation: bank the finding; do not reorder against G6).*
+*— Records state only; reopens nothing; unseals nothing; authorizes nothing; changes no scientific meaning. Sealed bytes 4-of-4 byte-identical at filing time. PROGRAM-POSITION-v0.1 / PROGRAM-MAP-v2.0 / PROGRAM-CONTROL-LEDGER-v0.3 NOT updated this turn (Senior/Manager-maintained; awaiting Senior draft for any control-ledger v0.4 reflecting the two named runs).*
