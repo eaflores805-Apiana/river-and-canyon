@@ -1,0 +1,66 @@
+{
+  "inspector_version": "0.1",
+  "construction_id": "path_a_fixture_03_depth_competitor_v0.1",
+  "disposition": "PASS",
+  "checks": [
+    {
+      "check": "C1_C_star_not_terminal",
+      "ok": true
+    },
+    {
+      "check": "C2_pairwise_distinct",
+      "ok": true
+    },
+    {
+      "check": "C3_categories_separable",
+      "ok": true
+    },
+    {
+      "check": "C4_r1_edge_unique",
+      "ok": true
+    },
+    {
+      "check": "C5_competitor_count",
+      "ok": true
+    },
+    {
+      "check": "C6_relation_balance",
+      "ok": true
+    },
+    {
+      "check": "C7_direct_query_filler",
+      "ok": true
+    },
+    {
+      "check": "C8_four_contexts",
+      "ok": true
+    }
+  ],
+  "n_checks": 8,
+  "n_passes": 8,
+  "n_failures": 0,
+  "manager_approved_values": {
+    "manager_approved": {
+      "k": 5,
+      "D": 5,
+      "p": 5,
+      "m_min": 10,
+      "n": 96,
+      "margin": 0.25
+    },
+    "derived": {
+      "F": 0.2,
+      "success_threshold": 0.45,
+      "F_formula": "max(1/p, 1/m, 1/D)",
+      "threshold_formula": "F + margin"
+    },
+    "policy_notes": {
+      "m_floor": "m < 5 not allowed; m > 10 acceptable (log actual; floor unchanged unless m < 5)",
+      "authority": "TL ACTION 2026-06-15 + Manager approval"
+    }
+  },
+  "timestamp_utc": "2026-06-15T19:11:01Z",
+  "input_spec_path": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/path_a/03_depth_competitor/construction_spec.json",
+  "_expected_disposition": null,
+  "_expected_match": false
+}

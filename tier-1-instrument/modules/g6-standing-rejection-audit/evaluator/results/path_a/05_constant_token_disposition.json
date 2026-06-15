@@ -1,0 +1,127 @@
+{
+  "evaluator_version": "0.3",
+  "run_dir": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/path_a/05_constant_token",
+  "status": "EVALUATED",
+  "construction_id": "path_a_fixture_05_constant_token_v0.1",
+  "n_generations": 32,
+  "n_items": 8,
+  "per_query_category_counts": {
+    "composite": {
+      "R1_correct_composition": 8
+    },
+    "hop1": {
+      "R1_correct_composition": 8
+    },
+    "hop2": {
+      "R1_correct_composition": 8
+    },
+    "direct_query": {
+      "R1_correct_composition": 8
+    }
+  },
+  "R6_invalidations": {
+    "by_item": {
+      "item_01": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ],
+      "item_02": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ],
+      "item_03": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ],
+      "item_04": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ],
+      "item_05": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ],
+      "item_06": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ],
+      "item_07": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ],
+      "item_08": [
+        "R6b_hop1_control_failed",
+        "R6c_direct_query_shortcut",
+        "R6e_cross_query_constant_token"
+      ]
+    },
+    "n_items_invalidated": 8
+  },
+  "heuristic_floor": {
+    "F": 0.2,
+    "components": {
+      "F_terminal_grab": 0.0,
+      "F_direct_query": 0.0,
+      "F_position_1_p": 0.2,
+      "F_token_pick_1_m": 0.1,
+      "F_depth_1_D": 0.2
+    },
+    "margin": 0.25,
+    "threshold": 0.45,
+    "params_used": {
+      "p": 5,
+      "m": 10,
+      "D": 5,
+      "margin": 0.25
+    }
+  },
+  "outcome": {
+    "outcome": "FAIL",
+    "reason": "failure signature(s) dominant: ['cross_query_constant_token_prevalent']",
+    "R1_rate": 0.0,
+    "dominant_signatures": [
+      "cross_query_constant_token_prevalent"
+    ],
+    "category_rates": {
+      "R1_correct_composition": 1.0
+    }
+  },
+  "computable_invalidators": [
+    "R6a",
+    "R6b",
+    "R6c (empirical)",
+    "R6d",
+    "R6e",
+    "R6f"
+  ],
+  "judgment_flagged": [
+    "R6cat ambiguity adjudication (e.g., near-miss / typo'd C*)"
+  ],
+  "forbidden_interpretations": [
+    "Claim C progress",
+    "Paper B activation",
+    "general compression robustness",
+    "certified baseline (the evaluator emits CERTIFY only when the run+gate clear it; it is not a certification of-record)",
+    "task family viability",
+    "model passed / capability established / not shortcut-driven",
+    "product/funder-facing result",
+    "mechanism / architecture / training-distribution claim",
+    "depth-2 heuristic approximates traversal (E6 binding forbidden justification)"
+  ],
+  "rule_sources": [
+    "TARGET-CONSTRUCT-DEFINITION-v0.3 (sha eb72abb2\u2026) \u00a7\u00a72, 3, 8, 11",
+    "PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.3 (sha 38e05460\u2026) \u00a7\u00a72, 4, 7, 8",
+    "G6 evaluator v0.2 (sha edfb6fec\u2026) \u2014 Rule B (R6e) carried forward"
+  ],
+  "timestamp_utc": "2026-06-15T19:11:01Z",
+  "_expected_outcome": "FAIL",
+  "_emitted_outcome": "FAIL",
+  "_expected_match": true
+}
