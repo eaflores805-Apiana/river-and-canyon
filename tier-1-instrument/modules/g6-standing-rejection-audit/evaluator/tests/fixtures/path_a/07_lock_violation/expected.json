@@ -1,0 +1,8 @@
+{
+  "_purpose": "Spec is in real-run mode (no `_fixture_mode` flag) but margin = 0.10 \u2260 Manager-locked 0.25. Inspector C9 fires \u2192 REJECT. If the evaluator is also run against this spec (with any minimal synthetic raw_outputs), compute_floor returns lock_violation = true and the outcome is LOCK_VIOLATION before any composite-correct count is interpreted.",
+  "disposition": "REJECT",
+  "outcome": "LOCK_VIOLATION",
+  "_expected_breached_checks": [
+    "C9_manager_lock_binding"
+  ]
+}

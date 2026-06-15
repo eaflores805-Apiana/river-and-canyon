@@ -1,4 +1,5 @@
 {
+  "_fixture_mode": true,
   "construction_id": "path_a_fixture_05_constant_token_v0.1",
   "params": {
     "k": 5,

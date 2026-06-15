@@ -34,10 +34,16 @@
     {
       "check": "C8_four_contexts",
       "ok": true
+    },
+    {
+      "check": "C9_manager_lock_binding",
+      "ok": true,
+      "mode": "fixture",
+      "note": "spec marked `_fixture_mode: true` \u2014 Manager lock not enforced; construction excluded from real-run admissibility."
     }
   ],
-  "n_checks": 8,
-  "n_passes": 8,
+  "n_checks": 9,
+  "n_passes": 9,
   "n_failures": 0,
   "manager_approved_values": {
     "manager_approved": {
@@ -54,12 +60,30 @@
       "F_formula": "max(1/p, 1/m, 1/D)",
       "threshold_formula": "F + margin"
     },
+    "scorer_constants": {
+      "DOMINANT_RATE_THRESHOLD": 0.25
+    },
     "policy_notes": {
       "m_floor": "m < 5 not allowed; m > 10 acceptable (log actual; floor unchanged unless m < 5)",
-      "authority": "TL ACTION 2026-06-15 + Manager approval"
+      "authority": "TL ACTION 2026-06-15 + Manager approval + value-lock patch ACTION",
+      "fixture_mode": "spec.`_fixture_mode: true` excludes a construction from real-run admissibility; allows param variation for testing",
+      "real_run_mode": "real-run specs must declare p, D, m, margin and match the Manager lock; missing or deviating params -> fail-closed REJECT (no silent fallback)"
+    },
+    "provenance_flags": {
+      "DOMINANT_RATE_THRESHOLD": {
+        "value": 0.25,
+        "source": "scorer-code constant in path-a/inspector/constants.py",
+        "status": "FLAGGED FOR PROMOTION",
+        "promotion_needed_to": [
+          "TARGET-CONSTRUCT-DEFINITION (a future v0.4 \u00a711 entry, OR)",
+          "the run's pre-registration (R11 failure-signature dominance threshold)"
+        ],
+        "must_be_resolved_before": "any real-run pre-registration referencing this software",
+        "rationale": "Per construct-definition v0.3 \u00a711, failure signatures are pre-declared; what numerically counts as 'dominant' should be declared with them, not buried in scorer code. Routed to Senior + Manager."
+      }
     }
   },
-  "timestamp_utc": "2026-06-15T19:11:01Z",
+  "timestamp_utc": "2026-06-15T19:48:17Z",
   "input_spec_path": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/path_a/03_depth_competitor/construction_spec.json",
   "_expected_disposition": null,
   "_expected_match": false

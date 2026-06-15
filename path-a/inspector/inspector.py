@@ -161,19 +161,51 @@ def check_C4_r1_edge_unique(spec: dict) -> dict:
 
 
 def check_C5_competitor_count(spec: dict, expected_D: int = constants.D_DEPTH_COMPETITORS) -> dict:
-    """C5: Same-depth competitors must be present at the configured D count."""
+    """C5: Same-depth competitors must be present at the configured D count.
+
+    In real-run mode, the Manager-lock binding (C9) enforces D = expected_D.
+    In fixture mode, this check still verifies that the declared D matches the
+    actual competitor list length (a structural consistency check, separate
+    from the Manager-lock binding)."""
     competitors = spec.get("depth_2_competitors", [])
     declared_D = spec.get("params", {}).get("D", expected_D)
     if not competitors:
         return _err("C5_competitor_count",
                     "depth_2_competitors absent or empty; the depth-selection control is missing.")
-    if declared_D != expected_D:
-        return _err("C5_competitor_count",
-                    f"declared D ({declared_D}) != Manager-approved D ({expected_D}); explicit config required to override.")
     if len(competitors) != declared_D:
         return _err("C5_competitor_count",
                     f"depth_2_competitors length ({len(competitors)}) != declared D ({declared_D}).")
+    # In real-run mode the Manager lock additionally enforces declared_D == expected_D;
+    # see C9_manager_lock_binding. In fixture mode, declared_D may deviate.
     return _ok("C5_competitor_count")
+
+
+def check_C9_manager_lock_binding(spec: dict) -> dict:
+    """C9: Bind threshold-determining values to the Manager lock.
+
+    Real-run mode (default; spec lacks `_fixture_mode: true`):
+      - p, D, m, margin must all be present and match the Manager lock
+      - Missing or deviating params → fail-closed REJECT (no silent fallback)
+
+    Fixture mode (`_fixture_mode: true` set on spec):
+      - Lock is not enforced; fixtures may vary params for testing
+      - The flag explicitly excludes the construction from real-run admissibility
+    """
+    validation = constants.validate_manager_lock(spec)
+    if validation["ok"]:
+        if validation["mode"] == "fixture":
+            return {"check": "C9_manager_lock_binding", "ok": True,
+                    "mode": "fixture",
+                    "note": "spec marked `_fixture_mode: true` — Manager lock not enforced; construction excluded from real-run admissibility."}
+        return {"check": "C9_manager_lock_binding", "ok": True, "mode": "real-run"}
+    parts = []
+    if validation["missing"]:
+        parts.append(f"missing params: {validation['missing']}")
+    if validation["deviations"]:
+        parts.append(f"deviations from Manager lock: {validation['deviations']}")
+    return _err("C9_manager_lock_binding",
+                f"real-run Manager-lock binding failed -- {'; '.join(parts)}. Set `_fixture_mode: true` to exclude from real-run admissibility.",
+                {"validation": validation})
 
 
 def check_C6_relation_balance(spec: dict) -> dict:
@@ -272,6 +304,7 @@ ALL_CHECKS = [
     check_C6_relation_balance,
     check_C7_direct_query_filler,
     check_C8_four_contexts,
+    check_C9_manager_lock_binding,
 ]
 
 

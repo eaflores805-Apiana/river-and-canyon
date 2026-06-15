@@ -1,23 +1,14 @@
 {
   "evaluator_version": "0.3",
-  "run_dir": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/path_a/01_clean_certify",
+  "run_dir": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/path_a/07_lock_violation",
   "status": "EVALUATED",
-  "construction_id": "path_a_fixture_01_clean_certify_v0.1",
-  "fixture_mode": true,
-  "n_generations": 32,
-  "n_items": 8,
+  "construction_id": "path_a_fixture_07_lock_violation_v0.1",
+  "fixture_mode": false,
+  "n_generations": 1,
+  "n_items": 1,
   "per_query_category_counts": {
     "composite": {
-      "R1_correct_composition": 8
-    },
-    "hop1": {
-      "R3_stopped_short": 8
-    },
-    "hop2": {
-      "R1_correct_composition": 8
-    },
-    "direct_query": {
-      "R5_abstain": 8
+      "R6cat_other": 1
     }
   },
   "R6_invalidations": {
@@ -25,36 +16,37 @@
     "n_items_invalidated": 0
   },
   "heuristic_floor": {
-    "F": 0.2,
-    "components": {
-      "F_terminal_grab": 0.0,
-      "F_direct_query": 0.0,
-      "F_position_1_p": 0.2,
-      "F_token_pick_1_m": 0.1,
-      "F_depth_1_D": 0.2
-    },
-    "margin": 0.25,
-    "threshold": 0.45,
+    "F": null,
+    "components": null,
+    "margin": null,
+    "threshold": null,
     "params_used": {
+      "k": 5,
+      "D": 5,
       "p": 5,
       "m": 10,
-      "D": 5,
-      "margin": 0.25
+      "margin": 0.1
     },
     "manager_lock_validation": {
-      "ok": true,
-      "mode": "fixture",
-      "deviations": [],
+      "ok": false,
+      "mode": "real-run",
+      "deviations": [
+        "params.margin = 0.1 != Manager-locked MARGIN = 0.25"
+      ],
       "missing": []
     },
-    "lock_violation": false
+    "lock_violation": true
   },
   "outcome": {
-    "outcome": "CERTIFY",
-    "reason": "R1 rate 1.000 \u2265 threshold 0.450 (= F + margin); no failure signature dominant.",
-    "R1_rate": 1.0,
-    "category_rates": {
-      "R1_correct_composition": 1.0
+    "outcome": "LOCK_VIOLATION",
+    "reason": "real-run spec deviates from or is missing Manager-locked params (p, D, m, margin); no silent fallback. Set `_fixture_mode: true` on the spec to exclude from real-run admissibility and run as a fixture.",
+    "validation": {
+      "ok": false,
+      "mode": "real-run",
+      "deviations": [
+        "params.margin = 0.1 != Manager-locked MARGIN = 0.25"
+      ],
+      "missing": []
     }
   },
   "computable_invalidators": [
@@ -123,8 +115,8 @@
     "G6 evaluator v0.2 (sha edfb6fec\u2026) \u2014 Rule B (R6e) carried forward",
     "path-a/inspector/constants.py \u2014 shared Manager lock + dominance threshold (latter flagged for promotion)"
   ],
-  "timestamp_utc": "2026-06-15T19:50:27Z",
-  "_expected_outcome": "CERTIFY",
-  "_emitted_outcome": "CERTIFY",
+  "timestamp_utc": "2026-06-15T19:52:16Z",
+  "_expected_outcome": "LOCK_VIOLATION",
+  "_emitted_outcome": "LOCK_VIOLATION",
   "_expected_match": true
 }

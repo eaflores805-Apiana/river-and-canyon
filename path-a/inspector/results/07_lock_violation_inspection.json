@@ -1,25 +1,15 @@
 {
   "inspector_version": "0.1",
-  "construction_id": "path_a_fixture_06_rejected_construction_v0.1",
+  "construction_id": "path_a_fixture_07_lock_violation_v0.1",
   "disposition": "REJECT",
   "checks": [
     {
       "check": "C1_C_star_not_terminal",
-      "ok": false,
-      "reason": "C* ('tokCstar') == target T ('tokCstar'); R8.1 breach."
+      "ok": true
     },
     {
       "check": "C2_pairwise_distinct",
-      "ok": false,
-      "reason": "token collisions found: {'tokCstar': ['C_star', 'T']}",
-      "detail": {
-        "collisions": {
-          "tokCstar": [
-            "C_star",
-            "T"
-          ]
-        }
-      }
+      "ok": true
     },
     {
       "check": "C3_categories_separable",
@@ -47,14 +37,23 @@
     },
     {
       "check": "C9_manager_lock_binding",
-      "ok": true,
-      "mode": "fixture",
-      "note": "spec marked `_fixture_mode: true` \u2014 Manager lock not enforced; construction excluded from real-run admissibility."
+      "ok": false,
+      "reason": "real-run Manager-lock binding failed -- deviations from Manager lock: ['params.margin = 0.1 != Manager-locked MARGIN = 0.25']. Set `_fixture_mode: true` to exclude from real-run admissibility.",
+      "detail": {
+        "validation": {
+          "ok": false,
+          "mode": "real-run",
+          "deviations": [
+            "params.margin = 0.1 != Manager-locked MARGIN = 0.25"
+          ],
+          "missing": []
+        }
+      }
     }
   ],
   "n_checks": 9,
-  "n_passes": 7,
-  "n_failures": 2,
+  "n_passes": 8,
+  "n_failures": 1,
   "manager_approved_values": {
     "manager_approved": {
       "k": 5,
@@ -94,14 +93,12 @@
     }
   },
   "rejection_note": {
-    "construction_id": "path_a_fixture_06_rejected_construction_v0.1",
+    "construction_id": "path_a_fixture_07_lock_violation_v0.1",
     "breached_checks": [
-      "C1_C_star_not_terminal",
-      "C2_pairwise_distinct"
+      "C9_manager_lock_binding"
     ],
     "breach_reasons": {
-      "C1_C_star_not_terminal": "C* ('tokCstar') == target T ('tokCstar'); R8.1 breach.",
-      "C2_pairwise_distinct": "token collisions found: {'tokCstar': ['C_star', 'T']}"
+      "C9_manager_lock_binding": "real-run Manager-lock binding failed -- deviations from Manager lock: ['params.margin = 0.1 != Manager-locked MARGIN = 0.25']. Set `_fixture_mode: true` to exclude from real-run admissibility."
     },
     "disposition_options": [
       "archive",
@@ -110,8 +107,8 @@
     ],
     "decision_seat": "Manager / TL under role-separation (per construct-definition v0.3 \u00a78.4)"
   },
-  "timestamp_utc": "2026-06-15T19:48:18Z",
-  "input_spec_path": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/path_a/06_rejected_construction/construction_spec.json",
+  "timestamp_utc": "2026-06-15T19:52:16Z",
+  "input_spec_path": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/path_a/07_lock_violation/construction_spec.json",
   "_expected_disposition": "REJECT",
   "_expected_match": true
 }

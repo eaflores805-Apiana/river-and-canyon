@@ -33,6 +33,12 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+# Import the shared Manager lock + scorer constants from path-a/inspector/.
+# File lives at tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/g6_evaluator_v0_3.py
+# parents[4] is the repo root; the constants module lives at repo/path-a/inspector/.
+sys.path.insert(0, str(Path(__file__).resolve().parents[4] / "path-a" / "inspector"))
+import constants as path_a_constants
+
 
 # Pre-declared category vocabulary (locked).
 R1_CORRECT_COMPOSITION      = "R1_correct_composition"
@@ -50,10 +56,13 @@ OUTCOME_FAIL                     = "FAIL"
 OUTCOME_REJECTED_CONSTRUCTION    = "REJECTED_CONSTRUCTION"
 OUTCOME_SUBSTRATE_INFEASIBILITY  = "SUBSTRATE_INFEASIBILITY_CANDIDATE"
 OUTCOME_BUNDLE_INSUFFICIENT      = "BUNDLE_INSUFFICIENT"
+OUTCOME_LOCK_VIOLATION           = "LOCK_VIOLATION"   # real-run spec deviates from Manager lock
 
-# Failure-signature dominance threshold (a single category > 0.25 of items is
-# "dominant" per construct definition v0.3 §11; declared here for the scorer).
-DOMINANT_RATE_THRESHOLD = 0.25
+# Failure-signature dominance threshold — imported from path-a/inspector/constants.py
+# (shared with the inspector to avoid divergence). Provenance: not yet in
+# TARGET-CONSTRUCT-DEFINITION; flagged for promotion. See constants.py
+# DOMINANT_RATE_THRESHOLD_PROVENANCE.
+DOMINANT_RATE_THRESHOLD = path_a_constants.DOMINANT_RATE_THRESHOLD
 
 _ANSWER_RE = re.compile(r"^ANSWER:\s+(.+?)\s*$", re.IGNORECASE)
 
@@ -157,15 +166,39 @@ def invalidate_R1(per_item: dict[str, dict[str, dict]],
     return invalidations
 
 
-# ── Heuristic floor (derived from spec params) ──────────────────────────────
+# ── Heuristic floor (derived from spec params; Manager-lock enforced in real-run mode) ─
 def compute_floor(spec: dict) -> dict:
-    """F = max(1/p, 1/m, 1/D). Reads params from spec; falls back to Manager
-    defaults if unspecified."""
-    params = spec.get("params", {})
-    p = int(params.get("p", 5))
-    m = int(params.get("m", 10))
-    D = int(params.get("D", 5))
-    margin = float(params.get("margin", 0.25))
+    """F = max(1/p, 1/m, 1/D). Reads params from spec; in real-run mode the
+    params MUST match the Manager lock (no silent defaults). In fixture mode
+    (`_fixture_mode: true`), params may vary for testing.
+
+    Returns a dict with `F`, `components`, `margin`, `threshold`, `params_used`,
+    and `manager_lock_validation` recording the binding check."""
+    validation = path_a_constants.validate_manager_lock(spec)
+    params = spec.get("params") or {}
+
+    if not validation["ok"]:
+        # Real-run mode with missing or deviating params — fail-closed. We still
+        # populate a placeholder floor structure (for diagnostic readback) but
+        # the caller is expected to detect status=LOCK_VIOLATION and surface it
+        # before any composite-correct counts get interpreted.
+        return {
+            "F":           None,
+            "components":  None,
+            "margin":      None,
+            "threshold":   None,
+            "params_used": params,
+            "manager_lock_validation": validation,
+            "lock_violation": True,
+        }
+
+    # Fixture mode: read from spec (params may deviate).
+    # Real-run mode: validation passed, so spec params match the Manager lock.
+    p = int(params["p"]) if "p" in params else path_a_constants.P_POSITION_SLOTS
+    m = int(params["m"]) if "m" in params else path_a_constants.M_MIN_EQUAL_SALIENCE_CANDIDATES
+    D = int(params["D"]) if "D" in params else path_a_constants.D_DEPTH_COMPETITORS
+    margin = float(params["margin"]) if "margin" in params else path_a_constants.MARGIN
+
     F_terminal_grab  = 0.0   # by R8.1 enforcement
     F_direct_query   = 0.0   # measured ≈ 0 on retained subset
     F_position       = 1.0 / p
@@ -185,6 +218,8 @@ def compute_floor(spec: dict) -> dict:
         "margin":       margin,
         "threshold":    threshold,
         "params_used": {"p": p, "m": m, "D": D, "margin": margin},
+        "manager_lock_validation": validation,
+        "lock_violation": False,
     }
 
 
@@ -325,8 +360,16 @@ def evaluate(run_dir: Path) -> dict:
     # Heuristic floor + threshold.
     floor_info = compute_floor(spec)
 
-    # Outcome branch.
-    outcome = derive_outcome(categorized, floor_info, invalidations, spec)
+    # Manager-lock binding (fail-closed in real-run mode).
+    if floor_info.get("lock_violation"):
+        outcome = {
+            "outcome": OUTCOME_LOCK_VIOLATION,
+            "reason":  "real-run spec deviates from or is missing Manager-locked params (p, D, m, margin); no silent fallback. Set `_fixture_mode: true` on the spec to exclude from real-run admissibility and run as a fixture.",
+            "validation": floor_info["manager_lock_validation"],
+        }
+    else:
+        # Outcome branch.
+        outcome = derive_outcome(categorized, floor_info, invalidations, spec)
 
     # Per-query category counts.
     by_query: dict[str, dict[str, int]] = {}
@@ -356,6 +399,7 @@ def evaluate(run_dir: Path) -> dict:
         "run_dir":               str(run_dir),
         "status":                "EVALUATED",
         "construction_id":       spec.get("construction_id", "<unknown>"),
+        "fixture_mode":          path_a_constants.is_fixture_mode(spec),
         "n_generations":         len(results),
         "n_items":               len(by_item),
         "per_query_category_counts": by_query,
@@ -368,10 +412,12 @@ def evaluate(run_dir: Path) -> dict:
         "computable_invalidators": computable_invalidators,
         "judgment_flagged":      judgment_flagged,
         "forbidden_interpretations": forbidden,
+        "manager_lock_summary":    path_a_constants.values_summary(),
         "rule_sources": [
             "TARGET-CONSTRUCT-DEFINITION-v0.3 (sha eb72abb2…) §§2, 3, 8, 11",
             "PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.3 (sha 38e05460…) §§2, 4, 7, 8",
             "G6 evaluator v0.2 (sha edfb6fec…) — Rule B (R6e) carried forward",
+            "path-a/inspector/constants.py — shared Manager lock + dominance threshold (latter flagged for promotion)",
         ],
     }
 

@@ -1,18 +1,17 @@
 {
-  "_fixture_mode": true,
-  "construction_id": "path_a_fixture_06_rejected_construction_v0.1",
+  "construction_id": "path_a_fixture_07_lock_violation_v0.1",
   "params": {
     "k": 5,
     "D": 5,
     "p": 5,
     "m": 10,
-    "margin": 0.25
+    "margin": 0.1
   },
   "target": {
     "A": "tokA",
     "B": "tokB",
     "C_star": "tokCstar",
-    "T": "tokCstar",
+    "T": "tokT",
     "r1": "r1",
     "r2": "r2",
     "post_C_star_relations": [
