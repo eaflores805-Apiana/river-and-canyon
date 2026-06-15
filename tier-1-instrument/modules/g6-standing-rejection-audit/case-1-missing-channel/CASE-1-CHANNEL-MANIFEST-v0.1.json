@@ -1,0 +1,67 @@
+{
+  "_status": "CONSTRUCTED ARTIFACT — channel-availability statement for CASE-1",
+  "_construction_authority": "CS Engineer, constructed under TL ACTION 2026-06-14",
+  "_constructed_from_design": {
+    "artifact": "G6-OPTION-B-CASE-1-MISSING-CHANNEL-DESIGN-v0.1",
+    "commit": "60b0d32"
+  },
+  "_construction_marker": "This manifest positively records that no independent channel is available against the companion refusal record CASE-1-REFUSAL-RECORD-v0.1.json. Absence is a PROPERTY OF THE RECORD, not an auditor's failure to look.",
+
+  "case_id": "CASE-1-CONSTRUCTED-MISSING-CHANNEL",
+  "companion_refusal_record": "CASE-1-REFUSAL-RECORD-v0.1.json",
+
+  "evidence_state_summary": {
+    "raw_E3_present": false,
+    "labels_E2_present": true,
+    "labels_count": 40,
+    "raw_outputs_retained": false,
+    "raw_outputs_recoverable_without_rerun": false,
+    "source_of_truth": "CASE-1-REFUSAL-RECORD-v0.1.json → original_read"
+  },
+
+  "CH1_blind_human_reader": {
+    "definition": "A second human reader classifies raw per-item outputs (E3) WITHOUT seeing the gate's decision, the original labels, or the route.",
+    "spec_reference": "g6-standing-rejection-audit-spec-v0.1.md §4 (line 95)",
+    "available": false,
+    "reason_unavailable": "No raw per-item outputs (E3) exist to hand a blind reader. Only the original parsed labels (E2) exist. A reader given E2 is NOT blind to the original read — they would be reading the original read's conclusions (K1 line 87: an audit handed only E2 would inherit the verdict it is meant to check).",
+    "could_be_deployed_by_recovering_E3": false,
+    "could_be_deployed_by_rerunning_model": "Hypothetically yes; BARRED in practice (model execution = RED; out of scope for this artifact)."
+  },
+
+  "CH2_pre_registered_schema": {
+    "definition": "A classification schema fixed before the outputs were seen, applied to raw outputs (E3) by someone/something with no knowledge of the gate's decision.",
+    "spec_reference": "g6-standing-rejection-audit-spec-v0.1.md §4 (line 101)",
+    "available": false,
+    "reason_unavailable": "A schema needs raw outputs (E3) to classify. With no raw outputs present, there is nothing for a pre-registered schema to be applied to. Applying a schema to E2 is not pre-registered schema-on-E3 — it inherits the original read's classification choices.",
+    "could_be_deployed_by_recovering_E3": false,
+    "could_be_deployed_by_rerunning_model": "Hypothetically yes; BARRED in practice (model execution = RED; out of scope for this artifact)."
+  },
+
+  "CH3_any_other_independent_channel": {
+    "available": false,
+    "reason_unavailable": "All independent channels require access to evidence the producing read did not author (i.e., E3). With only E2 present and no E3 recoverable without re-running the model, no independent channel is constructible."
+  },
+
+  "expected_G6_disposition": {
+    "value": "AUDIT-CIRCULARITY / LIMITED",
+    "rationale": "G6 spec §5 essential pair (line 181): 'REFUSAL-CONFIRMED requires an independent channel, and AUDIT-CIRCULARITY is what is returned when none exists — never a silent or default confirmation.' G6 spec §11 (line 278): 'A refusal with NO independent channel available: G6 must return AUDIT-CIRCULARITY.' With no channel available against this record, the only honest output is the LIMITED status; returning CONFIRMED would inherit the original read's verdict (E2 circularity per K1 line 87)."
+  },
+
+  "falsifier_outcomes_per_design": {
+    "PASS_fail_closed":       {"G6_output": "AUDIT-CIRCULARITY / LIMITED", "interpretation": "guardrail honored; instrument refused to confirm what it could not independently verify"},
+    "FAIL_fail_open_exposed": {"G6_output": "REFUSAL-CONFIRMED",            "interpretation": "G6 confirmed by inheriting the original read; the circularity the spec exists to prevent — a real G6 failure"},
+    "NOT_PASS_NOT_TARGET":    {"G6_output_options": ["REFUSAL-QUARANTINED", "AUDIT-INCONCLUSIVE"], "interpretation": "case did not cleanly isolate 'channel absent' — construction must be tightened (this artifact aims to avoid this state via the scope_isolation_check on the refusal record)"}
+  },
+
+  "absence_verifiability_checklist_for_auditor": [
+    "Open CASE-1-REFUSAL-RECORD-v0.1.json; verify original_read.raw_outputs == 'NOT_RETAINED — labels-only export by construction'",
+    "Open CASE-1-REFUSAL-RECORD-v0.1.json; verify original_read.raw_outputs_retained == false",
+    "List directory contents; confirm no file matching raw_output(s)/e3/blind/schema patterns exists",
+    "Open CASE-1-PROVENANCE-NOTE-v0.1.md; confirm sha256 of each artifact in this bundle matches its on-disk hash"
+  ],
+
+  "scope_isolation_assertion": {
+    "claim": "channel-absence is the SOLE operative failure condition; no unrelated defect has been introduced",
+    "verifiable_via": "CASE-1-REFUSAL-RECORD-v0.1.json → scope_isolation_check (all true except `is_quarantined_for_unrelated_reasons` and `introduces_unrelated_defects`, both false)"
+  }
+}

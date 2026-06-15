@@ -1,0 +1,120 @@
+{
+  "_status": "CONSTRUCTED ARTIFACT — NOT A REAL RUN — FOR G6 FAIL-CLOSED DISCIPLINE TESTING ONLY",
+  "_construction_authority": "CS Engineer, constructed under TL ACTION 2026-06-14 (Manager opened Option B design-only; construction step separately authorized)",
+  "_constructed_from_design": {
+    "artifact": "G6-OPTION-B-CASE-1-MISSING-CHANNEL-DESIGN-v0.1",
+    "path": "tier-1-instrument/modules/g6-standing-rejection-audit/G6-OPTION-B-CASE-1-MISSING-CHANNEL-DESIGN-v0.1.md",
+    "commit": "60b0d32"
+  },
+  "_construction_marker": "Every value below is CONSTRUCTED. No model was queried; no real items exist; no real run occurred. This record's purpose is to test whether a future-built G6 returns AUDIT-CIRCULARITY (fail-closed) rather than REFUSAL-CONFIRMED on a refusal with no independent channel.",
+  "_warning": "DO NOT promote, cite, run against, score against, or treat as evidence for any purpose other than the G6 fail-closed discipline test specified in the design.",
+
+  "case_id": "CASE-1-CONSTRUCTED-MISSING-CHANNEL",
+  "case_type": "construct-validity gate refusal (CONSTRUCTED instance for G6 fail-closed test)",
+  "candidate_name": "CASE-1-CONSTRUCTED-CANDIDATE-NOTREAL",
+  "candidate_provenance": "fully synthetic; not derived from any real model output, run, or dataset",
+
+  "gate_decision": "REFUSE",
+  "gate_decision_grounds": "construct-validity / abstention-style collapse (apparent)",
+  "gate_decision_in_g6_scope": true,
+
+  "original_read": {
+    "reader_id": "CONSTRUCTED-ORIGINAL-READER",
+    "read_method": "labels-only emission; no raw model outputs preserved",
+    "items_count": 40,
+    "labels": [
+      {"item_id": "item_001", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_002", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_003", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_004", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_005", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_006", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_007", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_008", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_009", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_010", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_011", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_012", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_013", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_014", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_015", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_016", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_017", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_018", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_019", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_020", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_021", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_022", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_023", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_024", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_025", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_026", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_027", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_028", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_029", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_030", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_031", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_032", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_033", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_034", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_035", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_036", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_037", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_038", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_039", "label_classification": "answered_not_abstained"},
+      {"item_id": "item_040", "label_classification": "answered_not_abstained"}
+    ],
+    "labels_are_E2": true,
+    "raw_outputs": "NOT_RETAINED — labels-only export by construction",
+    "raw_outputs_retained": false,
+    "raw_outputs_recoverable_without_rerun": false,
+    "raw_output_recovery_path": null,
+    "raw_output_recovery_requires_model_execution": true,
+    "model_execution_status_under_current_route": "BARRED (RED)"
+  },
+
+  "summary_metric": {
+    "metric_name": "defective_member_abstention_rate",
+    "value": 0.00,
+    "appears_confirmable_at_surface": true,
+    "surface_resemblance_note": "The 0.00 surface mirrors CAL-Q's 0.00 defective abstention (genuine collapse) and is SURFACE-INDISTINGUISHABLE from a CAL-E-style artifact (where 0.575 surface concealed 36/40 abstain at item level). Without raw E3, an auditor cannot tell genuine-from-artifact — this is the trap.",
+    "surface_resemblance_is_constructed_not_measured": true
+  },
+
+  "raw_E3_status": {
+    "available": false,
+    "available_form_only": "labels (E2)",
+    "raw_per_item_outputs_present": false,
+    "blind_reader_classification_present": false,
+    "pre_registered_schema_output_present": false,
+    "absence_is_property_of_record": true,
+    "absence_is_verifiable_via": [
+      "this record's `raw_outputs_retained` = false",
+      "this record's `raw_outputs` = 'NOT_RETAINED — labels-only export by construction'",
+      "no raw-output file exists in this bundle directory",
+      "no blind-reader classification file exists in this bundle directory",
+      "no pre-registered schema output file exists in this bundle directory"
+    ],
+    "absence_is_not_auditor_failure_to_look": true
+  },
+
+  "scope_isolation_check": {
+    "is_real_gate_refusal_in_form": true,
+    "is_in_g6_audit_scope": true,
+    "is_quarantined_for_unrelated_reasons": false,
+    "summary_metric_well_formed": true,
+    "labels_well_formed": true,
+    "introduces_unrelated_defects": false,
+    "sole_operative_failure_condition": "no_independent_channel_available",
+    "design_target_disposition": "AUDIT-CIRCULARITY / LIMITED",
+    "design_target_disposition_source": "G6-OPTION-B-CASE-1-MISSING-CHANNEL-DESIGN-v0.1 §5; G6 spec §5 line 181 essential pair; G6 spec §11 line 278"
+  },
+
+  "governing_chain": {
+    "readiness_note":   {"artifact": "G6-OPTION-B-READINESS-NOTE-v0.1",                "commit": "41a416b"},
+    "inventory":        {"artifact": "G6-NON-DESIGN-TARGET-CANDIDATE-INVENTORY-v0.1",  "commit": "1893a63"},
+    "hold_review_v0_2": {"artifact": "G6-HOLD-REVIEW-SUPERSEDED-VALIDATION-RUNS-v0.2", "commit": "7d880c5"},
+    "case_design":      {"artifact": "G6-OPTION-B-CASE-1-MISSING-CHANNEL-DESIGN-v0.1", "commit": "60b0d32"},
+    "spec":             {"artifact": "g6-standing-rejection-audit-spec-v0.1.md",       "module_home": "tier-1-instrument/specs/"}
+  }
+}
