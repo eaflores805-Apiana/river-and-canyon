@@ -5,7 +5,7 @@
 
 A living overview of where the program has been, where it is, and where it ventured off. Coarse-grained: main stages, not every commit. The trunk reads top → bottom in time; branches show where the work split (closed routes, parked tracks, new directions).
 
-For full per-route status see [`governance/standing/PROGRAM-CONTROL-LEDGER-v0.1.md`](governance/standing/PROGRAM-CONTROL-LEDGER-v0.1.md); for the route of record see [`PROGRAM-MAP-v2.0`](governance/standing/PROGRAM-MAP-v2.0.md); for the standard see [`NORTH-STAR-v1.2`](governance/standing/NORTH-STAR-v1.2.md). This is the path-and-branches view; those are the authoritative trackers.
+For full per-route status see [`governance/standing/PROGRAM-CONTROL-LEDGER-v0.2.md`](governance/standing/PROGRAM-CONTROL-LEDGER-v0.2.md); for the route of record see [`PROGRAM-MAP-v2.0`](governance/standing/PROGRAM-MAP-v2.0.md); for the standard see [`NORTH-STAR-v1.2`](governance/standing/NORTH-STAR-v1.2.md). This is the path-and-branches view; those are the authoritative trackers.
 
 ---
 
@@ -144,7 +144,7 @@ Repo-level docs ................. README · STATUS · REVIEW · _meta/INDEX
 
 ---
 
-*Living map. Re-sync when a stage closes, a new branch opens, or a routing decision changes a tracked branch's status. For frozen per-route detail with the 11-field schema, see `governance/standing/PROGRAM-CONTROL-LEDGER-v0.1.md` — this map is the at-a-glance view; the ledger is the deeper read. (When CONTROL-LEDGER v0.2 is filed, bump the two pointers above v0.1 → v0.2.)*
+*Living map. Re-sync when a stage closes, a new branch opens, or a routing decision changes a tracked branch's status. For frozen per-route detail with the 11-field schema, see `governance/standing/PROGRAM-CONTROL-LEDGER-v0.2.md` — this map is the at-a-glance view; the ledger is the deeper read.*
 
 *Change-note (rev 2, Senior content revision; verified against the record with CS):*
 *— ADDED Stage 0 / Tier 0 as the foundational trunk node (Two-Hop Level-1 matched-pair instrument lock, packet self-dated 06-07 / scorer amended 06-08; Cells01-03 evidence committed 06-08, 49aa222) — previously invisible except as "sealed."*
