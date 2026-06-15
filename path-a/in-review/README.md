@@ -19,7 +19,8 @@ CS, TL) have byte-exact access via clean fetch. They are **not** definition-of-r
 | `TARGET-CONSTRUCT-DEFINITION-v0.4.md` | `4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29` | **current construct definition under review** (promotes dominance threshold 0.25 from scorer code into the definition; adds real-run fixture-mode guard) |
 | `PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.3.md` | `38e054601eda2ab6034ae3445ffb2b2fe2ca36f75fbcb15e3ff8e90ab8d37cae` | **current candidate design under review** (carries C5 E7/E8: depth-competitor diagnostic routed pre-lock; relation-balancing as binding admissibility property) |
 | `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.1.md` | `eb3dee053396e3db5a87c545cfb6a1e73465a1204622cee839b31c0431ddb37b` | superseded by v0.2 (predecessor only; retained for trail). C5 returned HOLD–ARTIFACT ACCESS on this version (correctly refused to clear an unread lock-before-look artifact); v0.2 folds in Senior's required edits + CS feasibility edits. |
-| `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.2.md` | `d9a4cf4a830cf63276e49d69ed43bf7a6d9517dc799c32aa970e9f1e32f03dcb` | **current preregistration shell under C5 re-review** (NOT locked of-record; byte filing only, per TL ACTION 2026-06-15) |
+| `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.2.md` | `d9a4cf4a830cf63276e49d69ed43bf7a6d9517dc799c32aa970e9f1e32f03dcb` | superseded by v0.3 (predecessor; retained for trail) |
+| `PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md` | `d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c` | **current preregistration shell** (TL-review-passed for byte-exact filing; NOT locked of-record; pending v0.4 of-record elevation per shell §16) |
 
 ## Provenance
 
