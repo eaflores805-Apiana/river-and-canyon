@@ -1,0 +1,5 @@
+{
+  "_purpose": "Pre-declared expected outcome. Designed so the evaluator emits FAIL with R4b dominant: composite returns a depth-2 competitor token for every item, rotating across X2..X6.",
+  "outcome": "FAIL",
+  "_expected_dominant_signature": "R4b_dominant_depth_selection"
+}

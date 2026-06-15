@@ -1,0 +1,5 @@
+{
+  "_purpose": "Pre-declared expected outcome. Model emits the SAME token (C*) across all 4 queries per item \u2014 the i06 flat-heuristic signature. R6e invalidates R1 on every item AND cross_query_constant_token signature is dominant \u2192 FAIL.",
+  "outcome": "FAIL",
+  "_expected_dominant_signature": "cross_query_constant_token_prevalent"
+}

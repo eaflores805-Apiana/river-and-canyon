@@ -1,0 +1,196 @@
+{
+  "results": [
+    {
+      "item_id": "item_01",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_01",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_01",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_01",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_02",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_02",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_02",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_02",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_03",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_03",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_03",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_03",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_04",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_04",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_04",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_04",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_05",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_05",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_05",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_05",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_06",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_06",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_06",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_06",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_07",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_07",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_07",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_07",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_08",
+      "query_type": "composite",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_08",
+      "query_type": "hop1",
+      "expected": "tokB",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_08",
+      "query_type": "hop2",
+      "expected": "tokCstar",
+      "raw_output": "ANSWER: tokCstar"
+    },
+    {
+      "item_id": "item_08",
+      "query_type": "direct_query",
+      "expected": "NULL",
+      "raw_output": "ANSWER: tokCstar"
+    }
+  ]
+}

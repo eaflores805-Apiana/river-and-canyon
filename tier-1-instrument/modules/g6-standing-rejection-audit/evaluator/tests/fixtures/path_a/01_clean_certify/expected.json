@@ -1,0 +1,5 @@
+{
+  "_purpose": "Pre-declared expected outcome. Designed so the evaluator emits CERTIFY: all composite items return C*, controls pass, direct-query abstains, no constant-token across queries.",
+  "outcome": "CERTIFY",
+  "_expected_R1_rate": 1.0
+}

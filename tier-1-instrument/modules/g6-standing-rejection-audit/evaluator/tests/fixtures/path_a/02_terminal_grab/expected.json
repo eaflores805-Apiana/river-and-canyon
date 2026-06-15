@@ -1,0 +1,5 @@
+{
+  "_purpose": "Pre-declared expected outcome. Designed so the evaluator emits FAIL with R2 dominant: composite returns target terminal token for every item.",
+  "outcome": "FAIL",
+  "_expected_dominant_signature": "R2_dominant_target_terminal_attraction"
+}

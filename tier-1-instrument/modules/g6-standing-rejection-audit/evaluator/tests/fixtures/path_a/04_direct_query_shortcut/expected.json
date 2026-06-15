@@ -1,0 +1,5 @@
+{
+  "_purpose": "Pre-declared expected outcome. Composite looks correct but every item's direct-query control returns C* \u2192 R6c invalidates R1 on every item \u2192 net R1 = 0 \u2192 FAIL (R1 below floor; no positive failure-signature dominance because composite still shows raw R1-category by token).",
+  "outcome": "FAIL",
+  "_expected_invalidator": "R6c_direct_query_shortcut"
+}

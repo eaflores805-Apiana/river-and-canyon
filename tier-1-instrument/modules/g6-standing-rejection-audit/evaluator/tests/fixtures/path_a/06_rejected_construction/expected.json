@@ -1,0 +1,8 @@
+{
+  "_purpose": "Pre-declared expected outcome. C* is aliased to the target terminal T \u2192 C1 check (C* is any terminal) fires + C2 (pairwise distinct) fires \u2192 inspector REJECTs the construction before any item is written.",
+  "disposition": "REJECT",
+  "_expected_breached_checks": [
+    "C1_C_star_not_terminal",
+    "C2_pairwise_distinct"
+  ]
+}
