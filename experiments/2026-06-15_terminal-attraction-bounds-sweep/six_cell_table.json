@@ -1,0 +1,206 @@
+{
+  "run_name": "TERMINAL-ATTRACTION-BOUNDS-SWEEP-v0.1",
+  "six_cell_table": {
+    "k1_EARLY": {
+      "n": 12,
+      "PRIMARY_hop1_target_terminal_grab_rate": 0.8333333333333334,
+      "hop1_abstain_rate": 0.0,
+      "hop1_correct_rate": 0.08333333333333333,
+      "VALIDITY_hop2_correct_rate": 1.0,
+      "composite_correct_rate": 1.0,
+      "composite_decoy_terminal_grab_rate": 0.0,
+      "composite_abstain_rate": 0.0,
+      "composite_stopped_short_rate": 0.0,
+      "counts_by_query_type": {
+        "hop1": {
+          "TARGET_TERMINAL_GRAB": 10,
+          "CORRECT": 1,
+          "OTHER": 1
+        },
+        "hop2": {
+          "CORRECT": 12
+        },
+        "composite": {
+          "CORRECT": 12
+        }
+      }
+    },
+    "k1_LATE": {
+      "n": 12,
+      "PRIMARY_hop1_target_terminal_grab_rate": 0.5833333333333334,
+      "hop1_abstain_rate": 0.25,
+      "hop1_correct_rate": 0.08333333333333333,
+      "VALIDITY_hop2_correct_rate": 1.0,
+      "composite_correct_rate": 1.0,
+      "composite_decoy_terminal_grab_rate": 0.0,
+      "composite_abstain_rate": 0.0,
+      "composite_stopped_short_rate": 0.0,
+      "counts_by_query_type": {
+        "hop1": {
+          "ABSTAIN": 3,
+          "TARGET_TERMINAL_GRAB": 7,
+          "CORRECT": 1,
+          "OTHER": 1
+        },
+        "hop2": {
+          "CORRECT": 12
+        },
+        "composite": {
+          "CORRECT": 12
+        }
+      }
+    },
+    "k3_EARLY": {
+      "n": 12,
+      "PRIMARY_hop1_target_terminal_grab_rate": 0.08333333333333333,
+      "hop1_abstain_rate": 0.16666666666666666,
+      "hop1_correct_rate": 0.3333333333333333,
+      "VALIDITY_hop2_correct_rate": 1.0,
+      "composite_correct_rate": 0.3333333333333333,
+      "composite_decoy_terminal_grab_rate": 0.6666666666666666,
+      "composite_abstain_rate": 0.0,
+      "composite_stopped_short_rate": 0.0,
+      "counts_by_query_type": {
+        "hop1": {
+          "CORRECT": 4,
+          "DECOY_TERMINAL_GRAB": 5,
+          "ABSTAIN": 2,
+          "TARGET_TERMINAL_GRAB": 1
+        },
+        "hop2": {
+          "CORRECT": 12
+        },
+        "composite": {
+          "DECOY_TERMINAL_GRAB": 8,
+          "CORRECT": 4
+        }
+      }
+    },
+    "k3_LATE": {
+      "n": 12,
+      "PRIMARY_hop1_target_terminal_grab_rate": 0.4166666666666667,
+      "hop1_abstain_rate": 0.16666666666666666,
+      "hop1_correct_rate": 0.4166666666666667,
+      "VALIDITY_hop2_correct_rate": 1.0,
+      "composite_correct_rate": 0.75,
+      "composite_decoy_terminal_grab_rate": 0.16666666666666666,
+      "composite_abstain_rate": 0.0,
+      "composite_stopped_short_rate": 0.08333333333333333,
+      "counts_by_query_type": {
+        "hop1": {
+          "CORRECT": 5,
+          "TARGET_TERMINAL_GRAB": 5,
+          "ABSTAIN": 2
+        },
+        "hop2": {
+          "CORRECT": 12
+        },
+        "composite": {
+          "CORRECT": 9,
+          "DECOY_TERMINAL_GRAB": 2,
+          "STOPPED_SHORT": 1
+        }
+      }
+    },
+    "k5_EARLY": {
+      "n": 12,
+      "PRIMARY_hop1_target_terminal_grab_rate": 0.0,
+      "hop1_abstain_rate": 0.16666666666666666,
+      "hop1_correct_rate": 0.5833333333333334,
+      "VALIDITY_hop2_correct_rate": 1.0,
+      "composite_correct_rate": 0.3333333333333333,
+      "composite_decoy_terminal_grab_rate": 0.16666666666666666,
+      "composite_abstain_rate": 0.0,
+      "composite_stopped_short_rate": 0.5,
+      "counts_by_query_type": {
+        "hop1": {
+          "OTHER": 3,
+          "CORRECT": 7,
+          "ABSTAIN": 2
+        },
+        "hop2": {
+          "CORRECT": 12
+        },
+        "composite": {
+          "STOPPED_SHORT": 6,
+          "CORRECT": 4,
+          "DECOY_TERMINAL_GRAB": 2
+        }
+      }
+    },
+    "k5_LATE": {
+      "n": 12,
+      "PRIMARY_hop1_target_terminal_grab_rate": 0.16666666666666666,
+      "hop1_abstain_rate": 0.16666666666666666,
+      "hop1_correct_rate": 0.5833333333333334,
+      "VALIDITY_hop2_correct_rate": 1.0,
+      "composite_correct_rate": 0.6666666666666666,
+      "composite_decoy_terminal_grab_rate": 0.0,
+      "composite_abstain_rate": 0.16666666666666666,
+      "composite_stopped_short_rate": 0.16666666666666666,
+      "counts_by_query_type": {
+        "hop1": {
+          "ABSTAIN": 2,
+          "CORRECT": 7,
+          "OTHER": 1,
+          "TARGET_TERMINAL_GRAB": 2
+        },
+        "hop2": {
+          "CORRECT": 12
+        },
+        "composite": {
+          "ABSTAIN": 2,
+          "CORRECT": 8,
+          "STOPPED_SHORT": 2
+        }
+      }
+    }
+  },
+  "validity_flags": {
+    "hop2_control_per_cell": {
+      "k1_EARLY": {
+        "hop2_correct_rate": 1.0,
+        "cell_uninterpretable_if_collapsed": false
+      },
+      "k1_LATE": {
+        "hop2_correct_rate": 1.0,
+        "cell_uninterpretable_if_collapsed": false
+      },
+      "k3_EARLY": {
+        "hop2_correct_rate": 1.0,
+        "cell_uninterpretable_if_collapsed": false
+      },
+      "k3_LATE": {
+        "hop2_correct_rate": 1.0,
+        "cell_uninterpretable_if_collapsed": false
+      },
+      "k5_EARLY": {
+        "hop2_correct_rate": 1.0,
+        "cell_uninterpretable_if_collapsed": false
+      },
+      "k5_LATE": {
+        "hop2_correct_rate": 1.0,
+        "cell_uninterpretable_if_collapsed": false
+      }
+    },
+    "composite_at_k1_distinguishability_limited": true
+  },
+  "averages": {
+    "avg_grab_at_k1": 0.7083333333333334,
+    "avg_grab_at_k3": 0.25,
+    "avg_grab_at_k5": 0.08333333333333333,
+    "avg_grab_EARLY": 0.3055555555555556,
+    "avg_grab_LATE": 0.3888888888888889,
+    "position_gap_by_k": {
+      "1": 0.25,
+      "3": 0.33333333333333337,
+      "5": 0.16666666666666666
+    }
+  },
+  "readings_held": {
+    "SMOOTH_SCALING": false,
+    "MAXED_AT_k1": false,
+    "POSITION_EFFECT": true
+  },
+  "primary_reading": "POSITION_EFFECT"
+}

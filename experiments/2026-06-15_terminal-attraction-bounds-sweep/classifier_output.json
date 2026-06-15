@@ -1,0 +1,1514 @@
+[
+  {
+    "item_id": "tabs_v01_k1_E_01",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: RVESG",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_01",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: RVESG",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_01",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: RVESG",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_02",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: CLWLW",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_02",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: CLWLW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_02",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: CLWLW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_03",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: PSLZN",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_03",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: PSLZN",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_03",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: PSLZN",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_04",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBMLD",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_04",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: NFXGS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_04",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: NFXGS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_05",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: AVRTM",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_05",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: AVRTM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_05",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: AVRTM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_06",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: EWLGH",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_06",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: EWLGH",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_06",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: EWLGH",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_07",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: YGSLD",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_07",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: YGSLD",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_07",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: YGSLD",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_08",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: AVURX",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_08",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: AVURX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_08",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: AVURX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_09",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: JJGFM",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_09",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: JJGFM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_09",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: JJGFM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_10",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: GTANR",
+    "classifier_category": "OTHER"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_10",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: ESVUQ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_10",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ESVUQ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_11",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: UPDVQ",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_11",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: UPDVQ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_11",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: UPDVQ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_12",
+    "cell": "k1_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: DPKLL",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_12",
+    "cell": "k1_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: DPKLL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_E_12",
+    "cell": "k1_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: DPKLL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_01",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_01",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: TXPZK",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_01",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: TXPZK",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_02",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_02",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: JFBCP",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_02",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: JFBCP",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_03",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: FABUZ",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_03",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: FABUZ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_03",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: FABUZ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_04",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: DMTXN",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_04",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: DMTXN",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_04",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: DMTXN",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_05",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZPSOE",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_05",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: ZPSOE",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_05",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZPSOE",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_06",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: KYLZO",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_06",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: KYLZO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_06",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: KYLZO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_07",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: AGXDO",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_07",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: AGXDO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_07",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: AGXDO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_08",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: OPHZM",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_08",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: OPHZM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_08",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: OPHZM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_09",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_09",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: CJKJP",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_09",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: CJKJP",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_10",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBEMG",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_10",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: YWPQA",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_10",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: YWPQA",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_11",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: UPRMA",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_11",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: UPRMA",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_11",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: UPRMA",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_12",
+    "cell": "k1_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: BEXMO",
+    "classifier_category": "OTHER"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_12",
+    "cell": "k1_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: IDBXS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k1_L_12",
+    "cell": "k1_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: IDBXS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_01",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBUFQ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_01",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: RAWFB",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_01",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: CFQUR",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_02",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: SXYXT",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_02",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: YWVHY",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_02",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: SXYXT",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_03",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: PJRIP",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_03",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: MAYNI",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_03",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: MAYNI",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_04",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBLMO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_04",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: EAIHJ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_04",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: EAIHJ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_05",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: IOVMI",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_05",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: CATLW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_05",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: IOVMI",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_06",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZXYIC",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_06",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: BRUJL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_06",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZXYIC",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_07",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBVXS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_07",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: EHJIX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_07",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: EHJIX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_08",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_08",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: NKULL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_08",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: VPJXW",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_09",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBFKV",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_09",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: RVMAG",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_09",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ICKEU",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_10",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: SSGXH",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_10",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: SIIHV",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_10",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: IAUPY",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_11",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_11",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: UDJSW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_11",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: PUEEL",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_12",
+    "cell": "k3_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: KRJBM",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_12",
+    "cell": "k3_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: KRJBM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_E_12",
+    "cell": "k3_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: KRJBM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_01",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBJRT",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_01",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: DZADX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_01",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: DZADX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_02",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBGMV",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_02",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: BUZYM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_02",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: BUZYM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_03",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: HYYNA",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_03",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: HYYNA",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_03",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: TNVWL",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_04",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: PHCWN",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_04",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: PHCWN",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_04",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: PHCWN",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_05",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_05",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: XISCX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_05",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: XISCX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_06",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: RQYNJ",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_06",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: RQYNJ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_06",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: RQYNJ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_07",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBCSS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_07",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: RLKZE",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_07",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: RLKZE",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_08",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: WQEDV",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_08",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: WQEDV",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_08",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: WQEDV",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_09",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: VAZLA",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_09",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: VAZLA",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_09",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: PEWQO",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_10",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBINR",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_10",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: BMNBI",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_10",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: MMAPQ",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_11",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBNAL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_11",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: XWMTH",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_11",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: XWMTH",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_12",
+    "cell": "k3_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_12",
+    "cell": "k3_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: BZGXW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k3_L_12",
+    "cell": "k3_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: BZGXW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_01",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZAPQK links to ZBZLH.",
+    "classifier_category": "OTHER"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_01",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: RRKHD",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_01",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBZLH",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_02",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBPJM",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_02",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: AKOHC",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_02",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBPJM",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_03",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_03",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: JDHDU",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_03",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: JDHDU",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_04",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZAWVI links to ZBKMJ.",
+    "classifier_category": "OTHER"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_04",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: TMVUF",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_04",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBKMJ",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_05",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_05",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: FIYIX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_05",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: QJUSU",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_06",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBUQH",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_06",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: DYPTO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_06",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBUQH",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_07",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBZQO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_07",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: EANEZ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_07",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBZQO",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_08",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBFQZ",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_08",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: SGTMS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_08",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: SGTMS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_09",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBAQR",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_09",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: ZVPVA",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_09",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: VSQWZ",
+    "classifier_category": "DECOY_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_10",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBXZL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_10",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: QFDWW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_10",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: QFDWW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_11",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBYTF",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_11",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: MFMMW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_11",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBYTF",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_12",
+    "cell": "k5_EARLY",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZAKQI links to TTUDT.",
+    "classifier_category": "OTHER"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_12",
+    "cell": "k5_EARLY",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: TTUDT",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_E_12",
+    "cell": "k5_EARLY",
+    "query_type": "composite",
+    "raw_output": "ANSWER: TTUDT",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_01",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_01",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: UZKDD",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_01",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_02",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBTDY",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_02",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: CZYSW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_02",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: CZYSW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_03",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_03",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: URHBO",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_03",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: NULL",
+    "classifier_category": "ABSTAIN"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_04",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZAGLL links to ZBBJS.",
+    "classifier_category": "OTHER"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_04",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: RUOCS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_04",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBBJS",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_05",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBTQB",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_05",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: WVNYX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_05",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: WVNYX",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_06",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: HOFDL",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_06",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: HOFDL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_06",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: HOFDL",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_07",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBWCW",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_07",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: SDPOD",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_07",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: SDPOD",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_08",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBRMS",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_08",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: UPFER",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_08",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: UPFER",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_09",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBVAC",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_09",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: OBDXR",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_09",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: OBDXR",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_10",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBCMF",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_10",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: JYQJF",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_10",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: ZBCMF",
+    "classifier_category": "STOPPED_SHORT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_11",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: ZBSVB",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_11",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: SJRND",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_11",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: SJRND",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_12",
+    "cell": "k5_LATE",
+    "query_type": "hop1",
+    "raw_output": "ANSWER: PUNRE",
+    "classifier_category": "TARGET_TERMINAL_GRAB"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_12",
+    "cell": "k5_LATE",
+    "query_type": "hop2",
+    "raw_output": "ANSWER: PUNRE",
+    "classifier_category": "CORRECT"
+  },
+  {
+    "item_id": "tabs_v01_k5_L_12",
+    "cell": "k5_LATE",
+    "query_type": "composite",
+    "raw_output": "ANSWER: PUNRE",
+    "classifier_category": "CORRECT"
+  }
+]

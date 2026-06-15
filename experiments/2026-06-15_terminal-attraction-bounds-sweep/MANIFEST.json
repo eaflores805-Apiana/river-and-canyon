@@ -1,0 +1,139 @@
+{
+  "run_name": "TERMINAL-ATTRACTION-BOUNDS-SWEEP-v0.1",
+  "run_dir": "experiments/2026-06-15_terminal-attraction-bounds-sweep",
+  "timestamp_utc": "2026-06-15T09:06:50Z",
+  "authority_chain": {
+    "tl_action": "TL ACTION 2026-06-14 (Execute Authorized TERMINAL-ATTRACTION-BOUNDS-SWEEP-v0.1)",
+    "manager_authorization": "Manager 'authorize TERMINAL-ATTRACTION-BOUNDS-SWEEP-v0.1' (Route GREEN for this named run only)",
+    "classification": "exploratory terminal-attraction characterization / finding-track ; NOT Lane 4 / compression / G6 / Paper B / Claim C / certified baseline"
+  },
+
+  "preregistration": {
+    "path": "experiments/2026-06-15_terminal-attraction-bounds-sweep/PREREGISTRATION.md",
+    "sha256": "114ff18f5aea7e5d4bdec359dfb6d6afbb080114872b852a7df21707f2b2c5bf"
+  },
+
+  "design": {
+    "n_per_cell": 12,
+    "k_values": [1, 3, 5],
+    "positions": ["EARLY", "LATE"],
+    "n_total_items": 72,
+    "query_types": ["hop1", "hop2", "composite"],
+    "n_total_generations": 216,
+    "seed": 20260615
+  },
+
+  "decoding": {
+    "engine": "mlx_lm.stream_generate",
+    "sampler": "make_sampler(temp=0.0)",
+    "temperature": 0.0,
+    "max_tokens": 16
+  },
+
+  "fp16_weight_provenance": {
+    "model_id":      "Qwen/Qwen2.5-3B-Instruct",
+    "loader_call":   "mlx_lm.load('Qwen/Qwen2.5-3B-Instruct')",
+    "hf_revision":   "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "weight_shards": [
+      {
+        "filename": "model-00001-of-00002.safetensors",
+        "sha256":   "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2"
+      },
+      {
+        "filename": "model-00002-of-00002.safetensors",
+        "sha256":   "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+      }
+    ],
+    "note": "Closes the v0.1-run 'weight bytes not pinned' provenance gap flagged in Senior post-run breakdown."
+  },
+
+  "runtime": {
+    "mlx_lm_version": "0.31.3",
+    "python_version": "3.13.3",
+    "platform":       "Darwin arm64",
+    "machine":        "Apple M2 Max",
+    "wall_clock_s":   91
+  },
+
+  "inputs": {
+    "items_materialized": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/items_materialized.json",
+      "sha256": "92fea7fe0fa5ee4200824878fb5ba32bf858f2e60e294ebea05a6a42f453dee7",
+      "committed_before_run_at_commit": "81c27796a118c13fca1b04e45ff14445dc184bbd",
+      "note": "Closes the v0.1-run 'items file not locatable from manifest hash' provenance gap. Bytes committed in pre-run lock commit 81c2779."
+    },
+    "generate_items_py": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/generate_items.py",
+      "sha256": "54a276dd0ccb5b0ba0f24fa4a16c1ad471e73a2a75ee1cf60a09ccff0a100ba8"
+    },
+    "classifier_py": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/classifier.py",
+      "sha256": "136b494f33c3b7ebdef57ea04510900b8b5cb986b4d5037bc1f6c99ae361d532"
+    },
+    "runner_py": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/runner.py",
+      "sha256": "dfb6c9f282541dc42a03e9c3b38f4bfeae1f0e58ab8c18886af162af049e156d"
+    },
+    "analyze_py": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/analyze.py",
+      "sha256": "ad72cb122a914a971039c994dd873d417865cc698d73dabcccd38bf5a60ad3fb"
+    },
+    "prompt_template": {
+      "path":   "experiments/2026-06-09_b1-harness-v2/code/prompt_template_twohop_l1.txt",
+      "sha256": "c8a81a299d28c3fd47f4d6fc90c4c57537885d07f01464e68d6fbe2e94a2510e",
+      "note":   "Reused read-only from v0.1 run (preregistration §2)."
+    },
+    "locked_scorer": {
+      "path":   "tier0-run/scorer_twohop_l1.py",
+      "sha256": "b65c6803017b8b04ac25d4bd84c5fb5ff61692ed41d609e099b181fa58e4ddde",
+      "note":   "Byte-locked under Cell03; used read-only for correctness columns (preregistration §5(a))."
+    }
+  },
+
+  "outputs": {
+    "raw_outputs": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/raw_outputs.json",
+      "sha256": "72d0832a6a55bf13e68ebd03c1e10dbd80a21ac3cf296ca6e62b687e9f822dee"
+    },
+    "scored": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/scored.json",
+      "sha256": "f1372d9d11d75487ea0299ce68dfab40b95950ca73cabdbd581b4dc0cf0adcec"
+    },
+    "classifier_output": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/classifier_output.json",
+      "sha256": "615c7c0ca5295326b48fee7f1a1383349395167c748a70e48ecf4e2991db537a"
+    },
+    "six_cell_table": {
+      "path":   "experiments/2026-06-15_terminal-attraction-bounds-sweep/six_cell_table.json",
+      "sha256": "29ba2743cb56ca5a1c8f52ad50f41275d39c3377d263c714812e1bb6a26ea6f8"
+    }
+  },
+
+  "validity_checks": {
+    "hop2_control": "PASSED — hop2 correct rate = 1.000 in every one of the 6 cells (model demonstrably does single-fact retrieval everywhere; no cell uninterpretable on the validity floor).",
+    "composite_at_k1_distinguishability_limited": "FLAGGED — at k=1 the only chain-terminal in the item IS the target's C, so composite-correct cannot be distinguished from a target-terminal grab. Composite correct rate of 1.000 at k=1 is the i06-generalized artifact, not retrieval competence. The clean attraction meter at k=1 is the hop1 grab rate (which is unambiguous because hop1's expected answer is an intermediate, never a terminal)."
+  },
+
+  "primary_reading_per_§8": "POSITION_EFFECT",
+
+  "boundaries_held": [
+    "FP16 only (no INT8 / no compression arm)",
+    "no certification authorized",
+    "no Lane 4 classification",
+    "no Claim C progress / no Paper B activation",
+    "no model-capability claim",
+    "no mechanism / architecture / training-distribution claim",
+    "no product / funder-facing claim",
+    "distinguishability floor preserved in every cell (2 'holds' facts in all 72 items)",
+    "no sealed-byte movement (new dated dir only)",
+    "stop-rule: one sweep only; no follow-up without separate Manager authorization"
+  ],
+
+  "sealed_bytes_post_run": {
+    "LOCK-RECORD.md":                   "5b557ae2a4c90bf34d2c050dc2b713b0ae29c2dd4eeb1f54a4099b5fb6cd5869",
+    "STRATIFIED_RECIPE_SCHEDULE.json":  "7ad3ccddecd070074e666ffaf2178aa0afd3cfda78fc08ef375fe68a907130c5",
+    "ORACLE_VERDICT_TABLE.json":        "9c6cbda9eb5b6e850b88451529bb989dee6355ce145c31d1fca5d7b0f3a7fba5",
+    "T3_BOUNDS_DECLARATION.json":       "45565d0b46c05da4f7d5c13956ac3a6331cc0748dfba4546f8f1d6cc46addd39",
+    "status": "4-of-4 byte-identical (CS-verified post-run)"
+  }
+}
