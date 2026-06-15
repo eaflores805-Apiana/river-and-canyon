@@ -1,0 +1,77 @@
+{
+  "evaluator_version": "0.2",
+  "run_dir": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/contrast-healthy-baseline",
+  "status": "EVALUATED",
+  "preregistration_exists": true,
+  "preregistration_path": "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/tests/fixtures/contrast-healthy-baseline/PREREGISTRATION.md",
+  "fp16_raw_present": true,
+  "int8_raw_present": true,
+  "baseline_gate": {
+    "verdict": "PASS",
+    "rule_a_component_competence": {
+      "pass": true,
+      "hop1_correct": 7,
+      "hop1_n": 8,
+      "hop1_correct_rate": 0.875,
+      "threshold": 0.5
+    },
+    "rule_b_composite_chain_following": {
+      "pass": true,
+      "composite_correct_total": 6,
+      "same_token_across_queries_count": 0,
+      "same_token_item_ids": [],
+      "tolerance": 0
+    }
+  },
+  "byte_identity": {
+    "identity": "DIVERGENT",
+    "differences": 3,
+    "total_generations": 24,
+    "match_rate": 0.875,
+    "diff_examples": [
+      {
+        "item_id": "syn_03",
+        "query_type": "hop1",
+        "fp16_raw": "ANSWER: B3",
+        "int8_raw": "ANSWER: WRONG_B3"
+      },
+      {
+        "item_id": "syn_05",
+        "query_type": "composite",
+        "fp16_raw": "ANSWER: C5",
+        "int8_raw": "ANSWER: WRONG_C5"
+      },
+      {
+        "item_id": "syn_07",
+        "query_type": "hop2",
+        "fp16_raw": "ANSWER: C7",
+        "int8_raw": "ANSWER: WRONG_C7"
+      }
+    ]
+  },
+  "construction_task_verdict": "OK",
+  "compression_observation": "DIVERGENCE",
+  "retention_compression_verdict": "DROP",
+  "forbidden_interpretations": [
+    "Claim C progress",
+    "Paper B activation",
+    "general compression robustness",
+    "certified baseline",
+    "task family viability",
+    "model passed / capability established / not shortcut-driven",
+    "product/funder-facing result",
+    "mechanism / architecture / training-distribution claim"
+  ],
+  "rule_sources": [
+    "PREREGISTRATION \u00a76 of MINIMAL-FP16-INT8-TWOHOP-L1-v0.1 (FP16-baseline gate)",
+    "Senior post-run breakdown v0.2 (terminal-attraction signature)",
+    "Terminal-Attraction finding report (same-token-across-queries i06 signature)"
+  ],
+  "timestamp_utc": "2026-06-15T10:18:17Z",
+  "_expected_match": false,
+  "_expected_compared_keys": [
+    "retention_compression_verdict",
+    "construction_task_verdict",
+    "compression_observation"
+  ]
+}

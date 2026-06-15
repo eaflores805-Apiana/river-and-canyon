@@ -1,0 +1,60 @@
+{
+  "evaluator_version": "0.2",
+  "run_dir": "experiments/2026-06-15_minimal-fp16-int8-twohop-l1",
+  "status": "EVALUATED",
+  "preregistration_exists": true,
+  "preregistration_path": "experiments/2026-06-15_minimal-fp16-int8-twohop-l1/PREREGISTRATION.md",
+  "fp16_raw_present": true,
+  "int8_raw_present": true,
+  "baseline_gate": {
+    "verdict": "FAIL",
+    "rule_a_component_competence": {
+      "pass": false,
+      "hop1_correct": 0,
+      "hop1_n": 8,
+      "hop1_correct_rate": 0.0,
+      "threshold": 0.5
+    },
+    "rule_b_composite_chain_following": {
+      "pass": false,
+      "composite_correct_total": 1,
+      "same_token_across_queries_count": 1,
+      "same_token_item_ids": [
+        "twohop_l1_c03_i06"
+      ],
+      "tolerance": 0
+    }
+  },
+  "byte_identity": {
+    "identity": "IDENTICAL",
+    "differences": 0,
+    "total_generations": 24,
+    "match_rate": 1.0,
+    "diff_examples": []
+  },
+  "construction_task_verdict": "NEGATIVE_TERMINAL_ATTRACTION",
+  "compression_observation": "SAME_ERROR_IDENTITY",
+  "retention_compression_verdict": "INCONCLUSIVE",
+  "forbidden_interpretations": [
+    "Claim C progress",
+    "Paper B activation",
+    "general compression robustness",
+    "certified baseline",
+    "task family viability",
+    "model passed / capability established / not shortcut-driven",
+    "product/funder-facing result",
+    "mechanism / architecture / training-distribution claim"
+  ],
+  "rule_sources": [
+    "PREREGISTRATION \u00a76 of MINIMAL-FP16-INT8-TWOHOP-L1-v0.1 (FP16-baseline gate)",
+    "Senior post-run breakdown v0.2 (terminal-attraction signature)",
+    "Terminal-Attraction finding report (same-token-across-queries i06 signature)"
+  ],
+  "timestamp_utc": "2026-06-15T10:18:17Z",
+  "_expected_match": true,
+  "_expected_compared_keys": [
+    "retention_compression_verdict",
+    "construction_task_verdict",
+    "compression_observation"
+  ]
+}
