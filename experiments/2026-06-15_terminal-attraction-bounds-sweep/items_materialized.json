@@ -1,0 +1,8042 @@
+[
+  {
+    "item_id": "tabs_v01_k1_E_01",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAONJ",
+      "B": "ZBMGJ",
+      "C": "RVESG"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "JCKMJ",
+        "V": "JUSTZ"
+      },
+      {
+        "W": "UWCBG",
+        "V": "KZDVV"
+      }
+    ],
+    "all_terminals": [
+      "RVESG"
+    ],
+    "all_intermediates": [
+      "ZBMGJ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBMGJ maps to RVESG."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "UWCBG holds KZDVV."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAONJ links to ZBMGJ."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "JCKMJ holds JUSTZ."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAONJ",
+        "expected_answer": "ZBMGJ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBMGJ",
+        "expected_answer": "RVESG",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAONJ",
+        "expected_answer": "RVESG",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_02",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZASWG",
+      "B": "ZBJGK",
+      "C": "CLWLW"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "RBKXD",
+        "V": "FFROZ"
+      },
+      {
+        "W": "ZHERZ",
+        "V": "MDJSG"
+      }
+    ],
+    "all_terminals": [
+      "CLWLW"
+    ],
+    "all_intermediates": [
+      "ZBJGK"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBJGK maps to CLWLW."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "RBKXD holds FFROZ."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "ZHERZ holds MDJSG."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZASWG links to ZBJGK."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZASWG",
+        "expected_answer": "ZBJGK",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBJGK",
+        "expected_answer": "CLWLW",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZASWG",
+        "expected_answer": "CLWLW",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_03",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAYDI",
+      "B": "ZBOEJ",
+      "C": "PSLZN"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "BNPEH",
+        "V": "DSIRP"
+      },
+      {
+        "W": "OFVHJ",
+        "V": "DPMGF"
+      }
+    ],
+    "all_terminals": [
+      "PSLZN"
+    ],
+    "all_intermediates": [
+      "ZBOEJ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBOEJ maps to PSLZN."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "OFVHJ holds DPMGF."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "BNPEH holds DSIRP."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAYDI links to ZBOEJ."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAYDI",
+        "expected_answer": "ZBOEJ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBOEJ",
+        "expected_answer": "PSLZN",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAYDI",
+        "expected_answer": "PSLZN",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_04",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAUKQ",
+      "B": "ZBMLD",
+      "C": "NFXGS"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "PZXEO",
+        "V": "KEYZL"
+      },
+      {
+        "W": "KKLAG",
+        "V": "MWVVW"
+      }
+    ],
+    "all_terminals": [
+      "NFXGS"
+    ],
+    "all_intermediates": [
+      "ZBMLD"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBMLD maps to NFXGS."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "KKLAG holds MWVVW."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAUKQ links to ZBMLD."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "PZXEO holds KEYZL."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAUKQ",
+        "expected_answer": "ZBMLD",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBMLD",
+        "expected_answer": "NFXGS",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAUKQ",
+        "expected_answer": "NFXGS",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_05",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAVJU",
+      "B": "ZBBLN",
+      "C": "AVRTM"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "XBSFH",
+        "V": "ZXMDG"
+      },
+      {
+        "W": "HYQZR",
+        "V": "CXXWE"
+      }
+    ],
+    "all_terminals": [
+      "AVRTM"
+    ],
+    "all_intermediates": [
+      "ZBBLN"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBBLN maps to AVRTM."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAVJU links to ZBBLN."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "XBSFH holds ZXMDG."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "HYQZR holds CXXWE."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAVJU",
+        "expected_answer": "ZBBLN",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBBLN",
+        "expected_answer": "AVRTM",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAVJU",
+        "expected_answer": "AVRTM",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_06",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAWIS",
+      "B": "ZBSWY",
+      "C": "EWLGH"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "BMGWD",
+        "V": "YATUB"
+      },
+      {
+        "W": "VLIDH",
+        "V": "OKEBG"
+      }
+    ],
+    "all_terminals": [
+      "EWLGH"
+    ],
+    "all_intermediates": [
+      "ZBSWY"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBSWY maps to EWLGH."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VLIDH holds OKEBG."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "BMGWD holds YATUB."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAWIS links to ZBSWY."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAWIS",
+        "expected_answer": "ZBSWY",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBSWY",
+        "expected_answer": "EWLGH",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAWIS",
+        "expected_answer": "EWLGH",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_07",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAJPW",
+      "B": "ZBYGT",
+      "C": "YGSLD"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "QAGFA",
+        "V": "ZJUOS"
+      },
+      {
+        "W": "HCFXN",
+        "V": "KAJHT"
+      }
+    ],
+    "all_terminals": [
+      "YGSLD"
+    ],
+    "all_intermediates": [
+      "ZBYGT"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBYGT maps to YGSLD."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "HCFXN holds KAJHT."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAJPW links to ZBYGT."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QAGFA holds ZJUOS."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAJPW",
+        "expected_answer": "ZBYGT",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBYGT",
+        "expected_answer": "YGSLD",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAJPW",
+        "expected_answer": "YGSLD",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_08",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAWDZ",
+      "B": "ZBCGG",
+      "C": "AVURX"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "VCNFW",
+        "V": "QDKEL"
+      },
+      {
+        "W": "FNTVF",
+        "V": "XRYEN"
+      }
+    ],
+    "all_terminals": [
+      "AVURX"
+    ],
+    "all_intermediates": [
+      "ZBCGG"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBCGG maps to AVURX."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VCNFW holds QDKEL."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "FNTVF holds XRYEN."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAWDZ links to ZBCGG."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAWDZ",
+        "expected_answer": "ZBCGG",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBCGG",
+        "expected_answer": "AVURX",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAWDZ",
+        "expected_answer": "AVURX",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_09",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAATD",
+      "B": "ZBGJD",
+      "C": "JJGFM"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "VQEYN",
+        "V": "JCHQO"
+      },
+      {
+        "W": "MQJRS",
+        "V": "AOVVA"
+      }
+    ],
+    "all_terminals": [
+      "JJGFM"
+    ],
+    "all_intermediates": [
+      "ZBGJD"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBGJD maps to JJGFM."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VQEYN holds JCHQO."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MQJRS holds AOVVA."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAATD links to ZBGJD."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAATD",
+        "expected_answer": "ZBGJD",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBGJD",
+        "expected_answer": "JJGFM",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAATD",
+        "expected_answer": "JJGFM",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_10",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAFBR",
+      "B": "ZBYZS",
+      "C": "ESVUQ"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "XFEOX",
+        "V": "GTANR"
+      },
+      {
+        "W": "YWIXD",
+        "V": "PQLWR"
+      }
+    ],
+    "all_terminals": [
+      "ESVUQ"
+    ],
+    "all_intermediates": [
+      "ZBYZS"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBYZS maps to ESVUQ."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAFBR links to ZBYZS."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "XFEOX holds GTANR."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "YWIXD holds PQLWR."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAFBR",
+        "expected_answer": "ZBYZS",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBYZS",
+        "expected_answer": "ESVUQ",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAFBR",
+        "expected_answer": "ESVUQ",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_11",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZADVP",
+      "B": "ZBDIQ",
+      "C": "UPDVQ"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "OHQGG",
+        "V": "EWKDA"
+      },
+      {
+        "W": "ZOTNA",
+        "V": "FEBUB"
+      }
+    ],
+    "all_terminals": [
+      "UPDVQ"
+    ],
+    "all_intermediates": [
+      "ZBDIQ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBDIQ maps to UPDVQ."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "OHQGG holds EWKDA."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "ZOTNA holds FEBUB."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZADVP links to ZBDIQ."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZADVP",
+        "expected_answer": "ZBDIQ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBDIQ",
+        "expected_answer": "UPDVQ",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZADVP",
+        "expected_answer": "UPDVQ",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_E_12",
+    "cell": "k1_EARLY",
+    "k": 1,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZANJK",
+      "B": "ZBULZ",
+      "C": "DPKLL"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "MCWQR",
+        "V": "KTHXS"
+      },
+      {
+        "W": "XNAUS",
+        "V": "SSJGF"
+      }
+    ],
+    "all_terminals": [
+      "DPKLL"
+    ],
+    "all_intermediates": [
+      "ZBULZ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBULZ maps to DPKLL."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "XNAUS holds SSJGF."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MCWQR holds KTHXS."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZANJK links to ZBULZ."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZANJK",
+        "expected_answer": "ZBULZ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBULZ",
+        "expected_answer": "DPKLL",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZANJK",
+        "expected_answer": "DPKLL",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_01",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZARGI",
+      "B": "ZBCQZ",
+      "C": "TXPZK"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "AKOYU",
+        "V": "OQWRM"
+      },
+      {
+        "W": "YQGMK",
+        "V": "GEIWC"
+      }
+    ],
+    "all_terminals": [
+      "TXPZK"
+    ],
+    "all_intermediates": [
+      "ZBCQZ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "YQGMK holds GEIWC."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZARGI links to ZBCQZ."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "AKOYU holds OQWRM."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBCQZ maps to TXPZK."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZARGI",
+        "expected_answer": "ZBCQZ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBCQZ",
+        "expected_answer": "TXPZK",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZARGI",
+        "expected_answer": "TXPZK",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_02",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAVGS",
+      "B": "ZBGPR",
+      "C": "JFBCP"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "BSIOU",
+        "V": "ZFIZS"
+      },
+      {
+        "W": "PEJJA",
+        "V": "DJILG"
+      }
+    ],
+    "all_terminals": [
+      "JFBCP"
+    ],
+    "all_intermediates": [
+      "ZBGPR"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "PEJJA holds DJILG."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAVGS links to ZBGPR."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "BSIOU holds ZFIZS."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBGPR maps to JFBCP."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAVGS",
+        "expected_answer": "ZBGPR",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBGPR",
+        "expected_answer": "JFBCP",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAVGS",
+        "expected_answer": "JFBCP",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_03",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAORK",
+      "B": "ZBQGQ",
+      "C": "FABUZ"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "REQTG",
+        "V": "VKHXI"
+      },
+      {
+        "W": "FXKTQ",
+        "V": "TZTEG"
+      }
+    ],
+    "all_terminals": [
+      "FABUZ"
+    ],
+    "all_intermediates": [
+      "ZBQGQ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "FXKTQ holds TZTEG."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "REQTG holds VKHXI."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAORK links to ZBQGQ."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBQGQ maps to FABUZ."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAORK",
+        "expected_answer": "ZBQGQ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBQGQ",
+        "expected_answer": "FABUZ",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAORK",
+        "expected_answer": "FABUZ",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_04",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAJQE",
+      "B": "ZBUJR",
+      "C": "DMTXN"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "YWPWL",
+        "V": "EESZZ"
+      },
+      {
+        "W": "GARJT",
+        "V": "VOKSS"
+      }
+    ],
+    "all_terminals": [
+      "DMTXN"
+    ],
+    "all_intermediates": [
+      "ZBUJR"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAJQE links to ZBUJR."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "YWPWL holds EESZZ."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "GARJT holds VOKSS."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBUJR maps to DMTXN."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAJQE",
+        "expected_answer": "ZBUJR",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBUJR",
+        "expected_answer": "DMTXN",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAJQE",
+        "expected_answer": "DMTXN",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_05",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAEPD",
+      "B": "ZBZXD",
+      "C": "ZPSOE"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "EUDDB",
+        "V": "JLTZH"
+      },
+      {
+        "W": "INUXU",
+        "V": "MLWBS"
+      }
+    ],
+    "all_terminals": [
+      "ZPSOE"
+    ],
+    "all_intermediates": [
+      "ZBZXD"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "INUXU holds MLWBS."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAEPD links to ZBZXD."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "EUDDB holds JLTZH."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBZXD maps to ZPSOE."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAEPD",
+        "expected_answer": "ZBZXD",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBZXD",
+        "expected_answer": "ZPSOE",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAEPD",
+        "expected_answer": "ZPSOE",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_06",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAZJZ",
+      "B": "ZBIJJ",
+      "C": "KYLZO"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "AGZPX",
+        "V": "ECONL"
+      },
+      {
+        "W": "QFVAI",
+        "V": "OWNPP"
+      }
+    ],
+    "all_terminals": [
+      "KYLZO"
+    ],
+    "all_intermediates": [
+      "ZBIJJ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAZJZ links to ZBIJJ."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QFVAI holds OWNPP."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "AGZPX holds ECONL."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBIJJ maps to KYLZO."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAZJZ",
+        "expected_answer": "ZBIJJ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBIJJ",
+        "expected_answer": "KYLZO",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAZJZ",
+        "expected_answer": "KYLZO",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_07",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAUGK",
+      "B": "ZBNGF",
+      "C": "AGXDO"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "RBTLP",
+        "V": "MZHVU"
+      },
+      {
+        "W": "HTMVG",
+        "V": "RTGMV"
+      }
+    ],
+    "all_terminals": [
+      "AGXDO"
+    ],
+    "all_intermediates": [
+      "ZBNGF"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAUGK links to ZBNGF."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "HTMVG holds RTGMV."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "RBTLP holds MZHVU."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBNGF maps to AGXDO."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAUGK",
+        "expected_answer": "ZBNGF",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBNGF",
+        "expected_answer": "AGXDO",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAUGK",
+        "expected_answer": "AGXDO",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_08",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZARWW",
+      "B": "ZBGTE",
+      "C": "OPHZM"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "CDRSF",
+        "V": "DWYVJ"
+      },
+      {
+        "W": "TDUIO",
+        "V": "ALRMM"
+      }
+    ],
+    "all_terminals": [
+      "OPHZM"
+    ],
+    "all_intermediates": [
+      "ZBGTE"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZARWW links to ZBGTE."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "CDRSF holds DWYVJ."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TDUIO holds ALRMM."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBGTE maps to OPHZM."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZARWW",
+        "expected_answer": "ZBGTE",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBGTE",
+        "expected_answer": "OPHZM",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZARWW",
+        "expected_answer": "OPHZM",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_09",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAHIQ",
+      "B": "ZBKDC",
+      "C": "CJKJP"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "BCRXI",
+        "V": "QMBIG"
+      },
+      {
+        "W": "XQZEA",
+        "V": "BQRJS"
+      }
+    ],
+    "all_terminals": [
+      "CJKJP"
+    ],
+    "all_intermediates": [
+      "ZBKDC"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "BCRXI holds QMBIG."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAHIQ links to ZBKDC."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "XQZEA holds BQRJS."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBKDC maps to CJKJP."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAHIQ",
+        "expected_answer": "ZBKDC",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBKDC",
+        "expected_answer": "CJKJP",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAHIQ",
+        "expected_answer": "CJKJP",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_10",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAASY",
+      "B": "ZBEMG",
+      "C": "YWPQA"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "MQOCR",
+        "V": "LNZNW"
+      },
+      {
+        "W": "APWBC",
+        "V": "YPEHB"
+      }
+    ],
+    "all_terminals": [
+      "YWPQA"
+    ],
+    "all_intermediates": [
+      "ZBEMG"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "APWBC holds YPEHB."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MQOCR holds LNZNW."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAASY links to ZBEMG."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBEMG maps to YWPQA."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAASY",
+        "expected_answer": "ZBEMG",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBEMG",
+        "expected_answer": "YWPQA",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAASY",
+        "expected_answer": "YWPQA",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_11",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAOSQ",
+      "B": "ZBWES",
+      "C": "UPRMA"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "VEVEI",
+        "V": "HIPQC"
+      },
+      {
+        "W": "RKWGQ",
+        "V": "VRTRG"
+      }
+    ],
+    "all_terminals": [
+      "UPRMA"
+    ],
+    "all_intermediates": [
+      "ZBWES"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAOSQ links to ZBWES."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VEVEI holds HIPQC."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "RKWGQ holds VRTRG."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBWES maps to UPRMA."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAOSQ",
+        "expected_answer": "ZBWES",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBWES",
+        "expected_answer": "UPRMA",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAOSQ",
+        "expected_answer": "UPRMA",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k1_L_12",
+    "cell": "k1_LATE",
+    "k": 1,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAQDY",
+      "B": "ZBMUY",
+      "C": "IDBXS"
+    },
+    "decoy_chains": [],
+    "holds": [
+      {
+        "W": "YYIYE",
+        "V": "SDIXX"
+      },
+      {
+        "W": "CFVRF",
+        "V": "BEXMO"
+      }
+    ],
+    "all_terminals": [
+      "IDBXS"
+    ],
+    "all_intermediates": [
+      "ZBMUY"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "YYIYE holds SDIXX."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAQDY links to ZBMUY."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "CFVRF holds BEXMO."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBMUY maps to IDBXS."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 4,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAQDY",
+        "expected_answer": "ZBMUY",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBMUY",
+        "expected_answer": "IDBXS",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAQDY",
+        "expected_answer": "IDBXS",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_01",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZALMK",
+      "B": "ZBUFQ",
+      "C": "RAWFB"
+    },
+    "decoy_chains": [
+      {
+        "A": "RJLIN",
+        "B": "BXHRA",
+        "C": "CFQUR"
+      },
+      {
+        "A": "UYIXB",
+        "B": "UMFLN",
+        "C": "GIPZG"
+      }
+    ],
+    "holds": [
+      {
+        "W": "JYJQO",
+        "V": "TXMWA"
+      },
+      {
+        "W": "LTLCM",
+        "V": "NNRMN"
+      }
+    ],
+    "all_terminals": [
+      "CFQUR",
+      "GIPZG",
+      "RAWFB"
+    ],
+    "all_intermediates": [
+      "BXHRA",
+      "UMFLN",
+      "ZBUFQ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "UMFLN maps to GIPZG."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBUFQ maps to RAWFB."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "LTLCM holds NNRMN."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "JYJQO holds TXMWA."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "RJLIN links to BXHRA."
+      },
+      {
+        "position_index": 6,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZALMK links to ZBUFQ."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "UYIXB links to UMFLN."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "BXHRA maps to CFQUR."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZALMK",
+        "expected_answer": "ZBUFQ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBUFQ",
+        "expected_answer": "RAWFB",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZALMK",
+        "expected_answer": "RAWFB",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_02",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAMLQ",
+      "B": "ZBRBV",
+      "C": "YWVHY"
+    },
+    "decoy_chains": [
+      {
+        "A": "AVOCP",
+        "B": "VQQMY",
+        "C": "TRSOE"
+      },
+      {
+        "A": "LCFVR",
+        "B": "VCOTK",
+        "C": "SXYXT"
+      }
+    ],
+    "holds": [
+      {
+        "W": "QXJWM",
+        "V": "MOIDK"
+      },
+      {
+        "W": "MKVPG",
+        "V": "LTDRT"
+      }
+    ],
+    "all_terminals": [
+      "SXYXT",
+      "TRSOE",
+      "YWVHY"
+    ],
+    "all_intermediates": [
+      "VCOTK",
+      "VQQMY",
+      "ZBRBV"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAMLQ links to ZBRBV."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBRBV maps to YWVHY."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MKVPG holds LTDRT."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QXJWM holds MOIDK."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "LCFVR links to VCOTK."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "VQQMY maps to TRSOE."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "AVOCP links to VQQMY."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "VCOTK maps to SXYXT."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAMLQ",
+        "expected_answer": "ZBRBV",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBRBV",
+        "expected_answer": "YWVHY",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAMLQ",
+        "expected_answer": "YWVHY",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_03",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAEPI",
+      "B": "ZBYYG",
+      "C": "MAYNI"
+    },
+    "decoy_chains": [
+      {
+        "A": "IHJOR",
+        "B": "VHLRB",
+        "C": "XARSO"
+      },
+      {
+        "A": "QIKCE",
+        "B": "KSTWM",
+        "C": "PJRIP"
+      }
+    ],
+    "holds": [
+      {
+        "W": "JHWAZ",
+        "V": "CYISR"
+      },
+      {
+        "W": "NZPBB",
+        "V": "DPGOC"
+      }
+    ],
+    "all_terminals": [
+      "MAYNI",
+      "PJRIP",
+      "XARSO"
+    ],
+    "all_intermediates": [
+      "KSTWM",
+      "VHLRB",
+      "ZBYYG"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAEPI links to ZBYYG."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBYYG maps to MAYNI."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "JHWAZ holds CYISR."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "QIKCE links to KSTWM."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "IHJOR links to VHLRB."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "KSTWM maps to PJRIP."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "NZPBB holds DPGOC."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "VHLRB maps to XARSO."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAEPI",
+        "expected_answer": "ZBYYG",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBYYG",
+        "expected_answer": "MAYNI",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAEPI",
+        "expected_answer": "MAYNI",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_04",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAWFI",
+      "B": "ZBLMO",
+      "C": "EAIHJ"
+    },
+    "decoy_chains": [
+      {
+        "A": "QAMDN",
+        "B": "IOOAT",
+        "C": "EVQXA"
+      },
+      {
+        "A": "XJJDG",
+        "B": "JJLXJ",
+        "C": "OLSFD"
+      }
+    ],
+    "holds": [
+      {
+        "W": "SLZHS",
+        "V": "BCXHN"
+      },
+      {
+        "W": "TKKFY",
+        "V": "UNIHQ"
+      }
+    ],
+    "all_terminals": [
+      "EAIHJ",
+      "EVQXA",
+      "OLSFD"
+    ],
+    "all_intermediates": [
+      "IOOAT",
+      "JJLXJ",
+      "ZBLMO"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBLMO maps to EAIHJ."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAWFI links to ZBLMO."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TKKFY holds UNIHQ."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "XJJDG links to JJLXJ."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "SLZHS holds BCXHN."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "JJLXJ maps to OLSFD."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "IOOAT maps to EVQXA."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "QAMDN links to IOOAT."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAWFI",
+        "expected_answer": "ZBLMO",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBLMO",
+        "expected_answer": "EAIHJ",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAWFI",
+        "expected_answer": "EAIHJ",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_05",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAYCZ",
+      "B": "ZBFYR",
+      "C": "CATLW"
+    },
+    "decoy_chains": [
+      {
+        "A": "DTVXK",
+        "B": "SUNMC",
+        "C": "KLMJR"
+      },
+      {
+        "A": "IVCUS",
+        "B": "GFBDQ",
+        "C": "IOVMI"
+      }
+    ],
+    "holds": [
+      {
+        "W": "BUXFL",
+        "V": "CODFH"
+      },
+      {
+        "W": "VUMBY",
+        "V": "PWCLN"
+      }
+    ],
+    "all_terminals": [
+      "CATLW",
+      "IOVMI",
+      "KLMJR"
+    ],
+    "all_intermediates": [
+      "GFBDQ",
+      "SUNMC",
+      "ZBFYR"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBFYR maps to CATLW."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "BUXFL holds CODFH."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VUMBY holds PWCLN."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "IVCUS links to GFBDQ."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "SUNMC maps to KLMJR."
+      },
+      {
+        "position_index": 6,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAYCZ links to ZBFYR."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "DTVXK links to SUNMC."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "GFBDQ maps to IOVMI."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAYCZ",
+        "expected_answer": "ZBFYR",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBFYR",
+        "expected_answer": "CATLW",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAYCZ",
+        "expected_answer": "CATLW",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_06",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAGVG",
+      "B": "ZBXEZ",
+      "C": "BRUJL"
+    },
+    "decoy_chains": [
+      {
+        "A": "KCAYY",
+        "B": "YBTLX",
+        "C": "MUALX"
+      },
+      {
+        "A": "ITGHX",
+        "B": "ZRJJN",
+        "C": "ZXYIC"
+      }
+    ],
+    "holds": [
+      {
+        "W": "MPIIN",
+        "V": "LNKER"
+      },
+      {
+        "W": "EIBTH",
+        "V": "OPGKH"
+      }
+    ],
+    "all_terminals": [
+      "BRUJL",
+      "MUALX",
+      "ZXYIC"
+    ],
+    "all_intermediates": [
+      "YBTLX",
+      "ZBXEZ",
+      "ZRJJN"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "KCAYY links to YBTLX."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBXEZ maps to BRUJL."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MPIIN holds LNKER."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "YBTLX maps to MUALX."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "ITGHX links to ZRJJN."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "EIBTH holds OPGKH."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "ZRJJN maps to ZXYIC."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAGVG links to ZBXEZ."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAGVG",
+        "expected_answer": "ZBXEZ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBXEZ",
+        "expected_answer": "BRUJL",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAGVG",
+        "expected_answer": "BRUJL",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_07",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAGIJ",
+      "B": "ZBVXS",
+      "C": "EHJIX"
+    },
+    "decoy_chains": [
+      {
+        "A": "CICXA",
+        "B": "JHBHA",
+        "C": "YASIX"
+      },
+      {
+        "A": "CJZST",
+        "B": "FQDNU",
+        "C": "ALLAQ"
+      }
+    ],
+    "holds": [
+      {
+        "W": "XTIEF",
+        "V": "UWYEQ"
+      },
+      {
+        "W": "RUEMF",
+        "V": "WLGIM"
+      }
+    ],
+    "all_terminals": [
+      "ALLAQ",
+      "EHJIX",
+      "YASIX"
+    ],
+    "all_intermediates": [
+      "FQDNU",
+      "JHBHA",
+      "ZBVXS"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "XTIEF holds UWYEQ."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBVXS maps to EHJIX."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "FQDNU maps to ALLAQ."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "CICXA links to JHBHA."
+      },
+      {
+        "position_index": 5,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAGIJ links to ZBVXS."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "JHBHA maps to YASIX."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "CJZST links to FQDNU."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "RUEMF holds WLGIM."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAGIJ",
+        "expected_answer": "ZBVXS",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBVXS",
+        "expected_answer": "EHJIX",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAGIJ",
+        "expected_answer": "EHJIX",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_08",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAIDQ",
+      "B": "ZBFRD",
+      "C": "NKULL"
+    },
+    "decoy_chains": [
+      {
+        "A": "CXDEV",
+        "B": "ISQIP",
+        "C": "WXDEP"
+      },
+      {
+        "A": "XXMZE",
+        "B": "PQJGU",
+        "C": "VPJXW"
+      }
+    ],
+    "holds": [
+      {
+        "W": "TQDAH",
+        "V": "ZHXPC"
+      },
+      {
+        "W": "XCUDK",
+        "V": "DGXTQ"
+      }
+    ],
+    "all_terminals": [
+      "NKULL",
+      "VPJXW",
+      "WXDEP"
+    ],
+    "all_intermediates": [
+      "ISQIP",
+      "PQJGU",
+      "ZBFRD"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAIDQ links to ZBFRD."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBFRD maps to NKULL."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "XCUDK holds DGXTQ."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "CXDEV links to ISQIP."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "XXMZE links to PQJGU."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "PQJGU maps to VPJXW."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "ISQIP maps to WXDEP."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TQDAH holds ZHXPC."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAIDQ",
+        "expected_answer": "ZBFRD",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBFRD",
+        "expected_answer": "NKULL",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAIDQ",
+        "expected_answer": "NKULL",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_09",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAKTP",
+      "B": "ZBFKV",
+      "C": "RVMAG"
+    },
+    "decoy_chains": [
+      {
+        "A": "JVZLL",
+        "B": "DFCIL",
+        "C": "ICKEU"
+      },
+      {
+        "A": "JIRYJ",
+        "B": "BWUVA",
+        "C": "USCQS"
+      }
+    ],
+    "holds": [
+      {
+        "W": "JXIXQ",
+        "V": "TXHUT"
+      },
+      {
+        "W": "PAESA",
+        "V": "QUEMU"
+      }
+    ],
+    "all_terminals": [
+      "ICKEU",
+      "RVMAG",
+      "USCQS"
+    ],
+    "all_intermediates": [
+      "BWUVA",
+      "DFCIL",
+      "ZBFKV"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBFKV maps to RVMAG."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "PAESA holds QUEMU."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "BWUVA maps to USCQS."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "JVZLL links to DFCIL."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "JXIXQ holds TXHUT."
+      },
+      {
+        "position_index": 6,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAKTP links to ZBFKV."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "JIRYJ links to BWUVA."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "DFCIL maps to ICKEU."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAKTP",
+        "expected_answer": "ZBFKV",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBFKV",
+        "expected_answer": "RVMAG",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAKTP",
+        "expected_answer": "RVMAG",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_10",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZABZK",
+      "B": "ZBJDL",
+      "C": "SIIHV"
+    },
+    "decoy_chains": [
+      {
+        "A": "BWJQT",
+        "B": "DNEMX",
+        "C": "IAUPY"
+      },
+      {
+        "A": "PHBXT",
+        "B": "KAZWX",
+        "C": "SSGXH"
+      }
+    ],
+    "holds": [
+      {
+        "W": "AMDZC",
+        "V": "YJDVG"
+      },
+      {
+        "W": "VFSXA",
+        "V": "WHXTG"
+      }
+    ],
+    "all_terminals": [
+      "IAUPY",
+      "SIIHV",
+      "SSGXH"
+    ],
+    "all_intermediates": [
+      "DNEMX",
+      "KAZWX",
+      "ZBJDL"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VFSXA holds WHXTG."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBJDL maps to SIIHV."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "AMDZC holds YJDVG."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "DNEMX maps to IAUPY."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "PHBXT links to KAZWX."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "BWJQT links to DNEMX."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZABZK links to ZBJDL."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "KAZWX maps to SSGXH."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZABZK",
+        "expected_answer": "ZBJDL",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBJDL",
+        "expected_answer": "SIIHV",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZABZK",
+        "expected_answer": "SIIHV",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_11",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAFWB",
+      "B": "ZBJGX",
+      "C": "UDJSW"
+    },
+    "decoy_chains": [
+      {
+        "A": "KEVIN",
+        "B": "EOEXV",
+        "C": "NJPKE"
+      },
+      {
+        "A": "QPRMM",
+        "B": "QOCPT",
+        "C": "PUEEL"
+      }
+    ],
+    "holds": [
+      {
+        "W": "MEWVC",
+        "V": "GCMSY"
+      },
+      {
+        "W": "XVHRZ",
+        "V": "DZOXR"
+      }
+    ],
+    "all_terminals": [
+      "NJPKE",
+      "PUEEL",
+      "UDJSW"
+    ],
+    "all_intermediates": [
+      "EOEXV",
+      "QOCPT",
+      "ZBJGX"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBJGX maps to UDJSW."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "QPRMM links to QOCPT."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MEWVC holds GCMSY."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "QOCPT maps to PUEEL."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "XVHRZ holds DZOXR."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "EOEXV maps to NJPKE."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAFWB links to ZBJGX."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "KEVIN links to EOEXV."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAFWB",
+        "expected_answer": "ZBJGX",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBJGX",
+        "expected_answer": "UDJSW",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAFWB",
+        "expected_answer": "UDJSW",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_E_12",
+    "cell": "k3_EARLY",
+    "k": 3,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAMSV",
+      "B": "ZBUHV",
+      "C": "KRJBM"
+    },
+    "decoy_chains": [
+      {
+        "A": "CSPER",
+        "B": "PZOBR",
+        "C": "MFMDX"
+      },
+      {
+        "A": "ULAMX",
+        "B": "KMESW",
+        "C": "KPMCT"
+      }
+    ],
+    "holds": [
+      {
+        "W": "AYEFM",
+        "V": "UODPZ"
+      },
+      {
+        "W": "TTHRF",
+        "V": "MVWAU"
+      }
+    ],
+    "all_terminals": [
+      "KPMCT",
+      "KRJBM",
+      "MFMDX"
+    ],
+    "all_intermediates": [
+      "KMESW",
+      "PZOBR",
+      "ZBUHV"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBUHV maps to KRJBM."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAMSV links to ZBUHV."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "PZOBR maps to MFMDX."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "AYEFM holds UODPZ."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TTHRF holds MVWAU."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "CSPER links to PZOBR."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "ULAMX links to KMESW."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "KMESW maps to KPMCT."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAMSV",
+        "expected_answer": "ZBUHV",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBUHV",
+        "expected_answer": "KRJBM",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAMSV",
+        "expected_answer": "KRJBM",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_01",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAYGH",
+      "B": "ZBJRT",
+      "C": "DZADX"
+    },
+    "decoy_chains": [
+      {
+        "A": "VVEBX",
+        "B": "PESJG",
+        "C": "FXVKG"
+      },
+      {
+        "A": "BTTDZ",
+        "B": "GIJHW",
+        "C": "HRZJT"
+      }
+    ],
+    "holds": [
+      {
+        "W": "OQLEE",
+        "V": "FZZQT"
+      },
+      {
+        "W": "VFTPX",
+        "V": "WXCYW"
+      }
+    ],
+    "all_terminals": [
+      "DZADX",
+      "FXVKG",
+      "HRZJT"
+    ],
+    "all_intermediates": [
+      "GIJHW",
+      "PESJG",
+      "ZBJRT"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "BTTDZ links to GIJHW."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "GIJHW maps to HRZJT."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAYGH links to ZBJRT."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "VVEBX links to PESJG."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VFTPX holds WXCYW."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "OQLEE holds FZZQT."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBJRT maps to DZADX."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "PESJG maps to FXVKG."
+      }
+    ],
+    "target_hop2_position_index": 7,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAYGH",
+        "expected_answer": "ZBJRT",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBJRT",
+        "expected_answer": "DZADX",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAYGH",
+        "expected_answer": "DZADX",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_02",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAJXP",
+      "B": "ZBGMV",
+      "C": "BUZYM"
+    },
+    "decoy_chains": [
+      {
+        "A": "YUWBR",
+        "B": "JXLZP",
+        "C": "QDFBX"
+      },
+      {
+        "A": "EUHAQ",
+        "B": "GPOGS",
+        "C": "QDNWF"
+      }
+    ],
+    "holds": [
+      {
+        "W": "QDGZR",
+        "V": "BIMPI"
+      },
+      {
+        "W": "MJLNL",
+        "V": "ZZIIR"
+      }
+    ],
+    "all_terminals": [
+      "BUZYM",
+      "QDFBX",
+      "QDNWF"
+    ],
+    "all_intermediates": [
+      "GPOGS",
+      "JXLZP",
+      "ZBGMV"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MJLNL holds ZZIIR."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "EUHAQ links to GPOGS."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QDGZR holds BIMPI."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "YUWBR links to JXLZP."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "JXLZP maps to QDFBX."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "GPOGS maps to QDNWF."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBGMV maps to BUZYM."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAJXP links to ZBGMV."
+      }
+    ],
+    "target_hop2_position_index": 7,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAJXP",
+        "expected_answer": "ZBGMV",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBGMV",
+        "expected_answer": "BUZYM",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAJXP",
+        "expected_answer": "BUZYM",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_03",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAOEW",
+      "B": "ZBMBI",
+      "C": "HYYNA"
+    },
+    "decoy_chains": [
+      {
+        "A": "RMXSZ",
+        "B": "TOHYD",
+        "C": "TNVWL"
+      },
+      {
+        "A": "FGTLD",
+        "B": "GETXW",
+        "C": "QRTEM"
+      }
+    ],
+    "holds": [
+      {
+        "W": "HXKEP",
+        "V": "YCBWF"
+      },
+      {
+        "W": "ATASQ",
+        "V": "MSQWF"
+      }
+    ],
+    "all_terminals": [
+      "HYYNA",
+      "QRTEM",
+      "TNVWL"
+    ],
+    "all_intermediates": [
+      "GETXW",
+      "TOHYD",
+      "ZBMBI"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAOEW links to ZBMBI."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "FGTLD links to GETXW."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "GETXW maps to QRTEM."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "RMXSZ links to TOHYD."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "ATASQ holds MSQWF."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "HXKEP holds YCBWF."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBMBI maps to HYYNA."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "TOHYD maps to TNVWL."
+      }
+    ],
+    "target_hop2_position_index": 7,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAOEW",
+        "expected_answer": "ZBMBI",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBMBI",
+        "expected_answer": "HYYNA",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAOEW",
+        "expected_answer": "HYYNA",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_04",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAQGL",
+      "B": "ZBVAW",
+      "C": "PHCWN"
+    },
+    "decoy_chains": [
+      {
+        "A": "CCDQC",
+        "B": "DCTTZ",
+        "C": "KNKHV"
+      },
+      {
+        "A": "XLPMJ",
+        "B": "XWVEE",
+        "C": "XKFXX"
+      }
+    ],
+    "holds": [
+      {
+        "W": "DKNLL",
+        "V": "RNCVY"
+      },
+      {
+        "W": "QNLXE",
+        "V": "YYBMK"
+      }
+    ],
+    "all_terminals": [
+      "KNKHV",
+      "PHCWN",
+      "XKFXX"
+    ],
+    "all_intermediates": [
+      "DCTTZ",
+      "XWVEE",
+      "ZBVAW"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QNLXE holds YYBMK."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "DCTTZ maps to KNKHV."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "XWVEE maps to XKFXX."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAQGL links to ZBVAW."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "DKNLL holds RNCVY."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "XLPMJ links to XWVEE."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBVAW maps to PHCWN."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "CCDQC links to DCTTZ."
+      }
+    ],
+    "target_hop2_position_index": 7,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAQGL",
+        "expected_answer": "ZBVAW",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBVAW",
+        "expected_answer": "PHCWN",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAQGL",
+        "expected_answer": "PHCWN",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_05",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAYXQ",
+      "B": "ZBLIV",
+      "C": "XISCX"
+    },
+    "decoy_chains": [
+      {
+        "A": "RAIDE",
+        "B": "OXSHT",
+        "C": "BLYVP"
+      },
+      {
+        "A": "MFFVN",
+        "B": "CHFLO",
+        "C": "PYGCD"
+      }
+    ],
+    "holds": [
+      {
+        "W": "GZYNA",
+        "V": "ORZKN"
+      },
+      {
+        "W": "SZSUN",
+        "V": "NDKMG"
+      }
+    ],
+    "all_terminals": [
+      "BLYVP",
+      "PYGCD",
+      "XISCX"
+    ],
+    "all_intermediates": [
+      "CHFLO",
+      "OXSHT",
+      "ZBLIV"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "OXSHT maps to BLYVP."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "RAIDE links to OXSHT."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "SZSUN holds NDKMG."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "CHFLO maps to PYGCD."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "GZYNA holds ORZKN."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "MFFVN links to CHFLO."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAYXQ links to ZBLIV."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBLIV maps to XISCX."
+      }
+    ],
+    "target_hop2_position_index": 8,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAYXQ",
+        "expected_answer": "ZBLIV",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBLIV",
+        "expected_answer": "XISCX",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAYXQ",
+        "expected_answer": "XISCX",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_06",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAWVX",
+      "B": "ZBLSE",
+      "C": "RQYNJ"
+    },
+    "decoy_chains": [
+      {
+        "A": "EJWER",
+        "B": "CYYQH",
+        "C": "WTSXI"
+      },
+      {
+        "A": "JGYCJ",
+        "B": "UHJNO",
+        "C": "NPJHW"
+      }
+    ],
+    "holds": [
+      {
+        "W": "BJXJG",
+        "V": "UTEJB"
+      },
+      {
+        "W": "TJOEQ",
+        "V": "ORDQD"
+      }
+    ],
+    "all_terminals": [
+      "NPJHW",
+      "RQYNJ",
+      "WTSXI"
+    ],
+    "all_intermediates": [
+      "CYYQH",
+      "UHJNO",
+      "ZBLSE"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "BJXJG holds UTEJB."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "CYYQH maps to WTSXI."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "UHJNO maps to NPJHW."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "JGYCJ links to UHJNO."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TJOEQ holds ORDQD."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "EJWER links to CYYQH."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAWVX links to ZBLSE."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBLSE maps to RQYNJ."
+      }
+    ],
+    "target_hop2_position_index": 8,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAWVX",
+        "expected_answer": "ZBLSE",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBLSE",
+        "expected_answer": "RQYNJ",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAWVX",
+        "expected_answer": "RQYNJ",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_07",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAXKI",
+      "B": "ZBCSS",
+      "C": "RLKZE"
+    },
+    "decoy_chains": [
+      {
+        "A": "LLVCR",
+        "B": "PXUJU",
+        "C": "SQYRC"
+      },
+      {
+        "A": "VTEPY",
+        "B": "PTIGN",
+        "C": "YEPWW"
+      }
+    ],
+    "holds": [
+      {
+        "W": "VVFQH",
+        "V": "TFRZF"
+      },
+      {
+        "W": "QZXWM",
+        "V": "PJWAX"
+      }
+    ],
+    "all_terminals": [
+      "RLKZE",
+      "SQYRC",
+      "YEPWW"
+    ],
+    "all_intermediates": [
+      "PTIGN",
+      "PXUJU",
+      "ZBCSS"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "PXUJU maps to SQYRC."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "VTEPY links to PTIGN."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "LLVCR links to PXUJU."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QZXWM holds PJWAX."
+      },
+      {
+        "position_index": 5,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAXKI links to ZBCSS."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "PTIGN maps to YEPWW."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VVFQH holds TFRZF."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBCSS maps to RLKZE."
+      }
+    ],
+    "target_hop2_position_index": 8,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAXKI",
+        "expected_answer": "ZBCSS",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBCSS",
+        "expected_answer": "RLKZE",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAXKI",
+        "expected_answer": "RLKZE",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_08",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAEDH",
+      "B": "ZBGOO",
+      "C": "WQEDV"
+    },
+    "decoy_chains": [
+      {
+        "A": "QRJCR",
+        "B": "PQZKP",
+        "C": "KBEOU"
+      },
+      {
+        "A": "PDXWI",
+        "B": "NNELI",
+        "C": "GPFKN"
+      }
+    ],
+    "holds": [
+      {
+        "W": "APEJS",
+        "V": "ZZSGT"
+      },
+      {
+        "W": "VGYKO",
+        "V": "SXADY"
+      }
+    ],
+    "all_terminals": [
+      "GPFKN",
+      "KBEOU",
+      "WQEDV"
+    ],
+    "all_intermediates": [
+      "NNELI",
+      "PQZKP",
+      "ZBGOO"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "PQZKP maps to KBEOU."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "NNELI maps to GPFKN."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "QRJCR links to PQZKP."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAEDH links to ZBGOO."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VGYKO holds SXADY."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "PDXWI links to NNELI."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "APEJS holds ZZSGT."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBGOO maps to WQEDV."
+      }
+    ],
+    "target_hop2_position_index": 8,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAEDH",
+        "expected_answer": "ZBGOO",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBGOO",
+        "expected_answer": "WQEDV",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAEDH",
+        "expected_answer": "WQEDV",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_09",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAGJH",
+      "B": "ZBLJK",
+      "C": "VAZLA"
+    },
+    "decoy_chains": [
+      {
+        "A": "LDAXU",
+        "B": "HUETC",
+        "C": "OHKFW"
+      },
+      {
+        "A": "IOOMD",
+        "B": "MAKTF",
+        "C": "PEWQO"
+      }
+    ],
+    "holds": [
+      {
+        "W": "RNLYL",
+        "V": "PJIWI"
+      },
+      {
+        "W": "MYWOX",
+        "V": "XNXAD"
+      }
+    ],
+    "all_terminals": [
+      "OHKFW",
+      "PEWQO",
+      "VAZLA"
+    ],
+    "all_intermediates": [
+      "HUETC",
+      "MAKTF",
+      "ZBLJK"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAGJH links to ZBLJK."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "HUETC maps to OHKFW."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "LDAXU links to HUETC."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MYWOX holds XNXAD."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "IOOMD links to MAKTF."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "MAKTF maps to PEWQO."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "RNLYL holds PJIWI."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBLJK maps to VAZLA."
+      }
+    ],
+    "target_hop2_position_index": 8,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAGJH",
+        "expected_answer": "ZBLJK",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBLJK",
+        "expected_answer": "VAZLA",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAGJH",
+        "expected_answer": "VAZLA",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_10",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAAZN",
+      "B": "ZBINR",
+      "C": "BMNBI"
+    },
+    "decoy_chains": [
+      {
+        "A": "DWSXU",
+        "B": "DVVWY",
+        "C": "GXRBA"
+      },
+      {
+        "A": "LVKEZ",
+        "B": "MMAPQ",
+        "C": "QMAMU"
+      }
+    ],
+    "holds": [
+      {
+        "W": "SKBQI",
+        "V": "SMWOY"
+      },
+      {
+        "W": "NKEBT",
+        "V": "UHJJG"
+      }
+    ],
+    "all_terminals": [
+      "BMNBI",
+      "GXRBA",
+      "QMAMU"
+    ],
+    "all_intermediates": [
+      "DVVWY",
+      "MMAPQ",
+      "ZBINR"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "holds",
+        "role": "holds",
+        "text": "NKEBT holds UHJJG."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "DWSXU links to DVVWY."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAAZN links to ZBINR."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "MMAPQ maps to QMAMU."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "LVKEZ links to MMAPQ."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "DVVWY maps to GXRBA."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBINR maps to BMNBI."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "SKBQI holds SMWOY."
+      }
+    ],
+    "target_hop2_position_index": 7,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAAZN",
+        "expected_answer": "ZBINR",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBINR",
+        "expected_answer": "BMNBI",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAAZN",
+        "expected_answer": "BMNBI",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_11",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAVIZ",
+      "B": "ZBNAL",
+      "C": "XWMTH"
+    },
+    "decoy_chains": [
+      {
+        "A": "UADLP",
+        "B": "DFNTA",
+        "C": "GYGQH"
+      },
+      {
+        "A": "HAAVT",
+        "B": "ENVEP",
+        "C": "TSONP"
+      }
+    ],
+    "holds": [
+      {
+        "W": "LXCTO",
+        "V": "ARUCN"
+      },
+      {
+        "W": "VPBVP",
+        "V": "URGHK"
+      }
+    ],
+    "all_terminals": [
+      "GYGQH",
+      "TSONP",
+      "XWMTH"
+    ],
+    "all_intermediates": [
+      "DFNTA",
+      "ENVEP",
+      "ZBNAL"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "DFNTA maps to GYGQH."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VPBVP holds URGHK."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "HAAVT links to ENVEP."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAVIZ links to ZBNAL."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "ENVEP maps to TSONP."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "LXCTO holds ARUCN."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "UADLP links to DFNTA."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBNAL maps to XWMTH."
+      }
+    ],
+    "target_hop2_position_index": 8,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAVIZ",
+        "expected_answer": "ZBNAL",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBNAL",
+        "expected_answer": "XWMTH",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAVIZ",
+        "expected_answer": "XWMTH",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k3_L_12",
+    "cell": "k3_LATE",
+    "k": 3,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAMKW",
+      "B": "ZBMAX",
+      "C": "BZGXW"
+    },
+    "decoy_chains": [
+      {
+        "A": "BHQVE",
+        "B": "ZXRUN",
+        "C": "CLTKS"
+      },
+      {
+        "A": "SDUEP",
+        "B": "UFKUY",
+        "C": "JRFUC"
+      }
+    ],
+    "holds": [
+      {
+        "W": "RXEUH",
+        "V": "VJYFX"
+      },
+      {
+        "W": "SFAGE",
+        "V": "XXRQN"
+      }
+    ],
+    "all_terminals": [
+      "BZGXW",
+      "CLTKS",
+      "JRFUC"
+    ],
+    "all_intermediates": [
+      "UFKUY",
+      "ZBMAX",
+      "ZXRUN"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "UFKUY maps to JRFUC."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "SFAGE holds XXRQN."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "SDUEP links to UFKUY."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "RXEUH holds VJYFX."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "ZXRUN maps to CLTKS."
+      },
+      {
+        "position_index": 6,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAMKW links to ZBMAX."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBMAX maps to BZGXW."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "BHQVE links to ZXRUN."
+      }
+    ],
+    "target_hop2_position_index": 7,
+    "n_facts": 8,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAMKW",
+        "expected_answer": "ZBMAX",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBMAX",
+        "expected_answer": "BZGXW",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAMKW",
+        "expected_answer": "BZGXW",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_01",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAPQK",
+      "B": "ZBZLH",
+      "C": "RRKHD"
+    },
+    "decoy_chains": [
+      {
+        "A": "AGVII",
+        "B": "HCAIT",
+        "C": "CARKZ"
+      },
+      {
+        "A": "RRHXM",
+        "B": "DQBRW",
+        "C": "GZTJO"
+      },
+      {
+        "A": "GAROY",
+        "B": "FQHGI",
+        "C": "CPRYB"
+      },
+      {
+        "A": "KYKLI",
+        "B": "LBHKY",
+        "C": "UDWWN"
+      }
+    ],
+    "holds": [
+      {
+        "W": "RECSC",
+        "V": "VODTW"
+      },
+      {
+        "W": "IFNFJ",
+        "V": "LLVOF"
+      }
+    ],
+    "all_terminals": [
+      "CARKZ",
+      "CPRYB",
+      "GZTJO",
+      "RRKHD",
+      "UDWWN"
+    ],
+    "all_intermediates": [
+      "DQBRW",
+      "FQHGI",
+      "HCAIT",
+      "LBHKY",
+      "ZBZLH"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "DQBRW maps to GZTJO."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "GAROY links to FQHGI."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "KYKLI links to LBHKY."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBZLH maps to RRKHD."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "IFNFJ holds LLVOF."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "LBHKY maps to UDWWN."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "AGVII links to HCAIT."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAPQK links to ZBZLH."
+      },
+      {
+        "position_index": 9,
+        "chain": "holds",
+        "role": "holds",
+        "text": "RECSC holds VODTW."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "RRHXM links to DQBRW."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "FQHGI maps to CPRYB."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "HCAIT maps to CARKZ."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAPQK",
+        "expected_answer": "ZBZLH",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBZLH",
+        "expected_answer": "RRKHD",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAPQK",
+        "expected_answer": "RRKHD",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_02",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAQAO",
+      "B": "ZBPJM",
+      "C": "AKOHC"
+    },
+    "decoy_chains": [
+      {
+        "A": "UIPHP",
+        "B": "CRFBB",
+        "C": "UJZXZ"
+      },
+      {
+        "A": "EKZRN",
+        "B": "UGBOJ",
+        "C": "OYQYZ"
+      },
+      {
+        "A": "SFYBA",
+        "B": "CTPOF",
+        "C": "QSQMZ"
+      },
+      {
+        "A": "JAXSR",
+        "B": "JOIDM",
+        "C": "SETTW"
+      }
+    ],
+    "holds": [
+      {
+        "W": "IOEEL",
+        "V": "WCUTJ"
+      },
+      {
+        "W": "QNUAM",
+        "V": "CEWGI"
+      }
+    ],
+    "all_terminals": [
+      "AKOHC",
+      "OYQYZ",
+      "QSQMZ",
+      "SETTW",
+      "UJZXZ"
+    ],
+    "all_intermediates": [
+      "CRFBB",
+      "CTPOF",
+      "JOIDM",
+      "UGBOJ",
+      "ZBPJM"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "JAXSR links to JOIDM."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBPJM maps to AKOHC."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QNUAM holds CEWGI."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "CRFBB maps to UJZXZ."
+      },
+      {
+        "position_index": 5,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAQAO links to ZBPJM."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "UIPHP links to CRFBB."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "SFYBA links to CTPOF."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "CTPOF maps to QSQMZ."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "UGBOJ maps to OYQYZ."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "EKZRN links to UGBOJ."
+      },
+      {
+        "position_index": 11,
+        "chain": "holds",
+        "role": "holds",
+        "text": "IOEEL holds WCUTJ."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "JOIDM maps to SETTW."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAQAO",
+        "expected_answer": "ZBPJM",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBPJM",
+        "expected_answer": "AKOHC",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAQAO",
+        "expected_answer": "AKOHC",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_03",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAFAJ",
+      "B": "ZBEXQ",
+      "C": "JDHDU"
+    },
+    "decoy_chains": [
+      {
+        "A": "KGEAL",
+        "B": "KORMZ",
+        "C": "FKSXK"
+      },
+      {
+        "A": "QIPZV",
+        "B": "FLRUS",
+        "C": "TMSID"
+      },
+      {
+        "A": "ZFPKC",
+        "B": "IAXDS",
+        "C": "KHDNX"
+      },
+      {
+        "A": "FOBJQ",
+        "B": "AYNSI",
+        "C": "FNAOB"
+      }
+    ],
+    "holds": [
+      {
+        "W": "AZPNY",
+        "V": "YCGBN"
+      },
+      {
+        "W": "MBNDU",
+        "V": "VKBXY"
+      }
+    ],
+    "all_terminals": [
+      "FKSXK",
+      "FNAOB",
+      "JDHDU",
+      "KHDNX",
+      "TMSID"
+    ],
+    "all_intermediates": [
+      "AYNSI",
+      "FLRUS",
+      "IAXDS",
+      "KORMZ",
+      "ZBEXQ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAFAJ links to ZBEXQ."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "QIPZV links to FLRUS."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "AZPNY holds YCGBN."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBEXQ maps to JDHDU."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "FOBJQ links to AYNSI."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "IAXDS maps to KHDNX."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "KORMZ maps to FKSXK."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MBNDU holds VKBXY."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "KGEAL links to KORMZ."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "ZFPKC links to IAXDS."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "AYNSI maps to FNAOB."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "FLRUS maps to TMSID."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAFAJ",
+        "expected_answer": "ZBEXQ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBEXQ",
+        "expected_answer": "JDHDU",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAFAJ",
+        "expected_answer": "JDHDU",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_04",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAWVI",
+      "B": "ZBKMJ",
+      "C": "TMVUF"
+    },
+    "decoy_chains": [
+      {
+        "A": "DMTYC",
+        "B": "QDFQC",
+        "C": "RDQHP"
+      },
+      {
+        "A": "DVXLV",
+        "B": "LUMPW",
+        "C": "LNDNI"
+      },
+      {
+        "A": "TFXGC",
+        "B": "XUBSG",
+        "C": "UFHLH"
+      },
+      {
+        "A": "FQPET",
+        "B": "SGMAK",
+        "C": "BZOGV"
+      }
+    ],
+    "holds": [
+      {
+        "W": "WXRLZ",
+        "V": "IHNWH"
+      },
+      {
+        "W": "GXHRT",
+        "V": "FVULX"
+      }
+    ],
+    "all_terminals": [
+      "BZOGV",
+      "LNDNI",
+      "RDQHP",
+      "TMVUF",
+      "UFHLH"
+    ],
+    "all_intermediates": [
+      "LUMPW",
+      "QDFQC",
+      "SGMAK",
+      "XUBSG",
+      "ZBKMJ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "DVXLV links to LUMPW."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "QDFQC maps to RDQHP."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "WXRLZ holds IHNWH."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBKMJ maps to TMVUF."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "GXHRT holds FVULX."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "SGMAK maps to BZOGV."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "LUMPW maps to LNDNI."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "TFXGC links to XUBSG."
+      },
+      {
+        "position_index": 9,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAWVI links to ZBKMJ."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "XUBSG maps to UFHLH."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "FQPET links to SGMAK."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "DMTYC links to QDFQC."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAWVI",
+        "expected_answer": "ZBKMJ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBKMJ",
+        "expected_answer": "TMVUF",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAWVI",
+        "expected_answer": "TMVUF",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_05",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAFKC",
+      "B": "ZBIJT",
+      "C": "FIYIX"
+    },
+    "decoy_chains": [
+      {
+        "A": "TGURX",
+        "B": "NRZSY",
+        "C": "QJUSU"
+      },
+      {
+        "A": "MNVCE",
+        "B": "FJILS",
+        "C": "WVMPY"
+      },
+      {
+        "A": "RWQDE",
+        "B": "OTMNY",
+        "C": "SRZMG"
+      },
+      {
+        "A": "DIXUA",
+        "B": "XWAVE",
+        "C": "AHDRH"
+      }
+    ],
+    "holds": [
+      {
+        "W": "HYLFU",
+        "V": "KEVWQ"
+      },
+      {
+        "W": "MWZGP",
+        "V": "VJEGP"
+      }
+    ],
+    "all_terminals": [
+      "AHDRH",
+      "FIYIX",
+      "QJUSU",
+      "SRZMG",
+      "WVMPY"
+    ],
+    "all_intermediates": [
+      "FJILS",
+      "NRZSY",
+      "OTMNY",
+      "XWAVE",
+      "ZBIJT"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAFKC links to ZBIJT."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBIJT maps to FIYIX."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "TGURX links to NRZSY."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MWZGP holds VJEGP."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "MNVCE links to FJILS."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "DIXUA links to XWAVE."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "HYLFU holds KEVWQ."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "NRZSY maps to QJUSU."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "RWQDE links to OTMNY."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "OTMNY maps to SRZMG."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "XWAVE maps to AHDRH."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "FJILS maps to WVMPY."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAFKC",
+        "expected_answer": "ZBIJT",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBIJT",
+        "expected_answer": "FIYIX",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAFKC",
+        "expected_answer": "FIYIX",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_06",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAUUE",
+      "B": "ZBUQH",
+      "C": "DYPTO"
+    },
+    "decoy_chains": [
+      {
+        "A": "NZOSH",
+        "B": "XMHAC",
+        "C": "ZSKWE"
+      },
+      {
+        "A": "FZFWN",
+        "B": "ZZHQA",
+        "C": "QJGGX"
+      },
+      {
+        "A": "AOJNQ",
+        "B": "NBYFU",
+        "C": "NKTSX"
+      },
+      {
+        "A": "ADEAC",
+        "B": "SVHSX",
+        "C": "ZGBOY"
+      }
+    ],
+    "holds": [
+      {
+        "W": "UILJT",
+        "V": "XLZDJ"
+      },
+      {
+        "W": "SJOZH",
+        "V": "QILLF"
+      }
+    ],
+    "all_terminals": [
+      "DYPTO",
+      "NKTSX",
+      "QJGGX",
+      "ZGBOY",
+      "ZSKWE"
+    ],
+    "all_intermediates": [
+      "NBYFU",
+      "SVHSX",
+      "XMHAC",
+      "ZBUQH",
+      "ZZHQA"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "XMHAC maps to ZSKWE."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "NZOSH links to XMHAC."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBUQH maps to DYPTO."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "NBYFU maps to NKTSX."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "SJOZH holds QILLF."
+      },
+      {
+        "position_index": 6,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAUUE links to ZBUQH."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "FZFWN links to ZZHQA."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "ADEAC links to SVHSX."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "ZZHQA maps to QJGGX."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "SVHSX maps to ZGBOY."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "AOJNQ links to NBYFU."
+      },
+      {
+        "position_index": 12,
+        "chain": "holds",
+        "role": "holds",
+        "text": "UILJT holds XLZDJ."
+      }
+    ],
+    "target_hop2_position_index": 3,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAUUE",
+        "expected_answer": "ZBUQH",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBUQH",
+        "expected_answer": "DYPTO",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAUUE",
+        "expected_answer": "DYPTO",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_07",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZATVB",
+      "B": "ZBZQO",
+      "C": "EANEZ"
+    },
+    "decoy_chains": [
+      {
+        "A": "OQDGN",
+        "B": "QUKNZ",
+        "C": "ICZQP"
+      },
+      {
+        "A": "EGYCD",
+        "B": "CAPTY",
+        "C": "QAWWA"
+      },
+      {
+        "A": "UKYNR",
+        "B": "GUMRP",
+        "C": "OSWZR"
+      },
+      {
+        "A": "DIBQH",
+        "B": "QCDIJ",
+        "C": "BEGLA"
+      }
+    ],
+    "holds": [
+      {
+        "W": "ZFOAQ",
+        "V": "LVRRS"
+      },
+      {
+        "W": "KIJDN",
+        "V": "XBUII"
+      }
+    ],
+    "all_terminals": [
+      "BEGLA",
+      "EANEZ",
+      "ICZQP",
+      "OSWZR",
+      "QAWWA"
+    ],
+    "all_intermediates": [
+      "CAPTY",
+      "GUMRP",
+      "QCDIJ",
+      "QUKNZ",
+      "ZBZQO"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBZQO maps to EANEZ."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "KIJDN holds XBUII."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "UKYNR links to GUMRP."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZATVB links to ZBZQO."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "EGYCD links to CAPTY."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "GUMRP maps to OSWZR."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "ZFOAQ holds LVRRS."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "CAPTY maps to QAWWA."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "QUKNZ maps to ICZQP."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "QCDIJ maps to BEGLA."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "OQDGN links to QUKNZ."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "DIBQH links to QCDIJ."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZATVB",
+        "expected_answer": "ZBZQO",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBZQO",
+        "expected_answer": "EANEZ",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZATVB",
+        "expected_answer": "EANEZ",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_08",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAUXL",
+      "B": "ZBFQZ",
+      "C": "SGTMS"
+    },
+    "decoy_chains": [
+      {
+        "A": "FOGSC",
+        "B": "QLZPR",
+        "C": "PCFUP"
+      },
+      {
+        "A": "VRUKA",
+        "B": "OBQUT",
+        "C": "YNFBX"
+      },
+      {
+        "A": "VEERI",
+        "B": "KUYUA",
+        "C": "QULQD"
+      },
+      {
+        "A": "DMLNB",
+        "B": "VEXLL",
+        "C": "APHAZ"
+      }
+    ],
+    "holds": [
+      {
+        "W": "WROTL",
+        "V": "LENFP"
+      },
+      {
+        "W": "GPACP",
+        "V": "HGPLR"
+      }
+    ],
+    "all_terminals": [
+      "APHAZ",
+      "PCFUP",
+      "QULQD",
+      "SGTMS",
+      "YNFBX"
+    ],
+    "all_intermediates": [
+      "KUYUA",
+      "OBQUT",
+      "QLZPR",
+      "VEXLL",
+      "ZBFQZ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBFQZ maps to SGTMS."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "FOGSC links to QLZPR."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAUXL links to ZBFQZ."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "VEXLL maps to APHAZ."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "QLZPR maps to PCFUP."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "KUYUA maps to QULQD."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "WROTL holds LENFP."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "GPACP holds HGPLR."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "OBQUT maps to YNFBX."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "VEERI links to KUYUA."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "VRUKA links to OBQUT."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "DMLNB links to VEXLL."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAUXL",
+        "expected_answer": "ZBFQZ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBFQZ",
+        "expected_answer": "SGTMS",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAUXL",
+        "expected_answer": "SGTMS",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_09",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZASXX",
+      "B": "ZBAQR",
+      "C": "ZVPVA"
+    },
+    "decoy_chains": [
+      {
+        "A": "IOYYF",
+        "B": "MUHTU",
+        "C": "VOZXX"
+      },
+      {
+        "A": "IQKFI",
+        "B": "DBWRO",
+        "C": "HTXSU"
+      },
+      {
+        "A": "KDRFD",
+        "B": "HZAHL",
+        "C": "XMXAV"
+      },
+      {
+        "A": "FEBAK",
+        "B": "VDKNQ",
+        "C": "VSQWZ"
+      }
+    ],
+    "holds": [
+      {
+        "W": "QHVVP",
+        "V": "FNAWX"
+      },
+      {
+        "W": "ZUMID",
+        "V": "JKDSR"
+      }
+    ],
+    "all_terminals": [
+      "HTXSU",
+      "VOZXX",
+      "VSQWZ",
+      "XMXAV",
+      "ZVPVA"
+    ],
+    "all_intermediates": [
+      "DBWRO",
+      "HZAHL",
+      "MUHTU",
+      "VDKNQ",
+      "ZBAQR"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "HZAHL maps to XMXAV."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "DBWRO maps to HTXSU."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "FEBAK links to VDKNQ."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBAQR maps to ZVPVA."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "IQKFI links to DBWRO."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "ZUMID holds JKDSR."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "VDKNQ maps to VSQWZ."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZASXX links to ZBAQR."
+      },
+      {
+        "position_index": 9,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QHVVP holds FNAWX."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "IOYYF links to MUHTU."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "KDRFD links to HZAHL."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "MUHTU maps to VOZXX."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZASXX",
+        "expected_answer": "ZBAQR",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBAQR",
+        "expected_answer": "ZVPVA",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZASXX",
+        "expected_answer": "ZVPVA",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_10",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAMCA",
+      "B": "ZBXZL",
+      "C": "QFDWW"
+    },
+    "decoy_chains": [
+      {
+        "A": "MYAQK",
+        "B": "OPFKD",
+        "C": "ZFISJ"
+      },
+      {
+        "A": "XEGBB",
+        "B": "GXALW",
+        "C": "DJVQX"
+      },
+      {
+        "A": "AJOSH",
+        "B": "NNMLT",
+        "C": "RLYXW"
+      },
+      {
+        "A": "SRHPU",
+        "B": "TADOZ",
+        "C": "SZFQL"
+      }
+    ],
+    "holds": [
+      {
+        "W": "GJCEU",
+        "V": "UIWBZ"
+      },
+      {
+        "W": "TOJFJ",
+        "V": "ZJHAI"
+      }
+    ],
+    "all_terminals": [
+      "DJVQX",
+      "QFDWW",
+      "RLYXW",
+      "SZFQL",
+      "ZFISJ"
+    ],
+    "all_intermediates": [
+      "GXALW",
+      "NNMLT",
+      "OPFKD",
+      "TADOZ",
+      "ZBXZL"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBXZL maps to QFDWW."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAMCA links to ZBXZL."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TOJFJ holds ZJHAI."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "NNMLT maps to RLYXW."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "SRHPU links to TADOZ."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "GXALW maps to DJVQX."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "XEGBB links to GXALW."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "MYAQK links to OPFKD."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "AJOSH links to NNMLT."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "OPFKD maps to ZFISJ."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "TADOZ maps to SZFQL."
+      },
+      {
+        "position_index": 12,
+        "chain": "holds",
+        "role": "holds",
+        "text": "GJCEU holds UIWBZ."
+      }
+    ],
+    "target_hop2_position_index": 1,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAMCA",
+        "expected_answer": "ZBXZL",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBXZL",
+        "expected_answer": "QFDWW",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAMCA",
+        "expected_answer": "QFDWW",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_11",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZADUK",
+      "B": "ZBYTF",
+      "C": "MFMMW"
+    },
+    "decoy_chains": [
+      {
+        "A": "XUNTL",
+        "B": "FQGOL",
+        "C": "MHMMV"
+      },
+      {
+        "A": "DVSXX",
+        "B": "XSTQU",
+        "C": "MLTQZ"
+      },
+      {
+        "A": "WLGJK",
+        "B": "CLVYM",
+        "C": "JYKFY"
+      },
+      {
+        "A": "IEJAW",
+        "B": "JQXKE",
+        "C": "RVJAA"
+      }
+    ],
+    "holds": [
+      {
+        "W": "YSMOQ",
+        "V": "KPQHU"
+      },
+      {
+        "W": "WQZTK",
+        "V": "FNLHN"
+      }
+    ],
+    "all_terminals": [
+      "JYKFY",
+      "MFMMW",
+      "MHMMV",
+      "MLTQZ",
+      "RVJAA"
+    ],
+    "all_intermediates": [
+      "CLVYM",
+      "FQGOL",
+      "JQXKE",
+      "XSTQU",
+      "ZBYTF"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "IEJAW links to JQXKE."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBYTF maps to MFMMW."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "DVSXX links to XSTQU."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "JQXKE maps to RVJAA."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "CLVYM maps to JYKFY."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "XSTQU maps to MLTQZ."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "WQZTK holds FNLHN."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "FQGOL maps to MHMMV."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "XUNTL links to FQGOL."
+      },
+      {
+        "position_index": 10,
+        "chain": "holds",
+        "role": "holds",
+        "text": "YSMOQ holds KPQHU."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "WLGJK links to CLVYM."
+      },
+      {
+        "position_index": 12,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZADUK links to ZBYTF."
+      }
+    ],
+    "target_hop2_position_index": 2,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZADUK",
+        "expected_answer": "ZBYTF",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBYTF",
+        "expected_answer": "MFMMW",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZADUK",
+        "expected_answer": "MFMMW",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_E_12",
+    "cell": "k5_EARLY",
+    "k": 5,
+    "position": "EARLY",
+    "target_chain": {
+      "A": "ZAKQI",
+      "B": "ZBIRU",
+      "C": "TTUDT"
+    },
+    "decoy_chains": [
+      {
+        "A": "OPGRA",
+        "B": "QMNZR",
+        "C": "JBDDC"
+      },
+      {
+        "A": "GCZYX",
+        "B": "XGNBF",
+        "C": "QKCTQ"
+      },
+      {
+        "A": "XHVOB",
+        "B": "RERUF",
+        "C": "JMFXC"
+      },
+      {
+        "A": "DZVSV",
+        "B": "FNFZD",
+        "C": "ULJRZ"
+      }
+    ],
+    "holds": [
+      {
+        "W": "WWNGM",
+        "V": "VHIZK"
+      },
+      {
+        "W": "DDUQO",
+        "V": "GKMWV"
+      }
+    ],
+    "all_terminals": [
+      "JBDDC",
+      "JMFXC",
+      "QKCTQ",
+      "TTUDT",
+      "ULJRZ"
+    ],
+    "all_intermediates": [
+      "FNFZD",
+      "QMNZR",
+      "RERUF",
+      "XGNBF",
+      "ZBIRU"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "XGNBF maps to QKCTQ."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "GCZYX links to XGNBF."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "DZVSV links to FNFZD."
+      },
+      {
+        "position_index": 4,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBIRU maps to TTUDT."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "DDUQO holds GKMWV."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "QMNZR maps to JBDDC."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "WWNGM holds VHIZK."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAKQI links to ZBIRU."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "RERUF maps to JMFXC."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "XHVOB links to RERUF."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "OPGRA links to QMNZR."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "FNFZD maps to ULJRZ."
+      }
+    ],
+    "target_hop2_position_index": 4,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAKQI",
+        "expected_answer": "ZBIRU",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBIRU",
+        "expected_answer": "TTUDT",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAKQI",
+        "expected_answer": "TTUDT",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_01",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAZYN",
+      "B": "ZBVDM",
+      "C": "UZKDD"
+    },
+    "decoy_chains": [
+      {
+        "A": "MRODD",
+        "B": "RRINU",
+        "C": "RHNVE"
+      },
+      {
+        "A": "WRWCC",
+        "B": "KOVXP",
+        "C": "JIOSV"
+      },
+      {
+        "A": "VORBL",
+        "B": "AOIQT",
+        "C": "SMOYG"
+      },
+      {
+        "A": "GBCDK",
+        "B": "TBUHG",
+        "C": "TXXMQ"
+      }
+    ],
+    "holds": [
+      {
+        "W": "SZOUY",
+        "V": "VDOXT"
+      },
+      {
+        "W": "CCWGU",
+        "V": "UBZUV"
+      }
+    ],
+    "all_terminals": [
+      "JIOSV",
+      "RHNVE",
+      "SMOYG",
+      "TXXMQ",
+      "UZKDD"
+    ],
+    "all_intermediates": [
+      "AOIQT",
+      "KOVXP",
+      "RRINU",
+      "TBUHG",
+      "ZBVDM"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAZYN links to ZBVDM."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "GBCDK links to TBUHG."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "TBUHG maps to TXXMQ."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "VORBL links to AOIQT."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "WRWCC links to KOVXP."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "CCWGU holds UBZUV."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "SZOUY holds VDOXT."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "RRINU maps to RHNVE."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "MRODD links to RRINU."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "AOIQT maps to SMOYG."
+      },
+      {
+        "position_index": 11,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBVDM maps to UZKDD."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "KOVXP maps to JIOSV."
+      }
+    ],
+    "target_hop2_position_index": 11,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAZYN",
+        "expected_answer": "ZBVDM",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBVDM",
+        "expected_answer": "UZKDD",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAZYN",
+        "expected_answer": "UZKDD",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_02",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAXLB",
+      "B": "ZBTDY",
+      "C": "CZYSW"
+    },
+    "decoy_chains": [
+      {
+        "A": "AAQAR",
+        "B": "VMFUM",
+        "C": "DXNQI"
+      },
+      {
+        "A": "DVDOZ",
+        "B": "KRZNX",
+        "C": "DHKVF"
+      },
+      {
+        "A": "IDHBC",
+        "B": "RVWZG",
+        "C": "QHCHZ"
+      },
+      {
+        "A": "WZWCT",
+        "B": "MIJCV",
+        "C": "PVUQJ"
+      }
+    ],
+    "holds": [
+      {
+        "W": "VWXWO",
+        "V": "JKTOK"
+      },
+      {
+        "W": "PHJQG",
+        "V": "NHWUJ"
+      }
+    ],
+    "all_terminals": [
+      "CZYSW",
+      "DHKVF",
+      "DXNQI",
+      "PVUQJ",
+      "QHCHZ"
+    ],
+    "all_intermediates": [
+      "KRZNX",
+      "MIJCV",
+      "RVWZG",
+      "VMFUM",
+      "ZBTDY"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "AAQAR links to VMFUM."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "KRZNX maps to DHKVF."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "IDHBC links to RVWZG."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "DVDOZ links to KRZNX."
+      },
+      {
+        "position_index": 5,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAXLB links to ZBTDY."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "WZWCT links to MIJCV."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "MIJCV maps to PVUQJ."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "VWXWO holds JKTOK."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "RVWZG maps to QHCHZ."
+      },
+      {
+        "position_index": 10,
+        "chain": "holds",
+        "role": "holds",
+        "text": "PHJQG holds NHWUJ."
+      },
+      {
+        "position_index": 11,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBTDY maps to CZYSW."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "VMFUM maps to DXNQI."
+      }
+    ],
+    "target_hop2_position_index": 11,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAXLB",
+        "expected_answer": "ZBTDY",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBTDY",
+        "expected_answer": "CZYSW",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAXLB",
+        "expected_answer": "CZYSW",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_03",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAMKR",
+      "B": "ZBJEJ",
+      "C": "URHBO"
+    },
+    "decoy_chains": [
+      {
+        "A": "OKIPB",
+        "B": "WUEZE",
+        "C": "RSRQU"
+      },
+      {
+        "A": "TZAJS",
+        "B": "SPXPS",
+        "C": "KYDEH"
+      },
+      {
+        "A": "GDGIH",
+        "B": "RVEMO",
+        "C": "QOUJT"
+      },
+      {
+        "A": "OKGQD",
+        "B": "FJBAZ",
+        "C": "WIBKZ"
+      }
+    ],
+    "holds": [
+      {
+        "W": "JSIXL",
+        "V": "LPSQP"
+      },
+      {
+        "W": "WMHWK",
+        "V": "HEMQP"
+      }
+    ],
+    "all_terminals": [
+      "KYDEH",
+      "QOUJT",
+      "RSRQU",
+      "URHBO",
+      "WIBKZ"
+    ],
+    "all_intermediates": [
+      "FJBAZ",
+      "RVEMO",
+      "SPXPS",
+      "WUEZE",
+      "ZBJEJ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "OKIPB links to WUEZE."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "GDGIH links to RVEMO."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "TZAJS links to SPXPS."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "WMHWK holds HEMQP."
+      },
+      {
+        "position_index": 5,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAMKR links to ZBJEJ."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "FJBAZ maps to WIBKZ."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "RVEMO maps to QOUJT."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "WUEZE maps to RSRQU."
+      },
+      {
+        "position_index": 9,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBJEJ maps to URHBO."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "SPXPS maps to KYDEH."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "OKGQD links to FJBAZ."
+      },
+      {
+        "position_index": 12,
+        "chain": "holds",
+        "role": "holds",
+        "text": "JSIXL holds LPSQP."
+      }
+    ],
+    "target_hop2_position_index": 9,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAMKR",
+        "expected_answer": "ZBJEJ",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBJEJ",
+        "expected_answer": "URHBO",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAMKR",
+        "expected_answer": "URHBO",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_04",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAGLL",
+      "B": "ZBBJS",
+      "C": "RUOCS"
+    },
+    "decoy_chains": [
+      {
+        "A": "DYCZJ",
+        "B": "LPUUM",
+        "C": "MMUZQ"
+      },
+      {
+        "A": "XIPBH",
+        "B": "GWLPY",
+        "C": "VOLJF"
+      },
+      {
+        "A": "UJCCP",
+        "B": "CCAJN",
+        "C": "UMFFY"
+      },
+      {
+        "A": "RNRNU",
+        "B": "GYRMX",
+        "C": "JZOYD"
+      }
+    ],
+    "holds": [
+      {
+        "W": "BXHGM",
+        "V": "XDPJZ"
+      },
+      {
+        "W": "ROVRY",
+        "V": "NFCWH"
+      }
+    ],
+    "all_terminals": [
+      "JZOYD",
+      "MMUZQ",
+      "RUOCS",
+      "UMFFY",
+      "VOLJF"
+    ],
+    "all_intermediates": [
+      "CCAJN",
+      "GWLPY",
+      "GYRMX",
+      "LPUUM",
+      "ZBBJS"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "XIPBH links to GWLPY."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "UJCCP links to CCAJN."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "ROVRY holds NFCWH."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "GYRMX maps to JZOYD."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "GWLPY maps to VOLJF."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "CCAJN maps to UMFFY."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "RNRNU links to GYRMX."
+      },
+      {
+        "position_index": 8,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAGLL links to ZBBJS."
+      },
+      {
+        "position_index": 9,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBBJS maps to RUOCS."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "DYCZJ links to LPUUM."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "LPUUM maps to MMUZQ."
+      },
+      {
+        "position_index": 12,
+        "chain": "holds",
+        "role": "holds",
+        "text": "BXHGM holds XDPJZ."
+      }
+    ],
+    "target_hop2_position_index": 9,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAGLL",
+        "expected_answer": "ZBBJS",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBBJS",
+        "expected_answer": "RUOCS",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAGLL",
+        "expected_answer": "RUOCS",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_05",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZARLD",
+      "B": "ZBTQB",
+      "C": "WVNYX"
+    },
+    "decoy_chains": [
+      {
+        "A": "AGROY",
+        "B": "IRHOI",
+        "C": "FPAZC"
+      },
+      {
+        "A": "MFBVG",
+        "B": "UIRDX",
+        "C": "MXWDZ"
+      },
+      {
+        "A": "JJBRE",
+        "B": "TBVPU",
+        "C": "DWPWJ"
+      },
+      {
+        "A": "MSOMJ",
+        "B": "TQLLI",
+        "C": "XXYNT"
+      }
+    ],
+    "holds": [
+      {
+        "W": "PTVEP",
+        "V": "ATUQW"
+      },
+      {
+        "W": "HGGKX",
+        "V": "KXSSE"
+      }
+    ],
+    "all_terminals": [
+      "DWPWJ",
+      "FPAZC",
+      "MXWDZ",
+      "WVNYX",
+      "XXYNT"
+    ],
+    "all_intermediates": [
+      "IRHOI",
+      "TBVPU",
+      "TQLLI",
+      "UIRDX",
+      "ZBTQB"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "TBVPU maps to DWPWJ."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "JJBRE links to TBVPU."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZARLD links to ZBTQB."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "MFBVG links to UIRDX."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "TQLLI maps to XXYNT."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "MSOMJ links to TQLLI."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "PTVEP holds ATUQW."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "HGGKX holds KXSSE."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "UIRDX maps to MXWDZ."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "AGROY links to IRHOI."
+      },
+      {
+        "position_index": 11,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBTQB maps to WVNYX."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "IRHOI maps to FPAZC."
+      }
+    ],
+    "target_hop2_position_index": 11,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZARLD",
+        "expected_answer": "ZBTQB",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBTQB",
+        "expected_answer": "WVNYX",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZARLD",
+        "expected_answer": "WVNYX",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_06",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAEIE",
+      "B": "ZBTHG",
+      "C": "HOFDL"
+    },
+    "decoy_chains": [
+      {
+        "A": "OQAYT",
+        "B": "NHJWW",
+        "C": "QLEFJ"
+      },
+      {
+        "A": "HGLNT",
+        "B": "LFVIJ",
+        "C": "DJMAW"
+      },
+      {
+        "A": "BBJJP",
+        "B": "QRYGT",
+        "C": "PFGRW"
+      },
+      {
+        "A": "ISTIM",
+        "B": "MHSSP",
+        "C": "BXLCS"
+      }
+    ],
+    "holds": [
+      {
+        "W": "PBURK",
+        "V": "HCCAM"
+      },
+      {
+        "W": "WMRJL",
+        "V": "WHIHM"
+      }
+    ],
+    "all_terminals": [
+      "BXLCS",
+      "DJMAW",
+      "HOFDL",
+      "PFGRW",
+      "QLEFJ"
+    ],
+    "all_intermediates": [
+      "LFVIJ",
+      "MHSSP",
+      "NHJWW",
+      "QRYGT",
+      "ZBTHG"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "QRYGT maps to PFGRW."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "LFVIJ maps to DJMAW."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "OQAYT links to NHJWW."
+      },
+      {
+        "position_index": 4,
+        "chain": "holds",
+        "role": "holds",
+        "text": "WMRJL holds WHIHM."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "MHSSP maps to BXLCS."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "BBJJP links to QRYGT."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "NHJWW maps to QLEFJ."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "PBURK holds HCCAM."
+      },
+      {
+        "position_index": 9,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBTHG maps to HOFDL."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "HGLNT links to LFVIJ."
+      },
+      {
+        "position_index": 11,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAEIE links to ZBTHG."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "ISTIM links to MHSSP."
+      }
+    ],
+    "target_hop2_position_index": 9,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAEIE",
+        "expected_answer": "ZBTHG",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBTHG",
+        "expected_answer": "HOFDL",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAEIE",
+        "expected_answer": "HOFDL",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_07",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZADXG",
+      "B": "ZBWCW",
+      "C": "SDPOD"
+    },
+    "decoy_chains": [
+      {
+        "A": "ORAHP",
+        "B": "OMZYT",
+        "C": "QADVI"
+      },
+      {
+        "A": "IQJHE",
+        "B": "FXFJD",
+        "C": "ULVMB"
+      },
+      {
+        "A": "AAPAE",
+        "B": "SSOPH",
+        "C": "DSUCA"
+      },
+      {
+        "A": "IBJEB",
+        "B": "KHPSP",
+        "C": "VVQRS"
+      }
+    ],
+    "holds": [
+      {
+        "W": "QFWUW",
+        "V": "TINXU"
+      },
+      {
+        "W": "TENLA",
+        "V": "ZUEYX"
+      }
+    ],
+    "all_terminals": [
+      "DSUCA",
+      "QADVI",
+      "SDPOD",
+      "ULVMB",
+      "VVQRS"
+    ],
+    "all_intermediates": [
+      "FXFJD",
+      "KHPSP",
+      "OMZYT",
+      "SSOPH",
+      "ZBWCW"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "FXFJD maps to ULVMB."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "IQJHE links to FXFJD."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "OMZYT maps to QADVI."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "IBJEB links to KHPSP."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "AAPAE links to SSOPH."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "ORAHP links to OMZYT."
+      },
+      {
+        "position_index": 7,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QFWUW holds TINXU."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "SSOPH maps to DSUCA."
+      },
+      {
+        "position_index": 9,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBWCW maps to SDPOD."
+      },
+      {
+        "position_index": 10,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZADXG links to ZBWCW."
+      },
+      {
+        "position_index": 11,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TENLA holds ZUEYX."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "KHPSP maps to VVQRS."
+      }
+    ],
+    "target_hop2_position_index": 9,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZADXG",
+        "expected_answer": "ZBWCW",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBWCW",
+        "expected_answer": "SDPOD",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZADXG",
+        "expected_answer": "SDPOD",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_08",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAAUF",
+      "B": "ZBRMS",
+      "C": "UPFER"
+    },
+    "decoy_chains": [
+      {
+        "A": "KSTEN",
+        "B": "OHBLG",
+        "C": "RDJNR"
+      },
+      {
+        "A": "EEAOB",
+        "B": "EMAQR",
+        "C": "ECLEF"
+      },
+      {
+        "A": "CPPZH",
+        "B": "WUOYX",
+        "C": "QMHVY"
+      },
+      {
+        "A": "WGTJC",
+        "B": "HSBTD",
+        "C": "PIPPF"
+      }
+    ],
+    "holds": [
+      {
+        "W": "MASEP",
+        "V": "FCRFA"
+      },
+      {
+        "W": "HQUGZ",
+        "V": "EUCDN"
+      }
+    ],
+    "all_terminals": [
+      "ECLEF",
+      "PIPPF",
+      "QMHVY",
+      "RDJNR",
+      "UPFER"
+    ],
+    "all_intermediates": [
+      "EMAQR",
+      "HSBTD",
+      "OHBLG",
+      "WUOYX",
+      "ZBRMS"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "EMAQR maps to ECLEF."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "CPPZH links to WUOYX."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "WGTJC links to HSBTD."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "WUOYX maps to QMHVY."
+      },
+      {
+        "position_index": 5,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MASEP holds FCRFA."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "KSTEN links to OHBLG."
+      },
+      {
+        "position_index": 7,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAAUF links to ZBRMS."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "HSBTD maps to PIPPF."
+      },
+      {
+        "position_index": 9,
+        "chain": "holds",
+        "role": "holds",
+        "text": "HQUGZ holds EUCDN."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "OHBLG maps to RDJNR."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "EEAOB links to EMAQR."
+      },
+      {
+        "position_index": 12,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBRMS maps to UPFER."
+      }
+    ],
+    "target_hop2_position_index": 12,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAAUF",
+        "expected_answer": "ZBRMS",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBRMS",
+        "expected_answer": "UPFER",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAAUF",
+        "expected_answer": "UPFER",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_09",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAOQO",
+      "B": "ZBVAC",
+      "C": "OBDXR"
+    },
+    "decoy_chains": [
+      {
+        "A": "SSNHL",
+        "B": "NBMTM",
+        "C": "DQZUE"
+      },
+      {
+        "A": "GUPLI",
+        "B": "WILOA",
+        "C": "RHHYL"
+      },
+      {
+        "A": "WPOTZ",
+        "B": "RZLAY",
+        "C": "BZXMB"
+      },
+      {
+        "A": "XZNWN",
+        "B": "OIZMF",
+        "C": "CRZTY"
+      }
+    ],
+    "holds": [
+      {
+        "W": "AJYZW",
+        "V": "ZXUTE"
+      },
+      {
+        "W": "FSSDX",
+        "V": "YPVFD"
+      }
+    ],
+    "all_terminals": [
+      "BZXMB",
+      "CRZTY",
+      "DQZUE",
+      "OBDXR",
+      "RHHYL"
+    ],
+    "all_intermediates": [
+      "NBMTM",
+      "OIZMF",
+      "RZLAY",
+      "WILOA",
+      "ZBVAC"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "WILOA maps to RHHYL."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "WPOTZ links to RZLAY."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAOQO links to ZBVAC."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "RZLAY maps to BZXMB."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "SSNHL links to NBMTM."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "FSSDX holds YPVFD."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "XZNWN links to OIZMF."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "AJYZW holds ZXUTE."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "GUPLI links to WILOA."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "NBMTM maps to DQZUE."
+      },
+      {
+        "position_index": 11,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBVAC maps to OBDXR."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "OIZMF maps to CRZTY."
+      }
+    ],
+    "target_hop2_position_index": 11,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAOQO",
+        "expected_answer": "ZBVAC",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBVAC",
+        "expected_answer": "OBDXR",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAOQO",
+        "expected_answer": "OBDXR",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_10",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAIRO",
+      "B": "ZBCMF",
+      "C": "JYQJF"
+    },
+    "decoy_chains": [
+      {
+        "A": "BTHEL",
+        "B": "HVSNB",
+        "C": "PMXAF"
+      },
+      {
+        "A": "XCXXO",
+        "B": "OQBVF",
+        "C": "UWJGD"
+      },
+      {
+        "A": "ZRLKY",
+        "B": "BYRRR",
+        "C": "EDNTO"
+      },
+      {
+        "A": "KWWNQ",
+        "B": "IVQHQ",
+        "C": "RAZOP"
+      }
+    ],
+    "holds": [
+      {
+        "W": "TSPLP",
+        "V": "DHOMF"
+      },
+      {
+        "W": "QNWVY",
+        "V": "UXJKW"
+      }
+    ],
+    "all_terminals": [
+      "EDNTO",
+      "JYQJF",
+      "PMXAF",
+      "RAZOP",
+      "UWJGD"
+    ],
+    "all_intermediates": [
+      "BYRRR",
+      "HVSNB",
+      "IVQHQ",
+      "OQBVF",
+      "ZBCMF"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "KWWNQ links to IVQHQ."
+      },
+      {
+        "position_index": 2,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAIRO links to ZBCMF."
+      },
+      {
+        "position_index": 3,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "BTHEL links to HVSNB."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "ZRLKY links to BYRRR."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "OQBVF maps to UWJGD."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "TSPLP holds DHOMF."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "HVSNB maps to PMXAF."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "IVQHQ maps to RAZOP."
+      },
+      {
+        "position_index": 9,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QNWVY holds UXJKW."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "XCXXO links to OQBVF."
+      },
+      {
+        "position_index": 11,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBCMF maps to JYQJF."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "BYRRR maps to EDNTO."
+      }
+    ],
+    "target_hop2_position_index": 11,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAIRO",
+        "expected_answer": "ZBCMF",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBCMF",
+        "expected_answer": "JYQJF",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAIRO",
+        "expected_answer": "JYQJF",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_11",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZAIZZ",
+      "B": "ZBSVB",
+      "C": "SJRND"
+    },
+    "decoy_chains": [
+      {
+        "A": "MLTGD",
+        "B": "ZZMXJ",
+        "C": "BWUEY"
+      },
+      {
+        "A": "HXAXC",
+        "B": "KTSFN",
+        "C": "ALKRE"
+      },
+      {
+        "A": "MSWZD",
+        "B": "MEVJF",
+        "C": "THAGP"
+      },
+      {
+        "A": "QBZUD",
+        "B": "XOXEJ",
+        "C": "ETTEE"
+      }
+    ],
+    "holds": [
+      {
+        "W": "MUMXV",
+        "V": "LXSBM"
+      },
+      {
+        "W": "EMQUV",
+        "V": "BOUYX"
+      }
+    ],
+    "all_terminals": [
+      "ALKRE",
+      "BWUEY",
+      "ETTEE",
+      "SJRND",
+      "THAGP"
+    ],
+    "all_intermediates": [
+      "KTSFN",
+      "MEVJF",
+      "XOXEJ",
+      "ZBSVB",
+      "ZZMXJ"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "HXAXC links to KTSFN."
+      },
+      {
+        "position_index": 2,
+        "chain": "holds",
+        "role": "holds",
+        "text": "EMQUV holds BOUYX."
+      },
+      {
+        "position_index": 3,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZAIZZ links to ZBSVB."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "ZZMXJ maps to BWUEY."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "MSWZD links to MEVJF."
+      },
+      {
+        "position_index": 6,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "QBZUD links to XOXEJ."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "KTSFN maps to ALKRE."
+      },
+      {
+        "position_index": 8,
+        "chain": "holds",
+        "role": "holds",
+        "text": "MUMXV holds LXSBM."
+      },
+      {
+        "position_index": 9,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "XOXEJ maps to ETTEE."
+      },
+      {
+        "position_index": 10,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBSVB maps to SJRND."
+      },
+      {
+        "position_index": 11,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "MEVJF maps to THAGP."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "MLTGD links to ZZMXJ."
+      }
+    ],
+    "target_hop2_position_index": 10,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZAIZZ",
+        "expected_answer": "ZBSVB",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBSVB",
+        "expected_answer": "SJRND",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZAIZZ",
+        "expected_answer": "SJRND",
+        "verb": "composite"
+      }
+    }
+  },
+  {
+    "item_id": "tabs_v01_k5_L_12",
+    "cell": "k5_LATE",
+    "k": 5,
+    "position": "LATE",
+    "target_chain": {
+      "A": "ZARDQ",
+      "B": "ZBQPI",
+      "C": "PUNRE"
+    },
+    "decoy_chains": [
+      {
+        "A": "IZAGH",
+        "B": "IAOHR",
+        "C": "APOXF"
+      },
+      {
+        "A": "RGOYF",
+        "B": "KUMCF",
+        "C": "XRABB"
+      },
+      {
+        "A": "JKVDH",
+        "B": "JFQLT",
+        "C": "CLILD"
+      },
+      {
+        "A": "AQHGR",
+        "B": "USKYP",
+        "C": "EMAQC"
+      }
+    ],
+    "holds": [
+      {
+        "W": "QIWPM",
+        "V": "CWMTE"
+      },
+      {
+        "W": "QSJJC",
+        "V": "VNFWA"
+      }
+    ],
+    "all_terminals": [
+      "APOXF",
+      "CLILD",
+      "EMAQC",
+      "PUNRE",
+      "XRABB"
+    ],
+    "all_intermediates": [
+      "IAOHR",
+      "JFQLT",
+      "KUMCF",
+      "USKYP",
+      "ZBQPI"
+    ],
+    "ordered_facts": [
+      {
+        "position_index": 1,
+        "chain": "decoy_3",
+        "role": "hop2",
+        "text": "JFQLT maps to CLILD."
+      },
+      {
+        "position_index": 2,
+        "chain": "decoy_1",
+        "role": "hop1",
+        "text": "IZAGH links to IAOHR."
+      },
+      {
+        "position_index": 3,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QSJJC holds VNFWA."
+      },
+      {
+        "position_index": 4,
+        "chain": "decoy_4",
+        "role": "hop2",
+        "text": "USKYP maps to EMAQC."
+      },
+      {
+        "position_index": 5,
+        "chain": "decoy_2",
+        "role": "hop2",
+        "text": "KUMCF maps to XRABB."
+      },
+      {
+        "position_index": 6,
+        "chain": "holds",
+        "role": "holds",
+        "text": "QIWPM holds CWMTE."
+      },
+      {
+        "position_index": 7,
+        "chain": "decoy_3",
+        "role": "hop1",
+        "text": "JKVDH links to JFQLT."
+      },
+      {
+        "position_index": 8,
+        "chain": "decoy_4",
+        "role": "hop1",
+        "text": "AQHGR links to USKYP."
+      },
+      {
+        "position_index": 9,
+        "chain": "target",
+        "role": "hop2",
+        "text": "ZBQPI maps to PUNRE."
+      },
+      {
+        "position_index": 10,
+        "chain": "decoy_2",
+        "role": "hop1",
+        "text": "RGOYF links to KUMCF."
+      },
+      {
+        "position_index": 11,
+        "chain": "target",
+        "role": "hop1",
+        "text": "ZARDQ links to ZBQPI."
+      },
+      {
+        "position_index": 12,
+        "chain": "decoy_1",
+        "role": "hop2",
+        "text": "IAOHR maps to APOXF."
+      }
+    ],
+    "target_hop2_position_index": 9,
+    "n_facts": 12,
+    "queries": {
+      "hop1": {
+        "query_anchor": "ZARDQ",
+        "expected_answer": "ZBQPI",
+        "verb": "links to"
+      },
+      "hop2": {
+        "query_anchor": "ZBQPI",
+        "expected_answer": "PUNRE",
+        "verb": "maps to"
+      },
+      "composite": {
+        "query_anchor": "ZARDQ",
+        "expected_answer": "PUNRE",
+        "verb": "composite"
+      }
+    }
+  }
+]
