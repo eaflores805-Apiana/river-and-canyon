@@ -1,0 +1,20 @@
+{
+  "disposition": "AUDIT-CIRCULARITY / LIMITED",
+  "reason": "No independent channel is available against this record (CH1/CH2 both unavailable; raw E3 not retained; only E2 labels present). Channel absence is recorded as a verifiable property of the record. Per G6 spec \u00a75 essential pair, the only honest output is AUDIT-CIRCULARITY / LIMITED. Returning REFUSAL-CONFIRMED would inherit the original read (E2 circularity, K1).",
+  "checks": {
+    "1_refusal_record_exists": true,
+    "2_case_in_g6_audit_scope": true,
+    "3_raw_E3_unavailable": true,
+    "4_only_E2_labels_available": true,
+    "5_CH1_unavailable": true,
+    "6_CH2_unavailable": true,
+    "7_channel_absence_verifiable_property": true,
+    "8_no_unrelated_defect": true
+  },
+  "bundle_dir": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/tier-1-instrument/modules/g6-standing-rejection-audit/case-1-missing-channel",
+  "refusal_record": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/tier-1-instrument/modules/g6-standing-rejection-audit/case-1-missing-channel/CASE-1-REFUSAL-RECORD-v0.1.json",
+  "channel_manifest": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/tier-1-instrument/modules/g6-standing-rejection-audit/case-1-missing-channel/CASE-1-CHANNEL-MANIFEST-v0.1.json",
+  "evaluator_authority": "TL ACTION 2026-06-14; minimal build under YELLOW route state",
+  "execution_kind": "static deterministic file-read; no model query",
+  "timestamp_utc": "2026-06-15T06:14:59Z"
+}
