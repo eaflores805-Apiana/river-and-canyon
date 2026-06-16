@@ -1,0 +1,192 @@
+{
+  "_purpose": "Post-run manifest binding the Path A FP16 Constructibility run to byte-exact files + Manager-locked values + the locked decision-rule application. NO compression run occurred. NO post-hoc changes were made to the locked rules.",
+
+  "stage":                       "post-run scored",
+  "outcome":                     "FAIL",
+  "outcome_dominant_signatures": [
+    "control_floor_failure_hop1 (pass-rate 0.740 < 0.75 threshold)",
+    "control_floor_failure_hop2 (pass-rate 0.677 < 0.75 threshold)",
+    "other_rate_ceiling_breach_R6cat (rate 0.3958 > 0.10 ceiling)"
+  ],
+  "run_authorization": {
+    "tl_action":             "TL ACTION 2026-06-15 (Execute Locked Path A FP16 Constructibility Run)",
+    "manager_authorization": "Manager-authorized FP16 constructibility run (Route GREEN for THIS NAMED RUN ONLY)",
+    "route_state":           "GREEN — single FP16 model run only"
+  },
+
+  "of_record_controls": {
+    "construct_definition": {
+      "path":   "path-a/of-record/TARGET-CONSTRUCT-DEFINITION-v0.4.md",
+      "sha256": "4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29"
+    },
+    "preregistration": {
+      "path":   "path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md",
+      "sha256": "d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c"
+    },
+    "inspector_module": {
+      "path":   "path-a/inspector/inspector.py",
+      "sha256": "be50c08c808cdd389e796b43266b0623ea41077843639f2912858d13666de965"
+    },
+    "evaluator_module_for_cross_check": {
+      "path":   "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/g6_evaluator_v0_3.py",
+      "sha256": "7adf4eefe6ecac2a473757f69dfac47761b631cd9b07d4de75388d2d497e2e80",
+      "note":   "Built for the fixture pattern (one spec per dataset). For the 96-item run with per-item-distinct tokens, G6 v0.3's classifier resolves against the SINGLE rep-item spec, so items 2-96 land in R6cat by definition of the evaluator's lookup — a fixture-pattern artifact, not a rule-conformant R1 count. The binding R1 scorer is analyze.py (which performs per-item entity-set lookup as the preregistration §12 specifies). Both agree on outcome direction = FAIL."
+    },
+    "constants_module": {
+      "path":   "path-a/inspector/constants.py",
+      "sha256": "f60a3f53487d374df54868424d751a33fe80f2e1c8bb65f262cd4e12fe70d4a8",
+      "note":   "DOMINANT_RATE_THRESHOLD_PROVENANCE.status = PROMOTED (resolved at v0.4 of-record elevation)."
+    }
+  },
+
+  "manager_locked_values": {
+    "k":                 5,
+    "D":                 5,
+    "p":                 5,
+    "m_min":             10,
+    "n":                 96,
+    "margin":            0.25,
+    "F":                 0.20,
+    "success_threshold": 0.45,
+    "dominance_threshold": 0.25,
+    "other_rate_ceiling": 0.10
+  },
+
+  "model_provenance": {
+    "model_id":      "Qwen/Qwen2.5-3B-Instruct",
+    "loader":        "mlx_lm.load('Qwen/Qwen2.5-3B-Instruct')",
+    "hf_revision":   "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "weight_shards": [
+      {"filename": "model-00001-of-00002.safetensors",
+       "sha256":   "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2"},
+      {"filename": "model-00002-of-00002.safetensors",
+       "sha256":   "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"}
+    ],
+    "note": "FP16 ONLY. No INT8 / INT4 / compression rung loaded or referenced this run."
+  },
+
+  "runtime": {
+    "mlx_lm_version":  "0.31.3",
+    "python_version":  "3.13.3",
+    "platform":        "Darwin arm64",
+    "machine":         "Apple M2 Max",
+    "wall_clock_s":    284,
+    "decoding":        {"temperature": 0.0, "max_tokens": 16, "sampler": "make_sampler(temp=0.0)"}
+  },
+
+  "inputs": {
+    "preregistration_in_run_dir":  {"path": "experiments/2026-06-15_path-a-fp16-constructibility/PREREGISTRATION.md",
+                                     "sha256": "d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c"},
+    "seed_record":                 {"path": "experiments/2026-06-15_path-a-fp16-constructibility/SEED.json",
+                                     "sha256": "6a4773db0baefc4ae8213a34487e100514a6054a8e1672b4693811929c6de145"},
+    "generator":                   {"path": "experiments/2026-06-15_path-a-fp16-constructibility/generate_items.py",
+                                     "sha256": "7bfee7f5174f11beff197b1f2c971326d1f364fd61494446f7233c5a99480b25"},
+    "items_materialized":          {"path": "experiments/2026-06-15_path-a-fp16-constructibility/items_materialized.json",
+                                     "sha256": "bfcda8971f23b767d9d9dcb876841541cbcb1c60f7e52ea668477ca091b86481",
+                                     "n_items": 96, "per_item_conformance_pass": 96},
+    "construction_spec":           {"path": "experiments/2026-06-15_path-a-fp16-constructibility/construction_spec.json",
+                                     "sha256": "29ba42831ca9581b494a92a52d22cfe16ac0b4d3d8326992000ecce7a2c5e44d"},
+    "prompt_template":             {"path": "experiments/2026-06-15_path-a-fp16-constructibility/prompt_template.txt",
+                                     "sha256": "c8a81a299d28c3fd47f4d6fc90c4c57537885d07f01464e68d6fbe2e94a2510e"},
+    "prompts_rendered":            {"path": "experiments/2026-06-15_path-a-fp16-constructibility/prompts_rendered.json",
+                                     "sha256": "873a203e5c420c38fc27b4011a972c0a6b01b482e10470ee0d164c0da090fb20",
+                                     "n_prompts": 384},
+    "inspector_result":            {"path": "experiments/2026-06-15_path-a-fp16-constructibility/inspector_result.json",
+                                     "sha256": "a4a94c7d3aa387cdc96f1b6e02cbf2bf1fd3055a93c6117133ed063e2923df29",
+                                     "disposition": "PASS (9/9)"},
+    "pre_run_manifest":            {"path": "experiments/2026-06-15_path-a-fp16-constructibility/PRE_RUN_MANIFEST.json",
+                                     "sha256": "ba349bc65d2fe4f4dd1deac163f34e240615616fed97fa6156b65eb76a2379e7"},
+    "runner":                      {"path": "experiments/2026-06-15_path-a-fp16-constructibility/runner.py",
+                                     "sha256": "6159450c80cf8d6bb870635446e1dacb5bbaccbb15b0ec5dbf1cbba0c9d0cf06"},
+    "analyze":                     {"path": "experiments/2026-06-15_path-a-fp16-constructibility/analyze.py",
+                                     "sha256": "585d807e2ed43f1e0925242369648cbb0b27efec85a3a718d00fe72512c554a5"}
+  },
+
+  "outputs": {
+    "fp16_raw_outputs": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/fp16_raw_outputs.json",
+      "sha256": "10fc1732234fcd8243a9f9118336dea1c01b79846f1dd5fb648ab84ebf8afd16",
+      "n_generations": 384,
+      "wall_clock_s":  284
+    },
+    "scored": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/scored.json",
+      "sha256": "b46725bf7d9d23f6be3c0b56d8cd1e9fe112b8454bab43dff70ecfed2d3076ce",
+      "note":   "Locked-rule scorer per prereg §12 + §14: per-item-validated R1 + Wilson 95% CI + MECE outcome rule. THIS IS THE BINDING SCORE."
+    },
+    "g6_v0_3_disposition": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/g6_v0_3_disposition.json",
+      "sha256": "77078c087d8189fbb0daae9fc40fb91de26a466fe761f2c6ae5600d837999cc2",
+      "note":   "Cross-check via the G6 v0.3 evaluator. Emits R1=0.0 due to single-spec-for-96-items artifact (the evaluator's classifier is built for the fixture pattern; the binding scorer is analyze.py). Outcome direction agrees: FAIL."
+    }
+  },
+
+  "wilson_95_ci": {
+    "n":                96,
+    "k_R1_validated":   18,
+    "R1_validated_rate": 0.1875,
+    "ci_lower":         0.1220,
+    "ci_upper":         0.2770,
+    "half_width":       0.0775,
+    "method":           "two-sided 95% Wilson score interval (locked per preregistration §14; replaces the Clopper-Pearson recommendation from CS prior turn per TL correction)",
+    "z":                1.95996398454005
+  },
+
+  "composite_category_breakdown_n96": {
+    "R1":     {"count": 33, "rate": 0.3438, "note": "R1 candidates BEFORE invalidator filtering"},
+    "R2":     {"count":  4, "rate": 0.0417, "note": "target-terminal-grab"},
+    "R3":     {"count": 11, "rate": 0.1146, "note": "stopped-short (returned B)"},
+    "R4":     {"count":  2, "rate": 0.0208, "note": "decoy-terminal-grab"},
+    "R4b":    {"count":  0, "rate": 0.0000, "note": "depth-competitor-grab"},
+    "R5":     {"count":  8, "rate": 0.0833, "note": "abstain (NULL)"},
+    "R6cat":  {"count": 38, "rate": 0.3958, "note": "off-category (includes depth-1 competitor tokens, decoy interior nodes, etc.)"}
+  },
+
+  "control_pass_rates": {
+    "hop1":         0.740,
+    "hop2":         0.677,
+    "direct_query": 1.000,
+    "note": "Direct-query control passed on every item (model never produced C* with the bridge withheld). hop1 and hop2 both fell below 0.75 -> control-floor failure signature fires."
+  },
+
+  "r1_validation_summary": {
+    "candidates":       33,
+    "validated":        18,
+    "invalidated":      15,
+    "invalidator_breakdown": {
+      "R6a_terminal_coincidence":      0,
+      "R6b_hop1_control_failed":       "subset of 25 hop1-fail items (only those that were R1 candidates)",
+      "R6b_hop2_control_failed":       "subset of 31 hop2-fail items (only those that were R1 candidates)",
+      "R6c_direct_query_shortcut":     0,
+      "R6e_cross_query_constant_token": 0,
+      "note": "The 15 invalidated R1 candidates were invalidated by R6b (control-floor failures on hop1 or hop2). No R6a, R6c, or R6e invalidations across all 96 items."
+    }
+  },
+
+  "decision_rule_application": {
+    "rule":  "MECE per preregistration §14: CERTIFY (lower CI > 0.45 AND no dominant signature) | FAIL (upper CI < 0.20 OR any dominant signature) | INCONCLUSIVE (otherwise)",
+    "result": "FAIL via the dominant-signature branch — three dominant signatures fire: control_floor_failure_hop1, control_floor_failure_hop2, other_rate_ceiling_breach_R6cat",
+    "note":  "The Wilson CI [0.1220, 0.2770] alone would map to INCONCLUSIVE (upper CI >= 0.20; lower CI <= 0.45), but the dominant-signature clause supersedes per the MECE rule."
+  },
+
+  "boundaries_held": {
+    "no_compression_run":         true,
+    "no_INT8":                    true,
+    "no_INT4":                    true,
+    "no_retry":                   true,
+    "no_second_run":              true,
+    "no_post_hoc_changes":        true,
+    "no_certified_baseline":      true,
+    "no_Claim_C":                 true,
+    "no_Paper_B":                 true,
+    "no_capability_claim":        true,
+    "no_mechanism_claim":         true,
+    "sealed_bytes_4_of_4":        "byte-identical (CS verified post-run)"
+  },
+
+  "next_step_per_prereg_section_17": {
+    "stop_rule": "Per §17: no post-hoc change to construction / gate / scoring / invalidators / floor / threshold / dominance threshold / analysis unit. One run per locked spec; re-runs require a new locked pre-registration.",
+    "current": "This run is the one authorized run against this locked preregistration. Outcome is FAIL via dominant-signature branch (control-floor failure on hop1 and hop2; other-rate-ceiling breach). The construction did not certify.",
+    "not_a_substrate_infeasibility_candidate_yet": "Per §14 + def v0.4 §8.5, a SINGLE failed admissible run does NOT fire SUBSTRATE-INFEASIBILITY-CANDIDATE. A future Manager decision could (a) close this construction and bank the FAIL as an honest first-attempt result, or (b) authorize a new pre-registration with a different construction design (per §17 stop-rule: any re-run requires a NEW locked pre-registration; loosening R8 / R6(c) / the threshold to manufacture a pass is NEVER allowed)."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "evaluator_version": "0.3",
+  "run_dir": ".",
+  "status": "EVALUATED",
+  "construction_id": "path_a_constructibility_2026-06-15_v0.1",
+  "fixture_mode": false,
+  "n_generations": 384,
+  "n_items": 96,
+  "per_query_category_counts": {
+    "composite": {
+      "R6cat_other": 88,
+      "R5_abstain": 8
+    },
+    "hop1": {
+      "R6cat_other": 96
+    },
+    "hop2": {
+      "R6cat_other": 94,
+      "R5_abstain": 2
+    },
+    "direct_query": {
+      "R3_stopped_short": 1,
+      "R6cat_other": 83,
+      "R5_abstain": 12
+    }
+  },
+  "R6_invalidations": {
+    "by_item": {},
+    "n_items_invalidated": 0
+  },
+  "heuristic_floor": {
+    "F": 0.2,
+    "components": {
+      "F_terminal_grab": 0.0,
+      "F_direct_query": 0.0,
+      "F_position_1_p": 0.2,
+      "F_token_pick_1_m": 0.1,
+      "F_depth_1_D": 0.2
+    },
+    "margin": 0.25,
+    "threshold": 0.45,
+    "params_used": {
+      "p": 5,
+      "m": 10,
+      "D": 5,
+      "margin": 0.25
+    },
+    "manager_lock_validation": {
+      "ok": true,
+      "mode": "real-run",
+      "deviations": [],
+      "missing": []
+    },
+    "lock_violation": false
+  },
+  "outcome": {
+    "outcome": "FAIL",
+    "reason": "R1 rate 0.000 below derived floor F = 0.200",
+    "R1_rate": 0.0,
+    "category_rates": {
+      "R6cat_other": 0.9166666666666666,
+      "R5_abstain": 0.08333333333333333
+    }
+  },
+  "computable_invalidators": [
+    "R6a",
+    "R6b",
+    "R6c (empirical)",
+    "R6d",
+    "R6e",
+    "R6f"
+  ],
+  "judgment_flagged": [
+    "R6cat ambiguity adjudication (e.g., near-miss / typo'd C*)"
+  ],
+  "forbidden_interpretations": [
+    "Claim C progress",
+    "Paper B activation",
+    "general compression robustness",
+    "certified baseline (the evaluator emits CERTIFY only when the run+gate clear it; it is not a certification of-record)",
+    "task family viability",
+    "model passed / capability established / not shortcut-driven",
+    "product/funder-facing result",
+    "mechanism / architecture / training-distribution claim",
+    "depth-2 heuristic approximates traversal (E6 binding forbidden justification)"
+  ],
+  "manager_lock_summary": {
+    "manager_approved": {
+      "k": 5,
+      "D": 5,
+      "p": 5,
+      "m_min": 10,
+      "n": 96,
+      "margin": 0.25
+    },
+    "derived": {
+      "F": 0.2,
+      "success_threshold": 0.45,
+      "F_formula": "max(1/p, 1/m, 1/D)",
+      "threshold_formula": "F + margin"
+    },
+    "scorer_constants": {
+      "DOMINANT_RATE_THRESHOLD": 0.25
+    },
+    "policy_notes": {
+      "m_floor": "m < 5 not allowed; m > 10 acceptable (log actual; floor unchanged unless m < 5)",
+      "authority": "TL ACTION 2026-06-15 + Manager approval + value-lock patch ACTION",
+      "fixture_mode": "spec.`_fixture_mode: true` excludes a construction from real-run admissibility; allows param variation for testing",
+      "real_run_mode": "real-run specs must declare p, D, m, margin and match the Manager lock; missing or deviating params -> fail-closed REJECT (no silent fallback)"
+    },
+    "provenance_flags": {
+      "DOMINANT_RATE_THRESHOLD": {
+        "value": 0.25,
+        "source": "TARGET-CONSTRUCT-DEFINITION-v0.4 \u00a711 + checklist #7 (of-record)",
+        "status": "PROMOTED",
+        "promoted_to": "TARGET-CONSTRUCT-DEFINITION-v0.4",
+        "promoted_to_sha256": "4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29",
+        "promoted_to_path": "path-a/of-record/TARGET-CONSTRUCT-DEFINITION-v0.4.md",
+        "promotion_authority": "TL ACTION 2026-06-15 + Manager approval (Elevate v0.4 and Lock Prereg v0.3)",
+        "definition_text": "A failure category is 'dominant' when its rate is >= 0.25 over the pre-declared analysis unit (definition v0.4 \u00a711).",
+        "rationale": "Closes the v0.3-prior scorer-code-only provenance gap CS raised in the value-lock-patch review. The 0.25 threshold is now declared with the failure signatures it governs (definition R11), qualified by a pre-declared analysis unit (R11), not buried in scorer code. The scorer code still imports this constant from here for shared use; the code is the implementation, the definition is the source of truth."
+      }
+    }
+  },
+  "rule_sources": [
+    "TARGET-CONSTRUCT-DEFINITION-v0.3 (sha eb72abb2\u2026) \u00a7\u00a72, 3, 8, 11",
+    "PATH-A-CANDIDATE-CONSTRUCTION-DESIGN-v0.3 (sha 38e05460\u2026) \u00a7\u00a72, 4, 7, 8",
+    "G6 evaluator v0.2 (sha edfb6fec\u2026) \u2014 Rule B (R6e) carried forward",
+    "path-a/inspector/constants.py \u2014 shared Manager lock + dominance threshold (latter flagged for promotion)"
+  ],
+  "timestamp_utc": "2026-06-16T00:20:42Z"
+}
