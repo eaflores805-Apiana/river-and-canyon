@@ -1,0 +1,6 @@
+{
+  "_purpose": "Spec is in sweep mode (K=3 in declared [1..5]) with p/D/m/margin matching Manager lock. Inspector should PASS 9/9 with C9 mode='sweep'.",
+  "disposition": "PASS",
+  "_expected_C9_mode": "sweep",
+  "_expected_C5_state": "k=3 declared + 5 competitors; structural-consistency check uses declared K (not K_DECOY_CHAINS), passes only if competitor count matches K"
+}

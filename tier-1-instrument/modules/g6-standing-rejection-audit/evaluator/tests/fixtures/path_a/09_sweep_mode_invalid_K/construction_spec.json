@@ -1,0 +1,35 @@
+{
+  "_purpose": "SYNTHETIC FIXTURE — sweep-mode REJECTION test. K=8 NOT in _sweep_locked_K_list=[1,2,3,4,5]. C9 must REJECT.",
+  "_sweep_mode": true,
+  "_sweep_locked_K_list": [1, 2, 3, 4, 5],
+  "construction_id": "path_a_fixture_09_sweep_mode_invalid_K_v0.1",
+  "params": {"k": 8, "D": 5, "p": 5, "m": 10, "margin": 0.25},
+  "target": {"A": "tokA", "B": "tokB", "C_star": "tokCstar", "T": "tokT",
+              "r1": "r1", "r2": "r2", "post_C_star_relations": ["rX", "rY"]},
+  "depth_2_competitors": [
+    {"head_relation": "s1", "B_competitor": "tokB2", "second_relation": "s2", "X": "tokX2"},
+    {"head_relation": "t1", "B_competitor": "tokB3", "second_relation": "t2", "X": "tokX3"},
+    {"head_relation": "u1", "B_competitor": "tokB4", "second_relation": "u2", "X": "tokX4"},
+    {"head_relation": "v1", "B_competitor": "tokB5", "second_relation": "v2", "X": "tokX5"},
+    {"head_relation": "w1", "B_competitor": "tokB6", "second_relation": "w2", "X": "tokX6"}
+  ],
+  "decoy_chains": [
+    {"head": "P1", "bridge": "Q1", "answer": "S1", "T_i": "tokTi1"},
+    {"head": "P2", "bridge": "Q2", "answer": "S2", "T_i": "tokTi2"},
+    {"head": "P3", "bridge": "Q3", "answer": "S3", "T_i": "tokTi3"}
+  ],
+  "relation_balance": {
+    "frequency": {"r1": 1, "r2": 1, "s1": 1, "s2": 1, "t1": 1, "t2": 1,
+                   "u1": 1, "u2": 1, "v1": 1, "v2": 1, "w1": 1, "w2": 1},
+    "order_positions": {"r1": [0], "s1": [0], "t1": [0], "u1": [0], "v1": [0], "w1": [0],
+                        "r2": [1], "s2": [1], "t2": [1], "u2": [1], "v2": [1], "w2": [1]}
+  },
+  "direct_query": {"withhold_fact_role": "B_to_C_star",
+                   "filler_form": "{W} holds {V}",
+                   "filler_contains_B_or_C_star": false},
+  "contexts": {"composite": {"present_facts": "full"},
+               "hop1":      {"context_isolated_from_composite": true},
+               "hop2":      {"context_isolated_from_composite": true},
+               "direct_query": {"context_isolated_from_composite": true},
+               "load_matched": true}
+}

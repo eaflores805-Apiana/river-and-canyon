@@ -1,0 +1,5 @@
+{
+  "_purpose": "K=8 is outside _sweep_locked_K_list=[1..5]. Inspector must REJECT — primary failure at C9 (K-list binding).",
+  "disposition": "REJECT",
+  "_expected_failing_checks": ["C9_manager_lock_binding"]
+}

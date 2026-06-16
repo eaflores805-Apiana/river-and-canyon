@@ -23,15 +23,22 @@ THIS MODULE IS THE SINGLE LOCK. Both the inspector and the G6 v0.3 evaluator
 import these values and validate spec params against them. Changing the
 Manager-approved set requires a new TL ACTION + Manager authorization.
 
-Operational modes (per the value-lock patch):
-  REAL-RUN MODE  (default; spec lacks `_fixture_mode: true`)
-    All threshold-determining params (p, D, m, margin) MUST be declared in the
+Operational modes (per the value-lock patch + sweep patch):
+  REAL-RUN MODE  (default; spec lacks `_fixture_mode` and `_sweep_mode`)
+    All threshold-determining params (p, D, m, margin, k) MUST be declared in the
     spec AND MUST match this lock (m may exceed M_MIN_EQUAL_SALIENCE_CANDIDATES
     but must be ≥ M_MIN_FLOOR). Deviation or absence → fail-closed REJECT.
   FIXTURE MODE  (spec sets `_fixture_mode: true`)
     Fixtures may vary params for testing purposes. The flag explicitly excludes
     the construction from real-run admissibility — pre-registration must not
     consume a spec with `_fixture_mode: true`.
+  SWEEP MODE  (spec sets `_sweep_mode: true` AND `_sweep_locked_K_list: [..]`)
+    K varies across cells, but p, D, m, margin still bind to the Manager lock.
+    K must be one of the values in `_sweep_locked_K_list`; the list itself is
+    the locked object recorded as under test. Authority: TL ACTION 2026-06-16
+    ("Path A Load Scout K=1..5"). Sweep mode does not lift any other Manager-
+    lock binding; it loosens ONLY the K-equality clause and only against a
+    pre-declared K-list.
 
 Dominance threshold (DOMINANT_RATE_THRESHOLD):
   The scorer constant that decides when a per-category rate is "dominant" in
@@ -107,27 +114,45 @@ def is_fixture_mode(spec: dict) -> bool:
     return bool(spec.get("_fixture_mode") is True)
 
 
+def is_sweep_mode(spec: dict) -> bool:
+    """True iff the spec explicitly sets `_sweep_mode: true` and declares
+    `_sweep_locked_K_list: [..]`. Sweep mode allows K to vary across cells
+    while binding p, m, margin to the Manager lock (and D to the Manager lock,
+    since D is NOT a sweep dimension on Path A). The locked K-list itself is
+    the object recorded as locked; any K outside the list deviates.
+
+    Authority: TL ACTION 2026-06-16 ("Team Lead Sign-Off — Path A Load Scout
+    K=1..5"). The K-sweep prereg's §2 'CONSTANTS' clause asks for this fast-path
+    patch. Sweep mode does not lift any other Manager-lock binding."""
+    return (bool(spec.get("_sweep_mode") is True)
+            and isinstance(spec.get("_sweep_locked_K_list"), list))
+
+
 def validate_manager_lock(spec: dict) -> dict:
     """Validate the threshold-determining params against the Manager lock.
 
     Returns:
       {
         "ok":           bool,
-        "mode":         "real-run" | "fixture",
+        "mode":         "real-run" | "fixture" | "sweep",
         "deviations":   list[str],   # empty if ok
         "missing":      list[str],   # empty if ok
       }
 
     Fixture-mode specs always return ok=True with mode="fixture" (the flag
     explicitly excludes them from real-run admissibility, so the binding
-    does not apply). Real-run specs must have p == P_POSITION_SLOTS,
-    D == D_DEPTH_COMPETITORS, m >= M_MIN_EQUAL_SALIENCE_CANDIDATES (with
-    m >= M_MIN_FLOOR floor), and margin == MARGIN. Missing params are
-    treated as fail-closed REJECT (no silent fallback in real-run mode).
+    does not apply). Sweep-mode specs bind p/D/m/margin to the Manager lock
+    AND bind K to the declared `_sweep_locked_K_list` (one-of), preserving
+    the locked K-list as the object under test. Real-run specs (neither
+    fixture nor sweep) must have p == P_POSITION_SLOTS, D == D_DEPTH_
+    COMPETITORS, m >= M_MIN_EQUAL_SALIENCE_CANDIDATES (with m >= M_MIN_FLOOR
+    floor), and margin == MARGIN. Missing params are treated as fail-closed
+    REJECT (no silent fallback in real-run or sweep modes).
     """
     if is_fixture_mode(spec):
         return {"ok": True, "mode": "fixture", "deviations": [], "missing": []}
 
+    sweep = is_sweep_mode(spec)
     params = spec.get("params") or {}
     missing = []
     deviations = []
@@ -157,8 +182,29 @@ def validate_manager_lock(spec: dict) -> dict:
     elif params["margin"] != MARGIN:
         deviations.append(f"params.margin = {params['margin']} != Manager-locked MARGIN = {MARGIN}")
 
+    # Sweep mode: bind K to the locked K-list rather than the single K value.
+    # Standard real-run mode: bind K to the single Manager-locked K value.
+    if sweep:
+        locked_K_list = spec["_sweep_locked_K_list"]
+        if "k" not in params:
+            missing.append("params.k")
+        elif params["k"] not in locked_K_list:
+            deviations.append(
+                f"params.k = {params['k']} not in declared _sweep_locked_K_list "
+                f"{locked_K_list} (sweep mode binds K to the locked list, not to the "
+                f"Manager-single K = {K_DECOY_CHAINS})"
+            )
+        mode = "sweep"
+    else:
+        if "k" in params and params["k"] != K_DECOY_CHAINS:
+            deviations.append(
+                f"params.k = {params['k']} != Manager-locked K_DECOY_CHAINS = {K_DECOY_CHAINS} "
+                f"(real-run mode; set `_sweep_mode: true` + `_sweep_locked_K_list: [...]` to vary K)"
+            )
+        mode = "real-run"
+
     ok = not (missing or deviations)
-    return {"ok": ok, "mode": "real-run", "deviations": deviations, "missing": missing}
+    return {"ok": ok, "mode": mode, "deviations": deviations, "missing": missing}
 
 
 # ── Public summary (for manifest emission) ──────────────────────────────────
@@ -184,10 +230,11 @@ def values_summary() -> dict:
             "DOMINANT_RATE_THRESHOLD": DOMINANT_RATE_THRESHOLD,
         },
         "policy_notes": {
-            "m_floor": f"m < {M_MIN_FLOOR} not allowed; m > 10 acceptable (log actual; floor unchanged unless m < {M_MIN_FLOOR})",
-            "authority": "TL ACTION 2026-06-15 + Manager approval + value-lock patch ACTION",
+            "m_floor":      f"m < {M_MIN_FLOOR} not allowed; m > 10 acceptable (log actual; floor unchanged unless m < {M_MIN_FLOOR})",
+            "authority":    "TL ACTION 2026-06-15 + Manager approval + value-lock patch ACTION + TL ACTION 2026-06-16 (sweep mode for Path A Load Scout K=1..5)",
             "fixture_mode": "spec.`_fixture_mode: true` excludes a construction from real-run admissibility; allows param variation for testing",
-            "real_run_mode": "real-run specs must declare p, D, m, margin and match the Manager lock; missing or deviating params -> fail-closed REJECT (no silent fallback)",
+            "real_run_mode": "real-run specs must declare p, D, m, margin, k and match the Manager lock; missing or deviating params -> fail-closed REJECT (no silent fallback)",
+            "sweep_mode":   "spec.`_sweep_mode: true` + `_sweep_locked_K_list: [..]` allows K to vary across the declared list; p/D/m/margin still bind to the Manager lock; K outside the list -> fail-closed REJECT",
         },
         "provenance_flags": {
             "DOMINANT_RATE_THRESHOLD": DOMINANT_RATE_THRESHOLD_PROVENANCE,

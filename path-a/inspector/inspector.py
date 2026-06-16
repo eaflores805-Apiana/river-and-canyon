@@ -183,13 +183,19 @@ def check_C5_competitor_count(spec: dict, expected_D: int = constants.D_DEPTH_CO
 def check_C9_manager_lock_binding(spec: dict) -> dict:
     """C9: Bind threshold-determining values to the Manager lock.
 
-    Real-run mode (default; spec lacks `_fixture_mode: true`):
-      - p, D, m, margin must all be present and match the Manager lock
+    Real-run mode (default; spec lacks `_fixture_mode` and `_sweep_mode`):
+      - p, D, m, margin, k must all be present and match the Manager lock
       - Missing or deviating params → fail-closed REJECT (no silent fallback)
 
     Fixture mode (`_fixture_mode: true` set on spec):
       - Lock is not enforced; fixtures may vary params for testing
       - The flag explicitly excludes the construction from real-run admissibility
+
+    Sweep mode (`_sweep_mode: true` + `_sweep_locked_K_list: [..]`):
+      - p, D, m, margin still bind to the Manager lock
+      - k MUST be one of the values in `_sweep_locked_K_list`
+      - The K-list itself is the locked object recorded as under test
+      - Authority: TL ACTION 2026-06-16 ("Path A Load Scout K=1..5")
     """
     validation = constants.validate_manager_lock(spec)
     if validation["ok"]:
@@ -197,14 +203,26 @@ def check_C9_manager_lock_binding(spec: dict) -> dict:
             return {"check": "C9_manager_lock_binding", "ok": True,
                     "mode": "fixture",
                     "note": "spec marked `_fixture_mode: true` — Manager lock not enforced; construction excluded from real-run admissibility."}
+        if validation["mode"] == "sweep":
+            return {"check": "C9_manager_lock_binding", "ok": True,
+                    "mode": "sweep",
+                    "note": (f"spec marked `_sweep_mode: true`; K = {spec.get('params', {}).get('k')} is "
+                             f"in locked _sweep_locked_K_list = {spec.get('_sweep_locked_K_list')}; "
+                             f"p/D/m/margin bound to Manager lock as in real-run mode.")}
         return {"check": "C9_manager_lock_binding", "ok": True, "mode": "real-run"}
     parts = []
     if validation["missing"]:
         parts.append(f"missing params: {validation['missing']}")
     if validation["deviations"]:
         parts.append(f"deviations from Manager lock: {validation['deviations']}")
+    mode_msg = validation["mode"]
+    hint = ""
+    if mode_msg == "real-run":
+        hint = " Set `_fixture_mode: true` to exclude from real-run admissibility, or `_sweep_mode: true` + `_sweep_locked_K_list: [...]` to vary K under sweep mode."
+    elif mode_msg == "sweep":
+        hint = " In sweep mode, K must be in the declared `_sweep_locked_K_list`; p/D/m/margin must match the Manager lock unchanged."
     return _err("C9_manager_lock_binding",
-                f"real-run Manager-lock binding failed -- {'; '.join(parts)}. Set `_fixture_mode: true` to exclude from real-run admissibility.",
+                f"{mode_msg} Manager-lock binding failed -- {'; '.join(parts)}.{hint}",
                 {"validation": validation})
 
 
