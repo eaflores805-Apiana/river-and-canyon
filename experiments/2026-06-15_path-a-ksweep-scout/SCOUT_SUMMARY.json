@@ -1,0 +1,223 @@
+{
+  "run_name": "PATH-A-KSWEEP-SCOUT-2026-06-15",
+  "stage": "scout_summary",
+  "preregistration_sha": "248581f673df2300ddf8567bd7fb826f1c3536dd459ff20576b689a07ea5ab90",
+  "K_list": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "cells": {
+    "1": {
+      "n": 96,
+      "R1_validated": 29,
+      "R1_rate": 0.3020833333333333,
+      "ci_lo": 0.2193115849906458,
+      "ci_hi": 0.40008500186968393,
+      "ci_half_width": 0.09038670843951907,
+      "off_map_positional": 0.21875,
+      "off_map_dC": 0.14583333333333334,
+      "off_map_dB": 0.07291666666666667,
+      "dial_A": 0.5625,
+      "dial_B_share": 0.7407407407407407,
+      "dial_B_base": 0.14285714285714285,
+      "dial_B_gain_over_base": 0.5978835978835979,
+      "chain_membership_pattern": {
+        "anchor_tracking_target": 49,
+        "gated_out_no_component_floor": 32,
+        "switching": 15
+      },
+      "hop1_pass": 0.8645833333333334,
+      "hop2_pass": 0.7916666666666666,
+      "dq_pass": 1.0,
+      "terminal_grab_R2": 0.0625,
+      "decoy_terminal_R4": 0.020833333333333332,
+      "depth_competitor_R4b": 0.0,
+      "R6cat_rate": 0.22916666666666666,
+      "R5_abstain_rate": 0.03125,
+      "R3_stopped_short_rate": 0.23958333333333334
+    },
+    "2": {
+      "n": 96,
+      "R1_validated": 16,
+      "R1_rate": 0.16666666666666666,
+      "ci_lo": 0.10527382371950143,
+      "ci_hi": 0.25370990151894884,
+      "ci_half_width": 0.0742180388997237,
+      "off_map_positional": 0.2604166666666667,
+      "off_map_dC": 0.21875,
+      "off_map_dB": 0.041666666666666664,
+      "dial_A": 0.53125,
+      "dial_B_share": 0.5882352941176471,
+      "dial_B_base": 0.125,
+      "dial_B_gain_over_base": 0.4632352941176471,
+      "chain_membership_pattern": {
+        "gated_out_no_component_floor": 41,
+        "anchor_tracking_target": 34,
+        "switching": 21
+      },
+      "hop1_pass": 0.8541666666666666,
+      "hop2_pass": 0.6666666666666666,
+      "dq_pass": 1.0,
+      "terminal_grab_R2": 0.041666666666666664,
+      "decoy_terminal_R4": 0.010416666666666666,
+      "depth_competitor_R4b": 0.0,
+      "R6cat_rate": 0.3125,
+      "R5_abstain_rate": 0.13541666666666666,
+      "R3_stopped_short_rate": 0.1875
+    },
+    "3": {
+      "n": 96,
+      "R1_validated": 15,
+      "R1_rate": 0.15625,
+      "ci_lo": 0.09703709990686586,
+      "ci_hi": 0.241914866745286,
+      "ci_half_width": 0.07243888341921007,
+      "off_map_positional": 0.2708333333333333,
+      "off_map_dC": 0.23958333333333334,
+      "off_map_dB": 0.03125,
+      "dial_A": 0.4895833333333333,
+      "dial_B_share": 0.5106382978723404,
+      "dial_B_base": 0.1111111111111111,
+      "dial_B_gain_over_base": 0.3995271867612293,
+      "chain_membership_pattern": {
+        "anchor_tracking_target": 32,
+        "gated_out_no_component_floor": 36,
+        "switching": 28
+      },
+      "hop1_pass": 0.8333333333333334,
+      "hop2_pass": 0.7395833333333334,
+      "dq_pass": 1.0,
+      "terminal_grab_R2": 0.052083333333333336,
+      "decoy_terminal_R4": 0.0,
+      "depth_competitor_R4b": 0.0,
+      "R6cat_rate": 0.28125,
+      "R5_abstain_rate": 0.19791666666666666,
+      "R3_stopped_short_rate": 0.21875
+    },
+    "4": {
+      "n": 96,
+      "R1_validated": 19,
+      "R1_rate": 0.19791666666666666,
+      "ci_lo": 0.13052733153747131,
+      "ci_hi": 0.28855166945987426,
+      "ci_half_width": 0.07901216896120147,
+      "off_map_positional": 0.3854166666666667,
+      "off_map_dC": 0.34375,
+      "off_map_dB": 0.041666666666666664,
+      "dial_A": 0.75,
+      "dial_B_share": 0.5416666666666666,
+      "dial_B_base": 0.1,
+      "dial_B_gain_over_base": 0.44166666666666665,
+      "chain_membership_pattern": {
+        "gated_out_no_component_floor": 50,
+        "switching": 22,
+        "anchor_tracking_target": 24
+      },
+      "hop1_pass": 0.8541666666666666,
+      "hop2_pass": 0.6041666666666666,
+      "dq_pass": 1.0,
+      "terminal_grab_R2": 0.010416666666666666,
+      "decoy_terminal_R4": 0.010416666666666666,
+      "depth_competitor_R4b": 0.0,
+      "R6cat_rate": 0.40625,
+      "R5_abstain_rate": 0.07291666666666667,
+      "R3_stopped_short_rate": 0.09375
+    },
+    "5": {
+      "n": 96,
+      "R1_validated": 18,
+      "R1_rate": 0.1875,
+      "ci_lo": 0.12202469989311644,
+      "ci_hi": 0.27702254251793074,
+      "ci_half_width": 0.07749892131240715,
+      "off_map_positional": 0.3958333333333333,
+      "off_map_dC": 0.34375,
+      "off_map_dB": 0.052083333333333336,
+      "dial_A": 0.6875,
+      "dial_B_share": 0.5,
+      "dial_B_base": 0.09090909090909091,
+      "dial_B_gain_over_base": 0.40909090909090906,
+      "chain_membership_pattern": {
+        "gated_out_no_component_floor": 44,
+        "switching": 26,
+        "anchor_tracking_target": 26
+      },
+      "hop1_pass": 0.7395833333333334,
+      "hop2_pass": 0.6770833333333334,
+      "dq_pass": 1.0,
+      "terminal_grab_R2": 0.041666666666666664,
+      "decoy_terminal_R4": 0.020833333333333332,
+      "depth_competitor_R4b": 0.0,
+      "R6cat_rate": 0.3958333333333333,
+      "R5_abstain_rate": 0.08333333333333333,
+      "R3_stopped_short_rate": 0.11458333333333333
+    }
+  },
+  "K5_reproduction_check": {
+    "closed_R1_validated": 18,
+    "new_K5_R1_validated": 18,
+    "match": true,
+    "verdict": "PASS",
+    "note": "Per prereg \u00a75: if K=5 cell does not reproduce the closed FAIL (~18/96), harness is suspect and scout is void pending diagnosis.",
+    "closed_run_scored_path": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-15_path-a-fp16-constructibility/scored.json"
+  },
+  "shape": "plateau",
+  "shape_curve_R1_validated": {
+    "1": 0.3020833333333333,
+    "2": 0.16666666666666666,
+    "3": 0.15625,
+    "4": 0.19791666666666666,
+    "5": 0.1875
+  },
+  "best_K": 1,
+  "best_R1_rate": 0.3020833333333333,
+  "is_boundary": true,
+  "boundary_note": "best cell at K=1 (range edge); structure may extend beyond {1..5}; pursuing is a SEPARATE one-off per prereg F2",
+  "band_hint_per_K": {
+    "1": {
+      "is_interior": false,
+      "qualifies": false,
+      "reason": "edge cell; band-hint must be INTERIOR (K in 2,3,4) per prereg"
+    },
+    "2": {
+      "is_interior": true,
+      "qualifies": false,
+      "cond_i_markedly_higher_than_ends": false,
+      "cond_ii_control_margins_stable_or_better": false,
+      "cond_iii_A_dial_A_steady_or_up": false,
+      "cond_iii_B_dial_B_beats_per_K_base_rate": true,
+      "cond_iii": false
+    },
+    "3": {
+      "is_interior": true,
+      "qualifies": false,
+      "cond_i_markedly_higher_than_ends": false,
+      "cond_ii_control_margins_stable_or_better": false,
+      "cond_iii_A_dial_A_steady_or_up": false,
+      "cond_iii_B_dial_B_beats_per_K_base_rate": true,
+      "cond_iii": false
+    },
+    "4": {
+      "is_interior": true,
+      "qualifies": false,
+      "cond_i_markedly_higher_than_ends": false,
+      "cond_ii_control_margins_stable_or_better": false,
+      "cond_iii_A_dial_A_steady_or_up": true,
+      "cond_iii_B_dial_B_beats_per_K_base_rate": true,
+      "cond_iii": true
+    },
+    "5": {
+      "is_interior": false,
+      "qualifies": false,
+      "reason": "edge cell; band-hint must be INTERIOR (K in 2,3,4) per prereg"
+    }
+  },
+  "any_band_hint": false,
+  "Q3_disposition": "BOUNDARY",
+  "Q3_K": 1,
+  "Q3_reason": "best cell at K=1 (range edge); structure may extend beyond {1..5}; pursuing is a SEPARATE one-off per prereg F2",
+  "stop_rule": "No added K, no re-slice, no new pattern post-hoc. Per prereg \u00a74. Any extension is a fresh one-off."
+}

@@ -1,0 +1,23 @@
+{
+  "_purpose": "Pre-declared random seeds for the Path A K-Sweep Scout (K = 1..5). Locked here BEFORE the generator runs, so the materialized items for each cell are reproducible from these bytes alone. Per the locked prereg v1.0 sha 248581f673df2300... §2 ('seed family 20260615; per-cell seed recorded in the manifest').",
+  "seed_family": 20260615,
+  "per_cell_seeds": {
+    "K1": 20260611,
+    "K2": 20260612,
+    "K3": 20260613,
+    "K4": 20260614,
+    "K5": 20260615
+  },
+  "K5_reproduction_check": {
+    "note": "The K=5 cell uses seed 20260615 -- identical to the seed of the closed Path A FP16 Constructibility Run (experiments/2026-06-15_path-a-fp16-constructibility/SEED.json). With the same generator (now K-parameterized but with identical behavior at K=5 -- same rng sequence) and same K=5, items_materialized_K5.json must reproduce that run's items_materialized.json byte-identical (modulo top-level metadata wrapping). With the same prompts + same model + same decoding, fp16_raw_outputs_K5.json must also reproduce byte-identical generations, hence validated-R1 = 18/96 (= 0.1875) EXACTLY. This is the prereg §5 harness check; failure voids the scout pending diagnosis.",
+    "closed_run_path": "experiments/2026-06-15_path-a-fp16-constructibility/",
+    "closed_run_seed": 20260615,
+    "closed_run_R1_validated": 18,
+    "closed_run_R1_validated_rate": 0.1875,
+    "closed_run_items_sha256": "bfcda897",
+    "closed_run_fp16_outputs_sha256": "10fc1732",
+    "closed_run_scored_sha256": "b46725bf"
+  },
+  "scope": "Used only by generate_items.py (Python's random.Random(seed)) for token sampling and per-item position-slot assignment, PER CELL. Not a model seed. Materialization produces no model output.",
+  "binding": "Locked at this commit. Re-running generate_items.py with these per-cell seeds reproduces items_materialized_K{k}.json byte-identical."
+}

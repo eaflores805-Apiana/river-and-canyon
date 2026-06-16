@@ -1,0 +1,44 @@
+{
+  "run_name": "PATH-A-KSWEEP-SCOUT-2026-06-15",
+  "timestamp_utc": "2026-06-16T05:56:24Z",
+  "total_wall_s": 1229.5314891338348,
+  "cells_run": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "per_cell": [
+    {
+      "K": 1,
+      "wall_s": 229.0903720855713,
+      "n_generations": 384,
+      "output_sha256": "18ea2a891927781a72bbb6f19f43a2851d7132f694ef2fee39500822f5248b6e"
+    },
+    {
+      "K": 2,
+      "wall_s": 233.53958678245544,
+      "n_generations": 384,
+      "output_sha256": "6b5efb38b8066ccdfea93b6eed3d4aa7454f1695038b9ac95a03dbb4e7026f86"
+    },
+    {
+      "K": 3,
+      "wall_s": 235.9246380329132,
+      "n_generations": 384,
+      "output_sha256": "bd0a8665755f25a471757dcc5d37f03f89d5b9ed5c47658c6aa81ed4f7c9680c"
+    },
+    {
+      "K": 4,
+      "wall_s": 258.5050277709961,
+      "n_generations": 384,
+      "output_sha256": "2f4b1aad57854fb0abab10a453efd65d01c786f3190bf57f7f01df21754b093c"
+    },
+    {
+      "K": 5,
+      "wall_s": 272.45523405075073,
+      "n_generations": 384,
+      "output_sha256": "f899f4441b0dd4329b9da18974f315e9b806e9f02ce9c1c2ebc2f6c5e9a3c1a7"
+    }
+  ]
+}

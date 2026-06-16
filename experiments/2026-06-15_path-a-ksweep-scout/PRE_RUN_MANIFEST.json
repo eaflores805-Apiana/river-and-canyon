@@ -1,0 +1,97 @@
+{
+  "run_name": "PATH-A-KSWEEP-SCOUT-2026-06-15",
+  "stage": "PRE_RUN",
+  "authority": {
+    "prereg": "PATH-A-KSWEEP-ONEOFF-RUN-PREREG-v1.0 (sha 248581f6...)",
+    "tl_signoff": "TL ACTION 2026-06-15 (scout direction + locked spec cleared)",
+    "manager_authorization": "Manager by-name authorization received 2026-06-15 for K-sweep scout execution",
+    "scope": "FP16 only; greedy; n=96/cell; 4 contexts/item; one run per cell; sec 17 stop-rule in force; K=5 reproduction check required"
+  },
+  "cells": {
+    "K1": {
+      "construction_spec": "92a8165c9bd76ad545328964bdbb6cfc32771dac800a44547f67a033b8b194ae",
+      "items_materialized": "ad2aa6e17e0233221e854824c37dd134fe71d415ca54c7f9269cd60f5d0077b7",
+      "prompts_rendered": "ea03de4dadb15fa486303eea65a0bb5985670baedfa320f2ab5f7e38f9cc9858",
+      "inspector_result": "1127beb9d8ecd19a032211681fc8f0d2534e25a1415b6cf0ee858d9caacf6c02",
+      "seed": 20260611
+    },
+    "K2": {
+      "construction_spec": "aaacc2e5c5343e61d7781489075b0343e3e8ca9de67e6e2598ee40e9937a27ed",
+      "items_materialized": "ca24072c8500f279a8be8e76329807483bd49c35839c328bf1f4a3a0eaac0831",
+      "prompts_rendered": "eb21c814a26e0c8ae8b94b0a31b49569136c50998a00285a581bd7961b5d0c3b",
+      "inspector_result": "3be6814784593407a2e859727d0dfb089dd43383e2436b471a7b9da1533bef94",
+      "seed": 20260612
+    },
+    "K3": {
+      "construction_spec": "32f4e1f39e2e46ed7fd8dd109a23e3a503cdb9dfd7a7d7806f150df256dc0dfb",
+      "items_materialized": "90a9386fe59d8c96d906fc03bb7f882e382697b1f20d51f1445f6e67d6ca2030",
+      "prompts_rendered": "df6757eb20dfed0e031d5c8b5b2d273cf8a81ca2edd43b3510cd779808a5bb95",
+      "inspector_result": "72a628c0407c7e44f9d14411bfe35453213168620b18ca452a0eca2fd05310e3",
+      "seed": 20260613
+    },
+    "K4": {
+      "construction_spec": "104835468e5afa3ca6362d983a352c00b24b519e24dd95002c5e6c1a11c586a0",
+      "items_materialized": "f6fc849d2c82bb9b2a0270263af272e8683c3bbeec5437b5f3b6ebb567b0ca75",
+      "prompts_rendered": "ba56f9d6be9ea4d2456303a251924f43abb63fa567238d22b66d9b867b44c79a",
+      "inspector_result": "d69805b918b9ca5ed53f5f1ea5d7e33469728f857b117d8e721d8391b3e138f6",
+      "seed": 20260614
+    },
+    "K5": {
+      "construction_spec": "4639c0e39cc77b6421db08716682d15852ed6ea1be22e5e8db8ac63180a3dc67",
+      "items_materialized": "4f6b370e3c33779223a5e5d65e85dd21af9384137e019c81f14058fb5a7af6fa",
+      "prompts_rendered": "a04e04b5dbc4230f933e9e64a1dfda23b3dcfc09d31e11efe24c36db6d8d264c",
+      "inspector_result": "96b6c03a9801f86bcec6d2e2161bed1cbdf881d396b081da0c08c52060392e7b",
+      "seed": 20260615
+    }
+  },
+  "inputs": {
+    "PREREGISTRATION.md": "248581f673df2300ddf8567bd7fb826f1c3536dd459ff20576b689a07ea5ab90",
+    "SEED.json": "d2b1ec4854c88249d4bad643374663beb4846974ef8b94a74ffb37f8aca2d83c",
+    "prompt_template.txt": "c8a81a299d28c3fd47f4d6fc90c4c57537885d07f01464e68d6fbe2e94a2510e",
+    "generate_items.py": "3c3c8194529dc65973f8e43a6966b1497291c2f1229c737722b4e52843387db8"
+  },
+  "inspector_results": {
+    "K1": "9/9 PASS; C9 mode='sweep'",
+    "K2": "9/9 PASS; C9 mode='sweep'",
+    "K3": "9/9 PASS; C9 mode='sweep'",
+    "K4": "9/9 PASS; C9 mode='sweep'",
+    "K5": "9/9 PASS; C9 mode='sweep'"
+  },
+  "reproduction_check_targets": {
+    "K5_seed": 20260615,
+    "K5_expected_R1_validated": 18,
+    "K5_expected_R1_validated_rate": 0.1875,
+    "K5_items_byte_match_closed": "VERIFIED (items[] sans item_id equal; all 384 prompt_sha256 equal)",
+    "K5_FP16_byte_match_closed": "EXPECTED (mechanical: identical prompts -> identical greedy generations); to be confirmed post-run"
+  },
+  "closed_K5_run_refs": {
+    "items_materialized": "bfcda8971f23b767d9d9dcb876841541cbcb1c60f7e52ea668477ca091b86481",
+    "prompts_rendered": "873a203e5c420c38fc27b4011a972c0a6b01b482e10470ee0d164c0da090fb20",
+    "fp16_raw_outputs": "10fc1732234fcd8243a9f9118336dea1c01b79846f1dd5fb648ab84ebf8afd16",
+    "scored": "b46725bf7d9d23f6be3c0b56d8cd1e9fe112b8454bab43dff70ecfed2d3076ce",
+    "SEED": 20260615
+  },
+  "sweep_mode_patch": {
+    "constants.py": "1d761c3d1c56e7aca9ef32a3f8b05c310e2aa5f35c6d91e67fd7fd81468915dd",
+    "inspector.py": "cb4b0b60bd6dc2b5f1d7ee6c4eaf3fc274cbb10254b5a548c637c84ca27348a9",
+    "prereg_in_review_v1.0": "248581f673df2300ddf8567bd7fb826f1c3536dd459ff20576b689a07ea5ab90"
+  },
+  "model": {
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "expected_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "decoding": {
+      "temperature": 0.0,
+      "max_tokens": 16,
+      "sampler": "make_sampler(temp=0.0)"
+    },
+    "runtime": "mlx_lm (version to be recorded post-run); Apple M2 Max"
+  },
+  "boundaries": {
+    "fp16_only": true,
+    "no_compression": true,
+    "no_retry": true,
+    "one_run_per_cell": true,
+    "post_hoc_changes": "PROHIBITED per sec 17 stop-rule (construction / gate / scoring / invalidators / floor / threshold / dominance threshold / analysis unit all locked pre-run)",
+    "sealed_tree_preserved": "constants.py + inspector.py patched only for K-variation (sweep mode); sealed bytes 4-of-4 byte-identical (verified pre-run)"
+  }
+}

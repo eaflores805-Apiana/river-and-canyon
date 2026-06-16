@@ -1,0 +1,223 @@
+{
+  "run_name": "PATH-A-KSWEEP-SCOUT-2026-06-15",
+  "stage": "POST_RUN_COMPLETE",
+  "authority": {
+    "prereg_path": "path-a/in-review/PATH-A-KSWEEP-ONEOFF-RUN-PREREG-v1.0.md",
+    "prereg_sha256": "248581f673df2300ddf8567bd7fb826f1c3536dd459ff20576b689a07ea5ab90",
+    "tl_signoff": "TL ACTION 2026-06-15 (Path A Load Scout direction + locked spec cleared)",
+    "manager_authorization": "Manager by-name authorization 2026-06-15 for K-sweep scout execution",
+    "scope": "FP16 only; greedy; n=96/cell; 4 contexts/item; one run per cell; sec 17 stop-rule; K=5 reproduction check required"
+  },
+  "outcome": {
+    "Q3_disposition": "BOUNDARY",
+    "Q3_K": 1,
+    "Q3_reason": "best cell at K=1 (range edge); structure may extend beyond {1..5}; pursuing is a SEPARATE one-off per prereg F2",
+    "shape": "plateau",
+    "shape_curve_R1": {
+      "1": 0.3020833333333333,
+      "2": 0.16666666666666666,
+      "3": 0.15625,
+      "4": 0.19791666666666666,
+      "5": 0.1875
+    },
+    "best_K": 1,
+    "best_R1_rate": 0.3020833333333333,
+    "is_boundary": true,
+    "boundary_note": "best cell at K=1 (range edge); structure may extend beyond {1..5}; pursuing is a SEPARATE one-off per prereg F2",
+    "K5_reproduction_check": {
+      "closed_R1_validated": 18,
+      "new_K5_R1_validated": 18,
+      "match": true,
+      "verdict": "PASS",
+      "note": "Per prereg \u00a75: if K=5 cell does not reproduce the closed FAIL (~18/96), harness is suspect and scout is void pending diagnosis.",
+      "closed_run_scored_path": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-15_path-a-fp16-constructibility/scored.json"
+    },
+    "stop_rule": "No added K, no re-slice, no new pattern post-hoc. Per prereg \u00a74. Any extension is a fresh one-off."
+  },
+  "per_cell_summary": {
+    "K1": {
+      "n": 96,
+      "R1_validated": 29,
+      "R1_rate": 0.3020833333333333,
+      "wilson_ci": [
+        0.2193115849906458,
+        0.40008500186968393
+      ],
+      "off_map_positional": 0.21875,
+      "dial_A": 0.5625,
+      "dial_B_gain_over_base": 0.5978835978835979,
+      "hop1_pass": 0.8645833333333334,
+      "hop2_pass": 0.7916666666666666,
+      "dq_pass": 1.0
+    },
+    "K2": {
+      "n": 96,
+      "R1_validated": 16,
+      "R1_rate": 0.16666666666666666,
+      "wilson_ci": [
+        0.10527382371950143,
+        0.25370990151894884
+      ],
+      "off_map_positional": 0.2604166666666667,
+      "dial_A": 0.53125,
+      "dial_B_gain_over_base": 0.4632352941176471,
+      "hop1_pass": 0.8541666666666666,
+      "hop2_pass": 0.6666666666666666,
+      "dq_pass": 1.0
+    },
+    "K3": {
+      "n": 96,
+      "R1_validated": 15,
+      "R1_rate": 0.15625,
+      "wilson_ci": [
+        0.09703709990686586,
+        0.241914866745286
+      ],
+      "off_map_positional": 0.2708333333333333,
+      "dial_A": 0.4895833333333333,
+      "dial_B_gain_over_base": 0.3995271867612293,
+      "hop1_pass": 0.8333333333333334,
+      "hop2_pass": 0.7395833333333334,
+      "dq_pass": 1.0
+    },
+    "K4": {
+      "n": 96,
+      "R1_validated": 19,
+      "R1_rate": 0.19791666666666666,
+      "wilson_ci": [
+        0.13052733153747131,
+        0.28855166945987426
+      ],
+      "off_map_positional": 0.3854166666666667,
+      "dial_A": 0.75,
+      "dial_B_gain_over_base": 0.44166666666666665,
+      "hop1_pass": 0.8541666666666666,
+      "hop2_pass": 0.6041666666666666,
+      "dq_pass": 1.0
+    },
+    "K5": {
+      "n": 96,
+      "R1_validated": 18,
+      "R1_rate": 0.1875,
+      "wilson_ci": [
+        0.12202469989311644,
+        0.27702254251793074
+      ],
+      "off_map_positional": 0.3958333333333333,
+      "dial_A": 0.6875,
+      "dial_B_gain_over_base": 0.40909090909090906,
+      "hop1_pass": 0.7395833333333334,
+      "hop2_pass": 0.6770833333333334,
+      "dq_pass": 1.0
+    }
+  },
+  "model": {
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "decoding": {
+      "temperature": 0.0,
+      "max_tokens": 16,
+      "sampler": "make_sampler(temp=0.0)"
+    },
+    "runtime": "mlx_lm 0.31.3 ; Apple M2 Max ; Python 3.13",
+    "wall_clock_s_total": 1230,
+    "wall_clock_per_cell_s": {
+      "K1": 229,
+      "K2": 234,
+      "K3": 236,
+      "K4": 259,
+      "K5": 272
+    }
+  },
+  "byte_inventory": {
+    "PREREGISTRATION.md": "248581f673df2300ddf8567bd7fb826f1c3536dd459ff20576b689a07ea5ab90",
+    "SEED.json": "d2b1ec4854c88249d4bad643374663beb4846974ef8b94a74ffb37f8aca2d83c",
+    "prompt_template.txt": "c8a81a299d28c3fd47f4d6fc90c4c57537885d07f01464e68d6fbe2e94a2510e",
+    "generate_items.py": "3c3c8194529dc65973f8e43a6966b1497291c2f1229c737722b4e52843387db8",
+    "runner.py": "10ae531c1ce0a3b46a6bd67b01b14fbb73903db428fc89804578d9a0d0dc40ae",
+    "analyze.py": "18c75baf586a5fdfeca0adbca54efac4dcceeb8d65365a414ea8a6a0de4a586f",
+    "scout_summary.py": "bef1ebd9777175ebdf0a3fea15986cddbf4aaa986219cc59482c604a67f1fe54",
+    "PRE_RUN_MANIFEST.json": "cfe9e8edcc70c2906a0a488a342166bf0cc9c3e245ed99010c00fa0130425da1",
+    "RUN_SWEEP_SUMMARY.json": "526d07c7054f9a9a0a1de9ce3d1f046a747874d1519075db06ba38223909061a",
+    "SCOUT_SUMMARY.json": "a131bb95d7b47a0af7ff180c50866125b519b0cb61c45a735bfd3b11ed5d3f3f",
+    "DISPOSITION.md": "4f80ffdd0971f02e44d350d85cd16e933ef31b0f6e7c31ebd846dc55481619e2"
+  },
+  "per_cell_byte_inventory": {
+    "K1": {
+      "construction_spec_sha256": "92a8165c9bd76ad545328964bdbb6cfc32771dac800a44547f67a033b8b194ae",
+      "items_materialized_sha256": "ad2aa6e17e0233221e854824c37dd134fe71d415ca54c7f9269cd60f5d0077b7",
+      "prompts_rendered_sha256": "ea03de4dadb15fa486303eea65a0bb5985670baedfa320f2ab5f7e38f9cc9858",
+      "inspector_result_sha256": "1127beb9d8ecd19a032211681fc8f0d2534e25a1415b6cf0ee858d9caacf6c02",
+      "fp16_raw_outputs_sha256": "18ea2a891927781a72bbb6f19f43a2851d7132f694ef2fee39500822f5248b6e",
+      "scored_sha256": "9897ae6de94fb7b6983fb73946ddb13446f480a67f85c104f9dc85e2619cb5ea"
+    },
+    "K2": {
+      "construction_spec_sha256": "aaacc2e5c5343e61d7781489075b0343e3e8ca9de67e6e2598ee40e9937a27ed",
+      "items_materialized_sha256": "ca24072c8500f279a8be8e76329807483bd49c35839c328bf1f4a3a0eaac0831",
+      "prompts_rendered_sha256": "eb21c814a26e0c8ae8b94b0a31b49569136c50998a00285a581bd7961b5d0c3b",
+      "inspector_result_sha256": "3be6814784593407a2e859727d0dfb089dd43383e2436b471a7b9da1533bef94",
+      "fp16_raw_outputs_sha256": "6b5efb38b8066ccdfea93b6eed3d4aa7454f1695038b9ac95a03dbb4e7026f86",
+      "scored_sha256": "22648c4cf67a5a240b464bce928e7f0020747ece18f2a30a6b14332a12e68810"
+    },
+    "K3": {
+      "construction_spec_sha256": "32f4e1f39e2e46ed7fd8dd109a23e3a503cdb9dfd7a7d7806f150df256dc0dfb",
+      "items_materialized_sha256": "90a9386fe59d8c96d906fc03bb7f882e382697b1f20d51f1445f6e67d6ca2030",
+      "prompts_rendered_sha256": "df6757eb20dfed0e031d5c8b5b2d273cf8a81ca2edd43b3510cd779808a5bb95",
+      "inspector_result_sha256": "72a628c0407c7e44f9d14411bfe35453213168620b18ca452a0eca2fd05310e3",
+      "fp16_raw_outputs_sha256": "bd0a8665755f25a471757dcc5d37f03f89d5b9ed5c47658c6aa81ed4f7c9680c",
+      "scored_sha256": "9fbbebd1a7c2e34ecae6c16de65ed36758671239e1229f2bff545e04571b9bfa"
+    },
+    "K4": {
+      "construction_spec_sha256": "104835468e5afa3ca6362d983a352c00b24b519e24dd95002c5e6c1a11c586a0",
+      "items_materialized_sha256": "f6fc849d2c82bb9b2a0270263af272e8683c3bbeec5437b5f3b6ebb567b0ca75",
+      "prompts_rendered_sha256": "ba56f9d6be9ea4d2456303a251924f43abb63fa567238d22b66d9b867b44c79a",
+      "inspector_result_sha256": "d69805b918b9ca5ed53f5f1ea5d7e33469728f857b117d8e721d8391b3e138f6",
+      "fp16_raw_outputs_sha256": "2f4b1aad57854fb0abab10a453efd65d01c786f3190bf57f7f01df21754b093c",
+      "scored_sha256": "0e96424e84d57d6e0daef06319fff5cb8f4d8cfe1901566e9e6890d97ef227f6"
+    },
+    "K5": {
+      "construction_spec_sha256": "4639c0e39cc77b6421db08716682d15852ed6ea1be22e5e8db8ac63180a3dc67",
+      "items_materialized_sha256": "4f6b370e3c33779223a5e5d65e85dd21af9384137e019c81f14058fb5a7af6fa",
+      "prompts_rendered_sha256": "a04e04b5dbc4230f933e9e64a1dfda23b3dcfc09d31e11efe24c36db6d8d264c",
+      "inspector_result_sha256": "96b6c03a9801f86bcec6d2e2161bed1cbdf881d396b081da0c08c52060392e7b",
+      "fp16_raw_outputs_sha256": "f899f4441b0dd4329b9da18974f315e9b806e9f02ce9c1c2ebc2f6c5e9a3c1a7",
+      "scored_sha256": "7991999ed5fa58b4b808e40fa241aa367952ff629c19af775b76dfbef3d4f157"
+    }
+  },
+  "closed_K5_run_refs": {
+    "path": "/Users/eliasflores/Documents/Projects/Apiana_Ai/LLM_Mechanics/Main/Apiana_Papers/river_and_the_canyon/river-and-canyon-repo-FINAL/experiments/2026-06-15_path-a-fp16-constructibility",
+    "items_materialized": "bfcda8971f23b767d9d9dcb876841541cbcb1c60f7e52ea668477ca091b86481",
+    "prompts_rendered": "873a203e5c420c38fc27b4011a972c0a6b01b482e10470ee0d164c0da090fb20",
+    "fp16_raw_outputs": "10fc1732234fcd8243a9f9118336dea1c01b79846f1dd5fb648ab84ebf8afd16",
+    "scored": "b46725bf7d9d23f6be3c0b56d8cd1e9fe112b8454bab43dff70ecfed2d3076ce",
+    "R1_validated": 18
+  },
+  "K5_reproduction_evidence": {
+    "raw_output_mismatches_vs_closed_run": 0,
+    "n_prompts_checked": 384,
+    "verdict": "PASS (byte-identical at per-prompt level)"
+  },
+  "sweep_mode_patch": {
+    "constants_py_sha256": "1d761c3d1c56e7aca9ef32a3f8b05c310e2aa5f35c6d91e67fd7fd81468915dd",
+    "inspector_py_sha256": "cb4b0b60bd6dc2b5f1d7ee6c4eaf3fc274cbb10254b5a548c637c84ca27348a9",
+    "fixtures": {
+      "08_sweep_mode_valid": "80fd30e6129d4bb5f9b205e7cb6142024db40e3b7641bd953e92151a484a763e",
+      "09_sweep_mode_invalid_K": "4877e78808b459193c6c0cd77f623e95e70904b0a07d82bbe2c02c226dbeef68"
+    },
+    "per_cell_inspector_disposition": "ALL FIVE: PASS 9/9 with C9.mode='sweep'"
+  },
+  "boundaries_held": {
+    "fp16_only": true,
+    "no_compression": true,
+    "no_retry": true,
+    "one_run_per_cell": true,
+    "post_hoc_changes": "NONE -- all metrics/patterns/decisions from prereg applied verbatim",
+    "sealed_bytes_4_of_4_byte_identical": true,
+    "sealed_tree_boundary": "preserved (targeted git add; tier0-run/ tokenizer.json files NOT staged)",
+    "closed_K5_FAIL_untouched": true,
+    "no_certified_baseline": true,
+    "no_capability_claim": true,
+    "no_mechanism_claim": true,
+    "no_paper_B": true,
+    "no_claim_C": true
+  }
+}
