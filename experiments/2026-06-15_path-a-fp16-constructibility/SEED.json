@@ -1,0 +1,7 @@
+{
+  "_purpose": "Pre-declared random seed for the Path A pre-run materialization. Locked here BEFORE the generator runs so the materialized items are reproducible from these bytes alone.",
+  "seed": 20260615,
+  "rationale": "Date-based seed (2026-06-15, the day of pre-run materialization under TL ACTION + Manager approval). Date-based seeds have the property that they encode their provenance (the date this materialization happened) in the value itself, which the program has used precedent for (compare experiments/2026-06-15_terminal-attraction-bounds-sweep/generate_items.py SEED = 20260615). Reproducibility: same generator script + same seed → same items_materialized.json bytes.",
+  "scope": "Used only by generate_items.py (Python's random.Random(seed)) for token sampling and per-item position-slot assignment. Not a model seed, not a run seed -- this materialization produces no model output.",
+  "binding": "Locked at this commit. Re-running generate_items.py with this seed reproduces items_materialized.json byte-identical."
+}

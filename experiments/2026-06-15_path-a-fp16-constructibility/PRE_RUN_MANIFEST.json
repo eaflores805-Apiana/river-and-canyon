@@ -1,0 +1,141 @@
+{
+  "_purpose": "Pre-run manifest binding the Path A FP16 constructibility materialization + inspector pass to byte-exact files. No model has been run. No model run is authorized by this manifest. The of-record preregistration shell §1 (carried in PREREGISTRATION.md within this run dir) explicitly states 'Locking this shell is not execution and not authorization. A run requires the Manager's by-name authorization with lock-before-look.'",
+
+  "stage":                 "pre-run materialization + inspector pass",
+  "model_executed":        false,
+  "run_authorized":        false,
+  "authorization_chain": {
+    "tl_action":           "TL ACTION 2026-06-15 (Path A Pre-Run Materialization + Inspector Pass)",
+    "manager_approval":    "Manager approves: pre-run materialization and inspector pass only. Does NOT authorize model execution.",
+    "route_state":         "GREEN for pre-run materialization only"
+  },
+
+  "of_record_controls": {
+    "construct_definition": {
+      "path":   "path-a/of-record/TARGET-CONSTRUCT-DEFINITION-v0.4.md",
+      "sha256": "4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29"
+    },
+    "preregistration": {
+      "path":   "path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md",
+      "sha256": "d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c"
+    },
+    "inspector_module": {
+      "path":   "path-a/inspector/inspector.py",
+      "sha256": "be50c08c808cdd389e796b43266b0623ea41077843639f2912858d13666de965"
+    },
+    "evaluator_module_for_eventual_run": {
+      "path":   "tier-1-instrument/modules/g6-standing-rejection-audit/evaluator/g6_evaluator_v0_3.py",
+      "sha256": "7adf4eefe6ecac2a473757f69dfac47761b631cd9b07d4de75388d2d497e2e80"
+    },
+    "constants_module": {
+      "path":     "path-a/inspector/constants.py",
+      "sha256":   "f60a3f53487d374df54868424d751a33fe80f2e1c8bb65f262cd4e12fe70d4a8",
+      "note":     "Provenance updated to PROMOTED at this sha; dominance threshold = 0.25 declared in TARGET-CONSTRUCT-DEFINITION-v0.4 §11."
+    }
+  },
+
+  "manager_locked_values": {
+    "k":                 5,
+    "D":                 5,
+    "p":                 5,
+    "m_min":             10,
+    "n":                 96,
+    "margin":            0.25,
+    "F":                 0.20,
+    "success_threshold": 0.45,
+    "F_formula":         "max(1/p, 1/m, 1/D)",
+    "threshold_formula": "F + margin"
+  },
+
+  "materialization": {
+    "seed_record": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/SEED.json",
+      "sha256": "6a4773db0baefc4ae8213a34487e100514a6054a8e1672b4693811929c6de145",
+      "seed":   20260615
+    },
+    "generator": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/generate_items.py",
+      "sha256": "7bfee7f5174f11beff197b1f2c971326d1f364fd61494446f7233c5a99480b25"
+    },
+    "items_materialized": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/items_materialized.json",
+      "sha256": "bfcda8971f23b767d9d9dcb876841541cbcb1c60f7e52ea668477ca091b86481",
+      "n_items": 96,
+      "per_item_conformance_pass": 96,
+      "per_item_conformance_fail": 0
+    },
+    "construction_spec": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/construction_spec.json",
+      "sha256": "29ba42831ca9581b494a92a52d22cfe16ac0b4d3d8326992000ecce7a2c5e44d",
+      "note":   "Representative-item spec (item 001's tokens); fed to the inspector."
+    },
+    "prompt_template": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/prompt_template.txt",
+      "sha256": "c8a81a299d28c3fd47f4d6fc90c4c57537885d07f01464e68d6fbe2e94a2510e",
+      "note":   "Reused byte-identical from experiments/2026-06-09_b1-harness-v2/code/prompt_template_twohop_l1.txt (the program's prompt-template-of-record for the Two-Hop family)."
+    },
+    "prompts_rendered": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/prompts_rendered.json",
+      "sha256": "873a203e5c420c38fc27b4011a972c0a6b01b482e10470ee0d164c0da090fb20",
+      "n_prompts":  384,
+      "n_contexts": 4,
+      "contexts":   ["composite", "hop1", "hop2", "direct_query"]
+    },
+    "preregistration_in_run_dir": {
+      "path":   "experiments/2026-06-15_path-a-fp16-constructibility/PREREGISTRATION.md",
+      "sha256": "d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c",
+      "note":   "Byte-identical copy of the of-record preregistration; in-run-dir for self-contained reference."
+    }
+  },
+
+  "inspector_pass": {
+    "result_path":   "experiments/2026-06-15_path-a-fp16-constructibility/inspector_result.json",
+    "result_sha256": "a4a94c7d3aa387cdc96f1b6e02cbf2bf1fd3055a93c6117133ed063e2923df29",
+    "disposition":   "PASS",
+    "checks":        "9/9 pass; 0 fail",
+    "mode":          "real-run (no _fixture_mode flag set)",
+    "checks_passed": [
+      "C1_C_star_not_terminal",
+      "C2_pairwise_distinct",
+      "C3_categories_separable",
+      "C4_r1_edge_unique",
+      "C5_competitor_count",
+      "C6_relation_balance",
+      "C7_direct_query_filler",
+      "C8_four_contexts",
+      "C9_manager_lock_binding"
+    ]
+  },
+
+  "boundaries_held": {
+    "no_model_run":               true,
+    "no_FP16_generation":         true,
+    "no_compression":             true,
+    "no_result_scoring":          true,
+    "no_certified_baseline":      true,
+    "no_Claim_C":                 true,
+    "no_Paper_B":                 true,
+    "no_capability_claim":        true,
+    "no_mechanism_claim":         true,
+    "sealed_bytes_4_of_4":        "byte-identical (CS verified pre-commit)"
+  },
+
+  "next_step_requirements": {
+    "model_run":            "requires separate Manager by-name authorization with lock-before-look",
+    "fixture_mode_assertion": "the construction spec at this manifest's referenced path does NOT carry `_fixture_mode: true`, so it is real-run-admissible per the v0.4 fixture-mode guard",
+    "open_slots_status": {
+      "item_generator_and_seed": "REALIZED",
+      "materialized_items":      "REALIZED (96/96 conformance pass)",
+      "token_pool":              "REALIZED (synthetic prefixed 4-letter tokens; ~40 unique per item)",
+      "direct_query_filler":     "REALIZED (form '{W} holds {V}'; W, V drawn from separate pool; contains neither B nor C*)",
+      "relation_balancing":      "REALIZED (head/tail relations balanced; verified by inspector C6)",
+      "prompt_template":         "REUSED (byte-identical to program-of-record Two-Hop template)",
+      "prompt_renderings":       "REALIZED (384 prompts across 4 contexts)",
+      "inspector_pass":          "PASS (9/9)",
+      "power_CI_procedure":      "DECLARED in preregistration §10/§14 (Clopper-Pearson; details in shell)",
+      "other_rate_ceiling":      "DECLARED in preregistration §15 (0.10)",
+      "analysis_unit":           "DECLARED in preregistration §12 (global-primary; per-position secondary diagnostic)",
+      "model_run":               "AWAITING Manager by-name authorization (NOT done in this pre-run stage)"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "construction_id": "path_a_constructibility_2026-06-15_v0.1",
+  "params": {
+    "k": 5,
+    "D": 5,
+    "p": 5,
+    "m": 10,
+    "margin": 0.25
+  },
+  "target": {
+    "A": "tA_ONJM",
+    "B": "tB_GJRV",
+    "C_star": "tC_ESGJ",
+    "T": "tT_CKMJ",
+    "r1": "links_to",
+    "r2": "maps_to",
+    "post_C_star_relations": [
+      "leads_to"
+    ]
+  },
+  "depth_2_competitors": [
+    {
+      "head_relation": "sA_head",
+      "B_competitor": "cB1_JUST",
+      "second_relation": "sA_tail",
+      "X": "cX1_ZUWC"
+    },
+    {
+      "head_relation": "sB_head",
+      "B_competitor": "cB2_BGKZ",
+      "second_relation": "sB_tail",
+      "X": "cX2_DVVZ"
+    },
+    {
+      "head_relation": "sC_head",
+      "B_competitor": "cB3_LCLS",
+      "second_relation": "sC_tail",
+      "X": "cX3_WGJG"
+    },
+    {
+      "head_relation": "sD_head",
+      "B_competitor": "cB4_KCLW",
+      "second_relation": "sD_tail",
+      "X": "cX4_LWRB"
+    },
+    {
+      "head_relation": "sE_head",
+      "B_competitor": "cB5_KXDF",
+      "second_relation": "sE_tail",
+      "X": "cX5_FROZ"
+    }
+  ],
+  "decoy_chains": [
+    {
+      "head": "dA1_ZHER",
+      "bridge": "dB1_ZMDJ",
+      "answer": "dC1_SGED",
+      "T_i": "dT1_SPYD"
+    },
+    {
+      "head": "dA2_IOEJ",
+      "bridge": "dB2_PSLZ",
+      "answer": "dC2_NBNP",
+      "T_i": "dT2_EHDS"
+    },
+    {
+      "head": "dA3_IRPO",
+      "bridge": "dB3_FVHJ",
+      "answer": "dC3_DPMG",
+      "T_i": "dT3_FCRN"
+    },
+    {
+      "head": "dA4_DUKQ",
+      "bridge": "dB4_MLDN",
+      "answer": "dC4_FXGS",
+      "T_i": "dT4_PZXE"
+    },
+    {
+      "head": "dA5_OKEY",
+      "bridge": "dB5_ZLKK",
+      "answer": "dC5_LAGM",
+      "T_i": "dT5_WVVW"
+    }
+  ],
+  "relation_balance": {
+    "frequency": {
+      "links_to": 1,
+      "sA_head": 1,
+      "sB_head": 1,
+      "sC_head": 1,
+      "sD_head": 1,
+      "sE_head": 1,
+      "maps_to": 1,
+      "sA_tail": 1,
+      "sB_tail": 1,
+      "sC_tail": 1,
+      "sD_tail": 1,
+      "sE_tail": 1
+    },
+    "order_positions": {
+      "links_to": [
+        0
+      ],
+      "sA_head": [
+        0
+      ],
+      "sB_head": [
+        0
+      ],
+      "sC_head": [
+        0
+      ],
+      "sD_head": [
+        0
+      ],
+      "sE_head": [
+        0
+      ],
+      "maps_to": [
+        1
+      ],
+      "sA_tail": [
+        1
+      ],
+      "sB_tail": [
+        1
+      ],
+      "sC_tail": [
+        1
+      ],
+      "sD_tail": [
+        1
+      ],
+      "sE_tail": [
+        1
+      ]
+    }
+  },
+  "direct_query": {
+    "withhold_fact_role": "B_to_C_star",
+    "filler_form": "{W} holds {V}",
+    "filler_contains_B_or_C_star": false
+  },
+  "contexts": {
+    "composite": {
+      "present_facts": "full"
+    },
+    "hop1": {
+      "context_isolated_from_composite": true
+    },
+    "hop2": {
+      "context_isolated_from_composite": true
+    },
+    "direct_query": {
+      "context_isolated_from_composite": true
+    },
+    "load_matched": true
+  }
+}
