@@ -177,4 +177,36 @@ The Path A FP16 K=5 FAIL remains closed and untouched by this filing.
 
 ---
 
+## Appendix A — Clean-fetch verification
+
+Performed after the memo commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 was compared against `git cat-file -p origin/main:<path> | sha256sum` so the bytes verified are the **origin** bytes, not the local working-tree bytes.
+
+```text
+origin/main HEAD             6b5ff75b20d4b1bd20a47b63a87e1eaa9f00618f
+local       HEAD             6b5ff75b20d4b1bd20a47b63a87e1eaa9f00618f   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  42cd53c4cb19124a810792d66c6e8391d688893b20f082acc6fb705f9f294aad
+       tier-1-instrument/.../10_v3_real_run_param_deviation/construction_spec.json
+MATCH  cd068ef32e86a46fa8b2ffe35bf793dda5565722fecbf4f1943af0f6bc9289c5
+       tier-1-instrument/.../10_v3_real_run_param_deviation/expected.json
+MATCH  5f09fe253b7c6195568f93b9c3b79e26b2b4f0e860834c83a750621dfedf4190
+       path-a/inspector/results/10_v3_real_run_param_deviation_inspection.json
+MATCH  cb4b0b60bd6dc2b5f1d7ee6c4eaf3fc274cbb10254b5a548c637c84ca27348a9
+       path-a/inspector/inspector.py
+MATCH  1d761c3d1c56e7aca9ef32a3f8b05c310e2aa5f35c6d91e67fd7fd81468915dd
+       path-a/inspector/constants.py
+MATCH  bfb4404ab1bf872e7e81056b144440d1a09e31b88fc6b400cb6e4cac48f0b8f6
+       path-a/in-review/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4-binding-patch.md
+MATCH  c3f4e6670d51c225322161c02b9b2eef9eda74bc7729ccd3a3a2ed74e81fbdcc
+       path-a/in-review/V3-INSTRUMENT-BYTE-AUDIT-SE-RETURN-v0.1.md
+MATCH  78f7b9705aa994acfae58847112d211bbbb02501e6ff1c89e088532bbb018c98
+       path-a/in-review/PATH-A-KSWEEP-CLIFF-FINDING-NOTE-v0.2.md
+```
+
+All 8 listed artifacts (this memo's own bytes will only be verifiable after the appendix commit lands; cross-verified on the next sweep) reproduce byte-exact from the shared repository on a clean fetch. **FILED.**
+
+---
+
 — CS Engineer, 2026-06-16
