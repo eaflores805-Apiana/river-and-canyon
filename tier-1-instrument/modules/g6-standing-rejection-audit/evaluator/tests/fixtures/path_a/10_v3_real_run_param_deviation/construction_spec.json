@@ -1,0 +1,34 @@
+{
+  "_purpose": "SYNTHETIC FIXTURE — V3 real-run parameter-deviation test under PATCHED inspector/constants (inspector cb4b0b60bd6dc2b5..., constants 1d761c3d1c56e7ac...). Spec is in real-run mode (no `_fixture_mode`, no `_sweep_mode`) and matches V3's foreclose-all schema, but DEVIATES from the Manager lock on params.D = 4 (Manager-locked D_DEPTH_COMPETITORS = 5). The spec is internally consistent (declared D = 4 AND 4 actual depth_2_competitors AND matching relation_balance) so C1–C8 PASS; the failure isolates to C9_manager_lock_binding fail-closed REJECT in REAL-RUN mode. This tests the 'spec drifts to D=4 throughout but Manager lock catches it' protection layer. Closes the G2 gap from V3-INSTRUMENT-BYTE-AUDIT-SE-RETURN-v0.1 (c3f4e667...): existing fixtures 08/09 cover sweep-mode admissibility; this is the missing real-run-rejection case under the patched inspector. Authority: TL ACTION 2026-06-16 (\"Close V3 Byte-Audit HOLD\") — CS deliverable.",
+  "construction_id": "path_a_fixture_10_v3_real_run_param_deviation_v0.1",
+  "params": {"k": 5, "D": 4, "p": 5, "m": 10, "margin": 0.25},
+  "target": {"A": "tokA", "B": "tokB", "C_star": "tokCstar", "T": "tokT",
+              "r1": "r1", "r2": "r2", "post_C_star_relations": ["rX", "rY"]},
+  "depth_2_competitors": [
+    {"head_relation": "s1", "B_competitor": "tokB2", "second_relation": "s2", "X": "tokX2"},
+    {"head_relation": "t1", "B_competitor": "tokB3", "second_relation": "t2", "X": "tokX3"},
+    {"head_relation": "u1", "B_competitor": "tokB4", "second_relation": "u2", "X": "tokX4"},
+    {"head_relation": "v1", "B_competitor": "tokB5", "second_relation": "v2", "X": "tokX5"}
+  ],
+  "decoy_chains": [
+    {"head": "P1", "bridge": "Q1", "answer": "S1", "T_i": "tokTi1"},
+    {"head": "P2", "bridge": "Q2", "answer": "S2", "T_i": "tokTi2"},
+    {"head": "P3", "bridge": "Q3", "answer": "S3", "T_i": "tokTi3"},
+    {"head": "P4", "bridge": "Q4", "answer": "S4", "T_i": "tokTi4"},
+    {"head": "P5", "bridge": "Q5", "answer": "S5", "T_i": "tokTi5"}
+  ],
+  "relation_balance": {
+    "frequency": {"r1": 1, "r2": 1, "s1": 1, "s2": 1, "t1": 1, "t2": 1,
+                   "u1": 1, "u2": 1, "v1": 1, "v2": 1},
+    "order_positions": {"r1": [0], "s1": [0], "t1": [0], "u1": [0], "v1": [0],
+                        "r2": [1], "s2": [1], "t2": [1], "u2": [1], "v2": [1]}
+  },
+  "direct_query": {"withhold_fact_role": "B_to_C_star",
+                   "filler_form": "{W} holds {V}",
+                   "filler_contains_B_or_C_star": false},
+  "contexts": {"composite": {"present_facts": "full"},
+               "hop1":      {"context_isolated_from_composite": true},
+               "hop2":      {"context_isolated_from_composite": true},
+               "direct_query": {"context_isolated_from_composite": true},
+               "load_matched": true}
+}

@@ -1,0 +1,10 @@
+{
+  "_purpose": "Spec is in REAL-RUN mode (no `_fixture_mode`, no `_sweep_mode`) but params.D = 4 ≠ Manager-locked D_DEPTH_COMPETITORS = 5. Under the PATCHED inspector (cb4b0b60...) and PATCHED constants (1d761c3d...), C9_manager_lock_binding must fire → REJECT with mode='real-run'. Closes the G2 gap from the V3 instrument byte-audit: confirms the K-sweep additive patch did not loosen the real-run fail-closed binding.",
+  "disposition": "REJECT",
+  "outcome": "LOCK_VIOLATION",
+  "_expected_breached_checks": [
+    "C9_manager_lock_binding"
+  ],
+  "_expected_mode": "real-run",
+  "_expected_deviation_substring": "params.D = 4 != Manager-locked D_DEPTH_COMPETITORS = 5"
+}
