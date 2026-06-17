@@ -28,6 +28,9 @@ CS, TL) have byte-exact access via clean fetch. They are **not** definition-of-r
 | `FEEDBACK-LEDGER-FP16-OFFMAP-MASS-v0.1.md` | `11cba5d605b4a67c511a0aeae635475144febb0396c1204e0771ba5c21eaf2d1` | review-tracking object for the FP16 off-map open-question thread: accepted edits, instrument sharpenings, lock-before-look discipline note, Requirement-4 matrix (chain-switching vs fixed-chain bias) |
 | `PATH-A-K-SWEEP-CONSTRUCTIBILITY-PROPOSAL-v0.1.md` | `e9770a8e62c80a9824178f554ca56417b80eb4c70793a9c59423880cf7ff84fa` | Senior's load-sweep proposal (descriptive K=1..5 scout; predecessor of the prereg below) |
 | `PATH-A-KSWEEP-ONEOFF-RUN-PREREG-v1.0.md` | `248581f673df2300ddf8567bd7fb826f1c3536dd459ff20576b689a07ea5ab90` | **TL-signed-off K-sweep one-off scout preregistration** (Manager-in-principle; **scout direction + locked spec cleared; ACTUAL RUN AUTHORIZATION still requires Manager by-name memo**); §17 stop-rule applies; CS patched `path-a/inspector/constants.py` + `path-a/inspector/inspector.py` for K-variation per §2 (sweep-mode admissibility, fixtures 08/09) |
+| `PATH-A-KSWEEP-CLIFF-FINDING-NOTE-v0.1.md` | `ee5ed1ef0ff7a5e6836e96eb48b114ddb890565adfd52d94ded7b3dd04c1e8aa` | Senior descriptive finding from the verified scout at HEAD `3cfdc3f`. Positional, mechanism-free: validated-R1 cliffs K=1→K=2 (0.302→0.167) then plateaus K=2..5; off-map positional rate climbs monotonically (0.219→0.396). §3 declares the dull-null as leading interpretation. Reproduces the closed K=5 FAIL byte-exact; does not reopen it. Routes Senior-draft → TL / New Senior (record). |
+| `PATH-A-OFFMAP-CONSISTENCY-PROBE-PREDECLARATION-v0.1.md` | `7c1e6651c5e6cf29739692b408f0f25048cf7734ff424ed3c048264b8c07e94d` | Senior lock-before-look pre-declaration for a new analytical cut (concentration Q1 + positional/structural sharing Q2) on the existing scout artifacts. §3 null = SPREAD ∧ UNSTRUCTURED → file diffuse and stop. Run-to-run variability explicitly deferred (would need new multi-sample run + Manager by-name authorization). Routes Senior-draft → TL / Manager acknowledge lock → SE computes ONCE. |
+| `CONSTRUCTION-PROPERTY-TAXONOMY-AND-BINNING-v0.1.md` | `1e5d51ae4850042e28c28cd659cee2184874791407b1ab176c2c81cb16988d05` | Senior analytic comparison object. Gathers candidates (C0/V3/D1–D5), derives R1–R7 required + W1–W7 desirable property set, bins by KIND (topologies vs signal overlay vs probe overlays) and PHILOSOPHY (foreclose-all vs make-identity-easy vs test-the-mechanism). Reading: V3 meets all 7 required; D1/D2 violate R2/R3 (tag/topic-match shortcut). Selects nothing; routes to Manager / team for construction-philosophy decision. |
 
 ## Provenance
 
@@ -62,3 +65,9 @@ preregistration, no model run, no compression, no Claim C / Paper B / capability
 mechanism claim** is implied or licensed by anything in this directory.
 
 — CS Engineer, 2026-06-15 (filed under TL ACTION for byte transmission to C5)
+
+---
+
+**Filing addendum, 2026-06-16:** Three Senior-authored Path A drafts swept from `_INBOX/` and filed in-review. All bytes verify byte-exact against inbox sources via sha256 (table entries above). Sources moved to `_INBOX/_PROCESSED/2026-06-16/`. No claim advanced, nothing elevated, nothing authorized.
+
+— CS Engineer, 2026-06-16
