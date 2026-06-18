@@ -262,7 +262,55 @@ UNCHANGED references (the bfb4404a... mention is HISTORICAL, not load-bearing)
 
 ## 8. Clean-fetch verification — corrected state (2026-06-17, second verification)
 
-To be appended at the foot of this memo after the correction commit lands and `git fetch origin` is re-run against it.
+Performed after the correction commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+origin/main HEAD              9ea16d1de5e985f9d5f80f0ba452417246cb41be
+local       HEAD              9ea16d1de5e985f9d5f80f0ba452417246cb41be   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  c61a3256d26e0ed0226e46a60d9b701baddfe3006249db687f221aea57315955
+       path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4.md
+MATCH  c61a3256d26e0ed0226e46a60d9b701baddfe3006249db687f221aea57315955
+       path-a/in-review/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4-binding-patch.md
+                   ↑ corrected byte-identical pair invariant — both at c61a3256…
+MATCH  d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c
+       path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md
+                   ↑ unchanged; superseded but retained as prior-of-record trail
+MATCH  cb4b0b60bd6dc2b5f1d7ee6c4eaf3fc274cbb10254b5a548c637c84ca27348a9
+       path-a/inspector/inspector.py
+MATCH  1d761c3d1c56e7aca9ef32a3f8b05c310e2aa5f35c6d91e67fd7fd81468915dd
+       path-a/inspector/constants.py
+                   ↑ the two files v0.4 of-record now pins; finalized v0.4 cites
+                     the same digests as the placeholder version did
+MATCH  f1b916c0e5a7542b7a95138f34f2b953e3d83e0f0bb5b529f59c98342177a2e0
+       path-a/of-record/README.md
+MATCH  202af3c84af0ef18a35fbad2ac27758e946a3e00ea9ac8771549b05bdca24b78
+       path-a/in-review/README.md
+MATCH  49b7f499cf0437d499cfc028e75fe9684a7cba96bd5455cdb32747c647394c59
+       governance/2026-06-16_v3-byte-audit-close/TL-CORRECTIVE-ACTION-FINALIZE-V0.4-2026-06-17.md
+MATCH  0c429583d931cd67f3f7073e1991c29aa8b5aa470c60bb288096e200bee38cb1
+       governance/2026-06-16_v3-byte-audit-close/CS-CLOSURE-NOTE.md
+                   ↑ this file, immediately PRIOR to the §8 commit (the §8
+                     commit's own sha will be cross-verified on the next sweep)
+MATCH  96bda3cf55d3adce4a8484e116cee0b9ed3c2a859633ecc6f6e07f83b2e000fb
+       governance/2026-06-16_v3-byte-audit-close/MANAGER-TL-RE-LOCK-v0.4-2026-06-16.md
+                   ↑ unchanged; re-lock memo did not cite v0.4 sha
+```
+
+**Streamed-from-origin assertions on the corrected of-record v0.4 bytes** (via `git cat-file -p origin/main:<path>`):
+
+```text
+placeholder `<v0.3 of-record digest>` count    : 0   (absent)
+v0.3 of-record digest d9bd9b21… count          : 1   (filled, as Senior intended)
+```
+
+All 10 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. The corrected of-record v0.4 contains zero placeholders and exactly one occurrence of the filled v0.3 of-record digest. **TL corrective action FILED and closed.**
+
+---
+
+— CS Engineer, 2026-06-17 (correction appendix)
 
 ---
 
