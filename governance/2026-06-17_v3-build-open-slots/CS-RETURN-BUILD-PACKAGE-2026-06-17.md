@@ -238,7 +238,62 @@ CS holds for SE verification + the next ACTION.
 
 ## 8. Clean-fetch confirmation
 
-To be appended at the foot of this memo after the build commit lands and `git fetch origin` is run against it.
+Performed after the build commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       93350dc84a23c6d5c82af223e47b142777de6e31
+push                         d47f473..93350dc  main -> main
+origin/main HEAD             93350dc84a23c6d5c82af223e47b142777de6e31
+local       HEAD             93350dc84a23c6d5c82af223e47b142777de6e31   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+build code + design docs (8 files):
+  MATCH  path-a/build/v3_item_generator.py
+  MATCH  path-a/build/v3_conformance_runner.py
+  MATCH  path-a/build/v3_seed_plan.md
+  MATCH  path-a/build/v3_token_pool.md
+  MATCH  path-a/build/v3_direct_query_filler.md
+  MATCH  path-a/build/v3_relation_balance.md
+  MATCH  path-a/build/README.md
+  MATCH  path-a/build/conformance_summary.json
+
+generated items (8 files):
+  MATCH  path-a/build/items/item_001.json
+  MATCH  path-a/build/items/item_002.json
+  MATCH  path-a/build/items/item_003.json
+  MATCH  path-a/build/items/item_004.json
+  MATCH  path-a/build/items/item_005.json
+  MATCH  path-a/build/items/item_006.json
+  MATCH  path-a/build/items/item_007.json
+  MATCH  path-a/build/items/item_008.json
+
+per-item inspector results (8 files):
+  MATCH  path-a/build/conformance/item_001_inspection.json
+  MATCH  path-a/build/conformance/item_002_inspection.json
+  MATCH  path-a/build/conformance/item_003_inspection.json
+  MATCH  path-a/build/conformance/item_004_inspection.json
+  MATCH  path-a/build/conformance/item_005_inspection.json
+  MATCH  path-a/build/conformance/item_006_inspection.json
+  MATCH  path-a/build/conformance/item_007_inspection.json
+  MATCH  path-a/build/conformance/item_008_inspection.json
+
+governance memos (2 files):
+  MATCH  governance/2026-06-17_v3-build-open-slots/TL-MANAGER-ACTION-BEGIN-V3-BUILD-2026-06-17.md
+  MATCH  governance/2026-06-17_v3-build-open-slots/CS-RETURN-BUILD-PACKAGE-2026-06-17.md
+           (this file, immediately PRIOR to the §8 commit — the §8
+            commit's own sha will be cross-verified on the next sweep)
+
+inspector + constants under test (the bytes v0.4 of-record pins):
+  MATCH  cb4b0b60bd6dc2b5...  path-a/inspector/inspector.py
+  MATCH  1d761c3d1c56e7ac...  path-a/inspector/constants.py
+```
+
+All 28 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. The inspector + constants under which the 8/8 conformance PASS was demonstrated are the same byte-strings the v0.4 of-record prereg pins. **Build FILED. Ready for Senior verification.**
+
+---
+
+— CS Engineer, 2026-06-17 (clean-fetch appendix)
 
 ---
 
