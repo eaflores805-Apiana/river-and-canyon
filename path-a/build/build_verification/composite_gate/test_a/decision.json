@@ -1,0 +1,88 @@
+{
+  "analyzer_version": "v0.1",
+  "scope": "composite-gate analysis; NOT certification",
+  "this_run_only": true,
+  "final_separate": "FINAL certification is a separate Manager/standard decision per v0.2 \u00a77",
+  "n_total": 96,
+  "n_excluded": 0,
+  "n_included": 96,
+  "excluded_items": [],
+  "composite": {
+    "k": 96,
+    "n": 96,
+    "rate": 1.0,
+    "wilson_lower_95": 0.9615230525151841,
+    "wilson_upper_95": 1.0000000000000002,
+    "primary_gate": 0.75,
+    "floor_gate": 0.45,
+    "min_clearing_count_primary": 81,
+    "min_clearing_count_floor": 53,
+    "condition_a_pass": true,
+    "condition_b_pass": true
+  },
+  "hop2": {
+    "k": 96,
+    "n": 96,
+    "rate": 1.0,
+    "wilson_lower_95": 0.9615230525151841,
+    "wilson_upper_95": 1.0000000000000002,
+    "floor": 0.75,
+    "min_clearing_count": 81,
+    "precondition_pass": true
+  },
+  "hop1": {
+    "k": 96,
+    "n": 96,
+    "rate": 1.0,
+    "wilson_lower_95": 0.9615230525151841,
+    "wilson_upper_95": 1.0000000000000002,
+    "floor": 0.75,
+    "min_clearing_count": 81,
+    "precondition_pass": true
+  },
+  "direct_query": {
+    "k": 0,
+    "ceiling_count": 19,
+    "precondition_pass": true
+  },
+  "invalidated": {
+    "count": 0,
+    "threshold": 10,
+    "construct_pass": true
+  },
+  "admissibility": {
+    "all_pass": true,
+    "construct_pass": true
+  },
+  "prompt_conformance": {
+    "all_pass": true,
+    "construct_pass": true
+  },
+  "error_structure": {
+    "pathological": false,
+    "construct_pass": true,
+    "error_log_summary": {
+      "n_items": 96,
+      "composite_match_count": 96,
+      "composite_error_count": 0,
+      "composition_specific_success_count": 0,
+      "pathological_error_structure": false,
+      "pathological_rule": "composition_specific_success_count > 0",
+      "landed_token_distribution": {
+        "correct": 96
+      },
+      "cooccurrence_distribution": {
+        "fully_correct": 96
+      }
+    }
+  },
+  "conditions": {
+    "(a)_composite_wilson_gt_primary": true,
+    "(b)_composite_wilson_gt_floor": true,
+    "(c)_preconditions_pass": true,
+    "(d)_construct_clean": true,
+    "(e)_error_structure_non_pathological": true
+  },
+  "final_branch": "GATE-CLEARED-THIS-RUN",
+  "submessage": null
+}

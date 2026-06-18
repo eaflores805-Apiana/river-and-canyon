@@ -1,0 +1,7 @@
+{
+  "item": "item_112",
+  "context": "direct_query",
+  "ground_truth": "i112_C1",
+  "predicted": "abstain",
+  "match": false
+}

@@ -1,0 +1,887 @@
+{
+  "logger_version": "v0.1",
+  "scope": "v0.2 \u00a79 same-error / wrong-address logging",
+  "pathological_error_structure": false,
+  "summary": {
+    "n_items": 96,
+    "composite_match_count": 70,
+    "composite_error_count": 26,
+    "composition_specific_success_count": 0,
+    "pathological_error_structure": false,
+    "pathological_rule": "composition_specific_success_count > 0",
+    "landed_token_distribution": {
+      "correct": 70,
+      "competitor_or_other": 26
+    },
+    "cooccurrence_distribution": {
+      "fully_correct": 70,
+      "composition_specific": 26
+    }
+  },
+  "per_item": [
+    {
+      "item": "item_097",
+      "ground_truth": "i097_C1",
+      "predicted": "i097_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_098",
+      "ground_truth": "i098_C1",
+      "predicted": "i098_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_099",
+      "ground_truth": "i099_C1",
+      "predicted": "i099_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_100",
+      "ground_truth": "i100_C1",
+      "predicted": "i100_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_101",
+      "ground_truth": "i101_C1",
+      "predicted": "i101_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_102",
+      "ground_truth": "i102_C1",
+      "predicted": "i102_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_103",
+      "ground_truth": "i103_C1",
+      "predicted": "i103_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_104",
+      "ground_truth": "i104_C1",
+      "predicted": "i104_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_105",
+      "ground_truth": "i105_C1",
+      "predicted": "i105_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_106",
+      "ground_truth": "i106_C1",
+      "predicted": "i106_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_107",
+      "ground_truth": "i107_C1",
+      "predicted": "i107_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_108",
+      "ground_truth": "i108_C1",
+      "predicted": "i108_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_109",
+      "ground_truth": "i109_C1",
+      "predicted": "i109_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_110",
+      "ground_truth": "i110_C1",
+      "predicted": "i110_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_111",
+      "ground_truth": "i111_C1",
+      "predicted": "i111_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_112",
+      "ground_truth": "i112_C1",
+      "predicted": "i112_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_113",
+      "ground_truth": "i113_C1",
+      "predicted": "i113_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_114",
+      "ground_truth": "i114_C1",
+      "predicted": "i114_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_115",
+      "ground_truth": "i115_C1",
+      "predicted": "i115_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_116",
+      "ground_truth": "i116_C1",
+      "predicted": "i116_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_117",
+      "ground_truth": "i117_C1",
+      "predicted": "i117_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_118",
+      "ground_truth": "i118_C1",
+      "predicted": "i118_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_119",
+      "ground_truth": "i119_C1",
+      "predicted": "i119_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_120",
+      "ground_truth": "i120_C1",
+      "predicted": "i120_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_121",
+      "ground_truth": "i121_C1",
+      "predicted": "i121_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_122",
+      "ground_truth": "i122_C1",
+      "predicted": "i122_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_123",
+      "ground_truth": "i123_C1",
+      "predicted": "i123_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_124",
+      "ground_truth": "i124_C1",
+      "predicted": "i124_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_125",
+      "ground_truth": "i125_C1",
+      "predicted": "i125_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_126",
+      "ground_truth": "i126_C1",
+      "predicted": "i126_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_127",
+      "ground_truth": "i127_C1",
+      "predicted": "i127_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_128",
+      "ground_truth": "i128_C1",
+      "predicted": "i128_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_129",
+      "ground_truth": "i129_C1",
+      "predicted": "i129_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_130",
+      "ground_truth": "i130_C1",
+      "predicted": "i130_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_131",
+      "ground_truth": "i131_C1",
+      "predicted": "i131_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_132",
+      "ground_truth": "i132_C1",
+      "predicted": "i132_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_133",
+      "ground_truth": "i133_C1",
+      "predicted": "i133_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_134",
+      "ground_truth": "i134_C1",
+      "predicted": "i134_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_135",
+      "ground_truth": "i135_C1",
+      "predicted": "i135_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_136",
+      "ground_truth": "i136_C1",
+      "predicted": "i136_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_137",
+      "ground_truth": "i137_C1",
+      "predicted": "i137_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_138",
+      "ground_truth": "i138_C1",
+      "predicted": "i138_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_139",
+      "ground_truth": "i139_C1",
+      "predicted": "i139_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_140",
+      "ground_truth": "i140_C1",
+      "predicted": "i140_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_141",
+      "ground_truth": "i141_C1",
+      "predicted": "i141_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_142",
+      "ground_truth": "i142_C1",
+      "predicted": "i142_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_143",
+      "ground_truth": "i143_C1",
+      "predicted": "i143_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_144",
+      "ground_truth": "i144_C1",
+      "predicted": "i144_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_145",
+      "ground_truth": "i145_C1",
+      "predicted": "i145_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_146",
+      "ground_truth": "i146_C1",
+      "predicted": "i146_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_147",
+      "ground_truth": "i147_C1",
+      "predicted": "i147_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_148",
+      "ground_truth": "i148_C1",
+      "predicted": "i148_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_149",
+      "ground_truth": "i149_C1",
+      "predicted": "i149_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_150",
+      "ground_truth": "i150_C1",
+      "predicted": "i150_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_151",
+      "ground_truth": "i151_C1",
+      "predicted": "i151_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_152",
+      "ground_truth": "i152_C1",
+      "predicted": "i152_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_153",
+      "ground_truth": "i153_C1",
+      "predicted": "i153_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_154",
+      "ground_truth": "i154_C1",
+      "predicted": "i154_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_155",
+      "ground_truth": "i155_C1",
+      "predicted": "i155_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_156",
+      "ground_truth": "i156_C1",
+      "predicted": "i156_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_157",
+      "ground_truth": "i157_C1",
+      "predicted": "i157_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_158",
+      "ground_truth": "i158_C1",
+      "predicted": "i158_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_159",
+      "ground_truth": "i159_C1",
+      "predicted": "i159_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_160",
+      "ground_truth": "i160_C1",
+      "predicted": "i160_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_161",
+      "ground_truth": "i161_C1",
+      "predicted": "i161_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_162",
+      "ground_truth": "i162_C1",
+      "predicted": "i162_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_163",
+      "ground_truth": "i163_C1",
+      "predicted": "i163_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_164",
+      "ground_truth": "i164_C1",
+      "predicted": "i164_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_165",
+      "ground_truth": "i165_C1",
+      "predicted": "i165_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_166",
+      "ground_truth": "i166_C1",
+      "predicted": "i166_C1",
+      "composite_match": true,
+      "hop2_match": true,
+      "landed_token_class": "correct",
+      "cooccurrence": "fully_correct"
+    },
+    {
+      "item": "item_167",
+      "ground_truth": "i167_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_168",
+      "ground_truth": "i168_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_169",
+      "ground_truth": "i169_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_170",
+      "ground_truth": "i170_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_171",
+      "ground_truth": "i171_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_172",
+      "ground_truth": "i172_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_173",
+      "ground_truth": "i173_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_174",
+      "ground_truth": "i174_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_175",
+      "ground_truth": "i175_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_176",
+      "ground_truth": "i176_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_177",
+      "ground_truth": "i177_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_178",
+      "ground_truth": "i178_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_179",
+      "ground_truth": "i179_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_180",
+      "ground_truth": "i180_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_181",
+      "ground_truth": "i181_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_182",
+      "ground_truth": "i182_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_183",
+      "ground_truth": "i183_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_184",
+      "ground_truth": "i184_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_185",
+      "ground_truth": "i185_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_186",
+      "ground_truth": "i186_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_187",
+      "ground_truth": "i187_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_188",
+      "ground_truth": "i188_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_189",
+      "ground_truth": "i189_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_190",
+      "ground_truth": "i190_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_191",
+      "ground_truth": "i191_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    },
+    {
+      "item": "item_192",
+      "ground_truth": "i192_C1",
+      "predicted": "wrong",
+      "composite_match": false,
+      "hop2_match": true,
+      "landed_token_class": "competitor_or_other",
+      "cooccurrence": "composition_specific"
+    }
+  ]
+}

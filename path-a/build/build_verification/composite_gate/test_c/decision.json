@@ -1,0 +1,91 @@
+{
+  "analyzer_version": "v0.1",
+  "scope": "composite-gate analysis; NOT certification",
+  "this_run_only": true,
+  "final_separate": "FINAL certification is a separate Manager/standard decision per v0.2 \u00a77",
+  "n_total": 96,
+  "n_excluded": 0,
+  "n_included": 96,
+  "excluded_items": [],
+  "composite": {
+    "k": 70,
+    "n": 96,
+    "rate": 0.7291666666666666,
+    "wilson_lower_95": 0.632734651676977,
+    "wilson_upper_95": 0.8079634140591491,
+    "primary_gate": 0.75,
+    "floor_gate": 0.45,
+    "min_clearing_count_primary": 81,
+    "min_clearing_count_floor": 53,
+    "condition_a_pass": false,
+    "condition_b_pass": true
+  },
+  "hop2": {
+    "k": 30,
+    "n": 96,
+    "rate": 0.3125,
+    "wilson_lower_95": 0.22850817977225668,
+    "wilson_upper_95": 0.41092067553454936,
+    "floor": 0.75,
+    "min_clearing_count": 81,
+    "precondition_pass": false
+  },
+  "hop1": {
+    "k": 96,
+    "n": 96,
+    "rate": 1.0,
+    "wilson_lower_95": 0.9615230525151841,
+    "wilson_upper_95": 1.0000000000000002,
+    "floor": 0.75,
+    "min_clearing_count": 81,
+    "precondition_pass": true
+  },
+  "direct_query": {
+    "k": 0,
+    "ceiling_count": 19,
+    "precondition_pass": true
+  },
+  "invalidated": {
+    "count": 0,
+    "threshold": 10,
+    "construct_pass": true
+  },
+  "admissibility": {
+    "all_pass": true,
+    "construct_pass": true
+  },
+  "prompt_conformance": {
+    "all_pass": true,
+    "construct_pass": true
+  },
+  "error_structure": {
+    "pathological": true,
+    "construct_pass": false,
+    "error_log_summary": {
+      "n_items": 96,
+      "composite_match_count": 70,
+      "composite_error_count": 26,
+      "composition_specific_success_count": 40,
+      "pathological_error_structure": true,
+      "pathological_rule": "composition_specific_success_count > 0",
+      "landed_token_distribution": {
+        "correct": 70,
+        "competitor_or_other": 26
+      },
+      "cooccurrence_distribution": {
+        "fully_correct": 30,
+        "composition_specific_success": 40,
+        "inherited_component_failure": 26
+      }
+    }
+  },
+  "conditions": {
+    "(a)_composite_wilson_gt_primary": false,
+    "(b)_composite_wilson_gt_floor": true,
+    "(c)_preconditions_pass": false,
+    "(d)_construct_clean": true,
+    "(e)_error_structure_non_pathological": false
+  },
+  "final_branch": "PRECONDITION-FAIL",
+  "submessage": null
+}
