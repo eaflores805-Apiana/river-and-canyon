@@ -250,7 +250,34 @@ into the next TL/Manager tooling-build action (mirroring TL/Manager ACTION
 
 ### 3. Commit + push + clean-fetch verification
 
-To be appended after this memo's commit lands.
+```text
+commit                       1c0e5ca31a3a894ee503c22b012a9039d04f7768
+push                         294847d..1c0e5ca  main -> main
+origin/main HEAD             1c0e5ca31a3a894ee503c22b012a9039d04f7768
+local       HEAD             1c0e5ca31a3a894ee503c22b012a9039d04f7768   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  df26dc65ac3dd76bb09fa84c4688b8835f49282e2a8f77ea4b94991308e57275
+       path-a/in-review/PREREGISTRATION-V3-COMPOSITE-GATE-v0.2.md
+       (the artifact under review; matches Senior v0.2 source byte-for-byte;
+        matches TL-cited sha)
+MATCH  07050ecc775f1baa38faf5164ae1d6db73476a009d2df084c394199e4a3eefc3
+       path-a/in-review/C5-V3-COMPOSITE-CERT-PREREG-CLAIM-RISK-v0.1.md
+MATCH  7df2689c25e447e6aa646bd3449c4d4f87582bcdc5c7463b3b0e94231776e890
+       path-a/in-review/C5-V3-COMPOSITE-GATE-PREREG-CLAIM-RISK-v0.2.md
+       (the v0.2 C5 review now byte-accessible from origin — C5 can re-review)
+MATCH  governance/2026-06-18_v3-composite-gate-prereg-v0.2-review/TL-ACTION-FILE-AND-REVIEW-V0.2-2026-06-18.md
+MATCH  governance/2026-06-18_v3-composite-gate-prereg-v0.2-review/CS-RETURN-STEP-1-FILING-AND-STEP-2-FEASIBILITY-2026-06-18.md
+       (this file, PRIOR to the §3 commit; the §3 commit's own sha will
+        cross-verify on the next sweep)
+```
+
+All 5 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. **Step 1 filing FILED. Step 2 feasibility review FILED. v0.2 now byte-accessible to C5 for the substantive re-review C5 was previously HOLD'd on by access alone.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ### 4. Side-bar — addressing the two C5 ARTIFACT-ACCESS HOLDs
 
