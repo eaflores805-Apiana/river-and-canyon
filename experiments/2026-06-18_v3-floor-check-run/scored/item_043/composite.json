@@ -1,0 +1,7 @@
+{
+  "item": "item_043",
+  "context": "composite",
+  "ground_truth": "i043_C1",
+  "predicted": "i043_C1",
+  "match": true
+}

@@ -1,0 +1,17 @@
+Loading model Qwen/Qwen2.5-3B-Instruct @ rev aa8e72537993ba99e69dfaafa59ed015b17504d1 ...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 24013.19it/s]
+Model loaded in 5.8s
+  progress: 32/384  elapsed 26.5s  rate 1.21 prompt/s  eta 291.5s
+  progress: 64/384  elapsed 51.6s  rate 1.24 prompt/s  eta 257.8s
+  progress: 96/384  elapsed 76.5s  rate 1.26 prompt/s  eta 229.4s
+  progress: 128/384  elapsed 101.8s  rate 1.26 prompt/s  eta 203.5s
+  progress: 160/384  elapsed 127.2s  rate 1.26 prompt/s  eta 178.1s
+  progress: 192/384  elapsed 152.5s  rate 1.26 prompt/s  eta 152.5s
+  progress: 224/384  elapsed 178.1s  rate 1.26 prompt/s  eta 127.2s
+  progress: 256/384  elapsed 203.5s  rate 1.26 prompt/s  eta 101.7s
+  progress: 288/384  elapsed 228.6s  rate 1.26 prompt/s  eta 76.2s
+  progress: 320/384  elapsed 253.6s  rate 1.26 prompt/s  eta 50.7s
+  progress: 352/384  elapsed 278.3s  rate 1.26 prompt/s  eta 25.3s
+  progress: 384/384  elapsed 303.1s  rate 1.27 prompt/s  eta 0.0s
+run_record written: experiments/2026-06-18_v3-floor-check-run/run_record.json
+DONE. 384 prompts scored in 303.1s (load: 5.8s).
