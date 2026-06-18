@@ -329,7 +329,55 @@ These will be returned in a follow-up CS RETURN once the execution surface deliv
 
 ## 7. Commit, push, clean-fetch verification
 
-To be appended after this memo's commit lands.
+Performed after the steps 1–5 commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 was compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       b362c57bf8ef1efca6bf29cd6186f35adcb1087a
+push                         2410f34..b362c57  main -> main  (582 files / 47952 insertions)
+origin/main HEAD             b362c57bf8ef1efca6bf29cd6186f35adcb1087a
+local       HEAD             b362c57bf8ef1efca6bf29cd6186f35adcb1087a   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+RUN ARTIFACTS:
+MATCH  experiments/2026-06-18_v3-floor-check-run/manifest.json
+        (sha aefc2fb0…; full sha256 inventory of every file below)
+MATCH  experiments/2026-06-18_v3-floor-check-run/admissibility_summary.json
+MATCH  experiments/2026-06-18_v3-floor-check-run/realization_summary.json
+MATCH  experiments/2026-06-18_v3-floor-check-run/prompt_conformance_summary.json
+MATCH  experiments/2026-06-18_v3-floor-check-run/items/item_001.json
+MATCH  experiments/2026-06-18_v3-floor-check-run/items/item_096.json
+                              (endpoint-checked; 94 intermediate items
+                               also on origin/main per the commit log)
+MATCH  experiments/2026-06-18_v3-floor-check-run/prompts/item_001/composite.txt
+MATCH  experiments/2026-06-18_v3-floor-check-run/prompts/item_096/direct_query.txt
+                              (endpoint-checked; remaining 382 prompts also on
+                               origin/main per the commit log; manifest carries
+                               sha256 of every prompt for downstream verification)
+MATCH  experiments/2026-06-18_v3-floor-check-run/admissibility/item_001_inspection.json
+                              (endpoint-checked; 95 more on origin/main)
+
+LOCKED TOOLING (re-verified; the §T digests are bytes-unchanged
+preserve the Manager-authorized tooling state under "no tooling edit"):
+MATCH  path-a/build/v3_floor_check_analyzer.py    (0f5a3f74…)
+MATCH  path-a/build/v3_prompt_realizer.py         (fb561fdc…)
+MATCH  path-a/build/v3_prompt_conformance_checker.py (b8afa3f8…)
+MATCH  path-a/build/v3_neutral_token_pool.md      (bc2020c2…)
+
+GOVERNANCE (this turn):
+MATCH  governance/2026-06-18_v3-floor-check-run/MANAGER-AUTHORIZATION-EXECUTE-V3-FLOOR-CHECK-2026-06-18.md
+MATCH  governance/2026-06-18_v3-floor-check-run/CS-RETURN-STEPS-1-5-PASS-STEP-6-HANDOFF-2026-06-18.md
+                              ↑ this file, PRIOR to the §7 commit
+                                (the §7 commit's own sha will cross-verify on next sweep)
+```
+
+All 15 listed key artifacts reproduce byte-exact from the shared repository on a clean fetch. The full 582-file commit is on origin; the run manifest at `experiments/2026-06-18_v3-floor-check-run/manifest.json` carries sha256 for every artifact in the run-prep set for downstream contract verification.
+
+**Steps 1–5 FILED. Step 6 handoff in §5 awaits external execution.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
