@@ -245,7 +245,41 @@ This run is the **mirror image** of the "single clean failed run" clause: a sing
 
 ## 7. Commit + push + clean-fetch verification
 
-To be appended after the commit lands.
+Performed after the commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+step 6/7/8 commit            66e7ea350889db492569964de6fc5adddf7d119a   (392 files; 3714 insertions)
+push                         0d62e4d..66e7ea3  main -> main
+origin/main HEAD             66e7ea350889db492569964de6fc5adddf7d119a
+local       HEAD             66e7ea350889db492569964de6fc5adddf7d119a   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  experiments/2026-06-18_v3-floor-check-run/run_step_6.py
+MATCH  experiments/2026-06-18_v3-floor-check-run/build_r6_log.py
+MATCH  experiments/2026-06-18_v3-floor-check-run/run_record.json
+MATCH  experiments/2026-06-18_v3-floor-check-run/r6_log.json
+MATCH  experiments/2026-06-18_v3-floor-check-run/analyzer_decision.json
+MATCH  experiments/2026-06-18_v3-floor-check-run/scored/item_001/hop2.json
+       (endpoint-checked; remaining 383 scored .json files also on
+        origin/main per the commit log)
+MATCH  experiments/2026-06-18_v3-floor-check-run/scored/item_096/composite.json
+MATCH  governance/2026-06-18_v3-floor-check-run/CS-RETURN-STEP-6-EXECUTED-STEPS-7-8-COMPLETE-2026-06-18.md
+                              (this file, PRIOR to the §7 commit; the §7 commit's
+                               own sha will be cross-verified on the next sweep)
+MATCH  governance/2026-06-18_v3-floor-check-run/MANAGER-TL-START-STEP-6-2026-06-18.md
+MATCH  path-a/build/v3_floor_check_analyzer.py
+                              (4 §T tooling digests unchanged through the run;
+                               this is the "no tooling edit after data" attestation)
+```
+
+All 10 listed key artifacts reproduce byte-exact from the shared repository on a clean fetch. The full 392-file commit is on origin; the run's complete inventory (96 specs already on origin from the prior run-prep commit, plus 384 newly-committed scored JSONs, plus run_record, r6_log, analyzer_decision, run_step_6.py, build_r6_log.py, run_step_6.log) is reachable via `git clone` at HEAD `66e7ea3…`.
+
+**V3 floor-check lifecycle CLOSED. §10 branch: COMPONENT-ADMISSIBLE-UNDER-COMPETITION. CS holds for next ACTION.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
