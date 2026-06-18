@@ -342,7 +342,33 @@ Does NOT reopen the K=5 FAIL — V3 ≠ C0; this prereg does not bear on it.
 
 ## 5. Clean-fetch confirmation
 
-To be appended after the commit lands.
+Performed after the commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       c7cb2f0dac8c740288c3d2e51a8eecb9bc65ca33
+push                         441eff4..c7cb2f0  main -> main
+origin/main HEAD             c7cb2f0dac8c740288c3d2e51a8eecb9bc65ca33
+local       HEAD             c7cb2f0dac8c740288c3d2e51a8eecb9bc65ca33   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  path-a/in-review/PREREGISTRATION-V3-COMPOSITE-CERTIFICATION-v0.1.md
+       (ee1ad41d…; the artifact under review)
+MATCH  path-a/in-review/V3-FLOOR-CHECK-RUN-SE-VERIFICATION-RETURN-v0.1.md
+       (03d2ead8…; SE PASS on the floor-check run)
+MATCH  path-a/in-review/V3-FLOOR-CHECK-TOOLING-VERIFICATION-SE-RETURN-v0.1.md
+       (232270f1…; SE PASS on the floor-check tooling)
+MATCH  governance/2026-06-18_v3-composite-cert-prereg-v0.1-review/TL-ACTION-ROUTE-V3-COMPOSITE-CERT-PREREG-V0.1-2026-06-18.md
+MATCH  governance/2026-06-18_v3-composite-cert-prereg-v0.1-review/CS-FEASIBILITY-REVIEW-V0.1-2026-06-18.md
+                                (this file, PRIOR to the §5 commit; the §5 commit's
+                                 own sha will be cross-verified on the next sweep)
+```
+
+All 5 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. **CS feasibility review FILED.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
