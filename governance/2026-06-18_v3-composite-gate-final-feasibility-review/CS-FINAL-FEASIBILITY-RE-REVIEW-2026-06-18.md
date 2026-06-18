@@ -297,7 +297,37 @@ Routing after this PASS:
 
 ## 4. Clean-fetch confirmation
 
-To be appended after the commit lands.
+Performed after the commit landed; `git fetch origin` immediately preceded the verification.
+
+```text
+commit                       7873aa7f5f040684a6b628b55a99d4c0db0f4b35
+push                         8b4a41b..7873aa7  main -> main
+origin/main HEAD             7873aa7f5f040684a6b628b55a99d4c0db0f4b35
+local       HEAD             7873aa7f5f040684a6b628b55a99d4c0db0f4b35   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+GOVERNANCE (this turn):
+MATCH  governance/2026-06-18_v3-composite-gate-final-feasibility-review/CS-FINAL-FEASIBILITY-RE-REVIEW-2026-06-18.md
+MATCH  governance/2026-06-18_v3-composite-gate-final-feasibility-review/TL-ACTION-FINAL-FEASIBILITY-RE-REVIEW-2026-06-18.md
+
+THE 3 §T DELIVERABLES (digests to be locked at TL approval):
+MATCH  path-a/build/v3_composite_gate_item_generator.py    (cc07e5a2…)
+MATCH  path-a/build/v3_composite_gate_analyzer.py           (3a3e954e…)
+MATCH  path-a/build/v3_composite_error_logger.py            (2ed46628…)
+
+UNDERLYING GENERATOR UNCHANGED (the "no tooling edit" attestation):
+MATCH  path-a/build/v3_item_generator.py                    (6a2ceee1…)
+
+REVIEW OBJECT:
+MATCH  path-a/in-review/PREREGISTRATION-V3-COMPOSITE-GATE-v0.2.md  (df26dc65…)
+```
+
+All 7 listed key artifacts reproduce byte-exact from the shared repository on a clean fetch. **Final feasibility review FILED. Ready for TL approval consideration with the existing MAX_DELTA caveat recorded at the §T lock.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
