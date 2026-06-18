@@ -57,10 +57,45 @@ BUILD-VERIFICATION ARTIFACTS (build only; not run-authorized):
 ## 2. Commit + final remote HEAD + clean-fetch confirmation
 
 ```text
-commit                      <recorded in §10 after push>
-final remote HEAD           <recorded in §10>
-clean-fetch confirmation    <recorded in §10>
+build commit                d390845f55fc1710a5069caf5897446d440e3210
+push                        975f696..d390845  main -> main  (2036 files; 52314 insertions)
+final remote HEAD           d390845f55fc1710a5069caf5897446d440e3210
+local       HEAD            d390845f55fc1710a5069caf5897446d440e3210   (match)
+
+per-file verification (origin/main bytes → local bytes; key artifacts):
+
+THE THREE §T DELIVERABLES (digests to be SE-locked at v0.2 §T approval):
+MATCH  path-a/build/v3_composite_gate_item_generator.py
+        (cc07e5a2…; wrapper)
+MATCH  path-a/build/v3_composite_gate_analyzer.py
+        (3a3e954e…)
+MATCH  path-a/build/v3_composite_error_logger.py
+        (2ed46628…)
+
+UNDERLYING GENERATOR — CRITICALLY UNCHANGED:
+MATCH  path-a/build/v3_item_generator.py
+        (6a2ceee1…  ← identical to v0.2 §T-cited digest; "REUSED UNCHANGED"
+                      claim stays literally true)
+
+BUILD-VERIFICATION SUMMARIES + 4 BRANCH DECISIONS:
+MATCH  build_verification/composite_gate/realization_summary.json
+MATCH  build_verification/composite_gate/admissibility_summary.json
+MATCH  build_verification/composite_gate/prompt_conformance_summary.json
+MATCH  build_verification/composite_gate/test_a/decision.json
+MATCH  build_verification/composite_gate/test_d/decision.json
+        (test_b + test_c also on origin; spot-checked endpoint pair)
+
+REVIEW OBJECT (v0.2 prereg) — unchanged:
+MATCH  path-a/in-review/PREREGISTRATION-V3-COMPOSITE-GATE-v0.2.md
+        (df26dc65…)
+
+GOVERNANCE (this turn):
+MATCH  governance/2026-06-18_v3-composite-gate-tooling-build/MANAGER-TL-ACTION-BEGIN-V3-COMPOSITE-GATE-TOOLING-BUILD-2026-06-18.md
+MATCH  governance/2026-06-18_v3-composite-gate-tooling-build/CS-RETURN-COMPOSITE-GATE-TOOLING-BUILD-2026-06-18.md
+        (this file, PRIOR to the §2 commit; cross-verifies on the next sweep)
 ```
+
+All 12 listed key artifacts reproduce byte-exact from the shared repository on a clean fetch. The full 2036-file commit (3 new tools + 96 items + 384 prompts + 96 admissibility + 4 synthetic test scenarios × {scored, r6_log, error_log, decision} + 3 summary JSONs + 2 memos) is on origin/main at HEAD `d390845…`. **V3 Composite Gate tooling FILED. Ready for SE verification.**
 
 ## 3. sha256 digests for each new artifact
 
