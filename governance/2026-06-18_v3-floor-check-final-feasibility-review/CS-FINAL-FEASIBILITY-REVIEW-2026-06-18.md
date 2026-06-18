@@ -379,7 +379,38 @@ Routing after this PASS:
 
 ## 5. Clean-fetch confirmation
 
-To be appended after this memo's commit lands.
+Performed after the commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       26ccbb734a70b0c4c43caec28300245b917e9334
+push                         df919ab..26ccbb7  main -> main
+origin/main HEAD             26ccbb734a70b0c4c43caec28300245b917e9334
+local       HEAD             26ccbb734a70b0c4c43caec28300245b917e9334   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+GOVERNANCE (this turn's commit):
+MATCH  governance/2026-06-18_v3-floor-check-final-feasibility-review/CS-FINAL-FEASIBILITY-REVIEW-2026-06-18.md
+MATCH  governance/2026-06-18_v3-floor-check-final-feasibility-review/TL-ACTION-FINAL-FEASIBILITY-REVIEW-2026-06-18.md
+
+THE 4 §T TOOLING DIGESTS (re-confirmed; will be locked at TL approval):
+MATCH  path-a/build/v3_floor_check_analyzer.py          (0f5a3f74…)
+MATCH  path-a/build/v3_prompt_realizer.py               (fb561fdc…)
+MATCH  path-a/build/v3_prompt_conformance_checker.py    (b8afa3f8…)
+MATCH  path-a/build/v3_neutral_token_pool.md            (bc2020c2…)
+
+REVIEW OBJECT + INSTRUMENT UNDER TEST:
+MATCH  path-a/in-review/PREREGISTRATION-V3-FLOOR-CHECK-v0.4.md   (c5ec4619…)
+MATCH  path-a/inspector/inspector.py                              (cb4b0b60…)
+MATCH  path-a/inspector/constants.py                              (1d761c3d…)
+                                                                   ^ both match v0.4 of-record re-pin
+```
+
+All 9 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. **Final feasibility review FILED. Ready for TL approval consideration with the §2 MAX_DELTA caveat recorded.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
