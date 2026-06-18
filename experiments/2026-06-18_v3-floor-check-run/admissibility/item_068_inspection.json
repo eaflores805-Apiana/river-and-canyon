@@ -1,0 +1,88 @@
+{
+  "inspector_version": "0.1",
+  "construction_id": "path_a_v3_item_068_pos3_seed068_v0.1",
+  "disposition": "PASS",
+  "checks": [
+    {
+      "check": "C1_C_star_not_terminal",
+      "ok": true
+    },
+    {
+      "check": "C2_pairwise_distinct",
+      "ok": true
+    },
+    {
+      "check": "C3_categories_separable",
+      "ok": true
+    },
+    {
+      "check": "C4_r1_edge_unique",
+      "ok": true
+    },
+    {
+      "check": "C5_competitor_count",
+      "ok": true
+    },
+    {
+      "check": "C6_relation_balance",
+      "ok": true
+    },
+    {
+      "check": "C7_direct_query_filler",
+      "ok": true
+    },
+    {
+      "check": "C8_four_contexts",
+      "ok": true
+    },
+    {
+      "check": "C9_manager_lock_binding",
+      "ok": true,
+      "mode": "real-run"
+    }
+  ],
+  "n_checks": 9,
+  "n_passes": 9,
+  "n_failures": 0,
+  "manager_approved_values": {
+    "manager_approved": {
+      "k": 5,
+      "D": 5,
+      "p": 5,
+      "m_min": 10,
+      "n": 96,
+      "margin": 0.25
+    },
+    "derived": {
+      "F": 0.2,
+      "success_threshold": 0.45,
+      "F_formula": "max(1/p, 1/m, 1/D)",
+      "threshold_formula": "F + margin"
+    },
+    "scorer_constants": {
+      "DOMINANT_RATE_THRESHOLD": 0.25
+    },
+    "policy_notes": {
+      "m_floor": "m < 5 not allowed; m > 10 acceptable (log actual; floor unchanged unless m < 5)",
+      "authority": "TL ACTION 2026-06-15 + Manager approval + value-lock patch ACTION + TL ACTION 2026-06-16 (sweep mode for Path A Load Scout K=1..5)",
+      "fixture_mode": "spec.`_fixture_mode: true` excludes a construction from real-run admissibility; allows param variation for testing",
+      "real_run_mode": "real-run specs must declare p, D, m, margin, k and match the Manager lock; missing or deviating params -> fail-closed REJECT (no silent fallback)",
+      "sweep_mode": "spec.`_sweep_mode: true` + `_sweep_locked_K_list: [..]` allows K to vary across the declared list; p/D/m/margin still bind to the Manager lock; K outside the list -> fail-closed REJECT"
+    },
+    "provenance_flags": {
+      "DOMINANT_RATE_THRESHOLD": {
+        "value": 0.25,
+        "source": "TARGET-CONSTRUCT-DEFINITION-v0.4 \u00a711 + checklist #7 (of-record)",
+        "status": "PROMOTED",
+        "promoted_to": "TARGET-CONSTRUCT-DEFINITION-v0.4",
+        "promoted_to_sha256": "4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29",
+        "promoted_to_path": "path-a/of-record/TARGET-CONSTRUCT-DEFINITION-v0.4.md",
+        "promotion_authority": "TL ACTION 2026-06-15 + Manager approval (Elevate v0.4 and Lock Prereg v0.3)",
+        "definition_text": "A failure category is 'dominant' when its rate is >= 0.25 over the pre-declared analysis unit (definition v0.4 \u00a711).",
+        "rationale": "Closes the v0.3-prior scorer-code-only provenance gap CS raised in the value-lock-patch review. The 0.25 threshold is now declared with the failure signatures it governs (definition R11), qualified by a pre-declared analysis unit (R11), not buried in scorer code. The scorer code still imports this constant from here for shared use; the code is the implementation, the definition is the source of truth."
+      }
+    }
+  },
+  "timestamp_utc": "2026-06-18T09:42:39Z",
+  "input_spec_path": "experiments/2026-06-18_v3-floor-check-run/items/item_068.json"
+}
