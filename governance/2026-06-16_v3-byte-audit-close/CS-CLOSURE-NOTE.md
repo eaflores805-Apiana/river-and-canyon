@@ -180,7 +180,46 @@ The CS-RETURN-V3-REAL-RUN-FIXTURE-2026-06-16.md filed yesterday in the same dir 
 
 ## 6. Clean-fetch verification
 
-To be appended at the foot of this memo after the closure commit lands and `git fetch origin` is run against it.
+Performed after the closure commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 was compared against `git cat-file -p origin/main:<path> | sha256sum` so the bytes verified are the **origin** bytes, not the local working-tree bytes.
+
+```text
+origin/main HEAD             b70c39f150cca6234ff98ec5ebbe2f8f7cc2ef5e
+local       HEAD             b70c39f150cca6234ff98ec5ebbe2f8f7cc2ef5e   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  bfb4404ab1bf872e7e81056b144440d1a09e31b88fc6b400cb6e4cac48f0b8f6
+       path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4.md
+MATCH  bfb4404ab1bf872e7e81056b144440d1a09e31b88fc6b400cb6e4cac48f0b8f6
+       path-a/in-review/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4-binding-patch.md
+                   ↑ same sha at both locations → byte-identical elevation verified
+MATCH  d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c
+       path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.3.md
+                   ↑ unchanged from prior of-record (superseded but retained)
+MATCH  4b616afb919114ee6e0b524e030172cc6f9a96ea8e206fc65bcbd0571eb23c29
+       path-a/of-record/TARGET-CONSTRUCT-DEFINITION-v0.4.md
+                   ↑ unchanged; v0.4 binding patch did not touch the definition
+MATCH  73c786a532c4c3a3b7320398d64d2561945c85ef6693a9f74ce2cfc3ce7b523b
+       path-a/of-record/README.md
+MATCH  a0877e934e869719bfc47ef0c4cd46c35b99c7c9949121b9c7b7a271bcea73fe
+       path-a/in-review/README.md
+MATCH  96bda3cf55d3adce4a8484e116cee0b9ed3c2a859633ecc6f6e07f83b2e000fb
+       governance/2026-06-16_v3-byte-audit-close/MANAGER-TL-RE-LOCK-v0.4-2026-06-16.md
+MATCH  bb55324fbcab837c670bb2eb3cc4ae5515c3fbd72c7a1543f1bba8794d42db72
+       governance/2026-06-16_v3-byte-audit-close/CS-RETURN-V3-REAL-RUN-FIXTURE-2026-06-16.md
+                   ↑ filed yesterday; unchanged this lifecycle turn
+MATCH  cb4b0b60bd6dc2b5f1d7ee6c4eaf3fc274cbb10254b5a548c637c84ca27348a9
+       path-a/inspector/inspector.py
+                   ↑ the file v0.4 of-record now pins
+MATCH  1d761c3d1c56e7aca9ef32a3f8b05c310e2aa5f35c6d91e67fd7fd81468915dd
+       path-a/inspector/constants.py
+                   ↑ the file v0.4 of-record now pins
+MATCH  5f09fe253b7c6195568f93b9c3b79e26b2b4f0e860834c83a750621dfedf4190
+       path-a/inspector/results/10_v3_real_run_param_deviation_inspection.json
+                   ↑ executable evidence the patched inspector still fail-closed
+```
+
+All 12 artifacts reproduce byte-exact from the shared repository on a clean fetch. The two-copy v0.4 invariant (in-review binding patch and of-record prereg sharing sha `bfb4404a…`) is verified directly. The two pinned-instrument digests (inspector `cb4b0b60…` and constants `1d761c3d…`) match the corresponding files at HEAD. **HOLD-close lifecycle FILED and closed.**
 
 ---
 
