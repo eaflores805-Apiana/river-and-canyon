@@ -160,7 +160,49 @@ All four watchpoints will be addressed in the next CS deliverable (`CS-FEASIBILI
 
 ## 4. Clean-fetch confirmation
 
-To be appended at the foot of this memo after the filing commit lands.
+Performed after the filing commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       2972b8ccf3c1c9ad6a031c9916a9cf3422cb1349
+push                         0ddef14..2972b8c  main -> main
+origin/main HEAD             2972b8ccf3c1c9ad6a031c9916a9cf3422cb1349
+local       HEAD             2972b8ccf3c1c9ad6a031c9916a9cf3422cb1349   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  df82b34c4f96e085ea51b8e6e1a735849a39b108b321f79e30b9f20cffa19d5b
+       path-a/in-review/PREREGISTRATION-V3-FLOOR-CHECK-v0.3.md
+                   ↑ matches inbox Senior source sha exactly
+                   ↑ matches TL-expected sha exactly
+MATCH  a565e46b56c182a7aee59a7618ec245245cab110df661cecdba5e105299e0363
+       path-a/in-review/PREREGISTRATION-V3-FLOOR-CHECK-v0.2.md
+                   ↑ superseded predecessor; retained byte-identical
+                     as version trail
+MATCH  96be27c3ddfd6ad87f25900bf6b0eadb061ad1f38586b947c47f4670cf99a504
+       path-a/in-review/README.md
+MATCH  3cb3ad419f4efc81b3d3d3cd7056fc29d90d8bc0f63011882f08a0ea0cf0921e
+       governance/2026-06-18_v3-floor-check-prereg-v0.3-filing/TL-ACTION-FILE-V3-FLOOR-CHECK-V0.3-2026-06-18.md
+MATCH  f5ded606997b2c7fef3abadbab4bd7d6fb29b8751fc9191dd7e7f736f31686a4
+       governance/2026-06-18_v3-floor-check-prereg-v0.3-filing/CS-FILING-MEMO-V3-FLOOR-CHECK-V0.3-2026-06-18.md
+                   ↑ this file, immediately PRIOR to the §4 commit
+                     (the §4 commit's own sha cross-verified on next sweep)
+```
+
+**Streamed-from-origin assertion on v0.3:**
+
+```text
+git cat-file -p origin/main:path-a/in-review/PREREGISTRATION-V3-FLOOR-CHECK-v0.3.md | sha256
+  → df82b34c4f96e085ea51b8e6e1a735849a39b108b321f79e30b9f20cffa19d5b
+  → matches the TL-expected v0.3 source sha exactly.
+```
+
+This same fetch mechanism is what C5 will use to read the prereg. The bytes on origin are the bytes Senior delivered, byte-for-byte.
+
+All 5 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. **V3 floor-check prereg v0.3 FILED at the TL-specified path; bytes match Senior source; C5 accessible.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
