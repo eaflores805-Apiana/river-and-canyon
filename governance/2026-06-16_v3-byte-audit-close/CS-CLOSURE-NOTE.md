@@ -223,6 +223,49 @@ All 12 artifacts reproduce byte-exact from the shared repository on a clean fetc
 
 ---
 
+## 7. Correction — finalized v0.4 replaces placeholder v0.4 (2026-06-17)
+
+**Why this section exists.** Sections 1–6 above are preserved as the historical record of the original lifecycle close: every claim about sha `bfb4404a…` in §§1, 2, 5, 6 was true at the time it was verified. **It described the pre-fill binding-patch bytes.** Senior subsequently identified that the binding-patch text Senior originally delivered contained an unfilled placeholder — the line *"supersedes v0.3 (of-record, `<v0.3 of-record digest>`) for the instrument byte-binding block solely"* — i.e. the `<v0.3 of-record digest>` token was never replaced with the actual v0.3 of-record sha. The bytes that landed of-record on 2026-06-17 carried that placeholder.
+
+**TL corrective action (2026-06-17):** `governance/2026-06-16_v3-byte-audit-close/TL-CORRECTIVE-ACTION-FINALIZE-V0.4-2026-06-17.md`. Status: ACTION — clerical correction / no science change. Required CS to replace the of-record v0.4 file with Senior's finalized filled bytes (sha `c61a3256…`) and update every README / closure / re-lock reference pointing to `bfb4404a…` as the of-record v0.4 digest.
+
+**CS execution.**
+
+```text
+REPLACED (byte-identical with Senior's finalized bytes; sha c61a3256...)
+  path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4.md
+  path-a/in-review/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4-binding-patch.md
+    (Senior re-issued under the same in-review filename → byte-identical
+     pair invariant preserved at the corrected sha)
+
+CONFIRMED on the corrected of-record bytes
+  placeholder `<v0.3 of-record digest>` count : 0
+  v0.3 of-record digest d9bd9b21… count       : 1
+
+UPDATED references (bfb4404a... → c61a3256...)
+  path-a/of-record/README.md       — v0.4 row sha + new corrective addendum
+  path-a/in-review/README.md       — v0.4 binding-patch row sha + correction note
+  governance/2026-06-16_v3-byte-audit-close/CS-CLOSURE-NOTE.md
+                                   — this §7 (the prior §§1–6 are historical
+                                     and intentionally retain bfb4404a…)
+
+UNCHANGED references (the bfb4404a... mention is HISTORICAL, not load-bearing)
+  governance/2026-06-16_v3-byte-audit-close/MANAGER-TL-RE-LOCK-v0.4-2026-06-16.md
+                                   — re-lock memo does not cite v0.4's sha
+  governance/2026-06-16_v3-byte-audit-close/CS-RETURN-V3-REAL-RUN-FIXTURE-2026-06-16.md
+                                   — historical claim about the SE-drafted
+                                     in-review binding patch at the time of
+                                     fixture filing; kept as audit record
+```
+
+**Scientific content delta:** none. No values, thresholds, outcome rules, scoring categories, controls, stop-rules, or forbidden interpretations changed between `bfb4404a…` and `c61a3256…`. The only delta is the placeholder being replaced with the actual v0.3 of-record digest `d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c`, which is what Senior originally intended that line to read. Both byte-strings re-pin inspector `cb4b0b60…` and constants `1d761c3d…` identically, attest the same UNCHANGED invariants, and route through the same Manager + TL re-lock authority.
+
+## 8. Clean-fetch verification — corrected state (2026-06-17, second verification)
+
+To be appended at the foot of this memo after the correction commit lands and `git fetch origin` is re-run against it.
+
+---
+
 ## Non-authorizations (carried forward)
 
 ```text

@@ -1,7 +1,7 @@
 # PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4 (binding patch)
 
 **E. A. Flores**, Apiana AI, Inc. — June 16, 2026
-*River and Canyon · Path A. Prepared by the Senior Engineer. **Binding patch only** — supersedes v0.3 (of-record, `<v0.3 of-record digest>`) for the instrument byte-binding block solely. Drafted for TL/Manager re-lock; SE locks nothing.*
+*River and Canyon · Path A. Prepared by the Senior Engineer. **Binding patch only** — supersedes v0.3 (of-record, `d9bd9b219badd25901811ddfbb43b811a04750a77723f6a1f076c7dd641f091c`) for the instrument byte-binding block solely. Drafted for TL/Manager re-lock; SE locks nothing.*
 
 > **Why v0.4 exists (narrow scope).** The V3 instrument byte-audit (SE return, `c3f4e667…`) returned HOLD for one reason: the of-record v0.3 prereg's byte-binding pinned `inspector.py = be50c08c…` and `constants.py = 614d185d…`, but the K-sweep sweep-mode patch (commit `64a5199`) modified those **shared** files after v0.3 pinned them, so the of-record binding pointed at superseded bytes. The patch was verified **additive** — it added a sweep-mode branch and left the **REAL-RUN** path (which V3 uses) enforcing the same Manager lock fail-closed, with every locked value byte-present and unchanged. v0.4 **re-pins the two stale digests to current HEAD and records the reason. It changes nothing else.** This is the minimal correction that makes the of-record binding accurate; it is not a content revision.
 
