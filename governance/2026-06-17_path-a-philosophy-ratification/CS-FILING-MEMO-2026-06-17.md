@@ -112,7 +112,44 @@ clean-fetch            to be recorded in §6 after `git fetch origin` and
 
 ## 6. Commit / push / clean-fetch verification
 
-To be appended at the foot of this memo after the filing commit lands.
+Performed after the filing commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       34f746a2d80f90e09b91502bbbe6ab74f2664b45
+push                         6ce631f..34f746a  main -> main
+origin/main HEAD             34f746a2d80f90e09b91502bbbe6ab74f2664b45
+local       HEAD             34f746a2d80f90e09b91502bbbe6ab74f2664b45   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  2e1b9ee9a37708b4dab9f7cacc1fa7d76abad80caddedd6b690db8c0cd917f5e
+       path-a/of-record/PHILOSOPHY-DECISION-RECORD-PATH-A-GATE-STANDARD-v0.1.md
+                   ↑ matches inbox source sha → byte-identical filing
+MATCH  c61a3256d26e0ed0226e46a60d9b701baddfe3006249db687f221aea57315955
+       path-a/of-record/PREREGISTRATION-PATH-A-CONSTRUCTIBILITY-v0.4.md
+                   ↑ unchanged (corrected v0.4 from prior turn; cross-referenced
+                     by the decision record §3)
+MATCH  c1c1d61aff5ca0e5884ec22d71cc7b98a19ca505e70559ffbbe356be5b1a7c40
+       path-a/of-record/README.md
+MATCH  bc43305b3df9ee9a2e569774cea3e0dfecfc4b82d7254a0097058a8a9dfe67ca
+       governance/2026-06-17_path-a-philosophy-ratification/TL-CLEARANCE-PHILOSOPHY-RECORD-2026-06-17.md
+MATCH  7959c810171bb67d0df1cc97403cce53b8618116ade3a0e65097eda64c3dcb17
+       governance/2026-06-17_path-a-philosophy-ratification/CS-FILING-MEMO-2026-06-17.md
+                   ↑ this file, immediately PRIOR to the §6 commit (the §6
+                     commit's own sha will be cross-verified on the next sweep)
+```
+
+**Streamed-from-origin assertion on the filed philosophy record:**
+
+```text
+c61a3256 reference count on origin/main bytes : 1  (present, as TL clearance required)
+```
+
+All 5 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. The c61a3256 cite in the decision record's §3 is intact on origin/main bytes. **Philosophy decision record FILED of-record, RATIFIED.**
+
+---
+
+— CS Engineer, 2026-06-17 (clean-fetch appendix)
 
 ---
 
