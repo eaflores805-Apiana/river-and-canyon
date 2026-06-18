@@ -292,7 +292,52 @@ clean-fetch                  to be appended in §4 after `git fetch origin`
 
 ## 4. Clean-fetch confirmation
 
-To be appended after the Step 2 commit lands and `git fetch origin` is run.
+Performed after the Step 2 commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 was compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+Step 1 commit                829e00cc0cc7377c734c7f9b31b2e6f6117e7280
+Step 2 commit                6d2ba00f317566900a9e1deb1a9b4a9498d4f562
+final remote HEAD            6d2ba00f317566900a9e1deb1a9b4a9498d4f562
+local       HEAD             6d2ba00f317566900a9e1deb1a9b4a9498d4f562   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+TOOLING ARTIFACTS (the four §T digests to be SE-verified and locked at approval):
+MATCH  0f5a3f7438a6936fe449ea3558321a734b999b2ac2e8384032c2890e155f3585
+       path-a/build/v3_floor_check_analyzer.py
+MATCH  fb561fdc526115da94c6137b739e8bb3b6adf30825d83f864cda713bc0750909
+       path-a/build/v3_prompt_realizer.py
+MATCH  b8afa3f89dd7f375058500820bdf2bf58a46384d2283c8f2a31f1b8c92ad2b82
+       path-a/build/v3_prompt_conformance_checker.py
+MATCH  bc2020c2c4e1293f62c9f83a9b24a61f98c1ede35d5a071ee8cfd72a316ab0d9
+       path-a/build/v3_neutral_token_pool.md
+
+BUILD-VERIFICATION SUMMARIES (8-item demonstration batch):
+MATCH  b010faffd9e8da9ac976fee6ed9dacf5e4f7298d33ede7df125aeabbf46409f1
+       path-a/build/build_verification/realization_summary.json
+MATCH  259410a302df889a997e1edbf1abb6fd9a709ed975b5701fa1c5ea7838d8ca9d
+       path-a/build/build_verification/prompt_conformance_summary.json
+
+V0.4 PREREG (under review; bytes intact, no edits):
+MATCH  c5ec46194772f100681cf41a6b3dd2d0c51a2c1fb49a62b181741a74529ce7b0
+       path-a/in-review/PREREGISTRATION-V3-FLOOR-CHECK-v0.4.md
+MATCH  fd99a64aa70df42c49a190a39bc316f2cf4cbff40b8dd36d8b8b456102210f92
+       path-a/in-review/C5-V3-FLOOR-CHECK-PREREG-CLAIM-RISK-v0.3.md
+
+GOVERNANCE:
+MATCH  bd42b4100a7ca203273c4e28ae825e7ddc6930b6fa1575ebaa8187f82b0d5211
+       governance/2026-06-18_v3-floor-check-tooling-build/TL-MANAGER-ACTION-FILE-V0.4-AND-BUILD-TOOLING-2026-06-18.md
+MATCH  65d0a03e3e7990656fe071f1d436b8c21c0bdf28eb23826048271b20980702a1
+       governance/2026-06-18_v3-floor-check-tooling-build/CS-RETURN-TOOLING-BUILD-2026-06-18.md
+                   ↑ this file, PRIOR to the §4 commit (the §4 commit's own
+                     sha will be cross-verified on the next sweep)
+```
+
+All 10 listed key artifacts (the four tooling files, two build-verification summaries, two in-review prereg/review files, two governance memos) reproduce byte-exact from the shared repository on a clean fetch. The four §T tooling digests are exactly the digests to be SE-verified next and locked into v0.4's binding block at TL/Manager approval. **Floor-check tooling FILED. Ready for SE verification.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
