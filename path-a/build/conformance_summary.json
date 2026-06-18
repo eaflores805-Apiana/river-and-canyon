@@ -1,0 +1,101 @@
+{
+  "inspector_path": "path-a/inspector/inspector.py",
+  "items_dir": "path-a/build/items",
+  "results_dir": "path-a/build/conformance",
+  "n_items": 8,
+  "n_pass": 8,
+  "n_reject": 0,
+  "all_pass": true,
+  "per_item": [
+    {
+      "item": "item_001",
+      "spec_path": "path-a/build/items/item_001.json",
+      "result_path": "path-a/build/conformance/item_001_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_001_pos1_seed001_v0.1",
+      "inspector_exit": 0
+    },
+    {
+      "item": "item_002",
+      "spec_path": "path-a/build/items/item_002.json",
+      "result_path": "path-a/build/conformance/item_002_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_002_pos2_seed002_v0.1",
+      "inspector_exit": 0
+    },
+    {
+      "item": "item_003",
+      "spec_path": "path-a/build/items/item_003.json",
+      "result_path": "path-a/build/conformance/item_003_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_003_pos3_seed003_v0.1",
+      "inspector_exit": 0
+    },
+    {
+      "item": "item_004",
+      "spec_path": "path-a/build/items/item_004.json",
+      "result_path": "path-a/build/conformance/item_004_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_004_pos4_seed004_v0.1",
+      "inspector_exit": 0
+    },
+    {
+      "item": "item_005",
+      "spec_path": "path-a/build/items/item_005.json",
+      "result_path": "path-a/build/conformance/item_005_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_005_pos5_seed005_v0.1",
+      "inspector_exit": 0
+    },
+    {
+      "item": "item_006",
+      "spec_path": "path-a/build/items/item_006.json",
+      "result_path": "path-a/build/conformance/item_006_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_006_pos1_seed006_v0.1",
+      "inspector_exit": 0
+    },
+    {
+      "item": "item_007",
+      "spec_path": "path-a/build/items/item_007.json",
+      "result_path": "path-a/build/conformance/item_007_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_007_pos2_seed007_v0.1",
+      "inspector_exit": 0
+    },
+    {
+      "item": "item_008",
+      "spec_path": "path-a/build/items/item_008.json",
+      "result_path": "path-a/build/conformance/item_008_inspection.json",
+      "disposition": "PASS",
+      "n_checks": 9,
+      "n_passes": 9,
+      "n_failures": 0,
+      "construction_id": "path_a_v3_item_008_pos3_seed008_v0.1",
+      "inspector_exit": 0
+    }
+  ],
+  "scope": "build-realization only; not run-authorized",
+  "expected_mode": "real-run (no _fixture_mode, no _sweep_mode)"
+}
