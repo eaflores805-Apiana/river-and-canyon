@@ -259,7 +259,35 @@ HOLD DOES mean:
 
 ## 6. Clean-fetch confirmation
 
-To be appended after the commit lands and `git fetch origin` is run.
+Performed after the commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       1d13338243e5a147bcad1b30408ac0f17eed8c72
+push                         703b3a3..1d13338  main -> main
+origin/main HEAD             1d13338243e5a147bcad1b30408ac0f17eed8c72
+local       HEAD             1d13338243e5a147bcad1b30408ac0f17eed8c72   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  e9b7e34905c71abc0f33fe7ab90b78d08e626a6b95f27efabb0d20900cae6d35
+       path-a/in-review/V3-BUILD-PACKAGE-VERIFICATION-SE-RETURN-v0.1.md
+MATCH  ceaa2e674e43e7ec234b5fb914ffd195da1703cb8e7f70dae7d9c1f0e901f5dd
+       path-a/in-review/PREREGISTRATION-V3-FLOOR-CHECK-PATH-A-v0.1.md
+MATCH  a8385ea566e09d0b8e60b195c9fd96306c60ed5532448b7a70b35407c4c93b47
+       path-a/in-review/README.md
+MATCH  16bcdebd45bb02d9838e76b378ac3a4b076cf769a66a226f21b1c1ed93723a37
+       governance/2026-06-18_v3-floor-check-prereg-review/TL-ACTION-ROUTE-V3-FLOOR-CHECK-PREREG-2026-06-18.md
+MATCH  3801c1e3368da1e050b9803209b6169d4dda2f5a5d27c7f19d6f8ba520f7a09b
+       governance/2026-06-18_v3-floor-check-prereg-review/CS-FEASIBILITY-REVIEW-2026-06-18.md
+                   ↑ this file, immediately PRIOR to the §6 commit (the §6
+                     commit's own sha will be cross-verified on the next sweep)
+```
+
+All 5 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. **CS feasibility review FILED.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
