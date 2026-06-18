@@ -280,7 +280,32 @@ HOLD DOES mean:
 
 ## 4. Clean-fetch confirmation
 
-To be appended after the commit lands and `git fetch origin` is run.
+Performed after the commit landed; `git fetch origin` immediately preceded the verification. Each file's local sha256 compared against `git cat-file -p origin/main:<path> | sha256sum`.
+
+```text
+commit                       641956cdc2bcbb34fe773b6a66e82ddf3c7754a5
+push                         2f0f167..641956c  main -> main
+origin/main HEAD             641956cdc2bcbb34fe773b6a66e82ddf3c7754a5
+local       HEAD             641956cdc2bcbb34fe773b6a66e82ddf3c7754a5   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  df82b34c4f96e085ea51b8e6e1a735849a39b108b321f79e30b9f20cffa19d5b
+       path-a/in-review/PREREGISTRATION-V3-FLOOR-CHECK-v0.3.md
+                   ↑ the artifact under review; bytes intact (no edits)
+MATCH  b48c8b42bd87bd98047c50ef99a2d44448e1b7fc2210a7eb078e89b0bc11b8ba
+       governance/2026-06-18_v3-floor-check-prereg-v0.3-filing/TL-ACTION-REVIEW-FILED-V0.3-2026-06-18.md
+MATCH  0afa3cbcd746e55093dbb99334f9b388b9567f847c1a99c72221834a93d179e6
+       governance/2026-06-18_v3-floor-check-prereg-v0.3-filing/CS-FEASIBILITY-RE-REVIEW-V0.3-2026-06-18.md
+                   ↑ this file, immediately PRIOR to the §4 commit;
+                     the §4 commit's own sha will be cross-verified on next sweep
+```
+
+All 3 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. **CS feasibility re-review FILED.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
