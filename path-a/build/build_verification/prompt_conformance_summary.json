@@ -1,0 +1,742 @@
+{
+  "checker_version": "v0.1",
+  "max_delta_gate": 8,
+  "items_dir": "path-a/build/items",
+  "prompts_dir": "path-a/build/build_verification/prompts",
+  "n_items": 8,
+  "n_pass": 8,
+  "n_fail": 0,
+  "all_pass": true,
+  "section_9_vi_gate": "PASS",
+  "per_item": [
+    {
+      "item_id": "path_a_v3_item_001_pos1_seed001_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i001_A, i001_r1, ?)",
+            "C_star": "i001_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i001_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(neutral, marks, abstain)",
+            "B": "i001_B1",
+            "C_star": "i001_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i001_B1, i001_r2, ?)",
+            "B": "i001_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(neutral, marks, abstain)",
+            "verb": "marks",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "item_id": "path_a_v3_item_002_pos2_seed002_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i002_A, i002_r1, ?)",
+            "C_star": "i002_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i002_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(placebo, types, padding)",
+            "B": "i002_B1",
+            "C_star": "i002_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i002_B1, i002_r2, ?)",
+            "B": "i002_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(placebo, types, padding)",
+            "verb": "types",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "item_id": "path_a_v3_item_003_pos3_seed003_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i003_A, i003_r1, ?)",
+            "C_star": "i003_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i003_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(abstain, pairs, default)",
+            "B": "i003_B1",
+            "C_star": "i003_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i003_B1, i003_r2, ?)",
+            "B": "i003_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(abstain, pairs, default)",
+            "verb": "pairs",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "item_id": "path_a_v3_item_004_pos4_seed004_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i004_A, i004_r1, ?)",
+            "C_star": "i004_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i004_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(padding, links, fillerX)",
+            "B": "i004_B1",
+            "C_star": "i004_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i004_B1, i004_r2, ?)",
+            "B": "i004_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(padding, links, fillerX)",
+            "verb": "links",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "item_id": "path_a_v3_item_005_pos5_seed005_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i005_A, i005_r1, ?)",
+            "C_star": "i005_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i005_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(default, holds, blankXY)",
+            "B": "i005_B1",
+            "C_star": "i005_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i005_B1, i005_r2, ?)",
+            "B": "i005_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(default, holds, blankXY)",
+            "verb": "holds",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "item_id": "path_a_v3_item_006_pos1_seed006_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i006_A, i006_r1, ?)",
+            "C_star": "i006_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i006_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(fillerX, marks, ineutrl)",
+            "B": "i006_B1",
+            "C_star": "i006_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i006_B1, i006_r2, ?)",
+            "B": "i006_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(fillerX, marks, ineutrl)",
+            "verb": "marks",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "item_id": "path_a_v3_item_007_pos2_seed007_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i007_A, i007_r1, ?)",
+            "C_star": "i007_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i007_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(blankXY, types, neutral)",
+            "B": "i007_B1",
+            "C_star": "i007_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i007_B1, i007_r2, ?)",
+            "B": "i007_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(blankXY, types, neutral)",
+            "verb": "types",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "item_id": "path_a_v3_item_008_pos3_seed008_v0.1",
+      "all_checks_pass": true,
+      "checks": {
+        "P1_presence": {
+          "ok": true
+        },
+        "P2_template_class": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P3_bridge_presence_or_substitution": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P4_hop1_query_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "hop1_query": "QUERY: (i008_A, i008_r1, ?)",
+            "C_star": "i008_C1"
+          }
+        },
+        "P5_dq_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "C_star": "i008_C1"
+          }
+        },
+        "P6_filler_line_no_B_no_Cstar": {
+          "ok": true,
+          "detail": {
+            "filler_line": "(ineutrl, pairs, placebo)",
+            "B": "i008_B1",
+            "C_star": "i008_C1"
+          }
+        },
+        "P7_hop2_query_has_B": {
+          "ok": true,
+          "detail": {
+            "hop2_query": "QUERY: (i008_B1, i008_r2, ?)",
+            "B": "i008_B1"
+          }
+        },
+        "P8_no_decoy_terminal_in_queries": {
+          "ok": true,
+          "detail": {
+            "composite": true,
+            "hop1": true,
+            "hop2": true,
+            "direct_query": true
+          }
+        },
+        "P9_char_delta_gate": {
+          "ok": true,
+          "detail": {
+            "char_counts": {
+              "composite": 653,
+              "hop1": 645,
+              "hop2": 646,
+              "direct_query": 651
+            },
+            "delta": 8,
+            "max_delta_gate": 8
+          }
+        },
+        "P10_filler_verb_locked": {
+          "ok": true,
+          "detail": {
+            "sub_line": "(ineutrl, pairs, placebo)",
+            "verb": "pairs",
+            "locked_pool": [
+              "holds",
+              "links",
+              "marks",
+              "pairs",
+              "types"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "scope": "build-realization only; not run-authorized"
+}

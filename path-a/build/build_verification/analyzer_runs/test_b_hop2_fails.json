@@ -1,0 +1,56 @@
+{
+  "analyzer_version": "v0.1",
+  "scope": "build-realization only; not run-authorized",
+  "n_total": 8,
+  "n_excluded": 0,
+  "n_included": 8,
+  "excluded_items": [],
+  "hop2": {
+    "k": 4,
+    "n": 8,
+    "rate": 0.5,
+    "wilson_lower_95": 0.2152125268244419,
+    "wilson_upper_95": 0.7847874731755581,
+    "floor": 0.75,
+    "min_clearing_count": null,
+    "condition_i_pass": false
+  },
+  "hop1": {
+    "k": 8,
+    "n": 8,
+    "rate": 1.0,
+    "wilson_lower_95": 0.6755843804891231,
+    "wilson_upper_95": 1.0,
+    "floor": 0.75,
+    "min_clearing_count": null,
+    "condition_iii_pass": false
+  },
+  "direct_query": {
+    "count": 0,
+    "ceiling_count": 19,
+    "condition_ii_pass": true
+  },
+  "invalidated": {
+    "count": 0,
+    "threshold": 10,
+    "condition_iv_pass": true
+  },
+  "admissibility": {
+    "all_pass": true,
+    "condition_v_pass": true
+  },
+  "prompt_conformance": {
+    "all_pass": true,
+    "condition_vi_pass": true
+  },
+  "conditions": {
+    "(i)_hop2_wilson_gt_floor": false,
+    "(ii)_dq_count_le_ceiling": true,
+    "(iii)_hop1_wilson_gt_floor": false,
+    "(iv)_invalidated_lt_threshold": true,
+    "(v)_admissibility_pass": true,
+    "(vi)_conformance_pass": true
+  },
+  "clean_executable_construct": false,
+  "final_branch": "CONSTRUCT-FAIL"
+}
