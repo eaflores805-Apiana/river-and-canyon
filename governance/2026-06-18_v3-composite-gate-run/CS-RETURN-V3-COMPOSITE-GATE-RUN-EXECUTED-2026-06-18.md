@@ -377,7 +377,47 @@ BLOCKED (carried per Manager memo + standing card):
 
 ## 6. Commit, push, clean-fetch verification
 
-To be appended after this memo's commit lands.
+Performed after the run-commit landed; `git fetch origin` immediately preceded the verification.
+
+```text
+commit                       d92c73a075e6d4821e1b41141a7b71ef9e388a6a   (970 files; 49064 insertions)
+push                         86fea7c..d92c73a  main -> main
+origin/main HEAD             d92c73a075e6d4821e1b41141a7b71ef9e388a6a
+local       HEAD             d92c73a075e6d4821e1b41141a7b71ef9e388a6a   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+RUN ARTIFACTS:
+MATCH  experiments/2026-06-18_v3-composite-gate-run/analyzer_decision.json
+        (3924ff35…; the final §7/§8 branch JSON)
+MATCH  experiments/2026-06-18_v3-composite-gate-run/run_record.json
+MATCH  experiments/2026-06-18_v3-composite-gate-run/r6_log.json
+MATCH  experiments/2026-06-18_v3-composite-gate-run/error_log.json
+MATCH  experiments/2026-06-18_v3-composite-gate-run/admissibility_summary.json
+MATCH  experiments/2026-06-18_v3-composite-gate-run/prompt_conformance_summary.json
+MATCH  experiments/2026-06-18_v3-composite-gate-run/scored/item_097/composite.json
+        (endpoint check; 95 more items × 4 contexts = 380 more scored JSONs
+         also on origin/main per the commit log)
+MATCH  experiments/2026-06-18_v3-composite-gate-run/scored/item_192/hop1.json
+
+LOCKED TOOLING — UNCHANGED through the run (the "no tooling edit after data" attestation):
+MATCH  path-a/build/v3_composite_gate_analyzer.py             (3a3e954e…)
+MATCH  path-a/build/v3_composite_error_logger.py              (2ed46628…)
+MATCH  path-a/build/v3_composite_gate_item_generator.py       (cc07e5a2…)
+
+GOVERNANCE (this turn):
+MATCH  governance/2026-06-18_v3-composite-gate-run/MANAGER-AUTHORIZATION-V3-COMPOSITE-GATE-RUN-2026-06-18.md
+MATCH  governance/2026-06-18_v3-composite-gate-run/CS-RETURN-V3-COMPOSITE-GATE-RUN-EXECUTED-2026-06-18.md
+        (this file, PRIOR to the §6 commit; cross-verifies on the next sweep)
+```
+
+All 13 listed key artifacts reproduce byte-exact from the shared repository on a clean fetch. The full 970-file commit (96 items + 96 admissibility + 384 prompts + 384 scored + 4 summary JSONs + 3 analysis JSONs + run_record + run_step_6.log + 2 governance memos) is on origin/main at HEAD `d92c73a…`.
+
+**V3 Composite Gate run FILED. Final §7/§8 branch: PRECONDITION-FAIL.**
+
+---
+
+— CS Engineer, 2026-06-18 (clean-fetch appendix)
 
 ---
 
