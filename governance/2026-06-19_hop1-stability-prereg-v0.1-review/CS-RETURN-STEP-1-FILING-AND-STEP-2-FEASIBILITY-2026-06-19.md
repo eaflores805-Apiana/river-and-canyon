@@ -430,7 +430,35 @@ Does NOT make any of the forbidden claims:
 
 ## 5. Clean-fetch confirmation
 
-To be appended after the commit lands.
+Performed after the commit landed; `git fetch origin` immediately preceded the verification.
+
+```text
+commit                       b757f4d64a9f1c97dde7e9647d21edaa98957f90
+push                         9744e0e..b757f4d  main -> main
+origin/main HEAD             b757f4d64a9f1c97dde7e9647d21edaa98957f90
+local       HEAD             b757f4d64a9f1c97dde7e9647d21edaa98957f90   (match)
+
+per-file verification (origin/main bytes → local bytes):
+
+MATCH  path-a/in-review/PREREGISTRATION-HOP1-STABILITY-PATH-A-v0.1.md
+       (71f00482…; matches TL-cited Senior source byte-for-byte)
+MATCH  path-a/in-review/C5-V3-COMPOSITE-GATE-PREREG-CLAIM-RISK-v0.2-BYTEREVIEW.md
+       (9d042b6d…; C5 PASS on v0.2 bytes)
+MATCH  path-a/in-review/V3-COMPOSITE-GATE-RUN-SE-VERIFICATION-RETURN-v0.1.md
+       (0eb0edcb…; SE PASS on PRECONDITION-FAIL run)
+MATCH  path-a/in-review/V3-COMPOSITE-GATE-TOOLING-VERIFICATION-SE-RETURN-v0.1.md
+       (c97f98b0…; SE PASS on composite-gate tooling)
+MATCH  path-a/in-review/README.md
+MATCH  governance/2026-06-19_hop1-stability-prereg-v0.1-review/TL-ACTION-FILE-AND-REVIEW-HOP1-STABILITY-V0.1-2026-06-19.md
+MATCH  governance/2026-06-19_hop1-stability-prereg-v0.1-review/CS-RETURN-STEP-1-FILING-AND-STEP-2-FEASIBILITY-2026-06-19.md
+       (this file, PRIOR to the §5 commit)
+```
+
+All 7 listed artifacts reproduce byte-exact from the shared repository on a clean fetch. **CS Step 1 (filing) + Step 2 (feasibility PASS-with-notes) FILED.**
+
+---
+
+— CS Engineer, 2026-06-19 (clean-fetch appendix)
 
 ---
 
