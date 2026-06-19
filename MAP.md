@@ -1,6 +1,6 @@
 # Program Path Map
 
-**Last updated:** 2026-06-15 (rev 3 — CS additions after first authorized model runs + Terminal Attraction finding-track filing. See change-note at foot.)
+**Last updated:** 2026-06-19 (rev 4 — CS additions tracing the V3 program lifecycle 2026-06-15 → 2026-06-19: K-Sweep scout + FP16 constructibility run; V3 instrument byte-audit re-lock; philosophy decision ratified; V3 build open slots; V3 floor check → COMPONENT-ADMISSIBLE; V3 composite gate → PRECONDITION-FAIL. See change-note at foot.)
 **Re-sync rule:** if this and the record disagree, the record wins. Re-sync when a stage closes or a new branch opens. The `git log` is the authoritative timestamp for each commit.
 
 A living overview of where the program has been, where it is, and where it ventured off. Coarse-grained: main stages, not every commit. The trunk reads top → bottom in time; branches show where the work split (closed routes, parked tracks, new directions).
@@ -107,11 +107,96 @@ PROGRAM TRUNK
 ├── ↳ Finding track (parked) — Terminal Attraction
 │      │   finding-tracks/terminal-attraction/
 │      └── Senior-authored finding report v0.4 + 2 figures + PDF
-│             (C5 PASS w/ I1+G1/G2 ; C6 prior-art PASS scoped diagnostic)        ◄── YOU ARE HERE
+│             (C5 PASS w/ I1+G1/G2 ; C6 prior-art PASS scoped diagnostic)
 │
-[next · per Senior post-run breakdown v0.2 + finding report §8 recommendation]
-    Bank the terminal-attraction finding; keep G6 the next build of record.
-    Two model runs done; instrument-first stance preserved; no reorder against G6.
+[done · 2026-06-15]  Path A K-Sweep Scout + FP16 Constructibility Run
+│   Path A FP16 Constructibility Run — VERDICT FAIL via dominant-signature branch
+│     (Manager-authorized FP16 only; no compression; no retry; no post-hoc changes)
+│   K-Sweep scout K=1..5 outcome BOUNDARY (best at K=1 edge; K=5 reproduces FAIL byte-exact)
+│   Cliff finding note v0.2: admissible-load set = {K=1}; component (hop2 in isolation)
+│     INADMISSIBLE under competition on the existing construction; the 40% off-map is
+│     the substrate ceiling for this construction, not a defect to engineer away
+│   Construction Property Taxonomy v0.1: V3 (same-depth-competitor) named as the
+│     conforming foreclose-all candidate; D1/D2 (tag / topic) violate R2/R3
+│
+[done · 2026-06-16/17]  V3 Instrument Byte-Audit HOLD → Re-Lock → Philosophy Decision
+│   SE V3 byte-audit (return c3f4e667): of-record v0.3 prereg pinned STALE instrument
+│     digests (the K-sweep additive sweep-mode patch had moved inspector/constants
+│     under v0.3's binding); patch verified ADDITIVE; V3 real-run gate preserved
+│   Senior v0.4 binding patch — re-pin inspector cb4b0b60 + constants 1d761c3d;
+│     no values / thresholds / outcome rules / categories / controls / stop-rules changed
+│   CS V3 real-run param-deviation fixture (10): PASS — addresses Senior G2 gap;
+│     confirms patched inspector still fail-closed REJECTs a Manager-lock deviation
+│   Manager + TL re-lock 2026-06-16; corrective 2026-06-17 (placeholder bytes bfb4404a
+│     replaced with finalized filled bytes c61a3256; no scientific content changed)
+│   ──
+│   PHILOSOPHY DECISION RECORD v0.1 RATIFIED 2026-06-17 (path-a/of-record/)
+│     Manager commits to FORECLOSE-ALL as Path A gate standard (a composition gate is
+│       valid only if only traversal can select the answer)
+│     MAKE-IDENTITY-EASY considered-and-rejected (introduces non-traversal tag/topic-
+│       match route; weakens what the gate is supposed to measure)
+│     V3 named as the current conforming CANDIDATE VEHICLE — NOT certified
+│     Floor check remains the empirical question; substrate-infeasibility is a valid
+│       outcome and is NEVER a license to loosen the standard
+│
+[done · 2026-06-17/18]  V3 Build Open Slots → Floor-Check → COMPONENT-ADMISSIBLE-UNDER-COMPETITION
+│   Manager + TL ACTION 2026-06-17 "Begin V3 Build Open Slots"
+│   path-a/build/   v3_item_generator + v3_prompt_realizer + v3_prompt_conformance_checker
+│                   + v3_neutral_token_pool   (build verification 8/8 PASS,
+│                                              deterministic, zero model imports)
+│   Senior PASS on V3 build package (sha e9b7e349)
+│   ──
+│   V3 floor-check prereg ladder: v0.1 (CS HOLD E1-E5) → v0.3 (CS HOLD F1-F3) → v0.4
+│     (CS final feasibility PASS-with-MAX_DELTA-caveat; C5 claim-risk PASS)
+│   Floor-check tooling: v3_floor_check_analyzer + ancillary scripts (SE-verified)
+│   V3 FLOOR-CHECK RUN executed 2026-06-18 — Qwen2.5-3B-Instruct revision
+│     aa8e72537993ba99e69dfaafa59ed015b17504d1 (FP16, greedy, mlx_lm 0.31.3, M2 Max);
+│     384 prompts × 96 items; experiments/2026-06-18_v3-floor-check-run/
+│     §10 BRANCH: COMPONENT-ADMISSIBLE-UNDER-COMPETITION
+│       hop2 96/96 (Wilson lower 0.9615 > 0.75)
+│       hop1 87/96 (Wilson lower 0.8313 > 0.75)
+│       dq C* count 0/96 (no direct-recall)
+│       invalidated 0/96; admissibility 96/96; conformance 96/96; error-structure OK
+│     Bounded as component-admissibility ONLY (per v0.4 §11 forbidden interpretations:
+│       NOT certification, NOT "the model composes", NOT capability, NOT mechanism)
+│     Senior PASS on run; analyzer decision reproduced byte-identical at 6a34f6dc
+│
+[done · 2026-06-18/19]  V3 Composite-Gate Lifecycle → PRECONDITION-FAIL
+│   PREREGISTRATION V3 COMPOSITE GATE v0.2 (retitled from "Composite Certification"
+│     per CS A1 + C5 rulings; bounded-validity wording, fresh disjoint seed range
+│     097..192 mandated; MAX_DELTA=8 preserved by ≤999 3-digit invariant; two separate
+│     lower-Wilson gates: primary > 0.75 reliability + necessary > 0.45 not-shortcut
+│     floor; GATE-CLEARED-THIS-RUN ≠ FINAL certification; strengthened forbidden
+│     interpretations — no seam / compression / capability / mechanism leakage)
+│   Composite-gate tooling: v3_composite_gate_item_generator (WRAPPER — preserves
+│     underlying v3_item_generator at sha 6a2ceee1 unchanged) +
+│     v3_composite_gate_analyzer + v3_composite_error_logger; build verification
+│     all 4 §8 branches exercised on synthetic scored sets
+│   Senior PASS on tooling; CS final feasibility PASS (8/8 checks)
+│   TL APPROVED 2026-06-18 (locked 3 new + 6 reused tooling digests + MAX_DELTA caveat
+│     + interpretation boundary)
+│   ──
+│   V3 COMPOSITE-GATE RUN executed 2026-06-18 — fresh seeds 097..192 (byte-distinct
+│     from floor-check 001..096; 0 shared role tokens by prefix-injection proof);
+│     same model + decoding profile as the floor check;
+│     experiments/2026-06-18_v3-composite-gate-run/
+│     §8 BRANCH: PRECONDITION-FAIL (cond_c fails; composite gate NOT read)
+│       hop1 28/96 (Wilson lower 0.2102 << 0.75 floor)   ← THE BLOCKER
+│       hop2 96/96 (Wilson lower 0.9615); dq 0/96; invalidated 0; admissibility 96/96
+│       composite 63/96 (Wilson lower 0.5569) — INFORMATIONAL ONLY; gate not read
+│     STRIKING CONTRAST: hop1 swing 87/96 → 28/96 across the SAME construction at
+│       different per-item indices (001..096 vs 097..192); every OTHER measured
+│       property identical (hop2, dq, invalidated, admissibility, conformance,
+│       MAX_DELTA all match). Mechanism NOT decidable from this run (per v0.2 §10).
+│   Senior PASS on run; missing manifest filed 2026-06-19 per TL ACTION (lifecycle
+│     closed as valid PRECONDITION-FAIL with full sha256 inventory)                ◄── YOU ARE HERE
+│
+[open · candidate question; NOT authorized for execution]
+    hop1 stability investigation: WHY does hop1 differ at 097..192 vs 001..096?
+    Tokenization sensitivity? prefix-range effect? Something else mechanical-but-not-
+    mechanism? NONE are claimed here as findings — recorded as the candidate questions
+    that a SEPARATE pre-registration + Manager/TL authorization would address. Not
+    licensed by the PRECONDITION-FAIL outcome alone.
 ```
 
 ## Round-trips (ventured and came back — recorded for honesty)
@@ -183,3 +268,9 @@ Repo-level docs ................. README · STATUS · REVIEW · _meta/INDEX
 *— ADDED the Terminal Attraction finding track (`finding-tracks/terminal-attraction/`) as a branch — Senior-authored finding report v0.4 + 2 figures + PDF, parked beside the CAL-Q finding track. C5 PASS w/ I1+G1/G2 carried; C6 prior-art PASS scoped diagnostic.*
 *— UPDATED "YOU ARE HERE" to the finding-track branch; the next build of record remains G6 (per finding-report §8 Senior recommendation: bank the finding; do not reorder against G6).*
 *— Records state only; reopens nothing; unseals nothing; authorizes nothing; changes no scientific meaning. Sealed bytes 4-of-4 byte-identical at filing time. PROGRAM-POSITION-v0.1 / PROGRAM-MAP-v2.0 / PROGRAM-CONTROL-LEDGER-v0.3 NOT updated this turn (Senior/Manager-maintained; awaiting Senior draft for any control-ledger v0.4 reflecting the two named runs).*
+
+*Change-note (rev 4, CS additions, 2026-06-19):*
+*— EXTENDED the trunk with the V3 program lifecycle 2026-06-15 → 2026-06-19, previously absent. Five new trunk nodes added in time order: (a) Path A K-Sweep scout + FP16 constructibility run (2026-06-15) producing the cliff-finding-v0.2 foreclosure that pointed the program at V3; (b) V3 instrument byte-audit HOLD → re-lock at v0.4 (Senior c3f4e667 → Manager+TL re-lock 06-16 → corrective 06-17 placeholder→finalized bfb4404a→c61a3256) → Philosophy Decision Record v0.1 RATIFIED 2026-06-17 committing FORECLOSE-ALL as Path A gate standard with V3 as conforming candidate vehicle; (c) V3 Build Open Slots realized (4 deliverables; 8/8 build verification PASS) → V3 FLOOR-CHECK RUN 2026-06-18 → §10 COMPONENT-ADMISSIBLE-UNDER-COMPETITION (hop2 96/96, hop1 87/96, dq 0/96; bounded as component-admissibility ONLY); (d) V3 COMPOSITE-GATE prereg v0.2 (retitled from "Composite Certification") → 3 new tools built (wrapper preserves underlying generator unchanged) → TL APPROVED → COMPOSITE-GATE RUN 2026-06-18 → §8 PRECONDITION-FAIL with the striking hop1 swing 87/96 → 28/96 across the same construction at different per-item index ranges; (e) missing manifest filed 2026-06-19 (lifecycle closed). YOU ARE HERE moved from the Terminal Attraction finding-track branch to the composite-gate close.*
+*— REMOVED the rev-3 "next: bank Terminal Attraction; keep G6 the next build of record" pointer — superseded by the actual events. Terminal Attraction remains a parked finding track (not abandoned, just not the focal active surface). G6 (tier-1 instrument architecture) remains a parallel discipline; its trunk node from rev 3 stays intact above. The V3 lifecycle became the focal active surface from the philosophy decision (2026-06-17) onward.*
+*— ADDED a candidate-question annotation for the OPEN hop1 stability investigation (why does hop1 differ at 097..192 vs 001..096?). Recorded as a candidate question NOT licensed for execution by the PRECONDITION-FAIL outcome alone; would need its own pre-registration + Manager/TL authorization.*
+*— Records state only; reopens no closed route; unseals no sealed bytes; authorizes no run/build/compression/claim; changes no scientific meaning. PROGRAM-POSITION / PROGRAM-MAP / PROGRAM-CONTROL-LEDGER not updated this turn (Senior/Manager-maintained; this map is the at-a-glance view, the ledger is the deeper read). K=5 FAIL remains closed; V3 ≠ C0; neither the COMPONENT-ADMISSIBLE nor the PRECONDITION-FAIL outcome bears on it.*
