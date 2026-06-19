@@ -270,8 +270,58 @@ positional CO-OCCURRENCE per prereg §6, never cause.
 
 ## Commit + final remote HEAD + clean-fetch confirmation
 
-To be appended after this return commits and the run lands on the shared
-remote.
+```text
+run commit                  2c20e960bf9b68393810f9ba269ca28710f0aac5
+final remote HEAD           2c20e960bf9b68393810f9ba269ca28710f0aac5
+                            (origin/main, github.com/eaflores805-Apiana/
+                             river-and-canyon; 5,770 files staged including
+                             576 items + 2,304 prompts + 576 admissibility
+                             + 2,304 scored + 10 summary/script files +
+                             2 governance memos; previous HEAD 85eb76c
+                             fast-forward)
+
+clean-fetch verification (from a fresh `git clone --depth 1` of the
+shared repo at HEAD 2c20e960…):
+
+  decision.json                       8676530a97e4322f38cf8ded17710db32883c16a5b1b431e9af284dd9b4f8965   MATCH
+  covariate_log.json                  480f70d18f908a4dd89c8f5435cc122b61cfbf68e8fa006478fcfb8949049950   MATCH
+  run_record.json                     11756a53a9158e8687faab1da1a05d89cf77db7a74403e7d34b7a95d4c5e6702   MATCH
+  manifest.json                       2ad2015c5edc9d8c8a654a7f5b360d8c8b98983b3f85e4558ea29976bfc4a1bb   MATCH
+  realization_summary.json            4ec37a6ab97230d67f62a2d9d2863c2e27eeb83bba5ab53b4e0af62d22ba5e5a   MATCH
+  admissibility_summary.json          3763f736ff2dae8e2a90908a3787446d3e95c300062d02199107b6ebd85857e9   MATCH
+  prompt_conformance_summary.json     b361b1d7b8bda061ad456dad0fe3cc82a81440277669f0fe651695ec0af92758   MATCH
+
+  v3_hop1_stability_analyzer.py       31224f6fe7b66d303924a40fa9307f3aded05f8ba73d4952f518c8deecd69f0f   UNCHANGED
+  v3_hop1_covariate_logger.py         b9532490f49970396cd9a14d926393450ede2e6a17c5374b2ac69d115f39953f   UNCHANGED
+
+  items_193_768/                      576 files     PRESENT (count MATCH)
+  prompts/   (*.txt)                  2,304 files   PRESENT (count MATCH; 4 × 576)
+  admissibility/                      576 files     PRESENT (count MATCH)
+  scored/    (hop[12].json)           1,152 files   PRESENT (count MATCH; 2 × 576)
+
+  governance/2026-06-19_hop1-stability-run/
+    MANAGER-BY-NAME-AUTHORIZATION-EXECUTE-HOP1-STABILITY-INVESTIGATION-2026-06-19.md   PRESENT
+    CS-RETURN-HOP1-STABILITY-INVESTIGATION-EXECUTED-2026-06-19.md                      PRESENT
+                                                                                       (pre-this-append digest;
+                                                                                        post-append digest reported
+                                                                                        in the follow-on commit)
+
+verdict
+  FILED. The run executes from bytes on the shared repo; the locked
+  tooling digests are byte-identical pre- and post-run (no tooling
+  edits after data); all 7 run-output digests reproduce from a clean
+  fetch.
+
+unrelated note (no action taken)
+  Two pre-existing untracked files in tier0-run/ (Qwen2.5-3B-Instruct-
+  mlx-int{4,8}/tokenizer.json) were NOT staged with this run. Per the
+  sealed-tier0-run rule, CS Engineer adds nothing to tier0-run/.
+```
+
+---
+
+— CS Engineer, 2026-06-19
+
 
 ---
 
