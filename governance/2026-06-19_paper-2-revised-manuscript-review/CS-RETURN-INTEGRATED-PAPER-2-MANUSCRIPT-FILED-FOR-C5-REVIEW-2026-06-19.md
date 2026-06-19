@@ -16,9 +16,9 @@ repo path                papers/paper2-correctness-is-not-constructibility/in-re
 sha256                   d19c060a5325ba5f3a71aa6fd395dec5fc9550087f2d89ba8dcc540afc2f5917
 size                     667 lines (manuscript + reviewer cover note)
 
-filing commit            (recorded post-commit in §clean-fetch)
-final remote HEAD        (recorded post-commit in §clean-fetch)
-clean-fetch confirmation (recorded post-commit in §clean-fetch)
+filing commit            18e4732cb05ae57a6f4c02f536c7f40b9fdd1855
+final remote HEAD        18e4732cb05ae57a6f4c02f536c7f40b9fdd1855
+clean-fetch confirmation PASS — see §clean-fetch below
 
 also filed (same commit)
   governance/2026-06-19_paper-2-revised-manuscript-review/
@@ -161,7 +161,36 @@ CS will not advance to provenance review until C5 returns PASS on the integrated
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-REVISED-MANUSCRIPT-DRAFT-v0.1.md
+                governance/2026-06-19_paper-2-revised-manuscript-review/C5-PAPER2-REVISED-MANUSCRIPT-CLAIM-RISK-v0.1.md
+                governance/2026-06-19_paper-2-revised-manuscript-review/CS-RETURN-INTEGRATED-PAPER-2-MANUSCRIPT-FILED-FOR-C5-REVIEW-2026-06-19.md
+                papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
+  git ls-remote --tags origin | grep paper2
+
+results (clean-fetch, 2026-06-19, HEAD 18e4732cb05ae57a6f4c02f536c7f40b9fdd1855)
+  PAPER-2-REVISED-MANUSCRIPT-DRAFT-v0.1.md       d19c060a5325ba5f3a71aa6fd395dec5fc9550087f2d89ba8dcc540afc2f5917   MATCH
+  C5-PAPER2-REVISED-MANUSCRIPT-CLAIM-RISK-v0.1.md  eb43f69d6a36a1616bfc4deb4f9bf759c769d1ab79d28925d823265b1c7b10ad  MATCH
+  CS-RETURN (pre-§clean-fetch append)            15e29c9f864dac1b8a4b724300fcbf2be6f6355ccb1334d5f13f5c8dc09ba3e8   MATCH
+  released paper file (must be unmodified)       9893a8184cc1e92458eee6eedb521b0e3c78b95623f458a8d2b1150b2724e1e1   UNCHANGED
+                                                  (matches the Senior cover note's HEAD-blob attestation)
+paper 2 v1.0 tag (must remain intact)
+  refs/tags/paper2-cells01-03-v1.0               41c033fc59597eb42015de9019c3ac7b7d19dd98                            UNCHANGED  (tag NOT moved;
+                                                                                                                       manuscript blob carried
+                                                                                                                       by tag remains 7d6706a3…)
+
+verdict
+  FILED. The integrated manuscript draft is at a readable HEAD on the shared
+  repo with a stable digest, ready for C5 sentence-level byte review. The
+  released Paper 2 v1.0 tag is untouched. The released paper file on the
+  trunk is unmodified (only the new in-review/ subtree was added).
+
+  The post-append digest for this CS return is recorded in the follow-on commit.
+```
 
 ---
 
