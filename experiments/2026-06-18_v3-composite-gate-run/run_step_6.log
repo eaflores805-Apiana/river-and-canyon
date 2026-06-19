@@ -1,0 +1,17 @@
+Loading model Qwen/Qwen2.5-3B-Instruct @ rev aa8e72537993ba99e69dfaafa59ed015b17504d1 ...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 31694.99it/s]
+Model loaded in 9.3s
+  progress: 32/384  elapsed 26.2s  rate 1.22 prompt/s  eta 288.5s
+  progress: 64/384  elapsed 51.3s  rate 1.25 prompt/s  eta 256.6s
+  progress: 96/384  elapsed 76.5s  rate 1.25 prompt/s  eta 229.5s
+  progress: 128/384  elapsed 101.6s  rate 1.26 prompt/s  eta 203.3s
+  progress: 160/384  elapsed 126.5s  rate 1.26 prompt/s  eta 177.1s
+  progress: 192/384  elapsed 151.6s  rate 1.27 prompt/s  eta 151.6s
+  progress: 224/384  elapsed 176.8s  rate 1.27 prompt/s  eta 126.3s
+  progress: 256/384  elapsed 201.9s  rate 1.27 prompt/s  eta 100.9s
+  progress: 288/384  elapsed 227.1s  rate 1.27 prompt/s  eta 75.7s
+  progress: 320/384  elapsed 252.1s  rate 1.27 prompt/s  eta 50.4s
+  progress: 352/384  elapsed 277.4s  rate 1.27 prompt/s  eta 25.2s
+  progress: 384/384  elapsed 302.5s  rate 1.27 prompt/s  eta 0.0s
+run_record written: experiments/2026-06-18_v3-composite-gate-run/run_record.json
+DONE. 384 prompts scored in 302.5s (load: 9.3s).

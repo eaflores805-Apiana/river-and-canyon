@@ -1,0 +1,7 @@
+{
+  "item": "item_112",
+  "context": "composite",
+  "ground_truth": "i112_C1",
+  "predicted": "i112_X1",
+  "match": false
+}

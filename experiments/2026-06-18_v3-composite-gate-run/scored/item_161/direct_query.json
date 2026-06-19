@@ -1,0 +1,7 @@
+{
+  "item": "item_161",
+  "context": "direct_query",
+  "ground_truth": "i161_C1",
+  "predicted": "i161_Q1",
+  "match": false
+}

@@ -1,0 +1,30 @@
+{
+  "model_name": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision_sha": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "precision": "FP16 (mlx_lm default for non-quantized Qwen2.5)",
+  "decoding": "greedy (temp=0.0 / argmax sampler)",
+  "max_new_tokens": 24,
+  "execution_host": "Eliass-Mac-Studio.local",
+  "host_platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "host_machine": "arm64",
+  "runtime_versions": {
+    "python": "3.13.3",
+    "mlx_lm": "0.31.3",
+    "transformers": "5.10.2",
+    "torch": "2.7.1"
+  },
+  "model_load_time_s": 9.329653978347778,
+  "inference_time_s": 302.483206987381,
+  "n_items": 96,
+  "n_contexts_per_item": 4,
+  "n_prompts_total": 384,
+  "timestamp_utc": "2026-06-18T20:58:04Z",
+  "operator": "CS Engineer (Claude Code; M2 Max host)",
+  "prompts_consumed_as_committed": true,
+  "prompt_regeneration_occurred": false,
+  "system_instruction": "You complete structured fact-triple queries. The input is a list of FACTS given as (subject, relation, object) triples followed by a single QUERY line of the form `QUERY: (subject, relation, ?)`. The `?` denotes a single unknown token to be inferred from the FACTS list using the given relation(s). Respond with exactly that one token and nothing else: no explanation, no punctuation, no parentheses, no extra whitespace.",
+  "scoring_rule": "exact string equality between extracted first id-like token from model response and locked ground truth",
+  "ground_truth_rule": "composite/hop2/dq -> spec.target.C_star ; hop1 -> spec.target.B",
+  "tooling_edits_after_data": false,
+  "scope": "Step 6 only; FP16 only; no compression authorized"
+}
