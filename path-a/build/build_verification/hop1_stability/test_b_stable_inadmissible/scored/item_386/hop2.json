@@ -1,0 +1,7 @@
+{
+  "item": "item_386",
+  "context": "hop2",
+  "ground_truth": "i386_C1",
+  "predicted": "i386_C1",
+  "match": true
+}

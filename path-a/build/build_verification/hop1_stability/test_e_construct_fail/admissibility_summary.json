@@ -1,0 +1,26 @@
+{
+  "all_pass": false,
+  "n_pass": 576,
+  "n_items": 576,
+  "per_block": {
+    "1": {
+      "all_pass": true
+    },
+    "2": {
+      "all_pass": false,
+      "invalidated_count": 12
+    },
+    "3": {
+      "all_pass": true
+    },
+    "4": {
+      "all_pass": true
+    },
+    "5": {
+      "all_pass": true
+    },
+    "6": {
+      "all_pass": true
+    }
+  }
+}

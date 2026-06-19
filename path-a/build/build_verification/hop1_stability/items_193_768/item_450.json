@@ -1,0 +1,167 @@
+{
+  "construction_id": "path_a_v3_item_450_pos5_seed450_v0.1",
+  "params": {
+    "k": 5,
+    "D": 5,
+    "p": 5,
+    "m": 10,
+    "margin": 0.25
+  },
+  "target": {
+    "A": "i450_A",
+    "B": "i450_B1",
+    "C_star": "i450_C1",
+    "T": "i450_T0",
+    "r1": "i450_r1",
+    "r2": "i450_r2",
+    "post_C_star_relations": [
+      "i450_rX",
+      "i450_rY"
+    ]
+  },
+  "depth_2_competitors": [
+    {
+      "head_relation": "i450_s1",
+      "B_competitor": "i450_B2",
+      "second_relation": "i450_s2",
+      "X": "i450_X2"
+    },
+    {
+      "head_relation": "i450_t1",
+      "B_competitor": "i450_B3",
+      "second_relation": "i450_t2",
+      "X": "i450_X3"
+    },
+    {
+      "head_relation": "i450_u1",
+      "B_competitor": "i450_B4",
+      "second_relation": "i450_u2",
+      "X": "i450_X4"
+    },
+    {
+      "head_relation": "i450_v1",
+      "B_competitor": "i450_B5",
+      "second_relation": "i450_v2",
+      "X": "i450_X5"
+    },
+    {
+      "head_relation": "i450_w1",
+      "B_competitor": "i450_B6",
+      "second_relation": "i450_w2",
+      "X": "i450_X6"
+    }
+  ],
+  "decoy_chains": [
+    {
+      "head": "i450_P1",
+      "bridge": "i450_Q1",
+      "answer": "i450_S1",
+      "T_i": "i450_Ti1"
+    },
+    {
+      "head": "i450_P2",
+      "bridge": "i450_Q2",
+      "answer": "i450_S2",
+      "T_i": "i450_Ti2"
+    },
+    {
+      "head": "i450_P3",
+      "bridge": "i450_Q3",
+      "answer": "i450_S3",
+      "T_i": "i450_Ti3"
+    },
+    {
+      "head": "i450_P4",
+      "bridge": "i450_Q4",
+      "answer": "i450_S4",
+      "T_i": "i450_Ti4"
+    },
+    {
+      "head": "i450_P5",
+      "bridge": "i450_Q5",
+      "answer": "i450_S5",
+      "T_i": "i450_Ti5"
+    }
+  ],
+  "relation_balance": {
+    "frequency": {
+      "i450_r1": 1,
+      "i450_s1": 1,
+      "i450_t1": 1,
+      "i450_u1": 1,
+      "i450_v1": 1,
+      "i450_w1": 1,
+      "i450_r2": 1,
+      "i450_s2": 1,
+      "i450_t2": 1,
+      "i450_u2": 1,
+      "i450_v2": 1,
+      "i450_w2": 1
+    },
+    "order_positions": {
+      "i450_r1": [
+        0
+      ],
+      "i450_s1": [
+        0
+      ],
+      "i450_t1": [
+        0
+      ],
+      "i450_u1": [
+        0
+      ],
+      "i450_v1": [
+        0
+      ],
+      "i450_w1": [
+        0
+      ],
+      "i450_r2": [
+        1
+      ],
+      "i450_s2": [
+        1
+      ],
+      "i450_t2": [
+        1
+      ],
+      "i450_u2": [
+        1
+      ],
+      "i450_v2": [
+        1
+      ],
+      "i450_w2": [
+        1
+      ]
+    }
+  },
+  "direct_query": {
+    "withhold_fact_role": "B_to_C_star",
+    "filler_form": "{W} holds {V}",
+    "filler_contains_B_or_C_star": false
+  },
+  "contexts": {
+    "composite": {
+      "present_facts": "full"
+    },
+    "hop1": {
+      "context_isolated_from_composite": true
+    },
+    "hop2": {
+      "context_isolated_from_composite": true
+    },
+    "direct_query": {
+      "context_isolated_from_composite": true
+    },
+    "load_matched": true
+  },
+  "_build_provenance": {
+    "item_index": 450,
+    "c_star_position": 5,
+    "seed": 450,
+    "generator": "v3_item_generator.py v0.1",
+    "scope": "build-realization only; not run-authorized"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "item": "item_264",
+  "context": "hop1",
+  "ground_truth": "i264_B1",
+  "predicted": "i264_P1",
+  "match": false
+}

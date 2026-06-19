@@ -1,0 +1,7 @@
+{
+  "item": "item_418",
+  "context": "hop1",
+  "ground_truth": "i418_B1",
+  "predicted": "i418_B1",
+  "match": true
+}
