@@ -107,7 +107,7 @@ The earlier §9 called for *different task geometry* that decouples position fro
 
 > *Replace the Appendix A linkage paragraph.*
 
-This paper reports **Claim B** (constructibility floor mappable, not cleared) and now supports it with **two independent constructions**: the position-contaminated, below-floor first construction, and the foreclose-all V3 construction in which the first-hop precondition is stable-inadmissible across six fresh materializations while the second hop holds. It continues to update program **Claim #5** (precision-demanding tasks retain less under quantization) to **blocked on a precondition** — the V3 result reinforces this block and does not resolve it. It makes **no statement on Claim C** (the seam), which remains blocked. The V3 finding is recorded as the program's first data-trigger ledger update (a protocol run); see Claim Ledger [version to be set to the release carrying the V3 negative-finding row — CS/TL to confirm the identifier].
+This paper reports **Claim B** (constructibility floor mappable, not cleared) and now supports it with **two independent constructions**: the position-contaminated, below-floor first construction, and the foreclose-all V3 construction in which the first-hop precondition is stable-inadmissible across six fresh materializations while the second hop holds. It continues to update program **Claim #5** (precision-demanding tasks retain less under quantization) to **blocked on a precondition** — the V3 result reinforces this block and does not resolve it. It makes **no statement on Claim C** (the seam), which remains blocked. The V3 finding is recorded as the program's first data-trigger ledger update (a protocol run); see Claim Ledger `notes/CLAIM-LEDGER-v1.0.md`.
 
 ---
 
@@ -119,19 +119,19 @@ This paper reports **Claim B** (constructibility floor mappable, not cleared) an
 Repository: github.com/eaflores805-Apiana/river-and-canyon
 
 V3 floor-check (anchor; seeds 001–096):
-  decision  6a34f6dc…                         [full sha256: CS to recompute]   (COMPONENT-ADMISSIBLE-UNDER-COMPETITION)
+  decision  6a34f6dc9687e04d0bc58b1595b4c6e9555a59e4bb606e40e9aa72ddd2c048c5   (COMPONENT-ADMISSIBLE-UNDER-COMPETITION)
 
 V3 composite-gate run (anchor; fresh 097–192):
   run dir   experiments/2026-06-18_v3-composite-gate-run   HEAD 09030b18
-  decision  3924ff35…                         [full sha256: CS to recompute]   (PRECONDITION-FAIL)
+  decision  3924ff35087c5648a20101e463f2129d6d731a853c4b9f0e3d61a4ade6efe842   (PRECONDITION-FAIL)
 
 V3 hop1-stability run (six fresh 193–768):
   run dir   experiments/2026-06-19_hop1-stability-run      HEAD fe677158
-  decision.json           [full sha256: CS to recompute]   (HOP1-STABLE-INADMISSIBLE; SE reproduced byte-identical)
-  covariate_log.json      [full sha256: CS to recompute]   (P-role 352/352 P_decoy_head)
-  admissibility_summary.json   [full sha256: CS to recompute]   (576/576 PASS)
-  prompt_conformance_summary.json [full sha256: CS to recompute]   (576/576 PASS)
-  manifest.json           [full sha256: CS to recompute]   (present; lists decision/covariate/run_record + scored)
+  decision.json           8676530a97e4322f38cf8ded17710db32883c16a5b1b431e9af284dd9b4f8965   (HOP1-STABLE-INADMISSIBLE; SE reproduced byte-identical)
+  covariate_log.json      480f70d18f908a4dd89c8f5435cc122b61cfbf68e8fa006478fcfb8949049950   (P-role 352/352 P_decoy_head)
+  admissibility_summary.json   3763f736ff2dae8e2a90908a3787446d3e95c300062d02199107b6ebd85857e9   (576/576 PASS)
+  prompt_conformance_summary.json b361b1d7b8bda061ad456dad0fe3cc82a81440277669f0fe651695ec0af92758   (576/576 PASS)
+  manifest.json           2ad2015c5edc9d8c8a654a7f5b360d8c8b98983b3f85e4558ea29976bfc4a1bb   (present; lists decision/covariate/run_record + scored)
 
 Model / profile (locked):
   Qwen/Qwen2.5-3B-Instruct   revision aa8e72537993ba99e69dfaafa59ed015b17504d1   FP16   greedy (temp 0)
@@ -139,8 +139,8 @@ Model / profile (locked):
 Internal banked governance artifacts (SE-draft bytes; canonical filing is the CS commit of the same bytes):
   HOP1-STABILITY-FINDING-REPORT-v0.1.md          2969ec1a5ce830c2b77c974ad23b163e4cb1dca6a518800a555f5a159f6efb33  (full; SE)
   HOP1-STABILITY-RUN-SE-VERIFICATION-RETURN-v0.1 84a5716b4f202a9337495100064d8e5f466ff8baf3e76bb16b4d221de05285b9  (full; SE)
-  V3-COMPOSITE-GATE-RUN-SE-VERIFICATION-RETURN   0eb0edcb…   [full sha256: CS to recompute]
-  V3-FLOOR-CHECK-RUN-SE-VERIFICATION-RETURN      03d2ead8…   [full sha256: CS to recompute]
+  V3-COMPOSITE-GATE-RUN-SE-VERIFICATION-RETURN   0eb0edcb6cc71632d41c58f2cd44ff802ba7beb173bf839bca4c50beecf88abd
+  V3-FLOOR-CHECK-RUN-SE-VERIFICATION-RETURN      03d2ead80e830a8067c145e6516e20847fb0d2961a9ead85236ff696fe3d560f
 
 Threshold statement (state explicitly in Appendix B): V3 admissibility floor = Wilson lower bound > 0.75;
 locked construction values K=5, P=5, M>=10, selection margin 0.25, derived structural floor F=0.20.
