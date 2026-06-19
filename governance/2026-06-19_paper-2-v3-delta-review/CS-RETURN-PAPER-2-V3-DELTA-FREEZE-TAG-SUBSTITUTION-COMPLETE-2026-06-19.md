@@ -34,9 +34,9 @@ New file created (per Manager identifier authorization):
 ## Filing record
 
 ```text
-substitution commit          (recorded post-commit in §clean-fetch)
-final remote HEAD            (recorded post-commit in §clean-fetch)
-clean-fetch confirmation     (recorded post-commit in §clean-fetch)
+substitution commit          41133cf5a9affb4ec728f8684833d1a8bb2afea7
+final remote HEAD            41133cf5a9affb4ec728f8684833d1a8bb2afea7
+clean-fetch confirmation     PASS — see §clean-fetch below
 ```
 
 ## Final Paper 2 V3 delta path + sha256
@@ -212,7 +212,35 @@ git show paper2-cells01-03-v1.0 --stat
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure  (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 notes/CLAIM-LEDGER-v1.0.md
+                path-a/in-review/PAPER-2-V3-DELTA-DRAFT-v0.1.md
+                governance/2026-06-19_paper-2-v3-delta-review/MANAGER-DECISION-…
+                governance/2026-06-19_paper-2-v3-delta-review/CS-RETURN-…
+                tier0-run/CLAIM-LEDGER-CONSTRUCTIBILITY-FLOOR.md
+  git ls-remote --tags origin | grep paper2
+
+results (clean-fetch, 2026-06-19, HEAD 41133cf5a9affb4ec728f8684833d1a8bb2afea7)
+  notes/CLAIM-LEDGER-v1.0.md                 15f32e1a68620a9101d344514b7c2240a9a78969a564dd8fce589f86b32ea087   MATCH
+  PAPER-2-V3-DELTA-DRAFT-v0.1.md             ab52913c86b7745c4f2bfca0b242df77f010c82d874da34f7afa4a2b92364f99   MATCH  (post-substitution)
+  MANAGER-DECISION memo                       5d5198ccc610ec3745539b52da77e0fbbfff386a7989c7ae08dc2ab51930d380   MATCH
+  CS-RETURN memo (pre-§clean-fetch append)   726cf3015af02616cc5670f3e9a262314e0414d15a1d545148a6f9825439e27d   MATCH
+  tier0-run/CLAIM-LEDGER-CONSTRUCTIBILITY-FLOOR.md
+                                              b16875590ca060b857bf577fd5862eae9adb05b60c7fbdda1d0d5f1318bb55b2   UNCHANGED  (sealed)
+
+paper 2 v1.0 tag (must remain intact)
+  refs/tags/paper2-cells01-03-v1.0           41c033fc59597eb42015de9019c3ac7b7d19dd98   UNCHANGED  (tag NOT moved)
+
+verdict
+  FILED. Every byte cited in this return verifies from the shared repo on
+  clean fetch. tier0-run/ remained sealed across the substitution pass.
+  Paper 2 v1.0 tag still points at the original commit; no tag move.
+  The post-append digest for this CS return is recorded in the follow-on commit.
+```
 
 ---
 
