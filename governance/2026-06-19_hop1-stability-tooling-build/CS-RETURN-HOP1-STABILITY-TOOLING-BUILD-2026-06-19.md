@@ -52,9 +52,12 @@ BUILD-VERIFICATION ARTIFACTS (build only; not run-authorized):
 ## 2. Commit + final remote HEAD + clean-fetch confirmation
 
 ```text
-build commit                <recorded in §10 after push>
-final remote HEAD           <recorded in §10>
-clean-fetch confirmation    <recorded in §10>
+build commit                20ac97dc8019cce5db289786f2db01fe313140a5
+final remote HEAD           20ac97dc8019cce5db289786f2db01fe313140a5
+                            (origin/main, github.com/eaflores805-Apiana/
+                             river-and-canyon, 6,356 files, +148,199 lines;
+                             previous HEAD ef36c9a fast-forward)
+clean-fetch confirmation    PASS — see §10
 ```
 
 ## 3. sha256 digests for each new tool
@@ -248,7 +251,44 @@ NO PROMPT EXECUTION
 
 ## 10. Clean-fetch confirmation
 
-To be appended after the build commit lands.
+```text
+verification procedure
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 path-a/build/v3_hop1_stability_analyzer.py
+  shasum -a 256 path-a/build/v3_hop1_covariate_logger.py
+  ls governance/2026-06-19_hop1-stability-tooling-build/
+  ls path-a/build/build_verification/hop1_stability/
+  ls path-a/build/build_verification/hop1_stability/items_193_768/ | wc -l
+
+results (clean-fetch from shared repo, 2026-06-19)
+  remote HEAD                                  20ac97dc8019cce5db289786f2db01fe313140a5  MATCH
+  v3_hop1_stability_analyzer.py    sha256      31224f6fe7b66d303924a40fa9307f3aded05f8ba73d4952f518c8deecd69f0f  MATCH
+  v3_hop1_covariate_logger.py      sha256      b9532490f49970396cd9a14d926393450ede2e6a17c5374b2ac69d115f39953f  MATCH
+  governance/2026-06-19_hop1-stability-tooling-build/
+    CS-RETURN-HOP1-STABILITY-TOOLING-BUILD-2026-06-19.md                          PRESENT
+    MANAGER-TL-ACTION-BEGIN-HOP1-STABILITY-TOOLING-BUILD-2026-06-19.md            PRESENT
+  build_verification subtree
+    items_193_768/                              PRESENT  (576 V3 spec JSONs — count MATCH)
+    test_a_stable_admissible/                   PRESENT
+    test_b_stable_inadmissible/                 PRESENT
+    test_c_unstable/                            PRESENT
+    test_d_hop2_control_fail/                   PRESENT
+    test_e_construct_fail/                      PRESENT
+
+verdict
+  FILED.
+  Bytes verify from the shared repo on clean fetch; remote HEAD is
+  20ac97dc...; both tool digests match the §3 declarations exactly.
+
+unrelated note (no action taken)
+  Two untracked files appeared in the working tree under tier0-run/
+  (Qwen2.5-3B-Instruct-mlx-int{4,8}/tokenizer.json) prior to this
+  build. They were NOT staged, NOT committed, and are NOT part of
+  this build. Per the sealed-tier0-run rule, CS Engineer adds nothing
+  to tier0-run/; flagging for Manager/TL awareness only.
+```
 
 ---
 
