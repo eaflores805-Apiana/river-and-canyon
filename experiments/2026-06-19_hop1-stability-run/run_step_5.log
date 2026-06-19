@@ -1,0 +1,17 @@
+Loading model Qwen/Qwen2.5-3B-Instruct @ rev aa8e72537993ba99e69dfaafa59ed015b17504d1 ...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 24244.53it/s]
+Model loaded in 6.0s
+  progress: 100/1152  elapsed 80.7s  rate 1.24 prompt/s  eta 849.0s
+  progress: 200/1152  elapsed 160.2s  rate 1.25 prompt/s  eta 762.7s
+  progress: 300/1152  elapsed 239.7s  rate 1.25 prompt/s  eta 680.6s
+  progress: 400/1152  elapsed 319.6s  rate 1.25 prompt/s  eta 600.8s
+  progress: 500/1152  elapsed 398.2s  rate 1.26 prompt/s  eta 519.3s
+  progress: 600/1152  elapsed 476.7s  rate 1.26 prompt/s  eta 438.6s
+  progress: 700/1152  elapsed 555.2s  rate 1.26 prompt/s  eta 358.5s
+  progress: 800/1152  elapsed 634.2s  rate 1.26 prompt/s  eta 279.1s
+  progress: 900/1152  elapsed 713.1s  rate 1.26 prompt/s  eta 199.7s
+  progress: 1000/1152  elapsed 791.9s  rate 1.26 prompt/s  eta 120.4s
+  progress: 1100/1152  elapsed 870.6s  rate 1.26 prompt/s  eta 41.2s
+  progress: 1152/1152  elapsed 911.7s  rate 1.26 prompt/s  eta 0.0s
+run_record written: experiments/2026-06-19_hop1-stability-run/run_record.json
+DONE. 1152 prompts scored in 911.7s (load: 6.0s).

@@ -1,0 +1,40 @@
+{
+  "model_name": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision_sha": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "precision": "FP16 (mlx_lm default for non-quantized Qwen2.5)",
+  "decoding": "greedy (temp=0.0 / argmax sampler)",
+  "max_new_tokens": 24,
+  "execution_host": "Eliass-Mac-Studio.local",
+  "host_platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "host_machine": "arm64",
+  "runtime_versions": {
+    "python": "3.13.3",
+    "mlx_lm": "0.31.3",
+    "transformers": "5.10.2",
+    "torch": "2.7.1"
+  },
+  "model_load_time_s": 5.955444812774658,
+  "inference_time_s": 911.672750711441,
+  "n_items": 576,
+  "n_contexts_per_item": 2,
+  "executed_contexts": [
+    "hop1",
+    "hop2"
+  ],
+  "rendered_but_not_executed_contexts": [
+    "composite",
+    "direct_query"
+  ],
+  "n_prompts_total": 1152,
+  "timestamp_utc": "2026-06-19T17:57:55Z",
+  "operator": "CS Engineer (Claude Code; M2 Max host)",
+  "prompts_consumed_as_committed": true,
+  "prompt_regeneration_occurred": false,
+  "system_instruction": "You complete structured fact-triple queries. The input is a list of FACTS given as (subject, relation, object) triples followed by a single QUERY line of the form `QUERY: (subject, relation, ?)`. The `?` denotes a single unknown token to be inferred from the FACTS list using the given relation(s). Respond with exactly that one token and nothing else: no explanation, no punctuation, no parentheses, no extra whitespace.",
+  "scoring_rule": "exact string equality between extracted first id-like token from model response and locked ground truth",
+  "ground_truth_rule": "hop1 -> spec.target.B ; hop2 -> spec.target.C_star",
+  "tooling_edits_after_data": false,
+  "scope": "Hop1 Stability run; FP16 only; no compression authorized; N1.A: composite + direct_query rendered but NEVER executed by this runner",
+  "n1A_discipline": "hop1 + hop2 only; composite + direct_query NOT consumed; analyzer + covariate logger ALSO refuse them structurally",
+  "authority": "Manager by-name authorization 2026-06-19"
+}

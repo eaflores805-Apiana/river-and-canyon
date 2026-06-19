@@ -1,0 +1,10 @@
+{
+  "item": "item_343",
+  "context": "hop1",
+  "ground_truth": "i343_B1",
+  "predicted": "i343_B1",
+  "match": true,
+  "raw_response": "i343_B1",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+}
