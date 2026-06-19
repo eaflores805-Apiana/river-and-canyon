@@ -99,7 +99,36 @@ modify any byte and authored none of these artifacts — Senior drafted
 
 ## §X. Clean-fetch confirmation
 
-To be appended after this filing commits and pushes.
+```text
+verification procedure (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 path-a/in-review/HOP1-STABILITY-FINDING-REPORT-v0.1.md
+                path-a/in-review/CONSTRUCTIBILITY-PACKAGING-SCOPE-v0.1.md
+                path-a/in-review/PAPER-2-V3-INTEGRATION-PLAN-v0.1.md
+                path-a/in-review/PAPER-2-V3-DELTA-DRAFT-v0.1.md
+                governance/2026-06-19_paper-2-v3-delta-review/C5-PAPER2-V3-DELTA-CLAIM-RISK-v0.1.md
+                governance/2026-06-19_paper-2-v3-delta-review/CS-STEP-1-FILING-SWEEP-2026-06-19.md
+
+results (clean-fetch, 2026-06-19)
+  remote HEAD                                       8461e79de54432cc76570f0261738674707e4c13          MATCH
+  HOP1-STABILITY-FINDING-REPORT-v0.1.md            2969ec1a5ce830c2b77c974ad23b163e4cb1dca6a518800a555f5a159f6efb33    MATCH
+  CONSTRUCTIBILITY-PACKAGING-SCOPE-v0.1.md         b9b603f9698de365e5d7caf844712151fad6712f571a539bce92759fc4e1f161    MATCH
+  PAPER-2-V3-INTEGRATION-PLAN-v0.1.md              e70a5dde13d2c34f88bf283a050486d73b63bd56041ff4ce2eb16dc5cb661fb1    MATCH
+  PAPER-2-V3-DELTA-DRAFT-v0.1.md                   dcc94c1593ba310300cdf7df3e06c6033e2800d4edefb241fa0cfdc54a08cf7f    MATCH
+  C5-PAPER2-V3-DELTA-CLAIM-RISK-v0.1.md            405ebd968ea91a715c86144a0c80c285675104836f3e54455ccb87390dd50c48    MATCH
+  CS-STEP-1-FILING-SWEEP-2026-06-19.md (pre-append) 8de1bc3019e2dbc2f23894bf7192d16ebb34543a94e9c55604ea24e96fbc3310   MATCH
+
+verdict
+  FILED. All 5 inbox artifacts + this CS filing record verify byte-for-byte
+  from the shared repo on clean fetch at HEAD 8461e79de54432cc76570f0261738674707e4c13.
+  C5's access-HOLD on the Paper 2 V3 Delta LIFTS at this HEAD (the named
+  object is now reachable at path-a/in-review/PAPER-2-V3-DELTA-DRAFT-v0.1.md
+  with digest dcc94c15…, matching the C5 byte-review expectation).
+
+  The post-append digest for this CS return will land in a follow-on commit.
+```
 
 ---
 
