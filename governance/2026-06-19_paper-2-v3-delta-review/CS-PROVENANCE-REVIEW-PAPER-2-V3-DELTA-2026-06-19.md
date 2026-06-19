@@ -35,13 +35,10 @@ scope             Provenance / digests only. No claim language touched (C5 alrea
 ## Repo HEAD + clean-fetch confirmation
 
 ```text
-local HEAD                   (recorded post-commit in §X)
-final remote HEAD            (recorded post-commit in §X)
-clean-fetch confirmation     (recorded post-commit in §X)
+filing commit                3429d38520cf2bceef411ee39346fd25c228f3bd
+final remote HEAD            3429d38520cf2bceef411ee39346fd25c228f3bd
+clean-fetch confirmation     PASS — see §X
 ```
-
-(Per CS filing discipline: bytes verify from a clean fetch of the shared repo
-before this return is treated as FILED. §X below records the values.)
 
 ---
 
@@ -355,7 +352,33 @@ identifier choice + a one-line edit, NOT a provenance failure.
 
 ## §X. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 governance/2026-06-19_paper-2-v3-delta-review/CS-PROVENANCE-REVIEW-PAPER-2-V3-DELTA-2026-06-19.md
+                governance/2026-06-19_paper-2-v3-delta-review/C5-PAPER2-V3-DELTA-CLAIM-RISK-v0.2-BYTEREVIEW.md
+                path-a/in-review/PAPER-2-V3-DELTA-DRAFT-v0.1.md
+                experiments/2026-06-19_hop1-stability-run/decision.json
+                experiments/2026-06-19_hop1-stability-run/manifest.json
+                experiments/2026-06-18_v3-floor-check-run/analyzer_decision.json
+                experiments/2026-06-18_v3-composite-gate-run/analyzer_decision.json
+
+results (clean-fetch, 2026-06-19, HEAD 3429d38520cf2bceef411ee39346fd25c228f3bd)
+  CS-PROVENANCE-REVIEW (pre-§X append) sha   83a44b46fe3e7fbd11656a830a197f4e29427266b27f416f1e48f90b3c8db90d   MATCH
+  C5-PAPER2-V3-DELTA-CLAIM-RISK-v0.2-BYTEREVIEW.md  976b1b099dea95dde7c1f6ac9cd009893c514845c6d96282e1e24d6a513cf5c5  MATCH
+  PAPER-2-V3-DELTA-DRAFT-v0.1.md                    dcc94c1593ba310300cdf7df3e06c6033e2800d4edefb241fa0cfdc54a08cf7f  MATCH
+  hop1-stability decision.json                      8676530a97e4322f38cf8ded17710db32883c16a5b1b431e9af284dd9b4f8965  MATCH
+  hop1-stability manifest.json                      2ad2015c5edc9d8c8a654a7f5b360d8c8b98983b3f85e4558ea29976bfc4a1bb  MATCH
+  V3 floor-check analyzer_decision.json             6a34f6dc9687e04d0bc58b1595b4c6e9555a59e4bb606e40e9aa72ddd2c048c5  MATCH
+  V3 composite-gate analyzer_decision.json          3924ff35087c5648a20101e463f2129d6d731a853c4b9f0e3d61a4ade6efe842  MATCH
+
+verdict
+  FILED. Every byte cited in this return verifies from the shared repo on
+  clean fetch. The post-append digest for this CS return is recorded in
+  the follow-on commit's log.
+```
 
 ---
 
