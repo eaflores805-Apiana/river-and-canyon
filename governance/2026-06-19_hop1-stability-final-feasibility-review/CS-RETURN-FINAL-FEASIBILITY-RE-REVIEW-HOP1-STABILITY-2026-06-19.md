@@ -382,7 +382,28 @@ The Path A FP16 K=5 FAIL remains closed. V3 ≠ C0.
 
 ## §11. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 governance/2026-06-19_hop1-stability-final-feasibility-review/TL-ACTION-CS-FINAL-FEASIBILITY-RE-REVIEW-HOP1-STABILITY-2026-06-19.md
+  shasum -a 256 governance/2026-06-19_hop1-stability-final-feasibility-review/CS-RETURN-FINAL-FEASIBILITY-RE-REVIEW-HOP1-STABILITY-2026-06-19.md
+
+results (clean-fetch from shared repo, 2026-06-19)
+  remote HEAD                      5346f7fde6e71d71160310ca9a69220f3489037b   MATCH
+  TL ACTION memo       sha256      3a52d6d521bede28bd347514b725087488986ea14fd1fc76ea5e5ba7946812e4   MATCH
+  CS RETURN memo (pre-§11 append) sha256
+                                   3bb6a160b70d4a3f4ffb540fff9dde68adc5037b4c7decb9fb64a0d71c97ead1   MATCH
+
+verdict
+  FILED. Both review-packet memos verify from the shared repo on clean
+  fetch at HEAD 5346f7fde6e71d71160310ca9a69220f3489037b.
+
+  The CS RETURN digest above is the pre-§11-append digest; this §11
+  append + the §11-append commit will land in a follow-on commit whose
+  digest is reported below.
+```
 
 ---
 
