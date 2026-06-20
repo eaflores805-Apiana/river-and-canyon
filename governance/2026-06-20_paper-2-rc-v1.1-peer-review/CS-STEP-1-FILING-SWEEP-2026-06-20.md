@@ -207,7 +207,59 @@ what this is NOT:
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this filing commits and pushes.
+```text
+verification procedure (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256  papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.1.md
+                 papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-V1.2-TIGHTENING-AND-LIMITATIONS-DELTA-v0.1.md
+                 papers/paper2-correctness-is-not-constructibility/figures/fig_{two_constructions,gate_decision,v3_cross_materialization}.png
+                 governance/2026-06-20_paper-2-rc-v1.1-peer-review/PAPER-2-RC-v1.1-PEER-REVIEW-BUILD.{md,pdf}
+                 governance/2026-06-20_paper-2-rc-v1.1-peer-review/CS-STEP-1-FILING-SWEEP-2026-06-20.md
+                 papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
+                 papers/paper2-correctness-is-not-constructibility/release-candidate/PAPER-2-RELEASE-CANDIDATE-v1.1-rc1.md
+                 notes/CLAIM-LEDGER-v1.0.md
+                 tier0-run/CLAIM-LEDGER-CONSTRUCTIBILITY-FLOOR.md
+  git ls-remote --tags origin | grep paper2
+
+results (clean-fetch, 2026-06-20, HEAD cb3885d2a0791d01f2ed91038a0fea497b54dbb4)
+
+  filed in this sweep:
+    PAPER-2-RELEASE-CANDIDATE-v1.1.md                          4e8a014ab8532136b41b231cd951f876d64f780eda87babd32cde9c3500cb633   MATCH
+    PAPER-2-V1.2-TIGHTENING-AND-LIMITATIONS-DELTA-v0.1.md      643b01a62b6a13bf134d5376baa80be93a5687a11ed82cd91e2471fc1346dacf   MATCH
+    fig_two_constructions.png                                  dc167d6ca71e24ad98c38d4f05d2cde31bd983798a0028c2d1784467c388d49b   MATCH
+    fig_gate_decision.png                                      e88265a7f0213728d3f7d1545267275876c3aaaddfbe5066a46d2b70d0ef183e   MATCH
+    fig_v3_cross_materialization.png                           4d29aabbf828fbd354924fa98b30d5d2bb6c35aeb2f9ff630b541f03230aea63   MATCH
+    PAPER-2-RC-v1.1-PEER-REVIEW-BUILD.md                       4ae42161eb7ec39498b240181d31c32da2860d9c8957c300bc4cc2af8a5811f3   MATCH
+    PAPER-2-RC-v1.1-PEER-REVIEW-BUILD.pdf                      c3f578645fcaeb2642de1d743a459b89cd1e11c8c8fe199431c8a43594dfa0f7   MATCH
+    CS-STEP-1-FILING-SWEEP-2026-06-20.md (pre-§clean-fetch)     3ed892d88f48740c9d3e5e31dcf1c547ea3aa81e262b9a7df82fb419c3ea6104   MATCH
+
+  protected surfaces (must be unchanged by this sweep):
+    released paper file on trunk                               9893a8184cc1e92458eee6eedb521b0e3c78b95623f458a8d2b1150b2724e1e1   UNCHANGED
+    prior CS RC file (release-candidate/...rc1.md)             2bc5cb73c3378550f05b65873a5f3a7d4174f31426905a5faa668471dd7f6527   UNCHANGED  (superseded; flagged for TL/Manager cleanup decision)
+    notes/CLAIM-LEDGER-v1.0.md                                 15f32e1a68620a9101d344514b7c2240a9a78969a564dd8fce589f86b32ea087   UNCHANGED
+    tier0-run/CLAIM-LEDGER-CONSTRUCTIBILITY-FLOOR.md           b16875590ca060b857bf577fd5862eae9adb05b60c7fbdda1d0d5f1318bb55b2   UNCHANGED
+
+  paper 2 v1.0 tag (must remain intact):
+    refs/tags/paper2-cells01-03-v1.0                           41c033fc59597eb42015de9019c3ac7b7d19dd98                           UNCHANGED  (tag NOT moved)
+    refs/tags/paper2-cells01-03-v1.0^{}                        40c0cd5a974b8bb10e7d3fe2a794b43efcd30fce                           UNCHANGED  (tag-target NOT changed)
+
+verdict
+  FILED. All 7 inbox artifacts + this CS filing record reproduce byte-
+  for-byte from the shared repo on clean fetch at HEAD cb3885d2…. All
+  protected surfaces (released paper, prior RC, ledger v1.0, sealed
+  ledger entry, Paper 2 v1.0 tag) are unchanged by this sweep. tier0-run/
+  remained sealed (no add/modify; pre-existing untracked tokenizer.json
+  files remain unstaged).
+
+  Routing: v1.2 delta now reachable at the path Senior referenced for
+  the C5 substantive re-review pass. CS provenance pass is NOT advanced
+  (gated on C5).
+
+  The post-append digest for this CS return is recorded in the follow-on
+  commit.
+```
 
 ---
 
