@@ -34,9 +34,9 @@ protected surfaces
 ## Repo HEAD + clean-fetch confirmation
 
 ```text
-filing commit                (recorded post-commit in §clean-fetch)
-final remote HEAD            (recorded post-commit in §clean-fetch)
-clean-fetch confirmation     (recorded post-commit in §clean-fetch)
+filing commit                8fec852e3d14e62d7601b18eb19453133785028f
+final remote HEAD            8fec852e3d14e62d7601b18eb19453133785028f
+clean-fetch confirmation     PASS — see §clean-fetch below
 ```
 
 ## Manuscript path + sha256 (Check 1) — PASS
@@ -291,7 +291,41 @@ by this provenance pass or by any V3-lifecycle commit.
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 governance/2026-06-19_paper-2-revised-manuscript-review/TL-ACTION-…
+                governance/2026-06-19_paper-2-revised-manuscript-review/C5-PAPER2-…v0.2-BYTEREVIEW.md
+                governance/2026-06-19_paper-2-revised-manuscript-review/CS-PROVENANCE-…
+                papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-REVISED-MANUSCRIPT-DRAFT-v0.1.md
+                papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
+  git ls-remote --tags origin | grep paper2
+
+results (clean-fetch, 2026-06-19, HEAD 8fec852e3d14e62d7601b18eb19453133785028f)
+  TL-ACTION memo                                cc265e86c299ec45b41a9c1506d694a2292251824261a1b0113979afc2bf0f7f   MATCH
+  C5-PAPER2-…v0.2-BYTEREVIEW.md                 d0eaa41820620c506f70782df01aa96a6fcfbd5a13d5de8ee373443e5113db47   MATCH
+  CS-PROVENANCE-REVIEW (pre-§clean-fetch append) 345a1389d3a757611bb6bc8dc1b695bba7ea3513453786170264f1807d87fc10  MATCH
+  PAPER-2-REVISED-MANUSCRIPT-DRAFT-v0.1.md      d19c060a5325ba5f3a71aa6fd395dec5fc9550087f2d89ba8dcc540afc2f5917   MATCH
+                                                 (TL-supplied object digest — confirmed stable)
+  released paper file on trunk                  9893a8184cc1e92458eee6eedb521b0e3c78b95623f458a8d2b1150b2724e1e1   UNCHANGED
+
+paper 2 v1.0 tag (must remain intact)
+  refs/tags/paper2-cells01-03-v1.0              41c033fc59597eb42015de9019c3ac7b7d19dd98   UNCHANGED  (tag NOT moved)
+  refs/tags/paper2-cells01-03-v1.0^{}           40c0cd5a974b8bb10e7d3fe2a794b43efcd30fce   UNCHANGED  (tag-target NOT changed)
+
+verdict
+  FILED. The CS provenance review of the integrated Paper 2 manuscript
+  verifies from a clean clone of the shared repo at HEAD 8fec852e…. All
+  28 verifiable Appendix B digests match byte-for-byte. The integrated
+  manuscript digest is unchanged from the TL-supplied object. The
+  Paper 2 v1.0 tag and the released paper file on trunk are both
+  unchanged. tier0-run/ was read only — nothing added.
+
+  The post-append digest for this CS return is recorded in the follow-on
+  commit.
+```
 
 ---
 
