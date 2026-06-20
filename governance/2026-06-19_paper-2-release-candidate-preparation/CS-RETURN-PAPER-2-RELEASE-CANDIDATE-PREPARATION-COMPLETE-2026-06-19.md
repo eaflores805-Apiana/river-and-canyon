@@ -29,9 +29,9 @@ release-candidate path).
 ## Filing record
 
 ```text
-filing commit                (recorded post-commit in §clean-fetch)
-final remote HEAD            (recorded post-commit in §clean-fetch)
-clean-fetch confirmation     (recorded post-commit in §clean-fetch)
+filing commit                6a588eaf07bd5bed110d622a6b8149d71445cdea
+final remote HEAD            6a588eaf07bd5bed110d622a6b8149d71445cdea
+clean-fetch confirmation     PASS — see §clean-fetch below
 ```
 
 ## Release-candidate manuscript path + sha256
@@ -200,7 +200,46 @@ no tier0-run/ touch                          confirmed (sealed; pre-existing
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 papers/paper2-correctness-is-not-constructibility/release-candidate/PAPER-2-RELEASE-CANDIDATE-v1.1-rc1.md
+                papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-REVISED-MANUSCRIPT-DRAFT-v0.1.md
+                papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
+                governance/2026-06-19_paper-2-release-candidate-preparation/MANAGER-DECISION-…
+                governance/2026-06-19_paper-2-release-candidate-preparation/CS-RETURN-…
+  tail -n +34 PAPER-2-REVISED-MANUSCRIPT-DRAFT-v0.1.md | shasum -a 256
+  git ls-remote --tags origin | grep paper2
+
+results (clean-fetch, 2026-06-19, HEAD 6a588eaf07bd5bed110d622a6b8149d71445cdea)
+  RC file                                       2bc5cb73c3378550f05b65873a5f3a7d4174f31426905a5faa668471dd7f6527   MATCH
+  source reviewed draft                         d19c060a5325ba5f3a71aa6fd395dec5fc9550087f2d89ba8dcc540afc2f5917   UNCHANGED
+  released paper file on trunk                  9893a8184cc1e92458eee6eedb521b0e3c78b95623f458a8d2b1150b2724e1e1   UNCHANGED  (NOT overwritten)
+  MANAGER-DECISION memo                          3e22eba734225e80ab56d86b63105bf5e629a58985ac3e28750a1036f7e57775   MATCH
+  CS-RETURN memo (pre-§clean-fetch append)      e63ca70438dd804fce6eda3be3fa305ed3448e13389fbe3da8d834045eb1655f   MATCH
+
+  body-preservation re-verification (clean-fetch):
+    sha256( tail -n +34 source )  = 2bc5cb73c3378550f05b65873a5f3a7d4174f31426905a5faa668471dd7f6527
+    sha256( RC )                  = 2bc5cb73c3378550f05b65873a5f3a7d4174f31426905a5faa668471dd7f6527
+    BYTE-IDENTICAL on clean fetch — body preservation reproduces
+
+paper 2 v1.0 tag (must remain intact)
+  refs/tags/paper2-cells01-03-v1.0              41c033fc59597eb42015de9019c3ac7b7d19dd98   UNCHANGED  (tag NOT moved)
+  refs/tags/paper2-cells01-03-v1.0^{}           40c0cd5a974b8bb10e7d3fe2a794b43efcd30fce   UNCHANGED
+
+verdict
+  FILED. The release-candidate manuscript is at the recorded path with
+  the recorded digest; its body is byte-identical to the reviewed-draft
+  body after the BEGIN REVISED MANUSCRIPT marker (independently
+  reproduced on clean fetch). The reviewed source manuscript is
+  unchanged. The released paper file on trunk is not overwritten.
+  The Paper 2 v1.0 tag is not moved.
+
+  The post-append digest for this CS return is recorded in the follow-on
+  commit.
+```
 
 ---
 
