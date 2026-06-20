@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#34495e"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="28" y="40" font-size="20" font-weight="bold" fill="#1a1a1a">Fail-closed gate: why the V3 composite question is unanswered</text>
+  <text x="28" y="64" font-size="12.5" fill="#555">Foreclose-all V3 · Qwen2.5-3B-Instruct · FP16 · greedy · six fresh, disjoint materializations</text>
+
+  <!-- Step 1: precondition -->
+  <rect x="40" y="100" width="300" height="92" rx="10" fill="#eaf1fa" stroke="#2f6db5" stroke-width="2"/>
+  <text x="190" y="130" font-size="14.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">hop1 admissibility precondition</text>
+  <text x="190" y="153" font-size="13" fill="#333" text-anchor="middle">is the first hop constructible?</text>
+  <text x="190" y="175" font-size="12.5" fill="#2f6db5" text-anchor="middle">test: Wilson 95% lower &gt; 0.75</text>
+
+  <!-- arrow down, fail -->
+  <line x1="190" y1="192" x2="190" y2="246" stroke="#c0392b" stroke-width="2.4" marker-end="url(#arrowred)"/>
+  <text x="212" y="210" font-size="12.5" font-weight="bold" fill="#c0392b">NOT MET</text>
+  <text x="212" y="227" font-size="11.5" fill="#c0392b">0 of 6 fresh draws clear</text>
+  <text x="212" y="243" font-size="10.5" fill="#c0392b">(hop1 0.24–0.56; Wilson lower &lt; 0.75)</text>
+
+  <!-- Step 2: gate not readable -->
+  <rect x="40" y="250" width="300" height="78" rx="10" fill="#fbecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="190" y="280" font-size="14.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">composite gate NOT READABLE</text>
+  <text x="190" y="305" font-size="12.5" fill="#333" text-anchor="middle">two-hop result is read only if hop1 is</text>
+  <text x="190" y="321" font-size="12.5" fill="#333" text-anchor="middle">admissible on that materialization</text>
+
+  <!-- arrow down -->
+  <line x1="190" y1="328" x2="190" y2="372" stroke="#34495e" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: unanswered -->
+  <rect x="40" y="376" width="300" height="92" rx="10" fill="#f2f2f2" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="190" y="406" font-size="14.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">composite question UNANSWERED</text>
+  <text x="190" y="430" font-size="12.5" fill="#333" text-anchor="middle">neither supported nor refuted</text>
+  <text x="190" y="451" font-size="10.5" fill="#555" text-anchor="middle" font-style="italic">a precondition-level outcome, not a composite result</text>
+
+  <!-- Right column: hop2 control -->
+  <rect x="430" y="100" width="350" height="118" rx="10" fill="#eafaf0" stroke="#2e8b57" stroke-width="2"/>
+  <text x="605" y="130" font-size="14.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">hop2 single-hop control</text>
+  <text x="605" y="155" font-size="13" fill="#333" text-anchor="middle">holds at ceiling: 96/96 every block (576/576)</text>
+  <text x="605" y="178" font-size="12.5" fill="#2e8b57" text-anchor="middle">the gate discriminates — it is not</text>
+  <text x="605" y="195" font-size="12.5" fill="#2e8b57" text-anchor="middle">rejecting everything</text>
+  <text x="605" y="212" font-size="11" fill="#555" text-anchor="middle" font-style="italic">internal FP16 control, NOT a certified stress target</text>
+
+  <!-- connector from precondition area to hop2 box (context) -->
+  <line x1="340" y1="146" x2="430" y2="146" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Right column: what it is / isn't -->
+  <rect x="430" y="250" width="350" height="218" rx="10" fill="#ffffff" stroke="#cccccc" stroke-width="1.6"/>
+  <text x="450" y="278" font-size="13.5" font-weight="bold" fill="#1a1a1a">What this establishes</text>
+  <text x="450" y="300" font-size="12" fill="#333">• the first hop is not constructible under V3, stably</text>
+  <text x="450" y="319" font-size="12" fill="#333">  across fresh draws (mappable, not crossed)</text>
+  <text x="450" y="340" font-size="12" fill="#333">• V3 forecloses the position/rank route of</text>
+  <text x="450" y="359" font-size="12" fill="#333">  Construction 1, so that route alone does not</text>
+  <text x="450" y="378" font-size="12" fill="#333">  explain the hop1 shortfall</text>
+  <text x="450" y="402" font-size="13.5" font-weight="bold" fill="#1a1a1a">What it does NOT establish</text>
+  <text x="450" y="424" font-size="12" fill="#9b2d24">• not "the model cannot do hop1 / cannot compose"</text>
+  <text x="450" y="443" font-size="12" fill="#9b2d24">• no mechanism; no compression / stress-retention claim</text>
+  <text x="450" y="462" font-size="12" fill="#9b2d24">• Claim C (seam) untouched; program remains pre-stress</text>
+
+  <!-- bottom banner -->
+  <rect x="40" y="492" width="740" height="44" rx="8" fill="#1a2733"/>
+  <text x="410" y="519" font-size="13" fill="#ffffff" text-anchor="middle">Pre-stress: no INT8/INT4 rung was run on either construction. The instrument may rule out; it may not rule in.</text>
+</svg>
