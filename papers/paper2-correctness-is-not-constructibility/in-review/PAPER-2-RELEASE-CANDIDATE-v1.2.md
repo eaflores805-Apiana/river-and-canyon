@@ -2,9 +2,7 @@
 
 **E. A. Flores** · Apiana AI, Inc.
 
-**v1.1 (revised draft — V3/hop1 integration; pending C5 → CS → TL → Manager review; not released).** River and Canyon program. Companion to *Survival Is Not Correctness: A
-Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation* (Paper 1). Experimental values and
-artifact hashes are attested from the locked run records and listed in Appendix B; CS independently recomputed them for the freeze/tag pass. This revision adds a second, independent construction (foreclose-all V3; §3.3, §4.6) and integrates the V3/hop1 constructibility finding; it supersedes v1.0 pending review.
+v1.2 release candidate. River and Canyon program. Companion to Survival Is Not Correctness: A Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation (Paper 1). Experimental values and artifact hashes are attested from the locked run records and listed in Appendix B; CS independently recomputed them for the freeze/tag pass. This release candidate adds a second, independent construction (foreclose-all V3; §3.3, §4.6), integrates the V3/hop1 constructibility finding, and supersedes v1.1 pending final release authorization.
 
 ---
 
