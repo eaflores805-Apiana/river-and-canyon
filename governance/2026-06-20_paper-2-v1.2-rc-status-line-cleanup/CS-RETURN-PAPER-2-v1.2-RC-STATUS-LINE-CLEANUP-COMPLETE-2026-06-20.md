@@ -24,9 +24,9 @@ block collapsed to the new 1-line block). No other prose changed.
 ## Filing record
 
 ```text
-commit SHA                  (recorded post-commit in §clean-fetch)
-final remote HEAD           (recorded post-commit in §clean-fetch)
-clean-fetch confirmation    (recorded post-commit in §clean-fetch)
+commit SHA                  c7829dd5cd2c07add163a9a7b857ab8d64b5f446
+final remote HEAD           c7829dd5cd2c07add163a9a7b857ab8d64b5f446
+clean-fetch confirmation    PASS — see §clean-fetch below
 
 final v1.2 RC path          papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.2.md
 final v1.2 RC sha256        5b385d7f0409f9c050f6c6d87dcb7d665adc49df1f26468785fcfcc0d55ca1d8
@@ -169,7 +169,57 @@ tier0-run/CLAIM-LEDGER-CONSTRUCTIBILITY-FLOOR.md             b1687559…   UNCHA
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.2.md
+                papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.1.md
+                papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-V1.2-TIGHTENING-AND-LIMITATIONS-DELTA-v0.3.md
+                papers/paper2-correctness-is-not-constructibility/figures/fig_{two_constructions,gate_decision}.{png,svg}
+                papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
+                governance/2026-06-20_paper-2-v1.2-rc-status-line-cleanup/{MANAGER-DECISION,CS-RETURN}-*.md
+  grep -c 'v1.2 release candidate' …/PAPER-2-RELEASE-CANDIDATE-v1.2.md
+  grep -c 'v1.1 (revised draft'    …/PAPER-2-RELEASE-CANDIDATE-v1.2.md
+  git ls-remote --tags origin | grep paper2
+
+results (clean-fetch, 2026-06-20, HEAD c7829dd5cd2c07add163a9a7b857ab8d64b5f446)
+
+  applied:
+    PAPER-2-RELEASE-CANDIDATE-v1.2.md            5b385d7f0409f9c050f6c6d87dcb7d665adc49df1f26468785fcfcc0d55ca1d8   MATCH
+    status-line:    'v1.2 release candidate' count = 1   ✓
+                    'v1.1 (revised draft'    count = 0   ✓
+
+  preserved sources (must be UNCHANGED by this status-line edit):
+    PAPER-2-RELEASE-CANDIDATE-v1.1.md            4e8a014ab8532136b41b231cd951f876d64f780eda87babd32cde9c3500cb633   UNCHANGED
+    PAPER-2-V1.2-TIGHTENING-AND-LIMITATIONS-DELTA-v0.3.md
+                                                  e759b7edc86aaec4cbd0757eb2ad24ebee2bf33c6836a3feb84e32585b6c79b4   UNCHANGED
+    correctness-is-not-constructibility.md (released v1.0 on trunk)
+                                                  9893a8184cc1e92458eee6eedb521b0e3c78b95623f458a8d2b1150b2724e1e1   UNCHANGED  (NOT overwritten)
+  4 C5-cleared figure assets (UNCHANGED from prior commit 37082b0c):
+    fig_two_constructions.png                    817c9157ec5b4c004c4540baeca0e2a6323bcd03cb78ed3c9b1d52e3ba5ddb0a   UNCHANGED
+    fig_two_constructions.svg                    ef5f39631aead03a48479eb149fc921a9b14d95066950a45b4bd030f229b4d01   UNCHANGED
+    fig_gate_decision.png                        838550cb46389674a150df80d611282cb71fdae28b5841e3dbe051108f327433   UNCHANGED
+    fig_gate_decision.svg                        2350c215f0e4b17d81b2ae51b7876ad42df09ee872aa867e48451a324f157a79   UNCHANGED
+
+  paper 2 v1.0 tag (must remain intact):
+    refs/tags/paper2-cells01-03-v1.0             41c033fc59597eb42015de9019c3ac7b7d19dd98   UNCHANGED  (tag NOT moved)
+    refs/tags/paper2-cells01-03-v1.0^{}          40c0cd5a974b8bb10e7d3fe2a794b43efcd30fce   UNCHANGED
+
+  governance memos:
+    MANAGER-DECISION memo                         2da33aa92814f1f7823d48497525a72466c43ad7d0d6c8d6eb78bb50de7a8779   MATCH
+    CS-RETURN memo (pre-§clean-fetch append)     43fba5f168b3b830709ab9be13350c5058fc1fdfaba906abad8eb41c35c73cbc   MATCH
+
+verdict
+  FILED. The v1.2 RC status-line cleanup verifies from a clean fetch
+  at HEAD c7829dd5cd…. The narrow scope held: status-line block
+  replaced with Manager-verbatim text; everything else (claim language,
+  figures, sources, released paper, Paper 2 v1.0 tag) unchanged.
+
+  The post-append digest for this CS return is recorded in the follow-on
+  commit.
+```
 
 ---
 
