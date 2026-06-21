@@ -2,38 +2,19 @@
 
 **E. A. Flores** · Apiana AI, Inc.
 
-**v1.0.** River and Canyon program. Companion to *Survival Is Not Correctness: A
-Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation* (Paper 1). Experimental values and
-artifact hashes are attested from the locked run records and listed in Appendix B; CS independently recomputed them for the freeze/tag pass.
+v1.2. River and Canyon program. Companion to Survival Is Not Correctness: A Staged, Fail-Closed Metrology Protocol for Stress-Retention Evaluation (Paper 1). Experimental values and artifact hashes are attested from the locked run records and listed in Appendix B; CS independently recomputed them for the freeze/tag pass. This release adds a second, independent construction (foreclose-all V3; §3.3, §4.6), integrates the V3/hop1 constructibility finding, and supersedes v1.1.
 
 ---
 
 ## Abstract
 
-Behavioral stress metrology — measuring which capabilities a model retains under compression such as INT4 quantization —
-presumes a trustworthy full-precision baseline. Paper 1 argues that stress-retention is uninterpretable unless the FP16
-baseline is clean, and specifies fail-closed gates that withhold a result otherwise. That argument leaves one thing
-unshown: that the baseline gate is ever *binding* rather than merely conservative. This paper supplies the demonstration.
+Behavioral stress metrology — measuring which capabilities a model retains under compression such as INT4 quantization — presumes a trustworthy full-precision baseline; **this paper runs no compression**. Its contribution is a worked, fail-closed *pre-stress constructibility gate*: a decomposition-and-shortcut-probed admission test that determines whether the available FP16 evidence is sufficient to treat the baseline as measuring the intended operation before any compression is applied. Paper 1 argues that stress-retention is uninterpretable unless the FP16 baseline is clean and specifies such gates; what was unshown is that the gate is ever *binding* rather than merely conservative. We show it is, in **two constructions within one model and one closed-world two-hop task family** (3B FP16) — including a case where the gate's own fresh-replication requirement catches a precondition that a single materialization had passed. The conceptual point that surface correctness is not constructibility is the motivation; the demonstrated gate is the deliverable.
 
-In a Two-Hop Level-1 closed-world construction at 3B FP16, surface composite accuracy (15/24) appears to indicate partial
-competence. A per-group decomposition shows otherwise: composite correctness rises monotonically with the (co-varying)
-absolute-position / rank axis of the target endpoint — 1/8 when `ct` is at pos3, 6/8 when `ct` is at pos5, and 8/8 when `ct` is at pos7, while a pure last-position shortcut predicts 0/0/8. Surface
-correctness therefore cannot be read as evidence of the intended two-hop operation. We are careful about the converse: we
-do **not** claim the model failed to perform it. We show the metric cannot distinguish the intended operation from
-shortcut-aligned correctness — which is exactly the
-condition the baseline gate exists to catch. We further find a *component* sub-task below the constructibility floor, so
-linkage cannot be isolated at all in this construction; the baseline carries two independent defects, not one. As a
-control within the same instrument, single-hop retrieval (the hop2 query) is near-ceiling at FP16 and clears
-the gate while the multi-hop types do not, showing the gate discriminates rather than rejecting everything. The hop2
-result is an internal FP16 gate-discrimination control, **not** a certified stress target; any future stress run on hop2
-requires a hop2-specific shortcut/position probe. No compression rungs were run on this construction; we make no
-retention-under-stress claim.
+In the first construction (Two-Hop Level-1, closed world), surface composite accuracy (15/24) appears to indicate partial competence. A per-group decomposition shows otherwise: composite correctness rises monotonically with the (co-varying) absolute-position / rank axis of the target endpoint — 1/8 at pos3, 6/8 at pos5, 8/8 at pos7, while a pure last-position shortcut predicts 0/0/8 — so surface correctness cannot be read as evidence of the intended two-hop operation. We are careful about the converse: we do **not** claim the model failed to perform it; we show the metric cannot distinguish the intended operation from shortcut-aligned correctness. We further find a *component* sub-task (hop1) below the constructibility floor, so linkage cannot be isolated at all in this construction; the baseline carries two independent defects, not one.
 
-The contribution is a worked constructibility map: diagnostic case evidence from one small, closed-world 3B construction that illustrates why the gate must exist. Paper 1
-says survival under stress is not correctness; this paper adds that **surface** correctness is not constructibility, and
-that baseline accuracy must be verified as *operationally performed* before any compression-retention claim is made. We do
-not claim this holds across all tasks or models; we show what an unclean baseline looks like when decomposed, and why the
-gate must withhold it.
+In a second, independent construction (a foreclose-all redesign, “V3”) built specifically to remove the position/rank route exposed in the first, single-hop retrieval of the second relation (hop2) was admissible across **all six fresh materializations** tested (576/576), while the first hop (hop1) **did not clear its admissibility floor in any of the six**. Because the redesign was built to foreclose the position/rank route, the persistence of the hop1 shortfall under it indicates the shortfall is not explained by that route alone; and because the six materializations were fresh and disjoint, the inadmissibility verdict is unanimous across draws rather than a single-draw artifact. The composite gate was therefore not readable, and the composite question is unanswered, neither supported nor refuted. Among wrong hop1 predictions, outputs landed on a single in-context distractor class in all logged cases — a positional/structural co-occurrence, reported as such.
+
+As an internal FP16 gate-discrimination control in both constructions, single-hop retrieval clears the gate while the multi-hop / first-hop precondition does not, so the gate discriminates rather than rejecting everything. The hop2 result is an internal FP16 gate-discrimination control, **not** a certified stress target; any future stress run on hop2 requires a hop2-specific shortcut/position probe. No compression rungs were run on either construction; we make no retention-under-stress claim. The contribution is a worked constructibility map across two constructions, illustrating why the gate must exist and withhold a superficially usable FP16 baseline. We do not claim this holds across all tasks, scales, or models; the second construction adds cross-materialization evidence within one model and task family, not generality beyond it.
 
 ---
 
@@ -90,7 +71,7 @@ Without this demonstration, Paper 1's gate is an assertion; with it, the gate is
 baseline check would miss.
 
 **Claim B vs. the seam.** This paper's result is **Claim B**: that the constructibility floor of this construction is a
-stable, mappable object at 3B FP16. It is deliberately separate from the compression-stress measurement — the *seam*,
+structured, bounded, mappable object at 3B FP16. It is deliberately separate from the compression-stress measurement — the *seam*,
 Claim C — which is gated on first obtaining a baseline that clears the floor. No cell here cleared it, so the seam is
 neither measured nor claimed; a floor-clearing cell would be a separate unlock. Paper 1 supplies the measurement method
 these cells use; this paper supplies the constructibility result built on it. (Single-hop retrieval, hop2, is the one
@@ -148,11 +129,24 @@ as specified in Paper 1:
   class required, bounded UNCLASSIFIED — is the evidence that a floor is mappable rather than arbitrary.
 
 Scorer and manifest hashes are recorded in the artifact record (amended scorer `sha256:b65c6803…`; Cell03 manifest `sha256:7d5099cb…`); they are
-attested from that record and to be re-verified before submission.
+attested from that record, recomputed for the freeze/tag pass, and listed in full in Appendix B.
 
 > **On Gate 5.** Gate 5 bounds deterministic dummy-policy shortcuts; it does **not** prove endpoint anchoring is absent.
 > Endpoint-return behavior remains a diagnostic signal tracked separately in the intrusion taxonomy and the negative-graph
 > analysis (§4.4).
+
+
+We use *constructible* operationally. For this paper, a query type is treated as constructible on a materialization only if (i) its accuracy clears the admissibility floor (Wilson lower bound > 0.75), (ii) no declared shortcut probe or decomposition shows its correctness aligned with an identified non-intended route (per §4.3–§4.4), and (iii) its required components are themselves constructible — so a composite is not constructible while a component (e.g., hop1) is below floor. Clause (iii) is what makes the V3 first-hop precondition decisive: a composite cannot be admitted as constructible while its first hop is inadmissible, independent of any composite score.
+
+### 3.3 Second construction: foreclose-all V3
+
+The first construction (§3.1) left two routes by which surface correctness could be earned without the intended operation: a position/rank route (the §4.3 contamination) and a below-floor component (hop1) that precluded isolating linkage at all. §9 identifies the needed remedy as *different task geometry* that decouples position from rank and decouples decoy placement from target placement. The second construction, “V3,” is that geometry, built as a foreclose-all redesign.
+
+In V3 each item presents a head entity that fans out, via *D = 5 distinct relations*, to five depth-2 competitor endpoints that all sit at the same structural depth; only following the queried relation through both hops selects the correct target C\*. Same-depth competitors remove a structural-depth selection cue, and distinct relations remove a single-relation recency cue; together with balanced placement they are intended to foreclose the position/rank/endpoint route that §4.3 exposed. Each item additionally carries *K = 5* relation-reusing distractor chains of the form (P\_i, r1, Q\_i), (Q\_i, r2, S\_i), whose r1-subject role token (the “P-role”) is a designed wrong-selection target. The locked construction parameters are K = 5, P = 5, M ≥ 10 fan-in, selection margin 0.25, and a derived structural floor F = 0.20.
+
+The admissibility criterion is fail-closed and stated as a strict floor: a query type is admissible on a materialization only if the Wilson lower bound of its accuracy exceeds **0.75**. The 0.75 floor is a local program threshold for this construction, model scale, vocabulary, and task geometry — not a universal benchmark standard; the stability result is insensitive to it: admissibility requires the Wilson lower bound to *exceed* the floor, the largest fresh-block Wilson lower bound is 0.4628, so no fresh materialization clears any floor above 0.4628 — the locked 0.75 included. V3 shares the *fail-closed gate layout* of §3.1–§3.2 but, consistent with §7, uses thresholds local to this construction, model scale, vocabulary, scoring contract, and task geometry. The composite query is gated behind hop1 admissibility: the two-hop result is read only if the first hop is itself admissible on that materialization.
+
+To test stability rather than a single draw, V3 was materialized as six fresh, disjoint item sets (lock-before-look: metrics, floor, and stop-rule were fixed before scoring, and any already-seen materialization was barred from gate use). We emphasize the boundary on the construction itself: V3 *conforms* to the foreclose-all standard but is a committed design choice, not a construction proven to foreclose every conceivable route. Specifically, under the declared construction controls V3 is designed to remove the absolute-position/rank endpoint cue (same-depth competitors, balanced placement), the single-relation recency cue (D = 5 distinct relations), and the structural-depth selection cue (all competitors at depth 2). It does **not** control the *attractiveness* of the introduced P-role distractor class: the K = 5 relation-reusing chains add a strong, designed wrong-selection target, and whether that target's salience contributes to hop1 inadmissibility is not separated here (§7). All runs are 3B FP16, greedy decoding, on the single locked model revision recorded in Appendix B.
 
 ---
 
@@ -175,7 +169,7 @@ Across Cells 01–03 the three answer-bearing query types separate cleanly (Figu
 
 hop2 is at or near ceiling throughout: basic single-hop retrieval of the second relation is intact. hop1 declines across
 the lineage and is **below the constructibility floor** in Cell03 (6/24). Composite is non-monotone and, as §4.3 shows,
-position-contaminated.
+position-contaminated. Because the cells are construction revisions rather than a controlled variable, the composite differences across them reflect changing construction artifacts, not a trend (cf. Figure 1 caption).
 
 The Cell03 scorer amendment added Gate 5 dummy-policy logic and did not change the query-type accuracy/content scoring used
 for this table; the Cell01/02 (scorer `060afad9`) and Cell03 (scorer `b65c6803`) query-type counts are therefore comparable
@@ -283,6 +277,35 @@ mappable, taxonomy-bounded failure surface — recurring classes, bounded and at
 than noise, is the positive content of Claim B: the constructibility floor of this construction is a structured, bounded, mappable failure surface
 that can be characterized, even though no cell clears it.
 
+
+### 4.6 Cross-materialization result under foreclose-all controls: hop2 admissible across six fresh materializations; hop1 stable-inadmissible
+
+Across the six fresh V3 materializations (Table V3-1), single-hop retrieval of the second relation held at ceiling on every materialization (576/576), clearing the 0.75 floor in all six. The first hop did not: its per-block accuracy ranged from 0.24 to 0.56, and its Wilson lower bound fell below 0.75 in every block, including the highest (F5, 0.5625, lower bound 0.4628). Stated in the program's bounded form:
+
+> Across the six fresh V3 materializations tested here, hop1 did not clear its admissibility floor in any block, while hop2 remained admissible in every block.
+
+Two earlier V3 materializations bound this result as descriptive anchors. An initial floor-check materialization (seeds 001–096) had cleared hop1 at 0.906; a fresh, disjoint composite-gate materialization (seeds 097–192) then returned hop1 at 0.292, failing the precondition, so the composite gate on that materialization was withheld (a fail-closed PRECONDITION-FAIL in the sense of §4.2). The six stability materializations were drawn fresh and disjoint from both. Across all eight V3 materializations tested to date, hop1 cleared its admissibility floor in exactly one — the initial floor-check — which is anomalous relative to the fresh map; we do not treat the lone clearing as the stable case. The methodological point is the one Paper 1 stages for: a precondition that cleared on a single (subsequently already-seen) materialization did not replicate on fresh disjoint draws, and requiring fresh runs — barring already-seen data from gate use — is what surfaced this.
+
+Because the composite query is gated behind hop1 admissibility, and hop1 admissibility did not reliably hold, the composite gate was not readable on the fresh materializations. The composite question is therefore unanswered under this construction — neither supported nor refuted. This is a precondition-level outcome, not a composite result.
+
+The hop1 shortfall here is not explained by the §4.3 position/rank route alone: V3 was built to foreclose that route, and the shortfall persists under it across fresh draws. Among the wrong hop1 predictions in the fresh blocks, outputs landed on the P-role distractor class (the r1-subject role token of the relation-reusing distractor chains) in all logged cases (352/352). We report this strictly as a **positional/structural co-occurrence**: it identifies *where* wrong first-hop outputs landed in the item structure, not *why*. It is not a binding, attention, identity-resolution, or shortcut-mechanism claim; per the program's discipline, for this co-occurrence to become more than a landing fact it would require, in a future pre-registered study, a behavioral signature, a minimal intervention predicted to change the landing, and a falsification path.
+
+As in §4.1 and §6, hop2's admissibility is an internal FP16 gate-discrimination control, not a certified stress target; that it now holds across six fresh materializations strengthens the control but does not promote it, and any future stress run on hop2 still requires a hop2-specific shortcut/position probe. No compression rungs were run on this construction; we make no retention-under-stress claim. The result is that, across two constructions, the baseline gate is shown binding and discriminating — and that the second construction **relocates the failure to the first-hop precondition under foreclose-all controls**, away from the position confound the first construction could not separate. Whether that precondition failure reflects a genuinely hard first hop or an over-attractive designed distractor (the P-role class; see §7) is not separated here.
+
+**Table V3-1. Foreclose-all V3, six fresh materializations (FP16, greedy).** Per-materialization first-hop (hop1) and second-hop (hop2) accuracy; hop1 Wilson lower bound against the 0.75 admissibility floor.
+
+| Materialization | hop1 | hop1 rate | hop1 Wilson lower (vs 0.75) | hop2 |
+|---|---|---|---|---|
+| F1 (193–288) | 50/96 | 0.5208 | 0.4220 (fail) | 96/96 |
+| F2 (289–384) | 23/96 | 0.2396 | 0.1653 (fail) | 96/96 |
+| F3 (385–480) | 35/96 | 0.3646 | 0.2752 (fail) | 96/96 |
+| F4 (481–576) | 39/96 | 0.4062 | 0.3135 (fail) | 96/96 |
+| F5 (577–672) | 54/96 | 0.5625 | 0.4628 (fail) | 96/96 |
+| F6 (673–768) | 23/96 | 0.2396 | 0.1653 (fail) | 96/96 |
+| **total** | **224/576** | — | — | **576/576** |
+
+*Materializations are distinct fresh, disjoint item sets, not an ordered stress variable; no fitted trend is implied. Counts, Wilson bounds, and the final branch (HOP1-STABLE-INADMISSIBLE) are attested from the locked run record and recomputed by CS for the freeze/tag pass (Appendix B addendum).*
+
 ---
 
 ## 5. The constructibility argument
@@ -305,6 +328,8 @@ would have been the precise failure Paper 1 was built to prevent.
 We emphasize the direction of the claim. The result is **"correctness does not establish that the intended operation was
 performed,"** not "the intended operation did not occur." The construction cannot license the stronger statement, and we
 do not make it.
+
+**Two constructions, not only two defects.** The two *defects* above are within the first construction; the program also has a second *construction*. The two constructions fail the baseline in two distinct ways. They also differ in evidential weight, and we do not treat them as symmetric: the first is a diagnostic case on a small fixed set (24 items, n=8 per positional group) showing that an aggregate score *can* hide a contaminating axis — and, because position and rank co-vary in Cell03 (§7), it establishes that contamination *exists* rather than that it is specifically positional, which is why V3 forecloses position, rank, and endpoint jointly; the second is a stable-inadmissibility result with fresh replication and confidence bounds (six 96-item materializations, Wilson lower bounds). They demonstrate different things at different strengths. The first earns a respectable surface composite score that dissolves into a position/rank-contaminated gradient, and separately carries a below-floor component; the second (V3, §3.3–§4.6), built to foreclose that position/rank route, instead exposes a first-hop precondition that does not clear its floor and does not do so stably across fresh materializations. The gate is therefore shown binding and discriminating across two constructions, with the second **relocating the failure to the first-hop precondition under foreclose-all controls**, away from the position confound the first could not separate (the distractor-attractiveness alternative for that precondition failure is noted in §7). Neither construction yields a composite result: the first because its components are not constructible, the second because the first-hop precondition gating the composite is not met.
 
 ---
 
@@ -349,12 +374,11 @@ constructible task survives stress is the open question for a future stress phas
   isolated linkage claim from this lineage.
 - **Abstention is unstable.** The model over-abstains on hop1 (NULL returns among failures) yet under-abstains on
   neg_graph (18/24 intrusions). This NULL-calibration instability is real and unresolved; it is flagged as future work,
-  not explained here.
-- **Single model, single construction family.** All results are 3B FP16 on one task lineage (the hop2 single-hop control
-  is a query type within the same cells, not a separate task). No generalization to other scales, architectures, or task
-  families is claimed, and no compression rung was run on this construction.
+  not explained here. The same NULL-calibration instability appears among §4.6's wrong hop1 predictions (over-abstention on the first hop) and likewise remains future work.
+- **Two constructions, one model and task family.** All results are 3B FP16 on a single closed-world two-hop task family; the second construction (V3, §3.3–§4.6) adds cross-materialization evidence across six fresh, disjoint draws. No generalization to other scales, architectures, or task families is claimed, and no compression rung was run on either construction. The single-hop controls (hop2) are query types within each construction, not separate tasks.
+- **Distractor-attractiveness is not separated from component difficulty.** The foreclose-all redesign introduces a P-role distractor class (the r1-subject token of the K = 5 relation-reusing chains) as a designed wrong-selection target. All wrong hop1 predictions in the fresh blocks land on it (352/352, §4.6). This unanimity is consistent with two accounts this construction cannot distinguish: the first-hop query is hard under this competition design, or the introduced distractor is over-attractive enough that the construction cannot separate distractor pull from first-hop difficulty. The V3 result therefore bounds the first-hop precondition *under V3's competition design*; separating the two accounts — e.g., a variant that varies or removes the P-role distractor — is future work.
 - **Behavioral only.** No mechanistic claim is made; the generative analogy that motivated the program is a
-  question-generator, not evidence about internal structure.
+  question-generator, not evidence about internal structure. The P-role landing of §4.6 is a positional/structural co-occurrence governed by this same rule — it generates a future target, not a mechanism.
 - **Thresholds are local; the gate layout is not the thresholds.** The fail-closed gate *layout* is portable as an
   evaluation discipline, but the threshold values used here are local to this construction, model scale, vocabulary,
   scoring contract, and task geometry. Portability of absolute thresholds across model families, scales, or task families
@@ -443,6 +467,8 @@ toward that.
   instrument-validation-under-stress on a constructible single-lookup task, not as composition or seam evidence. Whether a
   *linkage* task can be made constructible enough to carry a seam measurement is the open program question (reaching a stress measurement at all), and it remains gated on the above. No stress rung has yet been run on this construction.
 
+§9's call for *different task geometry* that decouples position from rank was realized as the V3 construction (§3.3). Its result reframes the linkage-constructibility question rather than closing it: with the position/rank route foreclosed, the first-hop precondition was stable-inadmissible across six fresh materializations, so a constructible *linkage* baseline is not yet in hand under this construction either. The most direct next measurement is unchanged and remains gated — take a *demonstrably constructible* single-lookup task through actual compression as instrument-validation-under-stress, not composition or seam evidence, and only after that task is itself certified shortcut-free. The V3 result is **not** a green light to stress hop2 or any other component. No stress rung has yet been run on either construction.
+
 ---
 
 ## 10. Conclusion
@@ -462,9 +488,7 @@ Before asking what survives compression, verify that the baseline task is actual
 
 ## Appendix A — claim ledger linkage
 
-This paper reports Claim B (constructibility floor mappable, not cleared) and updates program claim #5 (precision-demanding
-tasks retain less under quantization) to *blocked on a precondition*. It makes no statement on Claim C (the seam), which
-remains blocked. See Claim Ledger v0.2.
+This paper reports **Claim B** (constructibility floor mappable, not cleared) and now supports it with **two independent constructions**: the position-contaminated, below-floor first construction, and the foreclose-all V3 construction in which the first-hop precondition is stable-inadmissible across six fresh materializations while the second hop holds. It continues to update program **Claim #5** (precision-demanding tasks retain less under quantization) to **blocked on a precondition** — the V3 result reinforces this block and does not resolve it. It makes **no statement on Claim C** (the seam), which remains blocked. The V3 finding is recorded as the program's first data-trigger ledger update (a protocol run); see Claim Ledger `notes/CLAIM-LEDGER-v1.0.md`.
 
 ## Appendix B — artifacts and provenance
 
@@ -545,6 +569,39 @@ earlier drafts); the Group A 2/8 breakdown; the four UNCLASSIFIED_OFF_FRAME item
 scope (additive, Gate-5-only). Still open: the pre-amendment `060afad9` scorer full hash, which is unrecoverable as
 documented above; and, lower priority, the Cell01/02 per-item intrusion-diagnostic fields, since per-item positions are
 manifest-derived rather than run-JSON-derived. These attested values were independently recomputed by CS for the freeze/tag pass (see Verification status above).
+
+## Appendix B (addendum) — V3 lifecycle artifacts and provenance
+
+**Verification status.** The V3-lifecycle values, counts, and hashes below are **attested from the locked artifact files** and **independently recomputed by CS for the freeze/tag pass**; the Senior Engineer additionally reproduced the hop1-stability analyzer decision byte-identically during verification. No cited artifact was modified after recomputation. Canonical hashes are `sha256` over the locked file.
+
+Full `sha256` of the locked V3 run artifacts:
+
+```
+experiments/2026-06-19_hop1-stability-run/   (six fresh materializations 193-768)
+  decision.json                     8676530a97e4322f38cf8ded17710db32883c16a5b1b431e9af284dd9b4f8965   (HOP1-STABLE-INADMISSIBLE)
+  covariate_log.json                480f70d18f908a4dd89c8f5435cc122b61cfbf68e8fa006478fcfb8949049950   (P-role 352/352)
+  admissibility_summary.json        3763f736ff2dae8e2a90908a3787446d3e95c300062d02199107b6ebd85857e9   (576/576 PASS)
+  prompt_conformance_summary.json   b361b1d7b8bda061ad456dad0fe3cc82a81440277669f0fe651695ec0af92758   (576/576 PASS)
+  run_record.json                   11756a53a9158e8687faab1da1a05d89cf77db7a74403e7d34b7a95d4c5e6702
+  manifest.json                     2ad2015c5edc9d8c8a654a7f5b360d8c8b98983b3f85e4558ea29976bfc4a1bb
+experiments/2026-06-18_v3-floor-check-run/
+  analyzer_decision.json            6a34f6dc9687e04d0bc58b1595b4c6e9555a59e4bb606e40e9aa72ddd2c048c5   (anchor; COMPONENT-ADMISSIBLE-UNDER-COMPETITION)
+experiments/2026-06-18_v3-composite-gate-run/
+  analyzer_decision.json            3924ff35087c5648a20101e463f2129d6d731a853c4b9f0e3d61a4ade6efe842   (anchor; PRECONDITION-FAIL)
+```
+
+Model / profile (locked): `Qwen/Qwen2.5-3B-Instruct` revision `aa8e72537993ba99e69dfaafa59ed015b17504d1`, FP16, greedy (temp 0). Inference stack (V3 lifecycle, from `run_record.json`): `mlx_lm 0.31.3`, `torch 2.7.1`, `transformers 5.10.2` (consistent with the K-sweep record).
+
+Senior Engineer verification returns of record (byte-stable):
+
+```
+V3-FLOOR-CHECK-RUN-SE-VERIFICATION-RETURN-v0.1.md        03d2ead80e830a8067c145e6516e20847fb0d2961a9ead85236ff696fe3d560f
+V3-COMPOSITE-GATE-RUN-SE-VERIFICATION-RETURN-v0.1.md     0eb0edcb6cc71632d41c58f2cd44ff802ba7beb173bf839bca4c50beecf88abd
+HOP1-STABILITY-RUN-SE-VERIFICATION-RETURN-v0.1.md        84a5716b4f202a9337495100064d8e5f466ff8baf3e76bb16b4d221de05285b9
+HOP1-STABILITY-FINDING-REPORT-v0.1.md                    2969ec1a5ce830c2b77c974ad23b163e4cb1dca6a518800a555f5a159f6efb33
+```
+
+**Threshold statement.** V3 admissibility floor = Wilson lower bound > 0.75 (component); locked construction values K = 5, P = 5, M ≥ 10, selection margin 0.25, derived structural floor F = 0.20; per-item index scheme ≤ 999 (MAX_DELTA = 8 invariant). Thresholds are local to this construction, model scale, vocabulary, scoring contract, and task geometry (§7). The locked V3 tooling digests (unchanged across the lifecycle) are carried in the Claim Ledger (`notes/CLAIM-LEDGER-v1.0.md`).
 
 ## References
 
