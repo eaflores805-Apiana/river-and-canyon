@@ -49,9 +49,9 @@ DELTA-v0.3-ACCESS-HOLD-CURE-FILED-2026-06-20.md, commit 37082b0c.
 ## Filing record
 
 ```text
-commit SHA                       (recorded post-commit in §clean-fetch)
-final remote HEAD                (recorded post-commit in §clean-fetch)
-clean-fetch confirmation         (recorded post-commit in §clean-fetch)
+commit SHA                       10e2094763ae3b3eae8f314e3b4ad8b03f24c27e
+final remote HEAD                10e2094763ae3b3eae8f314e3b4ad8b03f24c27e
+clean-fetch confirmation         PASS — see §clean-fetch below
 applied manuscript path          papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.2.md
 applied manuscript sha256        32056925d17253fbfa1e8b469d38f79c3f9a8fecd93db101177f01b8c513c6e7
 source v1.1 RC body              papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.1.md
@@ -275,7 +275,53 @@ to redirect if needed.
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this return commits and pushes.
+```text
+verification procedure (fresh `git clone --depth 1` of the shared repo)
+  git clone --depth 1 https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  shasum -a 256 papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.2.md
+                papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-RELEASE-CANDIDATE-v1.1.md
+                papers/paper2-correctness-is-not-constructibility/in-review/PAPER-2-V1.2-TIGHTENING-AND-LIMITATIONS-DELTA-v0.3.md
+                papers/paper2-correctness-is-not-constructibility/figures/fig_{two_constructions,gate_decision}.{png,svg}
+                papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
+                governance/2026-06-20_paper-2-v1.2-delta-v0.3-review/{TL-ACTION,CS-RETURN}-*.md
+  git ls-remote --tags origin | grep paper2
+
+results (clean-fetch, 2026-06-20, HEAD 10e2094763ae3b3eae8f314e3b4ad8b03f24c27e)
+
+  applied manuscript:
+    PAPER-2-RELEASE-CANDIDATE-v1.2.md            32056925d17253fbfa1e8b469d38f79c3f9a8fecd93db101177f01b8c513c6e7   MATCH
+
+  preserved sources (must be UNCHANGED by this apply pass):
+    PAPER-2-RELEASE-CANDIDATE-v1.1.md            4e8a014ab8532136b41b231cd951f876d64f780eda87babd32cde9c3500cb633   UNCHANGED
+    PAPER-2-V1.2-TIGHTENING-AND-LIMITATIONS-DELTA-v0.3.md
+                                                  e759b7edc86aaec4cbd0757eb2ad24ebee2bf33c6836a3feb84e32585b6c79b4   UNCHANGED
+
+  corrected figures (C5-cleared at prior commit 37082b0c; UNCHANGED by this pass):
+    fig_two_constructions.png                    817c9157ec5b4c004c4540baeca0e2a6323bcd03cb78ed3c9b1d52e3ba5ddb0a   UNCHANGED
+    fig_two_constructions.svg                    ef5f39631aead03a48479eb149fc921a9b14d95066950a45b4bd030f229b4d01   UNCHANGED
+    fig_gate_decision.png                        838550cb46389674a150df80d611282cb71fdae28b5841e3dbe051108f327433   UNCHANGED
+    fig_gate_decision.svg                        2350c215f0e4b17d81b2ae51b7876ad42df09ee872aa867e48451a324f157a79   UNCHANGED
+
+  protected surfaces (must remain unchanged):
+    released paper file on trunk                 9893a8184cc1e92458eee6eedb521b0e3c78b95623f458a8d2b1150b2724e1e1   UNCHANGED
+    Paper 2 v1.0 tag                              41c033fc59597eb42015de9019c3ac7b7d19dd98                           UNCHANGED (NOT moved)
+
+  governance packet:
+    TL-ACTION memo                                d430711536fe694dfd74bc87f53c813e46d5f759aab9f5918d99041687004e4f   MATCH
+    CS-RETURN memo (pre-§clean-fetch append)     c47c712af69d0db681e48b51271ccecf576fd1d56fbc0b4d20796eef2e513116   MATCH
+
+verdict
+  FILED. The v1.2 applied manuscript is on the shared repo at HEAD
+  10e2094763ae…; v1.1 byte-frozen RC (4e8a014a…) and the v0.3 edit-spec
+  (e759b7ed…) are preserved unchanged for the audit trail. The 4 C5-
+  cleared figure assets and the released paper file on trunk are
+  untouched. The Paper 2 v1.0 tag is intact.
+
+  The post-append digest for this CS return is recorded in the follow-on
+  commit.
+```
 
 ---
 
