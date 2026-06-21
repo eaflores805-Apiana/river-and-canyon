@@ -37,11 +37,12 @@ preserved tag   paper2-cells01-03-v1.0    41c033fc59597eb42015de9019c3ac7b7d19dd
 ## Filing record
 
 ```text
-release commit SHA            (recorded post-commit in §clean-fetch)
-final remote HEAD             (recorded post-commit in §clean-fetch)
+release commit SHA            34ef9215e8706f5a18288274be27678593dd2c01
+final remote HEAD             34ef9215e8706f5a18288274be27678593dd2c01
 release tag name              paper2-cells01-03-v1.2
-release tag commit            (recorded post-commit in §clean-fetch)
-clean-fetch confirmation      (recorded post-commit in §clean-fetch)
+release tag (annotated obj)   82a24b7dbff12b2ca501a093182bf35858f22caf
+release tag target commit     34ef9215e8706f5a18288274be27678593dd2c01
+clean-fetch confirmation      PASS — see §clean-fetch below
 
 released Markdown path        papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
 released Markdown sha256      7d6bd7f265ed908ed658279bb0dc090a096f981e8d7aa732ca1c93d43cb586c3
@@ -246,7 +247,110 @@ note on the v1.0 PDF preservation:
 
 ## §clean-fetch. Clean-fetch confirmation
 
-To be appended after this return commits, tag is created, and both push.
+```text
+verification procedure (fresh `git clone` of the shared repo)
+  git clone https://github.com/eaflores805-Apiana/river-and-canyon clean
+  cd clean
+  git rev-parse HEAD
+  git ls-remote --tags origin | grep paper2
+  git ls-tree paper2-cells01-03-v1.0 papers/.../correctness-is-not-constructibility.md
+  git ls-tree paper2-cells01-03-v1.2 papers/.../correctness-is-not-constructibility.md
+  shasum -a 256 papers/.../correctness-is-not-constructibility.md
+  git show paper2-cells01-03-v1.0:papers/.../correctness-is-not-constructibility.md | shasum -a 256
+
+results (clean-fetch, 2026-06-21, HEAD 34ef9215e8706f5a18288274be27678593dd2c01)
+
+  released v1.2 manuscript (current main + paper2-cells01-03-v1.2 tag):
+    git blob OID (sha1)    21f10620d7445dfadcff5bc2fbf36f8f662e651e   (NEW; v1.2 release)
+    file sha256            7d6bd7f265ed908ed658279bb0dc090a096f981e8d7aa732ca1c93d43cb586c3   MATCH
+
+    in-text checks:
+      'release candidate'                       0 ×  (gating phrase removed)
+      'pending final release authorization'     0 ×  (gating phrase removed)
+      'v1.2.'                                   1 ×  (released label present)
+
+  preserved v1.0 manuscript (paper2-cells01-03-v1.0 tag):
+    git blob OID (sha1)    7d6706a346bb634bed6752ff147fd67e1ad2596f   UNCHANGED
+                                                                       (this is the "7d6706a3…" the
+                                                                        Senior cover note + chain cited
+                                                                        throughout — the git blob OID,
+                                                                        NOT a sha256)
+    file sha256            705c6f4ba0119b27293c64d32c38929952c96ff0315e2f9ca7f80c6fb8c7daea   UNCHANGED
+                                                                       (same v1.0 bytes; just shown
+                                                                        under a different hash function
+                                                                        for disambiguation)
+    v1.0 release is fully recoverable via:
+      git checkout paper2-cells01-03-v1.0
+    or:
+      git show paper2-cells01-03-v1.0:papers/paper2-correctness-is-not-constructibility/correctness-is-not-constructibility.md
+
+  tag verification (remote):
+    refs/tags/paper2-cells01-03-v1.0           41c033fc59597eb42015de9019c3ac7b7d19dd98     UNCHANGED  (tag NOT moved)
+    refs/tags/paper2-cells01-03-v1.0^{}        40c0cd5a974b8bb10e7d3fe2a794b43efcd30fce     UNCHANGED  (v1.0 target NOT changed)
+    refs/tags/paper2-cells01-03-v1.2           82a24b7dbff12b2ca501a093182bf35858f22caf     NEW        (v1.2 annotated tag)
+    refs/tags/paper2-cells01-03-v1.2^{}        34ef9215e8706f5a18288274be27678593dd2c01     NEW        (v1.2 target commit)
+
+  preserved sources (must be UNCHANGED by this release):
+    PAPER-2-RELEASE-CANDIDATE-v1.2.md (locked RC)
+                                                  5b385d7f0409f9c050f6c6d87dcb7d665adc49df1f26468785fcfcc0d55ca1d8   UNCHANGED
+    PAPER-2-RELEASE-CANDIDATE-v1.1.md             4e8a014ab8532136b41b231cd951f876d64f780eda87babd32cde9c3500cb633   UNCHANGED
+    PAPER-2-V1.2-TIGHTENING-AND-LIMITATIONS-DELTA-v0.3.md
+                                                  e759b7edc86aaec4cbd0757eb2ad24ebee2bf33c6836a3feb84e32585b6c79b4   UNCHANGED
+    fig_two_constructions.png                    817c9157ec5b4c004c4540baeca0e2a6323bcd03cb78ed3c9b1d52e3ba5ddb0a   UNCHANGED
+    fig_two_constructions.svg                    ef5f39631aead03a48479eb149fc921a9b14d95066950a45b4bd030f229b4d01   UNCHANGED
+    fig_gate_decision.png                        838550cb46389674a150df80d611282cb71fdae28b5841e3dbe051108f327433   UNCHANGED
+    fig_gate_decision.svg                        2350c215f0e4b17d81b2ae51b7876ad42df09ee872aa867e48451a324f157a79   UNCHANGED
+    notes/CLAIM-LEDGER-v1.0.md                   15f32e1a68620a9101d344514b7c2240a9a78969a564dd8fce589f86b32ea087   UNCHANGED
+    tier0-run/CLAIM-LEDGER-CONSTRUCTIBILITY-FLOOR.md
+                                                  b16875590ca060b857bf577fd5862eae9adb05b60c7fbdda1d0d5f1318bb55b2   UNCHANGED  (sealed)
+
+  PDF (deferred per §PDF):
+    correctness-is-not-constructibility.pdf      1,338,625 bytes  (v1.0 PDF; UNCHANGED by this release commit)
+
+  governance memos:
+    MANAGER-DECISION memo                         fdd9f6e8dbeaddd20ea1954c159b6d6266372ff7d9a1bc73fac36f4a7f63d02e   MATCH
+    CS-RETURN memo (pre-§clean-fetch append)     775edf310066394e3ab37031bedd4f877761ba72d79dcf22bb89f80e17fafdf3   MATCH
+
+verdict
+  FILED. Paper 2 v1.2 is publicly released on the shared repo at HEAD
+  34ef9215e8706f5a18288274be27678593dd2c01 with annotated tag
+  paper2-cells01-03-v1.2 (object 82a24b7d…, target 34ef9215…).
+
+  The Paper 2 v1.0 tag is INTACT and v1.0 release is fully recoverable
+  via `git checkout paper2-cells01-03-v1.0`. The git blob OID
+  7d6706a346bb634bed6752ff147fd67e1ad2596f (the "7d6706a3…" the chain
+  has been citing) is the v1.0 manuscript's git OID and is UNCHANGED.
+
+  Released v1.2 manuscript content (sha256 7d6bd7f2…) is byte-faithful
+  to the locked RC (5b385d7f…) except the 3 release-label updates;
+  no claim-bearing prose was touched.
+
+  PDF deferred per §PDF; v1.0 PDF unchanged in this commit; v1.2 PDF
+  will be filed when user drops it in _INBOX/.
+
+  The post-append digest for this CS return is recorded in the follow-on
+  commit.
+```
+
+### Disambiguation note (one-time clarification)
+
+```text
+Throughout the v1.2 chain (Senior cover notes, CS provenance reviews,
+CS returns), the phrase "tagged manuscript blob 7d6706a3…" was used to
+refer to the git BLOB OID (sha1) of the v1.0 manuscript file as stored
+in git — NOT a sha256 hash of the file content.
+
+  v1.0 manuscript git blob OID (sha1):      7d6706a346bb634bed6752ff147fd67e1ad2596f
+  v1.0 manuscript file content sha256:      705c6f4ba0119b27293c64d32c38929952c96ff0315e2f9ca7f80c6fb8c7daea
+
+Both are stable identifiers of the same v1.0 bytes; they are the same
+file under different hash functions. The chain's "7d6706a3…" claims of
+"UNCHANGED" were correct at the git-OID level — confirmed unchanged on
+this clean-fetch.
+
+For future returns I will be more explicit when citing hashes, marking
+them as either "git blob OID" or "file sha256" to avoid future confusion.
+```
 
 ---
 
