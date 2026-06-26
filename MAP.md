@@ -1,6 +1,6 @@
 # Program Path Map
 
-**Last updated:** 2026-06-19 (rev 4 — CS additions tracing the V3 program lifecycle 2026-06-15 → 2026-06-19: K-Sweep scout + FP16 constructibility run; V3 instrument byte-audit re-lock; philosophy decision ratified; V3 build open slots; V3 floor check → COMPONENT-ADMISSIBLE; V3 composite gate → PRECONDITION-FAIL. See change-note at foot.)
+**Last updated:** 2026-06-25 (rev 5 — CS additions: Hop1 Stability Investigation EXECUTED → HOP1-STABLE-INADMISSIBLE (2026-06-19); Paper 2 V3-delta → v1.1-rc → **v1.2 PUBLIC RELEASE** + PDF (2026-06-19 → 06-21); Manager direction **open first bounded compression rung** (2026-06-21, packet prep only). YOU ARE HERE moved to the compression-rung standby. See rev-5 change-note at foot. Rev 4 traced the V3 lifecycle 2026-06-15 → 2026-06-19.)
 **Re-sync rule:** if this and the record disagree, the record wins. Re-sync when a stage closes or a new branch opens. The `git log` is the authoritative timestamp for each commit.
 
 A living overview of where the program has been, where it is, and where it ventured off. Coarse-grained: main stages, not every commit. The trunk reads top → bottom in time; branches show where the work split (closed routes, parked tracks, new directions).
@@ -189,14 +189,42 @@ PROGRAM TRUNK
 │       property identical (hop2, dq, invalidated, admissibility, conformance,
 │       MAX_DELTA all match). Mechanism NOT decidable from this run (per v0.2 §10).
 │   Senior PASS on run; missing manifest filed 2026-06-19 per TL ACTION (lifecycle
-│     closed as valid PRECONDITION-FAIL with full sha256 inventory)                ◄── YOU ARE HERE
+│     closed as valid PRECONDITION-FAIL with full sha256 inventory)
 │
-[open · candidate question; NOT authorized for execution]
-    hop1 stability investigation: WHY does hop1 differ at 097..192 vs 001..096?
-    Tokenization sensitivity? prefix-range effect? Something else mechanical-but-not-
-    mechanism? NONE are claimed here as findings — recorded as the candidate questions
-    that a SEPARATE pre-registration + Manager/TL authorization would address. Not
-    licensed by the PRECONDITION-FAIL outcome alone.
+[done · 2026-06-19]  Hop1 Stability Investigation → HOP1-STABLE-INADMISSIBLE
+│   Separately pre-registered + TL-approved (NOT licensed by PRECONDITION-FAIL alone);
+│     answers the candidate question "why does hop1 differ at 097..192 vs 001..096?"
+│   experiments/2026-06-19_hop1-stability-run/  — 6 fresh blocks; P-role distractor
+│     reproduces 100% on fresh items ⇒ hop1 is STABLY INADMISSIBLE on this construction,
+│     not a seed/index artifact. Mechanism still not claimed.
+│   Finding report v0.1 (path-a/in-review/HOP1-STABILITY-FINDING-REPORT-v0.1.md) fed the
+│     Paper 2 V3-delta integration.
+│
+[done · 2026-06-19/21]  Paper 2 V3-delta → v1.2 PUBLIC RELEASE
+│   V3-delta freeze/tag substitution + integrated revised manuscript → release candidate
+│     (v1.1-rc1, body byte-identical to reviewed draft) → C5-cleared v0.3 tightening +
+│     limitations delta → status-line cleanup (narrow Manager-authorized edit)
+│   PAPER 2 v1.2 PUBLIC RELEASE 2026-06-21:
+│     release commit 34ef9215; annotated tag paper2-cells01-03-v1.2 (obj 82a24b7d);
+│     released Markdown sha256 7d6bd7f2… ; v1.2 PDF in follow-on commit cb977b54
+│     (PDF lives after the tag by design)
+│   Paper 2 v1.0 tag 41c033fc UNCHANGED (verified at release). §6/§9 now carry the hop2
+│     single-lookup qualification language used by the compression-rung lane below.
+│   governance/2026-06-21_paper-2-v1.2-public-release/
+│
+[direction · 2026-06-21; packet prep only, NO run authorized]  First Bounded Compression Rung
+    Manager direction: open the first compression rung as INSTRUMENT-VALIDATION-UNDER-STRESS
+      (FP16 → INT8 on a single qualified target). Blanket compression block NARROWLY
+      LIFTED for INT8 authorization-packet authoring ONLY; INT4 stays blocked.
+    Required next artifact: FIRST-COMPRESSION-RUNG-AUTHORIZATION-PACKET-v0.1 (Senior lane).
+      Run gated on: Senior draft → C5 → CS feasibility → TL → Manager by-name authorization.
+    Bounded perimeter: "Can the fail-closed instrument produce a valid FP16→INT8 stress-
+      retention readout on the selected qualified target?" — NOT seam / Claim C /
+      composition / capability / mechanism. Fail-closed if FP16 baseline not qualified.
+    NOT the first INT8 bytes: INT8-RUNG-1 (06-13, QUARANTINED) and the minimal FP16↔INT8
+      run (06-15, INCONCLUSIVE per FP16-gate) are distinct and do not generalize the lift.
+    governance/2026-06-21_first-compression-rung-direction/                          ◄── YOU ARE HERE
+      CS ACKNOWLEDGED; standing by for the Senior packet draft.
 ```
 
 ## Round-trips (ventured and came back — recorded for honesty)
@@ -274,3 +302,10 @@ Repo-level docs ................. README · STATUS · REVIEW · _meta/INDEX
 *— REMOVED the rev-3 "next: bank Terminal Attraction; keep G6 the next build of record" pointer — superseded by the actual events. Terminal Attraction remains a parked finding track (not abandoned, just not the focal active surface). G6 (tier-1 instrument architecture) remains a parallel discipline; its trunk node from rev 3 stays intact above. The V3 lifecycle became the focal active surface from the philosophy decision (2026-06-17) onward.*
 *— ADDED a candidate-question annotation for the OPEN hop1 stability investigation (why does hop1 differ at 097..192 vs 001..096?). Recorded as a candidate question NOT licensed for execution by the PRECONDITION-FAIL outcome alone; would need its own pre-registration + Manager/TL authorization.*
 *— Records state only; reopens no closed route; unseals no sealed bytes; authorizes no run/build/compression/claim; changes no scientific meaning. PROGRAM-POSITION / PROGRAM-MAP / PROGRAM-CONTROL-LEDGER not updated this turn (Senior/Manager-maintained; this map is the at-a-glance view, the ledger is the deeper read). K=5 FAIL remains closed; V3 ≠ C0; neither the COMPONENT-ADMISSIBLE nor the PRECONDITION-FAIL outcome bears on it.*
+
+*Change-note (rev 5, CS additions, 2026-06-25):*
+*— RESOLVED the rev-4 OPEN candidate-question block: the hop1 stability investigation was separately pre-registered, TL-approved, and EXECUTED 2026-06-19 → HOP1-STABLE-INADMISSIBLE (6 fresh blocks; P-role distractor reproduces 100% on fresh ⇒ stable inadmissibility on this construction, not a seed/index artifact; mechanism still not claimed). Added as a `[done]` trunk node.*
+*— ADDED the Paper 2 V3-delta → v1.1-rc → v1.2 PUBLIC RELEASE + PDF trunk node (2026-06-19 → 06-21): release commit 34ef9215; tag paper2-cells01-03-v1.2 (obj 82a24b7d); released Markdown sha256 7d6bd7f2…; PDF follow-on cb977b54. Paper 2 v1.0 tag 41c033fc verified UNCHANGED at release.*
+*— ADDED the First Bounded Compression Rung direction (2026-06-21) as a `[direction]` node (packet prep only; INT8 packet-authoring lift; INT4 still blocked; run gated on the full chain; fail-closed perimeter). Noted INT8-RUNG-1 (06-13 QUARANTINED) and the minimal FP16↔INT8 run (06-15 INCONCLUSIVE) as distinct prior INT8 touches that do not generalize the lift.*
+*— MOVED YOU ARE HERE from the composite-gate close to the compression-rung standby (CS acknowledged; awaiting the Senior packet draft).*
+*— Records state only; reopens no closed route; unseals no sealed bytes; authorizes no run/build/compression/claim; changes no scientific meaning. Companion CS-lane updates this turn: refreshed passdown (governance/passdown/2026-06-25_passdown-letter.md) + standing-card revision (INT8 packet-authoring lift, INT8/INT4 split, v1.2 + Paper 3 tags added to protected surfaces). Root docs STATUS/README/REVIEW left user-owned (unchanged). K=5 FAIL remains closed.*
