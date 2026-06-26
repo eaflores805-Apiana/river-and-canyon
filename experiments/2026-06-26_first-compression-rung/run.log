@@ -1,0 +1,63 @@
+== MINIMAL-FP16-INT8-TWOHOP-L1-v0.1 run starting at 2026-06-26T20:53:21.130642+00:00 ==
+   n=8 items: ['twohop_l1_c03_i01', 'twohop_l1_c03_i02', 'twohop_l1_c03_i03', 'twohop_l1_c03_i04', 'twohop_l1_c03_i05', 'twohop_l1_c03_i06', 'twohop_l1_c03_i07', 'twohop_l1_c03_i08']
+   query types: ['hop1', 'hop2', 'composite']  (per preregistration § 2)
+
+[FP16] loading Qwen/Qwen2.5-3B-Instruct ...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 92748.74it/s]
+[FP16] loaded in 3.9s (mlx_lm 0.31.3)
+  [FP16]    twohop_l1_c03_i01       hop1  → 'ANSWER: LLIXH'
+  [FP16]    twohop_l1_c03_i01       hop2  → 'ANSWER: LLIXH'
+  [FP16]    twohop_l1_c03_i01  composite  → 'ANSWER: LRPTZ'
+  [FP16]    twohop_l1_c03_i02       hop1  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i02       hop2  → 'ANSWER: RPHBK'
+  [FP16]    twohop_l1_c03_i02  composite  → 'ANSWER: EFSCG'
+  [FP16]    twohop_l1_c03_i03       hop1  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i03       hop2  → 'ANSWER: HXPVQ'
+  [FP16]    twohop_l1_c03_i03  composite  → 'ANSWER: YNVBT'
+  [FP16]    twohop_l1_c03_i04       hop1  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i04       hop2  → 'ANSWER: CZFUR'
+  [FP16]    twohop_l1_c03_i04  composite  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i05       hop1  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i05       hop2  → 'ANSWER: RJJZO'
+  [FP16]    twohop_l1_c03_i05  composite  → 'ANSWER: VOTRJ'
+  [FP16]    twohop_l1_c03_i06       hop1  → 'ANSWER: YHIJZ'
+  [FP16]    twohop_l1_c03_i06       hop2  → 'ANSWER: YHIJZ'
+  [FP16]    twohop_l1_c03_i06  composite  → 'ANSWER: YHIJZ'
+  [FP16]    twohop_l1_c03_i07       hop1  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i07       hop2  → 'ANSWER: OUFOK'
+  [FP16]    twohop_l1_c03_i07  composite  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i08       hop1  → 'ANSWER: NULL'
+  [FP16]    twohop_l1_c03_i08       hop2  → 'ANSWER: CLZMW'
+  [FP16]    twohop_l1_c03_i08  composite  → 'ANSWER: LDFVJ'
+
+[INT8] loading /Users/eliasflores/Documents/Projects/Apiana_Ai/river-and-canyon/tier0-run/Qwen2.5-3B-Instruct-mlx-int8 ...
+[INT8] loaded in 2.0s (mlx_lm 0.31.3)
+  [INT8]    twohop_l1_c03_i01       hop1  → 'ANSWER: LLIXH'
+  [INT8]    twohop_l1_c03_i01       hop2  → 'ANSWER: LLIXH'
+  [INT8]    twohop_l1_c03_i01  composite  → 'ANSWER: LRPTZ'
+  [INT8]    twohop_l1_c03_i02       hop1  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i02       hop2  → 'ANSWER: RPHBK'
+  [INT8]    twohop_l1_c03_i02  composite  → 'ANSWER: EFSCG'
+  [INT8]    twohop_l1_c03_i03       hop1  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i03       hop2  → 'ANSWER: HXPVQ'
+  [INT8]    twohop_l1_c03_i03  composite  → 'ANSWER: YNVBT'
+  [INT8]    twohop_l1_c03_i04       hop1  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i04       hop2  → 'ANSWER: CZFUR'
+  [INT8]    twohop_l1_c03_i04  composite  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i05       hop1  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i05       hop2  → 'ANSWER: RJJZO'
+  [INT8]    twohop_l1_c03_i05  composite  → 'ANSWER: VOTRJ'
+  [INT8]    twohop_l1_c03_i06       hop1  → 'ANSWER: YHIJZ'
+  [INT8]    twohop_l1_c03_i06       hop2  → 'ANSWER: YHIJZ'
+  [INT8]    twohop_l1_c03_i06  composite  → 'ANSWER: YHIJZ'
+  [INT8]    twohop_l1_c03_i07       hop1  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i07       hop2  → 'ANSWER: OUFOK'
+  [INT8]    twohop_l1_c03_i07  composite  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i08       hop1  → 'ANSWER: NULL'
+  [INT8]    twohop_l1_c03_i08       hop2  → 'ANSWER: CLZMW'
+  [INT8]    twohop_l1_c03_i08  composite  → 'ANSWER: LDFVJ'
+
+== Summary ==
+  FP16: hop1=0/8, hop2=8/8, composite=1/8
+  INT8: hop1=0/8, hop2=8/8, composite=1/8
+  Outputs written to: /Users/eliasflores/Documents/Projects/Apiana_Ai/river-and-canyon/experiments/2026-06-26_first-compression-rung

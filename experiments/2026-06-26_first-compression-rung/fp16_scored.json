@@ -1,0 +1,441 @@
+{
+  "counts": {
+    "hop1": {
+      "n": 8,
+      "correct": 0,
+      "format_fail": 0,
+      "anchor_echo": 0,
+      "non_context": 6,
+      "stopped_short": 0,
+      "other": 2
+    },
+    "hop2": {
+      "n": 8,
+      "correct": 8,
+      "format_fail": 0,
+      "anchor_echo": 0,
+      "non_context": 0,
+      "stopped_short": 0,
+      "other": 0
+    },
+    "composite": {
+      "n": 8,
+      "correct": 1,
+      "format_fail": 0,
+      "anchor_echo": 0,
+      "non_context": 2,
+      "stopped_short": 0,
+      "other": 5
+    }
+  },
+  "annotated": [
+    {
+      "item_id": "twohop_l1_c03_i01",
+      "query_type": "hop1",
+      "anchor": "ZAUIT",
+      "expected": "ZBONN",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAUIT links to ZBONN.\nZFVOU holds NFIXH.\nZBONN maps to LLIXH.\nZDTZU links to ZENTN.\nZENTN maps to YJKBM.\nZGOKQ links to ZHETA.\nZHETA maps to LRPTZ.\n\nQuestion: ZAUIT links to what?\n",
+      "chat_prompt_sha256": "sha256:06cdfde38b789cb6e5e3a2764115a75c04f0cef5a17f82f18cd3f56d2fb891a1",
+      "raw_output": "ANSWER: LLIXH",
+      "classification": {
+        "failure_class": "target_chain_wrong_neighbor",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "LLIXH",
+        "returned_role": "answer_C",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i01",
+      "query_type": "hop2",
+      "anchor": "ZBONN",
+      "expected": "LLIXH",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAUIT links to ZBONN.\nZFVOU holds NFIXH.\nZBONN maps to LLIXH.\nZDTZU links to ZENTN.\nZENTN maps to YJKBM.\nZGOKQ links to ZHETA.\nZHETA maps to LRPTZ.\n\nQuestion: ZBONN maps to what?\n",
+      "chat_prompt_sha256": "sha256:510fa08e9898178c4304f5f08f278625e9722be1a93658abf6dc6989e21c030e",
+      "raw_output": "ANSWER: LLIXH",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "LLIXH",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i01",
+      "query_type": "composite",
+      "anchor": "ZAUIT",
+      "expected": "LLIXH",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAUIT links to ZBONN.\nZFVOU holds NFIXH.\nZBONN maps to LLIXH.\nZDTZU links to ZENTN.\nZENTN maps to YJKBM.\nZGOKQ links to ZHETA.\nZHETA maps to LRPTZ.\n\nQuestion: ZAUIT links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:219a2c9339a9e306d4f854d5353001190bb831418b5b794b4fcf1e8a21ca7be2",
+      "raw_output": "ANSWER: LRPTZ",
+      "classification": {
+        "failure_class": "wrong_chain_selection",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "LRPTZ",
+        "returned_role": "distractor_chain_endpoint",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i02",
+      "query_type": "hop1",
+      "anchor": "ZANMR",
+      "expected": "ZBWJB",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZANMR links to ZBWJB.\nZFFNL holds RPHDJ.\nZBWJB maps to RPHBK.\nZDQOV links to ZERXB.\nZERXB maps to GCGMX.\nZGKJT links to ZHNRM.\nZHNRM maps to EFSCG.\n\nQuestion: ZANMR links to what?\n",
+      "chat_prompt_sha256": "sha256:f83188580f51782b63baff433a5d556475ffc839bc7ae2fac4d52779282fcf2c",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i02",
+      "query_type": "hop2",
+      "anchor": "ZBWJB",
+      "expected": "RPHBK",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZANMR links to ZBWJB.\nZFFNL holds RPHDJ.\nZBWJB maps to RPHBK.\nZDQOV links to ZERXB.\nZERXB maps to GCGMX.\nZGKJT links to ZHNRM.\nZHNRM maps to EFSCG.\n\nQuestion: ZBWJB maps to what?\n",
+      "chat_prompt_sha256": "sha256:bf251f1230c5dc2fa3b83c6567d57dfbb9ad1a7be23bb6ca72d01ade3ea6c043",
+      "raw_output": "ANSWER: RPHBK",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "RPHBK",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i02",
+      "query_type": "composite",
+      "anchor": "ZANMR",
+      "expected": "RPHBK",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZANMR links to ZBWJB.\nZFFNL holds RPHDJ.\nZBWJB maps to RPHBK.\nZDQOV links to ZERXB.\nZERXB maps to GCGMX.\nZGKJT links to ZHNRM.\nZHNRM maps to EFSCG.\n\nQuestion: ZANMR links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:bc0e9f6f4ff29101d72d05625289efab65f321acc14b42e67aba327d5c827bf9",
+      "raw_output": "ANSWER: EFSCG",
+      "classification": {
+        "failure_class": "wrong_chain_selection",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "EFSCG",
+        "returned_role": "distractor_chain_endpoint",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i03",
+      "query_type": "hop1",
+      "anchor": "ZAJOP",
+      "expected": "ZBTGD",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAJOP links to ZBTGD.\nZFCZB holds CPPVQ.\nZBTGD maps to HXPVQ.\nZDPDK links to ZEZNO.\nZEZNO maps to RIMFB.\nZGQEZ links to ZHXGE.\nZHXGE maps to YNVBT.\n\nQuestion: ZAJOP links to what?\n",
+      "chat_prompt_sha256": "sha256:4137926b2e77dea54e9def0e0f358972b0103ab14650cf423cec4ad33a031183",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i03",
+      "query_type": "hop2",
+      "anchor": "ZBTGD",
+      "expected": "HXPVQ",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAJOP links to ZBTGD.\nZFCZB holds CPPVQ.\nZBTGD maps to HXPVQ.\nZDPDK links to ZEZNO.\nZEZNO maps to RIMFB.\nZGQEZ links to ZHXGE.\nZHXGE maps to YNVBT.\n\nQuestion: ZBTGD maps to what?\n",
+      "chat_prompt_sha256": "sha256:732f431048a843d49a1bf3ed00272a0c91a75a9b20e2c81da8f04385725f0248",
+      "raw_output": "ANSWER: HXPVQ",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "HXPVQ",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i03",
+      "query_type": "composite",
+      "anchor": "ZAJOP",
+      "expected": "HXPVQ",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAJOP links to ZBTGD.\nZFCZB holds CPPVQ.\nZBTGD maps to HXPVQ.\nZDPDK links to ZEZNO.\nZEZNO maps to RIMFB.\nZGQEZ links to ZHXGE.\nZHXGE maps to YNVBT.\n\nQuestion: ZAJOP links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:37c3d9705b37d58f8518bdb3d7821c8b233c80bd70a59d338c12fc7453b5b02d",
+      "raw_output": "ANSWER: YNVBT",
+      "classification": {
+        "failure_class": "wrong_chain_selection",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "YNVBT",
+        "returned_role": "distractor_chain_endpoint",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i04",
+      "query_type": "hop1",
+      "anchor": "ZAZKG",
+      "expected": "ZBQIJ",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAZKG links to ZBQIJ.\nZFTCN holds CZFNF.\nZBQIJ maps to CZFUR.\nZDCLD links to ZEBRZ.\nZEBRZ maps to KRNJK.\nZGFQC links to ZHFHD.\nZHFHD maps to DYLYG.\n\nQuestion: ZAZKG links to what?\n",
+      "chat_prompt_sha256": "sha256:add20845995ef7aa0546f6502ff4c1c0d95c276f14f4039281a7e50df6571660",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i04",
+      "query_type": "hop2",
+      "anchor": "ZBQIJ",
+      "expected": "CZFUR",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAZKG links to ZBQIJ.\nZFTCN holds CZFNF.\nZBQIJ maps to CZFUR.\nZDCLD links to ZEBRZ.\nZEBRZ maps to KRNJK.\nZGFQC links to ZHFHD.\nZHFHD maps to DYLYG.\n\nQuestion: ZBQIJ maps to what?\n",
+      "chat_prompt_sha256": "sha256:0857ba01f0aed01fa6585510cba1abfca28891eb57b85d0a19e273e121ed86e7",
+      "raw_output": "ANSWER: CZFUR",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "CZFUR",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i04",
+      "query_type": "composite",
+      "anchor": "ZAZKG",
+      "expected": "CZFUR",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAZKG links to ZBQIJ.\nZFTCN holds CZFNF.\nZBQIJ maps to CZFUR.\nZDCLD links to ZEBRZ.\nZEBRZ maps to KRNJK.\nZGFQC links to ZHFHD.\nZHFHD maps to DYLYG.\n\nQuestion: ZAZKG links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:2249b2c53b5d4fccb0eefd11f5d5b398cb96b8e8b2d2a467de92d446f1849c77",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i05",
+      "query_type": "hop1",
+      "anchor": "ZAGVV",
+      "expected": "ZBJEU",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAGVV links to ZBJEU.\nZFSQI holds RJJNK.\nZBJEU maps to RJJZO.\nZDMWS links to ZEEIU.\nZEEIU maps to ZTPUT.\nZGGMM links to ZHHAV.\nZHHAV maps to VOTRJ.\n\nQuestion: ZAGVV links to what?\n",
+      "chat_prompt_sha256": "sha256:009c525aa399a230ea4845e55af741ace75481d448e0ab13caaff6873b93ca40",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i05",
+      "query_type": "hop2",
+      "anchor": "ZBJEU",
+      "expected": "RJJZO",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAGVV links to ZBJEU.\nZFSQI holds RJJNK.\nZBJEU maps to RJJZO.\nZDMWS links to ZEEIU.\nZEEIU maps to ZTPUT.\nZGGMM links to ZHHAV.\nZHHAV maps to VOTRJ.\n\nQuestion: ZBJEU maps to what?\n",
+      "chat_prompt_sha256": "sha256:bf2fe7f625e7e1c361bb5f8b0f7a9871c0bfa21bc7f26ea118588af37ea332a7",
+      "raw_output": "ANSWER: RJJZO",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "RJJZO",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i05",
+      "query_type": "composite",
+      "anchor": "ZAGVV",
+      "expected": "RJJZO",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAGVV links to ZBJEU.\nZFSQI holds RJJNK.\nZBJEU maps to RJJZO.\nZDMWS links to ZEEIU.\nZEEIU maps to ZTPUT.\nZGGMM links to ZHHAV.\nZHHAV maps to VOTRJ.\n\nQuestion: ZAGVV links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:2e92590543802d18375437a2d4f547b5d2f1e5177c79502c853863a2388f6d3d",
+      "raw_output": "ANSWER: VOTRJ",
+      "classification": {
+        "failure_class": "wrong_chain_selection",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "VOTRJ",
+        "returned_role": "distractor_chain_endpoint",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i06",
+      "query_type": "hop1",
+      "anchor": "ZALTZ",
+      "expected": "ZBUTS",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZALTZ links to ZBUTS.\nZFRLW holds YHIYD.\nZBUTS maps to YHIJZ.\nZDGTF links to ZEQDG.\nZEQDG maps to MDUJI.\nZGWUA links to ZHTDC.\nZHTDC maps to GYKXD.\n\nQuestion: ZALTZ links to what?\n",
+      "chat_prompt_sha256": "sha256:6199db91643e85c7b48607a0b588cdb97ebc4f4a199c8d5e0638ae8ce861c2f1",
+      "raw_output": "ANSWER: YHIJZ",
+      "classification": {
+        "failure_class": "target_chain_wrong_neighbor",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "YHIJZ",
+        "returned_role": "answer_C",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i06",
+      "query_type": "hop2",
+      "anchor": "ZBUTS",
+      "expected": "YHIJZ",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZALTZ links to ZBUTS.\nZFRLW holds YHIYD.\nZBUTS maps to YHIJZ.\nZDGTF links to ZEQDG.\nZEQDG maps to MDUJI.\nZGWUA links to ZHTDC.\nZHTDC maps to GYKXD.\n\nQuestion: ZBUTS maps to what?\n",
+      "chat_prompt_sha256": "sha256:208ef841649f7f6c366b071f6fb99a6acc8e8569e676c2b174039ed80dd35f8d",
+      "raw_output": "ANSWER: YHIJZ",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "YHIJZ",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i06",
+      "query_type": "composite",
+      "anchor": "ZALTZ",
+      "expected": "YHIJZ",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZALTZ links to ZBUTS.\nZFRLW holds YHIYD.\nZBUTS maps to YHIJZ.\nZDGTF links to ZEQDG.\nZEQDG maps to MDUJI.\nZGWUA links to ZHTDC.\nZHTDC maps to GYKXD.\n\nQuestion: ZALTZ links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:280cd8e45cab5e8ba409363f84f7fa3782b88b2c9b5d266e64260a72849889ed",
+      "raw_output": "ANSWER: YHIJZ",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "YHIJZ",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i07",
+      "query_type": "hop1",
+      "anchor": "ZABNA",
+      "expected": "ZBSSA",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZABNA links to ZBSSA.\nZFBGY holds XEFOK.\nZBSSA maps to OUFOK.\nZDHFB links to ZEUHH.\nZEUHH maps to AYKRS.\nZGJGV links to ZHWKJ.\nZHWKJ maps to AQRJC.\n\nQuestion: ZABNA links to what?\n",
+      "chat_prompt_sha256": "sha256:c009001782a69431fd489c786a254119e4af4280322a587759c440fedf32f44f",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i07",
+      "query_type": "hop2",
+      "anchor": "ZBSSA",
+      "expected": "OUFOK",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZABNA links to ZBSSA.\nZFBGY holds XEFOK.\nZBSSA maps to OUFOK.\nZDHFB links to ZEUHH.\nZEUHH maps to AYKRS.\nZGJGV links to ZHWKJ.\nZHWKJ maps to AQRJC.\n\nQuestion: ZBSSA maps to what?\n",
+      "chat_prompt_sha256": "sha256:3f5832f70bc60cbb9e2273b39adcfd767d0d22839202b3a6237d419a51fb927a",
+      "raw_output": "ANSWER: OUFOK",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "OUFOK",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i07",
+      "query_type": "composite",
+      "anchor": "ZABNA",
+      "expected": "OUFOK",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZABNA links to ZBSSA.\nZFBGY holds XEFOK.\nZBSSA maps to OUFOK.\nZDHFB links to ZEUHH.\nZEUHH maps to AYKRS.\nZGJGV links to ZHWKJ.\nZHWKJ maps to AQRJC.\n\nQuestion: ZABNA links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:77f932b122d860c553af311a05b59e3c0753b9973ecbf3b9475bd249d9e6f6b5",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i08",
+      "query_type": "hop1",
+      "anchor": "ZAKHL",
+      "expected": "ZBBBW",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAKHL links to ZBBBW.\nZFDRX holds MHZMW.\nZBBBW maps to CLZMW.\nZDYCX links to ZEYZL.\nZEYZL maps to AARQW.\nZGXBD links to ZHKWQ.\nZHKWQ maps to LDFVJ.\n\nQuestion: ZAKHL links to what?\n",
+      "chat_prompt_sha256": "sha256:9cb5722fef2e4c6cabed437146811074281d2b2c01fe307864b2de50b2adc8dd",
+      "raw_output": "ANSWER: NULL",
+      "classification": {
+        "failure_class": "non_context_return",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "NULL",
+        "returned_role": "null_no_link",
+        "is_correct": false
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i08",
+      "query_type": "hop2",
+      "anchor": "ZBBBW",
+      "expected": "CLZMW",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAKHL links to ZBBBW.\nZFDRX holds MHZMW.\nZBBBW maps to CLZMW.\nZDYCX links to ZEYZL.\nZEYZL maps to AARQW.\nZGXBD links to ZHKWQ.\nZHKWQ maps to LDFVJ.\n\nQuestion: ZBBBW maps to what?\n",
+      "chat_prompt_sha256": "sha256:5aff63eda8a59003dd7792a6ee959c3e8f9f96da454b5d2241823f86b07f39d4",
+      "raw_output": "ANSWER: CLZMW",
+      "classification": {
+        "failure_class": "correct",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "CLZMW",
+        "returned_role": "answer_C",
+        "is_correct": true
+      }
+    },
+    {
+      "item_id": "twohop_l1_c03_i08",
+      "query_type": "composite",
+      "anchor": "ZAKHL",
+      "expected": "CLZMW",
+      "prompt": "You are given a set of facts and a question. Answer using only information in the facts provided. Respond using only this exact format with nothing before or after: ANSWER: <TOKEN>\nIf no answer can be determined from the facts, respond: ANSWER: NULL\n\nFacts:\nZAKHL links to ZBBBW.\nZFDRX holds MHZMW.\nZBBBW maps to CLZMW.\nZDYCX links to ZEYZL.\nZEYZL maps to AARQW.\nZGXBD links to ZHKWQ.\nZHKWQ maps to LDFVJ.\n\nQuestion: ZAKHL links to something, which maps to what?\n",
+      "chat_prompt_sha256": "sha256:54bdbb8657aaa89ede7687d1586f4e08d340a08fd655f2058e378d595fb130a7",
+      "raw_output": "ANSWER: LDFVJ",
+      "classification": {
+        "failure_class": "wrong_chain_selection",
+        "scaffold_class": "SCAFFOLD_PRESENT",
+        "format_class": "FORMAT_PASS",
+        "returned_token": "LDFVJ",
+        "returned_role": "distractor_chain_endpoint",
+        "is_correct": false
+      }
+    }
+  ]
+}

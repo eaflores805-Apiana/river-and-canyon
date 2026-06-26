@@ -1,0 +1,33 @@
+{
+  "run_name": "MINIMAL-FP16-INT8-TWOHOP-L1-v0.1",
+  "preregistration_path": "experiments/2026-06-15_minimal-fp16-int8-twohop-l1/PREREGISTRATION.md",
+  "preregistration_sha": "sha256:3fb4dbd4d8daf19be31e95a395abe65175c5968cd3f1b6d50ac08e0bfd4bed03",
+  "run_dir": "experiments/2026-06-26_first-compression-rung",
+  "timestamp_utc": "2026-06-26T20:53:53.894649+00:00",
+  "n": 8,
+  "max_tokens": 16,
+  "temperature": 0.0,
+  "query_types": [
+    "hop1",
+    "hop2",
+    "composite"
+  ],
+  "fp16_model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "int8_model_path": "tier0-run/Qwen2.5-3B-Instruct-mlx-int8",
+  "mlx_lm_version": "0.31.3",
+  "python_version": "3.13.3 (v3.13.3:6280bb54784, Apr  8 2025, 10:47:54) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "node_id_sha": "sha256:cf16144bf31df9280fa4cc1e722fb8f47e18b79118726dc942f6e162b69f8753",
+  "inputs": {
+    "prompt_template": "sha256:c8a81a299d28c3fd47f4d6fc90c4c57537885d07f01464e68d6fbe2e94a2510e",
+    "items_file": "sha256:7d5099cbdccf1f2175e6c693ea851cab73109665d3420be345a475bf835240a1",
+    "scorer": "sha256:b65c6803017b8b04ac25d4bd84c5fb5ff61692ed41d609e099b181fa58e4ddde"
+  },
+  "outputs": {
+    "fp16_raw_outputs": "sha256:faf461ef1f169ee63fb971fbfb84964b3259e7788aa6b30e08fb0bc217cfa283",
+    "int8_raw_outputs": "sha256:d382838058e852c1e2fd770533234a673aba470ec1cd6bac1283a20044939236",
+    "fp16_scored": "sha256:8db448f21af1e5feafe5fa31b6c15fd739202ba68c666f399fce084a6ff1ebce",
+    "int8_scored": "sha256:8db448f21af1e5feafe5fa31b6c15fd739202ba68c666f399fce084a6ff1ebce"
+  }
+}
