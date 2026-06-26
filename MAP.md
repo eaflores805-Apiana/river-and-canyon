@@ -1,6 +1,6 @@
 # Program Path Map
 
-**Last updated:** 2026-06-25 (rev 5 — CS additions: Hop1 Stability Investigation EXECUTED → HOP1-STABLE-INADMISSIBLE (2026-06-19); Paper 2 V3-delta → v1.1-rc → **v1.2 PUBLIC RELEASE** + PDF (2026-06-19 → 06-21); Manager direction **open first bounded compression rung** (2026-06-21, packet prep only). YOU ARE HERE moved to the compression-rung standby. See rev-5 change-note at foot. Rev 4 traced the V3 lifecycle 2026-06-15 → 2026-06-19.)
+**Last updated:** 2026-06-26 (rev 6 — CS additions: first bounded compression rung **EXECUTED + CLOSED** as an INT8 null-stress control (light path); program pivots off compression back to composition-baseline recovery; compression blocked until FP16 constructibility clears. YOU ARE HERE moved to the pivot. See rev-6 change-note at foot. Rev 5 added Hop1 Stability, Paper 2 v1.2 release, and the compression-rung direction.)
 **Re-sync rule:** if this and the record disagree, the record wins. Re-sync when a stage closes or a new branch opens. The `git log` is the authoritative timestamp for each commit.
 
 A living overview of where the program has been, where it is, and where it ventured off. Coarse-grained: main stages, not every commit. The trunk reads top → bottom in time; branches show where the work split (closed routes, parked tracks, new directions).
@@ -223,8 +223,28 @@ PROGRAM TRUNK
       composition / capability / mechanism. Fail-closed if FP16 baseline not qualified.
     NOT the first INT8 bytes: INT8-RUNG-1 (06-13, QUARANTINED) and the minimal FP16↔INT8
       run (06-15, INCONCLUSIVE per FP16-gate) are distinct and do not generalize the lift.
-    governance/2026-06-21_first-compression-rung-direction/                          ◄── YOU ARE HERE
+    governance/2026-06-21_first-compression-rung-direction/
       CS ACKNOWLEDGED; standing by for the Senior packet draft.
+│
+[done · 2026-06-26]  First Bounded Compression Rung — EXECUTED + CLOSED (INT8 null-stress control)
+│   Path chosen: LIGHT (ONE-PAGE-INT8-CONTROL-RUNG-SPEC-v0.1; CS feasibility-glance + Manager
+│     by-name auth) — heavy five-gate packet (v0.1→v0.3, parked at C5) SUPERSEDED for this rung,
+│     retained as history. Packet lineage: v0.1→v0.2 (disposition-paraphrase HOLD risk) →
+│     v0.3 (DISPOSITION.md verbatim; CS provenance pre-stage) — then light path adopted instead.
+│   Run: experiments/2026-06-26_first-compression-rung/ (commit b766f9aa; byte-identical locked
+│     runner copy; fresh dir; 2026-06-15 sealed bytes untouched; INT8 weights staged then removed,
+│     never committed). FP16=INT8=hop1 0/8, hop2 8/8, composite 1/8; byte-identity 24/24 (rate 1.0).
+│   Readout (allowed language only): bounded hop2-only instrument-validation readout; INT8 no
+│     behavioral perturbation in this setup; fail-closed distinctions preserved. NULL-STRESS
+│     instrument validation ONLY — no retention / capability / composition / Claim-C claim.
+│   TL disposition: CLOSED, PASS as control/calibration rung (CS-verified, SE-verified, C5-observed).
+│   Lesson recorded: light path OK for a null control; any non-null rung (INT4, or INT8 ≠ FP16)
+│     restores the full five-gate claim-risk review before filing.
+│
+[pivot · 2026-06-26; compression BLOCKED until FP16 constructibility clears]                ◄── YOU ARE HERE
+    All further INT8 work CLOSED (no rerun, no second control, no packet revival). The science
+    returns to the real blocker: build a composition baseline valid enough to stress.
+    Next target: COMPOSITION-BASELINE-RECOVERY-TARGET-MEMO-v0.1 (Senior's lane; not yet delivered).
 ```
 
 ## Round-trips (ventured and came back — recorded for honesty)
@@ -309,3 +329,9 @@ Repo-level docs ................. README · STATUS · REVIEW · _meta/INDEX
 *— ADDED the First Bounded Compression Rung direction (2026-06-21) as a `[direction]` node (packet prep only; INT8 packet-authoring lift; INT4 still blocked; run gated on the full chain; fail-closed perimeter). Noted INT8-RUNG-1 (06-13 QUARANTINED) and the minimal FP16↔INT8 run (06-15 INCONCLUSIVE) as distinct prior INT8 touches that do not generalize the lift.*
 *— MOVED YOU ARE HERE from the composite-gate close to the compression-rung standby (CS acknowledged; awaiting the Senior packet draft).*
 *— Records state only; reopens no closed route; unseals no sealed bytes; authorizes no run/build/compression/claim; changes no scientific meaning. Companion CS-lane updates this turn: refreshed passdown (governance/passdown/2026-06-25_passdown-letter.md) + standing-card revision (INT8 packet-authoring lift, INT8/INT4 split, v1.2 + Paper 3 tags added to protected surfaces). Root docs STATUS/README/REVIEW left user-owned (unchanged). K=5 FAIL remains closed.*
+
+*Change-note (rev 6, CS additions, 2026-06-26):*
+*— ADDED the first bounded compression rung as EXECUTED + CLOSED (2026-06-26). The team adopted the LIGHT control-rung path (ONE-PAGE-INT8-CONTROL-RUNG-SPEC-v0.1; CS feasibility-glance + Manager by-name), superseding the heavy five-gate packet (v0.1→v0.3, parked at C5) for this rung. CS executed the FP16→INT8 control rung (commit b766f9aa): FP16=INT8=hop1 0/8, hop2 8/8, composite 1/8; byte-identity 24/24. Bounded as NULL-STRESS instrument validation only. TL disposition CLOSED / PASS (CS-verified, SE-verified, C5-observed).*
+*— ADDED the 2026-06-26 PIVOT node and moved YOU ARE HERE to it: all further INT8 work CLOSED (no rerun/second control/packet revival); compression BLOCKED until FP16 constructibility clears; next target COMPOSITION-BASELINE-RECOVERY-TARGET-MEMO-v0.1 (Senior's lane, not yet delivered).*
+*— RECORDED the governance lesson: light path for a null control rung; restore full five-gate claim-risk review for any non-null rung (INT4, or INT8 ≠ FP16) before filing a readout.*
+*— Records state only; authorizes nothing; the run itself was Manager-authorized by name and is already closed. Sealed bytes untouched; INT8 weights never committed. K=5 FAIL remains closed.*
