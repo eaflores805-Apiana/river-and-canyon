@@ -15,9 +15,23 @@
 
 ```text
 run directory ........... experiments/2026-06-26_first-compression-rung/
-run commit .............. <filled post-push in §clean-fetch>
-final remote HEAD ....... <filled post-push in §clean-fetch>
-clean-fetch confirm ..... <appended post-push in §clean-fetch>
+run commit .............. b766f9aa71450c0cd515b28fee31d16a11ca6265
+final remote HEAD ....... b766f9aa71450c0cd515b28fee31d16a11ca6265  (this CS-RETURN HEAD-fill commit follows)
+clean-fetch confirm ..... PASS — see §clean-fetch below
+```
+
+## §clean-fetch verification (post-push)
+
+```text
+Fetched origin/main fresh and recomputed the run output content-sha256 from origin blobs:
+  fp16_raw_outputs.json   faf461ef…  ✓ matches MANIFEST
+  int8_raw_outputs.json   d382838058… ✓ matches MANIFEST
+  fp16_scored.json        8db448f2…  ✓ matches MANIFEST
+  int8_scored.json        8db448f2…  ✓ matches MANIFEST (identical to fp16_scored)
+  CS-RETURN present on origin/main                                     ✓
+  INT8 weights ABSENT from origin/main (gitignored, not committed)     ✓ (as intended)
+Run committed at b766f9aa; this HEAD-fill commit lands immediately after and is reported in the
+turn summary. Bytes verify from the shared remote on clean fetch → FILED.
 ```
 
 ### Pre-run INT8 weight presence confirmation (the required gate)
