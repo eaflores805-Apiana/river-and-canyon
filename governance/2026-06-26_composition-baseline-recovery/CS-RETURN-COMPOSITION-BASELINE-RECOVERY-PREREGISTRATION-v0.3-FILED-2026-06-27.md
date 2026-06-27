@@ -16,9 +16,9 @@ sha256 at filed path .... 8e0e02e0f9b40924efe3c6f976c302a0696ee4ad06118e8ba73cb4
 matches declared digest . YES — == TL-declared 8e0e02e0f9b40924efe3c6f976c302a0696ee4ad06118e8ba73cb461d80f62fe ✓
                           (and == inbox SHA256SUMS.txt; archived as
                            COMPOSITION-BASELINE-RECOVERY-PREREGISTRATION-v0.3-SHA256SUMS.txt)
-commit SHA .............. <filled post-push in §clean-fetch>
-final remote HEAD ....... <filled post-push in §clean-fetch>
-clean-fetch confirm ..... <appended post-push in §clean-fetch>
+commit SHA .............. 8fddd493348a2feafc015cf3372ca58494b66415
+final remote HEAD ....... 8fddd493348a2feafc015cf3372ca58494b66415  (this HEAD-fill commit follows)
+clean-fetch confirm ..... PASS — see §clean-fetch below
 ```
 
 ## Confirmations (the required set)
@@ -59,7 +59,12 @@ The next object is **not** a run. Concrete artifacts must be built to this pre-r
 ## §clean-fetch verification (post-push)
 
 ```text
-<filled after push: commit SHA, final remote HEAD, and clean-fetch recompute of the filed sha256>
+Pre-reg committed at 8fddd493 (this CS-RETURN HEAD-fill commit lands immediately after).
+Fetched origin/main fresh and recomputed the filed pre-reg content-sha256 from the origin blob:
+  governance/2026-06-26_composition-baseline-recovery/COMPOSITION-BASELINE-RECOVERY-PREREGISTRATION-v0.3.md
+  → 8e0e02e0f9b40924efe3c6f976c302a0696ee4ad06118e8ba73cb461d80f62fe  ✓ == TL-declared digest
+final remote HEAD verified == local == ls-remote at push time (8fddd493).
+Bytes verify from the shared remote on clean fetch → FILED.
 ```
 
 ---
