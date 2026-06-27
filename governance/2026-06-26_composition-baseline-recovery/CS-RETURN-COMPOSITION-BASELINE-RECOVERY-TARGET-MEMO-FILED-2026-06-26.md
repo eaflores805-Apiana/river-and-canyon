@@ -14,9 +14,9 @@
 filed path .............. governance/2026-06-26_composition-baseline-recovery/COMPOSITION-BASELINE-RECOVERY-TARGET-MEMO-v0.1.md
 sha256 at filed path .... ffbe9b53849a6de98d2ea3b0735370b7c8c93c0935f21bb7995caa508e746216
                           (== inbox source sha256 — byte-faithful)
-commit SHA .............. <filled post-push in §clean-fetch>
-final remote HEAD ....... <filled post-push in §clean-fetch>
-clean-fetch confirm ..... <appended post-push in §clean-fetch>
+commit SHA .............. e40b1c14ea23822b0598fe1b7c97e62cd181202a
+final remote HEAD ....... e40b1c14ea23822b0598fe1b7c97e62cd181202a  (this HEAD-fill commit follows)
+clean-fetch confirm ..... PASS — see §clean-fetch below
 ```
 
 ## Confirmations (the required set)
@@ -44,7 +44,12 @@ The future pre-registration must define: exact n · floors · Wilson rule · ite
 ## §clean-fetch verification (post-push)
 
 ```text
-<filled after push: commit SHA, final remote HEAD, and clean-fetch recompute of the filed sha256>
+Memo committed at e40b1c14 (this CS-RETURN HEAD-fill commit lands immediately after).
+Fetched origin/main fresh and recomputed the filed memo content-sha256 from the origin blob:
+  governance/2026-06-26_composition-baseline-recovery/COMPOSITION-BASELINE-RECOVERY-TARGET-MEMO-v0.1.md
+  → ffbe9b53849a6de98d2ea3b0735370b7c8c93c0935f21bb7995caa508e746216  ✓ == inbox source
+final remote HEAD verified == local == ls-remote at push time (e40b1c14).
+Bytes verify from the shared remote on clean fetch → FILED.
 ```
 
 ---
